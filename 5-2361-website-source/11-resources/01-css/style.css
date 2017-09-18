@@ -84,6 +84,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+18 Sep 2017   P10          M. Gledhill    Updated to match PS1002-vcs version.
+                                          Now based on 1002-vcs P15.
+                                          Files identical at this issue date.
+
 27 Jul 2017   d-P04.04.01  M. Gledhill    .nav-wide-blank class made responsive
                                           closes #2
 
@@ -106,7 +110,7 @@ Date          Issue        Author         Reason for Modification
 27 May 2017   D00          M. Gledhill    Development - based on PS1001 P10
 
 ---------------------------------------------------------------------------- */
-.aside-right-rev:after { content: "style.css\00a0\2014\00a0 d-P04.04.01"; }      /* CSS REVISION NUMBER */
+.aside-right-rev:after { content: "style.css\00a0\2014\00a0 \P10"; }      /* CSS REVISION NUMBER */
 
 
 
@@ -1538,6 +1542,25 @@ tr.no-border th {                           /* no-bottom border */
     text-align: left;
 }
 
+.git-table {
+    background-color: #8AC8D7;
+    font-family: "trip-t4-r";
+    color: #000}
+
+.bash-table {
+    background-color: #8AD7C8;
+    font-family: "trip-t4-r";
+    color: #000}
+
+.git-head {
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    letter-spacing: 0.086em;
+    color: #fff;
+    background-color: #b2b2b2;
+}
 
 /* ****************************************************************************
    TABLES - CLEAN FORMAT TABLE
@@ -1838,7 +1861,6 @@ tr.in-no-border th {                        /* incidental table no-bottom border
    row).
    ************************************************************************* */
 .table-git-sb {
-    display: block;                               /* ensures max-width works */
     background-color: #404030;
     font-family: "trip-t4-r";
     color: #fff;
@@ -1877,9 +1899,10 @@ tr.in-no-border th {                        /* incidental table no-bottom border
    A screen widths below 760px, the each table becomes 100% wide
    ------------------------------------------------------------------------- */
 
-@media all and (max-width:760px){ .table-clean { width: 100%; margin: 0; } }
-@media all and (max-width:760px){ .table-dense { width: 100%; margin: 0; } }
-@media all and (max-width:760px){ .table-git   { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-clean  { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-dense  { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-git    { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-git-sb { width: 100%; margin: 0,0,1rem,0; } }
 
 
 
