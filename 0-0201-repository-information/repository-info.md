@@ -74,7 +74,7 @@ The contents of the ```1001-web``` can be completely deleted prior to the reposi
 # Non-repository folders
 The latest copy of the website Functional Specification Word Document (it contains the Word copy of the website content) is held in the project folder: 
 
-```\\01 Pa_Clavis\2230 PS Projects\PS1001 - Web Template``
+```\\01 Pa_Clavis\2230 PS Projects\PS1001 - Web Template```
 
 This is the primary project storage location. 
 
