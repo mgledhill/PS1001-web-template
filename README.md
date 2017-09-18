@@ -84,7 +84,7 @@ This repository holds both the actual website (the thing that explains how to bu
 
 The actual website itself is not open source (see **Permissions in lieu of a licence** above).
 
-The downloadable template is open source and is available under the MIT licence [MIT licence](LICENSE)
+The downloadable template is open source and is available under the [MIT licence](LICENCE)
 
 
 ## Development branch abbreviations
