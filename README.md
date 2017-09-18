@@ -3,7 +3,7 @@
 ###### A series of technical documents for engineers (and others)
 
 
-# A Website Template for Online Publications <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-D01.svg">
+# A Website Template for Online Publications <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-D03.svg">
 
 <p align="center">
     <img width="300px" src="0-0201-repository-information/01-images/logo-lrg-min.png">
@@ -25,7 +25,7 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
-| master             | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-D01.svg">
+| master             | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-D03.svg">
 
 ## Contents
 
@@ -101,7 +101,7 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
-<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1002-web/wf-D01.svg">
+<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1002-web/wf-D03.svg">
 
 ## Additional information
 

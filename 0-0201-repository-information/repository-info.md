@@ -2,19 +2,19 @@
 
 The current version of this file is:
 
-<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1002-vcs/bs-P09.svg">
+<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1002-web/bs-D03.svg">
 
 
 # Repository basic information
 Both the remote and the local repositories are called:
 
-```PS1002-brackets-git-and-github-vcs```
+```PS1001-web-template```
 
 The repository description is:
 
-**The Practical Series website explaining how the Git & GitHub version control system can be made to work from within the development environment of the Brackets text editor using the Brackets-Git extension**.
+**The Practical Series website explaining how to develop responsive website (using HTML 5 and CSS 3) that looks good, is easy to navigate and has complex elements such as formulae, code fragments and lightbox imagery. The website itself contains a reusable template de-signed to hold whatever document or publication is directed at it. It’s well set out, has a range of nice and consistent styles and navigations that can be used with almost no effort.**.
 
-The main purpose of the repository is to hold the VCS website content. The repository does however hold some additional files: various workflow diagrams showing the commit points and branches throughout the history of the repository.
+The main purpose of the repository is to hold the web template website content (web pages, images, example code &c.) and the down-loadable template itself. The repository also holds some additional information: various workflow diagrams showing the commit points and branches throughout the history of the repository.
 
 *Note: The Workflow Diagrams are maintained outside the repository but are copied in at specific commit points to maintain the accuracy of the repository.*
 
@@ -39,7 +39,7 @@ The repository is associates with the following organisations
 #### Author’s note to himself
 The local repository is stored on the primary NAS drive and has the location:
 
-```\\41 Pa_Archive\2500 Git Projects\PS1002 Git-GitHub and Brackets VCS```
+```\\41 Pa_Archive\2500 Git Projects\PS1001-web-template```
 
 The repository folder structure is:
 
@@ -51,7 +51,7 @@ The red folders are the publishable website (the bit that has to be uploaded to 
 
 The full offline version of the live website is stored on the primary NAS drive and has the location:
 
-```\\01 Pa_Clavis\2230 PS Projects\PS1000 - PS Website LIVE```
+```\\01 Pa_Clavis\2230 PS Projects\PS0500-PS Website LIVE```
 
 The high level folder structure for the website is:
 
@@ -65,16 +65,16 @@ To update the live website with the repository website, the entire contents of t
 
 Must be copied to the live website folder:
 
-```1002-vcs```
+```1001-web```
 
-The contents of the ```1002-vcs``` can be completely deleted prior to the repository folder files being copied in.
+The contents of the ```1001-web``` can be completely deleted prior to the repository folder files being copied in.
 
-**NO INFORMATION SHOULD EVER BE MOVED FROM PS1000 TO THE REPOSITORY**
+**NO INFORMATION SHOULD EVER BE MOVED FROM PS0500 TO THE REPOSITORY**
 
 # Non-repository folders
 The latest copy of the website Functional Specification Word Document (it contains the Word copy of the website content) is held in the project folder: 
 
-```\\01 Pa_Clavis\2230 PS Projects\PS1002 - Git-GitHub and Brackets VCS```
+```\\01 Pa_Clavis\2230 PS Projects\PS1001 - Web Template``
 
 This is the primary project storage location. 
 
