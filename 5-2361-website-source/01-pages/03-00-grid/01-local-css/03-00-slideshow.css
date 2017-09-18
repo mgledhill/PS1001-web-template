@@ -1,0 +1,78 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :           LOCAL STYLE SHEET                         99-51-SLIDESHOW.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This page contains an animated slidshow that cycles through a series of images
+in response to the user scrolling down the page.
+
+All the images are contained in a single div with class .animate-images.
+
+Each image within the class also has the class .animated.
+
+These images are animated using the animateGrid jQuery function (see local js).
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   BASE FORMATTING
+   ****************************************************************************
+   .animate-images      is the class holding the images, it simply has a bottom
+                        margin set.
+
+   .animated            is attached to each image, it sets the image widht to
+                        80% of the screen width and centres the image on the
+                        page.
+
+   Note: The empty .animate-images img class is included to allow the jQuery
+         code to modify it.
+
+   ************************************************************************* */
+
+
+.animate-images {
+    margin-bottom: 2rem;
+}
+.animate-images img {  }                    /* placeholder for script operations */
+
+.animated {
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+
+/* ----------------------------------------------------------------------------
+   SLIDESHOW - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The slideshow image is normally 80% of the column width, at low resolutions,
+   when the sidebars collaps inward, the image is set to effectviley the full
+   column width
+
+   ------------------------------------------------------------------------- */
+
+@media all and (max-width:520px){.animated { width: 98%; margin:0 1%; }}

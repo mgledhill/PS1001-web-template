@@ -1,0 +1,1537 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Learn how to download and use open source fonts on a website.">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                              09-04-FONTS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/09-04-fonts/05-local-js/09-04-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/09-04-fonts/01-local-css/09-04-prettifylines.css"> -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Open source fonts | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="09-03-fonts.html#js--090300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="09-05-fonts.html#js--090500"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>9</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">9</span>Fonts &amp; web fonts</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 09-04&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 9. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-090000" href="09-00-fonts.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">9</span><span class="toc-lev1-text">Fonts &amp; web fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-090100" href="09-01-fonts.html#js--090100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.1</span><span class="toc-lev2-text">Different types of fonts and web font formats</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090101" href="09-01-fonts.html#js--090101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.1</span><span class="toc-lev3-text">What type of font to convert?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090102" href="09-01-fonts.html#js--090102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.2</span><span class="toc-lev3-text">What format to convert the font to?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090103" href="09-01-fonts.html#js--090103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.3</span><span class="toc-lev3-text">The additional features of OpenType fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090200" href="09-02-fonts.html#js--090200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.2</span><span class="toc-lev2-text">Converting a font to a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090300" href="09-03-fonts.html#js--090300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.3</span><span class="toc-lev2-text">How to use a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090301" href="09-03-fonts.html#js--090301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.1</span><span class="toc-lev3-text">Loading a font with <span class="code">@font-face</span> </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090302" href="09-03-fonts.html#js--090302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.2</span><span class="toc-lev3-text">Using the font</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090400" href="09-04-fonts.html#js--090400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.4</span><span class="toc-lev2-text">Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090401" href="09-04-fonts.html#js--090401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.1</span><span class="toc-lev3-text">Where to get open source fonts?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090402" href="09-04-fonts.html#js--090402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.2</span><span class="toc-lev3-text">Replacing the Equity fonts with open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090403" href="09-04-fonts.html#js--090403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.3</span><span class="toc-lev3-text">A small confession</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090500" href="09-05-fonts.html#js--090500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.5</span><span class="toc-lev2-text">Using the Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090501" href="09-05-fonts.html#js--090501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.1</span><span class="toc-lev3-text">An apology by the author</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090502" href="09-05-fonts.html#js--090502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.2</span><span class="toc-lev3-text">Changes to <span class="code">ps-fonts.css</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090600" href="09-06-fonts.html#js--090600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.6</span><span class="toc-lev2-text">The Practical Series fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090601" href="09-06-fonts.html#js--090601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.1</span><span class="toc-lev3-text">PS Icons font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090602" href="09-06-fonts.html#js--090602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.2</span><span class="toc-lev3-text">PS Index font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090700" href="09-07-fonts.html#js--090700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.7</span><span class="toc-lev2-text">Web fonts the download</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 090400]
+     SECTION 9.4 - OPEN SOURCE FONTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090400">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>9.4</h2></div>
+                    <div class="sub-title-text-box"><h2>Open source fonts</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I explained in <a class="hlink nohyp" href="01-03-typographical.html#js--010302">&sect;&nbsp;1.3.2</a> that I&rsquo;m not distributing the Equity fonts with the downloadable version of the this website (mainly because I don&rsquo;t think I&rsquo;m allowed to under the terms of my font licence). I&rsquo;m replacing them with <span class="first-use">open source fonts</span>.</p>
+
+                    <p class="hyp">Open source fonts are essentially fonts that are free to use and distribute (and in some cases even modify). The fonts I&rsquo;ve chosen are also free for commercial use <span class="first-use">(I&rsquo;m not even sure this is a commercial website&mdash;I certainly haven&rsquo;t made any money from it)</span>.</p>
+
+                    <p class="hyp"><a class="hlink nohyp" href="https://fonts.google.com/">google&nbsp;fonts</a> seems to be what everyone thinks of when mentioning open source fonts; but it isn&rsquo;t the only source. Some of the fonts I&rsquo;m using are available on Google fonts, but not all. I actually downloaded them from <a class="hlink nohyp" href="https://www.fontsquirrel.com/">font&nbsp;squirrel</a> (the same site I used to convert the Equity fonts to web fonts), this does have all the font I need.</p>
+
+                    <p class="hyp">I&rsquo;m using the following fonts in place of the listed Equity fonts:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--t09-03">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-12a.png" data-lightbox="fig-set" data-title="Table 9.3 - Open source replacements for the equity fonts">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-12a.png" style="width:90%" alt="Table 9.3 - Open source replacements for the equity fonts">
+                            </a>
+                            <p>Table 9.3 &emsp; Open source replacements for the equity fonts</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">They look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-13">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-13.png" data-lightbox="fig-set" data-title="Figure 9.13 - Equity fonts with replacement open source fonts">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-13.png" alt="Figure 9.13 - Equity fonts with replacement open source fonts">
+                            </a>
+                            <p>Figure 9.13 &emsp; Equity fonts with replacement open source fonts</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You&rsquo;re probably wondering why I picked these fonts. The answer is that they&rsquo;re the best I could find. They&rsquo;re ok, but I did have to do a bit of tweaking with point size, letter spacing and line spacing to get them to look anywhere near descent.</p>
+
+                    <p class="hyp">The PT Serif font (the main body text) is, in its natural state, a bit big. I reduced the font-size by 10% (0.1&nbsp;rem) on the website (ironically, this gets it nearer to the Gerstner grid point size). I also reduced the line spacing to match the Equity line spacing&mdash;surprisingly these changes seriously improve the appearance&mdash;it&rsquo;s quite difficult to tell them apart if you&rsquo;re not looking at them side by side. I explain how I do this in the next chapter.</p>
+
+                    <p class="hyp">The open source small caps fonts (Andada and Carrois) are definitely the weak points, and I don&rsquo;t like having that many different fonts in one place; however, small caps open source fonts are few and far between and these are the best available<sup>&dagger;1</sup>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">I like the idea of open source fonts, the problem is they&rsquo;re not really good enough&mdash;I don&rsquo;t mean that from an appearance point of view, I mean it from a completeness point of view. It&rsquo;s possible to find decent open source fonts, but they have restrictions: they only come in one weight, they don&rsquo;t have all the styles (bold italic &amp;c.) they don&rsquo;t have a full set of features (small caps &amp;c.).</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em></em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">	I&rsquo;m thinking about making my own set of fonts and then I don&rsquo;t have to worry about it&mdash;<span class="first-use">how hard can it be?</span> Watch this space&mdash;I&rsquo;ll let you know how I get on. One thing is for sure, I won&rsquo;t be using FontForge.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 090401]
+     SUBSECTION 9.4.1 - WHERE TO GET OPEN SOURCE FONTS?
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090401">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>9.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Where to get open source fonts?</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Well this is easy; I&rsquo;ve already said I got them from Font Squirrel. I think most of them are available from Google fonts; however, I&rsquo;m recommending Font Squirrel because all the fonts I want are available there and they&rsquo;re pretty easy to download.</p>
+
+                    <p class="hyp">I&rsquo;ll take you through it. Let&rsquo;s start with the main body text PT Serif.</p>
+
+                    <p class="hyp">Go to the Font Squirrel website and type the font name (PT Serif) into the search box:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-14">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-14.png" data-lightbox="fig-set" data-title="Figure 9.14 - Font Squirrel search">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-14.png" style="width:90%" alt="Figure 9.14 - Font Squirrel search">
+                            </a>
+                            <p>Figure 9.14 &emsp; Font Squirrel search</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now click where it says <span class="menu">PT Serif AaBbCb...</span> to open the font example page (<a class="xref js--sc-f09-15" href="#">Figure&nbsp;9.15</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-15">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-15.png" data-lightbox="fig-set" data-title="Figure 9.15 - Font Squirrel search">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-15.png" style="width:90%" alt="Figure 9.15 - Font Squirrel search">
+                            </a>
+                            <p>Figure 9.15 &emsp; PT Serif page</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are a couple of things here, the first is the type of licence, the row of icons (I&rsquo;ve highlighted them in orange) under PT SERIF is a basic indication of where you can use the font:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-04">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 20%">symbol</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 80%">meaning</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><img src="01-pages/09-04-fonts/02-images/fig-09-15a.png"  alt="font Squirrel Commercial Desktop Symbol"></td>
+                            <td class="table-left"><span class="first-use">Commercial Desktop Use</span>&mdash;Create commercial graphics and documents</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><img src="01-pages/09-04-fonts/02-images/fig-09-15b.png"  alt="font Squirrel @font-face Embedding Symbol"></td>
+                            <td class="table-left"><span class="first-use">@font-face Embedding</span>&mdash;Embed the font in your websites with CSS</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><img src="01-pages/09-04-fonts/02-images/fig-09-15c.png"  alt="font Squirrel E-books and PDFs Symbol"></td>
+                            <td class="table-left"><span class="first-use">E-books and PDFs</span>&mdash;Embed font in eBooks and portable documents</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><img src="01-pages/09-04-fonts/02-images/fig-09-15d.png"  alt="font Squirrel Applications Symbol"></td>
+                            <td class="table-left"><span class="first-use">Applications</span>&mdash;Embed font in applications and software</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="2" class="table-caption">Table 9.4 &emsp; Font Squirrel licencing icons</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">We want to use if with @font-face embedding in the website; so the second one (<span class="first-use">let&rsquo;s call it the world</span>) is the one for us.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li><p class="hyp">The licencing symbols don&rsquo;t give the full story; it&rsquo;s best to check the actual licence itself (click the Licence button). All the open source fonts here, with the exception of PT Serif are available under the SIL Open Font License v1.10.</p>
+
+                        <p class="hyp">PT Serif has its own licence (Paratype PT Sans Free Font License v1.00).</p>
+
+                        <p class="hyp">Both licences allow the fonts to be freely used pretty much anywhere&mdash;the fonts can even be modified. There are restrictions: you can&rsquo;t sell the fonts in their own right, use the author&rsquo;s name to endorse your products &amp;c. But for our purposes we can use the fonts on the website, and from my point of view I&rsquo;m allowed to redistribute them&mdash;ok, so I&rsquo;m not going to hell yet (maybe for other stuff, but not for this).</p></li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now the main font page (<a class="xref js--sc-f09-15" href="#">Figure&nbsp;9.15</a>) has a big download button to <span class="menu">download ttf</span> versions of the font. Ideally we want WOFF and for the PT Serif font this is easy (<span class="first-use">less so for the others</span>) click the <span class="menu">webfont kit</span> button (highlighted). This gives the webfont kit page <a class="xref js--sc-f09-16" href="#">Figure&nbsp;9.16</a>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-16">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-16.png" data-lightbox="fig-set" data-title="Figure 9.16 - Font Squirrel search">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-16.png" style="width:90%" alt="Figure 9.16 - Font Squirrel search">
+                            </a>
+                            <p>Figure 9.16 &emsp; PT Serif webfont download</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Guess what&rsquo;s next</span>. The default options are ok; I only want WOFF files, the subset Western Latin also seems to be ok. So hit the <span class="menu">download @font-face kit</span> button (highlighted). This will deliver a file called <span class="code">pt-serif-fontfacekit.zip</span>.</p>
+
+                    <p class="hyp">If you unzip the file you will have a folder called <span class="code">web fonts</span>; within this are six subfolders, one for each of the six font styles. If you look in any of these folders you will find a WOFF file, these are the files we need (but we only need four of them, don&rsquo;t bother with the <span class="code">ptserifcaption</span> folders)</p>
+
+                    <p class="hyp">The files needed are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-05">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 33.3%">original file</th>      <!-- set column 01 width here -->
+                            <th class="table-cent" style="width: 33.3%">renamed file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 33.3%">font and style</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">PTF55F-webfont.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-r.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">PTF75F-webfont.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-b.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">PTF56F-webfont.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-i.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;italic</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">PTF76F-webfont.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-bi.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;bold, italic</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="3" class="table-caption">Table 9.5 &emsp; PT Serif font files and renamed files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Again I&rsquo;ve renamed the fonts following my convention (<a class="hlink nohyp" href="09-02-fonts.html#js--090200">&sect;&nbsp;9.2</a>).</p>
+
+                    <p class="hyp">And that&rsquo;s it, these are the Equity replacements.</p>
+
+                    <p class="hyp">The remaining fonts are all under the SIL Open Font Licence and these are a bit different to the PT Serif font. Let&rsquo;s take the next main font (the replacement for Concourse) <span class="first-use">Source Sans Pro</span>.</p>
+
+                    <p class="hyp">The process start off in the same way, type Source Sans Pro into the Font Squirrel search box and you will get <a class="xref js--sc-f09-17" href="#">Figure&nbsp;9.17</a>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-17">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-17.png" data-lightbox="fig-set" data-title="Figure 9.17 - Source Sans Pro page">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-17.png" style="width:90%" alt="Figure 9.17 - Source Sans Pro page">
+                            </a>
+                            <p>Figure 9.17 &emsp; Source Sans Pro page</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This time if you look on the webfont kit page, you will find that, due to some awkward naming requirement, the web fonts are not available; however, it does say we can make our own using the same Font Squirrel font generator we used in <a class="hlink nohyp" href="09-02-fonts.html#js--090200">&sect;&nbsp;9.2</a>&mdash;the process is exactly the same too.</p>
+
+                    <p class="hyp">In this case we will download the OTF version of the font (some of the remaining fonts are OTF, some are TTF&mdash;just depends on the font). To do this click the <span class="menu">download otf</span> button. Again this will produce a zip file, this time called <span class="code">source-sans-pro.zip</span>; this will contain several files, we only need four:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-06">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 42%">original file</th>      <!-- set column 01 width here -->
+                            <th class="table-cent" style="width: 28%">renamed file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 30%">font and style</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">SourceSansPro-Light.otf</span></td>
+                            <td class="table-cent"><span class="code">ssan-t2-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;light</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">SourceSansPro-Regular.otf</span></td>
+                            <td class="table-cent"><span class="code">ssan-t3-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">SourceSansPro-Bold.otf</span></td>
+                            <td class="table-cent"><span class="code">ssan-t3-b.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">SourceSansPro-Semibold.otf</span></td>
+                            <td class="table-cent"><span class="code">ssan-t4-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;semi-bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="3" class="table-caption">Table 9.6 &emsp; Source San Pro files and renamed files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Again I&rsquo;ve renamed the four files (as shown). Copy these files to a working directory.</p>
+
+                    <p class="hyp">Next thing is to convert the OTF files to WOFF files using the font generator.</p>
+
+                    <p class="hyp">Click the <span class="menu">generator</span> button on the Font Squirrel page. Upload the four font files in exactly the same way we did for the Equity fonts (<a class="hlink nohyp" href="09-02-fonts.html#js--090200">&sect;&nbsp;9.2</a>). Use exactly the same options (<a class="hlink nohyp" href="09-02-fonts.html#js--f09-06">Figure&nbsp;9.6</a>). It should all look like <a class="xref js--sc-f09-18" href="#">Figure&nbsp;9.18</a>.</p>
+
+                    <p class="hyp">Once the fonts are uploaded (they will show the font names rather than the file names), press the <span class="menu">download your kit</span> button to again get a zip file of the converted fonts (again, just like <a class="hlink nohyp" href="09-02-fonts.html#js--090200">&sect;&nbsp;9.2</a>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-18">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-18.png" data-lightbox="fig-set" data-title="Figure 9.18 - Source Sans Pro conversion to WOFF">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-18.png" style="width:90%" alt="Figure 9.18 - Source Sans Pro conversion to WOFF">
+                            </a>
+                            <p>Figure 9.18 &emsp; Source Sans Pro conversion to WOFF</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>This conversion took about 9 minutes for some reason.</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This again gives a zip file (<span class="code">webfontkit-20...zip</span>), extract it and this has the WOFF files we need, this time they pretty much have the name we want, just edit the WOFF file name and takeout <span class="code">&ndash;webfont</span> this will give the names specified below:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-07">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 50%">renamed file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 50%">font and style</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t2-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;light</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t3-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t3-b.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t4-r.otf</span></td>
+                            <td class="table-left">Source San Pro&mdash;semi-bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="2" class="table-caption">Table 9.7 &emsp; Source San Pro files WOFF files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">We&rsquo;re going to repeat this process for the remaining fonts (these have to be downloaded as TTF and OTF files and converted to WOFF files just like Source San Pro).</p>
+
+                    <p class="hyp">Using Font Squirrel in a repeat of the Source San Pro procedure, download the fonts <span class="first-use">Carrois Gothic</span>, <span class="first-use">Andada</span> and <span class="first-use">PT Mono</span>.</p>
+
+                    <p class="hyp">Rename the following files according to <a class="xref js--sc-t09-08" href="#">Table&nbsp;9.8</a>:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-08">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 35%">original file</th>      <!-- set column 01 width here -->
+                            <th class="table-cent" style="width: 25%">renamed file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 40%">font and style</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">AndadaSC-Regular.otf</span></td>
+                            <td class="table-cent"><span class="code">anda-ca-r.otf</span></td>
+                            <td class="table-left">Andada&mdash;small caps, regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">CarroisGothicSC-Regular.ttf</span></td>
+                            <td class="table-cent"><span class="code">carr-c3-r.ttf</span></td>
+                            <td class="table-left">Carrois Gothic&mdash;small caps</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">PTM55FT.ttf</span></td>
+                            <td class="table-cent"><span class="code">pmon-t4-r.ttf</span></td>
+                            <td class="table-left">PT Mono&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="3" class="table-caption">Table 9.8 &emsp; Remaining font files and renamed files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Andada is an OTF file and this is converted in exactly the same way as Source San Pro, use exactly the same options in the Font Generator.</p>
+
+                    <p class="hyp">The Carrois and PT Mono are TTF fonts, when converting these font to WOFF files, the <span class="menu">em square value</span> in <span class="menu">advanced options</span> should be set to <span class="menu">2048</span> (TTF fonts use an em square of 2048 units, OTF font use one of 1000 units).</p>
+
+                    <p class="hyp">Convert the fonts and you should have a complete set that we can use to replace the equity fonts. The complete set of WOFF files you should have is:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-09">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 50%">renamed file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 50%">font and style</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">pser-ta-r.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">pser-ta-b.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">pser-ta-i.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;italic</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">pser-ta-bi.woff</span></td>
+                            <td class="table-left">PT Serif&mdash;bold, italic</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t2-r.woff</span></td>
+                            <td class="table-left">Source San Pro&mdash;light</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t3-r.woff</span></td>
+                            <td class="table-left">Source San Pro&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t3-b.woff</span></td>
+                            <td class="table-left">Source San Pro&mdash;bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">ssan-t4-r.woff</span></td>
+                            <td class="table-left">Source San Pro&mdash;semi-bold</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">carr-c3-r.woff</span></td>
+                            <td class="table-left">Carrois Gothic&mdash;small caps</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">anda-ca-r.woff</span></td>
+                            <td class="table-left">Andada&mdash;small caps, regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">pmon-t4-r.woff</span></td>
+                            <td class="table-left">PT Mono&mdash;regular</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="2" class="table-caption">Table 9.9 &emsp; Open source WOFF files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               </div>                                          <!-- End of section text area   -->
+
+               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 090402]
+     SUBSECTION 9.4.2 - REPLACING THE EQUITY FONTS WITH OPEN SOURCE FONTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090402">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>9.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Replacing the Equity fonts with open source fonts</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp"><a class="xref js--sc-t09-03" href="#">Table&nbsp;9.3</a> listed the broad Equity fonts and the open source fonts used to replace them in the downloadable version of the website; here I list the each Equity WOFF files and the open source WOFF files used to replace it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-10">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 50%">equity woff file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 50%">replacement open source file</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">eqty-ta-r.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">eqty-ta-b.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-b.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">eqty-ta-i.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-i.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">eqty-ta-bi.woff</span></td>
+                            <td class="table-cent"><span class="code">pser-ta-bi.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">eqty-ca-r.woff</span></td>
+                            <td class="table-cent"><span class="code">anda-ca-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-10a">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 50%">concourse woff file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 50%">replacement open source file</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-t2-r.woff</span></td>
+                            <td class="table-cent"><span class="code">ssan-t2-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-t3-r.woff</span></td>
+                            <td class="table-cent"><span class="code">ssan-t3-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-t3-b.woff</span></td>
+                            <td class="table-cent"><span class="code">ssan-t3-b.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-t4-r.woff</span></td>
+                            <td class="table-cent"><span class="code">ssan-t4-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-c3-r.woff</span></td>
+                            <td class="table-cent"><span class="code">carr-c3-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-c4-r.woff</span></td>
+                            <td class="table-cent"><span class="code">carr-c3-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">conc-i3-r.woff</span></td>
+                            <td class="table-cent"><span class="code">ps-index.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-10b">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 50%">triplicate woff file</th>      <!-- set column 01 width here -->
+                            <th class="table-left" style="width: 50%">replacement open source file</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="code">trip-t4-r.woff</span></td>
+                            <td class="table-cent"><span class="code">pmon-t4-r.woff</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="2" class="table-caption">Table 9.10 &emsp; Equity WOFF files and replacement open source WOFF files</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There is one WOFF file listed there that you haven&rsquo;t got yet <span class="code">ps-index</span>, this is one I made. It replaces the Concourse Index font. It looks like this, <a class="xref js--sc-f09-19" href="#">Figure&nbsp;9.19</a>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-19">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-19.png" data-lightbox="fig-set" data-title="Figure 9.19 - A comparison of Concourse Index and PS Index">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-19.png" style="width:70%" alt="Figure 9.19 - A comparison of Concourse Index and PS Index">
+                            </a>
+                            <p>Figure 9.19 &emsp; A comparison of Concourse Index and PS Index</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Well, it&rsquo;s not brilliant and it has some restrictions, but it works (after a fashion) and I couldn&rsquo;t really find a suitable open source font<sup>&dagger;2</sup>. Hence PS Index.</p>
+
+                    <p class="hyp">You can download the <span class="code">ps-index.woff</span> file here <a class="code-nav" href="01-pages/09-04-fonts/04-data/ps-index.woff" download><sub><span class="nav-icon notice" style="font-size: 1.1rem">a</span></sub></a>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">There are some, but they tend to map the number to odd keys on the keyboard (QWERTY) for example. Now at the time (<span class="first-use">I know better now</span>); I didn&rsquo;t know how to remap the characters and associated keys&mdash;so I came up with my own.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               </div>                                          <!-- End of section text area   -->
+
+               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 090403]
+     SUBSECTION 9.4.3 - A SMALL CONFESSION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090403">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>9.4.3</h3></div>
+                    <div class="sub-title-text-box"><h3>A small confession</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">After all that I&rsquo;ve said in the previous sections, I&rsquo;m going to suggest that you use the downloadable version of the Source Sans Pro on the website (rather than getting it from Font Squirrel), the reason is I&rsquo;ve modified it&mdash;just a little bit&mdash;It&rsquo;s the old saying, a little knowledge is a dangerous thing. I know how to modify a font now, and the temptation to fix things that weren&rsquo;t broken in the first place is compelling<sup>&dagger;3</sup>. This is what I&rsquo;ve done; I change how the Source Sans Pro number 1 looks, it looked like this:</p>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-19a">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-19a.png" data-lightbox="fig-set" data-title="Source Sans Pro - original number 1">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-19a.png" style="width:10%" alt="Source Sans Pro - original number 1">
+                            </a>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"> After I&rsquo;d modified it, it looked like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-19b">
+                            <a href="01-pages/09-04-fonts/02-images/fig-09-19b.png" data-lightbox="fig-set" data-title="Source Sans Pro - modified number 1">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-04-fonts/02-images/fig-09-19b.png" style="width:10%" alt="Source Sans Pro - modified number 1">
+                            </a>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I took the bottom bar off&mdash;I thought it looked nicer&mdash;<span class="first-use">I think I&rsquo;m allowed to modify the font under the licence&mdash;hope so</span>.</p>
+
+                    <p class="hyp">Download the full set of open source WOFF files here <a class="code-nav" href="01-pages/09-04-fonts/04-data/woff.zip" download><sub><span class="nav-icon notice" style="font-size: 1.1rem">a</span></sub></a></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn03">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;3</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">There is an English engineering adage: <span class="first-use">“If it’s not necessary to mend it, it’s necessary not to mend it”</span>. Or as they say more colloquially in America, <span class="first-use">“If it ain’t broke, don’t fix it”</span>.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+
+               </div>                                          <!-- End of section text area   -->
+
+               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="09-03-fonts.html#js--090300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="09-05-fonts.html#js--090500">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,338 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          WEBSITE FONTS                                     PS-FONTS.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+1. EQUITY, CONCOURSE AND TRIPLICATE FONTS
+The following file contains a subset of the Equity, Concourse and Triplicate
+fonts developed by Matthew Butterick. These fonts were purchased under a single
+licence.
+
+Under the terms of that licence, the fonts may be used on up to three domains
+owned by this organisation. This is the second of those sites.
+
+The fonts were converted to webfonts using the font squirrel font generator:
+
+    https://www.fontsquirrel.com/tools/webfont-generator
+
+under Mr. Buttericks instructions.
+
+
+2. ICON FONTS
+A small Practical Series font (ps-icons) created from several svg icon images
+is also included.
+
+
+3. NAMING CONVENTIONS
+The following fonts have been converted to webfonts and are loaded by this
+file:
+
+                                        Shorthand name
+    Font name           Type           (within website)
+---------------------------------------------------------------------
+    Equity A Caps       Regular         eqty-ca-r
+    Equity A Caps       Bold            eqty-ca-b
+    Equity A Text       Regular         eqty-ta-r
+    Equity A Text       Bold            eqty-ta-b
+    Equity A Text       Italic          eqty-ta-i
+    Equity A Text       Bold & italic   eqty-ta-bi
+
+    Concourse T2        Regular         conc-t2-r
+    Concourse T2        Bold            conc-t2-b
+    Concourse T2        Italic          conc-t2-i
+    Concourse T2        Bold & italic   conc-t2-bi
+    Concourse C2 Caps   Regular         conc-c2-r
+
+    Concourse T3        Regular         conc-t3-r
+    Concourse T3        Bold            conc-t3-b
+    Concourse T3        Italic          conc-t3-i
+    Concourse T3        Bold & italic   conc-t3-bi
+    Concourse C3 Caps   Regular         conc-c3-r
+    Concourse T3 Index  Regular         conc-i3-r
+
+    Concourse T4        Regular         conc-t4-r
+    Concourse T4        Bold            conc-t4-b
+    Concourse T4        Italic          conc-t4-i
+    Concourse T4        Bold & italic   conc-t4-bi
+    Concourse C4 Caps   Regular         conc-c4-r
+    Concourse T7        Regular         conc-t7-r
+
+    Triplicate T3c      Regular         trip-t3-r
+    Triplicate T3c      Bold            trip-t3-b
+    Triplicate T3c      Italics         trip-t3-i
+    Triplicate T4c      Regular         trip-t4-r
+    Triplicate T4c      Bold            trip-t4-b
+    Triplicate T4c      Italics         trip-t4-i
+
+    ps-icons            Regular         icon-ps-r
+
+
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   Equity fonts
+   ************************************************************************* */
+
+@font-face {                    /* Equity A SmallCaps - regular*/
+    font-family: 'eqty-ca-r';
+    src: url(woff/eqty-ca-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Equity A SmallCaps - bold*/
+    font-family: 'eqty-ca-b';
+    src: url(woff/eqty-ca-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Equity A text - regular */
+    font-family: 'eqty-ta-r';
+    src: url(woff/eqty-ta-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Equity A text - bold */
+    font-family: 'eqty-ta-b';
+    src: url(woff/eqty-ta-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Equity A text - italic */
+    font-family: 'eqty-ta-i';
+    src: url(woff/eqty-ta-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Equity A text - bold & italic */
+    font-family: 'eqty-ta-bi';
+    src: url(woff/eqty-ta-bi.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ****************************************************************************
+   Concourse fonts
+   ************************************************************************* */
+
+/* ----------------------------------------------------------------------------
+   Concourse T2
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Concourse T2 - regular */
+    font-family: 'conc-t2-r';
+    src: url(woff/conc-t2-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T2 - bold */
+    font-family: 'conc-t2-b';
+    src: url(woff/conc-t2-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T2 - italic */
+    font-family: 'conc-t2-i';
+    src: url(woff/conc-t2-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T2 - bold & italic */
+    font-family: 'conc-t2-bi';
+    src: url(woff/conc-t2-bi.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse C2 Smallcaps - regular */
+    font-family: 'conc-c2-r';
+    src: url(woff/conc-c2-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------------
+   Concourse T3
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Concourse T3 - regular */
+    font-family: 'conc-t3-r';
+    src: url(woff/conc-t3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T3 - bold */
+    font-family: 'conc-t3-b';
+    src: url(woff/conc-t3-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T3 - italic */
+    font-family: 'conc-t3-i';
+    src: url(woff/conc-t3-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T3 - bold & italic */
+    font-family: 'conc-t3-bi';
+    src: url(woff/conc-t3-bi.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T3 Index - regular */
+    font-family: 'conc-i3-r';
+    src: url(woff/conc-i3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse C3 Smallcaps - regular */
+    font-family: 'conc-c3-r';
+    src: url(woff/conc-c3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------------
+   Concourse T4
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Concourse T4 - regular */
+    font-family: 'conc-t4-r';
+    src: url(woff/conc-t4-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T4 - bold */
+    font-family: 'conc-t4-b';
+    src: url(woff/conc-t4-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T4 - italic */
+    font-family: 'conc-t4-i';
+    src: url(woff/conc-t4-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Concourse T4 - bold & italic */
+    font-family: 'conc-t4-bi';
+    src: url(woff/conc-t4-bi.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Concourse C4 Smallcaps - regular */
+    font-family: 'conc-c4-r';
+    src: url(woff/conc-c4-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------------
+   Concourse T7
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Concourse T7 - regular */
+    font-family: 'conc-t7-r';
+    src: url(woff/conc-t7-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ****************************************************************************
+   Triplicate fonts
+   ************************************************************************* */
+
+/* ----------------------------------------------------------------------------
+   Triplicate T3c
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Triplicate T3c - regular */
+    font-family: 'trip-t3-r';
+    src: url(woff/trip-t3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Triplicate T3c - bold */
+    font-family: 'trip-t3-b';
+    src: url(woff/trip-t3-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Triplicate T3c - italic */
+    font-family: 'trip-t3-i';
+    src: url(woff/trip-t3-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ----------------------------------------------------------------------------
+   Triplicate T4c
+   ------------------------------------------------------------------------- */
+@font-face {                    /* Triplicate T4c - regular */
+    font-family: 'trip-t4-r';
+    src: url(woff/trip-t4-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Triplicate T4c - bold */
+    font-family: 'trip-t4-b';
+    src: url(woff/trip-t4-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {                    /* Triplicate T4c - italic */
+    font-family: 'trip-t4-i';
+    src: url(woff/trip-t4-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ****************************************************************************
+   PS icon fonts
+   ************************************************************************* */
+
+@font-face {                    /* PS Icons - regular */
+    font-family: 'icon-ps-r';
+    src: url(woff/ps-icons.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Download and install the website folder structure complete with index.html, style.css and normalize.css files">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             07-01-PRELIM.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/07-01-prelim/05-local-js/07-01-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/06-00-box/01-local-css/06-00-prettifylines.css"> -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The website folders | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="07-00-prelim.html#js--070000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="06-00-box.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="07-02-prelim.html#js--070200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>7</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">7</span>Website preliminaries</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 07-01&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 7. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-070000" href="07-00-prelim.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">7</span><span class="toc-lev1-text">Website preliminaries</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-070100" href="07-01-prelim.html#js--070100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.1</span><span class="toc-lev2-text">The website folders</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070200" href="07-02-prelim.html#js--070200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.2</span><span class="toc-lev2-text">The Normalize <span class="first-use">[sic]</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070201" href="07-02-prelim.html#js--070201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.2.1</span><span class="toc-lev3-text">Changes to normalize.css</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070300" href="07-03-prelim.html#js--070300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.3</span><span class="toc-lev2-text">The base html file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070301" href="07-03-prelim.html#js--070301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.1</span><span class="toc-lev3-text"><span class="code">&lt;!DOCTYPE ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070302" href="07-03-prelim.html#js--070302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.2</span><span class="toc-lev3-text">Comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070303" href="07-03-prelim.html#js--070303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.3</span><span class="toc-lev3-text"><span class="code">&lt;html&gt;...&lt;/html&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070304" href="07-03-prelim.html#js--070304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.4</span><span class="toc-lev3-text"><span class="code">&lt;head&gt;...&lt;/head&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070305" href="07-03-prelim.html#js--070305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.5</span><span class="toc-lev3-text">Meta tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070306" href="07-03-prelim.html#js--070306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.6</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070307" href="07-03-prelim.html#js--070307">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.7</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span> file order and priority</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070308" href="07-03-prelim.html#js--070308">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.8</span><span class="toc-lev3-text"><span class="code">&lt;title&gt;...&lt;/title&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070309" href="07-03-prelim.html#js--070309">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.9</span><span class="toc-lev3-text">Finally <span class="code">&lt;body&gt;...&lt;/body&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070400" href="07-04-prelim.html#js--070400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.4</span><span class="toc-lev2-text">Global properties</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070401" href="07-04-prelim.html#js--070401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.1</span><span class="toc-lev3-text">Comments&mdash;Colours in use</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070402" href="07-04-prelim.html#js--070402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.2</span><span class="toc-lev3-text">Asterisk (<span class="code">*</span>) selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070403" href="07-04-prelim.html#js--070403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.3</span><span class="toc-lev3-text"><span class="code">html</span> and <span class="code">body</span> selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 070100]
+     SECTION 7.1 - THE WEBSITE FOLDERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--070100">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>7.1</h2></div>
+                    <div class="sub-title-text-box"><h2>The website folders</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">To make it easy, I&rsquo;ve put a zipped copy of the empty folder structure on the website; you can get it here: <a class="code-nav" href="01-pages/07-01-prelim/04-data/07-00-folder-structure.zip" download><sub><span class="nav-icon notice" style="font-size: 1.1rem">a</span></sub></a></p>
+
+                    <p class="hyp">It contains all the folders and two empty files <span class="code">index.html</span> and <span class="code">style.css</span>.</p>
+
+                    <p class="hyp">It also contains one third party file called <span class="code">normalise.css</span> and we&rsquo;ll come to this shortly (<a class="hlink nohyp" href="07-02-prelim.html#js--070200">&sect;&nbsp;7.2</a>).</p>
+
+                    <p class="hyp">The whole thing looks like <a class="xref js--sc-f07-01" href="#">Figure&nbsp;7.1</a>.</p>
+
+                    <p class="hyp">The root folder can be called whatever you want, in my case I&rsquo;ve called it <span class="code">1100-website</span>; when we open this thing in Brackets, it&rsquo;s this root folder that we-re going to open&mdash;Brackets will do the rest.</p>
+
+                    <p class="hyp">Unzip the file and copy the contents to wherever you want them on your machine, in my case it is a directory called <span class="code">1100-website</span>.</p>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f07-01">
+                            <a href="01-pages/07-01-prelim/02-images/fig-07-01.svg" data-lightbox="fig-set" data-title="Figure 7.1 - Empty folder structure">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/07-01-prelim/02-images/fig-07-01.svg" style="width: 45%" alt="Figure 7.1 - Empty folder structure">
+                            </a>
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%">Figure 7.1 &emsp; Empty folder structure</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">          <!-- download link -->
+                                    <a class="code-nav" href="01-pages/07-01-prelim/04-data/07-00-folder-structure.zip" download><span class="nav-icon notice">a</span></a>
+                                </td>
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="07-00-prelim.html#js--070000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="07-02-prelim.html#js--070200">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>

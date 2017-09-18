@@ -1,0 +1,163 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        08-02-PRETTIFYLINES.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file is used to change the background colour of individual lines in the
+google Prettify code fragements and format certain elements for css use.
+
+This is done by giving each code fragment a unique ID reference and setting
+modifying the specific properties and lines for that particular fragment.
+
+IDs have the format js--cXXYYZZ
+
+There are three common modifications:
+
+
+1. LINE BACKGROUND SHADING
+This is done to change the background colour of a line of code or a range
+of lines to green (indicating the code has changed).
+
+2. LINE INDENTATION ON LINE WRAP
+Changes how a line is indeneted when it wraps around in the code fragment
+display
+
+
+3.CSS CLASS CHANGES
+Code fragments showning CSS do not display in the correct colours, the
+.pln and .lit classes are over-riddent to give more accurate colouring
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100a - FORMATTING
+   ************************************************************************* */
+#js--c081100a .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100a .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100b - FORMATTING
+   ************************************************************************* */
+#js--c081100b .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100b .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100c - FORMATTING
+   ************************************************************************* */
+#js--c081100c .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100c .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100d - FORMATTING
+   ************************************************************************* */
+#js--c081100d .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100d .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100e - FORMATTING
+   ************************************************************************* */
+#js--c081100e .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100e .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100f - FORMATTING
+   ************************************************************************* */
+#js--c081100f .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100f .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100g - FORMATTING
+   ************************************************************************* */
+#js--c081100g .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100g .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100h - FORMATTING
+   ************************************************************************* */
+#js--c081100h .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100h .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100j - FORMATTING
+   ************************************************************************* */
+#js--c081100j .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100j .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081100k - FORMATTING
+   ************************************************************************* */
+#js--c081100k .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081100k .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081200 - FORMATTING
+   ************************************************************************* */
+#js--c081200 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081200 .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081200a - FORMATTING
+   ************************************************************************* */
+#js--c081200a .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081200a .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081200b - FORMATTING
+   ************************************************************************* */
+#js--c081200b .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081200b .lit { color: #718c00;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c081200c - FORMATTING
+   ************************************************************************* */
+#js--c081200c .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c081200c .lit { color: #718c00;}
+/* ************************************************************************* */
+

@@ -1,0 +1,110 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        05-02-PRETTIFYLINES.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file is used to change the background colour of individual lines in the
+google Prettify code fragements and format certain elements for css use.
+
+This is done by giving each code fragment a unique ID reference and setting
+modifying the specific properties and lines for that particular fragment.
+
+IDs have the format js--cXXYYZZ
+
+There are three common modifications:
+
+
+1. LINE BACKGROUND SHADING
+This is done to change the background colour of a line of code or a range
+of lines to green (indicating the code has changed).
+
+2. LINE INDENTATION ON LINE WRAP
+Changes how a line is indeneted when it wraps around in the code fragment
+display
+
+
+3.CSS CLASS CHANGES
+Code fragments showning CSS do not display in the correct colours, the
+.pln and .lit classes are over-riddent to give more accurate colouring
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050201 - FORMATTING
+   ************************************************************************* */
+#js--c050201 li:nth-child(n+9):nth-child(-n+17) { background: #EAF1DD }   /* line background green */
+
+#js--c050201 li:nth-child(13) {padding-left: 4.1rem;}                     /* adjust indent for line wrap */
+#js--c050201 li:nth-child(17) {padding-left: 4.1rem;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050201a - FORMATTING
+   ************************************************************************* */
+#js--c050201a li:nth-child(1) { background: #EAF1DD }                     /* line background green */
+
+#js--c050201a li:nth-child(1) {padding-left: 4.1rem;}                     /* adjust indent for line wrap */
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050202 - FORMATTING
+   ************************************************************************* */
+#js--c050202 li:nth-child(5) { background: #EAF1DD }                      /* line background green */
+#js--c050202 li:nth-child(n+13):nth-child(-n+15) { background: #EAF1DD }  /* line background green */
+
+#js--c050202 li:nth-child(7) {padding-left: 4.1rem;}                      /* adjust indent for line wrap */
+#js--c050202 li:nth-child(11) {padding-left: 4.1rem;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050203 - FORMATTING
+   ************************************************************************* */
+#js--c050203 li:nth-child(9) { background: #EAF1DD }                      /* line background green */
+
+
+#js--c050203 li:nth-child(7) {padding-left: 4.1rem;}                      /* adjust indent for line wrap */
+#js--c050203 li:nth-child(9) {padding-left: 4.1rem;}
+#js--c050203 li:nth-child(13) {padding-left: 4.1rem;}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050204 - FORMATTING
+   ************************************************************************* */
+#js--c050204 li:nth-child(3) { background: #EAF1DD }                      /* line background green */
+
+#js--c050204 li:nth-child(1) {padding-left: 4.1rem;}                      /* adjust indent for line wrap */
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c050205 - FORMATTING
+   ************************************************************************* */
+#js--c050205 li:nth-child(15) {padding-left: 4.1rem;}                     /* adjust indent for line wrap */
+#js--c050205 li:nth-child(17) {padding-left: 4.1rem;}                     /* adjust indent for line wrap */
+#js--c050205 li:nth-child(23) {padding-left: 4.1rem;}                     /* adjust indent for line wrap */
+/* ************************************************************************* */

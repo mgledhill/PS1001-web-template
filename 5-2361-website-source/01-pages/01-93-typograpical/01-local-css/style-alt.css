@@ -1,0 +1,33 @@
+.list-num { list-style-type: upper-alpha; }
+
+
+.table-fnote td  { font-size: 0.6rem }
+
+/*.table-fnote td em { font-family: "conc-t3-r"; }*/
+
+.table-clean {
+    /*font-family: "conc-t2-r";*/
+    font-size: 0.64rem;
+
+}
+.table-caption {
+    font-family: "conc-t2-r";
+}
+/*.table-fnote {
+    font-family: "conc-t2-r";
+}*/
+/*.table-fnote td em {
+    font-family: "conc-t3-r";
+}*/
+.hlink {letter-spacing: 0.1rem;}
+.xref {letter-spacing: 0.1rem;}
+
+.top-nav {                                  /* top-nav is the row holding the */
+    font-family: "conc-c4-r";
+}
+
+.section-std p {                            /* TEXT STYLE - paragraph */
+    line-height: 140%;
+    font-size: 0.9rem;
+    /*letter-spacing: -0.03rem; */
+}

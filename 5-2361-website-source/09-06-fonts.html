@@ -1,0 +1,612 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Download the template website with open source fonts.">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                              09-06-FONTS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/09-06-fonts/05-local-js/09-06-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/09-06-fonts/01-local-css/09-06-prettifylines.css"> -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The Practical Series fonts | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="09-05-fonts.html#js--090500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="09-07-fonts.html#js--090700"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>9</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">9</span>Fonts &amp; web fonts</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 09-06&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 9. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-090000" href="09-00-fonts.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">9</span><span class="toc-lev1-text">Fonts &amp; web fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-090100" href="09-01-fonts.html#js--090100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.1</span><span class="toc-lev2-text">Different types of fonts and web font formats</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090101" href="09-01-fonts.html#js--090101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.1</span><span class="toc-lev3-text">What type of font to convert?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090102" href="09-01-fonts.html#js--090102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.2</span><span class="toc-lev3-text">What format to convert the font to?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090103" href="09-01-fonts.html#js--090103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.3</span><span class="toc-lev3-text">The additional features of OpenType fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090200" href="09-02-fonts.html#js--090200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.2</span><span class="toc-lev2-text">Converting a font to a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090300" href="09-03-fonts.html#js--090300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.3</span><span class="toc-lev2-text">How to use a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090301" href="09-03-fonts.html#js--090301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.1</span><span class="toc-lev3-text">Loading a font with <span class="code">@font-face</span> </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090302" href="09-03-fonts.html#js--090302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.2</span><span class="toc-lev3-text">Using the font</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090400" href="09-04-fonts.html#js--090400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.4</span><span class="toc-lev2-text">Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090401" href="09-04-fonts.html#js--090401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.1</span><span class="toc-lev3-text">Where to get open source fonts?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090402" href="09-04-fonts.html#js--090402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.2</span><span class="toc-lev3-text">Replacing the Equity fonts with open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090403" href="09-04-fonts.html#js--090403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.3</span><span class="toc-lev3-text">A small confession</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090500" href="09-05-fonts.html#js--090500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.5</span><span class="toc-lev2-text">Using the Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090501" href="09-05-fonts.html#js--090501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.1</span><span class="toc-lev3-text">An apology by the author</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090502" href="09-05-fonts.html#js--090502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.2</span><span class="toc-lev3-text">Changes to <span class="code">ps-fonts.css</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090600" href="09-06-fonts.html#js--090600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.6</span><span class="toc-lev2-text">The Practical Series fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090601" href="09-06-fonts.html#js--090601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.1</span><span class="toc-lev3-text">PS Icons font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090602" href="09-06-fonts.html#js--090602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.2</span><span class="toc-lev3-text">PS Index font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090700" href="09-07-fonts.html#js--090700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.7</span><span class="toc-lev2-text">Web fonts the download</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 090600]
+     SECTION 9.6 - THE PRACTICAL SERIES FONTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090600">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>9.6</h2></div>
+                    <div class="sub-title-text-box"><h2>The Practical Series fonts</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Finally, the PS fonts (Practical Series fonts). Now unfortunately, these are fonts that I made myself&mdash;and I&rsquo;m sorry, they&rsquo;re not very good&mdash;<span class="first-use">please feel free to use something else</span>. For what they&rsquo;re worth, you are welcome to use them however you want.</p>
+
+                    <p class="hyp">What I can tell you is that making a font is quite difficult&mdash;especially when you&rsquo;re starting from scratch and know cock-all about it. It&rsquo;s difficult partly because it&rsquo;s a complicated process and you need to know a lot about it; and also because the font making programmes are neither intuitive nor easy to use (<span class="first-use">they could have been made by the people responsible for PhotoShop</span>)&mdash;it took me a long time to figure out how to do it.</p>
+
+                    <p class="hyp">Making a simple font is a bit of an aside and not really to do with the website&mdash;for those of you who are interested in such things, I take you through how I did it in <a class="hlink nohyp utx" href="#">appendix&nbsp;xxx</a> (it&rsquo;s not something you need to know).</p>
+
+                    <p class="hyp">I made two fonts for the website, the first is a series of icons; the second is a numerical index font (numbers within circles). Looking at these in turn:</p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 090601]
+     SUBSECTION 9.6.1 - PS ICONS FONT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090601">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>9.6.1</h3></div>
+                    <div class="sub-title-text-box"><h3>PS Icons font</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">This font consists of some simple icons used for navigation. It has its own WOFF file (<span class="code">ps-icons.woff</span>) and consists of the following characters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--t09-11">
+                            <a href="01-pages/09-06-fonts/02-images/fig-09-20a.png" data-lightbox="fig-set" data-title="Table 9.11 - PS Icons, font characters">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-06-fonts/02-images/fig-09-20a.png" style="width:90%" alt="Table 9.11 - PS Icons, font characters">
+                            </a>
+                            <p>Table 9.11 &emsp; PS Icons, font characters</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The keys I assigned the symbols are broadly (this was my logic):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t09-04">                 <!-- TABLE - Start of table  -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
+                            <td class="leading"><div style="min-height: 3em"></div></td> <!-- Leading row (sets min-height) -->
+                            <td class="table-left serif" style="width: 12%; font-size: 1rem">L/l<br>U/u<br>D/d<br>R/r</td>      <!-- set column 01 width here -->
+                            <td class="table-left serif" style="width: 88%; font-size: 1rem">Left	(uppercase - double arrow, lowercase - single arrow)<br>Up<br>Down<br>Right</td>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 1.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left serif" style="font-size: 1rem"></td>
+                            <td class="table-left serif" style="font-size: 1rem"></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left serif" style="font-size: 1rem">S/s<br>T/t<br>B/b<br>F/f</td>
+                            <td class="table-left serif" style="font-size: 1rem">Start<br>Top<br>Bottom<br>Finish</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 1.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left serif" style="font-size: 1rem"></td>
+                            <td class="table-left serif" style="font-size: 1rem"></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left serif" style="font-size: 1rem">a<br>h<br>m<br>j<br>k</td>
+                            <td class="table-left serif" style="font-size: 1rem">Download<br>Home<br>Mouse<br>Left click (above and left of M key)<br>Right click (above and right of M key)</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are lots of Icon fonts out there that you can use instead&mdash;it&rsquo;s not necessary to use mine (the <a class="hlink nohyp" href="http://ionicons.com/">ionicons</a> site has some nice ones)&mdash;I made the font more as an exercise to see if I could rather than because I needed to.</p>
+
+                    <p class="hyp"><span class="first-use">Use it as you will</span>. Get it here <a class="code-nav" href="01-pages/09-06-fonts/04-data/ps-icons.woff" download><sub><span class="nav-icon notice" style="font-size: 1.1rem">a</span></sub></a></p>
+
+               </div>                                          <!-- End of section text area   -->
+
+               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 090602]
+     SUBSECTION 9.6.2 - PS INDEX FONT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--090602">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>9.6.2</h3></div>
+                    <div class="sub-title-text-box"><h3>PS Index font</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">This font is my own poor attempt to recreate Mr Butterick&rsquo;s Concourse Index font: the numbers with a circle round like this</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f09-20b">
+                            <a href="01-pages/09-06-fonts/02-images/fig-09-20b.png" data-lightbox="fig-set" data-title="Concourse Index font">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-06-fonts/02-images/fig-09-20b.png" style="width:90%" alt="Concourse Index font">
+                            </a>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now, Mr Butterick is a font designer and he does something clever&mdash;<span class="first-use">I&rsquo;m guessing with ligatures</span>&mdash;that allows double digit number to render all the way up to 99, if I type 99 in Concourse Index I get <sub><img src="01-pages/09-06-fonts/02-images/fig-09-20c.png" style="height: 1rem" alt="Concourse Index double digit"></sub>. <span class="first-use">See, clever</span>.</p>
+
+                    <p class="hyp">Mr Butterick, I&rsquo;m sure, knows this stuff backwards, but I don&rsquo;t, I&rsquo;m learning as I go along and this was a step too far. So I made an engineering decision to approximate what Mr Butterick did <span class="first-use">(I took a shortcut)</span>.</p>
+
+                    <p class="hyp">I don&rsquo;t know how to make ligatures; but what I do know is that HTML lists (see <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a>) that normally use number to indicate points: 1, 2, 3, 4 &amp;c. can be changed to use uppercase (or lowercase) letters to indicate points: A, B, C, D, E, F...&amp;c all the way to Z; then it start with AA, AB &amp;c. This gives me the option to define 26 list points and that is probably enough for most lists.</p>
+
+                    <p class="hyp">I created 26 characters (font designers call them <span class="first-use">glyphs</span>) and mapped them to the following characters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--t09-12">
+                            <a href="01-pages/09-06-fonts/02-images/fig-09-20d.png" data-lightbox="fig-set" data-title="Table 9.12 - PS Icons, font characters">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-06-fonts/02-images/fig-09-20d.png" style="width:90%" alt="Table 9.12 - PS Icons, font characters">
+                            </a>
+                            <p>Table 9.12 &emsp; PS Index, font characters</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It means I can replicate to some extent the Concourse Index font. I also mapped the first nine glyphs (A-I) to the numbers 1-9, this means that a list will work as numbers for the first nine points. It actually works for zero too; i.e.:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--t09-13">
+                            <a href="01-pages/09-06-fonts/02-images/fig-09-20e.png" data-lightbox="fig-set" data-title="Table 9.13 - PS Index, mapped to numerical characters">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/09-06-fonts/02-images/fig-09-20e.png" style="width:90%" alt="Table 9.13 - PS Index, mapped to numerical characters">
+                            </a>
+                            <p>Table 9.13 &emsp; PS Index, mapped to numerical characters</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Again, I make this font freely available. Use it if you want to. Get it here <a class="code-nav" href="01-pages/09-06-fonts/04-data/ps-index.woff" download><sub><span class="nav-icon notice" style="font-size: 1.1rem">a</span></sub></a></p>
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+               </div>                                          <!-- End of section text area   -->
+
+               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="09-05-fonts.html#js--090500">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="09-07-fonts.html#js--090700">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>

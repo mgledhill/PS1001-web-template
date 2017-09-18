@@ -1,0 +1,531 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="The essential tools for building a website: Chrome, Brackets, WinSCP, Word, Inkscape and Paint.net">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                              01-04-tools.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/01-04-tools/05-local-js/01-04-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css"> -->
+        <!-- Lightbox styles            <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">  -->
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Tools of the trade | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="01-03-typographical.html#js--010300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <div class="nav-wide-blank" ></div>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text ">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="02-00-fairfax.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="02-00-fairfax.html#js--020000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>1</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">1</span>Introduction</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 01-04&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 1. introduction
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-010000" href="01-00-introduction.html#js--010000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">1</span><span class="toc-lev1-text">Introduction</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-010100" href="01-01-howtouse.html#js--010100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.1</span><span class="toc-lev2-text">How to use this website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-010200" href="01-02-paying.html#js--010200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.2</span><span class="toc-lev2-text">How to pay for this document</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-010300" href="01-03-typographical.html#js--010300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.3</span><span class="toc-lev2-text">Typographical conventions</span></div></a>
+                              <br class="toc-pad">              <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                      </li>                                     <!-- TOC link end   -->
+                        <li><a class="js--sc-010400" href="01-04-tools.html#js--010400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.4</span><span class="toc-lev2-text">Tools of the trade</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010401" href="01-04-tools.html#js--010401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.1</span><span class="toc-lev3-text">Tools for website development</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010402" href="01-04-tools.html#js--010402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.2</span><span class="toc-lev3-text">Tools for the words</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010403" href="01-04-tools.html#js--010403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.3</span><span class="toc-lev3-text">Tools for the images</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010404" href="01-04-tools.html#js--010404">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.4</span><span class="toc-lev3-text">Summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                      <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 010400]
+     SECTION 1.4 - THE TOOLS OF THE TRADE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--010400">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>1.4</h2></div>
+                 <div class="sub-title-text-box"><h2>The tools of the trade</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I&rsquo;ve split this section into three parts: firstly, the tools to develop and build the website itself, secondly, the tools to write the words and thirdly, the tools needed to make the images.</p>
+
+               </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 010401]
+     SUBSECTION 1.4.1 - TOOLS FOR WEBSITE DEVELOPMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--010401">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>1.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Tools for website development</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I started this project as a software engineer, I build and programme control systems for a living (industrial machinery, water treatment works, tritium handling systems for nuclear reactors&nbsp;&mdash;&nbsp;<span class="first-use">even I&rsquo;m surprised they let me work on that one</span>), but not HTML and CSS; that was new to me.</p>
+
+                    <p class="hyp">HTML and CSS are not what I would call programming languages (and to be fair, I don&rsquo;t think that was the intention when they were created), but it is (<span class="first-use">kind of</span> ) how I think they should be and since I&rsquo;m building this website, I guess my opinion counts.</p>
+
+                    <p class="hyp">I view it as code, I know people say HTML is the content CSS is the styling but really, it&rsquo;s all just code. And that leads me to how to programme it, there are website building programmes: <a class="hlink nohyp" href="http://www.adobe.com/uk/products/dreamweaver.html/">adobe dreamweaver</a> etc. but Dream&shy;weaver is expensive and I wasn&rsquo;t sure I wanted to use it&nbsp;&mdash;&nbsp;my experience of these types of programmes and Adobe in particular is that they require quite an effort to just understand the programme (ask anyone who has tried to get to grips with Photoshop).</p>
+
+                    <p class="hyp">In the end I decided to do it myself using a text editor and coding from scratch, this at least, meant I only had to learn HTML and CSS, and I would get a good understanding of both.</p>
+
+                    <p class="hyp">It just left the question&nbsp;&mdash;&nbsp;<span class="first-use">which text editor</span>? And my God there is a lot to choose from. </p>
+
+                    <p class="hyp">In the end I went for <em>Brackets</em> (despite what I just said about Adobe), this was on a recommendation; and its good. I like Brackets. It&rsquo;s powerful, it&rsquo;s easy to use, it&rsquo;s open source and you can download it from <a class="hlink nohyp" href="http://brackets.io/">brackets.io</a>.</p>
+
+                    <p class="hyp">Brackets also lets you add extensions that do certain thing like add all those browser prefixes that nobody understands (<span class="first-use">don&rsquo;t get me started on browser prefixes&nbsp;&mdash;&nbsp;you wouldn&rsquo;t get away with that crap in proper engineering</span>).</p>
+
+                    <p class="hyp">Brackets has a live preview function that lets you see the website your building live as you change it (there are some limitations, but these are mostly to do with Java script and jQuery and the re-loading of code, I cover this in <a class="hlink nohyp utx" href="#">&sect;&nbsp;xxx</a>) and this is very good.</p>
+
+                    <p class="hyp"><em>I came to the conclusion that designing with the website open is the best way to see and understand what you are doing.</em></p>
+
+                    <p class="hyp">My basic web browser is <em>Chrome</em>, this is my personal choice and fortunately, it is the only one that works with Brackets&rsquo; live preview&mdash;get it from <a class="hlink nohyp" href="https://www.google.co.uk/chrome/">google</a> (UK website).</p>
+
+                    <p class="hyp">Finally, a file transfer protocol (<span class="first-use">ftp</span>) client, this is needed to upload the website. I use <em>WinSCP</em> (<span class="first-use">secure copy protocol</span>). This is a very straight forward ftp client and is easy to use. It has a nice feature of synchronising the website with the offline content (the di-rectories on your computer) and will automatically update the website whenever a change is made to any of the offline files. It’s good; you can get it at <a class="hlink nohyp" href="https://winscp.net/eng/download.php">winscp.net</a>.</p>
+
+
+                    <p class="hyp"><span class="first-use">That&rsquo;s it for the web stuff</span>.</p>
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 010402]
+     SUBSECTION 1.4.2 - TOOLS FOR THE WORDS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--010402">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>1.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Tools for the words</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+
+
+                    <p class="hyp">The package I use most, and I use it a lot is <em>Microsoft Word</em>. I wrote the website content in word, if you&rsquo;re reading this as a document (pdf download) then you are reading the original Word document containing the website content with all the styles and formatting that I wanted to recreate on the website.</p>
+
+                    <p class="hyp">I talk a lot about Word, well, complain really, and sometimes I&rsquo;m rude; but I don&rsquo;t mean it. </p>
+
+                    <p class="hyp">Word is incredibly powerful (I&rsquo;m talking about the Window&rsquo;s version, not that strange cut down thing that runs on Macs), and it should be praised&nbsp;&mdash;&nbsp;<span class="first-use">praise it with great praise.</span></p>
+
+                    <p class="hyp">It has its detractors: &ldquo;it&rsquo;s not open source&rdquo; they say (<span class="first-use">Linux people&mdash;I&rsquo;m talking about you here</span>), it&rsquo;s not free (<span class="first-use">Linux people&mdash;still you</span>), it&rsquo;s Microsoft, it&rsquo;s Windows, it&rsquo;s the devil&rsquo;s work, blah, blah...(<span class="first-use">right, so it&rsquo;s just Linux people that don&rsquo;t like it</span>).</p>
+
+                    <p class="hyp">But, and it&rsquo;s a big enough but to start a paragraph with; <em>we all use it&mdash;it&rsquo;s the industry standard</em>, yes it&rsquo;s pricy and has it&rsquo;s foibles but, it&rsquo;s so much better than everything else.</p>
+
+                    <p class="hyp">Word is a jack of all trades and generally it does it well. There are some peculiarities, but mostly it&rsquo;s easy to use and it just works. It handles tables and lists, the headings are simple to use, it hyphenates and justifies, it turns straight quotes into curly quotes without you noticing, it will automatically make tables of content and even indexes (<span class="first-use">yes, that is the right plural</span>), it handles ligatures and kerning and some quite high level typographic concepts without bothering you.</p>
+
+                    <p class="hyp">To some extent, it&rsquo;s its own worst enemy; it&rsquo;s easy to just open Word and start typing, it&rsquo;s also easy to copy an existing document and use it for a new purpose. The thing just works and it hides all the complex stuff. But the complex stuff is there, and for something that gets used every day, it&rsquo;s worth knowing what&rsquo;s happening behind the scenes.</p>
+
+                    <p class="hyp">It also teaches us about web design as you will find out; all those things we take for granted: making tables, headings, spell check&nbsp;&mdash;&nbsp;Word just does it. With web development, we now have to do it for ourselves, and believe me putting a table into a Word document and formatting it is a damn sight easier than trying to do the same thing on a website.</p>
+
+                    <p class="hyp">Word is our starting point for writing website content&nbsp;&mdash;&nbsp;don&rsquo;t try and do it in a text editor, it will just be full of typos.</p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 010403]
+     SUBSECTION 1.4.3 - TOOLS FOR THE IMAGES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--010403">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>1.4.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Tools for the images</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Where I&rsquo;ve used images on the website, I&rsquo;ve tried to use scalable vector graphics (<span class="first-use">svg</span>) rather than jpegs, gifs, bmps or pngs. Scalable vector graphics as the name suggests are entirely scalable and work at any resolution.</p>
+
+                    <p class="hyp">The package I use most for making these images is <em>Inkscape</em> (again this is a free package; please donate if you like it). I also used this to make an icon font for some graphics I use on the website&nbsp;&mdash;&nbsp;I talk you through how to do this too. Inkscape is available at <a class="hlink nohyp" href="https://inkscape.org/en/download/">inkscape.org</a></p>
+
+                    <p class="hyp">If I am using pngs or jpegs (or other non-scalable images) I tend to use <em>paint.net</em> (again this is a free package), it&rsquo;s nowhere near as powerful as Photoshop, but it is very easy to use and for me, does all I need. Get it here: <a class="hlink nohyp" href="http://www.getpaint.net/download.html">getpaint.net</a>; just be careful which link you click, it&rsquo;s the &ldquo;<span class="first-use">download&nbsp;now&nbsp;dotpdn&nbsp;link</span>&rdquo;, it&rsquo;s in the grey table area near the bottom of the page (not the tempting big green button).</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+ <!-- ************************************************************************** [WP 010404]
+     SUBSECTION 1.4.4 - SUMMARY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--010404">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>1.4.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Summary</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">So that&rsquo;s it, these are my tools of the trade:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Unnumbered lists are an unordered list of class .list-no-num. The text of
+      each point must be contained in its own <p> element
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Brackets (text editor)</p></li>
+
+                        <li><p class="hyp">Chrome (browser)</p></li>
+
+                        <li><p class="hyp">WinSCP (file transfer client)</p></li>
+
+                        <li><p class="hyp">Word (content creation and editing)</p></li>
+
+                        <li><p class="hyp">Inkscape (svg creator)</p></li>
+
+                        <li><p class="hyp">Paint.net (image editor)</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <div class="section-last"></div>                        <!-- last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox                   <script type="text/javascript" src="21-global/05-js/lightbox.js"></script> -->
+
+    </body>
+</html>

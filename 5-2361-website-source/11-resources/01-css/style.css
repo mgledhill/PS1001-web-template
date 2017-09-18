@@ -1,0 +1,2210 @@
+
+
+/* PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+Title :          BRACKETS-GIT & GITHUB VCS                            STYLE.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This is the main style sheet for the website, it contains styles for the
+following:
+
+        Base settings
+        Top navigation
+        Fixed navigation
+        Cover features (titles & picture)
+        Header title bar
+        Table of contents (TOC)
+        Standard section formatting (titles, text styles, side bars etc.)
+        Figures
+        Tables
+        Code fragments
+        Formula
+        Footer
+        Footer navigation
+
+The style sheet also contains responsive formatting for each of the areas
+(responsive settings are at the end of each section).
+
+This is one of a set of style sheets associated with the website, a full list
+of style sheets and the order in which they should be called is given here:
+
+        ps-fonts.css            - web fonts for the site
+        ps-googlefonts.css      - Google web fonts for downloadable version
+        normalise.css           - standardises the rendering of the site on
+                                  different browsers
+        prettify.css            - styles associated with google-code-prettify
+        lightbox.css            - styles associated with lightbox2 viewer
+        grid.css                - defines a responsive grid (Kerstner grid)
+                                  for columns within the website
+        style.css               - this file
+
+-------------------------------------------------------------------------------
+COLOURS IN USE
+
+ Colour                 Usage                                    Hex Code
+----------------------+----------------------------------------+---------------
+ Page                 | Page colour outside 1276px boundary    | #fbfaf6
+ Page edge            | Border colour to page edge             | #ededed
+ Background           | Overall background colour (white)      | #fff
+ Main text            | main body text (v. dk gy)              | #404030
+ sidebar text         | Sidebar sans serif text (lt gy)        | #686868
+ sidebar border       | when collapsed (gy)                    | #cccccc
+ sidebar background   | when collapsed (lt gy)                 | #f8f8f8
+ Table border         | Outline for all tables                 | #cccccc
+ table background     | Incidental, code 7 formulae (lt gy)    | #fbfbfb
+ Navigation base      | Navigation (link/visited)              | #cccccc
+ Navigation hover     | Navigation (active/hover)              | #686868
+ Navigation bkgrd     | Navigation background (link/visited)   | #fff
+ Navigation bkgrd     | Navigation background (active/hover)   | #c8c8c8
+ TOC list             | Contents list of entries (blue)        | #4C6C9C
+ Footer background    | Footer area background (cream)         | #fbfaf6
+ Footer navigation    | Footer navigation & spacer text (blue) | #4c6c9c
+ Footer nav highlight | Footer nav highlights (lighter blue)   | #5b7daf
+ Button background    | Button light orange                    | #e67e22
+ Button hover         | Button dark orange (hover)             | #de7519
+ Text (red)           | Red text highlight                     | #c0504d
+ Untested link        | Highlights untested links              | #ff0000
+
+ git-cmd              | Blue colour used for Git commands      | #4F81BD
+ git-background       | Git command table background colour    | #404030
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+27 Jul 2017   d-P04.04.01  M. Gledhill    .nav-wide-blank class made responsive
+                                          closes #2
+
+16 Jul 2017   P03          M. Gledhill    Published
+
+12 Jul 2017   d-P02.02.04  M. Gledhill    .git-incid line height reduced
+
+28 Jun 2017   d-P02.02.02  M. Gledhill    Git commands made blue instead of red
+
+10 Jun 2017   P02          M. Gledhill    Published
+
+07 Jun 2017   d-P01.01.03  M. Gledhill    .pay link class added for PayPal link
+
+05 Jun 2017   d-P01.01.01  M. Gledhill    .payment class added
+
+04 Jun 2017   P01          M. Gledhill    First published
+
+03 Jun 2017   D01          M. Gledhill    Git styles added
+
+27 May 2017   D00          M. Gledhill    Development - based on PS1001 P10
+
+---------------------------------------------------------------------------- */
+.aside-right-rev:after { content: "style.css\00a0\2014\00a0 d-P04.04.01"; }      /* CSS REVISION NUMBER */
+
+
+
+/* ****************************************************************************
+   SET THE BASE FONT SIZE AND MAKE RESPONSIVE
+   ************************************************************************* */
+
+@media all {html {font-size: 24px;}}
+@media all and (max-width:1276px){html {font-size: 24px;}}
+@media all and (max-width:960px){html {font-size: 23px;}}
+@media all and (max-width:920px){html {font-size: 22px;}}
+@media all and (max-width:880px){html {font-size: 21px;}}
+@media all and (max-width:840px){html {font-size: 20px;}}
+@media all and (max-width:800px){html {font-size: 19px;}}
+@media all and (max-width:760px){html {font-size: 18px;}}
+@media all and (max-width:720px){html {font-size: 17px;}}
+@media all and (max-width:680px){html {font-size: 16px;}}
+@media all and (max-width:640px){html {font-size: 15px;}}
+@media all and (max-width:600px){html {font-size: 14px;}}
+@media all and (max-width:560px){html {font-size: 13px;}}
+@media all and (max-width:520px){html {font-size: 12px;}}
+
+
+/* ****************************************************************************
+   BASE PAGE SETUP
+   ************************************************************************* */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+html {
+    background-color: #fbfaf6;              /* Set cream coloured page background */
+    color: #404030;
+    font-family: 'eqty-ta-r';
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {                    /* set standard headings */
+    font-family: 'conc-t3-r';
+    font-weight:normal;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 100%
+}
+h3 { margin-top: 5rem; }
+h4, h5 { margin-top: 2rem; }
+h6 {                                        /* Placeholder heading - not displayed */
+    margin: 0;
+    display: none;
+}
+
+a:link,
+a:visited { color: #404030; text-decoration: none; }
+a:hover,
+a:active { color: #404030; }
+
+body {
+    max-width: 1276px;
+    /* min-width: 520px; */                 /* min width removed 13 Feb 17- not required */
+    margin: 0 auto;
+    background-color: #fff;                 /* make content area background white */
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+}
+
+
+/* ****************************************************************************
+   NAVIGATION
+   ****************************************************************************
+   There are two navigation areas, the first (top-nav) is situated at the top
+   of the page and scrolls upwards with the contents section, this navigation
+   area has five links:
+            1. Previous section         - left arrow
+            2. Previous chapter         - up arrow
+            3. Home (website home page) - home icon
+            4. Next chapter             - down arrow
+            5. Next section             - right arrow
+
+   The second navigation area (fixed-nav) appears as the contents section
+   scrolls off the top of the screen and remains fixed at the top of the
+   screen until the contents area reappears, this section has six links:
+            1. Previous section         - left arrow
+            2. Previous chapter         - up arrow
+            3. Top (of this section)    - Top arrow (up arrow with bar)
+            4. Home (website home page) - home icon
+            5. Next chapter             - down arrow
+            6. Next section             - right arrow
+
+   All of these navigations (seven in all, wide home and narrow home) are
+   present in the navigation list, the wide home button is qualified with
+   the .nav-home class.
+
+   As the screen scrolls into section 01, the fixed-nav class is attached
+   to the <nav> element (script.js), this hides the wide home button
+   (.nav-home) and makes visible the two narrow top & home buttons.
+
+   Each navigation areas animates when the mouse hovers over it (light grey
+   fill and darker text).
+
+   The navigation bars use progressively smaller fonts and row height as the
+   screen becomes narrower; eventually, the text disappears and just the icons
+   remain.
+
+   The navigation bar on the first page of the website (cover page) is not
+   visible at the top of the page until the user has scrolled down and
+   activated the fixed-nav operation. To hide the top-nav, its opacity is set
+   to zero by applying the .nav-cover class to the <nav> element.
+   ************************************************************************* */
+
+.top-nav {                                  /* top-nav is the row holding the */
+    max-width: 1276px;                      /* navigation areas               */
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1.0);
+    color: #CCCCCC;
+    margin: 0 auto;
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 80%;
+}
+.top-nav:after {                            /* ClearFix */
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+
+
+
+.nav-wide,                                  /* nav-wide/nav-narrow are the */
+.nav-narrow {                               /* navigation buttons          */
+    display: inline-block;
+    height: 60px;
+    padding-top: 18px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.nav-wide:last-child { border-right: 0; }   /* remove right border on last area */
+
+.nav-wide { width: 20%; }                   /* nav-wide is 20% of top-nav */
+
+.nav-narrow { width: 10%; display: none; }  /* nav-narrow is 10% of top-nav */
+                                            /* hide the narrow nav until fixed-nav activates */
+
+.nav-home { visibility: visible; }          /* make the wide home button visible */
+                                            /* this will be hidden when fixed-nav activates */
+
+.nav-wide:link,                             /* navigation link options */
+.nav-wide:visited,
+.nav-narrow:link,
+.nav-narrow:visited {
+    color: #cccccc;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-wide:hover,                            /* navigation hover options */
+.nav-wide:active,
+.nav-narrow:hover,
+.nav-narrow:active {
+    color: #686868;
+    background-color: #f8f8f8;
+}
+
+.nav-cover { opacity: 0; }                  /* Hide top nav bar on cover page */
+
+.nav-wide-blank {                           /* navigation buttons */
+    display: inline-block;
+    height: 60px;
+    width: 20%;
+    padding-top: 18px;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.nav-wide-blank:last-child { border-right: 0; }   /* remove right border on last area */
+
+.nav-blank {                               /* navigation buttons          */
+    display: inline-block;
+    height: 60px;
+    width: 100%;
+}
+
+.top-nav-text { visibility: visible; }      /* make navigation text visible */
+
+.top-nav-icon {
+    font-family: "icon-ps-r";
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* ----------------------------------------------------------------------------
+   NAVIGATION - FIXED POSITION
+   ----------------------------------------------------------------------------
+   The .fixed-nav class is attached to the <nav> element using the waypoint.js
+   script plugin Copyright (c) 2011-2012 Caleb Troughton (see html header for)
+   licensing information.
+
+   The fixed-nav class is applied to the <nav> element as the user scrolls
+   within 60px of the start of section 01 (given class name .js--section-start)
+   The .fixed-nav class fixes the navigation bar to the top of the screen and
+   makes the appropriate buttons visible.
+   ------------------------------------------------------------------------- */
+
+.fixed-nav {                                /* fixed (sticky) navigation */
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1.0;
+    width: 100%;
+    z-index: 9999;                          /* Ensure nav is at top level */
+}
+
+.fixed-nav .nav-home { display: none; }     /* hide large home button */
+.fixed-nav .nav-narrow { display: block; }  /* display narrow top & home buttons */
+.fixed-nav .nav-wide:first-child { border-left: 1px solid #ededed; }
+.fixed-nav .nav-wide:last-child { border-right: 1px solid #ededed; }
+
+
+/* ----------------------------------------------------------------------------
+   NAVIGATION - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The navigation button height is progressively reduced as the screen width
+   contracts, the padding above the text is adjusted to keep the text
+   vertically centred (the font size decreases in line with the base font
+   settings).
+
+   Below 680px, the text disappears leaving only the arrow symbols (set to 20px)
+   with a fixed button height of 40px.
+   ------------------------------------------------------------------------- */
+
+@media all {.nav-wide, .nav-narrow { height: 60px; }}
+@media all and (max-width:1276px) {.nav-wide, .nav-narrow, .nav-wide-blank { height: 60px; padding-top: 18px; }}
+@media all and (max-width:960px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 57px; padding-top: 17px; }}
+@media all and (max-width:920px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 54px; padding-top: 16px; }}
+@media all and (max-width:880px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 54px; padding-top: 16px; }}
+@media all and (max-width:840px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 51px; padding-top: 15px; }}
+@media all and (max-width:800px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 50px; padding-top: 15px; }}
+@media all and (max-width:760px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 47px; padding-top: 14px; }}
+@media all and (max-width:720px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 44px; padding-top: 13px; }}
+@media all and (max-width:680px)  {.nav-wide, .nav-narrow, .nav-wide-blank { height: 41px; padding-top: 12px; }}
+@media all and (max-width:640px){
+    .top-nav-text { display: none; }        /* hide text in navigation bar */
+    .nav-wide,
+    .nav-narrow,
+    .nav-wide-blank {
+        height: 40px;                       /* fix height and font-size */
+        padding-top: 6px;
+        font-size: 24px;
+    }
+    .fixed-nav .nav-narrow,                 /* in fixed-nav make all button widths the same */
+    .fixed-nav .nav-wide,
+    .fixed-nav .nav-wide-blank { width: 16.66%; }
+}
+
+
+/* ****************************************************************************
+   BUTTONS
+   ****************************************************************************
+   There are two types of button available to the website, the first
+   (.btn-full) is a filled orange coloured button with white text, the button
+   gets slightly darker when hovered over.
+
+   The second button (.btn-ghost) has orange text and an orange outline, on
+   hover the button becomes filled and the text white (same final appearance
+   as .btn-full).
+
+   Both these buttons have a primary class .btn that specifies the base settings
+   for all buttons.
+
+   Buttons are generally held in a div with a class specifying the usage:
+
+       btn-li       carries margins for a button appearing in a list
+
+   A .payment class is used to hold the paypal button (this will be centered
+   in the column).
+
+   ************************************************************************* */
+
+.btn-li {                                       /* container for button in a list */
+    display:inline-block;
+    margin: -0.5rem 0 1rem 6rem;
+}
+
+.btn {                                          /* basic settings for a button */
+    border: 2px solid #e67e22;
+    margin-right: 1rem;
+    padding: 0.2rem 0.5rem;
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.btn-full { background-color: #e67e22; }        /* settings for filled in button */
+.btn-full:link,
+.btn-full:visited {
+    color: #fff;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+.btn-full:hover,
+.btn-full:active {
+    background-color: #de7519;
+    border: 2px solid #de7519;
+}
+
+.btn-ghost {background-color: transparent; }    /* settings for an outline button */
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #e67e22;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: #fff;
+    background-color: #de7519;
+    border: 2px solid #de7519;
+}
+
+.payment {                                       /* container for button in a list */
+    display:table;
+    margin: -0.5rem auto 1rem auto;
+}
+
+
+.utx:before {                                    /* untested link */
+    content: "\25cf";
+    color: #ff0000;
+}
+
+
+
+/* ****************************************************************************
+   COVER PICTURE & WEBSITE TITLES
+   ****************************************************************************
+   On the site Home page, the navigation & title bars are missing, and a
+   cover image and titles are inserted in their place.
+
+   This is the first area a visitor to the site sees.
+   ************************************************************************* */
+
+.cover-overline{                            /* creates a line above the cover titles */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-top: 4px solid #404030; }
+
+.cover-title h1 {                           /* format h1 - MAIN TITLE */
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 340%;
+    margin: 0 0 0.4rem 0;
+}
+.cover-title h2 {                           /* format h2 - SUB TITLE */
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: 0.086rem;
+    font-size: 140%;
+    margin: 0 0 1.5rem 0;
+}
+.cover-title h3 {                           /* format h3 - AUTHOR */
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    letter-spacing: 0.086rem;
+    font-size: 110%;
+    margin: 0 0 0.4rem 0;
+}
+.cover-title h4 {                           /* format h4 - OPTIONAL DESCRIPTION */
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    letter-spacing: 0.086rem;
+    font-size: 104%;
+    margin: 0 0 0rem 0;
+}
+
+.cover-fig {                                /* holder for cover image */
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0;
+}
+.cover-fig img {width: 100%;}               /* format cover image */
+/* ----------------------------------------------------------------------------
+   COVER HEADINGS- RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The title large number and heading text is resized as the screen narrows;
+   this is done to maintain the proportionality of the large number to the
+   smaller heading text, this stops at 960px, at this point the base
+   changes to the font-size take over, and no further manipulation is
+   required.
+
+   Below 640px, the large number is no longer displayed and the smaller
+   version of the number (in the heading text area) is made visible
+   ------------------------------------------------------------------------- */
+@media all {.cover-title h1 { font-size: 340%; } .cover-title h2 { font-size: 140%; } .cover-title h3 { font-size: 110%; }}
+@media all and (max-width:1290px) {.cover-title h1 { font-size: 327%; } .cover-title h2 { font-size: 134%; } .cover-title h3 { font-size: 105%; }}
+@media all and (max-width:1240px) {.cover-title h1 { font-size: 316%; } .cover-title h2 { font-size: 129%; } .cover-title h3 { font-size: 101%; }}
+@media all and (max-width:1200px) {.cover-title h1 { font-size: 305%; } .cover-title h2 { font-size: 124%; } .cover-title h3 { font-size: 97%; }}
+@media all and (max-width:1160px) {.cover-title h1 { font-size: 294%; } .cover-title h2 { font-size: 119%; } .cover-title h3 { font-size: 94%; }}
+@media all and (max-width:1120px) {.cover-title h1 { font-size: 284%; } .cover-title h2 { font-size: 114%; } .cover-title h3 { font-size: 89%; }}
+@media all and (max-width:1080px) {.cover-title h1 { font-size: 273%; } .cover-title h2 { font-size: 109%; } .cover-title h3 { font-size: 85%; }}
+@media all and (max-width:1040px) {.cover-title h1 { font-size: 262%; } .cover-title h2 { font-size: 104%; } .cover-title h3 { font-size: 81%; }}
+@media all and (max-width:1000px) {.cover-title h1 { font-size: 251%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:960px)  {.cover-title h1 { font-size: 252%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:920px)  {.cover-title h1 { font-size: 251%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:880px)  {.cover-title h1 { font-size: 251%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:840px)  {.cover-title h1 { font-size: 251%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:800px)  {.cover-title h1 { font-size: 251%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:760px)  {.cover-title h1 { font-size: 250%; } .cover-title h2 { font-size: 99%; } .cover-title h3 { font-size: 77%; }}
+@media all and (max-width:720px)  {.cover-title h1 { font-size: 250%; } .cover-title h2 { font-size: 98%; } .cover-title h3 { font-size: 76%; }}
+@media all and (max-width:680px)  {.cover-title h1 { font-size: 249%; } .cover-title h2 { font-size: 98%; } .cover-title h3 { font-size: 76%; }}
+@media all and (max-width:640px)  {.cover-title h1 { font-size: 249%; } .cover-title h2 { font-size: 98%; } .cover-title h3 { font-size: 76%; }}
+@media all and (max-width:600px)  {.cover-title h1 { font-size: 248%; } .cover-title h2 { font-size: 98%; } .cover-title h3 { font-size: 76%; }}
+@media all and (max-width:560px)  {.cover-title h1 { font-size: 248%; } .cover-title h2 { font-size: 98%; } .cover-title h3 { font-size: 76%; }}
+@media all and (max-width:520px)  {.cover-title h1 { font-size: 340%; } .cover-title h2 { font-size: 140%; } .cover-title h3 { font-size: 110%; }}
+
+
+
+
+/* ****************************************************************************
+   HEADER TITLE BAR
+   ****************************************************************************
+   The title bar contains the section/chapter number and the heading text
+
+        e.g.     2   Installing the software
+
+   The number is large (the same size a two lines of the heading text) and
+   appears at the left edge of the central column area and occupies 1/3 of the
+   width of this column. The heading text can be up to two lines in length and
+   fills the remaining 2/3 of the central column.
+
+   The large number has class .title-num-box
+   The heading text has class .title-text-box
+
+   The heading text should also include the section number contained within a
+   <span> of class .title-small-num.
+
+   This .title-small-num is not displayed until the screen width is less than
+   640px, at this point the large number is hidden and the small number
+   displayed.
+
+   The title row is equipped with left and right side columns (to maintain the
+   correct column spacing), but these are not used.
+   ************************************************************************* */
+
+.title-row {                                /* container for whole row */
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+}
+
+.title-centre {                             /* container for central column */
+    border-top: 2px solid #404030;
+}
+
+.title-num-box {                            /* container for large number */
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    text-align: left;
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 500%;
+    color: #404030;
+}
+
+.title-text-box {                           /* container for heading text */
+    display: inline-block;
+    float: left;
+    width: 66.6%;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 190%;
+    line-height: 110%;
+    padding-top: 2.6%;
+    padding-left:2%;
+    color: #404030
+}
+
+.title-small-num { display: none; }         /* span for small number
+
+/* ----------------------------------------------------------------------------
+   HEADER TITLE BAR- RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The title large number and heading text is resized as the screen narrows;
+   this is done to maintain the proportionality of the large number to the
+   smaller heading text, this stops at 960px, at this point the base
+   changes to the font-size take over, and no further manipulation is
+   required.
+
+   Below 640px, the large number is no longer displayed and the smaller
+   version of the number (in the heading text area) is made visible
+   ------------------------------------------------------------------------- */
+
+@media all {.title-num-box { font-size: 500%; } .title-text-box { font-size: 190%; }}
+@media all and (max-width:1276px) {.title-num-box { font-size: 500%; } .title-text-box { font-size: 190%; }}
+@media all and (max-width:1240px) {.title-num-box { font-size: 488%; } .title-text-box { font-size: 185%; }}
+@media all and (max-width:1200px) {.title-num-box { font-size: 470%; } .title-text-box { font-size: 179%; }}
+@media all and (max-width:1160px) {.title-num-box { font-size: 452%; } .title-text-box { font-size: 172%; }}
+@media all and (max-width:1120px) {.title-num-box { font-size: 438%; } .title-text-box { font-size: 167%; }}
+@media all and (max-width:1080px) {.title-num-box { font-size: 420%; } .title-text-box { font-size: 160%; }}
+@media all and (max-width:1040px) {.title-num-box { font-size: 406%; } .title-text-box { font-size: 154%; }}
+@media all and (max-width:1000px) {.title-num-box { font-size: 390%; } .title-text-box { font-size: 148%; }}
+@media all and (max-width:960px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:920px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:880px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:840px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:800px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:760px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:720px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:680px)  {.title-num-box { font-size: 395%; } .title-text-box { font-size: 150%; }}
+@media all and (max-width:640px){
+    .title-num-box { display: none; }
+    .title-text-box { width: 100%; }
+    .title-small-num {
+        visibility: visible;
+        display:inline-block;
+        float:left;
+        margin-right: 2%;}
+    }
+
+
+/* ****************************************************************************
+   HEADER TABLE OF CONTENTS
+   ****************************************************************************
+   The table of contents (TOC) lists all the sections within this chapter,
+   there are three heading levels:
+
+        1       Chapter heading         level 1
+        1.1     Section heading         level 2
+        1.1.1   Sub-section heading     level 3
+
+   Each level has a slightly different appearance in the TOC:
+
+   1     Level 1 heading (bold font)
+         1.1     Level 2 heading (roman font)
+         1.1.1   Level 3 heading (smaller roman font)
+
+   Line spacing is also different for each level.
+
+   Level 1 entries span the full width of the page, level 2 and 3 entries
+   use a two column arrangement below the level 1 entry.
+
+   The effective indenting of the text at level 1 is aligned with the
+   number of level 2 and 3 entries:
+
+          1   An overview (level 1)
+              1.1   Section heading (level 2/3)
+
+   All TOC entries are contained in un-ordered lists, the level 1 list
+   uses class .toc-line (this spans the page)
+
+   Level 2 and 3 lists use the class .toc-list, this splits the entries
+   into two columns; this collapses to a single column at screen widths
+   of 760 px or less.
+
+   Each TOC entry is contained within the .toc-lev class (this hold the
+   individual number and heading for each entry). Within the .to-lev class
+   there are two further classes .toc-levx-num and .toc-levx-text (where x
+   is 1, 2 or 3 depending on the heading level).
+
+   The .toc-lev class is present to allow the background shading of both the
+   number and heading text to change on mouse hover.
+
+   The central column contains the TOC, this is split into two further
+   columns - at low screen widths, this is reduced to a single column.
+
+   The .toc-pad class is used to even up the column lines (for example to
+   push a major division to the top of the next row). It is used by adding
+   <br class="toc-pad"> elements where a gap is to be inserted. The
+   .toc-pad class is not displayed when the screen width reduces the display
+   to a single column.
+
+   The .toc-end class is an optional class the applies a large margin and
+   a grey border to separate the TOC from following content.
+   ************************************************************************* */
+
+.toc-line {                                 /* container for the TOC */
+    margin:0;
+    list-style: none;
+    color: #4C6C9C;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.8rem;
+}
+.toc-line li a:link,                        /* format the TOC list text */
+.toc-line li a:visited {
+    text-decoration: none;
+    color: #4C6C9C;
+}
+
+.toc-list {                                 /* container for the TOC */
+    margin:0;
+    list-style: none;
+    -webkit-column-count: 2;
+    column-count: 2;
+    color: #4C6C9C;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.8rem;
+}
+.toc-list li a:link,                        /* format the TOC list text */
+.toc-list li a:visited {
+    text-decoration: none;
+    color: #4C6C9C;
+}
+
+.toc-lev:link,                              /* format the link hover background */
+.toc-lev:visited { -webkit-transition: background-color 0.2s; transition: background-color 0.2s; }
+.toc-lev:hover,
+.toc-lev:active  { background-color: #f8f8f8; }
+
+.toc-lev1lt-num {                             /* container for TOC level 1 number */
+    display: inline-block;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    width: 5%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+.toc-lev1lt-text {                            /* container for TOC level 1 text */
+    display: inline-block;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    width: 95%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.toc-lev1-num {                             /* container for TOC level 1 number */
+    display: inline-block;
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    vertical-align: top;
+    width: 5%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+.toc-lev1-text {                            /* container for TOC level 1 text */
+    display: inline-block;
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    width: 95%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.toc-lev2-num {                             /* container for TOC level 2 number */
+    display: inline-block;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;    vertical-align: top;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+.toc-lev2-text {                            /* container for TOC level 2 text */
+    display: inline-block;
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.75rem;
+    width: 70%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.toc-lev3-num {                             /* container for TOC level 3 number */
+    display: inline-block;
+    font-size: 0.7rem;
+    vertical-align: top;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.toc-lev3-text {                            /* container for TOC level 3 text */
+    display: inline-block;
+    font-size: 0.7rem;
+    width: 70%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.toc-pad { visibility: visible;}           /* Padding to ensure even columns */
+
+.toc-end {                                  /* container for the TOC */
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid #CCCCCC;
+    margin:0;
+}
+
+/* ----------------------------------------------------------------------------
+   HEADER TABLE OF CONTENTS - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   At screen widths below 760px, the table of contents is reduced to one
+   column and the text size is increased by 20%.
+   ------------------------------------------------------------------------- */
+
+@media all and (max-width:760px){
+    .toc-list { -webkit-column-count: 1; column-count: 1; }
+    .toc-pad { display: none; }
+    .toc-lev1-num, .toc-lev1-text { font-size: 120% ;}
+    .toc-lev2-num, .toc-lev2-text { font-size: 120% ;}
+    .toc-lev3-num, .toc-lev3-text { font-size: 120% ;}
+}
+
+
+/* ****************************************************************************
+   SECTION STANDARD
+   ****************************************************************************
+   Each section has three rows:
+
+
+                   _____________________________________________
+                                OVERLINE (optional)
+          --------+---------------------------------------------+--------
+                  |           SUB-TITLE-ROW (optional)          |
+          --------+---------------------------------------------+--------
+                  |                                             |
+           ASIDE  |                                             | ASIDE
+           LEFT   |                SECTION-TEXT                 | RIGHT
+                  |                                             |
+                  |                                             |
+          --------+---------------------------------------------+--------
+
+   The overline row (optional) inserts a line at the top of the section
+   to divide it from the previous section (generally, this is used) where
+   a sub-title is present.
+
+   The sub-title row (optional) displays a section number and heading text
+   (similar to the title-row in the header), unlike the header title, the
+   number has the same font-size as the heading text.
+
+   The section text row has three parts:
+
+            aside-left column       (optional) will fold in above section text
+            section-text column     holds the section content
+            aside-right column      (optional) will fold in below section text
+
+   The asides fold in either above or below the section text at lower screen
+   widths.
+
+   ************************************************************************* */
+
+
+/* ----------------------------------------------------------------------------
+   SECTION STANDARD - TEXT STYLES
+   ----------------------------------------------------------------------------
+   There are several text styles available within the standard text area,
+   these are generally applied as <span> elements within a paragraph:
+
+       class                 Description
+     ----------------------+------------------------------------------------
+      p                    | main paragraph, 135% line spacing, point size
+                           | paragraph spacing.
+     ----------------------+------------------------------------------------
+      em                   | Applies a bold serif font
+                           |
+     ----------------------+------------------------------------------------
+      .section-text        | Applies zero top and bottom margins to central
+                           | section text area
+     ----------------------+------------------------------------------------
+      .all-caps            | letter spacing 1 point
+                           |
+     ----------------------+------------------------------------------------
+      .sml-caps-s          | Small caps serif font
+                           |
+     ----------------------+------------------------------------------------
+      .sml-caps-ns         | Small caps non-serif font
+                           |
+     ----------------------+------------------------------------------------
+      .serif               | Applies a serif font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .serif-b             | Applies a serif BOLD font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .san                 | Applies a sans serif font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .index               | Applies the Concourse Index font font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .mono                | Applies a monospaced font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .code                | triplicate font (blue) denotes an extract of
+                           | code or command
+     ----------------------+------------------------------------------------
+      .first-use           | italics - denotes first use of a phrase
+                           |
+     ----------------------+------------------------------------------------
+      .hlink               | embedded hyperlink (equity small caps)
+                           | grey background with underline on hover
+     ----------------------+------------------------------------------------
+      .xref                | embedded hyperlink used for cross reference
+                           | (fig etc.) effects as hlink
+     ----------------------+------------------------------------------------
+      .note                | creates a hanging indent preceded by the word
+                           | Note: all text in italics
+     ----------------------+------------------------------------------------
+      .menu                | indicates a menu selection in Windows or an
+                           | application (small caps blue)
+     ----------------------+------------------------------------------------
+      .git-cmd             | Applies a san-serif font with a blue colour
+                           |
+     ----------------------+------------------------------------------------
+      .git-incid           | Applies a serif font with a red colour
+                           | The lkine hight is 180% and font size 1rem
+     ----------------------+------------------------------------------------
+      .list-num            | numbered list using the index font to give a
+                           | circle with a number as the ordinal.
+     ----------------------+------------------------------------------------
+      .list-no-num         | unnumbered list with large black circle as
+                           | the bullet point
+     ----------------------+------------------------------------------------
+      .red                 | Proofing - applies red colour to text
+                           |
+     ----------------------+------------------------------------------------
+      .notice              | Proofing - large red sans font for notification
+                           |
+     ----------------------+------------------------------------------------
+      .ssetNN              | Applies an opentype stylistic set to the
+      NN=00-10             | current font (not all fonts have 10 sets)
+     ----------------------+------------------------------------------------
+
+   Note: these styles can also be used to override sidebar and table text
+   appearance.
+
+   ------------------------------------------------------------------------- */
+
+.section-std p {                            /* TEXT STYLE - paragraph */
+    margin-bottom: 1.2rem;                  /* *** THIS SETS PARAGRAPH SPACING *** */
+    line-height: 135%;
+    color: #404030;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+.section-std em {                           /* TEXT STYLE - bold */
+    font-family: "eqty-ta-b";
+    font-style:normal;
+}
+
+.section-text{margin-top: 0; margin-bottom: 0; }
+
+.first-use {font-family: "eqty-ta-i"}       /* TEXT STYLE - first use */
+
+.all-caps {                                 /* TEXT STYLE - all caps */
+    text-transform: uppercase;
+    letter-spacing: 0.086em;
+}
+
+.sml-caps-s { font-family: "eqty-ca-r"; }   /* TEXT STYLE - small caps serif */
+
+.sml-caps-ns { font-family: "conc-c3-r"; }  /* TEXT STYLE - small caps non-serif */
+
+.serif { font-family: "eqty-ta-r"; }        /* TEXT STYLE - serif font (override) */
+
+.serif-b { font-family: "eqty-ta-b"; }      /* TEXT STYLE - serif font (override) */
+
+.sans { font-family: "conc-t3-r"; }         /* TEXT STYLE - sans serif font (override) */
+
+.index { font-family: "conc-i3-r"; }        /* TEXT STYLE - index font (override) */
+
+.mono { font-family: "trip-t4-r"; }         /* TEXT STYLE - monospaced font (override) */
+
+.notice {                                   /* TEXT STYLE - code fragment */
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 130%;
+    color: #C0504D!important;
+}
+
+
+.code {                                     /* TEXT STYLE - code fragment */
+    font-family: "trip-t4-r";
+    font-size: 0.95em;
+    color: #4F81BD;
+}
+
+.note {                                     /* TEXT STYLE - Note (hanging indent) */
+    font-family: "eqty-ta-i";               /* notes are unordered lists with some */
+}                                           /* margin manipulation  to create the hanging effect */
+.note li {
+    list-style: none;
+    margin-left: 3.3rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.85rem;
+}
+.note li:before {                           /* prefix the list with Note: and */
+    content: "Note:"; float: left;          /* force the margin to the edge of the row */
+    margin-left: -3.3rem;
+}
+
+.menu {                                     /* TEXT STYLE - code fragment */
+    font-family: "conc-c4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    color: #4F81BD;
+}
+
+.red {color: #C0504D}
+.body-color {color: #404030}
+
+.list-num {                                 /* TEXT STYLE - Numbered list */
+    font-family: "conc-i3-r";
+    margin-left: 5rem;
+    /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-num li p {
+    font-family: "eqty-ta-r";
+    padding-left: 1rem;
+    margin-bottom: 0.85rem;
+}
+
+.list-no-num {                                 /* TEXT STYLE - Un-numbered list */
+    font-family: "conc-t3-r";
+    margin-left: 5rem;
+    list-style: none;
+    /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-no-num li p {
+    font-family: "eqty-ta-r";
+    padding-left: 1rem;
+    margin-bottom: 0.85rem;
+}
+.list-no-num li:before {                    /* prefix the list with a large dot and */
+    content: "\25cf"; float: left;              /* force the margin to the correct position */
+    margin-left: -2rem;
+}
+
+.hlink {font-family: "eqty-ca-r"; }         /* TEXT STYLE - hyperlink */
+.hlink:link,
+.hlink:visited{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: background-color 0.2s, border-bottom 0.2s;
+    transition: background-color 0.2s, border-bottom 0.2s;
+}
+.hlink:hover,
+.hlink:active { background-color: #f8f8f8; border-bottom: 1px solid #404030; }
+
+.xref:link,                                 /* TEXT STYLE - cross reference hyperlink */
+.xref:visited{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: background-color 0.2s, border-bottom 0.2s;
+    transition: background-color 0.2s, border-bottom 0.2s;
+}
+.xref:hover,
+.xref:active { background-color: #f8f8f8; border-bottom: 1px solid #404030; }
+
+.pay {font-family: "eqty-ca-r"; }         /* TEXT STYLE - hyperlink */
+.pay:link,
+.pay:visited{
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: background-color 0.2s, border-bottom 0.2s;
+    transition: background-color 0.2s, border-bottom 0.2s;
+}
+.pay:hover,
+.pay:active { background-color: #fff; border-bottom: 1px solid #fff; }
+
+.flourish {                             /* last section bottom border */
+    min-height: 2rem;
+    background-image:url(../02-images/flourish.svg) ;
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1rem;
+}
+
+.sset01{                                /* apply stylistic sets to font */
+    -webkit-font-feature-settings: "ss01";
+    font-feature-settings: "ss01";
+ }
+
+.sset02{
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+ }
+
+.sset03{
+    -webkit-font-feature-settings: "ss03";
+    font-feature-settings: "ss03";
+ }
+
+.sset04{
+    -webkit-font-feature-settings: "ss04";
+    font-feature-settings: "ss04";
+ }
+
+.sset05{
+    -webkit-font-feature-settings: "ss05";
+    font-feature-settings: "ss05";
+ }
+
+.sset06{
+    -webkit-font-feature-settings: "ss06";
+    font-feature-settings: "ss06";
+ }
+
+.sset07{
+    -webkit-font-feature-settings: "ss07";
+    font-feature-settings: "ss07";
+ }
+
+.sset08{
+    -webkit-font-feature-settings: "ss08";
+    font-feature-settings: "ss08";
+ }
+
+.sset09{
+    -webkit-font-feature-settings: "ss09";
+    font-feature-settings: "ss09";
+ }
+
+.sset10{
+    -webkit-font-feature-settings: "ss10";
+    font-feature-settings: "ss10";
+ }
+
+
+/* --- GIT VCS INLINE STYLES ----------------------------------------------- */
+.git-cmd {                                     /* TEXT STYLE - git commmand */
+    font-family: "conc-t3-b";
+    color: #4F81BD;
+}
+
+.git-incid {                                     /* TEXT STYLE - git commmand */
+    font-family: "eqty-ta-r";
+    color: #f05133;
+    font-size: 1rem;
+    line-height: 140%;
+}
+
+
+/* ----------------------------------------------------------------------------
+   SECTION STANDARD - SUB-TITLE
+   ----------------------------------------------------------------------------
+    The sub-title bar contains the section/chapter number and the heading text
+
+        e.g.     2.1   Installing the software
+
+   The number is the same size as the heading text and appears at the left
+   edge of the central column area and occupies 20% of the
+   width of this column. The heading text fills the remaining 80% of the
+   central column.
+
+   The sub-title row is equipped with left and right side columns (to maintain
+   the correct column spacing), but these are not used.
+
+   An optional sub-title-overline container  exists, this simply inserts a dark
+   border above the sub-title to mark a delineation from the previous
+   section (this should not be used on the first section after the TOC, the
+   TOC has its own bottom line).
+
+   The aside revision displays the revision number in the topmost right
+   sidebar.
+   ------------------------------------------------------------------------- */
+
+.sub-title-row { margin-bottom: 1rem;}         /* container for sub-title */
+
+.sub-title-overline{                        /* optional break line above sub-title */
+    margin-top: 4.7rem;
+    margin-bottom: 0.5rem;
+    border-top: 2px solid #404030;
+}
+.sub-title-thinline {                                 /* container for the TOC */
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #CCCCCC;
+    margin:0;
+}
+
+.sub-title-num-box {                        /* container for sub-title number */
+    display: inline-block;
+    float: left;
+    width: 20%;
+    text-align: left;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 190%;
+    color: #404030;
+}
+
+.sub-title-text-box {                       /* container for sub-title heading text */
+    display: inline-block;
+    float: left;
+    width: 80%;
+    text-align: left;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 190%;
+    color: #404030;
+}
+
+.sub-title-inline {                         /* container for inline sub-title (no number) */
+    display: inline-block;
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 170%;
+    color: #404030;
+}
+
+
+/* ----------------------------------------------------------------------------
+   SECTION STANDARD - ASIDE BAR STYLES
+   ----------------------------------------------------------------------------
+   The left and right aside bars are essentially the same, both use a
+   san-serif font in a lighter colour and smaller font-size than the main
+   text, line height is slightly to compensate for the smaller font-size.
+
+   The left aside is right justified and the right aside left justified
+
+   There is a third type of aside (.aside-head) this allows a heading to be
+   inserted in the left side bar (it should replace .aside-left). Aside-head
+   uses an equity bold italic font as a heading.
+
+   It is possible to place navigation in the side bars (this is typically to
+   make navigating to the next section easier at the end of the page). This
+   uses the .aside-nav class to hold the link
+
+   Finally, there is a revision class (left and right side bar) that can
+   be used to display revision information (right) and a build badge (left).
+   These disappear at lower screen widths
+   ------------------------------------------------------------------------- */
+
+.aside-left,                                /* container for side bars */
+.aside-right,
+.aside-head {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.85rem;
+    line-height: 1.40;
+    margin-top: -0.4rem;
+}
+.aside-left,
+.aside-head  {                               /* change justification */
+    text-align: right;
+    padding-left: 0.7em;
+}
+.aside-right {
+    text-align: left;
+    padding-right: 0.7em;
+}
+
+.aside-left p,                              /* TEXT STYLE - paragraph */
+.aside-right p,
+.aside-head p {
+    color: #707070;
+}
+.aside-left em,                             /* TEXT STYLE -bold */
+.aside-right em,
+.aside-head em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+.aside-head h2 {
+    font-family: "eqty-ta-bi";
+    font-size: 1.3rem;
+    margin-top: -0.9rem;
+    line-height: 1.40;
+}
+.aside-right-rev {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    color: #707070;
+    font-size: 0.5rem;
+    line-height: 1.0;
+    margin-right: 1.5rem;
+    line-height: 140%;
+    text-align: right;
+}
+.aside-left-rev {
+    text-align: center;
+}
+.aside-left-rev img {
+    width: 70%;
+}
+
+
+.aside-nav {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.85rem;
+    color: #707070;
+    text-align: center;
+    padding-right: 0.7em;
+    margin-top: 0.6rem;
+    margin-bottom: 2rem
+}
+
+.aside-nav a:link,
+.aside-nav a:visited {
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: background-color 0.2s, border-bottom 0.2s;
+    transition: background-color 0.2s, border-bottom 0.2s;
+    color: #cccccc;
+    text-decoration: none;
+}
+.aside-nav a:hover,
+.aside-nav a:active {
+    color: #686868;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #404030;
+}
+
+.aside-nav img {
+    width: 43%;
+    margin-top: -0.6rem;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+   SECTION STANDARD - ASIDE BAR STYLES - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   A screen widths below 520px, the left aside is folded into the centre
+   above the section text, the right aside is folded in below the section
+   text.
+
+   When folded in, both asides have a grey background with a darker grey
+   border, the left aside has a wider border on the left and the right aside
+   a wider border on the right (denoting the original placement).
+
+   Both asides are given a width of 80% of the column width and the
+   font-size is increased to the point size of the main text and the
+   justification is set left.
+
+   The .aside-head also folds in above the section text; in this case
+   however, there is no background shading or borders and the text is full
+   width (giving the appearance of a title).
+
+   Aside revisions disappear at lower screen widths
+   ------------------------------------------------------------------------- */
+
+@media all and (max-width:520px){
+    .aside-left,
+    .aside-right {
+        font-size: 1rem;
+        margin-left: 10%;
+        margin-bottom: 1rem;
+        border: 1px solid #cccccc;
+        padding: 1em 1em 0 1em;
+        width: 80%;
+        background-color: #f8f8f8;
+        text-align: left;
+    }
+    .aside-left { border-left: 4px solid #cccccc; }
+    .aside-right { border-right: 4px solid #cccccc; }
+    .aside-head {
+        font-size: 1rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        background-color: #fff;
+        text-align: left;
+    }
+}
+@media all and (max-width:760px) { .aside-right-rev { display: none; }}
+@media all and (max-width:760px) { .aside-left-rev { display: none; }}
+
+/* ****************************************************************************
+   FIGURES
+   ****************************************************************************
+   Figures used a similar nomenclature to that of the grid columns and will
+   stack in a similar way.
+   ************************************************************************* */
+.fig-row {
+    width: 100%;
+    margin: 1.5rem auto 0 auto;
+    padding: 0rem 0 0 0;                 /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+    color: #404030;
+    text-align: center;
+}
+
+.fig-row:before,  /* IE 9 support */
+.fig-row:after {  /* ClearFix */
+    content:"";
+    display:table;
+}
+.fig-row:after { clear:both; }
+
+
+
+@media only screen and (max-width: 520px) { .fig-row{ width: 100%; font-size: 0.8rem;} }
+
+
+.fig-col {
+    margin: 0 0 0 2.5%;
+    padding: 0;
+}
+.fig-col:first-child { margin-left: 0; } /* remove left margin from first column */
+
+@media only screen and (max-width: 520px) { .fig-col{ margin:0; } }
+
+
+/* ----------------------------------------------------------------------------
+   Single column span arrangement
+   ------------------------------------------------------------------------- */
+
+.fig1-1 {
+    width: 100%;
+}
+.fig1-1 img { width: 100%; }
+
+/* ----------------------------------------------------------------------------
+   Two column span arrangements
+   ------------------------------------------------------------------------- */
+
+.fig1-2 { display:inline-block; width: 48.27%; }
+.fig1-2 img { width: 100%; }
+
+@media only screen and (max-width: 520px) { .fig1-2 { width: 60% }}
+
+
+/* ----------------------------------------------------------------------------
+   Three column span arrangements
+   ------------------------------------------------------------------------- */
+
+.fig1-3 { display:inline-block; width: 31.03%; }
+.fig2-3 { display:inline-block; width: 65.51%; }
+.fig1-3 img { width: 100%; }
+.fig2-3 img { width: 95%; margin: 0 auto;}
+
+@media only screen and (max-width: 520px) {  /* stack columns at <=520 px */
+	.fig1-3,
+    .fig2-3 { width: 100%;}      /* by making all columns 100 % */
+}
+
+
+/* ****************************************************************************
+   TABLES - GENERAL
+   ****************************************************************************
+   Tables are used to hold tabulated and grid type data, there are various
+   different types of table:
+
+        table-clean         A clean table in a simple format - useful for most
+                            applications
+
+        table-dense         Similar to the clean table but uses smaller fonts
+
+
+   There are also tables for specific occurrences:
+        foot-note           Holds footnote information is a specific format
+
+        table-incidental    Holds additional information on a specific topic
+
+   There are common styles that can apply to all tables:
+        table-left          Left justify a cell
+        table-right         Right justify a cell
+        table-cent          Centre justify a cell
+        no-border           Removes the bottom border from a cell
+        Leading             (lead to rhyme with bed) empty cell format
+                            that allows a row height to be specified
+        table-caption       Caption row at the bottom of a table
+   ************************************************************************* */
+.table-left  {text-align: left;}
+.table-cent  {text-align: center;}
+.table-right {text-align: right;}
+
+tr.no-border td,
+tr.no-border th {                           /* no-bottom border */
+    border-bottom: 1px solid #fff;
+}
+
+.leading {                                  /* empty column used to give a minimum height to a row */
+    margin:0;
+    padding:0;
+    max-width: 1px;}
+
+.table-caption {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+    color: #404030;
+    text-align: left;
+}
+
+
+/* ****************************************************************************
+   TABLES - CLEAN FORMAT TABLE
+   ****************************************************************************
+   Tables use the .table-clean class to produce a simple table with a bottom
+   border that is 84% of the section text area.
+
+   The first column of the table is an empty column of zero width that is used
+   to allow a minimum height to be specified for the row (html inline style),
+   this first row has class .leading
+
+   This first column (or leading column) is defined as the first-child of the
+   <th> and <td> elements (i.e. the first cell in each row and in the header
+   row).
+   ************************************************************************* */
+.table-clean {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    width: 84%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.table-clean th {
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.086em;
+    color: #7F7F7F;
+    padding: 0.8rem 0.2rem 0.25rem 0.2rem;  /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    border-bottom: 1px solid #cccccc;
+}
+.table-clean td {
+    padding: 0.25rem 0.2rem;
+    line-height: 120%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table-clean th:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}.table-clean td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-clean p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-clean p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+.table-clean em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+
+/* ****************************************************************************
+   TABLES - DENSE FORMAT TABLE
+   ****************************************************************************
+   Tables use the .table-dense class to produce a simple table with a bottom
+   border that is 90% of the section text area - slightly wider than the standard
+   (clean) table.
+
+   Otherwise the dense table is identical to the standard (clean) table,
+   but uses smaller fonts.
+
+   Borders are applied in the same way.
+   ************************************************************************* */
+.table-dense {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.55rem;
+    width:90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.table-dense th {
+    font-family: "conc-t2-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: uppercase;
+    font-size: 0.55rem;
+    letter-spacing: 0.086em;
+    color: #7F7F7F;
+    padding: 0rem 0.2rem 0.25rem 0.2rem;  /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    border-bottom: 1px solid #cccccc;
+}
+.table-dense td {
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+    border-bottom: 1px solid #cccccc;
+}
+.table-dense th:first-child {               /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}.table-dense td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-dense em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+
+/* ****************************************************************************
+   TABLES - FOOTNOTES
+   ****************************************************************************
+   Footnotes use a four column table to give the appearance of a Word style
+   footnote (this has a partial border that extends part way across the page)
+
+   The footnote table has class .table-fnote.
+
+   The heading row of a footnote table is empty, it does no more than set the
+   row widths and provide a top border (specified by .fnote-top).
+
+   The footnote table has only one row (excepting the header), the first cell
+   of this row contains the footnote number.
+
+   The second cell is a spacing cell and contains no text (it simply separates
+   the number from the main text).
+
+   The final cell spans two columns and contains the text of the footnote.
+   ************************************************************************* */
+.table-fnote {
+    font-family: "conc-t3-r";
+     -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+   font-size: 0.65rem;
+    width: 95%;
+    margin: 2rem auto 1rem auto;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+.table-fnote th {
+    padding: 0 0.2rem 0.25rem 0.2rem;
+}
+.table-fnote td {
+    vertical-align: text-top;
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+}
+.table-fnote td em {
+    font-family: "conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+}
+
+.fnote-top {border-top: 1px solid #404030;}
+
+
+
+/* ****************************************************************************
+   TABLES - INCIDENTAL (EN PASSANT)
+   ****************************************************************************
+   Incidental tables hold additional information (in a similar way to an aside)
+   but span the central content area and can contain more information than an
+   aside.
+
+   The table spans 84% of the content area, is lightly shaded and uses
+   small caps for the heading.
+   ************************************************************************* */
+tr.in-no-border td,
+tr.in-no-border th {                        /* incidental table no-bottom border */
+    border-bottom: 1px solid #fbfbfb;
+}
+
+
+.table-incid {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.8rem;
+    width: 84%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fbfbfb;
+    margin-bottom: 1rem;
+
+}
+.table-incid th {
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    color: #404030;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;  /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    border-top: 1px solid #cccccc;
+}
+.table-incid td {
+    padding: 0.25rem 0.2rem;
+    line-height: 130%;
+    border-bottom: 1px solid #cccccc;
+}
+.table-incid em {
+    font-family: "conc-t3-b";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-style:normal;
+}
+
+.table-incid p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-incid p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+
+.c-box {
+    font-family: "trip-t4-r";
+    padding: 0 2px;
+    border: 1px solid #DEDEDE;
+    border-radius: 10%;
+    background-color: #fff;
+}
+
+
+
+/* ****************************************************************************
+   TABLES - GIT COMMAND LINE
+   ****************************************************************************
+   Git tables use the .table-git class to produce a simple table that is 90%
+   of the section text area.
+
+   The first column of the table is an empty column of zero width that is used
+   to allow a minimum height to be specified for the row (html inline style),
+   this first row has class .leading
+
+   This first column (or leading column) is defined as the first-child of the
+   <th> and <td> elements (i.e. the first cell in each row and in the header
+   row).
+   ************************************************************************* */
+.table-git {
+    background-color: #404030;
+    font-family: "trip-t4-r";
+    color: #fff;
+    font-size: 0.7rem;
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.table-git td {
+    vertical-align: top;
+    padding: 0.25rem 0.2rem;
+    line-height: 120%;
+    border-bottom: 1px solid #fff;
+}
+
+.table-git td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-git p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-git p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+/* ****************************************************************************
+   TABLES - GIT SIDEBAR COMMAND LINE
+   ****************************************************************************
+   Git tables use the .table-git-s9 class to produce a simple table that is
+   100% of the sidebar text area.
+
+   The first column of the table is an empty column of zero width that is used
+   to allow a minimum height to be specified for the row (html inline style),
+   this first row has class .leading
+
+   This first column (or leading column) is defined as the first-child of the
+   <th> and <td> elements (i.e. the first cell in each row and in the header
+   row).
+   ************************************************************************* */
+.table-git-sb {
+    display: block;                               /* ensures max-width works */
+    background-color: #404030;
+    font-family: "trip-t4-r";
+    color: #fff;
+    font-size: 0.6rem;
+    width: 100%;
+    max-width: 100;
+    margin: -0.9rem auto 1rem auto;
+    border-collapse: collapse;
+}
+.table-git-sb td {
+    vertical-align: top;
+    padding: 0.25rem 0.2rem;
+    line-height: 120%;
+    border-bottom: 1px solid #fff;
+}
+
+.table-git-sb td:first-child {              /* first-child is leading (min-height row) */
+    padding: 0;                             /* this has no margins, padding or border */
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.table-git-sb p {                            /* where formal paragraphs are used in a table, manipulate the margins */
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+.table-git-sb p:last-child {
+    margin-bottom: 0.3rem;
+}
+
+
+
+/* ----------------------------------------------------------------------------
+   TABLES - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   A screen widths below 760px, the each table becomes 100% wide
+   ------------------------------------------------------------------------- */
+
+@media all and (max-width:760px){ .table-clean { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-dense { width: 100%; margin: 0; } }
+@media all and (max-width:760px){ .table-git   { width: 100%; margin: 0; } }
+
+
+
+/* ****************************************************************************
+   CODE EXTRACT
+   ****************************************************************************
+
+   Each code fragment (extract) that is inserted into the web page as a block
+   (that is by using the <pre> element) has the following format
+
+
+        +----------------------------------------------------------------+
+        | .code-extract                                                  |
+        |  ------------------------------------------------------------- |
+        |                           .code-header                         |
+        |  ------------------------------------------------------------- |
+        |                                                                |
+        |                                                                |
+        |                           .code-area                           |
+        |                                                                |
+        |                                                                |
+        |  ------------------------------------------------------------- |
+        |                           .code-caption                        |
+        |  ------------------------------------------------------------- |
+        |                                                                |
+        +----------------------------------------------------------------+
+
+   The whole fragment is held in a div with class .code-extract.
+
+   Code extracts can also be inline in a block of text, inline fragments
+   are entered in a <code> element instead of a <pre> element.
+
+   This file configures the container styles for the code fragments, the
+   styles for the constituent parts of the code fragment are held in the
+   file:
+            codesyntaxcolour.css
+
+   This file contains further information about how code fragments are
+   formatted and the use of google-code-prettify
+   ************************************************************************* */
+
+.code-extract {                             /* holder for the whole code extract */
+    width: 100%;
+}
+.code-header {                              /* code header (filename header) */
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-transform: lowercase;
+    text-align: right;
+    padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+    background-color: #e8e8e8;
+}
+
+.code-area {                                /* area holding the extracted code */
+    width: 100%;
+    background-color: #fbfbfb;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+}
+
+.code-caption {                             /* code caption area */
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+    color: #404030;
+    text-align: center;
+    padding-top: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.code-nav:link,
+.code-nav:visited{
+    color: #ccc;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.code-nav:hover,
+.code-nav:active { color: #404030; }
+
+.nav-icon {
+    font-family: "icon-ps-r";
+    font-size: 1rem;
+}
+
+/* ****************************************************************************
+   CODE - CAPTION AND DOWNLOAD TABLE
+   ****************************************************************************
+   Creates a single line table at the bottom of a code fragment that can hold
+   multiple columns, a central column to hold the caption and a right column
+   to hold a dowload icon and link
+   ************************************************************************* */
+.code-caption {
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ****************************************************************************
+   Formulae
+   ****************************************************************************
+   Formulae are displayed in a flexbox:
+
+        +----------------------------------------------------------------+
+        | .formulae                                                      |
+        |  ------------------------------------------------------------- |
+        |                           .formulae-header                     |
+        |  ------------------------------------------------------------- |
+        |                           .formulae-container (flexbox)        |
+        |                                                     |          |
+        |                                                     |          |
+        |                .formulae-equ                        |.formulae-|
+        |                 (col 1)                             | num      |
+        |                                                     | (col 2)  |
+        |  ------------------------------------------------------------- |
+        |                           .formulae-caption                    |
+        |  ------------------------------------------------------------- |
+        |                                                                |
+        +----------------------------------------------------------------+
+
+   The whole formulae is held in a div with class .formulae, this id followed
+   by a second div that holds the equation header (if required).
+
+
+   The equation itself is held in the formulae-container, this is a flexbox
+   (display: flex) and this is made up of two side-by-side cells:
+
+        .formulae-equ              .formulae-num
+
+   The first holds the equation formulae, the second the equation number.
+
+   The first column is 9 times the width of the second (flex: 9 or flex: 1
+   property).
+
+   The formulae-container is followed by an optional caption row.
+
+   The formulae can be given background shading by applying the .formulae-bkgd
+   class.
+   ************************************************************************* */
+
+.formulae {                                     /* formulae box (90% width) */
+    width: 90%;
+    margin: 0 auto
+}
+
+.formulae-header {                              /* formulae header (title) */
+    font-family: "conc-c3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    text-align: center;
+    padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+    border-top: 1px solid #e8e8e8;
+}
+
+.formulae-container {                           /* flexbox holding formulae */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0.2rem 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+
+}
+.formulae-equ {                                 /* flexbox cell holding equation */
+    -webkit-box-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
+    margin: 5px 5px;
+
+}
+.formulae-num {                                 /* flexbox cell holding equation number */
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
+    color: #404030;
+    text-align: center;
+    margin: 5px 5px;
+}
+
+
+.formulae-caption {                             /* formulae caption area */
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.6rem;
+    color: #404030;
+    text-align: left;
+    padding-top: 0.2rem;
+    margin-bottom: 2rem;
+}
+.formulae-bkgd {                               /* optional background shading */
+    background-color: #fbfbfb;
+}
+
+
+/* ****************************************************************************
+   FOOTER
+   ****************************************************************************
+   The footer provides a cream coloured row at the bottom (effectively) of the
+   content area. The footer has a negative margin to cover the border lines
+   that run vertically down the body section.
+
+   The footer should be preceded by a section with class .section-last; this
+   inserts a final bottom border above the footer to complete the appearance of
+   the content area.
+
+   The footer can contain a navigation section (.footer-nav) this provides
+   links to various minor sections (contact, legal etc.); the footer
+   navigation appears across the width of the page separated by lozenge
+   characters (.footer-spacer class, these disappear at lower width values).
+
+   The links are in the same blue as the TOC links (there is a slightly
+   lighter blue for the hover border).
+
+   Like the top navigation. the footer height is reduced in proportion to
+   the screen width.
+
+   A revision number is contained in the footer and this is displayed
+   at screen widths above 1200 px.
+   ************************************************************************* */
+
+.section-last {                             /* last section bottom border */
+    min-height: 9rem;
+    background-image:url(01-css-images/end-mark.svg);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid #ededed;
+}
+
+.footer {                                   /* footer row */
+    margin-left: -0.2%;                     /* offset start to cover body left border */
+    margin-bottom: 0;
+    padding-top: 15px;
+    padding-bottom: 0;
+    width: 100.4%;                          /* make wider than body text to cover right border */
+    background-color: #fbfaf6;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.85rem;
+    line-height: 100%;
+ }
+.footer-spacer {                            /* spacing between navigation entries */
+    margin-left:2rem;
+    font-size: 0.8rem;
+}
+
+.footer-nav {                               /* container for footer navigation list */
+    list-style: none;
+    text-align: center;
+}
+
+.footer-nav li {                            /* format list elements */
+    display: inline;
+    margin-left:2rem;
+    color: #4C6C9C;
+}
+.footer-nav li:first-child {                /* remove left margin from first navigation link */
+    margin-left: 0;
+}
+.footer-nav li a:link,                      /* format anchor properties */
+.footer-nav li a:visited {
+    color: #4C6C9C;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    border-bottom: 2px solid #5b7daf;
+}
+.revision{
+    font-family:"conc-t4-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 50%;
+}
+
+/* ----------------------------------------------------------------------------
+   FOOTER - RESPONSIVE COMPONENTS
+   ----------------------------------------------------------------------------
+   The footer height is progressively reduced as the screen width
+   contracts, the padding above the text is adjusted to keep the text
+   vertically centred (the font size decreases in line with the base font
+   settings).
+   ------------------------------------------------------------------------- */
+
+
+@media all {.footer { height: 60px; }}
+@media all and (max-width:1276px) {.footer { height: 60px; padding-top: 15px; }}
+@media all and (max-width:1200px) {.revision      { display: none; } }
+@media all and (max-width:1120px) {.footer-spacer { display: none; } }
+@media all and (max-width:960px)  {.footer { height: 57px; padding-top: 15px; }}
+@media all and (max-width:920px)  {.footer { height: 54px; padding-top: 14px; }}
+@media all and (max-width:880px)  {.footer { height: 54px; padding-top: 13px; }}
+@media all and (max-width:840px)  {.footer { height: 51px; padding-top: 12px; }}
+@media all and (max-width:800px)  {.footer { height: 50px; padding-top: 12px; }}
+@media all and (max-width:760px)  {.footer { height: 47px; padding-top: 11px; }}
+@media all and (max-width:720px)  {.footer { height: 44px; padding-top: 10px; }}
+@media all and (max-width:680px)  {.footer { height: 41px; padding-top:  9px; }}
+@media all and (max-width:520px){
+    .footer-nav li { margin-left:0.5rem; }
+}
+
+
+

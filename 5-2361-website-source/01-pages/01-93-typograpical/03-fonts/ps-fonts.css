@@ -1,0 +1,200 @@
+/* PRACTICALSERIES (c) 2016
+
+**************************************************************************
+Title :          WEBSITE FONTS (OPEN SOURCE VERSION)          PS-FONTS.CSS
+**************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications
+                 by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+--------------------------------------------------------------------------
+DETAILS
+
+1. OPEN SOURCE FONTS
+The following file contains a set of open source fonts used to replace the
+Equity font set on the downloadable version of this website. The fonts
+used and the licences under which they are made available are:
+
+    PT Serif                    Paratype PT Sans Free Font License v1.00
+    Source Sans Pro             SIL Open Font License v1.10
+    PT Mono                     SIL Open Font License v1.10
+    Andada Small Caps           SIL Open Font License v1.10
+    Carrois Gothic Small Caps   SIL Open Font License v1.10
+
+The licences for these fonts are reproduced on the Acknowledgements page
+of this website.
+
+The fonts are used to replace the Equity fonts as follows:
+
+  Equity                              Open Source
+  Font name           Type            Font name          Type
+----------------------------------------------------------------------
+  Equity A Caps       Regular         Andada SC          Regular
+  Equity A Text       Regular         PT Serif           Regular
+  Equity A Text       Bold            PT Serif           Bold
+  Equity A Text       Italic          PT Serif           Italic
+  Equity A Text       Bold & italic   PT Serif           Bold & Italic
+
+  Concourse T2        Regular         Souce Sans Pro     Light
+
+  Concourse T3        Regular         Souce Sans Pro     Regular
+  Concourse T3        Bold            Souce Sans Pro     Bold
+  Concourse C3 Caps   Regular         Carrois Gothic SC  Regular
+  Concourse T3 Index  Regular         PS Index           Regular
+
+  Concourse T4        Regular         Souce Sans Pro     Semibold
+  Concourse C4 Caps   Regular         Carrois Gothic SC  Regular
+
+  Triplicate T4c      Regular         PT Mono            Regular
+
+  ps-icons            Regular         No change
+----------------------------------------------------------------------
+
+2. PS FONTS
+The Concourse index font is replaced with PS Index, a font created for
+this website
+
+A small Practical Series font (ps-icons) created from several svg icon
+images is also included.
+
+3. NAMING CONVENTIONS
+The OS fonts use the same font-family names as the Equity fonts they
+replace, the names of the WOFF files are different, both are listed here:
+
+                                                    font-family name
+    Font name          Type            WOFF File    (within website)
+---------------------------------------------------------------------
+    Andada SC          Regular         anda-ca-r      eqty-ca-r
+    PT Serif           Regular         pser-ta-r      eqty-ta-r
+    PT Serif           Bold            pser-ta-b      eqty-ta-b
+    PT Serif           Italic          pser-ta-i      eqty-ta-i
+    PT Serif           Bold & Italic   pser-ta-bi     eqty-ta-bi
+
+    Souce Sans Pro     Light           ssan-t2-r      conc-t2-r
+
+    Souce Sans Pro     Regular         ssan-t3-r      conc-t3-r
+    Concourse T3       Bold            ssan-t3-b      conc-t3-b
+    Carrois Gothic SC  Regular         carr-c3-r      conc-c3-r
+    PS Index           Regular         ps-index       conc-i3-r
+
+    Souce Sans Pro     Semibold        ssan-t4-r      conc-t4-r
+    Carrois Gothic SC  Regular         carr-c4-r      conc-c4-r
+
+    PT Mono            Regular         pmon-t4-r      trip-t4-r
+
+    ps-icons           Regular         ps-icons       icon-ps-r
+------------------------------------------------------------------------*/
+
+
+/* ***********************************************************************
+   Serif fonts
+   ******************************************************************** */
+
+@font-face {                    /* Serif Small Caps - regular*/
+    font-family: 'eqty-ca-r';
+    src: url(woff/carr-ca-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Serif text - regular */
+    font-family: 'eqty-ta-r';
+    src: url(woff/pser-ta-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Serif text - bold */
+    font-family: 'eqty-ta-b';
+    src: url(woff/pser-ta-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Serif text - italic */
+    font-family: 'eqty-ta-i';
+    src: url(woff/pser-ta-i.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Serif text - bold & italic */
+    font-family: 'eqty-ta-bi';
+    src: url(woff/pser-ta-bi.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ***********************************************************************
+   Sans-serif fonts
+   ******************************************************************** */
+
+/* Sans-serif T2 ------------------------------------------------------ */
+@font-face {                    /* Sans-serif T2 - regular */
+    font-family: 'conc-t2-r';
+    src: url(woff/ssan-t2-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sans-serif T3 ------------------------------------------------------- */
+@font-face {                    /* Sans-serif T3 - regular */
+    font-family: 'conc-t3-r';
+    src: url(woff/ssan-t3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Sans-serif T3 - bold */
+    font-family: 'conc-t3-b';
+    src: url(woff/ssan-t3-b.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Sans-serif T3 Index - regular */
+    font-family: 'conc-i3-r';
+    src: url(woff/ps-index.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Sans-serif C3 Small caps - regular */
+    font-family: 'conc-c3-r';
+    src: url(woff/carr-c3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sans-serif T4 ------------------------------------------------------ */
+@font-face {                    /* Sans-serif T4 - regular */
+    font-family: 'conc-t4-r';
+    src: url(woff/ssan-t4-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {                    /* Sans-serif C4 Small caps - regular */
+    font-family: 'conc-c4-r';
+    src: url(woff/carr-c3-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ***********************************************************************
+   Monotype fonts
+   ******************************************************************** */
+
+/* Monotype T4c ------------------------------------------------------- */
+@font-face {                    /* Monotype T4c - regular */
+    font-family: 'trip-t4-r';
+    src: url(woff/pmon-t4-r.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ***********************************************************************
+   PS icon fonts
+   ******************************************************************** */
+
+@font-face {                    /* PS Icons - regular */
+    font-family: 'icon-ps-r';
+    src: url(woff/ps-icons.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

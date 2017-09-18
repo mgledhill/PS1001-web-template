@@ -1,0 +1,281 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          RESPONSIVE GRID ARRANGEMENT                           GRID.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file creates a responsive grid system with up to six columns. The columns
+are designed to fit the Practical Series web page, this has a maximum width of
+1276 px and is configured in a Karl Gerstner 5 column grid arrangement.
+
+The KG grid divides the width into 58 units (this being 22 px) and there are
+two such units between each column; thus the margin on each column at maximum
+width is 44 px (margins are always on the left of a column excepting the
+first column).
+
+In percentage terms this is a margin of 3.45% (approximately).
+
+The grid is constructed in rows and columns; these are given the class names:
+
+    .rg-row
+    .rg-col
+
+Further classes exist to divide the column into sub columns of different
+widths (i.e. can span multiple columns).
+
+The classes all have names in the format .rg-spanS-C
+    where:  S is the span (2=span 2 columns)
+            C is the number of columns
+
+    Thus .rg-span2-3 would span 2 column widths in a thress column grid
+
+
+ Class          Column Arrangement      Span Arrangement         Column width
+-------------+-----------------------+--------------------------+---------------
+.rg-span1-1  |  1 column arrangement |  full width              |  100.00
+             |                       |                          |
+.rg-span1-2  |  2 column arrangement |  spans 1 of the columns  |   48.27
+.rg-span2-2  |  2 column arrangement |  spans both columns      |  100.00
+             |                       |                          |
+.rg-span1-3  |  3 column arrangement |  spans 1 of the columns  |   31.03
+.rg-span2-3  |  3 column arrangement |  spans 2 of the columns  |   65.51
+.rg-span3-3  |  3 column arrangement |  spans all columns       |  100.00
+             |                       |                          |
+.rg-span1-4  |  4 column arrangement |  spans 1 of the columns  |   22.41
+.rg-span2-4  |  4 column arrangement |  spans 2 of the columns  |   48.27
+.rg-span3-4  |  4 column arrangement |  spans 3 of the columns  |   74.13
+.rg-span4-4  |  4 column arrangement |  spans all columns       |  100.00
+             |                       |                          |
+.rg-span1-5  |  5 column arrangement |  spans 1 of the columns  |   17.24
+.rg-span2-5  |  5 column arrangement |  spans 2 of the columns  |   37.93
+.rg-span3-5  |  5 column arrangement |  spans 3 of the columns  |   58.62
+.rg-span4-5  |  5 column arrangement |  spans 4 of the columns  |   79.31
+.rg-span5-5  |  5 column arrangement |  spans all columns       |  100.00
+             |                       |                          |
+.rg-span1-6  |  6 column arrangement |  spans 1 of the columns  |   13.79
+.rg-span2-6  |  6 column arrangement |  spans 2 of the columns  |   31.03
+.rg-span3-6  |  6 column arrangement |  spans 3 of the columns  |   48.27
+.rg-span4-6  |  6 column arrangement |  spans 4 of the columns  |   65.51
+.rg-span5-6  |  6 column arrangement |  spans 5 of the columns  |   82.75
+.rg-span6-6  |  6 column arrangement |  spans all columns       |  100.00
+
+
+The formulae used to give the width percentage of the span is:
+
+                  100 x Span                           Span
+ SpanWidth(%)  =  ----------   -   MarginWidth ( 1  -  ---- )
+                     Col                               Col
+
+            Note: MarginWidth is 3.45 %
+
+
+RESPONSIVE ARRANGEMENT
+
+The responsive grid has a maximum row width of 1276 px, and columns are
+generally stacked side by side, at lower widths, the columns will stack
+vertically; the point at which this occurs is a screen width at or below
+520 px.
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+
+/* ****************************************************************************
+   RESPONSIVE GRID - ROW DEFINITION (.rg-row)
+   ****************************************************************************
+   Each row can contain up to six columns (if the number of columns is to
+   change for different parts of the page, a new row must be defined for
+   each).
+
+   The first class definition defines the maximum page width (1276 pixels).
+
+   The subsequent before and after pseudo elements force the .row class to
+   self-clear (clearfix hack) to prevent floating problems.
+   ------------------------------------------------------------------------- */
+
+.rg-row {                                   /* sets the basic row  properties */
+    margin: 0 auto;
+    padding: 0;
+}
+
+.rg-row:before,                             /* IE 9 support */
+.rg-row:after {                             /* ClearFix */
+    content:"";
+    display:table;
+}
+.rg-row:after { clear:both; }
+
+
+/* ****************************************************************************
+   RESPONSIVE GRID - COLUMN DEFINITION (.rg-col)
+   ****************************************************************************
+   Each column in a row is defined with the KG Grid margin of 3.45 % on the
+   left (see header for detail).
+
+   The first column does not require this left margin and this is set to zero
+   using the :first-child pseudo class.
+
+   At low screen widths (<=520 px), the columns stack vertically and at this
+   point all column margins are removed (by media query)
+   ------------------------------------------------------------------------- */
+
+.rg-col {                                   /* sets the basic column width and properties */
+	display: block;
+	float: left;
+	margin: 1% 0% 0% 3.45%;
+}
+.rg-col:first-child { margin-left: 0; }     /* remove left margin from first column */
+
+
+/* ----------------------------------------------------------------------------
+   Remove margins at lower screen widths (columns stack at this point): 520 px
+   ------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 520px) { .rg-col { margin: 0; } }
+
+
+/* ****************************************************************************
+   RESPONSIVE GRID - SPAN CONTROLLS
+   ****************************************************************************
+   Each column spans an area of the row, taking a three columns width
+   arrangement, this can be arranged in four different ways:
+
+    - three columns of single column width - span1-3 (span 1 column of 3)
+
+    - one double width column - span2-3 (span 2 columns of 3) and a single
+      column (span1-3)
+
+    - one single width column - span1-3 and a double column (span2-3)
+
+    - finally a single triple width column - span3-3 (span 3 columns of 3)
+
+     |<------------------------- width of screen  ----------------------->|
+
+     |<---- span1-3 ------>| |<---- span1-3 ----->| |<---- span1-3 ------>|
+
+     |<----------------- span2-3 ----------------->| |<---- span1-3 ----->|
+
+     |<---- span1-3 ----->| |<----------------- span2-3 ----------------->|
+
+     |<---------------------------- span3-3 ----------------------------->|
+
+   The widths of each column are determined by the table in the header and
+   implemented in the following classes.
+
+   At screen widths of 520 px and less, all spans are set to 100 % width
+   (columns stack at this point)
+   ------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------
+   One column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-1 { width: 100%; }
+
+@media only screen and (max-width: 520px) { /* stack columns at <=520 px */
+	.rg-span1-1 { width: 100%; padding:0 1%; }/* by making all columns 100 % (effectively, small margin) */
+}
+
+
+/* ----------------------------------------------------------------------------
+   Two column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-2 { width: 48.27%; }
+.rg-span2-2 { width: 100%; }
+
+@media only screen and (max-width: 520px) { /* stack columns at <=520 px */
+	.rg-span1-2,
+    .rg-span2-2 { width: 100%; padding:0 1%; }/* by making all columns 100 % (effectively, small margin) */
+}
+
+
+/* ----------------------------------------------------------------------------
+   Three column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-3 { width: 31.03%; }
+.rg-span2-3 { width: 65.51%; }
+.rg-span3-3 { width: 100%; }
+
+@media only screen and (max-width: 520px) {     /* stack columns at <=520 px */
+	.rg-span1-3,
+    .rg-span2-3,
+    .rg-span3-3 { width: 100%; padding:0 1%; }    /* by making all columns 100 % (effectively, small margin) */
+}
+
+
+/* ----------------------------------------------------------------------------
+   Four column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-4 { width: 22.41%; }
+.rg-span2-4 { width: 48.27%; }
+.rg-span3-4 { width: 74.13%; }
+.rg-span4-4 { width: 100%; }
+
+@media only screen and (max-width: 520px) {     /* stack columns at <=520 px */
+	.rg-span1-4,
+    .rg-span2-4,
+    .rg-span3-4,
+    .rg-span4-4 { width: 100%; padding:0 1%; }    /* by making all columns 100 % (effectively, small margin) */
+}
+
+
+/* ----------------------------------------------------------------------------
+   Five column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-5 { width: 17.24%; }
+.rg-span2-5 { width: 37.93%; }
+.rg-span3-5 { width: 58.62%; }
+.rg-span4-5 { width: 79.31%; }
+.rg-span5-5 { width: 100%; }
+
+@media only screen and (max-width: 520px) {     /* stack columns at <=520 px */
+	.rg-span1-5,
+    .rg-span2-5,
+    .rg-span3-5,
+    .rg-span4-5,
+    .rg-span5-5 { width: 100%; padding:0 1%; }    /* by making all columns 100 % (effectively, small margin) */
+}
+
+/* ----------------------------------------------------------------------------
+   Six column span arrangements
+   ------------------------------------------------------------------------- */
+
+.rg-span1-6 { width: 13.79%; }
+.rg-span2-6 { width: 31.03%; }
+.rg-span3-6 { width: 48.27%; }
+.rg-span4-6 { width: 65.51%; }
+.rg-span5-6 { width: 82.75%; }
+.rg-span6-6 { width: 100%; }
+
+@media only screen and (max-width: 520px) {     /* stack columns at <=520 px */
+	.rg-span1-6,
+    .rg-span2-6,
+    .rg-span3-6,
+    .rg-span4-6,
+    .rg-span5-6,
+    .rg-span6-6 { width: 100%; padding:0 1%; }    /* by making all columns 100 % (effectively, small margin) */
+}

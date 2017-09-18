@@ -1,0 +1,702 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Learn how to install the Brackets text editor, understand the use of Brackets extensions and learn how to add and remove them">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           04-01 STARTING.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/04-01-starting/05-local-js/04-01-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css"> -->
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Brackets text editor | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="04-00-starting.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="03-00-grid.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="05-00-basics.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="04-02-starting.html#js--040200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>4</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">4</span>Getting started</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 04-01&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 4. GETTING STARTED
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-040000" href="04-00-starting.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">4</span><span class="toc-lev1-text">Getting started</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-040100" href="04-01-starting.html#js--040100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.1</span><span class="toc-lev2-text">The Brackets text editor</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040101" href="04-01-starting.html#js--040101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.1.1</span><span class="toc-lev3-text">Getting and installing Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040102" href="04-01-starting.html#js--040102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.1.2</span><span class="toc-lev3-text">Adding extensions to Brackets</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040200" href="04-02-starting.html#js--040200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.2</span><span class="toc-lev2-text">The Website Structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040201" href="04-02-starting.html#js--040201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.2.1</span><span class="toc-lev3-text">Naming conventions</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040202" href="04-02-starting.html#js--040202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.2.2</span><span class="toc-lev3-text">The website folder structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040300" href="04-03-starting.html#js--040300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.3</span><span class="toc-lev2-text">The basics of a web page</span></div></a>
+                        </li>                                    <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 040100]
+     SECTION 4.1 - THE BRACKETS TEXT EDITOR
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--040100">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>4.1</h2></div>
+                    <div class="sub-title-text-box"><h2>The Brackets text editor</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Brackets is my text editor of choice (see <a class="xref nohyp js--sc-010401" href="01-04-tools.html#js--010401"> &sect;&nbsp;1.4.1</a>).</p>
+
+                    <p class="hyp">I will use Brackets to write the entire HTML, CSS and jQuery code used within this website. Brackets is good, it has the facility to allow the viewing of web pages in real time as they are being developed&mdash;this means that any changes made to the HTML or CSS is immediately visible on the website. </p>
+
+                    <p class="hyp"><em>This is a very useful facility and I came to the conclusion that designing with the website open is the best way to see and understand what you are doing.</em></p>
+
+                    <p class="hyp">Brackets lets you add extensions that do certain things: auto-save, additional menu functions, automatically add browser prefixes &amp;c.</p>
+
+                    <p class="hyp">I&rsquo;m recommending Brackets as the text editor of choice&mdash;you don&rsquo;t have to use it, I appreciate that this is just my personal preference; however, I do use it extensively and the images of code being developed and the colour coding used is all based on Brackets.</p>
+
+                    <p class="hyp">I&rsquo;m going to assume that you are using Brackets, the next sections deal specifically with installing and configuring Brackets, if you are not using Brackets, skip to <a class="xref nohyp js--sc-010401" href="04-02-starting.html#js--040200"> section&nbsp;4.2</a>.</p>
+
+
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 040101]
+     SUBSECTION - 4.1.1 GETTING AND INSTALLING BRACKETS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--040101">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>4.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Getting and installing Brackets</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Brackets is available from the <a class="hlink nohyp" href="http://brackets.io/">brackets.io</a> website. I&rsquo;m currently using version 1.8. It&rsquo;s pretty easy to get; just click the big blue download button (highlighted in orange in <a class="xref js--sc-f04-01" href="#">Figure&nbsp;4.1</a>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f04-01">
+                            <a href="01-pages/04-01-starting/02-images/fig-04-01.png" data-lightbox="fig-set" data-title="Figure 4.1 - Brackets text editor download">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/04-01-starting/02-images/fig-04-01.png" alt="Figure 4.1 - Brackets text editor download">
+                            </a>
+                            <p class="hyp">Figure 4.1 &emsp; Brackets text editor download</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This will download the <span class="code">brackets.release.1.8.msi</span> file.</p>
+
+                    <p class="hyp">Run this file and leave all the default options selected (<a class="xref js--sc-f04-02" href="#">Figure&nbsp;4.2</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f04-02">
+                            <a href="01-pages/04-01-starting/02-images/fig-04-02.png" data-lightbox="fig-set" data-title="Figure 4.2 - Brackets text editor install options">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/04-01-starting/02-images/fig-04-02.png" style="width: 70%" alt="Figure 4.2 - Brackets text editor install options">
+                            </a>
+                            <p class="hyp">Figure 4.2 &emsp; Brackets text editor install options</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">After the installation is complete, start Brackets, it will look something like <a class="xref js--sc-f04-03" href="#">Figure&nbsp;4.3</a>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f04-03">
+                            <a href="01-pages/04-01-starting/02-images/fig-04-03.png" data-lightbox="fig-set" data-title="Figure 4.3 - Brackets first use">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/04-01-starting/02-images/fig-04-03.png" alt="Figure 4.3 - Brackets first use">
+                            </a>
+                            <p class="hyp">Figure 4.3 &emsp; Brackets first use</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 040102]
+     SUBSECTION - 4.1.2	ADDING EXTENSIONS TO BRACKETS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--040102">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>4.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Adding extensions to Brackets</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Right, we&rsquo;ve installed Brackets and now we can install some extensions. Extensions are &ldquo;plugins&rdquo; that add extra functionality to Brackets, two come pre-installed with Brackets, the first is the live preview function (this is the lightning bolt icon in the right hand side bar, <a class="xref js--sc-f04-04" href="#">Figure&nbsp;4.4</a>.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f04-04">
+                            <a href="01-pages/04-01-starting/02-images/fig-04-04.png" data-lightbox="fig-set" data-title="Figure 4.4 - Brackets sidebar">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/04-01-starting/02-images/fig-04-04.png" style="height: 7rem; width: auto" alt="Figure 4.4 - Brackets sidebar">
+                            </a>
+                            <p class="hyp">Figure 4.4 &emsp; Brackets sidebar</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The live preview browser updates in real time whenever changes are made to the HTML or CSS files, changes to other file types (Java script for example) cause the preview page to be reloaded when the file is saved.</p>
+
+                    <p class="hyp">The second pre-installed extension is &ldquo;<span class="first-use">Extract for Brackets (preview)</span>&rdquo; (it&rsquo;s the two overlapping diamonds with the arrow in the middle&mdash;right hand sidebar, bottom icon <a class="xref js--sc-f04-04" href="#">Figure&nbsp;4.4</a>). This allows content to be imported from another Adobe product: Photoshop CC. </p>
+
+                    <p class="hyp">I don&rsquo;t use Photoshop (<span class="first-use">it&rsquo;s one of the least intuitive and hard to use programmes I&rsquo;ve come across</span>) and therefore I don&rsquo;t use this extension.</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>On earlier releases, it was possible to install Brackets without the Extract extension (I don&rsquo;t see this option now in the latest version&mdash;it used to be accessible from the &ldquo;other downloads&rdquo; link below the blue button). It is possible to remove the Extracts extension using the extensions manager (see below).</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Brackets has a fairly extensive library of extensions available to it. Most of these are written by third-part developers (rather than Adobe) and I&rsquo;ve installed several that I think are useful.</p>
+
+                    <p class="hyp">These are:</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t04-01">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="table-cent" style="width: 27.0%">Extension</th>      <!-- set column 01 width here -->
+                            <th class="table-cent" style="width: 23.0%">Search for</th>       <!-- set column 02 width here -->
+                            <th class="table-cent" style="width: 50.0%">Function</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Autoprefixer</td>
+                            <td class="table-cent">Autoprefix</td>
+                            <td class="table-left">Automatically adds browser prefixes to CSS code (all those &ndash;webkit things that nobody understands)</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 02 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Autosave files on<br>Window Blur</td>
+                            <td class="table-cent">Autosave</td>
+                            <td class="table-left">Automatically saves all the files open in Brackets whenever you click out of the Brackets window</td>
+                        </tr>                                   <!-- TABLE - End of row 02   -->
+                        <tr>                                    <!-- TABLE - Start of row 03 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Brackets icons</td>
+                            <td class="table-cent">Icons</td>
+                            <td class="table-left">Adds little icons to the side of each file in the file tree showing its type (HTML, CSS, JS &amp;c.)</td>
+                        </tr>                                   <!-- TABLE - End of row 03   -->
+                        <tr>                                    <!-- TABLE - Start of row 04 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Copy as HTML</td>
+                            <td class="table-cent">Copy HTML</td>
+                            <td class="table-left">Copies code to the clipboard and preserves the colour coding used by Brackets (I use it to copy code from Brackets into documents)</td>
+                        </tr>                                   <!-- TABLE - End of row 04   -->
+                        <tr>                                    <!-- TABLE - Start of row 05 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Interactive Linter</td>
+                            <td class="table-cent">Interactive</td>
+                            <td class="table-left">Analyses the HTML, CSS and Java script code and highlights errors in the syntax and structure&mdash;a process referred to as &ldquo;linting&rdquo;<sup>&dagger;1</sup></td>
+                        </tr>                                   <!-- TABLE - End of row 05   -->
+                       <tr>                                    <!-- TABLE - Start of row 06 -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Pop-up menu Brackets</td>
+                            <td class="table-cent">Pop-up</td>
+                            <td class="table-left">Adds case conversion functionality to the pop-up menu that appears when text is right clicked in the Brackets window. It adds uppercase, lowercase and camel case<sup>&dagger;2</sup> conversions.</td>
+                        </tr>                                   <!-- TABLE - End of row 06   -->
+                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="3" class="table-caption">Table 4.1 &emsp; My selection of Brackets extensions</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                    <p class="hyp">To add extensions to Brackets click the Extensions Manager icon (it&rsquo;s the second icon in the right hand side bar; it looks like a Lego brick, <a class="xref js--sc-f04-04" href="#">Figure&nbsp;4.4</a>). This opens the extension manager dialogue box (<a class="xref js--sc-f04-05" href="#">Figure&nbsp;4.5</a>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left"><em>Linting</em>: (present participle of the verb <em>to lint</em>&mdash;yes I know, I think lint is the stuff you get off old jumpers too; and it&rsquo;s definitely not a verb) is the process of automatically checking software for errors&mdash;this process is usually carried out by another software programme called (would you believe it) a &ldquo;<em>linter</em>&rdquo;. Apparently it started with C code and there is a whole Wikipedia article on it <a class="hlink nohyp" href="https://en.wikipedia.org/wiki/Lint_%28software%29">here</a>.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 02 -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Camel case is the practice of joining words together and capitalising the start of each word (CamelCase for example), its more formal name is <span class="first-use">medial capitals</span>.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f04-05">
+                            <a href="01-pages/04-01-starting/02-images/fig-04-05.png" data-lightbox="fig-set" data-title="Figure 4.5 - Brackets extension manager">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/04-01-starting/02-images/fig-04-05.png" alt="Figure 4.5 - Brackets extension manager">
+                            </a>
+                            <p class="hyp">Figure 4.5 &emsp; Brackets extension manager</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To find the extensions, click the <span class="menu">available</span> tab and enter the &ldquo;<span class="first-use">search for</span>&rdquo; terms listed in <a class="xref js--sc-t04-01" href="#">Table&nbsp;4.1</a> in the search box at the top; select the actual extension from those presented by the search and click <span class="menu">install</span> on the right hand side.</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>It is my experience that Brackets should be closed and re-started after each extension is installed. It can tie itself in knots if you don&rsquo;t.</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                    <p class="hyp">The <span class="first-use">Copy as HTML</span> extension is not required for coding (the others all make coding easier apart from the icon thing, that just makes it look nice), I use it purely to copy code from Brackets and paste it into other documents (it preserves all the syntax colour coding). It&rsquo;s how I got the code fragments from Brackets into the pdf document version of this website.</p>
+
+                    <p class="hyp">Uninstalling an extension is much the same, click the <span class="menu">installed</span> tab and then click the <span class="menu">remove</span> button next to the extension you want to uninstall. It will require Brackets to close and re-open. This is how to uninstall the Extracts extension if you don&rsquo;t want it.</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="04-00-starting.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="04-02-starting.html#js--040200">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+    </body>
+</html>

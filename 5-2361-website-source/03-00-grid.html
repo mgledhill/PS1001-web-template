@@ -1,0 +1,781 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understanding responsive websites built with a grid and column arrangement developed by Karl Gerstner and used in Capital magazine">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                               03-00-GRID.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/03-00-grid/05-local-js/03-00-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css"> -->
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- PS local styles -->        <link rel="stylesheet" type="text/css" href="01-pages/03-00-grid/01-local-css/03-00-slideshow.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Grids and columns | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="02-02-fairfax.html#js--020200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="02-00-fairfax.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="04-00-starting.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="03-02-grid.html#js--030200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>3</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">3</span>Grids, fonts, columns and responsive design</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 03-00&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-030000" href="03-00-grid.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">3</span><span class="toc-lev1-text">Grids, fonts, columns and responsive design</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-030100" href="03-00-grid.html#js--030100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.1</span><span class="toc-lev2-text">The Gerstner grid</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030101" href="03-00-grid.html#js--030101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.1.1</span><span class="toc-lev3-text">How the Gerstner grid works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030200" href="03-02-grid.html#js--030200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.2</span><span class="toc-lev2-text">Fonts, point size and line spacing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030201" href="03-02-grid.html#js--030201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.1</span><span class="toc-lev3-text">Fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030202" href="03-02-grid.html#js--030202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.2</span><span class="toc-lev3-text">Point size and the anatomy of a font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030203" href="03-02-grid.html#js--030203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.3</span><span class="toc-lev3-text">Line spacing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030204" href="03-02-grid.html#js--030204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.4</span><span class="toc-lev3-text">Different fonts, same point size</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030205" href="03-02-grid.html#js--030205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.5</span><span class="toc-lev3-text">Anatomy of a font on a website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030206" href="03-02-grid.html#js--030206">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.6</span><span class="toc-lev3-text">Pixels, percentage, ems and rems</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030300" href="03-03-grid.html#js--030300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.3</span><span class="toc-lev2-text">The website layout</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030301" href="03-03-grid.html#js--030301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.1</span><span class="toc-lev3-text">Website page widths</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030302" href="03-03-grid.html#js--030302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.2</span><span class="toc-lev3-text">Number of columns</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030303" href="03-03-grid.html#js--030303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.3</span><span class="toc-lev3-text">Font size</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-030400" href="03-04-grid.html#js--030400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.4</span><span class="toc-lev2-text">Summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 030000]
+     CHAPTER 3 - LEAD IN SECTION (NO NUMBERED HEADING)
+     ***********************************************************************-->
+
+       <section class="section-std" id="js--030000">            <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-thinline"></div>      <!-- Thin overline (after TOC) -->
+                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>   <!-- Heading 6 is a placehoder heading needed in sections without a heading to satisfy html validation -->
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                    <p class="hyp"><span class="all-caps">This is the first part</span> of the website design section, and in it I address the problem of laying out the webpage&nbsp;&mdash;&nbsp;I do this in some detail and this is largely because I found the whole process quite interesting and enjoyable; in fact the more I looked into it the more interested I became&nbsp;&mdash;&nbsp;there is lot to it, a lot of history too.</p>
+
+                    <p class="hyp">Now, I recognise that not everybody shares this interest, the finer details of point construction, line spacing, grid layouts and economics magazines from the 1960s are not for everyone,  and some of you just want to get on with using the website (<span class="first-use">I know, let&rsquo;s just call you &ldquo;Barbarians&rdquo;</span>).</p>
+
+                    <p class="hyp">Well for the Barbarians amongst you, just skip to <a class="xref nohyp js--sc-990100" href="03-04-grid.html#js--030400">section&nbsp;3.4</a> where I summarise what I did and how it works&nbsp;&mdash;&nbsp;its ok, I use short words that are easy to understand.</p>
+
+                    <p class="hyp">For the rest of you I spend a good deal of time explaining about grid arrangements, fonts, point size and line spacing&nbsp;&mdash;&nbsp;and particularly, how these thing apply to websites (and Microsoft Word).</p>
+
+                    <p class="hyp">Broadly, this section sets out the following:.</p>
+
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Numbered lists are an ordered list of class .list-num. The text of each
+      point must be contained in its own <p> element
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list -->
+                        <li><p class="hyp">How to layout the website in columns</p></li>
+
+                        <li><p class="hyp">The size (width) of the website</p></li>
+
+                        <li><p class="hyp">The best fonts to use on the website</p></li>
+
+                        <li><p class="hyp">The size of the website body text</p></li>
+
+                        <li><p class="hyp">What line spacing to use</p></li>
+                    </ol>                                       <!-- End of numbered list -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+ <!-- ************************************************************************** [WP 980100]
+     SECTION 3.1 - THE GERSTNER GRID
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--030100">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>3.1</h2></div>
+                 <div class="sub-title-text-box"><h2>The Gerstner grid</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp"><span class="all-caps">The appearance</span> of a website, its layout and the guidelines for creating it are many and varied. There is no end to the theories and opinions: golden ratio, Fibonacci series, his spiral, two columns, three columns, flat design, parallax, material design, single page scrolling&nbsp;&mdash;&nbsp;all sorts of things.</p>
+
+                    <p class="hyp">This is the field of graphic design and it&rsquo;s a bit complicated (<span class="first-use">apparently some people even make a living out of it</span>). I looked at many different styles and did some research&nbsp;&mdash;&nbsp;I started with the Gutenberg Bible (1455) and learnt all about the Van De Graaf canon<sup>&dagger;1</sup>  (no relation to the Van De Graaff of generator fame); and this was good, but only really for printed documents. I wanted something that works on the web.</p>
+
+                    <p class="hyp">I finally settled on the Gerstner grid. This was developed by Karl Gerstner<sup>&dagger;2</sup> in the 1960s for laying out magazines. And it&rsquo;s clever, really clever&nbsp;&mdash;&nbsp;those of you (and me) of a certain inclination are going to love this&nbsp;&mdash;&nbsp;let&rsquo;s call ourselves pedants (<span class="first-use">or engineers</span>).</p>
+
+                    <p class="hyp">The Gerstner grid arrangement was developed for the publication of a business and economics magazine (Capital) in 1962 (<a class="xref js--sc-f03-01" href="#">Figure&nbsp;3.1</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">For those of you that still have a will to live, the pdf version of this document is constructed using the Van De Graff cannon&nbsp;&mdash;&nbsp;I explain it in <a class="xref nohyp js--sc-990100 utx" href="#">Appendix&nbsp;xxx.</a></td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 02 -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Karl Gerstner (b.1930) is a Swiss graphic designer that worked in advertising from the 1950s onwards. In 1962 he worked on the design of a business magazine called Capital. It was while working on Capital that he developed the grid arrangement that determined the layout and appearance of the magazine. The same grid I&rsquo;m using here.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f03-01">
+                            <a href="01-pages/03-00-grid/02-images/fig-03-01a.jpg" data-lightbox="fig-set" data-title="Figure 3.1a - Capital magazine">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-01a.jpg" alt="Figure 3.1a - Capital magazine">
+                            </a>
+                            <a href="01-pages/03-00-grid/02-images/fig-03-01b.jpg" data-lightbox="fig-set" data-title="Figure 3.1b - Capital magazine">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-01b.jpg" alt="Figure 3.1b - Capital magazine">
+                            </a>
+                            <p class="hyp">Figure 3.1 &emsp; Capital magazine<br>     <!-- Figure caption -->
+                            These images are reproduced courtesy of the Herb Lubalin Study Center at The Cooper Union, New York.<br>Their website is: <a class="hlink nohyp" href="http://lubalincenter.cooper.edu/">lubalincenter.cooper.edu</a></p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                    <p class="hyp">The Gerstner grid is a modular grid arrangement in a square of 58 units by 58 units. It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f03-02">
+                            <a href="01-pages/03-00-grid/02-images/fig-03-02.svg" data-lightbox="fig-set" data-title="Figure 3.2 - The Gerstner grid">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-02.svg" alt="Figure 3.2 - The Gerstner grid">
+                            </a>
+                            <p class="hyp">Figure 3.2 &emsp; The Gerstner grid</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This I agree is a bit confusing; but really it&rsquo;s just squares laid on top of each other&nbsp;&mdash;&nbsp;you can see an animated version of this below; just scroll down, you&rsquo;ll get the idea of how it works:</p>
+
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      IMAGE BLEND SIDESHOW
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is an animation section, it shows a series of images (effectively a
+      slideshow) as the user scrolls down the page.
+
+      The animation uses jQuery script contained in the local scroll.js file.
+
+      The images must be held in a <div> with class .animate-image. Each
+      image in the sequence must have the class .animated.
+
+      The .vp div can be used to display debug information (again managed
+      by jQuerey - just remove the leading comment to enable the code).
+
+      The animation requires its own local CSS file (slideshow.css).
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <!-- <div class="vp sans" style="font-size: 60%"></div> -->
+                    <div class="animate-images">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-01.png" class="animated" alt="slideshow image 01">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-02.png" class="animated" alt="slideshow image 02">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-03.png" class="animated" alt="slideshow image 03">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-04.png" class="animated" alt="slideshow image 04">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-05.png" class="animated" alt="slideshow image 05">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-06.png" class="animated" alt="slideshow image 06">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-07.png" class="animated" alt="slideshow image 07">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-08.png" class="animated" alt="slideshow image 08">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-09.png" class="animated" alt="slideshow image 09">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-10.png" class="animated" alt="slideshow image 10">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-11.png" class="animated" alt="slideshow image 11">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-12.png" class="animated" alt="slideshow image 12">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-13.png" class="animated" alt="slideshow image 13">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-14.png" class="animated" alt="slideshow image 14">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-15.png" class="animated" alt="slideshow image 15">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-16.png" class="animated" alt="slideshow image 16">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-17.png" class="animated" alt="slideshow image 17">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-18.png" class="animated" alt="slideshow image 18">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-19.png" class="animated" alt="slideshow image 19">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-20.png" class="animated" alt="slideshow image 20">
+                        <img src="01-pages/03-00-grid/02-images/g-grid-21.png" class="animated" alt="slideshow image 21">
+                    </div>
+
+                    <!-- <div class="vp sans" style="font-size: 80%"></div> -->
+ <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+ <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>I give an explanation of how I animated this square in <a class="hlink nohyp utx" href="#">appendix&nbsp;xxx</a>. There is a much better version of this animation in the Herb Lubalin <a class="hlink nohyp" href="https://readymag.com/flatfile/03-capital/3/">flatfile</a> magazine. I havn&rsquo;t figured out how they did it yet, but when I do I&rsquo;ll update the site with instructions.</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Things become clearer if I show this as a series of columns, and after all, the website is based upon columns (<a class="xref js--sc-f03-03" href="#">Figure&nbsp;3.3</a>).</p>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f03-03">
+                            <a href="01-pages/03-00-grid/02-images/fig-03-03.svg" data-lightbox="fig-set" data-title="Figure 3.3 - Gerstner grid as columns">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-03.svg" alt="Figure 3.3 - Gerstner grid as columns">
+                            </a>
+                            <p class="hyp">Figure 3.3 &emsp; Gerstner grid as columns</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 030101]
+     SUBSECTION 3.1.1 - HOW THE GERSTNER GRID WORKS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--030101">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>3.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>How the Gerstner grid works</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">&ldquo;<span class="first-use">How does it work</span>?&rdquo; you ask; well, this is how it works&nbsp;&mdash;&nbsp;and this is the clever bit.</p>
+
+                    <p class="hyp">The Gerstner grid is based on a square of 58&nbsp;×&nbsp;58 units (I&rsquo;ll come to what a unit is, but for the minute it doesn&rsquo;t matter).</p>
+
+                    <p class="hyp">So in its simplest arrangement, it is a single column of width 58&nbsp;units. </p>
+
+                    <p class="hyp">Now, when the grid is split into columns, each column is <em>always</em> separated from its neighbour by 2&nbsp;units.</p>
+
+                    <p class="hyp">So if we want two equally sized columns, there will be one gap between them (2&nbsp;units), this leave 56&nbsp;units for the columns, dividing this by two gives a column width of 28&nbsp;units.</p>
+
+                    <p class="hyp">If we want three equal width columns, there would be two separating gaps each of 2&nbsp;units (4&nbsp;units in total), this leave 54&nbsp;units to split into three columns, giving a column width of 18&nbsp;units; and so on.</p>
+
+                    <p class="hyp">The equation for working out column widths is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FORMULA - SIMPLE ARRANGEMENT
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     The MathJax (Java Script) is used to display formulae on the page.
+
+     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
+     is the easiest to use and is preferred.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae" id="js--e99-02">                   <!-- Start of formulae container -->
+                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
+                        <div class="formulae-container">                    <!-- Start of equation flexbox container -->
+                            <div class="formulae-equ">                      <!-- Start of equation box -->
+                                `Width_(col)=(58 - 2(N_(col)\  – 1))/(N_(col))`            <!-- The equation (AsciiMath)-->
+                            </div>                                          <!-- End of equation box -->
+                            <div class="formulae-num">(3.1) </div>         <!-- Equation number-->
+                        </div>                                              <!-- End Equation flexbox container -->
+                        <div class="formulae-caption"></div>                <!-- Equation caption-->
+                    </div>                                                  <!-- End of formulae container -->
+ <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t99-01">                 <!-- TABLE - Start of table  -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
+                            <td class="table-cent" style="width: 18%"></td>      <!-- set column 01 width here -->
+                            <td class="table-left" style="width: 20%">Where</td>       <!-- set column 02 width here -->
+                            <td class="table-left serif" style="width: 15%"><span class="first-use">Width<sub>col</sub></span></td>    <!-- set column 03 width here -->
+                            <td class="table-left" style="width: 47%">is the width of the column (equally sized)</td>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
+                            <td class="table-cent" style="width: 18%"></td>      <!-- set column 01 width here -->
+                            <td class="table-left"></td>       <!-- set column 02 width here -->
+                            <td class="table-left serif"><span class="first-use">N<sub>col</sub></span></td>    <!-- set column 03 width here -->
+                            <td class="table-left">is the number of columns</td>    <!-- set column 03 width here -->
+                         </tr>                                   <!-- TABLE - End of header   -->
+                     </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                    <p class="hyp">The elegance of this is that the column width gives an exact <span class="first-use">integer</span> (whole number) when the number of columns is 1, 2, 3, 4, 5 or 6&nbsp;&mdash;&nbsp;it falls down at seven, but six columns is enough.</p>
+
+                    <p class="hyp">The Gerstner grid allows for columns of unequal width, I&rsquo;ve put together a poor approximation of the Capital magazine arrangement to highlight this:</p>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f03-04">
+                            <a href="01-pages/03-00-grid/02-images/fig-03-04a.png" data-lightbox="fig-set" data-title="Figure 3.4a - Variations of the Gerstner grid (with apologies to Messer’s Gerstner and Theobald)">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-04a.png" alt="Figure 3.4a - Variations of the Gerstner grid (with apologies to Messer’s Gerstner and Theobald)">
+                            </a>
+                            <div class="formulae-bkgd" style="height: 3rem;"></div>
+                            <a href="01-pages/03-00-grid/02-images/fig-03-04b.png" data-lightbox="fig-set" data-title="Figure 3.4b - Variations of the Gerstner grid (with apologies to Messer’s Gerstner and Theobald)">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-04b.png" alt="Figure 3.4b - Variations of the Gerstner grid (with apologies to Messer’s Gerstner and Theobald)">
+                            </a>
+                            <p class="hyp">Figure 3.4 &emsp; Variations of the Gerstner grid (with apologies to Messrs Gerstner and Theobald)</p>     <!-- Figure caption -->
+                            <p class="hyp">The three images of Chester are courtesy of Michael D. Beckwith, the image of the Houses of Parliament is courtesy of Samel Zeller<br>(all images are via the <a class="hlink nohyp" href="https://unsplash.com/">unsplash</a> website under the <a class="hlink nohyp" href="https://creativecommons.org/publicdomain/zero/1.0/">creative common zero licence</a>).<br>The dogs Hector (left) and Henry (right) are my dogs (at least they condescend to live with me) and I took the photographs.</p>
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                    <p class="hyp">By overlaying the Gerstner grid on the pages, the flexibility of the arrangement can be seen:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f03-05">
+                            <a href="01-pages/03-00-grid/02-images/fig-03-05a.png" data-lightbox="fig-set" data-title="Figure 3.5a - Gerstner grid overlay">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-05a.png" alt="Figure 3.5a - Gerstner grid overlay">
+                            </a>
+                            <div class="formulae-bkgd" style="height: 3rem;"></div>
+                            <a href="01-pages/03-00-grid/02-images/fig-03-05b.png" data-lightbox="fig-set" data-title="Figure 3.5b - Gerstner grid overlay">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-00-grid/02-images/fig-03-05b.png" alt="Figure 3.5b - Gerstner grid overlay">
+                            </a>
+                            <p class="hyp">Figure 3.5 &emsp; Gerstner grid overlay</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ok, so I can see the potential in all this, it&rsquo;s a columnar arrangement and it&rsquo;s driven by mathematics&nbsp;&mdash;&nbsp;I like mathematics. None of that <span class="first-use">airy-fairy it just feels right</span> stuff.</p>
+
+                    <p class="hyp">Now we come to the dimensions of the unit, the basis of the Gerstner grid.</p>
+
+                    <p class="hyp">Gerstner designed the grid with a unit equivalent to the smallest point size used on the page; this leads to a discussion of fonts and point size.&nbsp;&mdash;&nbsp;Read on:</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="02-02-fairfax.html#js--020200">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="03-02-grid.html#js--030200">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->                <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+    </body>
+</html>

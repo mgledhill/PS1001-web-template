@@ -1,0 +1,1065 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understand the importance of commenting HTML, CSS and Java script. Learn how to minimise HTML and CSS and understand the concept of indentation">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                                06-09-BOX.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/06-09-box/05-local-js/06-09-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/06-09-box/01-local-css/06-09-prettifylines.css"> -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Comments and indentation | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="06-08-box.html#js--060800"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="05-00-basics.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="07-00-prelim.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="06-10-box.html#js--061000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>6</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">6</span>The CSS box model</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 06-09&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 6. HTML AND CSS: THE BASICS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">The CSS box model</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Block and inline elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.1</span><span class="toc-lev3-text">Block elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.2</span><span class="toc-lev3-text">Inline elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060103" href="06-00-box.html#js--060103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.3</span><span class="toc-lev3-text">Inline-block elements</span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.4</span><span class="toc-lev3-text"><span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Box structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060201" href="06-02-box.html#js--060201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">Box sizing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">Adjusting margins and padding</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Margin and padding properties</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">A simple layout</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">The clearfix hack</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Using the clearfix hack</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Improving the appearance of the site</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Finishing touches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.8</span><span class="toc-lev2-text">The final &ldquo;first-site&rdquo; source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.1</span><span class="toc-lev3-text">First-site CSS source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.2</span><span class="toc-lev3-text">First-site HTML source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.3</span><span class="toc-lev3-text">Final &ldquo;first-site&rdquo; website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.9</span><span class="toc-lev2-text">Comments &amp; indentation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.1</span><span class="toc-lev3-text">HTML comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.2</span><span class="toc-lev3-text">CSS comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.2</span><span class="toc-lev3-text">Autocomplete</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060900]
+     SECTION 6.9 - COMMENTS & INDENTATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060900">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>6.9</h2></div>
+                    <div class="sub-title-text-box"><h2>Comments &amp; indentation</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">When I first left university and started writing software (<span class="first-use">sometime in the 1880s</span>) I was working for the National Nuclear Corporation (we designed and build nuclear power stations&mdash;<span class="first-use">you don&rsquo;t get company names like that anymore</span>) and I was taught that it should take as long to comment your code as it did to write it in the first place&mdash;<span class="first-use">for any engineers reading this it&rsquo;s still a good rule of thumb</span>.</p>
+
+                    <p class="hyp">I take the view that all engineering software should be documented and self-explanatory; it should be commented to the extent that a competent person can understand the purpose of the software, how it works and the mechanisms it uses. Well documented code looks like <a class="xref js--sc-f06-21" href="#">Figure&nbsp;6.21</a><sup>&dagger;1</sup>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-21">
+                            <a href="01-pages/06-09-box/02-images/fig-06-21.png" data-lightbox="fig-set" data-title="Figure 6.21 - Documented engineering software">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-21.png" style="width: 80%" alt="Figure 6.21 - Documented engineering software">
+                            </a>
+                            <p>Figure 6.21 &emsp; Documented engineering software</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Engineering software, particularly that written for the pharmaceutical industry, is written to certain standards&mdash;specifically <a class="hlink nohyp" href="http://www.ispe.org/gamp-5">GAMP5</a> (<span class="first-use">Good Automated Manufacturing Practice</span>) and <a class="hlink nohyp" href="https://webstore.iec.ch/publication/4552">IEC-61131-3</a> (<span class="first-use">International Electrotechnical Commission standard for: Programmable controllers&mdash;Part&nbsp;3: Programming languages</span>) and these insist on a good level of documentation, the use of mnemonics and revision control.</p>
+
+                    <p class="hyp">Now all the code written so far has been notably lacking in comments (<span class="first-use">breaking all my own rules</span>), but that&rsquo;s not because HTML and CSS don&rsquo;t support comments, they do, it&rsquo;s just that up to this point I&rsquo;ve been lazy.</p>
+
+                    <p class="hyp">HTML and CSS (and Java script and jQuery) all support the use of comments (although for reasons that escape me, they do this in different ways) and I think the use of comments is encouraged in web development circles (<span class="first-use">I&rsquo;m not 100% sure of this though, probably because it&rsquo;s just extra stuff for the browser to load, see <a class="xref nohyp js--sc-060904" href="#">&sect;&nbsp;6.9.4</a>)</span>.</p>
+
+                    <p class="hyp">I make extensive use of comments; I suggest you do too&mdash;particularly whilst you are developing the site. Let&rsquo;s look at how to do it&mdash;HTML first:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">This is code written for my day job&mdash;it is statement list (STL) code foe a Siemens Simatic S7-300 programmable logic controller (PLC)&mdash;an industrial control system.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060901]
+     SUBSECTION 6.9.1 - HTML COMMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060901">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.1</h3></div>
+                    <div class="sub-title-text-box"><h3>HTML comments</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">HTML comments start with <span class="code">&lt;!--</span> and they end with <span class="code">--&gt;</span> anything in between is considered to be a comment and is ignored by the browser. Comments can span any number of lines.</p>
+
+                    <p class="hyp">There are some restrictions; HTML code can be officially validated by using the validation tool provided by the W3C standards organisation<sup>&dagger;2</sup>. To use the validator just select the HTML code in Brackets and paste it in to the box on the validator web page <a class="hlink nohyp" href="https://validator.w3.org/#validate_by_input">here</a>, click the <span class="menu">check</span> button and it will give a list of the errors and non-compliances in the code (that&rsquo;s not to say the code won&rsquo;t work, just that it&rsquo;s not following best practices).</p>
+
+                    <p class="hyp">Now if a comment contains two or more dashes in a row after the initial <span class="code">&lt;!--</span>, the validator will complain about it, it will produce the warning:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">The document is not mappable to XML 1.0 due to two consecutive hyphens in a comment.</td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now this is just a warning (I think about converting the file to XML, which we don&rsquo;t want to do) and has no impact on the way the HTML works, but it is irritating when you&rsquo;ve used it all over the place and then you get a bag full of warnings every time you validate your code.</p>
+
+                    <p class="hyp"><span class="first-use">Why is this a problem?</span> You ask; well it&rsquo;s because you may make the same mistake I did when I started all this, I used a line of dashes across the page like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="mono">&lt;!-- -------------------------------------------------- --&gt;</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                   <p class="hyp">I used it as a simple divider, highlighting different sections of the HTML code. I did it all over the place&mdash;it&rsquo;s how I started commenting the code, then I discovered the validation site, saw all the errors and realised I&rsquo;d been doing it wrong and had to change it all.</p>
+
+                    <p class="hyp">This is a couple of extracts from an HTML page within the main website; you can see how I&rsquo;ve commented it.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-22">
+                            <a href="01-pages/06-09-box/02-images/fig-06-22.png" data-lightbox="fig-set" data-title="Figure 6.22 - Comments at the start of an HTML file">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-22.png" style="width: 80%" alt="Figure 6.22 - Comments at the start of an HTML file">
+                            </a>
+                            <p>Figure 6.22 &emsp; Comments at the start of an HTML file</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first image (<a class="xref js--sc-f06-22" href="#">Figure&nbsp;6.22</a>) shows the start of the HTML file, you can see the first line is the <span class="code">&lt;!DOCTYPE html&gt;</span> element. The second image (<a class="xref js--sc-f06-23" href="#">Figure&nbsp;6.23</a>) shows a section of the HTML further down the file.</p>
+
+                    <p class="hyp">I use a row of asterisks to indicate the start of a major section (usually with a title line followed by a second row of asterisks). I use a row of equal signs to indicate the end of a section; and I use a row of <span class="first-use">tilde</span> characters (~) for minor sections and subsections. Minor sections and subsections usually have a title row followed by second row of tildes and a single row of tildes indicates the end of the section.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-23">
+                            <a href="01-pages/06-09-box/02-images/fig-06-23.png" data-lightbox="fig-set" data-title="Figure 6.23 - Comments from a subsequent section of the HTML file">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-23.png" style="width: 80%" alt="Figure 6.23 - Comments from a subsequent section of the HTML file">
+                            </a>
+                            <p>Figure 6.23 &emsp; Comments from a subsequent section of the HTML file</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Over the top you might think, <span class="first-use">but that&rsquo;s what they teach you at engineering school.</span></p>
+
+                    <p class="hyp">Now look again at the start of the HTML page (<a class="xref js--sc-f06-22" href="#">Figure&nbsp;6.22</a>)&mdash;<span class="first-use">it&rsquo;s impressive I know</span> (<span class="first-use">bet that&rsquo;s not what you were thinking&mdash;you were thinking &ldquo;now look what the idiot&rsquo;s done.&rdquo;</span>).</p>
+
+                    <p class="hyp">Ok, I&rsquo;ve treated this like I would an engineering project and included revision information; it&rsquo;s how I keep track of the website whilst I develop it. The current version of that particular page is <span class="code">P01.04</span>. The <span class="code">index.html</span> page lists all the revisions made to any page on the website and its revision number shows the current highest revision of the whole website.</p>
+
+                    <p class="hyp">The sad thing is: I&rsquo;ve got copies of every revision&mdash;<span class="first-use">that&rsquo;s the next thing they teach you at engineering school: up-rev frequently and always make a backup (preferably on more than one hard drive)</span>.</p>
+
+                    <p class="hyp">I&rsquo;ve put a lot of comments into the HTML&mdash;<span class="first-use">it&rsquo;s extravagant I know</span>, but this is a teaching website so the more the merrier.</p>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">The World Wide Web Consortium (W3C) was founded by Tim Berners-Lee and is the international body that produces the standards for the World Wide Web.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060902]
+     SUBSECTION 6.9.2 - CSS COMMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060902">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.2</h3></div>
+                    <div class="sub-title-text-box"><h3>CSS comments</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">CSS comments are cosmetically different to HTML comments, but they work in much the same way. CSS comments start with a <span class="code">/*</span> and end with <span class="code">*/</span>, anything in between is a comment. Like HTML comments, CSS comments can span any number of lines.</p>
+
+                    <p class="hyp">CSS comments don&rsquo;t have the same double dash restrictions as HTML comments; it&rsquo;s perfectly acceptable to have a line of dashes in a comment:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent"><span class="mono">/* ---------------------------------------------------- */</span></td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Here is an extract from the <span class="code">style.css</span> file used on the main website (<a class="xref js--sc-f06-24" href="#">Figure&nbsp;6.24</a>); it is this CSS file that contains the standard set of styles used on every page of the website.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-24">
+                            <a href="01-pages/06-09-box/02-images/fig-06-24.png" data-lightbox="fig-set" data-title="Figure 6.24 - Comments from within a CSS file">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-24.png" alt="Figure 6.24 - Comments from within a CSS file">
+                            </a>
+                            <p>Figure 6.24 &emsp; Comments from within a CSS file</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I use the comment section at the start of the CSS file (<a class="xref js--sc-f06-25" href="#">Figure&nbsp;6.25</a>) in much the same way as the HTML file; it contains a description and revision history. With the CSS file I also use it to store a list of the colour values used throughout the website (it&rsquo;s the COLOURS IN USE section in the comments). This is useful and saves you having to search the whole file to find the colour used for a particular item, see <a class="xref nohyp" href="07-04-prelim.html#js--070401">&sect;&nbsp;7.4.1</a>.</p>
+
+                    <p class="hyp">Like HTML comments, I use a row of asterisks to indicate the start of a major section (usually with a title line followed by a second row of asterisks). Instead of the tilde character, I use a row of dashes (-) for minor sections and subsections. Minor sections and subsections usually have a title row followed by second row of dashes.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-25">
+                            <a href="01-pages/06-09-box/02-images/fig-06-25.png" data-lightbox="fig-set" data-title="Figure 6.25 - Comments at the start of  a CSS file">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-25.png" style="width: 80%" alt="Figure 6.25 - Comments at the start of  a CSS file">
+                            </a>
+                            <p>Figure 6.25 &emsp; Comments at the start of  a CSS file</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060903]
+     SUBSECTION 6.9.3 - JAVASCRIPT AND JQUERY COMMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060903">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.3</h3></div>
+                    <div class="sub-title-text-box"><h3>JavaScript and jQuery comments</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">This is easy; JavaScript and jQuery comments are the same as CSS.</p>
+
+                    <p class="hyp">Here is an extract from one of my jQuery files (<span class="first-use">can&rsquo;t have too many brackets and braces in JS</span>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-26">
+                            <a href="01-pages/06-09-box/02-images/fig-06-26.png" data-lightbox="fig-set" data-title="Figure 6.26 - Comments in a jQuery file">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-26.png" alt="Figure 6.26 - Comments in a jQuery file">
+                            </a>
+                            <p>Figure 6.26 &emsp; Comments in a jQuery file</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060904]
+     SUBSECTION 6.9.4 - Comments-the downside
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060904">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Comments&mdash;the downside</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I like comments, they&rsquo;re useful and it&rsquo;s been deeply ingrained in me from a young age that they should be used extensively&mdash;<span class="first-use">use them young Skywalker&mdash;use them wisely</span>.</p>
+
+                    <p class="hyp">Now, the problem with comments in HTML and CSS is that they are stored in the HTML and CSS files, this makes the file sizes larger and that means it takes the browser longer to download them and this in turn slows down the website.</p>
+
+                    <p class="hyp">This probably doesn&rsquo;t matter too much on most websites, a few lines of comments in a page won&rsquo;t make much difference one way or the other. My pages however, tend to be very well commented indeed; my philosophy is to spend as much time commenting code as I did writing it; my comments are extensive (<span class="first-use">and a pleasure to read I am sure</span>), <em>I comment like there is no tomorrow.</em></p>
+
+                    <p class="hyp">I did a quick experiment; the size of the finished <span class="code">style.css</span> file is 73.0&nbsp;KB. If I strip out all the comments, this comes down to 23.9&nbsp;KB&mdash;that&rsquo;s quite some saving (66%).</p>
+
+                    <p class="hyp">I&rsquo;m not going to apologise about my comments and I&rsquo;m not going to take them out, this is a teaching website and, in my view, the usefulness of the comments outweighs any hit the site might take on load time.</p>
+
+                    <p class="hyp">I advise you to use comments too, at least in the offline version of the site (the copy you keep on your computer). The online version (the one that gets uploaded to the webserver) can have the comments stripped out. This process is called <span class="first-use">&ldquo;minimisation&rdquo;</span> and there are websites that do it for you:</p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060905]
+     SUBSECTION 6.9.5 - MINIMISATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060905">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Minimisation</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">Minimisation is the process of removing nonessential items from HTML, CSS and JavaScript/jQuery files. At the most extreme it strips out absolutely everything that is not need (including line breaks and unnecessary spaces). </p>
+
+                    <p class="hyp">Here is an extract from style.css with maximum minimisation (<span class="first-use">maximum minimisation&mdash;ha!</span>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-27">
+                            <a href="01-pages/06-09-box/02-images/fig-06-27.png" data-lightbox="fig-set" data-title="Figure 6.27 - Minimised CSS">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-27.png" alt="Figure 6.27 - Minimised CSS">
+                            </a>
+                            <p>Figure 6.27 &emsp; Minimised CSS</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The highlighted bit in the middle (<span class="code">.title-row</span>) is the same section of code as that shown in <a class="xref js--sc-f06-24" href="#">Figure&nbsp;6.24</a> (line 533).</p>
+
+                    <p class="hyp">It&rsquo;s completely unintelligible; but it has brought the file size down to 19.8&nbsp;KB (that&rsquo;s a 73% reduction from the original 73.0&nbsp;KB).</p>
+
+                    <p class="hyp">There are a lot of websites that do this minimisation, I use <a class="hlink nohyp" href="http://csscompressor.com/">csscompressor.com</a>, just select the code in Brackets, copy it and past it into the box on the website, select the degree of minimisation you want in the <span class="menu">compression level</span> box and click <span class="menu">compress</span>, copy the output and paste it into a new file in Brackets.</p>
+
+                    <p class="hyp">The convention with CSS and Java files is to add <span class="code">.min</span> to the filename, so the minimised form of <span class="code">style.css</span> would be called <span class="code">style.min.css</span>.</p>
+
+                    <p class="hyp">HTML can also be minimised, this is a site that does it <a class="hlink nohyp" href="http://kangax.github.io/html-minifier/">kangax.github.io</a>. Opinion seems to vary on whether HTML should be minimised, however, google think you should: <a class="hlink nohyp" href="https://developers.google.com/speed/docs/insights/MinifyResources">developers.google.com</a>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>Minimising code improves the speed of the website, whether that&rsquo;s important with today&rsquo;s broadband speeds I&rsquo;m not so sure. I do think however, that some sites minimise their code to make it harder for people to read and copy (just my opinion you understand&mdash;bet I&rsquo;m right though).</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I leave it up to you, but if you do use minimisation, make sure you keep an un-minimised copy offline somewhere.</p>
+
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 060906]
+     SUBSECTION 6.9.6 - INDENTATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060906">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.9.6</h3></div>
+                    <div class="sub-title-text-box"><h3>Indentation</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp"><span class="first-use">Indentation</span> (the practice of indenting code further across the page) is used to make the code more legible. It works like this: in HTML, where elements are nested inside other elements, the nested elements are indented.</p>
+
+                    <p class="hyp">Brackets automatically indents nested elements (by default, each indentation pushes the text four spaces to the right). It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-28">
+                            <a href="01-pages/06-09-box/02-images/fig-06-28.png" data-lightbox="fig-set" data-title="Figure 6.28 - Indented HTML">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-28.png" alt="Figure 6.28 - Indented HTML">
+                            </a>
+                            <p>Figure 6.28 &emsp; Indented HTML</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can see how the start and end tags for each nested element line up (the red lines show this).</p>
+
+                    <p class="hyp">Brackets indents by four spaces for each level, the W3C standard says two spaces, but I&rsquo;m sticking with Brackets, I think it looks better.</p>
+
+                    <p class="hyp">It does get a bit silly after a while, with everything shifted over to the right. There is some room for compromise, I think it would be OK to not indent the <span class="code">&lt;body&gt;</span> and <span class="code">&lt;head&gt;</span> elements, just about everything else is embedded in these tags and I think it can be taken for granted that there is an implied indent. It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-29">
+                            <a href="01-pages/06-09-box/02-images/fig-06-29.png" data-lightbox="fig-set" data-title="Figure 6.29 - Slightly optimised HTML indentation">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-29.png" alt="Figure 6.29 - Slightly optimised HTML indentation">
+                            </a>
+                            <p>Figure 6.29 &emsp; Slightly optimised HTML indentation</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">CSS is a bit different, the only thing that gets indented are declarations inside braces that span multiple lines:</p>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f06-30">
+                            <a href="01-pages/06-09-box/02-images/fig-06-30.png" data-lightbox="fig-set" data-title="Figure 6.30 - Indented CSS">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/06-09-box/02-images/fig-06-30.png" alt="Figure 6.30 - Indented CSS">
+                            </a>
+                            <p>Figure 6.30 &emsp; Indented CSS</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                   <p class="hyp">JavaScript and jQuery also have indents, these are just like CSS; I discuss this further in <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a>.</p>
+
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="06-08-box.html#js--060800">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="06-10-box.html#js--061000">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>

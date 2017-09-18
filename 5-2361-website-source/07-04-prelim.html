@@ -1,0 +1,1048 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Learn how to set the global css properties with the asterisk selector, html selector and the body selector. Use a colours in use table.">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             07-04-PRELIM.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/07-04-prelim/05-local-js/07-04-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/07-04-prelim/01-local-css/07-04-prettifylines.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Set global properties for the website | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="07-03-prelim.html#js--070300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="06-00-box.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>7</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">7</span>Website preliminaries</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 07-04&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 7. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-070000" href="07-00-prelim.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">7</span><span class="toc-lev1-text">Website preliminaries</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-070100" href="07-01-prelim.html#js--070100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.1</span><span class="toc-lev2-text">The website folders</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070200" href="07-02-prelim.html#js--070200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.2</span><span class="toc-lev2-text">The Normalize <span class="first-use">[sic]</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070201" href="07-02-prelim.html#js--070201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.2.1</span><span class="toc-lev3-text">Changes to normalize.css</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070300" href="07-03-prelim.html#js--070300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.3</span><span class="toc-lev2-text">The base html file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070301" href="07-03-prelim.html#js--070301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.1</span><span class="toc-lev3-text"><span class="code">&lt;!DOCTYPE ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070302" href="07-03-prelim.html#js--070302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.2</span><span class="toc-lev3-text">Comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070303" href="07-03-prelim.html#js--070303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.3</span><span class="toc-lev3-text"><span class="code">&lt;html&gt;...&lt;/html&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070304" href="07-03-prelim.html#js--070304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.4</span><span class="toc-lev3-text"><span class="code">&lt;head&gt;...&lt;/head&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070305" href="07-03-prelim.html#js--070305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.5</span><span class="toc-lev3-text">Meta tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070306" href="07-03-prelim.html#js--070306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.6</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070307" href="07-03-prelim.html#js--070307">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.7</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span> file order and priority</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070308" href="07-03-prelim.html#js--070308">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.8</span><span class="toc-lev3-text"><span class="code">&lt;title&gt;...&lt;/title&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070309" href="07-03-prelim.html#js--070309">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.9</span><span class="toc-lev3-text">Finally <span class="code">&lt;body&gt;...&lt;/body&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070400" href="07-04-prelim.html#js--070400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.4</span><span class="toc-lev2-text">Global properties</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070401" href="07-04-prelim.html#js--070401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.1</span><span class="toc-lev3-text">Comments&mdash;Colours in use</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070402" href="07-04-prelim.html#js--070402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.2</span><span class="toc-lev3-text">Asterisk (<span class="code">*</span>) selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070403" href="07-04-prelim.html#js--070403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.3</span><span class="toc-lev3-text"><span class="code">html</span> and <span class="code">body</span> selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 070400]
+     SECTION 7.4 - GLOBAL PROPERTIES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--070400">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>7.4</h2></div>
+                    <div class="sub-title-text-box"><h2>Global properties</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">The <span class="code">normalise.css</span> file is used to standardise how browsers display the HTML elements, it makes sure that properties such as margins, line-height, font-size &amp;. are all defined and have consistent values on all web browsers.</p>
+
+                    <p class="hyp">This is a very good starting point, it might not be exactly what I want for this website, but at least I know there is a common baseline underlying everything.<span class="first-use">Yay Gallagher and Neal</span>.</p>
+
+                    <p class="hyp">The next thing is to define the basic properties for the website, for this I will use the asterisk (<span class="code">*</span>), <span class="code">&lt;html&gt;</span> and <span class="code">&lt;body&gt;</span> selectors.</p>
+
+                    <p class="hyp">In Brackets, open <span class="code">style.css</span> and add the code listed in <a class="xref js--sc-c07-02" href="#">Code&nbsp;7.2</a> (or download it by clicking the <sub><span class="nav-icon">a</span></sub> icon at the bottom of the code fragment).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" id="js--c07-02">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c070200">/* PRACTICALSERIES (c) 2016
+
+*****************************************************************
+Title :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WEBSITE MAIN STYLE SHEET&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  STYLE.CSS
+*****************************************************************
+
+PRACTICALSERIES: Practical Series of Publications
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Website Development for Online Publications
+
+*****************************************************************
+
+-----------------------------------------------------------------
+COLOURS IN USE
+
+ Colour&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  Usage&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; Hex Code
+--------------------+-----------------------------------+--------
+ Page&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Page colour outside 1276 boundary&nbsp;| #fbfaf6
+ Page edge&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Border colour to page edge&nbsp; &nbsp; &nbsp; &nbsp; | #ededed
+ Background&nbsp; &nbsp; &nbsp; &nbsp;  | Overall background colour (white)&nbsp;| #fff
+ Main text&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | main body text (v. dk gy)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #404030
+ sidebar text&nbsp; &nbsp; &nbsp;  | Sidebar sans serif text (lt gy)&nbsp;&nbsp; | #686868
+ sidebar border&nbsp; &nbsp;  | when collapsed (gy)&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; | #ccc
+ sidebar bkground&nbsp;  | when collapsed (lt gy)&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;| #f8f8f8
+ Table border&nbsp; &nbsp; &nbsp;  | Outline for all tables&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;| #ccc
+ table background&nbsp;  | Incidental, code, formula (lt gy) | #fbfbfb
+ Navigation base&nbsp; &nbsp; | Nav (link/visited)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   | #ccc
+ Navigation hover&nbsp; &nbsp;| Nav (active/hover)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   | #686868
+ Navigation bkgrd&nbsp;  | Nav background (link/visited)&nbsp;    | #fff
+ Navigation bkgrd&nbsp;  | Nav background (active/hover)&nbsp;    | #c8c8c8
+ TOC list&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Contents list of entries (blue)&nbsp; &nbsp;| #4C6C9C
+ Footer background&nbsp; | Footer area background (cream)&nbsp; &nbsp; | #fbfaf6
+ Footer navigation&nbsp; | Footer nav &amp; spacer text (blue)   | #4c6c9c
+ Footer nav h-light | Footer nav highlights (lt blue)&nbsp;  | #5b7daf
+ Button background&nbsp; | Button light orange&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #e67e22
+ Button hover&nbsp; &nbsp; &nbsp;  | Button dark orange (hover)&nbsp; &nbsp; &nbsp; &nbsp; | #de7519
+ Text (red)&nbsp; &nbsp; &nbsp; &nbsp;  | Red text highlight&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | #c0504d
+ Untested link&nbsp; &nbsp; &nbsp; | Highlights untested links&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| #ff0000
+-------------------------------------------------------------- */
+
+/* **************************************************************
+&nbsp;  BASE PAGE SETUP
+&nbsp;  *********************************************************** */
+
+* {
+&nbsp; &nbsp; margin: 0;
+&nbsp; &nbsp; padding: 0;
+&nbsp; &nbsp; box-sizing: border-box;
+&nbsp; &nbsp; position: relative;
+}
+
+html {
+&nbsp; &nbsp; background-color: #fbfaf6;&nbsp; &nbsp; &nbsp; &nbsp;      /* cream page bkgrd&nbsp;*/
+&nbsp; &nbsp; font-size: 24px;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; text-rendering: optimizeLegibility;
+}
+
+body {
+&nbsp; &nbsp; max-width: 1276px;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; background-color: #fff;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* make body area white */
+&nbsp; &nbsp; border-left:&nbsp; 1px solid #ededed;
+&nbsp; &nbsp; border-right: 1px solid #ededed;
+}
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%">Code 7.2 &emsp; style.css global settings</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">          <!-- download link -->
+                                    <a class="code-nav" href="01-pages/07-04-prelim/04-data/code-07-02.zip" download><span class="nav-icon">a</span></a>
+                                </td>
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                     <p class="hyp">I&rsquo;ve started with comments (these are not as extensive at the comments in the published website, this again is for the reasons stated in the previous section: it&rsquo;s an attempt to try and keep each line of code on one line in the code fragments and to keep the code fragments a reasonable length).</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 070401]
+     SUBSECTION 7.4.1 - COMMENTS - COLOURS IN USE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--070401">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>7.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Comments &mdash; Colours in use</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">The comments contain a section called &ldquo;Colours in use&rdquo; this, as you will find out, is a very useful section. I&rsquo;ve listed all the colour values I use in the website with a brief description of where I&rsquo;ve used them.</p>
+
+                    <p class="hyp">I&rsquo;ve said before that not being able to define constants, or at least assign mnemonic references to things is a problem for CSS (<a class="hlink nohyp" href="04-03-starting.html#js--040300">&sect;&nbsp;4.3</a>), it means that every time a colour value is used, it has to be keyed in manually; I actually have to remember that it is <span class="code">#4c6c9c</span>, and can&rsquo;t just type a mnemonic such as <span class="code">toc-text-col</span>. It&rsquo;s a pain in the arse; I ended up searching the stylesheet just to find the colour I wanted. In the end I came up with the colours in use table, at the very least I knew where to find the colour values.</p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 070402]
+     SUBSECTION 7.4.2 - Asterisk (*) selector declarations
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--070402">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>7.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Asterisk (<span class="code">*</span>) selector declarations</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I discussed the asterisk selector and setting default properties for the box model I&rsquo;m using in <a class="hlink nohyp" href="06-02-box.html#js--060201">&sect;&nbsp;6.2.1</a>. This is pretty much the same:</p>
+
+ <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c070200a">* {&nbsp;
+&nbsp; &nbsp; margin: 0;
+&nbsp; &nbsp; padding: 0;
+&nbsp; &nbsp; box-sizing: border-box;
+&nbsp; &nbsp; position: relative;
+}
+
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It sets the margin and padding for absolutely every element to zero<sup>&dagger;1</sup>. I will then adjust each element as I need to later as we add more styles.</p>
+
+                    <p class="hyp">I&rsquo;ve set the <span class="code">box-sizing</span> for all box elements to <span class="code">border-box</span>. This is the more intuitive way of sizing box elements (again, see <a class="hlink nohyp" href="06-02-box.html#js--060201">&sect;&nbsp;6.2.1</a>).</p>
+
+                    <p class="hyp">Finally, I&rsquo;ve defined the positioning of all HTML elements to be <span class="first-use">relative</span>. I&rsquo;ve done this so that I can use <span class="first-use">absolute</span> positioning when I need to. It ensures the golden rule for positioning:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t07-01b">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">For absolute positioning to work, the parent element <br>must be set to relative positioning.</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I cover this fully in <a class="hlink nohyp" href="06-07-box.html#js--060700">&sect;&nbsp;6.7</a>. Basically, to position elements <span class="first-use">absolutely</span>, their parent element must be set to <span class="first-use">relative</span> positioning. By default HTML elements are set to <span class="first-use">static</span> positioning; by adding the <span class="code">position: relative</span> declaration to the asterisk selector, I&rsquo;ve changed this default to <span class="first-use">relative</span> positioning, this lets me add <span class="first-use">absolute</span> positioning wherever I want.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">This may make the changing of the <span class="code">h1</span> settings in <span class="code">normilise.css</span> (<a class="hlink nohyp" href="07-02-prelim.html#js--070201">&sect;&nbsp;7.2.1</a>) pointless, but there we are&mdash;better safe than sorry.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 070403]
+     SUBSECTION 7.4.3 - HTML AND BODY SELECTOR DECLARATIONS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--070403">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>7.4.3</h3></div>
+                    <div class="sub-title-text-box"><h3><span class="code">html</span> and <span class="code">body</span> selector declarations</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">These are a bit interlinked so I&rsquo;ll explain them together (<span class="first-use">with pictures to make things easier</span>). If all I had in the <span class="code">html</span> and <span class="code">body</span> sections was this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c070200b">html {
+&nbsp; &nbsp; background-color: #fbfaf6;&nbsp; &nbsp; &nbsp; &nbsp;       /* cream page bkgrd */
+}
+
+body {
+}
+
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">i.e. just a background colour then I would get this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f07-08">
+                            <a href="01-pages/07-04-prelim/02-images/fig-07-08.png" data-lightbox="fig-set" data-title="Figure 7.8 - html style">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/07-04-prelim/02-images/fig-07-08.png" alt="Figure 7.8 - html style">
+                            </a>
+                            <p>Figure 7.8 &emsp; html style</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">So that&rsquo;s pretty much as expected, it gives a pale cream background and nothing else.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Notes are added to the text in the form of unordered lists given the
+      class .note, this effectively creates a list with the bullet point set
+      to be the word Note: with appropriate indentation
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>The browser window in <a class="xref js--sc-f07-08" href="#">Figure&nbsp;7.8</a> is about 1700&nbsp;×1200&nbsp;px. It needs to be wider than 1276&nbsp;px for the effects I&rsquo;m describing to be observable.</li>
+                    </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now let&rsquo;s add a bit of <span class="code">body</span> styling:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c070200c">html {
+&nbsp; &nbsp; background-color: #fbfaf6;&nbsp; &nbsp; &nbsp; &nbsp;      /* cream page bkgrd&nbsp;*/
+}
+
+body {
+&nbsp; &nbsp; max-width: 1276px;
+&nbsp; &nbsp; height: 1000px;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; background-color: #fff;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* make body area white */
+}
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now we get:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f07-09">
+                            <a href="01-pages/07-04-prelim/02-images/fig-07-09.png" data-lightbox="fig-set" data-title="Figure 7.9 - html with body style">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/07-04-prelim/02-images/fig-07-09.png" alt="Figure 7.9 - html with body style">
+                            </a>
+                            <p>Figure 7.9 &emsp; html with body style</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s made the middle bit white; what&rsquo;s more that middle bit is exactly 1276&nbsp;px wide and is positioned in the centre of the browser window.</p>
+
+                    <p class="hyp">It works like this, the body declaration <span class="code">max-width: 1276px</span> does exactly what is says, it restricts the body area to a maximum width of 1276&nbsp;px; if the browser window is wider than this, the body area will be limited to a maximum width of 1276&nbsp;px.</p>
+
+                    <p class="hyp">I&rsquo;ve included the <span class="code">height</span> declaration so that you can see the body area, it will be 1000&nbsp;px high (remember the <span class="code">&lt;body&gt;</span> area in the HTML is empty, it has no content and since we have defined the margins and padding of everything to be zero, it would have no visible height. This would change if we started adding content to the body in the html, but at the minute it&rsquo;s empty&mdash;hence the <span class="code">height</span> declaration)</p>
+
+                    <p class="hyp">The background colour is set to white (<span class="code">#fff</span>) so we can see a white panel where the body area is, this panel is in the middle of the browser window because of the <span class="code">margin: 0 auto</span> declaration. This sets the top and bottom margins to zero and the left and right margins to <span class="code">auto</span>, this forces the body area into the centre of the screen. The <span class="code">auto</span> value when applied to both left and right margins makes them equal in width, putting the body area in the middle (<span class="first-use">it&rsquo;s a very commonly used CSS trick</span>).</p>
+
+                    <p class="hyp">The next thing is the border properties in the body selector. Add them in:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c070200d">html {
+&nbsp; &nbsp; background-color: #fbfaf6;&nbsp; &nbsp; &nbsp; &nbsp;      /* cream page bkgrd&nbsp;*/
+}
+
+body {
+&nbsp; &nbsp; max-width: 1276px;
+&nbsp; &nbsp; height: 1000px;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; background-color: #fff;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* make body area white */
+&nbsp; &nbsp; border-left:&nbsp; 1px solid #ededed;
+&nbsp; &nbsp; border-right: 1px solid #ededed;
+
+}
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All this does is put a grey border down each side of the body area:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f07-10">
+                            <a href="01-pages/07-04-prelim/02-images/fig-07-10.png" data-lightbox="fig-set" data-title="Figure 7.10 - html with body border">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/07-04-prelim/02-images/fig-07-10a.png" alt="Figure 7.10 - html with body border">
+                            </a>
+                            <p>Figure 7.10 &emsp; html with body border</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">That&rsquo;s it for the body selector, but take out the <span class="code">height</span> declaration, we&rsquo;ll let the body area set its own height based on its content.</p>
+
+                    <p class="hyp">That just leaves some styling points in the <span class="code">html</span> selector, add the following three lines:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c070200e">html {
+&nbsp; &nbsp; background-color: #fbfaf6;&nbsp; &nbsp; &nbsp; &nbsp;      /* cream page bkgrd&nbsp;*/
+&nbsp; &nbsp; font-size: 24px;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; text-rendering: optimizeLegibility;
+}
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Taking these in order:</p>
+
+                    <p class="hyp">The <span class="code">font-size: 24px</span> sets the default text size for the website; this is set at 24&nbsp;px and I arrived at this size based on the long discussion in <a class="hlink nohyp" href="03-03-grid.html#js--030303">&sect;&nbsp;3.3.3</a> and its preceding sections.</p>
+
+                    <p class="hyp">This is the default point size that the <span class="first-use">rem</span> unit is based upon (<a class="hlink nohyp" href="03-02-grid.html#js--030206">&sect;&nbsp;3.2.6</a> &amp; <a class="hlink nohyp" href="05-06-basics.html#js--050602">&sect;&nbsp;5.6.2</a>). I.e. text that is sized in <span class="first-use">rems</span> will use 24&nbsp;px as its base value; for example text anywhere on the page that is set to 2&nbsp;rems will be 48 pixels high; similarly text at 0.5&nbsp;rem will be 12&nbsp;pixels high.</p>
+
+                    <p class="hyp">The text colour is set to a shade that is just off grey, it&rsquo;s set with the <span class="code">color: #404030</span> property, it is this colour:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f07-11">
+                            <a href="01-pages/07-04-prelim/02-images/fig-07-11.png" data-lightbox="fig-set" data-title="Figure 7.11 - Text colour">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/07-04-prelim/02-images/fig-07-11.png" style="width: 30%" alt="Figure 7.11 - Text colour">
+                            </a>
+                            <p>Figure 7.11 &emsp; Text colour</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">When I was researching websites, one thing I noticed was that very few of the good looking ones used pure black for their text colour; they used various versions of dark grey&mdash;this got me thinking; when I write by hand I use a blue-black ink (<span class="first-use">yes, I write with a fountain pen<sup>&dagger;2</sup>&mdash;not a quill, I hasten to add&mdash;I&rsquo;m not that old</span>); even black biro is actually a very dark purple.</p>
+
+                    <p class="hyp">So maybe it makes sense not to use pure black&mdash;from what I&rsquo;ve read, the eye prefers a dark grey to black and so I&rsquo;ve used a dark grey just slightly shifted away from the blue; it&rsquo;s about 77% black. I like it, its hex value is <span class="code">#404030</span>.</p>
+
+                    <p class="hyp">Finally: <span class="code">text-rendering: optimizeLegibility</span>&mdash;<span class="first-use">yeah, I don&rsquo;t think that&rsquo;s how you spell optimise either</span>. Strictly speaking this isn&rsquo;t part of the CSS standard, but it seems to be widely supported. Think of it as an instruction to the browser&rsquo;s rendering engine, telling it how to render a font, the other options are <span class="code">optimizeSpeed</span>, <span class="code">geometricPrecision</span> and <span class="code">auto</span>. The reason I&rsquo;ve chosen optimizeLegibility is that this supports font kerning.</p>
+
+                    <p class="hyp">Font kerning is where certain pairs of letters are adjusted to give better spacing and to make them fit together properly, like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a three column table; the table is 84% of the row width (this is
+      set as part of the .table-clean class) and this is the standard
+      arrangement for tables.
+
+      The table is designated .table-clean (this is a table that is simple and
+      clean in appearance).
+
+      The table has three columns, this is set by how many <th> cells are
+      specified in the header row, the number of cells in each subsequent
+      <td> row must match the number in the header row.
+
+      The relative widths of each column are determined by the width specified
+      in the <th> elements, these widths are a percentage of the table width.
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+      By default each table row has a bottom border, this can be turned off
+      by giving the <tr> element the class .no-border
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t07-04b">                 <!-- TABLE - Start of table  -->
+                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 65%"></td>      <!-- set column 01 width here -->
+                            <td class="table-cent" style="width: 35%"></td>      <!-- set column 01 width here -->
+
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">
+                                <a href="01-pages/07-04-prelim/02-images/fig-07-11c.png" data-lightbox="fig-set" data-title="Font with kerning on and off">         <!-- LIGHTBOX LINK -->
+                                    <img src="01-pages/07-04-prelim/02-images/fig-07-11a.png" style="width: 100%" alt="Font with kerning off">
+                                </a>
+                            </td>
+                            <td class="table-left">Kerning off</td>      <!-- set column 01 width here -->
+                        </tr>                                            <!-- TABLE - End of row 01   -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">
+                                <a href="01-pages/07-04-prelim/02-images/fig-07-11c.png" data-lightbox="fig-set" data-title="Font with kerning on and off">         <!-- LIGHTBOX LINK -->
+                                    <img src="01-pages/07-04-prelim/02-images/fig-07-11b.png" style="width: 100%" alt="Font with kerning on">
+                                </a>
+                            </td>
+                            <td class="table-left">Kerning on</td>      <!-- set column 01 width here -->
+                        </tr>                                    <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Mr Butterick gives a full explanation of how kerning works on his <a class="hlink nohyp" href="http://practicaltypography.com/">practical&nbsp;typography</a> website.</p>
+
+                    <p class="hyp">I want the fonts on the website to use kerning and setting <span class="code">text-rendering: optimizeLegibility</span> turns this feature on (albeit at the expense of rendering speed).</p>
+
+                    <p class="hyp">Ok, that&rsquo;s it for the preliminary stuff. </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">My old Dad used to say <span class="first-use">&ldquo;Only ever sign your name with a fountain pen&rdquo;</span>. He&rsquo;s dead now, but I like to think he would be please with me passing on his pearls of wisdom.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="07-03-prelim.html#js--070300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="08-00-columns.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>

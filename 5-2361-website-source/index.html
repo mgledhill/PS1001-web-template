@@ -1,0 +1,1016 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Learn how to build a good looking responsive website supporting lightbox images, formulae, google prettify code fragments within a Gerstner grid">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                                    INDEX.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+
+                                          - Google analytics moved into HEAD
+                                          - Style.css & scroll.js modified to
+                                            accomodate .aside-revision class
+                                            name change (.aside-right-rev)
+                                          - .aside-left-rev added with bld stat
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+
+        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/00-00-index/05-local-js/00-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css"> -->
+        <!-- Lightbox styles            <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">  -->
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>PracticalSeries: Web Development</title>
+    </head>
+
+    <body>                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav class="nav-cover">                             <!-- Start of top navigation bar (set transparent on cover page) -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <div class="nav-wide-blank" ></div>
+                        <!-- Button 02 - Previous Chapter -->
+                        <div class="nav-wide-blank" ></div>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home js--sc-000000" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="01-00-introduction.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="01-00-introduction.html#js--010000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000002]
+     COVER IMAGE
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of cover row -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 1.6rem;">       <!-- Start of left side bar -->
+                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of Cover area (centre column) -->
+                    <div class="cover-overline"></div>          <!-- Overline bar -->
+                    <div class="cover-title">                   <!-- Start of cover title area -->
+                        <h1>Practical Series</h1>               <!-- Main title -->
+                        <h2>A website template</h2>             <!-- Subtitle -->
+                        <h3>by Michael Gledhill</h3>            <!-- Author -->
+                    </div>                                      <!-- End of cover title area -->
+                    <figure class="cover-fig">                  <!-- Start of cover figure -->
+                        <img src="01-pages/00-00-index/02-images/fig-00-logo-paths.svg" alt="cover logo">
+                    </figure>                                   <!-- End of cover figure -->
+                </div>                                          <!-- End of cover area (centre column -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column  -->
+                    <aside class="aside-right-rev" style="margin-top: 1.6rem">                  <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 1001:&nbsp;&mdash;&nbsp;P10</p> <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column  -->
+            </div>                                              <!-- End of cover row -->
+
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - PRACTICAL SERIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-000100" href="../index.html">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num"></span><span class="toc-lev1-text">Practical Series Publications &mdash; Home Page</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - A NOTE BY THE AUTHOR
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-000100" href="index.html#js--000100">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1lt-num"></span><span class="toc-lev1lt-text">A note by the author</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 1. introduction
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-010000" href="01-00-introduction.html#js--010000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">1</span><span class="toc-lev1-text">Introduction</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-010100" href="01-01-howtouse.html#js--010100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.1</span><span class="toc-lev2-text">How to use this website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-010200" href="01-02-paying.html#js--010200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.2</span><span class="toc-lev2-text">How to pay for this document</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-010300" href="01-03-typographical.html#js--010300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.3</span><span class="toc-lev2-text">Typographical conventions</span></div></a>
+                              <br class="toc-pad">              <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                      </li>                                     <!-- TOC link end   -->
+                        <li><a class="js--sc-010400" href="01-04-tools.html#js--010400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">1.4</span><span class="toc-lev2-text">Tools of the trade</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010401" href="01-04-tools.html#js--010401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.1</span><span class="toc-lev3-text">Tools for website development</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010402" href="01-04-tools.html#js--010402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.2</span><span class="toc-lev3-text">Tools for the words</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010403" href="01-04-tools.html#js--010403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.3</span><span class="toc-lev3-text">Tools for the images</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-010404" href="01-04-tools.html#js--010404">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.4</span><span class="toc-lev3-text">Summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                      <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 2. Fairfax WTW
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-020000" href="02-00-fairfax.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">2</span><span class="toc-lev1-text">Fairfax WTW &mdash; an example document</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-020100" href="02-00-fairfax.html#js--020100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.1</span><span class="toc-lev2-text">The main areas of the plant</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020101" href="02-00-fairfax.html#js--020101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.1</span><span class="toc-lev3-text">Inlet works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020102" href="02-00-fairfax.html#js--020102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.2</span><span class="toc-lev3-text">Filtration</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020103" href="02-00-fairfax.html#js--020103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.3</span><span class="toc-lev3-text">Outlet works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020104" href="02-00-fairfax.html#js--020104">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.4</span><span class="toc-lev3-text">Backwash services</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020105" href="02-00-fairfax.html#js--020105">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.5</span><span class="toc-lev3-text">Ferric sulphate dosing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020106" href="02-00-fairfax.html#js--020106">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.6</span><span class="toc-lev3-text">Sodium hypochlorite dosing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020107" href="02-00-fairfax.html#js--020107">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.1.7</span><span class="toc-lev3-text">Other services: sampling &amp; monitoring</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020200" href="02-02-fairfax.html#js--020200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">2.2</span><span class="toc-lev2-text">An overview of the control system</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020201" href="02-02-fairfax.html#js--020201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.1</span><span class="toc-lev3-text">The automation system (AS)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020202" href="02-02-fairfax.html#js--020202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.2</span><span class="toc-lev3-text">Remote input &amp; output (IO) racks</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020203" href="02-02-fairfax.html#js--020203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.3</span><span class="toc-lev3-text">The operator station server (OSS)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020204" href="02-02-fairfax.html#js--020204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.4</span><span class="toc-lev3-text">The operator station clients (OSCs)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020205" href="02-02-fairfax.html#js--020205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.5</span><span class="toc-lev3-text">The engineering station (ES)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020206" href="02-02-fairfax.html#js--020206">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.6</span><span class="toc-lev3-text">The terminal bus network</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020207" href="02-02-fairfax.html#js--020207">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.7</span><span class="toc-lev3-text">The plant bus network</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-020208" href="02-02-fairfax.html#js--020208">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">2.2.8</span><span class="toc-lev3-text">The ProfiBus network</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-030000" href="03-00-grid.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">3</span><span class="toc-lev1-text">Grids, fonts, columns and responsive design</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-030100" href="03-00-grid.html#js--030100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.1</span><span class="toc-lev2-text">The Gerstner grid</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030101" href="03-00-grid.html#js--030101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.1.1</span><span class="toc-lev3-text">How the Gerstner grid works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030200" href="03-02-grid.html#js--030200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.2</span><span class="toc-lev2-text">Fonts, point size and line spacing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030201" href="03-02-grid.html#js--030201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.1</span><span class="toc-lev3-text">Fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030202" href="03-02-grid.html#js--030202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.2</span><span class="toc-lev3-text">Point size and the anatomy of a font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030203" href="03-02-grid.html#js--030203">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.3</span><span class="toc-lev3-text">Line spacing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030204" href="03-02-grid.html#js--030204">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.4</span><span class="toc-lev3-text">Different fonts, same point size</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030205" href="03-02-grid.html#js--030205">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.5</span><span class="toc-lev3-text">Anatomy of a font on a website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030206" href="03-02-grid.html#js--030206">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.2.6</span><span class="toc-lev3-text">Pixels, percentage, ems and rems</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030300" href="03-03-grid.html#js--030300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.3</span><span class="toc-lev2-text">The website layout</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030301" href="03-03-grid.html#js--030301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.1</span><span class="toc-lev3-text">Website page widths</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030302" href="03-03-grid.html#js--030302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.2</span><span class="toc-lev3-text">Number of columns</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-030303" href="03-03-grid.html#js--030303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">3.3.3</span><span class="toc-lev3-text">Font size</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                       <li><a class="js--sc-030400" href="03-04-grid.html#js--030400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">3.4</span><span class="toc-lev2-text">Summary</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 4. GETTING STARTED
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-040000" href="04-00-starting.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">4</span><span class="toc-lev1-text">Getting started</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-040100" href="04-01-starting.html#js--040100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.1</span><span class="toc-lev2-text">The Brackets text editor</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040101" href="04-01-starting.html#js--040101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.1.1</span><span class="toc-lev3-text">Getting and installing Brackets</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040102" href="04-01-starting.html#js--040102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.1.2</span><span class="toc-lev3-text">Adding extensions to Brackets</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040200" href="04-02-starting.html#js--040200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.2</span><span class="toc-lev2-text">The Website Structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040201" href="04-02-starting.html#js--040201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.2.1</span><span class="toc-lev3-text">Naming conventions</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040202" href="04-02-starting.html#js--040202">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">4.2.2</span><span class="toc-lev3-text">The website folder structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-040300" href="04-03-starting.html#js--040300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">4.3</span><span class="toc-lev2-text">The basics of a web page</span></div></a>
+                        </li>                                    <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 5. HTML AND CSS: THE BASICS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-050000" href="05-00-basics.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">5</span><span class="toc-lev1-text">HTML and CSS: the basics</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-050100" href="05-01-basics.html#js--050100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.1</span><span class="toc-lev2-text">The HTML document structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050101" href="05-01-basics.html#js--050101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.1</span><span class="toc-lev3-text">The document type <span class="code">&lt;!DOCTYPE &gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050102" href="05-01-basics.html#js--050102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.2</span><span class="toc-lev3-text">The <span class="code">&lt;html&gt;</span> tag</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050103" href="05-01-basics.html#js--050103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.3</span><span class="toc-lev3-text">The <span class="code">&lt;head&gt;</span> tag</span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050104" href="05-01-basics.html#js--050104">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.4</span><span class="toc-lev3-text">The <span class="code">&lt;body&gt;</span> tag</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050105" href="05-01-basics.html#js--050105">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.5</span><span class="toc-lev3-text">The other bits</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050106" href="05-01-basics.html#js--050106">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.1.6</span><span class="toc-lev3-text">A note on case</span></div></a>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050200" href="05-02-basics.html#js--050200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.2</span><span class="toc-lev2-text">HTML headings, paragraphs, images, links &amp; tag attributes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050300" href="05-03-basics.html#js--050300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.3</span><span class="toc-lev2-text">Introducing CSS</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050400" href="05-04-basics.html#js--050400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.4</span><span class="toc-lev2-text">A first CSS file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050500" href="05-05-basics.html#js--050500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.5</span><span class="toc-lev2-text">The CSS rule structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050600" href="05-06-basics.html#js--050600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.6</span><span class="toc-lev2-text">CSS inheritance</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050601" href="05-06-basics.html#js--050601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.6.1</span><span class="toc-lev3-text">Inheritance, cascading and specificity</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050602" href="05-06-basics.html#js--050602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.6.2</span><span class="toc-lev3-text">The <span class="code">&lt;body&gt;</span>, <span class="code">&lt;html&gt;</span> and  <span class="code">*</span> (asterisk) selectors</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050700" href="05-07-basics.html#js--050700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.7</span><span class="toc-lev2-text">CSS colours &amp; transparency</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050701" href="05-07-basics.html#js--050701">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.7.1</span><span class="toc-lev3-text">Hexadecimal notation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050702" href="05-07-basics.html#js--050702">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.7.2</span><span class="toc-lev3-text">Colour values in CSS</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050703" href="05-07-basics.html#js--050703">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.7.3</span><span class="toc-lev3-text">Three digit colour shorthand</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050800" href="05-08-basics.html#js--050800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">5.8</span><span class="toc-lev2-text">CSS classes &amp; IDs</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-050801" href="05-08-basics.html#js--050801">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">5.8.1</span><span class="toc-lev3-text">A note on class names</span></div></a>
+                        <br class="toc-pad"><br class="toc-pad"></li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 6. HTML AND CSS: THE BASICS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">The CSS box model</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Block and inline elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.1</span><span class="toc-lev3-text">Block elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.2</span><span class="toc-lev3-text">Inline elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060103" href="06-00-box.html#js--060103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.3</span><span class="toc-lev3-text">Inline-block elements</span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.4</span><span class="toc-lev3-text"><span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Box structure</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060201" href="06-02-box.html#js--060201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">Box sizing</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">Adjusting margins and padding</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Margin and padding properties</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">A simple layout</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">The clearfix hack</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Using the clearfix hack</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Improving the appearance of the site</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Finishing touches</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.8</span><span class="toc-lev2-text">The final &ldquo;first-site&rdquo; source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.1</span><span class="toc-lev3-text">First-site CSS source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.2</span><span class="toc-lev3-text">First-site HTML source code</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.3</span><span class="toc-lev3-text">Final &ldquo;first-site&rdquo; website</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.9</span><span class="toc-lev2-text">Comments &amp; indentation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.1</span><span class="toc-lev3-text">HTML comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.2</span><span class="toc-lev3-text">CSS comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.2</span><span class="toc-lev3-text">Autocomplete</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p><br class="toc-pad"></p>
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 7. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-070000" href="07-00-prelim.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">7</span><span class="toc-lev1-text">Website preliminaries</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-070100" href="07-01-prelim.html#js--070100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.1</span><span class="toc-lev2-text">The website folders</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070200" href="07-02-prelim.html#js--070200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.2</span><span class="toc-lev2-text">The Normalize <span class="first-use">[sic]</span> file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070201" href="07-02-prelim.html#js--070201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.2.1</span><span class="toc-lev3-text">Changes to normalize.css</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070300" href="07-03-prelim.html#js--070300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.3</span><span class="toc-lev2-text">The base html file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070301" href="07-03-prelim.html#js--070301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.1</span><span class="toc-lev3-text"><span class="code">&lt;!DOCTYPE ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070302" href="07-03-prelim.html#js--070302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.2</span><span class="toc-lev3-text">Comments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070303" href="07-03-prelim.html#js--070303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.3</span><span class="toc-lev3-text"><span class="code">&lt;html&gt;...&lt;/html&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070304" href="07-03-prelim.html#js--070304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.4</span><span class="toc-lev3-text"><span class="code">&lt;head&gt;...&lt;/head&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070305" href="07-03-prelim.html#js--070305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.5</span><span class="toc-lev3-text">Meta tags</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070306" href="07-03-prelim.html#js--070306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.6</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070307" href="07-03-prelim.html#js--070307">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.7</span><span class="toc-lev3-text"><span class="code">&lt;link ...&gt;</span> file order and priority</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070308" href="07-03-prelim.html#js--070308">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.8</span><span class="toc-lev3-text"><span class="code">&lt;title&gt;...&lt;/title&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070309" href="07-03-prelim.html#js--070309">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.3.9</span><span class="toc-lev3-text">Finally <span class="code">&lt;body&gt;...&lt;/body&gt;</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070400" href="07-04-prelim.html#js--070400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">7.4</span><span class="toc-lev2-text">Global properties</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070401" href="07-04-prelim.html#js--070401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.1</span><span class="toc-lev3-text">Comments&mdash;Colours in use</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070402" href="07-04-prelim.html#js--070402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.2</span><span class="toc-lev3-text">Asterisk (<span class="code">*</span>) selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-070403" href="07-04-prelim.html#js--070403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">7.4.3</span><span class="toc-lev3-text"><span class="code">html</span> and <span class="code">body</span> selector declarations</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 8. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-080000" href="08-00-columns.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">8</span><span class="toc-lev1-text">Grids &amp; columns</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-080100" href="08-01-columns.html#js--080100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.1</span><span class="toc-lev2-text">The grid and how it works</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080200" href="08-02-columns.html#js--080200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.2</span><span class="toc-lev2-text">Responsiveness</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080300" href="08-03-columns.html#js--080300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.3</span><span class="toc-lev2-text">Building the responsive grid CSS file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080301" href="08-03-columns.html#js--080301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.1</span><span class="toc-lev3-text">The <span class="code">rg-row</span> class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080302" href="08-03-columns.html#js--080302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.2</span><span class="toc-lev3-text">Assigning more than one class to an element</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080303" href="08-03-columns.html#js--080303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.3</span><span class="toc-lev3-text">The <span class="code">rg-col</span> class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080304" href="08-03-columns.html#js--080304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.4</span><span class="toc-lev3-text"><span class="code">first-child</span>, <span class="code">last-child</span> and <span class="code">nth-child</span> pseudo elements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080305" href="08-03-columns.html#js--080305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.5</span><span class="toc-lev3-text">The <span class="code">rg-spanS-C</span> class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080306" href="08-03-columns.html#js--080306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.6</span><span class="toc-lev3-text">Making the columns stack</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080307" href="08-03-columns.html#js--080307">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.7</span><span class="toc-lev3-text">Finishing off with the other column arrangements</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080308" href="08-03-columns.html#js--080308">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.3.8</span><span class="toc-lev3-text">Chrome Inspect Element feature</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080400" href="08-04-columns.html#js--080400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">8.4</span><span class="toc-lev2-text">Advanced media queries</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080401" href="08-04-columns.html#js--080401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.4.1</span><span class="toc-lev3-text">Logical operators</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080402" href="08-04-columns.html#js--080402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.4.2</span><span class="toc-lev3-text">Media features</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-080403" href="08-04-columns.html#js--080403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">8.4.3</span><span class="toc-lev3-text">Breakpoints and media queries</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 9. WEBSITE PRELIMINARIES
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-090000" href="09-00-fonts.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">9</span><span class="toc-lev1-text">Fonts &amp; web fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-090100" href="09-01-fonts.html#js--090100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.1</span><span class="toc-lev2-text">Different types of fonts and web font formats</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090301" href="09-01-fonts.html#js--090101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.1</span><span class="toc-lev3-text">What type of font to convert?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090302" href="09-01-fonts.html#js--090102">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.2</span><span class="toc-lev3-text">What format to convert the font to?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090303" href="09-01-fonts.html#js--090103">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.1.3</span><span class="toc-lev3-text">The additional features of OpenType fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090200" href="09-02-fonts.html#js--090200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.2</span><span class="toc-lev2-text">Converting a font to a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090300" href="09-03-fonts.html#js--090300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.3</span><span class="toc-lev2-text">How to use a WOFF file</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090301" href="09-03-fonts.html#js--090301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.1</span><span class="toc-lev3-text">Loading a font with <span class="code">@font-face</span> </span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090302" href="09-03-fonts.html#js--090302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.3.2</span><span class="toc-lev3-text">Using the font</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090400" href="09-04-fonts.html#js--090400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.4</span><span class="toc-lev2-text">Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090401" href="09-04-fonts.html#js--090401">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.1</span><span class="toc-lev3-text">Where to get open source fonts?</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090402" href="09-04-fonts.html#js--090402">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.2</span><span class="toc-lev3-text">Replacing the Equity fonts with open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090403" href="09-04-fonts.html#js--090403">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.4.3</span><span class="toc-lev3-text">A small confession</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090500" href="09-05-fonts.html#js--090500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.5</span><span class="toc-lev2-text">Using the Open source fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090501" href="09-05-fonts.html#js--090501">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.1</span><span class="toc-lev3-text">An apology by the author</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090502" href="09-05-fonts.html#js--090502">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.5.2</span><span class="toc-lev3-text">Changes to <span class="code">ps-fonts.css</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090600" href="09-06-fonts.html#js--090600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.6</span><span class="toc-lev2-text">The Practical Series fonts</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090601" href="09-06-fonts.html#js--090601">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.1</span><span class="toc-lev3-text">PS Icons font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090602" href="09-06-fonts.html#js--090602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">9.6.2</span><span class="toc-lev3-text">PS Index font</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-090700" href="09-07-fonts.html#js--090700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">9.7</span><span class="toc-lev2-text">Web fonts the download</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 80 And finally
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li>
+                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
+                            <a href="80-00-finally.html">       <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num"></span><span class="toc-lev1-text">And finally &hellip;</span></div>
+                            </a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-800100" href="80-00-finally.html#js--800100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Contact MG</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800200" href="80-00-finally.html#js--800200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Acknowledgements</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800300" href="80-00-finally.html#js--800300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Colophon</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-800400" href="80-00-finally.html#js--800400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Legal</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="sub-title-text-box"><h4>Proforma & typicals</h4></div>
+                    <div class="sub-title-thinline"></div>
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 98 Blank
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-980000" href="98-00-blank.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">98</span><span class="toc-lev1-text">Blank page (proforma)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-980100" href="98-00-blank.html#js--980100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">98.1</span><span class="toc-lev2-text">Empty Section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-980101" href="98-00-blank.html#js--980101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">98.1.1</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-980101a" href="98-00-blank.html#js--980101a"> <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Empty inline section</span></div></a>
+                            <!-- <br class="top-pad">                 Apply padding to give symmetry to toc (must be before </li> -->
+                        </li>
+                        <li><a class="js--sc-980101b" href="98-00-blank.html#js--980101b">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Additional section</span></div></a>
+                        </li>
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 99 Typicals
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-990000" href="99-00-typicals.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">99</span><span class="toc-lev1-text">Typicals</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-990100" href="99-00-typicals.html#js--990100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.1</span><span class="toc-lev2-text">Empty Section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990101" href="99-00-typicals.html#js--990101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">99.1.1</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990101a" href="99-00-typicals.html#js--990101a">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Empty inline section</span></div></a>
+                        </li>
+                        <li><a class="js--sc-990101b" href="99-00-typicals.html#js--990101b">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Additional section</span></div></a>
+                        </li>
+                        <li><a class="js--sc-990200" href="99-00-typicals.html#js--990200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.2</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Sidebar &amp; lists</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990300" href="99-00-typicals.html#js--990300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.3</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Links</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990400" href="99-00-typicals.html#js--990400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.4</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Tables &amp; footnotes</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990500" href="99-00-typicals.html#js--990500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.5</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Basic figures</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990600" href="99-00-typicals.html#js--990600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.6</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Figures &amp; lightbox</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990700" href="99-00-typicals.html#js--990700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.7</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Code fragments</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990800" href="99-00-typicals.html#js--990800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.8</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Formulae using MathJax</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-990900" href="99-00-typicals.html#js--990900">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.9</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Text and formats</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 000100]
+     SECTION START - AUTHOR'S NOTE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--000100">                     <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-thinline"></div>      <!-- Thin overline (after TOC) -->
+                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>   <!-- Heading 6 is a placehoder heading needed in sections without a heading to satisfy html validation -->
+                <!--     <div class="sub-title-text-box"><h2>Text</h2></div> -->
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-head">                  <!-- Start of left side bar   -->
+                        <h2>a note by the author</h2>           <!-- Side bar content         -->
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp"><span class="all-caps">Well</span> , this isn&rsquo;t what I thought it was going to be when I started. I originally intended to publish some obscure engineering texts in the form of a web based book that might have been useful to other engineers.</p>
+
+                    <p class="hyp">It is still my intention to do this, and I&rsquo;ve actually written a fair amount of documentation, the problem was the website, I didn&rsquo;t have a website and I didn&rsquo;t know how to make one&nbsp;&mdash;&nbsp;<span class="first-use">how hard can it be</span> I thought, everyone and their dog has a website&nbsp;&mdash;&nbsp;<span class="first-use">must be easy</span>.</p>
+
+                    <p class="hyp">Well, it is and it isn&rsquo;t; two chimps with a keyboard can probably knock out a website&nbsp;&mdash;&nbsp;even the British Government has got one (ok, they&rsquo;ve got a lot more than two chimps), <span class="first-use">so it easy</span>&nbsp;&mdash;&nbsp;but to do it properly, to make it look good, to make it feel right, to make it work on all the different web browsers, well, <span class="first-use">that&rsquo;s actually quite hard</span>.</p>
+
+                    <p class="hyp">Now I&rsquo;m an engineer, so I wanted to do this right&nbsp;&mdash;&nbsp;I wanted precision, method, replicability, revision numbers, libraries, prototypes, documentation, user guides&nbsp;&mdash;&nbsp;you know, engineering stuff.</p>
+
+                    <p class="hyp">I wanted to make a template website that I could use and reuse as needed to create various web books.</p>
+
+                    <p class="hyp">Unfortunately, the web doesn&rsquo;t have a user guide&nbsp;&mdash;&nbsp;<span class="first-use">it has thousands of them</span>&nbsp;&mdash;&nbsp;not to mention all those people who have an opinion and all the other people who have a contrary opinion. It&rsquo;s all a bit of a nightmare.</p>
+
+                    <p class="hyp">I&rsquo;m not a web developer, but I have spent 30 years writing software for industrial control systems and I know my way around programming languages and software control, so I thought HTML&nbsp;5 and CSS&nbsp;3 would be more of the same&nbsp;&mdash;&nbsp;<span class="first-use">they&rsquo;re not, they&rsquo;re way off</span>.</p>
+
+                    <p class="hyp">HTML&nbsp;5 and CSS&nbsp;3 are fiddly and awkward; you will have to type the same thing in over and over again (colour values, margins, padding), there is no such thing as a variable or constant or even the equivalent of <span class="code">#define</span> statement&nbsp;&mdash;&nbsp;and for those of you on this side of the Atlantic, they misspell colour and centre.</p>
+
+                    <p class="hyp">Right, so the purists out there will be venting their outrage and my inbox will be full of vitriol:</p>
+
+                    <p class="hyp">&ldquo;<span class="first-use">Hang on, you silly man</span>&rdquo; they&rsquo;ll say (or words to that effect) &ldquo;<span class="first-use">these are mark-up languages and style sheets not programming languages you&rsquo;re not being fair</span>&rdquo; </p>
+
+                    <p class="hyp">Hmm, they might be right, I don&rsquo;t know&nbsp;&mdash;&nbsp;it all just feels a bit unfinished to me.</p>
+
+                    <p class="hyp">So I swore at the dogs, frightened the children, apologised to my wife and I battled my way through, I built a website and then I wanted to add things, I wanted to display code fragments, I wanted formulae, I wanted tables (<span class="first-use">don&rsquo;t get me started on tables</span>). In short what I really wanted was Word on the web.</p>
+
+                    <p class="hyp">There is a lot of stuff out there to help&nbsp;&mdash;&nbsp;jQuery plugins that you can use for all of this, Java script that you can use for everything else&nbsp;&mdash;&nbsp;but then you have to figure out how it all works&nbsp;&mdash;&nbsp;and I did, <span class="first-use">and it took ages</span>.</p>
+
+                    <p class="hyp">So it occurred to me while doing all this, that the website template might, in itself, be useful to others and so I decided that the first publication should be this website as a template with information about it and the instructions needed to use it.</p>
+
+                    <p class="hyp"><em>And this is it, you&rsquo;re looking at it.</em></p>
+
+                    <p class="hyp">I planed the website to be, in effect, an online book; I wanted it to be simple, unobtrusive and nice to look at. </p>
+
+                    <p class="hyp">I also had the ludicrous idea that I might make some money out of it, at least enough to cover its running costs&nbsp;&mdash;&nbsp;so when you&rsquo;ve stopped laughing take a look at <a class="hlink nohyp" href="01-02-paying.html#js--010200">how&nbsp;to&nbsp;pay&nbsp;for&nbsp;it</a>.</p>
+
+                    <p class="hyp">I hope you find it useful.</p>
+
+                    <p class="hyp">Michael Gledhill<br>October 2016</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <div class="section-last"></div>                        <!-- last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox                   <script type="text/javascript" src="21-global/05-js/lightbox.js"></script> -->
+
+    </body>
+</html>
