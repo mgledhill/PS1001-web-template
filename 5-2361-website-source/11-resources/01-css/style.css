@@ -84,6 +84,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+20 Dec 2017   d-P10.10.01  M. Gledhill    Social media icons added
+
 18 Sep 2017   P10          M. Gledhill    Updated to match PS1002-vcs version.
                                           Now based on 1002-vcs P15.
                                           Files identical at this issue date.
@@ -110,28 +112,8 @@ Date          Issue        Author         Reason for Modification
 27 May 2017   D00          M. Gledhill    Development - based on PS1001 P10
 
 ---------------------------------------------------------------------------- */
-.aside-right-rev:after { content: "style.css\00a0\2014\00a0 \P10"; }      /* CSS REVISION NUMBER */
+.aside-right-rev:after { content: "style.css\00a0\2014\00a0 \P10.10.01"; }      /* CSS REVISION NUMBER */
 
-
-
-/* ****************************************************************************
-   SET THE BASE FONT SIZE AND MAKE RESPONSIVE
-   ************************************************************************* */
-
-@media all {html {font-size: 24px;}}
-@media all and (max-width:1276px){html {font-size: 24px;}}
-@media all and (max-width:960px){html {font-size: 23px;}}
-@media all and (max-width:920px){html {font-size: 22px;}}
-@media all and (max-width:880px){html {font-size: 21px;}}
-@media all and (max-width:840px){html {font-size: 20px;}}
-@media all and (max-width:800px){html {font-size: 19px;}}
-@media all and (max-width:760px){html {font-size: 18px;}}
-@media all and (max-width:720px){html {font-size: 17px;}}
-@media all and (max-width:680px){html {font-size: 16px;}}
-@media all and (max-width:640px){html {font-size: 15px;}}
-@media all and (max-width:600px){html {font-size: 14px;}}
-@media all and (max-width:560px){html {font-size: 13px;}}
-@media all and (max-width:520px){html {font-size: 12px;}}
 
 
 /* ****************************************************************************
@@ -180,6 +162,26 @@ body {
     border-left: 1px solid #ededed;
     border-right: 1px solid #ededed;
 }
+
+
+/* ****************************************************************************
+   SET THE BASE FONT SIZE AND MAKE RESPONSIVE
+   ************************************************************************* */
+
+@media all {html {font-size: 24px;}}
+@media all and (max-width:1276px){html {font-size: 24px;}}
+@media all and (max-width:960px){html {font-size: 23px;}}
+@media all and (max-width:920px){html {font-size: 22px;}}
+@media all and (max-width:880px){html {font-size: 21px;}}
+@media all and (max-width:840px){html {font-size: 20px;}}
+@media all and (max-width:800px){html {font-size: 19px;}}
+@media all and (max-width:760px){html {font-size: 18px;}}
+@media all and (max-width:720px){html {font-size: 17px;}}
+@media all and (max-width:680px){html {font-size: 16px;}}
+@media all and (max-width:640px){html {font-size: 15px;}}
+@media all and (max-width:600px){html {font-size: 14px;}}
+@media all and (max-width:560px){html {font-size: 13px;}}
+@media all and (max-width:520px){html {font-size: 12px;}}
 
 
 /* ****************************************************************************
@@ -454,6 +456,43 @@ body {
 .utx:before {                                    /* untested link */
     content: "\25cf";
     color: #ff0000;
+}
+
+
+/* ****************************************************************************
+   SOCIAL LINKS
+   ****************************************************************************
+   There are two social media links (Facebook and Twitter) in the footer
+   section, these use the ionicon set of fonts to display the relevent logos
+
+   This handles the positioning of the icons, their colour and their spacing.
+
+   There is some JS to swap outline icons to filled icons on hover, see
+   script.js
+
+   ************************************************************************* */
+
+.social-links {
+    list-style: none;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.social-links li {
+    display:inline;
+    margin-left: 1rem
+}
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    color: #4C6C9C;
+    font-size: 1.3rem;
+}
+.ion-social-facebook {
+    color: #3b5998;
+}
+.ion-social-twitter {
+    color: #00aced;
 }
 
 
@@ -988,8 +1027,6 @@ body {
     font-style:normal;
 }
 
-.section-text{margin-top: 0; margin-bottom: 0; }
-
 .first-use {font-family: "eqty-ta-i"}       /* TEXT STYLE - first use */
 
 .all-caps {                                 /* TEXT STYLE - all caps */
@@ -1215,9 +1252,9 @@ body {
     border-top: 2px solid #404030;
 }
 .sub-title-thinline {                                 /* container for the TOC */
-    padding-bottom: 5rem;
-    border-bottom: 1px solid #CCCCCC;
-    margin:0;
+    margin-top: 4.7rem;
+    margin-bottom: 0.5rem;
+    border-top: 1px solid #CCCCCC;
 }
 
 .sub-title-num-box {                        /* container for sub-title number */
@@ -1228,7 +1265,7 @@ body {
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-size: 190%;
+    font-size: 1.9rem;
     color: #404030;
 }
 
@@ -1240,7 +1277,7 @@ body {
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-size: 190%;
+    font-size: 1.9rem;
     color: #404030;
 }
 
@@ -1252,7 +1289,7 @@ body {
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-size: 170%;
+    font-size: 1.7rem;
     color: #404030;
 }
 
@@ -1287,7 +1324,7 @@ body {
     font-feature-settings: "ss02";
     font-size: 0.85rem;
     line-height: 1.40;
-    margin-top: -0.4rem;
+    margin-top: 0.14rem;
 }
 .aside-left,
 .aside-head  {                               /* change justification */
@@ -1310,12 +1347,11 @@ body {
     font-family: "conc-t3-b";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-style:normal;
 }
 .aside-head h2 {
     font-family: "eqty-ta-bi";
     font-size: 1.3rem;
-    margin-top: -0.9rem;
+    margin-top: -0.45rem;
     line-height: 1.40;
 }
 .aside-right-rev {
@@ -1398,22 +1434,20 @@ body {
     .aside-left,
     .aside-right {
         font-size: 1rem;
+        width: 80%;
         margin-left: 10%;
         margin-bottom: 1rem;
-        border: 1px solid #cccccc;
-        padding: 1em 1em 0 1em;
-        width: 80%;
         background-color: #f8f8f8;
+        border: 1px solid #cccccc;
+        padding: 1rem 1rem 0 1rem;
         text-align: left;
     }
     .aside-left { border-left: 4px solid #cccccc; }
     .aside-right { border-right: 4px solid #cccccc; }
     .aside-head {
         font-size: 1rem;
-        margin-left: 0;
         margin-bottom: 1rem;
-        width: 100%;
-        background-color: #fff;
+        padding-left: 0;
         text-align: left;
     }
 }
@@ -2225,9 +2259,7 @@ tr.in-no-border th {                        /* incidental table no-bottom border
 @media all and (max-width:760px)  {.footer { height: 47px; padding-top: 11px; }}
 @media all and (max-width:720px)  {.footer { height: 44px; padding-top: 10px; }}
 @media all and (max-width:680px)  {.footer { height: 41px; padding-top:  9px; }}
-@media all and (max-width:520px){
-    .footer-nav li { margin-left:0.5rem; }
-}
+@media all and (max-width:520px)  {.footer-nav li { margin-left:0.5rem; }}
 
 
 

@@ -51,6 +51,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+20 Dec 2017   P10.10.01    M. Gledhill    Social media icons manipulation added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -98,6 +100,36 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
     offset: '70px'                                      /* check for waypoint 60px before top of screen */
     });                                                 /* END of Waypoint function */
 
+/* ****************************************************************************
+   SOCIAL MEDIA CHARACTER CHANGE
+   ****************************************************************************
+   These function cause the social media icons in the footer to change from
+   outlined to filled characters
+
+   THe hover property is used four times (twice per icon) the first use adds
+   the filled icon during hover and removes it afterwards, the second use
+   removes the oultine icon during hover and restores it afterwards
+   ************************************************************************* */
+
+    /* FACEBOOK ICON MANIPULATION */
+    $('#js--fbicon').hover(
+        function(){ $(this).addClass('ion-social-facebook'); },
+        function(){ $(this).removeClass('ion-social-facebook'); }
+    );
+    $('#js--fbicon').hover(
+        function(){ $(this).removeClass('ion-social-facebook-outline'); },
+        function(){ $(this).addClass('ion-social-facebook-outline'); }
+    );
+
+    /* TWITTER ICON MANIPULATION */
+    $('#js--twicon').hover(
+        function(){ $(this).addClass('ion-social-twitter'); },
+        function(){ $(this).removeClass('ion-social-twitter'); }
+    );
+    $('#js--twicon').hover(
+        function(){ $(this).removeClass('ion-social-twitter-outline'); },
+        function(){ $(this).addClass('ion-social-twitter-outline'); }
+    );
 
 
 /* ****************************************************************************
@@ -215,6 +247,9 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
       return false;
     }
 /* ************************************************************************* */
+
+
+
 
 
 });                                                 /* END OF PAGE READY FUNCTION */
