@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+11 Jul 2018   d-P10.00.02  M. Gledhill    proof reading corrections
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +162,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/bs-d-P10-00-02.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +171,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 03-03&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 03-03&nbsp;&mdash;&nbsp;d-P10.00.02</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -403,13 +405,22 @@ Date          Issue        Author         Reason for Modification
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
                         <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent"></th>                            <!-- set column 01 width here -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
                         </tr>                                   <!-- TABLE - End of header   -->
                         <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-cent"><p><em>So that&rsquo;s it &mdash; the website will have a maximum width of 1276&nbsp;pixels</em></p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">So that&rsquo;s it &mdash; the website will have a maximum width of 1276&nbsp;pixels</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -422,6 +433,66 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of section content -->
         </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - ADDITIONAL ROW
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-head">                  <!-- Start of left side bar   -->
+                        <h2>Author&rsquo;s note June 18</h2>        <!-- Side bar content         -->
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I recently updated the above diagram and things haven&rsquo;t changed that much. This is what it looks like now (June 2018):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1"  id="js--f03-19a">
+                            <a href="01-pages/03-03-grid/02-images/fig-03-19a.svg" data-lightbox="fig-set" data-title="Figure 3.19a - Screen resolution statistics (Jan-Jun 2018)">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/03-03-grid/02-images/fig-03-19a.svg" alt="Figure 3.19a - Screen resolution statistics (Jan-Jun 2018)">
+                            </a>
+                            <p class="hyp">Figure 3.19a &emsp; Screen resolution statistics (Jan-Jun 2018)<br>
+                            This chart was produced from the data at  <a class="hlink nohyp" href="http://gs.statcounter.com/screen-resolution-stats/desktop-tablet-console/worldwide/#monthly-201801-201806-bar">Global Stats StatCounter</a></p>
+                         </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The number of monitors with a width of 1280&nbsp;px or more has increased from 65% to 70% in the last 18 months.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
 <!-- ========================================================================== [WP END] -->
 
 
@@ -494,7 +565,7 @@ Date          Issue        Author         Reason for Modification
                     </figure>                                   <!-- END OF FIGURE -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                     <p class="hyp">The sidebars are for notes, the blue area holds the navigation links to all the sections, there is a general navigation bar at the top for moving around the document and a footer navigation at the bottom for contact information &amp;c.</p>
+                     <p class="hyp">The sidebars are for notes, the blue area holds the navigation links to all the sections, there is a general navigation bar at the top for moving around the website and a footer navigation at the bottom for contact information &amp;c.</p>
 
                     <p class="hyp">Using a page width of 1276&nbsp;pixels, a unit is 1276&nbsp;&divide;&nbsp;58&nbsp;pixels, or exactly 22&nbsp;pixels. This gives the following:</p>
 
@@ -588,7 +659,7 @@ Date          Issue        Author         Reason for Modification
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                     <p class="hyp">So the general layout is</p>
+                     <p class="hyp">So the general layout is:</p>
 
 
 
@@ -603,13 +674,22 @@ Date          Issue        Author         Reason for Modification
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
                         <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent"></th>                            <!-- set column 01 width here -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
                         </tr>                                   <!-- TABLE - End of header   -->
                         <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-cent"><p><em>Three column website, two thin sidebars and wide centre for content</em></p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">Three column website, two thin sidebars and wide centre for content</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -654,7 +734,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">In this case the unit size is 22&nbsp;pixels (1276&nbsp;pixels&nbsp;&divide;&nbsp;58&nbsp;&nbsp;units) and therefore the font size for the body text of the website should be 22&nbsp;pixels.</p>
 
-                    <p class="hyp">The problem with this is that when I tried it, 22&nbsp;pixels it was a bit small&nbsp;&mdash;&nbsp;the reason for this is that the Gerstner grid is designed for printed material and we&rsquo;re building a website&nbsp;&mdash;&nbsp;&ldquo;what&rsquo;s the difference?&rdquo; your ask.</p>
+                    <p class="hyp">The problem with this is that when I tried it, 22&nbsp;pixels it was a bit small&nbsp;&mdash;&nbsp;the reason for this is that the Gerstner grid is designed for printed material and we&rsquo;re building a website&nbsp;&mdash;&nbsp;<span class="first-use">&ldquo;what&rsquo;s the difference?&rdquo;</span> your ask.</p>
 
                     <p class="hyp">Well the main difference is that a website is viewed on a computer screen and these tend to be further from the eye than say, a book or newspaper would be if you were reading it.</p>
 
@@ -743,13 +823,22 @@ Date          Issue        Author         Reason for Modification
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
                         <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent"></th>                            <!-- set column 01 width here -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
                         </tr>                                   <!-- TABLE - End of header   -->
                         <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-cent"><p><em>The body text font size for the website is to be 24&nbsp;pixels</em></p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">The body text font size for the website is to be 24&nbsp;pixels</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
