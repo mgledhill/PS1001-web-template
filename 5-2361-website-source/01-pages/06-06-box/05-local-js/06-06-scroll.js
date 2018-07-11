@@ -124,6 +124,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--060601').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
+    $('.js--sc-060602').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--060602').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
 
 
    /* ---------------------------------------------------------------------------
