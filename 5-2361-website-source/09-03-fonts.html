@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+14 Jul 2018   d-P10.00.03  M. Gledhill    proof reading corrections
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +162,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/bs-d-P10-00-03.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +171,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 09-03&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 09-03&nbsp;&mdash;&nbsp;d-P10.00.03</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -304,13 +306,13 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp" style="text-align: center;"><span class="code">@font-face { ... }</span></p>
 
-                    <p class="hyp">Reminds me of the boat naming debacle in England recently, should be called <span class="first-use">Fonty-McFontface</span>.</p>
+                    <p class="hyp">Reminds me of the boat naming debacle in England<sup>&dagger;1</sup> recently, should be called <span class="first-use">Fonty-McFontface</span>, read Mr Quinten Letts&rsquo;s (somewhat vitriolic) article about it <a class="hlink nohyp" href="https://books.google.co.uk/books?id=92M8DgAAQBAJ&pg=PT48&lpg=PT48&dq=quentin+letts+%22boaty%22&source=bl&ots=UjMxmPZ5c9&sig=XfzX_SMW4ovapElKNpiu6IHir2M&hl=en&sa=X&ved=0ahUKEwiGnKHrs57cAhWLSsAKHfknD24Q6AEILDAB#v=onepage&q=quentin%20letts%20%22boaty%22&f=false">here</a>.</p>
 
                     <p class="hyp">This takes a specified WOFF file and gives it a name that can then be used within CSS using the <span class="code">font-family</span> property.</p>
 
                     <p class="hyp">The <span class="code">@font-face</span> is a CSS rule, and to use it, it needs to go in a CSS file. </p>
 
-                    <p class="hyp"><span class="first-use">This is where I break one of my own rules</span>&mdash;I&rsquo;m going to write the CSS file, but I&rsquo;m going to put it under the <span class="code">21-global</span> directory (rather than the <span class="code">11-resources</span> directory)&mdash;the only reason I have for doing this, is that it keeps all the font files together. The same is true of the <span class="code">ps-icons</span> font; that is one I created, but I&rsquo;ve still kept it together with the other WOFF files&mdash;<span class="first-use">sometimes you just have to be practical about things</span>.</p>
+                    <p class="hyp"><span class="first-use">This is where I break one of my own rules</span>&mdash;I&rsquo;m going to write the CSS file, but I&rsquo;m going to put it under the <span class="code">21-global</span> directory (rather than the <span class="code">11-resources</span> directory)&mdash;the only reason I have for doing this, is that it keeps all the font files together. The same is true of the <span class="code">ps-icons</span> font; this is one I created, but I&rsquo;ve still kept it together with the other WOFF files&mdash;<span class="first-use">sometimes you just have to be practical about things</span>.</p>
 
                     <p class="hyp">I&rsquo;m going to create a new CSS file that loads each of the WOFF files and gives each one a specific name that can then be used in the <span class="code">style.css</span> file. The names I give each font will be the same as the WOFF file names (i.e. the <span class="code">FFFF-TN-SS</span> structure used in <a class="xref" href="09-03-fonts.html#js--t09-02">Table&nbsp;9.2</a>, but without the WOFF extension).</p>
 
@@ -318,19 +320,61 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Again I&rsquo;m sticking to my convention of only using lowercase characters [a-z], numbers [0-9] and the hyphen (dash) [-].</p>
 
-                    <p class="hyp">There is a great deal of repetition in this, so I&rsquo;ll go through the first font in detail; the reset are just more of the same.</p>
+                    <p class="hyp">There is a great deal of repetition in this, so I&rsquo;ll go through the first font in detail; the rest are just more of the same.</p>
 
                     <p class="hyp">First things, the new CSS file&mdash;using Brackets, create a new file in the folder:</p>
 
                     <p class="hyp" style="text-align: center;"><span class="code">21-global\03-fonts</span></p>
 
-                    <p class="hyp">This is just like we did before with the grid.css file (<a class="hlink nohyp" href="08-03-columns.html#js--080300">&sect;&nbsp;8.3</a>). This is one directory up from where the WOFF files are:</p>
+                    <p class="hyp">This is just like we did before with the <span class="code">grid.css</span> file (<a class="hlink nohyp" href="08-03-columns.html#js--080300">&sect;&nbsp;8.3</a>). This is one directory up from where the WOFF files are:</p>
 
                     <p class="hyp" style="text-align: center;"><span class="code">21-global\03-fonts\woff</span></p>
 
                     <p class="hyp">Rename the file <span class="code">ps-fonts.css</span>.</p>
 
                     <p class="hyp">Ok, I&rsquo;ve broken another rule here; this is a CSS file and it&rsquo;s going in the font directory (not the CSS directory)&mdash;again this is just a practicality and for the same reason, it just keeps all the font stuff in the same place.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Footnotes use a four column table to give the appearance of a Word style
+     footnote (this has a partial border that extends part way across the page)
+
+     The footnote table has class .table-fnote.
+
+     The heading row of a footnote table is empty, it does no more than set the
+     row widths.
+
+     The footnote table has only one row (excepting the header), the first cell
+     of this row contains the footnote number.
+
+     The second cell is a spacing cell and contains no text (it simply separates
+     the number from the main text).
+
+     The final cell spans two columns and contains the text of the footnote.
+
+     Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+
+     By default each table row has a bottom border, this can be turned off
+     by giving the <tr> element the class .no-border
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">England or Britain? &mdash; English or British? I&rsquo;m English I&rsquo;m afraid&nbsp;&mdash;&nbsp;actually (like God) I&rsquo;m a Yorkshire man. It took the Scottish to make me English (I was happy being British until I met the Jocks). As P. G. Wodehouse said &ldquo;It has never been hard to tell the difference between a Scotsman with a grievance and a ray of sunshine&rdquo;. I take this attitude largely to annoy my wife, Jane, she&rsquo;s from Edinburgh&nbsp;&mdash;&nbsp;a professional Scotswoman living in England (where the sun always shines).</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                  </div>                                          <!-- End of section text area   -->
 
@@ -429,7 +473,7 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of note -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The <span class="code">src</span> property:</p>
+                    <p class="hyp">The <span class="code">src</span> (source) property:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
@@ -475,7 +519,7 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Define some basic properties for the font. The first, <span class="code">font-weight</span> sets the weight of the font (how dark it is), <span class="code">normal</span> is the default option. In our case, the Equity fonts have their weight set within each WOFF file (Concourse T7 is darker than Concourse T4); so <span class="code">normal</span> is the correct option for us. The values for this property are:</p>
+                    <p class="hyp">Define some basic properties for the font. The first, <span class="code">font-weight</span> sets the weight of the font (how dark it is), <span class="code">normal</span> is the default option. In our case, the Equity fonts have their weight set within each WOFF file (Concourse T4 is darker than Concourse T3); so <span class="code">normal</span> is the correct option for us. The values for this property are:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
@@ -519,7 +563,7 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Again, the font must have these styles embedded if this property is to work, ours don&rsquo;t (again we have different WOFF files for each style); so again we just set this property to normal.</p>
+                    <p class="hyp">Again, the font must have these styles embedded if this property is to work, ours don&rsquo;t (we have different WOFF files for each style); so again we just set this property to normal.</p>
 
                </div>                                          <!-- End of section text area   -->
 
@@ -559,7 +603,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Well the first thing we have to do is link to the <span class="code">ps-font.css</span> file within <span class="code">index.html</span>.</p>
 
-                    <p class="hyp"><span class="code">index.html</span> currently hold the responsive column example setup in <a class="hlink nohyp" href="08-03-columns.html#js--080300">Section&nbsp;8.3</a>. We can use this to demonstrate the new fonts. It currently looks like this:</p>
+                    <p class="hyp"><span class="code">index.html</span> currently holds the responsive column example setup in <a class="hlink nohyp" href="08-03-columns.html#js--080300">Section&nbsp;8.3</a>. We can use this to demonstrate the new fonts. It currently looks like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
@@ -705,7 +749,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
                     </div>                                          <!-- End of code fragment -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">View this in live preview and it looks like <a class="xref js--sc-f09-10" href="#">Figure&nbsp;9.10</a>. This is exactly the same as we had at the end of <a class="hlink nohyp" href="08-03-columns.html#js--f08-22">&sect;&nbsp;8.3</a> (apart from there is more text in the middle and there is no colouring); the font is just the same, it is still the default serif font: <span class="first-use">Times New Roman</span>.</p>
+                    <p class="hyp">View this in live preview and it looks like <a class="xref js--sc-f09-10" href="#">Figure&nbsp;9.10</a>. This is exactly the same as we had at the end of <a class="hlink nohyp" href="08-03-columns.html#js--f08-22">&sect;&nbsp;8.3</a> (apart from there being text in the middle and there is no colouring); the font is just the same, it is still the default serif font: <span class="first-use">Times New Roman</span>.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FIGURE - SINGLE FIGURE FULL PAGE WIDTH
@@ -824,7 +868,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 
                     <p class="hyp">The most obvious difference is the shape of the descender on the &lsquo;g&rsquo;. The serifs in Times tend to be more sharply pointed (top of the &lsquo;d&rsquo;), the bottom serifs on the &lsquo;A&rsquo; are more bar like in Equity (tapered in Times) and the bar at the top of the &lsquo;t&rsquo; is thicker in Equity.</p>
 
-                    <p class="hyp">So we&rsquo;ve loaded a new font and used it&mdash;<span class="first-use">good stuff</span>.</p>
+                    <p class="hyp">So we&rsquo;ve loaded a new font and used it&mdash;<span class="first-use">woohoo</span>.</p>
 
                     <p class="hyp">Now we just need to add all the other fonts to <span class="code">ps-fonts.css</span>. These are identical in principal, only the names change.</p>
 
@@ -1022,6 +1066,7 @@ this file:
 
                     <p class="hyp">There is one <span class="code">@font-face</span> rule for each of the WOFF files; and each rule gives us a named font that we can use in the <span class="code">style.css</span> file. The way I&rsquo;ve arranged it with the Equity fonts, the font name always matches the WOFF file name&mdash;again this is just my convention.</p>
 
+                    <p class="hyp">I&rsquo;ve also added proper comments to the start of the file.</p>
                     <p> <br class="toc-pad"></p>
                     <p> <br class="toc-pad"></p>
 

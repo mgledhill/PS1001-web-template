@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+14 Jul 2018   d-P10.00.03  M. Gledhill    proof reading corrections
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +162,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/bs-d-P10-00-03.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +171,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 09-02&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 09-02&nbsp;&mdash;&nbsp;d-P10.00.03</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -306,7 +308,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp"><span class="first-use">So how do we get our WOFF file?</span>&mdash;Well we start with a basic OpenType font file&mdash;this is how I converted the Equity fonts and this explanation basically follows the instructions I received when I bought the fonts&mdash;but the principal is the same for any font.</p>
 
-                    <p class="hyp"><a class="xref js--sc-t09-01" href="#">Table&nbsp;9.1</a> lists the main font files that came with the equity font set (there are a lot more than these), Equity and Concourse have similar sets but with tabular figures<sup>&dagger;1</sup>. Triplicate has variants for standard text, code, short form characters and proportional spacing (<span class="first-use">so that would be a proportional, non-proportional font&mdash;go figure</span>). They also all come as OpenType TT (with <span class="code">.ttf</span> extensions) and OpenType CFF (with <span class="code">.otf</span> extensions). In total there are 252 font files.</p>
+                    <p class="hyp"><a class="xref js--sc-t09-01" href="#">Table&nbsp;9.1</a> lists the main font files that came with the Equity font set (there are a lot more than these), Equity and Concourse have similar sets but with tabular figures<sup>&dagger;1</sup>. Triplicate has variants for standard text, code, short form characters and proportional spacing (<span class="first-use">so that would be a proportional, non-proportional font&mdash;go figure</span>). They also all come as OpenType TT (with <span class="code">.ttf</span> extensions) and OpenType CFF (with <span class="code">.otf</span> extensions). In total there are 252 font files.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE
@@ -345,7 +347,7 @@ Date          Issue        Author         Reason for Modification
                         <tr>                                    <!-- TABLE - Start of footnote row 01 -->
                             <td class="table-left"><em>&dagger;1</em></td>
                             <td class="table-left"></td>
-                            <td colspan="2" class="table-left">Tabular figures use non-proportional spacing for numbers (the numbers all have a fixed width) and this makes them stack better when used in tables of numbers.</td>
+                            <td colspan="2" class="table-left">Tabular figures use non-proportional spacing for numbers (the numbers all have a fixed width) and this makes them stack better when used in a table of numbers.</td>
                         </tr>                                   <!-- TABLE - End of footnote row 01   -->
                     </table>                                    <!-- TABLE - End of footnote    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -634,11 +636,11 @@ Date          Issue        Author         Reason for Modification
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp" style="padding-left:3.3rem"><span class="first-use">Mr Butterick was kind enough to let me have them when I enquired about them&mdash;I like them and I&rsquo;m very grateful to Mr Butterick for allowing me to use them</span>.</p>
+                    <p class="hyp" style="padding-left:3.3rem"><span class="first-use">Mr Butterick was kind enough to let me have a copy when I enquired about them&mdash;I like them and I&rsquo;m very grateful to Mr Butterick for allowing me to use them</span>.</p>
 
-                    <p class="hyp">So we&rsquo;ve got the font files, <span class="first-use">how do we convert them?</span> We use an online font converter, there are hundreds of these, but the one I&rsquo;m recommending is font squirrel. <a class="hlink nohyp" href="https://www.fontsquirrel.com/tools/webfont-generator">font squirrel</a> seems to be well respected (Mr Butterick recommends it too), it has more conversion options than other sites and it also has a policy of not converting fonts that the designers have requested not be converted.</p>
+                    <p class="hyp">So we&rsquo;ve got the font files, <span class="first-use">how do we convert them?</span> Well we use an online font converter; there are lots of these, but the one I&rsquo;m recommending is font squirrel. <a class="hlink nohyp" href="https://www.fontsquirrel.com/tools/webfont-generator">font squirrel</a> seems to be well respected (Mr Butterick recommends it too), it has more conversion options than other sites and it also has a policy of not converting fonts that the designers have requested not be converted.</p>
 
-                    <p class="hyp">For example if I were to try and convert the Calisto MT font from my PC (by uploading its .ttf file) I would be told that <span class="first-use">&ldquo;the designer had requested that their font not be converted&rdquo;</span> and the conversion would not take place.</p>
+                    <p class="hyp">For example if I were to try and convert the Calisto MT font from my PC (by uploading its <span class="code">.ttf</span> file) I would be told that <span class="first-use">&ldquo;the designer had requested that their font not be converted&rdquo;</span> and the conversion would not take place.</p>
 
                     <p class="hyp">Other font conversion sites are not so conscientious.</p>
 
@@ -1012,9 +1014,9 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The path to the folder is:</p>
 
-                    <p class="hyp" style="text-align: center;"><span class="code">\1100-website\21-global\03-fonts\woff</span></p>
+                    <p class="hyp" style="text-align: center;"><span class="code">\1001-website\21-global\03-fonts\woff</span></p>
 
-                    <p class="hyp">The reason they are in the <span class="code">21-global</span> path is that the WOFF files are third party files (I may have converted them to WOFF files, but I did not create the original font files, someone else did so they&rsquo;re third party files).</p>
+                    <p class="hyp">The reason these fonts are in the <span class="code">21-global</span> path is that the WOFF files are third party files (I may have converted them to WOFF files, but I did not create the original font files, someone else did so they&rsquo;re third party files).</p>
 
                     <p class="hyp"><a class="xref js--sc-f09-09" href="#">Figure&nbsp;9.9</a> shows all the converted WOFF lines in the correct directory.</p>
 

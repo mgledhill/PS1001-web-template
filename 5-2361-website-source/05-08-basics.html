@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+13 Jul 2018   d-P10.00.03  M. Gledhill    proof reading corrections
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +162,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/bs-d-P10-00-03.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +171,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 05-08&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 05-08&nbsp;&mdash;&nbsp;d-P10.00.03</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -315,13 +317,22 @@ Date          Issue        Author         Reason for Modification
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
                         <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent"></th>                            <!-- set column 01 width here -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
                         </tr>                                   <!-- TABLE - End of header   -->
                         <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-cent"><p><em>We will never use IDs with CSS in any practical situation.<br><br class="toc-pad">DO NOT USE IDs IN CSS FILES</em></p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">We will never use IDs with CSS in any practical situation.<br><br class="toc-pad">DO NOT USE IDs IN CSS FILES</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -512,7 +523,7 @@ p {
                     </div>                                                  <!-- End of code fragment -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I&rsquo;ve included the whole file for clarity (<span class="code">I&rsquo;ve shortened the lorem ipsum paragraphs and removed the emphasised sections&nbsp;&mdash;&nbsp;we don&rsquo;t need them anymore</span>). </p>
+                    <p class="hyp">I&rsquo;ve included the whole file for clarity (<span class="first-use">I&rsquo;ve shortened the lorem ipsum paragraphs and removed the emphasised sections&nbsp;&mdash;&nbsp;we don&rsquo;t need them anymore</span>). </p>
 
                     <p class="hyp">The important changes are where I&rsquo;ve added attributes to the paragraph <span class="code">&lt;p&gt;</span> elements, I&rsquo;ve extracted the first one here:</p>
 
@@ -693,7 +704,7 @@ p {
                             <td class="table-left">
                                 <p class="hyp">Only use the characters [a-z] and [A-Z], the numbers [0-9], the underscore [ _ ] and the dash/hyphen [-]<sup>&dagger;2</sup>.</p>
                                 <p class="hyp">Class and ID names cannot start with a digit, two hyphens or a hyphen followed by a digit. They must not contain spaces.</p>
-                                <p class="hyp">The following have special meanings in CSS and definitely cannot be used in a class or ID name:<br><span class="c-box">!</span>&nbsp;<span class="c-box">"</span>&nbsp;<span class="c-box">#</span>&nbsp;<span class="c-box">$</span>&nbsp;<span class="c-box">%</span>&nbsp;<span class="c-box">&amp;</span>&nbsp;<span class="c-box">'</span>&nbsp;<span class="c-box">(</span>&nbsp;<span class="c-box">)</span>&nbsp;<span class="c-box">*</span>&nbsp;<span class="c-box">.</span>&nbsp;<span class="c-box">/</span>&nbsp;<span class="c-box">:</span>&nbsp;<span class="c-box">;</span>&nbsp;<span class="c-box">&lt;</span>&nbsp;<span class="c-box">=</span>&nbsp;<span class="c-box">&gt;</span>&nbsp;<span class="c-box">?</span>&nbsp;<span class="c-box">@</span>&nbsp;[&nbsp;<span class="c-box">\</span>&nbsp;<span class="c-box">]</span>&nbsp;<span class="c-box">^</span>&nbsp;<span class="c-box">`</span>&nbsp;<span class="c-box">{</span>&nbsp;<span class="c-box">|</span>&nbsp;<span class="c-box">}</span>&nbsp;<span class="c-box">+</span>&nbsp;<span class="c-box">-</span>&nbsp;and&nbsp;<span class="c-box">~</span></p>
+                                <p class="hyp">The following have special meanings in CSS and definitely cannot be used in a class or ID name:<br><span class="c-box">!</span>&nbsp;<span class="c-box">"</span>&nbsp;<span class="c-box">#</span>&nbsp;<span class="c-box">$</span>&nbsp;<span class="c-box">%</span>&nbsp;<span class="c-box">&amp;</span>&nbsp;<span class="c-box">'</span>&nbsp;<span class="c-box">(</span>&nbsp;<span class="c-box">)</span>&nbsp;<span class="c-box">*</span>&nbsp;<span class="c-box">.</span>&nbsp;<span class="c-box">/</span>&nbsp;<span class="c-box">:</span>&nbsp;<span class="c-box">;</span>&nbsp;<span class="c-box">&lt;</span>&nbsp;<span class="c-box">=</span>&nbsp;<span class="c-box">&gt;</span>&nbsp;<span class="c-box">?</span>&nbsp;<span class="c-box">@</span>&nbsp;<span class="c-box">[</span>&nbsp;<span class="c-box">\</span>&nbsp;<span class="c-box">]</span>&nbsp;<span class="c-box">^</span>&nbsp;<span class="c-box">`</span>&nbsp;<span class="c-box">{</span>&nbsp;<span class="c-box">|</span>&nbsp;<span class="c-box">}</span>&nbsp;<span class="c-box">+</span>&nbsp;<span class="c-box">-</span>&nbsp;and&nbsp;<span class="c-box">~</span></p>
                             </td>
                         </tr>                                   <!-- TABLE - End of row 01   -->
                     </table>                                    <!-- TABLE - End of table    -->
@@ -767,7 +778,7 @@ p {
 
                     <p class="hyp">For example, where I use code keywords in the text (like <span class="code">&lt;!DOCTYPE HTML&gt;</span>), I use a specific class that changes the font to Triplicate and changes the colour of the text to blue. I could call the class <span class="code">.triplicate-blue</span>, but this would be naming the class for the styling it applies. However, if I were later to decided that I wanted code keywords to be in orange, I would have to rename the style (if it were to be accurate) and change every occurrence in the HTML (<span class="first-use">this rather defeats the point of CSS</span>).</p>
 
-                    <p class="hyp">So I name the class for what it does to the content, in this case it indicates the text is a keyword for the HTML code. So I call the class .code:</p>
+                    <p class="hyp">So I name the class for what it does to the content, in this case it indicates the text is a keyword for the HTML code. So I call the class <span class="code">.code</span>:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - INCIDENTAL TABLE (EN PASSANT)
@@ -779,13 +790,22 @@ p {
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
                         <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent"></th>                            <!-- set column 01 width here -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+
                         </tr>                                   <!-- TABLE - End of header   -->
                         <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-cent"><p style="line-height: 135%;"><em>The class is named for the content it is styling (the purpose of the style)<br> and not the absolute stylistic elements within it.</em></p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">The class is named for the content it is styling (the purpose of the style) and not the absolute stylistic elements within it.</span></p>
+                            </td>
+                         </tr>                                   <!-- TABLE - End of row 01   -->
+                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-caption"></td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
                     </table>                                    <!-- TABLE - End of table    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
