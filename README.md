@@ -3,7 +3,11 @@
 ###### A series of technical documents for engineers (and others)
 
 
+<<<<<<< HEAD
 # A Website Template for Online Publications <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P11.svg">
+=======
+# A Website Template for Online Publications <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P10-00-P12.svg">
+>>>>>>> d00-corrections
 
 <p align="center">
     <img width="300px" src="0-0201-repository-information/01-images/logo-lrg-min.png">
@@ -25,7 +29,12 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
+<<<<<<< HEAD
 | master             | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P11.svg">
+=======
+| master             | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P10.svg">
+| d-00-corrections   | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P10-00-P12.svg">
+>>>>>>> d00-corrections
 
 ## Contents
 
@@ -101,7 +110,11 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
+<<<<<<< HEAD
 <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P11.svg">
+=======
+<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-d-P10-00-P12.svg">
+>>>>>>> d00-corrections
 
 ## Additional information
 

@@ -46,6 +46,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+14 Jul 2018   P12          M. Gledhill    Published
+
+13 Jul 2018   d-P10.00.03  M. Gledhill    proof reading corrections
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +164,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/build-p12-tq-min.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +173,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 08-03&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 08-03&nbsp;&mdash;&nbsp;P12</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -729,7 +733,7 @@ Date          Issue        Author         Reason for Modification
                         <tr>                                    <!-- TABLE - Start of footnote row 01 -->
                             <td class="table-left"><em>&dagger;1</em></td>
                             <td class="table-left"></td>
-                            <td colspan="2" class="table-left">It&rsquo;s always bloody Internet Explorer that cocks thing up. I&rsquo;m not even sure I&rsquo;m supporting IE9 (I can&rsquo;t remember what I&rsquo;ve said or in what particular rant I said it). IE9 has a 4% <a class="hlink nohyp" href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0">market&nbsp;share</a> of browsers&mdash;<span class="first-use">do you want to support it?&mdash;probably not</span>, I leave it up to you. If you don&rsquo;t, simplify the clearfix to the one that just has the <span class="code">:after</span> pseudo element.</td>
+                            <td colspan="2" class="table-left">It&rsquo;s always bloody Internet Explorer that cocks things up. I&rsquo;m not even sure I&rsquo;m supporting IE9 (I can&rsquo;t remember what I&rsquo;ve said or in what particular rant I said it). IE9 has a 4% <a class="hlink nohyp" href="https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0">market&nbsp;share</a> of browsers&mdash;<span class="first-use">do you want to support it?&mdash;probably not</span>, I leave it up to you. If you don&rsquo;t, simplify the clearfix to the one that just has the <span class="code">:after</span> pseudo element.</td>
                         </tr>                                   <!-- TABLE - End of footnote row 01   -->
                     </table>                                    <!-- TABLE - End of footnote    -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -987,7 +991,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Next I make all the blocks float to the left (with the <span class="code">float: left</span> command), this is identical to setting up the box model <a class="hlink nohyp" href="06-04-box.html#js--060400">&sect;&nbsp;6.4</a>. It makes all the column <span class="code">&lt;div&gt;</span> elements float to the left, they are in a line and each <span class="code">&lt;div&gt;</span> is just as wide as its content (the &ldquo;Col L&rdquo; &amp;c.). </p>
 
-                    <p class="hyp">The reason the columns are only this wide, is because we haven&rsquo;t told them to behave any differently (we do that with the rg-spanS-C class, <a class="xref nohyp js--sc-080305" href="#">&sect;&nbsp;8.3.5</a>).</p>
+                    <p class="hyp">The reason the columns are only this wide, is because we haven&rsquo;t told them to behave any differently (we do that with the <span class="code">rg-spanS-C</span> class, <a class="xref nohyp js--sc-080305" href="#">&sect;&nbsp;8.3.5</a>).</p>
 
                     <p class="hyp">There is also a white band between each of the columns and the columns have moved down slightly (there is a thin white band above the columns in <a class="xref js--sc-f08-11" href="#">Figure&nbsp;8.11</a> that wasn&rsquo;t there in <a class="xref js--sc-f08-10" href="#">Figure&nbsp;8.10</a>, it separates the columns from the top edge of the browser window).</p>
 
@@ -1214,7 +1218,27 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The <span class="code">:first-child</span> element detects the first time the specified class (in this case <span class="code">rg-col</span>) is used within a parent element (the parent element in this case is the <span class="code">rg-row</span> <span class="code">div</span>, <span class="first-use">the next one up as it were</span>).</p>
 
-                    <p class="hyp">What it does here, is it sets the left margin to zero the first time <span class="code">rg-col</span> is used; this is why there is no white gap to the left of Col L, Col L is the <span class="code">first-child</span> of <span class="code">rg-col</span>, and this has its margin set to zero:<br> <code class="prettyprint lang-css nohyp" id="js--c080500d">.rg-col:first-child { margin-left: 0; }</code>.</p>
+                    <p class="hyp">What it does here, is it sets the left margin to zero the first time <span class="code">rg-col</span> is used; this is why there is no white gap to the left of Col L, Col L is the <span class="code">first-child</span> of <span class="code">rg-col</span>, and this has its margin set to zero:
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Single line fragments must not be preceded by a carriage return; i.e.
+     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
+     line breaks.
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+
+                            <pre class="prettyprint lang-css" id="js--c080500c">rg-col:first-child { margin-left: 0; }
+</pre>
+
+                        </div>                                              <!-- End of code extract holder -->
+                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
+                    </div>                                                  <!-- End of code fragment -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
 
                     <p class="hyp">There are other such pseudo elements: <span class="code">:last-child</span> and <span class="code">:nth-child(x)</span>.</p>
 
@@ -1502,7 +1526,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
                         <div class="formulae-container">                    <!-- Start of equation flexbox container -->
                             <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(34" units" xx 22" px")/(1276" px") xx 100=(748)/(1276) xx 100=17.24%`                <!-- The equation (AsciiMath)-->
+                                `(34" units" xx 22" px")/(1276" px") xx 100=(748)/(1276) xx 100=58.62%`                <!-- The equation (AsciiMath)-->
                             </div>                                          <!-- End of equation box -->
                             <div class="formulae-num">(8.4) </div>          <!-- Equation number-->
                         </div>                                              <!-- End Equation flexbox container -->

@@ -47,6 +47,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+14 Jul 2018   d-P12        M. Gledhill    Published
+
+30 Jun 2018   d-P10.00.01  M. Gledhill    Additional note scroll point
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -71,7 +75,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P10</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P12</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -116,6 +120,9 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    ------------------------------------------------------------------------- */
     $('.js--sc-000100').click(function () {     /* START of scroll function */
        $('html, body').animate({scrollTop: $('#js--000100').offset().top }, 1000);
+    });                                         /* END of scroll function */
+    $('.js--sc-000101').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--000101').offset().top }, 1000);
     });                                         /* END of scroll function */
 
 

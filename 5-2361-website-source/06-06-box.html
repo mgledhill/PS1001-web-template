@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+14 Jul 2018   P12          M. Gledhill    Published
+
+02 Jul 2018   d-P10.00.01  M. Gledhill    Typographical corrections
+                                          New section added (6.6.1)
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -160,7 +165,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="11-resources/02-images/02-build-status/build-p12-tq-min.svg"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +174,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 06-06&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 06-06&nbsp;&mdash;&nbsp;P12</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -237,7 +242,10 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
                         </li>                                   <!-- TOC link end   -->
                         <li><a class="js--sc-060601" href="06-06-box.html#js--060601">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Finishing touches</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Descendant selection and combinators</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-060602" href="06-06-box.html#js--060602">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.2</span><span class="toc-lev3-text">Finishing touches</span></div></a>
                         </li>                                   <!-- TOC link end   -->
                         <li><a class="js--sc-060700" href="06-07-box.html#js--060700">  <!-- TOC link start -->
                             <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
@@ -286,6 +294,8 @@ Date          Issue        Author         Reason for Modification
                         </li>                                   <!-- TOC link end   -->
                         <li><a class="js--sc-061003" href="06-10-box.html#js--061003">  <!-- TOC link start -->
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
                         </li>                                   <!-- TOC link end   -->
                      </ul>                                       <!-- End of TOC in columns -->
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -376,7 +386,7 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of note -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is a very powerful technique; it allows specific elements within a class to be formatted without having to define another class for that object.</p>
+                    <p class="hyp">This is a very powerful technique; it is called <span class="first-use">descendant selection</span> it allows specific elements within a class to be formatted without having to define another class for that object.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FIGURE - SINGLE FIGURE FULL PAGE WIDTH
@@ -418,7 +428,7 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP 060601]
-     SUBSECTION 6.6.1 - FINISHING TOUCHES
+     SUBSECTION 6.6.1 - DESCENDANT SELECTION AND DESCENDANT COMBINATORS
      ***********************************************************************-->
 
         <section class="section-std" id="js--060601">           <!-- Start of section -->
@@ -427,6 +437,245 @@ Date          Issue        Author         Reason for Modification
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
                     <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
                     <div class="sub-title-num-box"><h3>6.6.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Descendant selection and combinators</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">The previous section used a <span class="first-use">descendent selection</span> to identify all the <span class="code">&lt;img&gt;</span> elements in a particular class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint lang-css wrap" id="js--c060601a">.author-area img {
+&nbsp; &nbsp; height: 150px;
+&nbsp; &nbsp; width: 150px;
+&nbsp; &nbsp; border-radius: 50%;
+}
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is a very common and widely used technique in CSS files. It has the format:</p>
+
+                     <p class="hyp" style="text-align: center;"><span class="code">.classname element</span></p>
+
+                    <p class="hyp">The element is separated from the class name by a space and this space is called the <span class="first-use">descendant combinator. Yes, I know &ldquo;combinator&rdquo; isn&rsquo;t really a word&mdash;I blame the Linux people</span>.</p>
+
+                    <p class="hyp">If I added the following descendent selector to the <span class="code">style.css</span> file:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint lang-css wrap" id="js--c060601b">.main-area p {
+&nbsp; &nbsp; color: #ff0000;
+}
+
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Then the colour of all the paragraph text in the <span class="code">main-area</span> would change to red; that is everything contained within a <span class="code">&lt;p&gt;</span> element. This would also apply to the <span class="code">&lt;p&gt;</span> elements in any other class that was nested within the <span class="code">main-area</span>. I.e. it applies to <span class="code">main-area</span> and all its <span class="first-use">descendants</span>, however nested (if a <span class="code">&lt;p&gt;</span> element in a descendant class had its own contradictory style set elsewhere, then that style would override the descendant selector, this is because it is applied directly to the element).</p>
+
+                    <p class="hyp">There are other <span class="first-use">combinators [sic]</span>. There is the child combinator ( <span class="code">&gt;</span> ):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint lang-css wrap" id="js--c060601c">.main-area &gt; p {
+&nbsp; &nbsp; color: #ff0000;
+}
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">What&rsquo;s the difference between a <span class="first-use">child</span> and a <span class="first-use">descendant?</span></p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><span class="first-use">My daughter is both my child and my descendant</span></p></li>
+
+                        <li><p class="hyp"><span class="first-use">My granddaughter is my descendant but not my child</span></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If we had the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">html</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint ang-html wrap" id="js--c060601d">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 1&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="another-style"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 2&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Here paragraph 1 would go red, it is the child of <span class="code">main-area</span>, but Paragraph 2 would not, it is a descendant, but not a child (it is effectively the granddaughter in my analogy above).</p>
+
+                    <p class="hyp">There is also an <span class="first-use">adjacent sibling</span> combinator ( <span class="code">+</span> ), this combines two elements and looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint lang-css wrap" id="js--c060601e">.main-area img + p {
+&nbsp; &nbsp; color: #ff0000;
+}
+
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And, if we had the html code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">html</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint ang-html wrap" id="js--c060601f">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="logo.svg" alt="The website logo"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 1&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 2&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This time, with the adjacent sibling combinator, we&rsquo;re specifying the a <span class="code">&lt;p&gt; </span>element that immediately follows an <span class="code">&lt;img&gt;</span> element will have the style applied. In this case paragraph 1 immediately follows the image element, paragraph 2 does not.</p>
+
+                    <p class="hyp"><span class="first-use">Complicated enough for you?</span></p>
+
+                    <p class="hyp">If we changed the adjacent sibling selector to:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                              <!-- Start of code fragment -->
+                        <div class="code-header">style.css</div>            <!-- Code file name -->
+                        <div class="code-area">                             <!-- Start of code extract holder -->
+                            <pre class="prettyprint lang-css wrap" id="js--c060601g">.main-area img + p {
+&nbsp; &nbsp; color: #ff0000;
+}
+
+</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
+                        </div>                                              <!-- End of code extract holder -->
+                        <table class="code-caption"> <!-- Caption & download  -->
+                            <tr class="no-border">
+                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 90.0%"></td>    <!-- Caption text  -->
+                                <td style="width: 5.0%"></td>     <!-- download link -->
+                            </tr>                                   <!-- TABLE - End of header   -->
+                        </table>                                    <!-- TABLE - End of table    -->
+                    </div>                                          <!-- End of code fragment -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Then Paragraph 2 would be red, but not Paragraph 1, this is because Paragraph 2 is the first paragraph to immediately follow another paragraph. Paragraph 1 does not immediately follow a previous paragraph so it doesn&rsquo;t get the colour.</p>
+
+                    <p class="hyp">If a third paragraph were added after Paragraph 2, it too would be red, it also immediately follows a paragraph.</p>
+
+                 </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 060602]
+     SUBSECTION 6.6.2 - FINISHING TOUCHES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--060602">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>6.6.2</h3></div>
                     <div class="sub-title-text-box"><h3>Finishing touches</h3></div>
                 </div>                                          <!-- End of subtitle column (centre column) -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
