@@ -51,6 +51,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+14 Jul 2018   P11          M. Gledhill    Published (social media update)
+
 20 Dec 2017   P10.10.01    M. Gledhill    Social media icons manipulation added
 
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
