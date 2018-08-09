@@ -46,6 +46,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
+                                          Privacy policy added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -73,15 +76,14 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
-        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-
-        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/08-02-columns/05-local-js/08-02-scroll.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script src="01-pages/08-02-columns/05-local-js/08-02-scroll.js" defer></script>
 
 
 
@@ -96,6 +98,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
         <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/08-02-columns/01-local-css/08-02-prettifylines.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -107,6 +110,7 @@ Date          Issue        Author         Reason for Modification
                                           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
                                           ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
                                           ga('send', 'pageview');
                                         </script>
 
@@ -160,7 +164,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -169,7 +173,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 08-02&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 08-02&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -407,9 +411,6 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">So the maximum screen width is 1276&nbsp;px. It also means that the unit size in the Gerstner grid is 22&nbsp;px. These will be important numbers when it comes to building the <span class="code">grid.css</span> file; <span class="first-use">and that is the next social event.</span></p>
 
-                    <p> <br class="toc-pad"></p>
-                    <p> <br class="toc-pad"></p>
-
                 </div>                                          <!-- End of section text area   -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
@@ -426,6 +427,8 @@ Date          Issue        Author         Reason for Modification
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
         <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
             <div class="rg-row">                                <!-- Start of row content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -466,8 +469,13 @@ Date          Issue        Author         Reason for Modification
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
-                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
             </ul>                                               <!-- End of footer navigation -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
         </footer>                                               <!-- End of footer -->
 <!-- ========================================================================== [WP END] -->
 
@@ -475,7 +483,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      JAVASCRIPT (POST PAGE LOAD)
      ***********************************************************************-->
-        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
 
 
     </body>
