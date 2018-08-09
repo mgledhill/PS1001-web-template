@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+15 Jul 2018   d-P12.10.01  M. Gledhill    Git styles added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -70,18 +72,19 @@ Date          Issue        Author         Reason for Modification
                                         <meta name="theme-color" content="#ffffff">
 
 
+
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main) -->        <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script>
-        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 
-        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/99-00-typicals/05-local-js/99-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script src="01-pages/99-00-typicals/05-local-js/99-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
 
 
 
@@ -96,6 +99,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
         <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/99-00-typicals/01-local-css/99-00-prettifylines.css">
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -160,8 +164,9 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-01.svg" alt="Build status information"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
+
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
                     <div class="title-num-box"><p>99</p></div>
@@ -169,7 +174,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 99-00&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 99-00&nbsp;&mdash;&nbsp;d-P12.10.01</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -229,6 +234,9 @@ Date          Issue        Author         Reason for Modification
                         </li>                                   <!-- TOC link end   -->
                         <li><a class="js--sc-990900" href="99-00-typicals.html#js--990900">  <!-- TOC link start -->
                             <div class="toc-lev"><span class="toc-lev2-num">99.9</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Text and formats</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-991000" href="99-00-typicals.html#js--991000">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">99.10</span><span class="toc-lev2-text">Typicals&nbsp;&mdash;&nbsp;Git VCS styles</span></div></a>
                         </li>                                   <!-- TOC link end   -->
                     </ul>                                       <!-- End of TOC in columns -->
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -541,6 +549,17 @@ Date          Issue        Author         Reason for Modification
                     <ul class="note">                           <!-- Start of note -->
                         <li>Supernatant is the water in the settling tank that sits above the sediment, this is decanted and returned to the works inlet for treatment.</li>
                     </ul>                                       <!-- End of note -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT MULTIPLE PARAGRAPHS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>First paragraph with note and hanging indent</li>
+                    </ul>                                       <!-- End of note -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">Second paragraph without the note inidcator</span></p>
+
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
@@ -1786,6 +1805,11 @@ int main() {
                             <td class="table-cent">.code</td>
                             <td class="table-left">Applies a blue monospaced font, 85&nbsp;% of main paragraph point size (used to highlight a section of code)</td>
                         </tr>                                   <!-- TABLE - End of row 05   -->
+                        <tr>                                    <!-- TABLE - Start of row 05 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">.menu</td>
+                            <td class="table-left">Indicates a menu selection in Windows or an application<br>(small caps blue)</td>
+                        </tr>                                   <!-- TABLE - End of row 05   -->
                         <tr>                                    <!-- TABLE - Start of row 06 -->
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">.all-caps</td>
@@ -1796,11 +1820,21 @@ int main() {
                             <td class="table-cent">.serif</td>
                             <td class="table-left">Applies a serif font, all other properties stay the same</td>
                         </tr>                                   <!-- TABLE - End of row 07   -->
+                        <tr>                                    <!-- TABLE - Start of row 07 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">.serif-b</td>
+                            <td class="table-left">Applies a serif BOLD font, all other properties stay the same</td>
+                        </tr>                                   <!-- TABLE - End of row 07   -->
                         <tr>                                    <!-- TABLE - Start of row 08 -->
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">.san-serif</td>
                             <td class="table-left">Applies a sans serif font, all other properties stay the same</td>
                         </tr>                                   <!-- TABLE - End of row 08   -->
+                        <tr>                                    <!-- TABLE - Start of row 09 -->
+                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">.mono</td>
+                            <td class="table-left">Applies a monospace font, all other properties stay the same</td>
+                        </tr>                                   <!-- TABLE - End of row 09   -->
                         <tr>                                    <!-- TABLE - Start of row 09 -->
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">.mono</td>
@@ -1865,10 +1899,221 @@ int main() {
 <!-- ========================================================================== [WP END] -->
 
 
+<!-- ************************************************************************** [WP 991000]
+     SECTION - GIT VCS STYLES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--991000">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>99.10</h2></div>
+                 <div class="sub-title-text-box"><h2>Git VCS styles</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-left">                  <!-- Start of left side bar   -->
+                        <p class="no-hyp"><span class="first-use">Git command</span> <span class="git-cmd">reset</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - GIT SIDEBAR COMMAND LINE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a two column table used to represent git commandline instructions
+
+      The table is designated .table-git (this is a table that is simple and
+      clean in appearance, with inverted colours).
+
+      The relative widths of each column is preset in the <td> element
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+      by default the table is set to left justification
+
+      By default each there are no borders surrounding the table
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <table class="table-git-sb" id="js--t99-04">                            <!-- TABLE - Start of table  -->
+                            <tr class="no-border">                                              <!-- TABLE - Start of header -->
+                                <td class="leading"><div style="min-height: 1em"></div></td>    <!-- Leading row (sets min-height) -->
+                                <td class="table-left" style="width: 5%">$</td>                 <!-- set column width here -->
+                                <td class="table-left" style="width: 95%">git checkout dev-01-about</td>
+                            </tr>                                                               <!-- TABLE - End of header   -->
+                        </table>                                                                <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">There are several central and sidebar styles associated with the Git <span class="first-use">version control system</span> (VCS). Examples of these styles are given in this section.</p>
+
+
+                     <p class="hyp">We do this by <span class="git-cmd">initialising</span> the repository. The blue colour is achieved with the class <span class="code">.git-cmd</span>.</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - GIT COMMAND LINE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a two column table used to represent git commandline instructions
+
+      The table is designated .table-git (this is a table that is simple and
+      clean in appearance, with inverted colours).
+
+      The relative widths of each column is preset in the <td> element
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+      by default the table is set to left justification
+
+      By default each there are no borders surrounding the table
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-git" id="js--t99-05">                 <!-- TABLE - Start of table  -->
+                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
+                            <td class="leading"><div style="min-height: 1em"></div></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-left" style="width: 5%">$</td>      <!-- set column 01 width here -->
+                            <td class="table-left" style="width: 95%">git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"</td>       <!-- set column 02 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Exactly the same class can be used in the sidebar and in figure and table captions.</p>
+
+                    <p class="hyp">The Git VCS site uses red text in incidental tables, the san-serif is class <span class="code">.git-cmd</span>. The red serif text is<span class="code">.git-incid</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Incidental tables hold additional information (in a similar way to an
+      aside) but span the central content area and can contain more information
+      than an asisde.
+
+      The table spans 84% of the content area, is lightly shaded  and uses
+      small caps for the heading.
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <table class="table-incid"> <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="table-cent">The .git folder&mdash;a golden rule</th>                            <!-- set column 01 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr class="in-no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="table-left"><p>The .git folder is a hidden folder in the root directory of the repository. It contains all that is important: the local repository, any staged files, all the metadata associated with the repository (change records, logs &amp;c.) and all the important bits for a tracked project.</p>
+                            </td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr class="in-no-border">                                    <!-- TABLE - Start of row 01 -->
+                            <td class="table-cent">
+                                <p><span class="git-cmd">There is one golden rule concerning the .git folder</span><br>
+                                    <span class="git-incid">DON&rsquo;T MESS WITH IT</span></p>
+                            </td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        <tr>                                    <!-- TABLE - Start of row 01 -->
+                            <td class="table-cent">
+                                <p>Best thing is, don&rsquo;t even look inside it. If you delete it, you delete everything, <br>
+                                if you change it, everything gets screwed up</p>
+                            </td>
+                        </tr>                                   <!-- TABLE - End of row 01   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                    <p> <br class="toc-pad"></p>
+                    <p> <br class="toc-pad"></p>
+
+
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right">                 <!-- Start of right side bar -->
+                        <p class="no-hyp"><span class="first-use">Git command</span> <span class="git-cmd">init</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - GIT SIDEBAR COMMAND LINE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      This is a two column table used to represent git commandline instructions
+
+      The table is designated .table-git (this is a table that is simple and
+      clean in appearance, with inverted colours).
+
+      The relative widths of each column is preset in the <td> element
+
+      An additional column is added to the start of each row, this is of zero
+      width and makes no contribution to the table contents (it is of class .
+      leading), it can however hold a <div> element that is used to give a
+      minimum height to the row (this is done with an inline style specifying
+      the min-height of the div).
+
+      Each cell can be centred, left or right justified by applying the classes
+            .table-cent
+            .table-left
+            .table-right
+      by default the table is set to left justification
+
+      By default each there are no borders surrounding the table
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                        <table class="table-git-sb" id="js--t99-06">                            <!-- TABLE - Start of table  -->
+                            <tr class="no-border">                                              <!-- TABLE - Start of header -->
+                                <td class="leading"><div style="min-height: 1em"></div></td>    <!-- Leading row (sets min-height) -->
+                                <td class="table-left" style="width: 5%">$</td>                 <!-- set column width here -->
+                                <td class="table-left" style="width: 95%">git checkout dev-01-about</td>
+                            </tr>                                                               <!-- TABLE - End of header   -->
+                        </table>                                                                <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <div class="section-std" id="js--999901">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
 <!-- ************************************************************************** [WP 999901]
      SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
      ***********************************************************************-->
-        <div class="section-last"></div>                        <!-- last section before footer (bottom border) -->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
 <!-- ========================================================================== [WP END] -->
 
 
@@ -1890,7 +2135,7 @@ int main() {
 <!-- **************************************************************************
      JAVASCRIPT (POST PAGE LOAD)
      ***********************************************************************-->
-        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
 
     </body>
 </html>
@@ -1903,39 +2148,17 @@ int main() {
 
                     <p class="hyp"></p>
 
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
+                    <span class="first-use"></span>
+                    <span class="code"></span>
+                    <span class="menu"></span>
+                    <span class="git-cmd"></span>
+                    <span class="all-caps"></span>
+                    <a class="xref js--sc-f02-10 utx" href="#">Figure&nbsp;2.10</a>
+                    <a class="hlink nohyp utx" href="02-03-concept.html#js--020302">&sect;&nbsp;2.3.2</a>
+                    <a class="xref nohyp js--sc-020501 utx" href="#">&sect;&nbsp;2.5.1</a>
+                    <a class="hlink nohyp" href="http://practicaltypography.com/">Practical&nbsp;Typography</a>
+                    <p class="hyp" style="text-align: center;"><span class="code">git-2.13.3-64bit.exe</span></p>
+                    <br class="top-pad">
 
 
 
