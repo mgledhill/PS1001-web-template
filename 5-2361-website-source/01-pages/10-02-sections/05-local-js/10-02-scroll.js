@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          LOCAL SCROLL - JQUERY                          10-00-SCROLL.JS
+Title :          LOCAL SCROLL - JQUERY                          10-02-SCROLL.JS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -71,7 +71,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;SNN.XX.SMM</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P12.10.03</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -105,10 +105,33 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
            $('html, body').animate({scrollTop: $('#js--nn0000').offset().top -10}, 1000);
           });
    ------------------------------------------------------------------------- */
-    $('.js--sc-100000').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--100000').offset().top -10}, 1000);
+
+
+  /* ---------------------------------------------------------------------------
+   SCROLL TO -  SECTIONS & SUBSECTIONS
+   The offset is set to .to -20 - e.g.
+
+          $('.js--sc-nn0100').click(function () {
+           $('html, body').animate({scrollTop: $('#js--nn0100').offset().top -20}, 1000);
+          });
+   ------------------------------------------------------------------------- */
+    $('.js--sc-100200').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100200').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
+    $('.js--sc-100201').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100201').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+
+   /* ---------------------------------------------------------------------------
+   SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
+   The offset is set to .to -120 - e.g.
+
+          $('.js--sc-nn0101a').click(function () {
+           $('html, body').animate({scrollTop: $('#js--nn0101a').offset().top -120}, 1000);
+          });
+   ------------------------------------------------------------------------- */
 
 
 /* ---------------------------------------------------------------------------
@@ -125,6 +148,17 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
            $('html, body').animate({scrollTop: $('#js--tnn-01').offset().top -60}, 1000);
           });
    ------------------------------------------------------------------------- */
+          $('.js--sc-f10-01').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-01').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-02').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-02').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-t10-01').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-01').offset().top -60}, 1000);
+          });
 
 
 });                                             /* END OF PAGE READY FUNCTION */

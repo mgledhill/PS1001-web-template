@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          LOCAL SCROLL - JQUERY                          10-01-SCROLL.JS
+Title :          LOCAL SCROLL - JQUERY                          10-03-SCROLL.JS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -71,7 +71,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P12.10.01</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P12.10.03</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -115,20 +115,36 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
            $('html, body').animate({scrollTop: $('#js--nn0100').offset().top -20}, 1000);
           });
    ------------------------------------------------------------------------- */
-    $('.js--sc-100100').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--100100').offset().top -20}, 1000);
+    $('.js--sc-100300').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100300').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
-    $('.js--sc-100101').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--100101').offset().top -20}, 1000);
+    $('.js--sc-100301').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100301').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
-    $('.js--sc-100102').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--100102').offset().top -20}, 1000);
+    $('.js--sc-100302').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100302').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
-    $('.js--sc-100103').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--100103').offset().top -20}, 1000);
+    $('.js--sc-100303').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100303').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+    $('.js--sc-100304').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100304').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+    $('.js--sc-100305').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100305').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+    $('.js--sc-100306').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100306').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+    $('.js--sc-100307').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--100307').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
 
@@ -157,20 +173,105 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
            $('html, body').animate({scrollTop: $('#js--tnn-01').offset().top -60}, 1000);
           });
    ------------------------------------------------------------------------- */
-          $('.js--sc-f10-01').click(function () {
-           $('html, body').animate({scrollTop: $('#js--f10-01').offset().top -80}, 1000);
-          });
-
-          $('.js--sc-f10-02').click(function () {
-           $('html, body').animate({scrollTop: $('#js--f10-02').offset().top -80}, 1000);
-          });
-
           $('.js--sc-f10-03').click(function () {
            $('html, body').animate({scrollTop: $('#js--f10-03').offset().top -80}, 1000);
           });
 
           $('.js--sc-f10-04').click(function () {
            $('html, body').animate({scrollTop: $('#js--f10-04').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-05').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-05').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-06').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-06').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-07').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-07').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-08').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-08').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-09').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-09').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-10').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-10').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-11').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-11').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-12').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-12').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-13').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-13').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-14').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-14').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-15').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-15').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-16').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-16').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-f10-17').click(function () {
+           $('html, body').animate({scrollTop: $('#js--f10-17').offset().top -80}, 1000);
+          });
+
+          $('.js--sc-t10-02').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-02').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-03').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-03').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-04').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-04').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-05').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-05').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-06').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-06').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-07').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-07').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-08').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-08').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-t10-09').click(function () {
+           $('html, body').animate({scrollTop: $('#js--t10-09').offset().top -60}, 1000);
+          });
+
+          $('.js--sc-c100200').click(function () {
+           $('html, body').animate({scrollTop: $('#js--c100200').offset().top -100}, 1000);
+          });
+
+
+          $('.js--sc-c100600').click(function () {
+           $('html, body').animate({scrollTop: $('#js--c100600').offset().top -100}, 1000);
           });
 
 

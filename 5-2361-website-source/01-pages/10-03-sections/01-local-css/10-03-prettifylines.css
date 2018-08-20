@@ -1,0 +1,161 @@
+
+
+/* PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        10-03-PRETTIFYLINES.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file is used to change the background colour of individual lines in the
+google Prettify code fragements and format certain elements for css use.
+
+This is done by giving each code fragment a unique ID reference and setting
+modifying the specific properties and lines for that particular fragment.
+
+IDs have the format js--cXXYYZZ
+
+There are three common modifications:
+
+
+1. LINE BACKGROUND SHADING
+This is done to change the background colour of a line of code or a range
+of lines to green (indicating the code has changed).
+
+2. LINE INDENTATION ON LINE WRAP
+Changes how a line is indeneted when it wraps around in the code fragment
+display
+
+
+3.CSS CLASS CHANGES
+Code fragments showning CSS do not display in the correct colours, the
+.pln and .lit classes are over-riddent to give more accurate colouring
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+10 Aug 2018   d-P12.10.03  M. Gledhill    Page created
+
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c100200 - FORMATTING
+   ************************************************************************* */
+#js--c100200 li:nth-child(21) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100200 li:nth-child(27) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100200 li:nth-child(35) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c100300 - FORMATTING
+   ************************************************************************* */
+#js--c100300 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c100300 .lit { color: #718c00;}
+
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c100300css - FORMATTING
+   ************************************************************************* */
+.js--c100300css .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+.js--c100300css .lit { color: #718c00;}
+
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c100500 - FORMATTING
+   ************************************************************************* */
+#js--c100500 li:nth-child(21) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100500 li:nth-child(27) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100500 li:nth-child(35) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c100500a - FORMATTING
+   ************************************************************************* */
+#js--c100500a li:nth-child(4) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100500a li:nth-child(10) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100500a li:nth-child(18) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100500a li:nth-child(n+2):nth-child(-n+6) { background: #F2DBDB }    /* line background green (range)*/
+#js--c100500a li:nth-child(n+8):nth-child(-n+14) { background: #EAF1DD }    /* line background green (range)*/
+#js--c100500a li:nth-child(n+16):nth-child(-n+20) { background: #DBE5F1 }    /* line background green (range)*/
+
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c100600 - FORMATTING
+   ************************************************************************* */
+#js--c100600 li:nth-child(21) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600 li:nth-child(27) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600 li:nth-child(29) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600 li:nth-child(31) {padding-left: 6.4rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600 li:nth-child(37) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c100600a - FORMATTING
+   ************************************************************************* */
+#js--c100600a ol.linenums {color: #FBFBFB;}                                /* make numbering invisible */
+#js--c100600a li:nth-child(4) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600a li:nth-child(14) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100600a li:nth-child(n+2):nth-child(-n+6) { background: #F2DBDB }    /* line background green (range)*/
+#js--c100600a li:nth-child(n+12):nth-child(-n+16) { background: #DBE5F1 }    /* line background green (range)*/
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c100900 - FORMATTING
+   ************************************************************************* */
+#js--c100900 li:nth-child(23) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100900 li:nth-child(25) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--c100900 li:nth-child(27) {padding-left: 7.6rem;}                      /* adjust indent for line wrap (standard indent) */
+
+#js--c100900 li:nth-child(19) { background: #EAF1DD }    /* line background green (range)*/
+#js--c100900 li:nth-child(31) { background: #EAF1DD }    /* line background green (range)*/
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c100900 - FORMATTING
+   ************************************************************************* */
+#js--c100900a li:nth-child(n+3):nth-child(-n+5) { background: #EAF1DD }    /* line background green (range)*/
+#js--c100900a li:nth-child(31) { background: #EAF1DD }    /* line background green (range)*/
+
+/* ************************************************************************* */
+
+
+
+
+/* ****************************************************************************
+   CODE FRAGMENT cXXYYZZ - FORMATTING
+   ************************************************************************* */
+#js--cXXYYZZ li:nth-child(1) { background: #EAF1DD }                      /* line background green */
+#js--cXXYYZZ li:nth-child(n+6):nth-child(-n+8) { background: #EAF1DD }    /* line background green (range)*/
+
+#js--cXXYYZZ .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--cXXYYZZ .lit { color: #718c00;}
+
+#js--cXXYYZZ li:nth-child(1) {padding-left: 4.1rem;}                      /* adjust indent for line wrap (standard indent) */
+#js--cXXYYZZ li:nth-child(1) {padding-left: 7.4rem;}                      /* adjust indent for line wrap (extended indent 1) */
+
+/* ************************************************************************* */
