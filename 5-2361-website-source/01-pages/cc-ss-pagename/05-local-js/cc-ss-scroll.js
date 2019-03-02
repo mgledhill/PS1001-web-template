@@ -1,4 +1,6 @@
-/* PRACTICALSERIES (c) 2016
+
+
+/* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
 Title :          LOCAL SCROLL - JQUERY                          cc-ss-SCROLL.JS
@@ -47,8 +49,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-31 May 2017   P10          M. Gledhill    Page created (adopts dev rev)
+DD Mmm 2017   SNN.XX.SMM   M. Gledhill    Development
+
 ---------------------------------------------------------------------------- */
+
 
 
 /* ****************************************************************************
@@ -61,12 +65,13 @@ Date          Issue        Author         Reason for Modification
 
 $(document).ready(function() {                  /* START OF PAGE READY FUNCTION */
 
+
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P10</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;SNN.XX.SMM</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 

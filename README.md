@@ -3,7 +3,7 @@
 ###### A series of technical documents for engineers (and others)
 
 
-# A Website Template for Online Publications <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P12.svg">
+# A Website Template for Online Publications <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P13.svg">
 <p align="center">
     <img width="300px" src="0-0201-repository-information/01-images/logo-lrg-min.png">
 </p>
@@ -24,7 +24,8 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
-| master             | <img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P12.svg">
+| master             | <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P13.svg">
+
 
 ## Contents
 
@@ -75,7 +76,7 @@ I also make freely available the empty website template (see **TEMPLATE Licence*
 
 **I do NOT** give permission for you to reuse or republish any of the content of this website or documents within this repository (including text, images, and PDFs).
 
-**I do NOT** give permission for you to reuse the fonts that are embedded within the CSS files; these are purchased third party fonts—you may buy your own copy [here](http://practicaltypography.com/equity.html).
+**I do NOT** give permission for you to reuse the fonts that are embedded within the CSS files; these are purchased third party fonts—you may buy your own copy [here](https://practicaltypography.com/equity.html).
 
 ## The TEMPLATE licence
 
@@ -100,7 +101,7 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
-<img src="http://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P12.svg">
+<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P13.svg">
 
 ## Additional information
 

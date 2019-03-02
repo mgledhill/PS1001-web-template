@@ -46,6 +46,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
+                                          Privacy policy added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -73,15 +76,14 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
-        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
-        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
-
-        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/80-00-finally/05-local-js/80-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script src="01-pages/80-00-finally/05-local-js/80-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
 
 
 
@@ -95,6 +97,7 @@ Date          Issue        Author         Reason for Modification
         <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -106,6 +109,7 @@ Date          Issue        Author         Reason for Modification
                                           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
                                           ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
                                           ga('send', 'pageview');
                                         </script>
 
@@ -159,7 +163,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p10-tq-min.svg"> <!-- Build status -->
+                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -168,7 +172,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 80-00&nbsp;&mdash;&nbsp;P10</p>   <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 80-00&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -198,7 +202,7 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev2-num"></span><span class="toc-lev2-text">Colophon</span></div></a>
                         </li>                                   <!-- TOC link end   -->
                         <li><a class="js--sc-800400" href="80-00-finally.html#js--800400">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev2-num"></span><span class="toc-lev2-text">Legal</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev2-num"></span><span class="toc-lev2-text">Legal &amp; Privacy</span></div></a>
                         </li>                                   <!-- TOC link end   -->
                     </ul>                                       <!-- End of TOC in columns -->
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -270,7 +274,9 @@ Date          Issue        Author         Reason for Modification
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">So if you&rsquo;re happy with that, you can reach me here:</p>
-                    <a class="hlink" href="mailto:mg@practicalseries.com" style="margin-left: 6rem">mg@practicalseries.com.</a>
+                    <p class="hyp"><a class="hlink" href="mailto:mg@practicalseries.com" style="margin-left: 6rem">mg@practicalseries.com.</a></p>
+
+                    <p class="hyp">I&rsquo;ve included the full details of how I store and manage emails in the <a class="xref nohyp js--sc-800500b" href="#">privacy and personal data section</a> below:</p>
 
                 </div>                                          <!-- End of section text area   -->
 
@@ -874,10 +880,219 @@ Date          Issue        Author         Reason for Modification
 
 
 
+<!-- ************************************************************************** [WP 800500]
+     SECTION - PRIVACY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--800500">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-thinline"></div>
+                    <!-- <div class="sub-title-num-box"><h2></h2></div> Not needed if no number -->
+                    <div class="sub-title-text-box"><h2>Privacy &amp; cookies</h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">This is a big thing now in Europe and in England: <a class="hlink nohyp" href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">gdpr</a> <span class="first-use">(General Data Protection Regulation)</span>; it means I have to be very careful with any data I collect about people. I also have to explain why I want the data and what I&rsquo;m going to do with it. So here goes:</p>
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION INLINE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--800500a">          <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+                    <div class="sub-title-text-box"><h4>Cookies</h4></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">The only cookies I use on this site are those needed for <a class="hlink hyp" href="https://marketingplatform.google.com/about/analytics/">google analytics</a> and <a class="hlink nohyp" href="https://www.paypal.com/uk/home">PayPal</a> I use Goole Analytics to help analyse how visitors use the site. It works by installing <span class="first-use">cookies</span> on your computer. Cookies are small text files that are used to collect standard internet log data <span class="first-use">(time of visit, type of browser, operating system &amp;c.)</span> and visitor behaviour information <span class="first-use">(referring sites, landing page, links to other sites that have been clicked &amp;c.)</span>. It collects this data in an anonymous form. Note the deliberate emphasis on <span class="first-use">anonymous</span>, no personally identifiable information<sup>&dagger;1</sup> is collected, the type of information collected by Google Analytics is given on their help page under <a class="hlink nohyp" href="https://support.google.com/analytics/answer/6004245?hl=en">data collected by google analytics</a>.</p>
+
+                    <p class="hyp">The anonymous information generated by Google Analytics cookies about your use of this website is transmitted to Google&nbsp;&mdash;&nbsp;<span class="first-use">not to me</span>. This information is processed to compile statistical reports on website activity <span class="first-use">(for this site only)</span>. I use these reports to evaluate the aggregate visitor usage; I do this so that I can optimise the website content, and hopefully, make it better <span class="first-use">(If I&rsquo;m being honest, I also like to know how many people visit, it make me feel better if the number goes up)</span>.</p>
+
+                    <p class="hyp">The PayPal cookie is used for the <a class="hlink nohyp" href="https://www.paypal.com/gb/smarthelp/article/what-are-smart-payment-buttons-in-express-checkout-ts2173">PayPal checkout</a> process (you have to give PayPal some information if you want to make a donation).</p>
+
+                    <p class="hyp"><em>In summary, you can browse this site with complete anonymity.</em></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">By default Google Analytics collects the IP address of the website user. This is deemed personally identifiable information under GDPR (i.e. it is not considered to be anonymous), it is possible to stop Google Analytics doing this (by making it anonymise the IP address data, this is done by masking the last three digits of the address, see <a class="hlink nohyp" href="https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#anonymizeIp">here</a> for how to activate this option) and this is what I have done on this site.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                         <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left"><em>I am not collecting IP addresses via Google Analytics</em>.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                   </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION INLINE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--800500b">          <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+                    <div class="sub-title-text-box"><h4>Privacy and personal data</h4></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">This website does not ask for, nor does it collect, personal data. There is no <span class="menu">contact-me</span> form that asks for names, addresses, email details or phone numbers &amp;c. Neither are there any user logons or other such forms of identification.</p>
+
+                    <p class="hyp">People can email me if they want to, but that is their choice (I&rsquo;ve given my email address in a  <a class="xref nohyp js--sc-800100" href="#">previous section</a>) and I will respond as an individual to any emails I receive.</p>
+
+                    <p class="hyp">Where people do email me, I will not pass on any of their details to anyone else <span class="first-use">(even when they are rude to me)</span>. I respond directly to the sender and do not copy, forward or otherwise redistribute their emails with anyone else.</p>
+
+                    <p class="hyp">I delete all emails three months after the email conversation is complete (i.e. if you haven&rsquo;t emailed me for three months I delete all the emails I&rsquo;ve received from you and any replies I&rsquo;ve sent to you). </p>
+
+                    <p class="hyp">I do not reply to abusive emails <span class="first-use">(never argue with a stranger on the internet)</span> and these I delete straight away.</p>
+
+                    <p class="hyp">Where someone has asked a common or pertinent question, I may store the question itself and my response (these are copied to an offline Word FAQ sheet&nbsp;&mdash;&nbsp;what engineers call a <span class="first-use">technical query sheet</span>), but I do not store any of the questioner&rsquo;s details (just the question and answer in an anonymous <span class="first-use">text based</span> format).</p>
+
+                    <p class="hyp">I also receive the email addresses and some contact details of those people who make a donation to this website. This information is provided to me by <a class="hlink nohyp" href="https://www.paypal.com/en/webapps/mpp/ua/privacy-full">paypal</a>&nbsp;&mdash;&nbsp;they tell me who has made the donation.</p>
+
+                    <p class="hyp">If the donation is for £5 or more, I keep certain information about that individual in a secure offline database. I store precisely:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Name</p></li>
+
+                        <li><p class="hyp">Email address</p></li>
+
+                        <li><p class="hyp">Donation amount</p></li>
+
+                        <li><p class="hyp">Date of the donation</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I do this purely for the purpose of sending those people a link to the downloadable pdf version of this website (I make this freely available to all who donate £5 or more).</p>
+
+                    <p class="hyp">I keep this information so that I can send a link for each new revision of the pdf when such revisions are issued (typically once a year). I.e. I make the pdfs available in perpetuity.</p>
+
+                    <p class="hyp">I do not share this information with anyone.</p>
+
+                    <p class="hyp">I do not send marketing or unsolicited emails of any kind (I do not have a mailing list or anything like that).</p>
+
+                    <p class="hyp">Anyone wishing to have their details deleted need only ask. You can contact me at the following email address: <a class="hlink" href="mailto:mg@practicalseries.com">mg@practicalseries.com.</a></p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="09-07-fonts.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
 <!-- ************************************************************************** [WP 999901]
      SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
      ***********************************************************************-->
-        <div class="section-last"></div>                        <!-- last section before footer (bottom border) -->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
 <!-- ========================================================================== [WP END] -->
 
 
@@ -890,8 +1105,13 @@ Date          Issue        Author         Reason for Modification
                 <li><a class="js--sc-800100" href="#">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a class="js--sc-800200" href="#">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a class="js--sc-800300" href="#">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
-                <li><a class="js--sc-800400" href="#">Legal</a></li>
+                <li><a class="js--sc-800400" href="#">Legal &amp; Privacy</a></li>
             </ul>                                               <!-- End of footer navigation -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
         </footer>                                               <!-- End of footer -->
 <!-- ========================================================================== [WP END] -->
 
@@ -903,7 +1123,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      JAVASCRIPT (POST PAGE LOAD)
      ***********************************************************************-->
-        <!-- Lightbox -->               <script type="text/javascript" src="21-global/05-js/lightbox.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
 
     </body>
 </html>

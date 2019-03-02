@@ -47,6 +47,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+27 Jan 2019   P13          M. Gledhill    Additional scroll points included
+
+15 Jul 2018   d-P12.10.01  M. Gledhill    Git styles scroll point added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -71,10 +75,8 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P10</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P13</p>" /* LOCAL JS REVISION NUMBER */
     );
-
-
 
 /* ****************************************************************************
    SCROLL TO SECTION
@@ -158,6 +160,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--990900').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
+    $('.js--sc-991000').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--991000').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
 
   /* ---------------------------------------------------------------------------
    SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
@@ -172,8 +178,70 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });                                          /* END of scroll function */
 
     $('.js--sc-990101b').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--990101b').offset().top -140}, 1000);
+       $('html, body').animate({scrollTop: $('#js--990101b').offset().top -120}, 1000);
     });                                          /* END of scroll function */
+
+    $('.js--sc-990200a').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990200a').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990200b').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990200b').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990200c').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990200c').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300a').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300a').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300b').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300b').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300c').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300c').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300d').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300d').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300e').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300e').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990300f').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990300f').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990400a').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990400a').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990400b').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990400b').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990400c').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990400c').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990400d').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990400d').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990700a').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990700a').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+    $('.js--sc-990700b').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--990700b').offset().top -120}, 1000);
+    });                                          /* END of scroll function */
+
+
 
 
 /* ---------------------------------------------------------------------------
@@ -196,6 +264,14 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
 
     $('.js--sc-t99-01').click(function () {     /* START of scroll function */
        $('html, body').animate({scrollTop: $('#js--t99-01').offset().top -60}, 1000);
+    });
+
+    $('.js--sc-c9901').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--c9901').offset().top -120}, 1000);
+    });
+
+    $('.js--sc-e99-01').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--e99-01').offset().top -80}, 1000);
     });
 
 });                                             /* END OF PAGE READY FUNCTION */

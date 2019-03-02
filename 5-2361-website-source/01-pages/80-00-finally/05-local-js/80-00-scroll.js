@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+09 Aug 2018   P13          M. Gledhill    Privicy section added
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -71,7 +73,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P10</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P13</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -132,6 +134,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
 
     $('.js--sc-800400').click(function () {     /* START of scroll function */
        $('html, body').animate({scrollTop: $('#js--800400').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
+    $('.js--sc-800500b').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--800500b').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
 

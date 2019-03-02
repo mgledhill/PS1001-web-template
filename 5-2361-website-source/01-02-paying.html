@@ -46,6 +46,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
+                                          Privacy policy added
+
 14 Jul 2018   P12          M. Gledhill    Published
 
 30 Jun 2018   d-P10.00.01  M. Gledhill    Proof reading and additional content
@@ -77,15 +80,15 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script type="text/javascript" src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)            <script type="text/javascript" src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
-        <!-- Prettify (Language)        <script type="text/javascript" src="21-global/05-js/lang-css.js" defer></script> -->
-        <!-- Hyphenator -->             <script type="text/javascript" src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax                    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)            <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
+        <!-- Prettify (Language)        <script src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax                    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
 
-        <!-- PS main script -->         <script type="text/javascript" src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script type="text/javascript" src="01-pages/01-02-paying/05-local-js/01-02-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script src="01-pages/01-02-paying/05-local-js/01-02-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
 
 
 
@@ -99,6 +102,7 @@ Date          Issue        Author         Reason for Modification
         <!-- Lightbox styles            <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">  -->
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -110,6 +114,7 @@ Date          Issue        Author         Reason for Modification
                                           })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
                                           ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
                                           ga('send', 'pageview');
                                         </script>
 
@@ -163,7 +168,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
                   <div class="rg-col rg-span1-5">
                     <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="11-resources/02-images/02-build-status/build-p12-tq-min.svg"> <!-- Build status -->
+                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
                     </aside>                                    <!-- End of left side bar   -->
                 </div>                                          <!-- End of Left column -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
@@ -172,7 +177,7 @@ Date          Issue        Author         Reason for Modification
                 </div>                                          <!-- End of title (centre column) -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
                     <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 01-02&nbsp;&mdash;&nbsp;P12</p>           <!-- Revision information    -->
+<!--REVISION-->         <p>Rev: 01-02&nbsp;&mdash;&nbsp;P12.10.02</p>           <!-- Revision information    -->
                     </aside>                                    <!-- End of right side bar   -->
                 </div>                                          <!-- End of right column     -->
             </div>                                              <!-- End of title row (section number & heading) -->
@@ -279,19 +284,30 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                      <ol class="list-num" start="1">
-                        <li><p class="hyp">Make a donation (I suggest £2-£15 though anything is welcome)&nbsp;&mdash;&nbsp;donate the amount that best reflects your appreciation of the site:</p></li>
+                        <li><p class="hyp">Make a donation (I suggest £2-£15 though anything is welcome)&mdash;donate the amount that best reflects your appreciation of the site:</p></li>
                     </ol>
+
+                    <p class="hyp" style="padding-left:6.0rem">Directly with PayPal:</p>
+
+                    <div class="payment"  style="margin-top: 0.1rem">   <!-- holds the paypal donate button -->
+                        <a class="pay" href="http://paypal.me/PracticalSeries"><img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal Logo"></a>
+                    </div>
+                    <p class="hyp" style="padding-left:6.0rem">or credit card:</p>
+
+
                     <div class="payment">   <!-- holds the paypal donate button -->
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="ACC3ZXUH5M7EC">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+                        <input type="image" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_SbyPP_mc_vs_ms_ae_UK.png" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                        <img alt="" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
                         </form>
                     </div>
 
+                    <p class="hyp" style="padding-left:6.0rem">Anyone donating more than £5.00 will receive a PDF version of this website.</p>
+
                     <ol class="list-num" start="2">
-                        <li><p class="hyp">Tell other people (free)&nbsp;&mdash;&nbsp;I can’t say this is as good as the other option but exposure is better than nothing.</p></li>
+                        <li><p class="hyp">Tell other people (free)&mdash;I can’t say this is as good as the other option but exposure is better than nothing.</p></li>
                     </ol>                                       <!-- End of numbered list -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -364,16 +380,12 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-
-
-
-
-
-
 <!-- ************************************************************************** [WP ADDITIONAL]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
         <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
             <div class="rg-row">                                <!-- Start of row content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -405,8 +417,13 @@ Date          Issue        Author         Reason for Modification
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
-                <li><a href="80-00-finally.html#js--800400">Legal</a></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
             </ul>                                               <!-- End of footer navigation -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
         </footer>                                               <!-- End of footer -->
 <!-- ========================================================================== [WP END] -->
 
@@ -414,6 +431,6 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      JAVASCRIPT (POST PAGE LOAD)
      ***********************************************************************-->
-        <!-- Lightbox                   <script type="text/javascript" src="21-global/05-js/lightbox.js"></script> -->
+        <!-- Lightbox                   <script src="21-global/05-js/lightbox.js"></script> -->
     </body>
 </html>

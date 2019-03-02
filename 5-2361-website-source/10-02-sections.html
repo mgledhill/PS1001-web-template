@@ -1,0 +1,680 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language -->
+    <head>                                                                      <!-- Start of head section -->
+        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Semantic elements and alternatives to div elements">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           10-02-SECTIONS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+02 Mar 2018   P13          M. Gledhill    Published
+
+10 Aug 2018   d-P12.10.03  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
+        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
+        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- PS local scroll script --> <script src="01-pages/10-02-sections/05-local-js/10-02-scroll.js" defer></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
+        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/10-02-sections/01-local-css/10-02-prettifylines.css">-->
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Semantic elements | PracticalSeries: Web Development</title>
+    </head>
+
+    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+
+
+<!-- ************************************************************************** [WP 000000]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP 000001]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top navigation bar -->
+                <div class="top-nav">                           <!-- Start of top navigation row -->
+                    <div class="rg-row">                        <!-- Start of navigation button row -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="10-01-sections.html#js--100100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="09-00-fonts.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 05 - Next Chapter -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 06 - Next section -->
+                        <a class="nav-wide" href="10-03-sections.html#js--100300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000003]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
+                  <div class="rg-col rg-span1-5">
+                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
+                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P13.svg" alt="Build status information"> <!-- Build status -->
+                    </aside>                                    <!-- End of left side bar   -->
+                </div>                                          <!-- End of Left column -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+                    <div class="title-num-box"><p>10</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">9</span>Body text, sections and headings</h1></div>
+                </div>                                          <!-- End of title (centre column) -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
+<!--REVISION-->         <p>Rev: 10-00&nbsp;&mdash;&nbsp;P13</p>   <!-- Revision information    -->
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of title row (section number & heading) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 10. BODY TEXT, SECTIONS AND HEADINGS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
+                        <li><a class="js--sc-100000" href="10-00-sections.html#js--000000">  <!-- TOC link start -->
+                               <div class="toc-lev"><span class="toc-lev1-num">10</span><span class="toc-lev1-text">Body text, sections and headings</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                    </ul>                                       <!-- End of full width TOC (level 1) -->
+
+                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
+                        <li><a class="js--sc-100100" href="10-01-sections.html#js--100100">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.1</span><span class="toc-lev2-text">Responsive body text</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100101" href="10-01-sections.html#js--100101">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.1</span><span class="toc-lev3-text">Changing the body text point size (breakpoints)</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100200" href="10-02-sections.html#js--100200">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.2</span><span class="toc-lev2-text">Sections, asides and other alternatives to &lt;div&gt;</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100201" href="10-02-sections.html#js--100201">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.1</span><span class="toc-lev3-text">The <span class="code">&lt;section&gt;</span> element</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100300" href="10-03-sections.html#js--100300">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.3</span><span class="toc-lev2-text">A standard section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100301" href="10-03-sections.html#js--100301">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.1</span><span class="toc-lev3-text">The <span class="code">section-std</span> class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100302" href="10-03-sections.html#js--100302">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.2</span><span class="toc-lev3-text">The <span class="code">sub-title-row</span> class</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100303" href="10-03-sections.html#js--100303">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.3</span><span class="toc-lev3-text">Putting content into a section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100304" href="10-03-sections.html#js--100304">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.4</span><span class="toc-lev3-text">The central content column</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100305" href="10-03-sections.html#js--100305">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.5</span><span class="toc-lev3-text">Left and right asides</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100306" href="10-03-sections.html#js--100306">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.6</span><span class="toc-lev3-text">Making the asides responsive</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100307" href="10-03-sections.html#js--100307">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.7</span><span class="toc-lev3-text">What if I don’t want to use sidebars?</span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100400" href="10-04-sections.html#js--100400">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.4</span><span class="toc-lev2-text">A lead-in section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100500" href="10-05-sections.html#js--100500">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.5</span><span class="toc-lev2-text">A subsection</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100600" href="10-06-sections.html#js--100600">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.6</span><span class="toc-lev2-text">An inline section</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100700" href="10-07-sections.html#js--100700">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.7</span><span class="toc-lev2-text">Additional section rows</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100800" href="10-08-sections.html#js--100800">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.8</span><span class="toc-lev2-text">Sections and headings</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100801" href="10-08-sections.html#js--100801">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.1</span><span class="toc-lev3-text">The <span class="code">&lt;h1&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100802" href="10-08-sections.html#js--100802">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.2</span><span class="toc-lev3-text">The <span class="code">&lt;h2&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100803" href="10-08-sections.html#js--100803">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.3</span><span class="toc-lev3-text">The <span class="code">&lt;h3&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100804" href="10-08-sections.html#js--100804">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.4</span><span class="toc-lev3-text">The <span class="code">&lt;h4&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100805" href="10-08-sections.html#js--100805">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.5</span><span class="toc-lev3-text">The <span class="code">&lt;h5&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100806" href="10-08-sections.html#js--100806">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.6</span><span class="toc-lev3-text">The <span class="code">&lt;h6&gt;</span> heading</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100807" href="10-08-sections.html#js--100807">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.7</span><span class="toc-lev3-text">Headings: a summary</span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100900" href="10-09-sections.html#js--100900">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev2-num">10.9</span><span class="toc-lev2-text">Inline body text styles</span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100901" href="10-09-sections.html#js--100901">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.1</span><span class="toc-lev3-text">Inline style  <span class="code">.all-caps</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100902" href="10-09-sections.html#js--100902">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.2</span><span class="toc-lev3-text">Inline style  <span class="code">.code</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100903" href="10-09-sections.html#js--100903">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.3</span><span class="toc-lev3-text">Inline style  <span class="code">em</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100904" href="10-09-sections.html#js--100904">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.4</span><span class="toc-lev3-text">Inline style  <span class="code">.first-use</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100905" href="10-09-sections.html#js--100905">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.5</span><span class="toc-lev3-text">Inline style  <span class="code">.index</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100906" href="10-09-sections.html#js--100906">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.6</span><span class="toc-lev3-text">Inline style  <span class="code">.menu</span></span></div></a>
+                        </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100907" href="10-09-sections.html#js--100907">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.7</span><span class="toc-lev3-text">Inline style  <span class="code">.mono</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100908" href="10-09-sections.html#js--100908">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.8</span><span class="toc-lev3-text">Inline style  <span class="code">.notice</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100909" href="10-09-sections.html#js--100909">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.9</span><span class="toc-lev3-text">Inline style  <span class="code">.red</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100910" href="10-09-sections.html#js--100910">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.10</span><span class="toc-lev3-text">Inline style  <span class="code">.san</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100911" href="10-09-sections.html#js--100911">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.11</span><span class="toc-lev3-text">Inline style  <span class="code">.serif</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100912" href="10-09-sections.html#js--100912">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.12</span><span class="toc-lev3-text">Inline style  <span class="code">.serif-b</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100913" href="10-09-sections.html#js--100913">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.13</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-ns</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                        <li><a class="js--sc-100914" href="10-09-sections.html#js--100914">  <!-- TOC link start -->
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.14</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-s</span></span></div></a>
+                         </li>                                   <!-- TOC link end   -->
+                     </ul>                                       <!-- End of TOC in columns -->
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                </div>                                          <!-- End of TOC column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
+            </div>                                              <!-- End of TOC section -->
+<!-- ========================================================================== [WP END] -->
+
+
+        </header>                                               <!-- End of header -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP fixed-nav]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+<!-- ************************************************************************** [WP 100200]
+     SECTION - 10.2 SECTIONS, ASIDES AND OTHER ALTERNATIVES TO DIV
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100200">           <!-- Start of section -->
+            <!-- Subtitle row is not normally needed at the start of the first section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+                 <div class="sub-title-num-box"><h2>10.2</h2></div>
+                    <div class="sub-title-text-box"><h2>Sections, asides and other alternatives to <span class="code">&lt;div&gt;</span></h2></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I&rsquo;ve used the <span class="code">&lt;div&gt;</span> divider element a lot; the first-site example used it to establish the CSS box model (<a class="hlink nohyp" href="06-00-box.html#js--000000">section&nbsp;6</a>) and the responsive grid used to set out the column arrangement on each web page (<a class="hlink nohyp" href="08-00-columns.html#js--000000">section&nbsp;8</a>).</p>
+
+                    <p class="hyp">The <span class="code">&lt;div&gt;</span> element is the standard mechanism for dividing a web page into different areas. In the past (prior to HTML&nbsp;5), the <span class="code">&lt;div&gt;</span> was the only thing available to do this; and this was fine, it did it well. The problem was that <span class="code">&lt;div&gt;</span> was used everywhere, it was used to hold navigations, adverts, images, and also the main content of the website; and this became confusing, particularly for search engines, it was difficult for a search engine to know what were the important bits of the website and what were just asides, introductions, adverts, navigations &amp;c.</p>
+
+                    <p class="hyp">With HTML&nbsp;5, this changed. HTML&nbsp;5 introduced <span class="first-use">semantic elements</span>.</p>
+
+                    <p class="hyp">Semantic elements are basically <span class="code">&lt;div&gt;</span> elements with a meaningful name that gives some indication of the content of the element. There are a lot of them (<a class="xref js--sc-t10-01" href="#">Table&nbsp;10.2</a>).</p>
+
+                    <p class="hyp">Semantic elements operate, and do exactly the same as a <span class="code">&lt;div&gt;</span><sup>&dagger;1</sup> ; their purpose is simply to provide some guidance and clarity to how the web page is structured.</p>
+
+                    <p class="hyp">The main ones I use are <span class="code">&lt;section&gt;</span>, <span class="code">&lt;aside&gt;</span>, <span class="code">&lt;nav&gt;</span>, <span class="code">&lt;header&gt;</span>, <span class="code">&lt;footer&gt;</span>, <span class="code">&lt;figure&gt;</span> and <span class="code">&lt;figcaption&gt;</span>.</p>
+
+                    <p class="hyp">There are many more, I list the most common ones and their function in the following table:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t10-01">                 <!-- TABLE - Start of table  -->
+                        <tr>                                    <!-- TABLE - Start of header -->
+                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                             <th class="table-left" style="width: 30%">Semantic elemenT</th>       <!-- set column 02 width here -->
+                            <th class="table-left" style="width: 70%">Purpose</th>    <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;article&gt;</span></td>
+                            <td class="table-left">Specifies independent, self-contained content. It should make sense on its own and it should be possible to read it independently from the rest of the web site.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;aside&gt;</span></td>
+                            <td class="table-left">Specifies some content that is aside from the main content within which it is placed in (like a sidebar or footnote); it should be related to the surrounding content.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;details&gt;</span></td>
+                            <td class="table-left">Specifies additional details that the user can view or hide on demand. It is used to create interactive content that the user can open and close as required. It can hold any sort of </td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;figcaption&gt;</span></td>
+                            <td class="table-left">Defines a caption for a <span class="code">&lt;figure&gt;</span> element</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;figure&gt;</span></td>
+                            <td class="table-left">Specifies content such as illustrations, diagrams, photographs &amp;c.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;footer&gt;</span></td>
+                            <td class="table-left">Defines a footer for a document or section. It should contain information about its page or section. Typically it contains information about authorship, copyright, contacts, sitemap </td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;header&gt;</span></td>
+                            <td class="table-left">A container for introductory content or a set of navigational links. It typically contains: a heading element, logo or icon and table of contents information.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;main&gt;</span></td>
+                            <td class="table-left">Specifies the main content of a web page. Its content should be unique to the document. There can be only one <span class="code">&lt;main&gt;</span> element on a web page. </td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;mark&gt;</span></td>
+                            <td class="table-left">Defines marked or highlighted text that is to be brought to the readers notice.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;nav&gt;</span></td>
+                            <td class="table-left">Defines a set of navigation links. It is not necessary for all links to be in a <span class="code">&lt;nav&gt;</span> element, it is intended only for blocks of navigation links (table of content &amp;c.).</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;section&gt;</span></td>
+                            <td class="table-left">Defines a section in a document. A section is a thematic grouping of content, and should have a heading (like a section in this document).</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;summary&gt;</span></td>
+                            <td class="table-left">Defines a visible heading for a <span class="code">&lt;details&gt;</span> element.</td>
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 4.4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left"><span class="code">&lt;time&gt;</span></td>
+                            <td class="table-left">Defines a human-readable date or time. This element can also be used to encode dates and times in a machine-readable way to add scheduled events to the user's calendar </td>
+                        </tr>
+                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
+                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td colspan="2" class="table-caption">Table 10.2 &emsp; HTML Semantic elements</td>
+                        </tr>                                   <!-- TABLE - End of caption row   -->
+                    </table>                                    <!-- TABLE - End of table    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
+                        <tr>                                    <!-- TABLE - footnote header line -->
+                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
+                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
+                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
+                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
+                        </tr>                                   <!-- TABLE - End of footnote header line  -->
+                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Semantic elements do operate in exactly the same way as <span class="code">&lt;div&gt;</span> elements, but some of them have restrictions: <span class="code">&lt;section&gt;</span> elements must contain a heading <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span>, &amp;c. Others such as <span class="code">&lt;main&gt;</span> must only occur once on a page; that said, they work like a <span class="code">&lt;div&gt;</span> and do what a <span class="code">&lt;div&gt;</span> does&mdash;they just give it a specific name.</td>
+                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                    </table>                                    <!-- TABLE - End of footnote    -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s have a quick look at how I&rsquo;ve use semantic elements to structure the web page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f10-01">
+                            <a href="01-pages/10-02-sections/02-images/fig-10-01.jpg" data-lightbox="fig-set" data-title="Figure 10.1 - Website page semantic element structure">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/10-02-sections/02-images/fig-10-01.jpg" alt="Figure 10.1 - Website page semantic element structure">
+                            </a>
+                            <p>Figure 10.1 &emsp; Website page semantic element structure</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first section of the page is the <span class="code">&lt;header&gt;</span>. I use the header section to hold the main title for the web page, a table of contents and a dynamic navigation bar, this navigation bar is available on every page of the website and it has its own <span class="code">&lt;nav&gt;</span> area.</p>
+
+                    <p class="hyp">There is only one <span class="code">&lt;header&gt;</span> section on each page.</p>
+
+                    <p class="hyp">The final section on the page <span class="first-use">(just to jump around a bit)</span> is the <span class="code">&lt;footer&gt;</span>; this just holds a very simple navigation area linking to the standard kind of stuff: contacts, acknowledgements, legal, copyright &amp;c. <span class="first-use">(the usual bollocks)</span>. The footer also finishes off the page, adding a bottom border with a colour that matches the website background (the cream colour).</p>
+
+                    <p class="hyp">Again there is only one <span class="code">&lt;footer&gt;</span> on each page.</p>
+
+                    <p class="hyp">The <span class="code">&lt;header&gt;</span>, <span class="code">&lt;footer&gt;</span> and <span class="code">&lt;nav&gt;</span> semantic elements are used together and I discuss those in <a class="hlink nohyp utx" href="11-00-headfoot.html#js--000000">section&nbsp;11</a></p>
+
+                    <p class="hyp">The rest of the page is made up of <span class="code">&lt;section&gt;</span> elements, these are arranged one on top of the other (<a class="xref js--sc-f10-01" href="#">Figure&nbsp;10.1</a> shows three such section elements, but there are no limits&mdash;some pages have many more).</p>
+
+                    <p class="hyp">Each <span class="code">&lt;section&gt;</span> should be self-contained (it contains a textual discussion of a subject that is, in itself, complete), each of my sections are like the sections in a fairly simple document (if you are reading the pdf version of the website, this uses the same arrangement).</p>
+
+                    <p class="hyp">Each <span class="code">&lt;section&gt;</span> element has a heading.</p>
+
+                    <p class="hyp">Any <span class="code">&lt;section&gt;</span> elements can contain other semantic elements; the ones I use on the website are <span class="code">&lt;aside&gt;</span> (a section in either the right hand, left hand or both side columns), <span class="code">&lt;figure&gt;</span> (holds an image of some kind) or <span class="code">&lt;figcaption&gt;</span> (holds the caption for the figure).</p>
+
+                    <p class="hyp">Let&rsquo;s look at the &lt;section&gt; element in some detail:</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content  -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 100201]
+     SUBSECTION - 10.2.1 THE SECTION ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100201">           <!-- Start of section -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
+                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+                    <div class="sub-title-num-box"><h3>10.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;section&gt;</span> element</h3></div>
+                </div>                                          <!-- End of subtitle column (centre column) -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
+                <!--     <aside class="aside-left">                  Start of left side bar -->
+                <!--         <p></p>                                 Side bar content       -->
+                <!--     </aside>                                    End of left side bar   -->
+                </div>                                          <!-- End of left column     -->
+
+                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+
+                    <p class="hyp">I use the <span class="code">&lt;section&gt;</span> element to hold numbered sections, numbered subsections and (unnumbered) inline sub-sections of a document within a web page. This is a suitable arrangement for the <span class="code">&lt;section&gt;</span> element in that each section discusses a topic <span class="first-use">(a theme as it were)</span> and is generally self-contained and complete. A <span class="code">&lt;section&gt;</span> also needs a heading, and the document sections provide this too.</p>
+
+                    <p class="hyp">I use four different styles of section; these are all very similar to each other, the only difference being how the heading appears. These are the four:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list -->
+                        <li><p class="hyp">Lead-in section</p></li>
+
+                        <li><p class="hyp">Section</p></li>
+
+                        <li><p class="hyp">Subsection</p></li>
+
+                        <li><p class="hyp">Inline section</p></li>
+                    </ol>                                       <!-- End of numbered list -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><a class="xref js--sc-f10-02" href="#">Figure&nbsp;10.2</a> shows how the four different types of section look on a web page:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT MULTIPLE PARAGRAPHS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note -->
+                        <li>The sections normally have a white background, I&rsquo;ve coloured them here to make it clear where each section starts and finishes.</li>
+                    </ul>                                       <!-- End of note -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">The area at the top with the white background is the &lt;header&gt; element; I cover this in <a class="hlink nohyp utx" href="11-00-headfoot.html#js--000000">Section&nbsp;11</a>.</span></p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     This is a single full width figure inserted into a section of the
+     document (class .fig1-1, the numbering is similar to that of grid
+     columns).
+
+     Full width images have a maximum width of 768 px
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <figure class="fig-row">                    <!-- START OF FIGURE -->
+                        <div class="fig-col fig1-1" id="js--f10-02">
+                            <a href="01-pages/10-02-sections/02-images/fig-10-02.jpg" data-lightbox="fig-set" data-title="Figure 10.2 - The Four different section types (coloured)">         <!-- LIGHTBOX LINK -->
+                                <img src="01-pages/10-02-sections/02-images/fig-10-02.jpg" alt="Figure 10.2 - The Four different section types (coloured)">
+                            </a>
+                            <p>Figure 10.2 &emsp; The Four different section types (coloured)</p>     <!-- Figure caption -->
+                        </div>
+                    </figure>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s start by looking at the one in orange, this is a typical section, it&rsquo;s the one that has everything (the others: lead-in, subsection and inline are all variations of it) &mdash; it&rsquo;s in the next section:</p>
+
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                <!--     <aside class="aside-right">                 Start of right side bar -->
+                <!--         <p></p>                                 Side bar content        -->
+                <!--     </aside>                                    End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of section content -->
+        </section>                                              <!-- End of section -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP ADDITIONAL]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
+            <div class="rg-row">                                <!-- Start of row content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                        <a class="xref" href="10-01-sections.html#js--100100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area   -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
+                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                        <a class="xref" href="10-03-sections.html#js--100300">Next</a>
+                    </aside>                                    <!-- End of right side bar   -->
+                </div>                                          <!-- End of right column     -->
+            </div>                                              <!-- End of row content  -->
+        </div>                                                  <!-- End of additional row -->
+<!-- ========================================================================== [WP END] -->
+
+
+
+
+<!-- ************************************************************************** [WP 999901]
+     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
+     ***********************************************************************-->
+        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP 999999]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer -->
+            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer navigation -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- **************************************************************************
+     JAVASCRIPT (POST PAGE LOAD)
+     ***********************************************************************-->
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+
+
+    </body>
+</html>
