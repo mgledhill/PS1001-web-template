@@ -84,6 +84,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+27 Jan 2019   P13          M. Gledhill    Clearfix hack removed from .top-nav
+                                          Minor inconsistences fixed:
+                                            - Duplications
+                                            - Unnecessary instructions
+
 14 Jul 2018   P11          M. Gledhill    Published (social media update)
 
 20 Dec 2017   d-P10.10.01  M. Gledhill    Social media icons added
@@ -114,7 +119,7 @@ Date          Issue        Author         Reason for Modification
 27 May 2017   D00          M. Gledhill    Development - based on PS1001 P10
 
 ---------------------------------------------------------------------------- */
-.aside-right-rev:after { content: "style.css\00a0\2014\00a0 \P11"; }      /* CSS REVISION NUMBER */
+.aside-right-rev:after { content: "style.css\00a0\2014\00a0 \P13"; }      /* CSS REVISION NUMBER */
 
 
 
@@ -241,15 +246,6 @@ body {
     font-feature-settings: "ss02";
     font-size: 80%;
 }
-.top-nav:after {                            /* ClearFix */
-    content:"";
-    display:table;
-    clear:both;
-}
-
-
-
-
 
 .nav-wide,                                  /* nav-wide/nav-narrow are the */
 .nav-narrow {                               /* navigation buttons          */
@@ -269,7 +265,7 @@ body {
 .nav-narrow { width: 10%; display: none; }  /* nav-narrow is 10% of top-nav */
                                             /* hide the narrow nav until fixed-nav activates */
 
-.nav-home { visibility: visible; }          /* make the wide home button visible */
+.nav-home { display: inline-block; }          /* make the wide home button visible */
                                             /* this will be hidden when fixed-nav activates */
 
 .nav-wide:link,                             /* navigation link options */
@@ -335,13 +331,12 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 1.0;
     width: 100%;
     z-index: 9999;                          /* Ensure nav is at top level */
 }
 
 .fixed-nav .nav-home { display: none; }     /* hide large home button */
-.fixed-nav .nav-narrow { display: block; }  /* display narrow top & home buttons */
+.fixed-nav .nav-narrow { display: inline-block;}  /* display narrow top & home buttons */
 .fixed-nav .nav-wide:first-child { border-left: 1px solid #ededed; }
 .fixed-nav .nav-wide:last-child { border-right: 1px solid #ededed; }
 
@@ -1106,14 +1101,14 @@ body {
     list-style: none;
     /* font-feature-settings: 'liga' 1, 'ss01' 0; */
 }
+.list-no-num li:before {                    /* prefix the list with a large dot and */
+    content: "\25cf"; float: left;              /* force the margin to the correct position */
+    margin-left: -2rem;
+}
 .list-no-num li p {
     font-family: "eqty-ta-r";
     padding-left: 1rem;
     margin-bottom: 0.85rem;
-}
-.list-no-num li:before {                    /* prefix the list with a large dot and */
-    content: "\25cf"; float: left;              /* force the margin to the correct position */
-    margin-left: -2rem;
 }
 
 .hlink {font-family: "eqty-ca-r"; }         /* TEXT STYLE - hyperlink */
@@ -1122,20 +1117,22 @@ body {
     background-color: #f8f8f8;
     border-bottom: 1px solid transparent;
     -webkit-transition: background-color 0.2s, border-bottom 0.2s;
-    transition: background-color 0.2s, border-bottom 0.2s;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
 }
 .hlink:hover,
-.hlink:active { background-color: #f8f8f8; border-bottom: 1px solid #404030; }
+.hlink:active { border-bottom: 1px solid #404030; }
 
 .xref:link,                                 /* TEXT STYLE - cross reference hyperlink */
 .xref:visited{
     background-color: #f8f8f8;
     border-bottom: 1px solid transparent;
     -webkit-transition: background-color 0.2s, border-bottom 0.2s;
-    transition: background-color 0.2s, border-bottom 0.2s;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
 }
 .xref:hover,
-.xref:active { background-color: #f8f8f8; border-bottom: 1px solid #404030; }
+.xref:active { border-bottom: 1px solid #404030; }
 
 .pay {font-family: "eqty-ca-r"; }         /* TEXT STYLE - hyperlink */
 .pay:link,
@@ -1465,7 +1462,7 @@ body {
 .fig-row {
     width: 100%;
     margin: 1.5rem auto 0 auto;
-    padding: 0rem 0 0 0;                 /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
+    padding: 0;                 /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
@@ -1474,58 +1471,55 @@ body {
     text-align: center;
 }
 
-.fig-row:before,  /* IE 9 support */
-.fig-row:after {  /* ClearFix */
-    content:"";
-    display:table;
-}
-.fig-row:after { clear:both; }
-
-
-
 @media only screen and (max-width: 520px) { .fig-row{ width: 100%; font-size: 0.8rem;} }
 
 
 .fig-col {
     margin: 0 0 0 2.5%;
-    padding: 0;
-}
+    display:inline-block;
+ }
 .fig-col:first-child { margin-left: 0; } /* remove left margin from first column */
 
-@media only screen and (max-width: 520px) { .fig-col{ margin:0; } }
+figcaption { margin-bottom: 1.2rem; }
+
 
 
 /* ----------------------------------------------------------------------------
    Single column span arrangement
    ------------------------------------------------------------------------- */
 
-.fig1-1 {
-    width: 100%;
-}
+.fig1-1 {  width: 100%; }
 .fig1-1 img { width: 100%; }
 
 /* ----------------------------------------------------------------------------
    Two column span arrangements
    ------------------------------------------------------------------------- */
 
-.fig1-2 { display:inline-block; width: 48.27%; }
+.fig1-2 {  width: 48.25%; }
 .fig1-2 img { width: 100%; }
-
-@media only screen and (max-width: 520px) { .fig1-2 { width: 60% }}
 
 
 /* ----------------------------------------------------------------------------
    Three column span arrangements
    ------------------------------------------------------------------------- */
 
-.fig1-3 { display:inline-block; width: 31.03%; }
-.fig2-3 { display:inline-block; width: 65.51%; }
+.fig1-3 { width: 31.16%; }
+.fig2-3 { width: 64.82%; }
 .fig1-3 img { width: 100%; }
-.fig2-3 img { width: 95%; margin: 0 auto;}
+.fig2-3 img { width: 100%; }
+
+
+
+/* ----------------------------------------------------------------------------
+   RESPONSIVE ARRANGEMENTS
+   ------------------------------------------------------------------------- */
+@media only screen and (max-width: 520px) { .fig-col{ margin:0; } }
 
 @media only screen and (max-width: 520px) {  /* stack columns at <=520 px */
-	.fig1-3,
-    .fig2-3 { width: 100%;}      /* by making all columns 100 % */
+	.fig1-1,
+    .fig1-2,
+    .fig1-3,
+    .fig2-3 { width: 75%;}      /* by making all columns 75% */
 }
 
 
@@ -1564,17 +1558,12 @@ tr.no-border th {                           /* no-bottom border */
     border-bottom: 1px solid #fff;
 }
 
-.leading {                                  /* empty column used to give a minimum height to a row */
-    margin:0;
-    padding:0;
-    max-width: 1px;}
 
 .table-caption {
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
     font-size: 0.6rem;
-    color: #404030;
     text-align: left;
 }
 
@@ -1613,21 +1602,20 @@ tr.no-border th {                           /* no-bottom border */
    row).
    ************************************************************************* */
 .table-clean {
-    font-family: "conc-t3-r";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-    font-size: 0.7rem;
     width: 84%;
     margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 1rem;
+    font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 0.7rem;
 }
 .table-clean th {
     font-family: "conc-t2-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
     text-transform: uppercase;
-    font-size: 0.7rem;
     letter-spacing: 0.086em;
     color: #7F7F7F;
     padding: 0.8rem 0.2rem 0.25rem 0.2rem;  /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
@@ -1642,11 +1630,10 @@ tr.no-border th {                           /* no-bottom border */
 .table-clean th:first-child {               /* first-child is leading (min-height row) */
     padding: 0;                             /* this has no margins, padding or border */
     margin: 0;
-    border-bottom: 1px solid #fff;
-}.table-clean td:first-child {              /* first-child is leading (min-height row) */
+}
+.table-clean td:first-child {              /* first-child is leading (min-height row) */
     padding: 0;                             /* this has no margins, padding or border */
     margin: 0;
-    border-bottom: 1px solid #fff;
 }
 
 .table-clean p {                            /* where formal paragraphs are used in a table, manipulate the margins */
@@ -1663,6 +1650,8 @@ tr.no-border th {                           /* no-bottom border */
     font-feature-settings: "ss02";
     font-style:normal;
 }
+.leading { width: 0; }                     /* empty column used to give a minimum height to a row */
+
 
 
 /* ****************************************************************************
@@ -1742,16 +1731,15 @@ tr.no-border th {                           /* no-bottom border */
    ************************************************************************* */
 .table-fnote {
     font-family: "conc-t3-r";
-     -webkit-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-   font-size: 0.65rem;
+    font-size: 0.65em;
     width: 95%;
-    margin: 2rem auto 1rem auto;
+    margin: 2rem auto 2rem auto;
     border-collapse: collapse;
-    margin-bottom: 2rem;
 }
 .table-fnote th {
-    padding: 0 0.2rem 0.25rem 0.2rem;
+    padding: 0 0 0.25rem 0;
 }
 .table-fnote td {
     vertical-align: text-top;
@@ -1789,7 +1777,7 @@ tr.in-no-border th {                        /* incidental table no-bottom border
     font-family: "conc-t3-r";
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
-    font-size: 0.8rem;
+    font-size: 0.8em;
     width: 84%;
     margin: 0 auto;
     border-collapse: collapse;
@@ -1802,7 +1790,6 @@ tr.in-no-border th {                        /* incidental table no-bottom border
     -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
     font-size: 0.7rem;
-    color: #404030;
     padding: 0.5rem 0.2rem 0.5rem 0.2rem;  /* *** PADDING TOP ADJUST GAP TO PREVIOUS PARA *** */
     border-top: 1px solid #cccccc;
 }

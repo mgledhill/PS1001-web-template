@@ -1,4 +1,4 @@
-/* Lightbox v2.8.2 | MIT License | github.com/lokesh/lightbox2/
+/* Lightbox v2.10.0 | MIT License | github.com/lokesh/lightbox2/
 
 *******************************************************************************
 Title :          LIGHTBOX CUSTOMISATION STYLE SHEET                LIGHTBOX.CSS
@@ -53,108 +53,114 @@ MODIFICATION HISTORY:
 This is a complete summary of all software modifications.
 
 
-Date          Issue    Author         Reason for Modification
+Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-11 Nov 2016   P01.00   M. Gledhill    Published in line with PS1001-5-211-011
+28 Feb 2019   P13          M. Gledhill    Updated to latest version v2.10.0
+                                          Image path and filenames changed.
+                                          lightbox and lightboxoverlay changed
+                                          to fixed position.
+                                          Fonts added to match website.
 
-21 Sep 2016   D00.02   M. Gledhill    .lightbox and .lightboxoverlay changed
-                                      to fixed position.
-                                      Fonts added to match website
+11 Nov 2016   P01.00       M. Gledhill    Published in line with PS1001-5-211-011
+
+21 Sep 2016   D00.02       M. Gledhill    .lightbox and .lightboxoverlay changed
+                                          to fixed position.
+                                          Fonts added to match website
 
 
-10 Oct 2016   D00.01   L. Dhakar      Original CSS file (v2.8.2)
+10 Oct 2016   D00.01       L. Dhakar      Original CSS file (v2.8.2)
 
 ---------------------------------------------------------------------------- */
 
-
-/* Preload images */
-body:after {
-    content: url(01-css-images/lightbox/lb-close.png) url(01-css-images/lightbox/lb-loading.gif) url(01-css-images/lightbox/lb-prev.png) url(01-css-images/lightbox/lb-next.png);
-    display: none;
-}
-
-body.lb-disable-scrolling {
-    overflow: hidden;
+html.lb-disable-scrolling {
+  overflow: hidden;
+  /* Position fixed required for iOS. Just putting overflow: hidden; on the body is not enough. */
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
 .lightboxOverlay {
-    position: fixed;                        /* MG CHANGED FROM ABSOLUTE */
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    background-color: black;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    opacity: 0.8;
-    display: none;
+  position: fixed;                      /* MG CHANGED - WAS ABSOLUTE */
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
 }
 
 .lightbox {
-    position: fixed;                        /* MG CHANGED FROM ABSOLUTE */
-    left: 0;
-    top: 25px !important;                   /* MG ADDED TO MAKE IMAGE VISIBLE */
-    width: 100%;
-    z-index: 10000;
-    text-align: center;
-    line-height: 0;
-    font-weight: normal;
+  position: fixed;                      /* MG CHANGED - WAS ABSOLUTE */
+  left: 0;
+  top: 25px !important;                 /* MG ADDED - MAKES IMAGE VISIBLE */
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
 }
 
 .lightbox .lb-image {
-    display: block;
-    height: auto;
-    max-width: inherit;
-    border-radius: 3px;
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+
+  /* Image border */
+  border: 4px solid white;
 }
 
 .lightbox a img {
-    border: none;
+  border: none;
 }
 
 .lb-outerContainer {
-    position: relative;
-    background-color: white;
-    *zoom: 1;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 4px;
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white;
 }
 
 .lb-outerContainer:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.lb-container {
-    padding: 4px;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .lb-loader {
-    position: absolute;
-    top: 43%;
-    left: 0;
-    height: 25%;
-    width: 100%;
-    text-align: center;
-    line-height: 0;
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
 }
 
 .lb-cancel {
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin: 0 auto;
-    background: url(01-css-images/lightbox/lb-loading.gif) no-repeat;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(01-css-images/lightbox/lb-loading.gif) no-repeat;   /* MG CHANGED - PATH AND NAME */
 }
 
 .lb-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
 }
 
 .lb-container > .nav {
@@ -162,106 +168,119 @@ body.lb-disable-scrolling {
 }
 
 .lb-nav a {
-    outline: none;
-    background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
 .lb-prev, .lb-next {
-    height: 100%;
-    cursor: pointer;
-    display: block;
+  height: 100%;
+  cursor: pointer;
+  display: block;
 }
 
 .lb-nav a.lb-prev {
-    width: 34%;
-    left: 0;
-    float: left;
-    background: url(01-css-images/lightbox/lb-prev.png) left 48% no-repeat;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 0.6s;
-    transition: opacity 0.6s;
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(01-css-images/lightbox/lb-prev.png) left 48% no-repeat;   /* MG CHANGED - PATH AND NAME */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .lb-nav a.lb-prev:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 .lb-nav a.lb-next {
-    width: 64%;
-    right: 0;
-    float: right;
-    background: url(01-css-images/lightbox/lb-next.png) right 48% no-repeat;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 0.6s;
-    transition: opacity 0.6s;
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(01-css-images/lightbox/lb-next.png) right 48% no-repeat;   /* MG CHANGED - PATH AND NAME */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 
 .lb-nav a.lb-next:hover {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 .lb-dataContainer {
-    margin: 0 auto;
-    padding-top: 5px;
-    *zoom: 1;
-    width: 100%;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .lb-dataContainer:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .lb-data {
-    padding: 0 4px;
-    color: #ccc;
+  padding: 0 4px;
+  color: #ccc;
 }
 
 .lb-data .lb-details {
-    width: 85%;
-    float: left;
-    text-align: left;
-    line-height: 1.1em;
+  font-family: "conc-t4-b";               /* MG ADDED - USES PS FONTS */
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
 }
 
 .lb-data .lb-caption {
-    font-family: "conc-t4-b";               /* MG ADDED - USES PS FONTS */
-    font-size: 13px;
-    line-height: 1em;
+  font-family: "conc-t4-b";               /* MG ADDED - USES PS FONTS */
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  font-family: "conc-t4-b";               /* MG ADDED - USES PS FONTS */
+  color: #4ae;
 }
 
 .lb-data .lb-number {
-    display: block;
-    clear: left;
-    padding-bottom: 1em;
-    font-family: "conc-t4-r";               /* MG ADDED - USES PS FONTS */
-    font-size: 12px;
-    color: #999999;
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-family: "conc-t4-r";               /* MG ADDED - USES PS FONTS */
+  font-size: 12px;
+  color: #999999;
 }
 
 .lb-data .lb-close {
-    display: block;
-    float: right;
-    width: 30px;
-    height: 30px;
-    background: url(01-css-images/lightbox/lb-close.png) top right no-repeat;
-    text-align: right;
-    outline: none;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-    opacity: 0.7;
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s;
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(01-css-images/lightbox/lb-close.png) top right no-repeat;   /* MG CHANGED - PATH AND NAME */
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .lb-data .lb-close:hover {
-    cursor: pointer;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
