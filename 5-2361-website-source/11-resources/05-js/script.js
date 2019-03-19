@@ -8,12 +8,12 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS
 
-jQuery is using version 3.1.0 from the GoogleAPIs library.
+jQuery is the latest version from the GoogleAPIs library.
 
 The Waypoint function is a Java plugin supplied by imakewebthings and downloaded
 from their website: http://imakewebthings.com/waypoints/
@@ -51,6 +51,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+17 Mar 2019   d-P13.00.01  M. Gledhill    Revision added to right sidebar
+
 14 Jul 2018   P11          M. Gledhill    Published (social media update)
 
 20 Dec 2017   P10.10.01    M. Gledhill    Social media icons manipulation added
@@ -74,11 +76,22 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
 
 
 /* ****************************************************************************
+   REVISION
+   **************************************************************************** */
+
+    $('.aside-right-rev').append (
+        "<p>script.js&nbsp;&mdash;&nbsp;d-P13.00.01</p>" /* LOCAL JS REVISION NUMBER */
+    );
+
+/* ****************************************************************************
    FIXED NAVIGATION BAR (WAYPOINT FUNCTION)
    ****************************************************************************
    This function causes the navigation bar to be fixed at the top edge of the
    screen once the user has scrolled down to waypoint js--fixed-nav (this is
    generally the first section of the website after the TOC).
+
+   The waypoint js--fixed-nav can be either a class or ID in the HTML,
+   ID is preferred.
 
    The waypoint function adds the class .fixed-nav to the <nav> element.
 
@@ -91,6 +104,7 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
    ************************************************************************* */
 
 
+    /* FIXED NAV TRIGGERS AT THE CLASS .js--fixed-nav */
     $('.js--fixed-nav').waypoint(function (direction) { /* START of Waypoint function
                                                            triggers as .js--fixed-nav class */
         if (direction == "down") {                      /* check direction */
@@ -102,6 +116,18 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
     offset: '70px'                                      /* check for waypoint 60px before top of screen */
     });                                                 /* END of Waypoint function */
 
+
+    /* FIXED NAV TRIGGERS AT THE ID #js--fixed-nav */
+    $('#js--fixed-nav').waypoint(function (direction) { /* START of Waypoint function
+                                                           triggers as #js--fixed-nav ID */
+        if (direction == "down") {                      /* check direction */
+            $('nav').addClass('fixed-nav');             /* if moving downward activate fixed-nav class */
+        } else {
+            $('nav').removeClass('fixed-nav');          /* if moving upward de-activate fixed-nav class */
+        }
+    }, {
+    offset: '70px'                                      /* check for waypoint 60px before top of screen */
+    });                                                 /* END of Waypoint function */
 /* ****************************************************************************
    SOCIAL MEDIA CHARACTER CHANGE
    ****************************************************************************

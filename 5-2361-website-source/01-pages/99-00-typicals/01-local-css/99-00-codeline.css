@@ -1,7 +1,7 @@
 /* PRACTICALSERIES (c) 2016
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        99-06-PRETTIFYLINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS                 99-00-CODE.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -44,6 +44,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+17 Mar 2019   d-P13.00.01  M. Gledhill    Filename changed to code
+                                          Fragment numbers updated
+                                          CSS colours added to prettify.css
+                                          Revision added to right sidebar
+
 27 Jan 2019   P13          M. Gledhill    Content proofread and updated
 
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
@@ -53,23 +58,28 @@ Date          Issue        Author         Reason for Modification
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c990701 - FORMATTING
+   REVISION
+   **************************************************************************** */
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P13.00.01"; }
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c9901 - FORMATTING
    ************************************************************************* */
-#js--c9901 li:nth-child(2) { background: #EAF1DD }                      /* line background green */
-#js--c9901 li:nth-child(n+5):nth-child(-n+10) { background: #EAF1DD }   /* line background green (range) */
+#js--c9901 li:nth-child(2) { background: #EAF1DD }
+#js--c9901 li:nth-child(n+5):nth-child(-n+10) { background: #EAF1DD }
 /* ************************************************************************* */
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c990702 - FORMATTING
+   CODE FRAGMENT c9902 - FORMATTING
    ************************************************************************* */
-#js--c9902 li:nth-child(1) {padding-left: 7.4rem;}                      /* adjust indent for line wrap */
+#js--c9902 li:nth-child(1) {padding-left: 7.4rem;}                     .
 /* ************************************************************************* */
 
-
 /* ****************************************************************************
-   CODE FRAGMENT c990703 - FORMATTING
+   CODE FRAGMENT c9903 - FORMATTING
    ************************************************************************* */
-#js--c9903 .pln { color: #4271ae;}                                     /* overlay style colours for CSS fragment */
-#js--c9903 .lit { color: #718c00;}
+#js—-c9903 li:nth-child(4) {padding-left: 4.4rem;}
+#js—-c9903 li:nth-child(5) {padding-left: 4.4rem;}
 /* ************************************************************************* */

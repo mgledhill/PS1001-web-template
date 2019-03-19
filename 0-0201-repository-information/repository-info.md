@@ -2,7 +2,7 @@
 
 The current version of this file is:
 
-<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-03.svg">
+<img src="https://img.shields.io/badge/Pub-P13-4F81BC.svg">
 
 
 # Repository basic information

@@ -69,6 +69,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+09 Aug 2018   d-P13.00.01  M. Gledhill    styles updated for lang-css
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -103,7 +105,7 @@ pre.prettyprint {
     font-family: "trip-t4-r";
     font-size: 0.61rem;
     line-height: 135%;
-    width: 99%;
+    width: 100%;
     padding-left: 2.5rem;
     overflow: auto;                         /* will apply scroll bars if required */
 }
@@ -133,17 +135,7 @@ ol.linenums {
     margin-bottom: 0;
     color: #949494;
 }
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L4,
-li.L5,
-li.L6,
-li.L7,
-li.L8,
-li.L9 {
-    padding-left: 1em;                      /* padding is added to ensure numbers are visible with scroll bars */
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
     background-color: rgba(255, 255, 255, 0);
     list-style-type: decimal;
 }
@@ -158,33 +150,22 @@ li.L9 {
    ------------------------------------------------------------------------- */
 
 .pln { color: #404030; }                    /* plain (default) text colour */
-
-.str { color: #718c00; }                    /* string content */
-
+.str { color: #e98a0b; }                    /* string content */
 .kwd { color: #8959a8; }                    /* keyword */
-
 .com { color: #949494; }                    /* comment */
-
 .typ { color: #4271ae; }                    /* variable type - e.g. int */
-
-.lit { color: #E98A0B; }                    /* literal value */
-
+.lit { color: #e98a0b; }                    /* literal value */
 .pun { color: #535353; }                    /* punctuation */
-
 .opn { color: #4d4d4c; }                    /* lisp open bracket */
-
 .clo { color: #4d4d4c; }                    /* lisp close bracket */
-
-.tag { color: #4F77C0; }                    /* markup tag name */
-
-.atn { color: #758D0F; }                    /* markup attribute name */
-
-.atv { color: #E98A0B; }                    /* markup attribute value */
-
+.tag { color: #4f77c0; }                    /* markup tag name */
+.atn { color: #758d0f; }                    /* markup attribute name */
+.atv { color: #e98a0b; }                    /* markup attribute value */
 .dec { color: #404030; }                    /* declaration */
-
-.var { color: #8757AD; }                    /* variable name */
-
+.var { color: #8757ad; }                    /* variable name */
 .fun { color: #4271ae; }                    /* function name */
 
 
+.lang-css .pln { color: #4271ae;}
+.lang-css .lit { color: #718c00;}
+.lang-css .str { color: #E98A0B;}
