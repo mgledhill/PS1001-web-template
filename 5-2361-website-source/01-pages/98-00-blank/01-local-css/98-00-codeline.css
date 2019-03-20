@@ -1,16 +1,14 @@
-
-
-/* PRACTICALSERIES (c) 2017
+/* PRACTICALSERIES (c) 2016
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        cc-ss-PRETTIFYLINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS                 98-00-CODE.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS
@@ -32,13 +30,16 @@ of lines to green (indicating the code has changed).
 
 2. LINE INDENTATION ON LINE WRAP
 Changes how a line is indeneted when it wraps around in the code fragment
-display
+display.
 
+Common indent points:
 
-3.CSS CLASS CHANGES
-Code fragments showning CSS do not display in the correct colours, the
-.pln and .lit classes are over-riddent to give more accurate colouring
-
+    Indent 1:   1.46rem
+    Indent 2:   2.92rem
+    Indent 3:   4.38rem
+    Indent 4:   5.85rem
+    Indent 5:   7.33rem
+    Indent 6:   8.79rem
 -------------------------------------------------------------------------------
 MODIFICATION HISTORY:
 
@@ -46,21 +47,34 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-DD Mmm 2017   SNN.XX.SMM   M. Gledhill    Development
+19 Mar 2019   d-P13.00.02  M. Gledhill    page created
 
 ---------------------------------------------------------------------------- */
 
 
 /* ****************************************************************************
-   CODE FRAGMENT cXXYYZZ - FORMATTING
+   REVISION
+   **************************************************************************** */
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P13.00.02"; }
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c98-01 - FORMATTING
    ************************************************************************* */
-#js--cXXYYZZ li:nth-child(1) { background: #EAF1DD }                      /* line background green */
-#js--cXXYYZZ li:nth-child(n+6):nth-child(-n+8) { background: #EAF1DD }    /* line background green (range)*/
+#js--c98-01 li:nth-child(2) { background: #EAF1DD }
+#js--c98-01 li:nth-child(n+5):nth-child(-n+6) { background: #EAF1DD }
+/* ************************************************************************* */
 
-#js--cXXYYZZ .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
-#js--cXXYYZZ .lit { color: #718c00;}
 
-#js--cXXYYZZ li:nth-child(1) {padding-left: 4.1rem;}                      /* adjust indent for line wrap (standard indent) */
-#js--cXXYYZZ li:nth-child(1) {padding-left: 7.4rem;}                      /* adjust indent for line wrap (extended indent 1) */
+/* ****************************************************************************
+   CODE FRAGMENT c98-02 - FORMATTING
+   ************************************************************************* */
+#js--c98-02 li:nth-child(1) {padding-left: 4.38rem;}
+#js--c98-02 li:nth-child(4) { background: #EAF1DD }
+/* ************************************************************************* */
 
+/* ****************************************************************************
+   CODE FRAGMENT c98-03 - FORMATTING
+   ************************************************************************* */
+#js--c98-03 li:nth-child(3) { background: #EAF1DD }
 /* ************************************************************************* */

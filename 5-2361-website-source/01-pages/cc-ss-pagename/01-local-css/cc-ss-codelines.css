@@ -1,7 +1,9 @@
-/* PRACTICALSERIES (c) 2016
+
+
+/* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS                 99-00-CODE.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            cc-ss-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -47,44 +49,24 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-19 Mar 2019   d-P13.00.02  M. Gledhill    Indents corrected
+DD Mmm 2017   SNN.XX.SMM   M. Gledhill    Development
 
-17 Mar 2019   d-P13.00.01  M. Gledhill    Filename changed to code
-                                          Fragment numbers updated
-                                          CSS colours added to prettify.css
-                                          Revision added to right sidebar
-
-27 Jan 2019   P13          M. Gledhill    Content proofread and updated
-
-31 May 2017   P10          M. Gledhill    Migration to Git VCS
-                                          FIRST PUBLISHED COMMIT
-                                          Based on PS(LIVE-non VCS) P06.02
 ---------------------------------------------------------------------------- */
 
 
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P13.00.02"; }
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 x-NXX.YY.NZZ"; }
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c99-01 - FORMATTING
+   CODE FRAGMENT cXX-YY - FORMATTING
    ************************************************************************* */
-#js--c99-01 li:nth-child(2) { background: #EAF1DD }
-#js--c99-01 li:nth-child(n+5):nth-child(-n+10) { background: #EAF1DD }
-/* ************************************************************************* */
+#js--cXX-YY li:nth-child(1) { background: #EAF1DD }
+#js--cXX-YY li:nth-child(n+6):nth-child(-n+8) { background: #EAF1DD }
 
+#js--cXX-YY li:nth-child(1) {padding-left: 4.38rem;}
+#js--cXX-YY li:nth-child(1) {padding-left: 7.33rem;}
 
-/* ****************************************************************************
-   CODE FRAGMENT c99-02 - FORMATTING
-   ************************************************************************* */
-#js--c99-02 li:nth-child(1) {padding-left: 7.33rem;}
-/* ************************************************************************* */
-
-/* ****************************************************************************
-   CODE FRAGMENT c99-03 - FORMATTING
-   ************************************************************************* */
-#js—-c99-03 li:nth-child(4) {padding-left: 4.38rem;}
-#js—-c99-03 li:nth-child(5) {padding-left: 4.38rem;}
 /* ************************************************************************* */

@@ -8,7 +8,7 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   https:practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS         LOCAL SCROLL FUNCTIONS
@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+19 Mar 2019   d-P13.00.02  M. Gledhill    Code fragment IDs updated
+
 17 Mar 2019   d-P13.00.01  M. Gledhill    Comments updated
 
 27 Jan 2019   P13          M. Gledhill    Additional scroll points included
@@ -77,7 +79,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.01</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.02</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 /* ****************************************************************************
@@ -92,9 +94,9 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    SCROLL TO TOP
    The offset is set to .to -80 - e.g.
 
-          $('.js--sc-000000').click(function () {
-           $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
-          });
+    $('.js--sc-000000').click(function () {
+       $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
+    });
    ------------------------------------------------------------------------- */
    $('.js--sc-000000').click(function () {
        $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
@@ -105,9 +107,9 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    SCROLL TO CHAPTER (Non heading level after TOC)
    The offset is set to .to -10 - e.g.
 
-          $('.js--sc-nn0000').click(function () {
-           $('html, body').animate({scrollTop: $('#js--nn0000').offset().top -10}, 1000);
-          });
+    $('.js--sc-NN0000').click(function () {
+       $('html, body').animate({scrollTop: $('#js--NN0000').offset().top -10}, 1000);
+    });
    ------------------------------------------------------------------------- */
     $('.js--sc-990000').click(function () {
        $('html, body').animate({scrollTop: $('#js--990000').offset().top -10}, 1000);
@@ -118,9 +120,9 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    SCROLL TO -  SECTIONS & SUBSECTIONS
    The offset is set to .to -20 - e.g.
 
-          $('.js--sc-nn0100').click(function () {
-           $('html, body').animate({scrollTop: $('#js--nn0100').offset().top -20}, 1000);
-          });
+    $('.js--sc-NN0100').click(function () {
+       $('html, body').animate({scrollTop: $('#js--NN0100').offset().top -20}, 1000);
+    });
    ------------------------------------------------------------------------- */
     $('.js--sc-990100').click(function () {
        $('html, body').animate({scrollTop: $('#js--990100').offset().top -20}, 1000);
@@ -171,9 +173,9 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
    The offset is set to .to -120 - e.g.
 
-          $('.js--sc-nn0101a').click(function () {
-           $('html, body').animate({scrollTop: $('#js--nn0101a').offset().top -120}, 1000);
-          });
+    $('.js--sc-NN0101a').click(function () {
+        $('html, body').animate({scrollTop: $('#js--NN0101a').offset().top -120}, 1000);
+    });
    ------------------------------------------------------------------------- */
     $('.js--sc-990101a').click(function () {
        $('html, body').animate({scrollTop: $('#js--990101a').offset().top -120}, 1000);
@@ -248,32 +250,32 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    SCROLL TO -  CROSS REFERENCES
    For figures, the offset is set to .to -80 - e.g.
 
-          $('.js--sc-fnn-01').click(function () {
-           $('html, body').animate({scrollTop: $('#js--fnn-01').offset().top -80}, 1000);
-          });
+    $('.js--sc-fNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--fNN-01').offset().top -80}, 1000);
+    });
 
    For tables, the offset is set to .to -60 - e.g.
 
-          $('.js--sc-tnn-01').click(function () {
-           $('html, body').animate({scrollTop: $('#js--tnn-01').offset().top -60}, 1000);
-          });
+    $('.js--sc-tNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--tNN-01').offset().top -60}, 1000);
+    });
 
    For codefragments, the offset is set to .to -120 - e.g.
 
-    $('.js--sc-c9901').click(function () {
-       $('html, body').animate({scrollTop: $('#js--c9901').offset().top -120}, 1000);
+    $('.js--sc-cNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--cNN-01').offset().top -120}, 1000);
     });
 
    For equations, the offset is set to .to -80 - e.g.
 
-    $('.js--sc-e99-01').click(function () {
-       $('html, body').animate({scrollTop: $('#js--e99-01').offset().top -80}, 1000);
+    $('.js--sc-eNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--eNN-01').offset().top -80}, 1000);
     });
 
    For footnotes, the offset is set to .to -60 - e.g.
 
-    $('.js--sc-fn01').click(function () {
-       $('html, body').animate({scrollTop: $('#js--fn01').offset().top -80}, 1000);
+    $('.js--sc-fnNN').click(function () {
+       $('html, body').animate({scrollTop: $('#js--fnNN').offset().top -80}, 1000);
     });
    ------------------------------------------------------------------------- */
     $('.js--sc-f99-01').click(function () {
@@ -284,8 +286,8 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--t99-01').offset().top -60}, 1000);
     });
 
-    $('.js--sc-c9901').click(function () {
-       $('html, body').animate({scrollTop: $('#js--c9901').offset().top -120}, 1000);
+    $('.js--sc-c99-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--c99-01').offset().top -120}, 1000);
     });
 
     $('.js--sc-e99-01').click(function () {

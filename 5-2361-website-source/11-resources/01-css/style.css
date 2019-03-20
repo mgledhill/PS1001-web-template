@@ -100,6 +100,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+19 Mar 2019   d-P13.00.02  M. Gledhill    .sans-b style added
+                                          .in-head style added
+
 17 Mar 2019   d-P13.00.01  M. Gledhill    - Flexbox removed from equations
                                             .rev classes added for build badge
                                           - Spell checked
@@ -146,7 +149,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:before { content: "style.css\00a0\2014\00a0 d-P13.00.01"; }
+.aside-right-rev:before { content: "style.css\00a0\2014\00a0 d-P13.00.02"; }
 
 
 
@@ -1365,7 +1368,10 @@ a:active { color: #404030; }
       .serif-b             | Applies a serif BOLD font
                            | (all other properties remain the same)
      ----------------------+------------------------------------------------
-      .sans                 | Applies a sans serif font
+      .sans                | Applies a sans serif font
+                           | (all other properties remain the same)
+     ----------------------+------------------------------------------------
+      .sans-b              | Applies a sans serif BOLD font
                            | (all other properties remain the same)
      ----------------------+------------------------------------------------
       .index               | Applies the Concourse Index font font
@@ -1379,6 +1385,9 @@ a:active { color: #404030; }
      ----------------------+------------------------------------------------
       .first-use           | italics - denotes first use of a phrase
                            |
+     ----------------------+------------------------------------------------
+      .in-head             | Sans light font, used for pseudo headings in
+                           | body text without starting a new section
      ----------------------+------------------------------------------------
       .hlink               | embedded hyperlink (equity small caps)
                            | grey background with underline on hover
@@ -1432,9 +1441,11 @@ a:active { color: #404030; }
 
 .serif { font-family: "eqty-ta-r"; }        /* TEXT STYLE - serif font (override) */
 
-.serif-b { font-family: "eqty-ta-b"; }      /* TEXT STYLE - serif font (override) */
+.serif-b { font-family: "eqty-ta-b"; }      /* TEXT STYLE - serif font bold (override) */
 
 .sans { font-family: "conc-t3-r"; }         /* TEXT STYLE - sans serif font (override) */
+
+.sans-b { font-family: "conc-t4-r"; }       /* TEXT STYLE - sans serif font bold (override) */
 
 .index { font-family: "conc-i3-r"; }        /* TEXT STYLE - index font (override) */
 
@@ -1475,7 +1486,15 @@ a:active { color: #404030; }
     font-feature-settings: "ss02";
     color: #4F81BD;
 }
-
+.in-head {
+    display: inline-block;
+    font-family: 'conc-c2-r';
+    font-weight:normal;
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+    font-size: 150%;
+    margin-top: 2rem;
+}
 .red {color: #C0504D}
 .body-color {color: #404030}
 
@@ -2311,6 +2330,7 @@ tr.in-no-border th {                        /* incidental table no-bottom border
     padding-bottom: 0;
     background-color: #fbfaf6;
     font-family: "conc-t3-r";
+    -webkit-font-feature-settings: "ss02";
     font-feature-settings: "ss02";
     font-size: 0.85rem;
     line-height: 100%;
