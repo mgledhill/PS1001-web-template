@@ -47,7 +47,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-19 Mar 2019   d-P13.00.02  M. Gledhill    Sections updated
+20 Mar 2019   d-P13.00.03  M. Gledhill    Sections updated
 
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
@@ -73,7 +73,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.02</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.03</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -86,7 +86,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    ************************************************************************* */
 
 
- /* ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
    SCROLL TO TOP
    The offset is set to .to -80 - e.g.
 
@@ -99,7 +99,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });
 
 
- /* ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
    SCROLL TO CHAPTER (Non heading level after TOC)
    The offset is set to .to -10 - e.g.
 
@@ -112,12 +112,12 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });
 
 
-  /* ---------------------------------------------------------------------------
-   SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
-   The offset is set to .to -120 - e.g.
+/* ---------------------------------------------------------------------------
+   SCROLL TO -  SECTIONS & SUBSECTIONS
+   The offset is set to .to -20 - e.g.
 
-    $('.js--sc-NN0101a').click(function () {
-        $('html, body').animate({scrollTop: $('#js--NN0101a').offset().top -120}, 1000);
+    $('.js--sc-NN0100').click(function () {
+       $('html, body').animate({scrollTop: $('#js--NN0100').offset().top -20}, 1000);
     });
    ------------------------------------------------------------------------- */
     $('.js--sc-980100').click(function () {
@@ -129,7 +129,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });
 
 
-   /* ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
    SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
    The offset is set to .to -120 - e.g.
 

@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+20 Mar 2019   d-P13.00.03  M. Gledhill    Standardisation corrections
+
 19 Mar 2019   d-P13.00.02  M. Gledhill    Code fragment IDs updated
 
 17 Mar 2019   d-P13.00.01  M. Gledhill    Comments updated
@@ -79,7 +81,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.02</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.03</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 /* ****************************************************************************

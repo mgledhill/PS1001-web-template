@@ -8,13 +8,13 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="This is the google font version of the typographical conventions page it explains the use of third party fonts, google fonts and hyphenation">
 
@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+20 Mar 2019   d-P13.00.03  M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -80,15 +82,15 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax                    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
-
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script src="01-pages/01-93-typograpical/05-local-js/01-93-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/01-93-typograpical/05-local-js/01-93-scroll.js"></script>
 
 
 
@@ -97,13 +99,13 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="01-pages/01-93-typograpical/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles -->        <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles            <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">  -->
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- PS main styles-os fonts --><link rel="stylesheet" type="text/css" href="01-pages/01-93-typograpical/01-local-css/style-alt.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights      <link rel="stylesheet" type="text/css" href="01-pages/01-93-typograpical/01-local-css/01-93-codeline.css"> -->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -126,16 +128,16 @@ Date          Issue        Author         Reason for Modification
         <title>open source font conventions | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
@@ -146,15 +148,15 @@ Date          Issue        Author         Reason for Modification
                         <a class="nav-wide" href="01-02-paying.html#js--010200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <div class="nav-wide-blank" ></div>
-                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text ">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
-                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 05 - Next Chapter -->
+                        <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="02-00-fairfax.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
-                        <!-- Button 06 - Next section -->
+                        <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="01-04-tools.html#js--010400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of navigation button row -->
                 </div>                                          <!-- End of top navigation row -->
@@ -162,95 +164,105 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P13.00.03-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>1</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">1</span>Introduction<br>(open source version )</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 01-93&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 000004]
+<!-- ************************************************************************** [WP TOC]
      TABLE OF CONTENTS
      ***********************************************************************-->
 
-            <div class="rg-row">                                <!-- Start of TOC section -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
 
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 1. introduction
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-010000" href="01-00-introduction.html#js--010000">  <!-- TOC link start -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-010000" href="01-00-introduction.html#js--010000">
                                <div class="toc-lev"><span class="toc-lev1-num">1</span><span class="toc-lev1-text">Introduction</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
-                        <li><a class="js--sc-010100" href="01-01-howtouse.html#js--010100">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">1.1</span><span class="toc-lev3-text">How to use this website</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-010200" href="01-02-paying.html#js--010200">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">1.2</span><span class="toc-lev3-text">How to pay for this document</span></div></a>
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-010100" href="01-01-howtouse.html#js--010100">
+                            <div class="toc-lev"><span class="toc-lev2-num">1.1</span><span class="toc-lev2-text">How to use this website</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-010200" href="01-02-paying.html#js--010200">
+                            <div class="toc-lev"><span class="toc-lev2-num">1.2</span><span class="toc-lev2-text">How to pay for this document</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-010300" href="01-03-typographical.html#js--010300">
+                            <div class="toc-lev"><span class="toc-lev2-num">1.3</span><span class="toc-lev2-text">Typographical conventions</span></div></a>
                             <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-010300" href="01-03-typographical.html#js--010300">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">1.3</span><span class="toc-lev3-text">Typographical conventions</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-010400" href="01-04-tools.html#js--010400">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">1.4</span><span class="toc-lev3-text">Tools of the trade</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of TOC in columns -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-010400" href="01-04-tools.html#js--010400">
+                            <div class="toc-lev"><span class="toc-lev2-num">1.4</span><span class="toc-lev2-text">Tools of the trade</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-010401" href="01-04-tools.html#js--010401">
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.1</span><span class="toc-lev3-text">Tools for website development</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-010402" href="01-04-tools.html#js--010402">
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.2</span><span class="toc-lev3-text">Tools for the words</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-010403" href="01-04-tools.html#js--010403">
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.3</span><span class="toc-lev3-text">Tools for the images</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-010404" href="01-04-tools.html#js--010404">
+                            <div class="toc-lev"><span class="toc-lev3-num">1.4.4</span><span class="toc-lev3-text">Summary</span></div></a>
+                        </li>
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP 010300]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 1.3 - TYPOGRAPHICAL CONVENTIONS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--010300">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--010300">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h2>1.3</h2></div>
                     <div class="sub-title-text-box"><h2>Typographical conventions</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
@@ -260,36 +272,34 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp"><span class="all-caps">I&rsquo;ve made two</span> distinct compromises with typography, the first is related to hyphenation and website load speed, the second is fonts, read on:</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 010301]
+<!-- ************************************************************************** [WP INLINE]
      SECTION INLINE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--010301">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--010300a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Hyphenation&nbsp;&mdash;&nbsp;a bugbear</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -298,29 +308,27 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">You will be pleased to know CSS&nbsp;3 supports hyphenation (<span class="first-use">yey</span>):</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      CODE FRAGMENT WITH HEADER LINE
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Code fragments are inserted in the <pre> tag and have the class
-      prettyprint
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+<!-- Code file name --> <div class="code-header">css</div>
+                        <div class="code-area">
 
-                    <div class="code-extract">                              <!-- START OF CODE FRAGMENT -->
-                        <div class="code-header">css</div>                  <!-- CODE FILE NAME -->
-                        <div class="code-area">                             <!-- START OF CODE EXTRACT HOLDER -->
-                            <pre class="prettyprint lang-css">  <!-- CODE EXTRACT STARTS ON THE NEXT LINE -->
+<!-- Code extraxt -->       <pre class="prettyprint lang-css">  <!-- CODE EXTRACT STARTS ON THE NEXT LINE -->
 &nbsp; &nbsp; -webkit-hyphens: auto;
 &nbsp; &nbsp; -moz-hyphens: auto;
 &nbsp; &nbsp; -ms-hyphens: auto;
 &nbsp; &nbsp; hyphens: auto;&nbsp;
                             </pre>                                          <!-- END OF CODE EXTRACT -->
-                        </div>                                              <!-- END OF CODE EXTRACT HOLDER -->
-                        <div class="code-caption">CSS automatic hyphenation</div>   <!-- CODE CAPTION -->
-                    </div>                                                  <!-- END OF CODE FRAGMENT -->
+
+                        </div>
+<!-- Caption -->        <div class="code-caption">CSS automatic hyphenation</div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">And that&rsquo;s great&nbsp;&mdash;&nbsp;tell it what language you&rsquo;re using, load the hyphenation-resource and off you go&nbsp;&mdash;&nbsp;except it isn&rsquo;t. CSS supports hyphenation but not all <a class="hlink nohyp" href="http://caniuse.com/#search=hyphens">browsers</a> do (<span class="first-use">boo</span>), most frustratingly Chrome doesn&rsquo;t (Edge does but not Chrome&nbsp;&mdash;&nbsp;<span class="first-use">really</span>?).</p>
@@ -339,50 +347,26 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Footnotes use a four column table to give the appearance of a Word style
-     footnote (this has a partial border that extends part way across the page)
-
-     The footnote table has class .table-fnote.
-
-     The heading row of a footnote table is empty, it does no more than set the
-     row widths.
-
-     The footnote table has only one row (excepting the header), the first cell
-     of this row contains the footnote number.
-
-     The second cell is a spacing cell and contains no text (it simply separates
-     the number from the main text).
-
-     The final cell spans two columns and contains the text of the footnote.
-
-     Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-     By default each table row has a bottom border, this can be turned off
-     by giving the <tr> element the class .no-border
+     TABLE - MULTIPLE FOOTNOTE
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote"> <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 widhth here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 widhth here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 widhth here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 widhth here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;1</em></td>
-                            <td class="table-left"></td>
+                    <table class="table-fnote" id="js--fn03">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">Soft hyphens are Unicode character U+00AD (&amp;shy;), this is an invisible character that tells a browser where it is permissible to break a word across a line boundary.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 02 -->
-                            <td class="table-left"><em>&dagger;2</em></td>
-                            <td class="table-left"></td>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;2</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">Word processors and even browsers are clever enough to ignore soft hyphens when searching, text editors, however, deal with the text as they find it and don&rsquo;t (generally) ignore them.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">What I really want is for the browser to hyphenate my website on the fly (come on Chrome, catch up) and then I wouldn&rsquo;t have to worry about it. But I do worry, and here is my solution; I&rsquo;m using a third party Java script hyphenator (<a class="hlink nohyp" href="https://github.com/mnater/Hyphenator">hyphenator.js</a>). This works well and hyphenates the page automatically as the browser renders the page, it has the advantage of not including the soft hyphens when copying the text, and this means that searching the text works as expected.</p>
@@ -391,33 +375,30 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">For the time being, <a class="hlink nohyp" href="https://github.com/mnater/Hyphenator">hyphenator.js</a> is included in the website. I give detailed instructions on how I&rsquo;ve used this script and also how to remove it should you wish.</p>
 
+                </div>                                          <!-- End of section text      -->
 
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 010302]
-     SECTION INLINE
+<!-- ************************************************************************** [WP INLINE]
+     SECTION INLINE - OPEN SOURCE FONTS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--010302">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heaing) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--010300b">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Open source fonts</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -426,7 +407,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">This website uses the fonts Equity (serif font), Concourse (sans serif font) and Triplicate (monospace font); these were created by Mr Matthew Butterick, I purchased the fonts and have a licence to use them on this website.</p>
 
@@ -438,7 +419,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">So here&rsquo;s the thing, I like these fonts, I really do; but I appreciate that Mr Butterick has worked hard to create them and deserves all the money he can get for them and he probably doesn&rsquo;t want me redistributing them for free; and, since Mr Butterick is a lawyer in his day job, and since I don&rsquo;t want to go to gaol, I find myself agreeing with this point of view; so, I actively encourage you to buy your own copy of them (you can get them <a class="hlink nohyp" href="http://practicaltypography.com/equity.html">here</a>)&nbsp;&mdash;&nbsp;but I also can&rsquo;t afford to pay for a copy every time someone downloads my zip file (<span class="first-use">good fonts aren&rsquo;t cheap, and I&rsquo;m not that big a philanthropist</span>).</p>
 
-                     <p class="hyp">This means I&rsquo;ve made a compromise, I&rsquo;ve replaced Mr Butterick&rsquo;s fonts (Equity, Concourse and Triplicate) in the downloadable file with open source fonts (<a class="hlink nohyp" href="https://fonts.google.com/">google fonts</a> are the most common open source fonts, although in my case I&rsquo;ve used open source fonts from a site called <a class="hlink nohyp" href="https://www.fontsquirrel.com/">font squirrel</a>). This will disappoint Mr Butterick, not just from the lack of sales, but because Mr Butterick has strong opinions about open source fonts (see his article about <a class="hlink nohyp" href="http://practicaltypography.com/why-google-fonts-arent-really-open-source.html">open&nbsp;source&nbsp;fonts</a>).</p>
+                    <p class="hyp">This means I&rsquo;ve made a compromise, I&rsquo;ve replaced Mr Butterick&rsquo;s fonts (Equity, Concourse and Triplicate) in the downloadable file with open source fonts (<a class="hlink nohyp" href="https://fonts.google.com/">google fonts</a> are the most common open source fonts, although in my case I&rsquo;ve used open source fonts from a site called <a class="hlink nohyp" href="https://www.fontsquirrel.com/">font squirrel</a>). This will disappoint Mr Butterick, not just from the lack of sales, but because Mr Butterick has strong opinions about open source fonts (see his article about <a class="hlink nohyp" href="http://practicaltypography.com/why-google-fonts-arent-really-open-source.html">open&nbsp;source&nbsp;fonts</a>).</p>
 
                     <p class="hyp">I accept his arguments, but, I want to distribute fonts with my website, I want to do this because I know how the fonts I&rsquo;ve specified will appear and I&rsquo;m not reliant on the vagaries of the fonts installed on a particular machine to render my site in what I hope is a good facsimile of what I intended. There are few options but open source fonts in these circumstances; I can&rsquo;t distribute the fonts I&rsquo;ve purchased for use on the website because I&rsquo;m not licenced to do so and the only practical alternative is to use open source fonts&mdash;so there it is.</p>
 
@@ -453,80 +434,74 @@ Date          Issue        Author         Reason for Modification
 
      Full width images have a maximum width of 768 px
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--t09-03">
+                    <div class="fig-row">                    <!-- START OF FIGURE -->
+                        <figure class="fig-col fig1-1" id="js--t09-03">
 
                             <img src="01-pages/01-93-typograpical/02-images/fig-01-00a.png" style="width:90%" alt="Open source replacements for the equity fonts">
 
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                        </figure>
+                    </div>                                   <!-- END OF FIGURE -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="01-02-paying.html#js--010200">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="01-04-tools.html#js--010400">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox                   <script src="21-global/05-js/lightbox.js"></script> -->
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>

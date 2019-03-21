@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+20 Mar 2019   d-P13.00.03  M. Gledhill    Standardisation corrections
+
 19 Mar 2019   d-P13.00.02  M. Gledhill    Build badge changed to shield IO
                                           Comments updated
 
@@ -86,7 +88,7 @@ Date          Issue        Author         Reason for Modification
         <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
-                                                                <!--   VVV CHANGE FOLDER VVV  -->
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
         <!-- PS local scroll script --> <script src="01-pages/98-00-blank/05-local-js/98-00-scroll.js"></script>
 
 
@@ -101,7 +103,7 @@ Date          Issue        Author         Reason for Modification
         <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-                                                                <!--   VVV CHANGE FOLDER VVV  -->
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
         <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/98-00-blank/01-local-css/98-00-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,7 +127,7 @@ Date          Issue        Author         Reason for Modification
         <title>A blank page | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
 <!-- ************************************************************************** [WP HEADER]
@@ -134,7 +136,7 @@ Date          Issue        Author         Reason for Modification
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP TOP-NAV]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
@@ -168,7 +170,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Dev-d--P13.00.02-BF504D.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P13.00.03-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -194,13 +196,13 @@ Date          Issue        Author         Reason for Modification
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 98 Blank
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of TOC level 1     -->
+                    <ul class="toc-line">
 <!-- Level 1 -->        <li><a class="js--sc-980000" href="98-00-blank.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num utx">98</span><span class="toc-lev1-text">Blank page</span></div></a>
                         </li>
-                    </ul>                                       <!-- End of TOC level 1       -->
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC level 2 & 3 -->
+                    <ul class="toc-list">
 <!-- Level 2 -->        <li><a class="js--sc-980100" href="98-00-blank.html#js--980100">
                             <div class="toc-lev"><span class="toc-lev2-num utx">98.1</span><span class="toc-lev2-text">Empty Section</span></div></a>
                         </li>
@@ -220,7 +222,7 @@ Date          Issue        Author         Reason for Modification
 <!-- TOC PADDING  -->       <br class="top-pad">
 <!-- TOC PADDING  -->       <br class="top-pad">
                         </li>
-                    </ul>                                       <!-- End of TOC in columns    -->
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                 </div>                                          <!-- End of TOC column        -->
@@ -234,7 +236,7 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP FIXED-NAV]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
         <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
@@ -242,7 +244,7 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEAD-IN]
+<!-- ************************************************************************** [WP LEADIN]
      CHAPTER - X [LEAD IN SECTION NAME]
      ***********************************************************************-->
 
@@ -451,9 +453,6 @@ Date          Issue        Author         Reason for Modification
         <div class="section-std" id="js--980101b">              <!-- Start of additional row  -->
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-left">                  <!-- Start of left side bar   -->
-                        <p>Additional Sidebar</p>               <!-- Side bar content         -->
-                    </aside>                                    <!-- End of left side bar     -->
                 <!--     <aside class="aside-left">                  Start of left side bar   -->
                 <!--         <p></p>                                 Side bar content         -->
                 <!--     </aside>                                    End of left side bar     -->
@@ -528,7 +527,7 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- LIST UNNUMB --><p class="hyp"><span class="in-head">Unumbered list</span></p>
+<!-- LIST UNNUMB --><p class="hyp"><span class="in-head">Unnumbered list</span></p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
@@ -1111,20 +1110,20 @@ Date          Issue        Author         Reason for Modification
 <!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
+        </footer>                                               <!-- End of footer            -->
 <!-- ========================================================================== [WP END]      -->
 
     </body>
