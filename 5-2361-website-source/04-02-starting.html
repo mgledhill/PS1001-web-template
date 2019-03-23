@@ -594,9 +594,9 @@ Date          Issue        Author         Reason for Modification
       class .note, this effectively creates a list with the bullet point set
       to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>The <span class="code">index.html</span> page also has a folder for its content (just like any other page). This folder is called <span class="code">00-00-index</span> (yes, I&rsquo;ve given it a number just to keep everything in order)</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">On my machine, the path to the <span class="code">04-02-starting</span> folder would be:</p>
@@ -640,36 +640,36 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t04-02">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-cent" style="width: 23%">Folder</th>
                              <th class="table-cent" style="width: 77%">Function</th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 10em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 10em"></div></td>
                             <td class="table-cent">01-local-css</td>
                              <td class="table-left"><p>This contains any cascading style sheet that is specific only to this page (as opposed to style sheets that are common across all pages), generally there are not many of these, usually only where a page runs a peculiar script that has an associated CSS file.</p>
                              <p>If the page has no local CSS files, the folder will still exist, but will be empty.</p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 02 -->
-                            <td class="leading"><div style="min-height: 10em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 10em"></div></td>
                             <td class="table-cent">02-images</td>
                             <td class="table-left"><p>This contains all the images (with the exception of certain background images that are used by the common CSS files) that are used on the page. Generally, the images on a page are unique to that page.</p>
                             <p>If the page has no images, the folder will still exist, but will be empty.</p></td>
                         </tr>                                   <!-- TABLE - End of row 02   -->
                         <tr>                                    <!-- TABLE - Start of row 02 -->
-                            <td class="leading"><div style="min-height: 10em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 10em"></div></td>
                             <td class="table-cent">04-data</td>
                             <td class="table-left"><p>This folder is used to hold data files containing page specific information (software examples, downloads, and any other information specific to the particular web page that doesn&rsquo;t fall into the other categories).</p></td>
                         </tr>                                   <!-- TABLE - End of row 02   -->
                         <tr>                                    <!-- TABLE - Start of row 03 -->
-                            <td class="leading"><div style="min-height: 10em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 10em"></div></td>
                             <td class="table-cent">05-local-js</td>
                             <td class="table-left"><p>Every page has its own jQuery script file, this controls the slow scrolling to the various points on the page (figures, tables, sections &amp;c.). These files are all unique; all are dependent on the configuration of the page. </p></td>
                         </tr>                                   <!-- TABLE - End of row 03   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="2" class="table-caption">Table 4.2 &emsp; Subfolders within the individual page folder for each web page</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -736,34 +736,34 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t04-03">
                         <tr>
-                            <th class="leading"></th>                           <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-cent">Folder</th>
                             <th colspan="2" class="table-cent">Function</th>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div></div></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-left">This contains the common CSS files available to all pages within the website. It also contains a subfolder (01-CSS-images) that holds any background images used within the CSS. The only image in here is the end-mark.svg file, the Yorkshire Rose, used to finish each web page:
                             </td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 01 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-cent"><img style="width: 100px; margin: 0 auto;" src="11-resources/01-css/01-css-images/end-mark.svg" alt="end mark"></td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 01 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent">01-css</td>
                             <td colspan="2" class="table-left">The CSS files are:</td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 01 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent" style="width: 23.0%"></td>
                             <td class="table-cent" style="width: 16.5%">style.css</td>
                             <td class="table-left" style="width: 60.5%">This holds all the main heading, table, figure and body text styles for every web page</td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 01 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent"></td>
                             <td class="table-cent">grid.css</td>
                             <td class="table-left">This contains the grid (column) styles used as the basic layout of every web page.</td>
@@ -773,24 +773,24 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent"></td>
                             <td class="table-cent">prettify.css</td>
                             <td class="table-left">This is the style sheet associated with the prettify jQuery plugin, it determines what colour is applied to the various elements of the code.</td>
-                        </tr>                                                   <!-- TABLE - End of row 01   -->
+                        </tr>
                         <tr class="no-border">                                  <!-- TABLE - Start of row 02 -->
                             <td class="leading"><div></div></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-left">This contains all the common images that are available for use on each web page, the only file currently in here is the flourish.svg image:</td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 02 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-cent"><img style="width: 50px; margin: 0 auto;" src="11-resources/02-images/flourish.svg" alt="flourish"></td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 02 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent">02-images</td>
                             <td colspan="2" class="table-left">It&rsquo;s sometimes use to separate sections of text.</td>
                         </tr>
                        <tr class="no-border">                                   <!-- TABLE - Row 02 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-left">This folder has a subfolder that contains all the &ldquo;favicon&rdquo; images, these are the small images the appear on the web browser tab and in bookmarks, they look like this:</td>
                         </tr>
@@ -800,19 +800,19 @@ Date          Issue        Author         Reason for Modification
                             <td colspan="2" class="table-cent"><img style="width: 32px; margin: 0 auto;" src="11-resources/02-images/01-favicons/favicon.ico" alt="flourish"></td>
                         </tr>                                                   <!-- TABLE - End of row 02   -->
                         <tr>                                                    <!-- TABLE - Start of row 03 -->
-                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td>
                             <td class="table-cent">04-data</td>
                             <td colspan="2" class="table-left">This folder is used to hold common data files (basically anything that&rsquo;s not covered by the other folders); currently this is the pdf file of this document, the zipped up copy of the website itself and some code examples.</td>
                         </tr>                                                   <!-- TABLE - End of row 03   -->
                         <tr>                                                    <!-- TABLE - Start of row 04 -->
-                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td>
                             <td class="table-cent">05-js</td>
                             <td colspan="2" class="table-left">There is a common script file (script.js) that runs on every web page to implement the &ldquo;sticky&rdquo; navigation bar that appears at the top of the web page as you scroll down.</td>
                         </tr>                                                   <!-- TABLE - End of row 04   -->
-                        <tr class="no-border">                                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="3" class="table-caption">Table 4.3 &emsp; Subfolders and contents within the 11-resources folder</td>
-                        </tr>                                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -824,9 +824,9 @@ Date          Issue        Author         Reason for Modification
       class .note, this effectively creates a list with the bullet point set
       to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>The <span class="code">prettify.css</span> file is associated with the Google Prettify jQuery plugin and as such you may think it should be under <span class="code no-hyp">21-global</span>, the reason it&rsquo;s not is that the Prettify plugin just adds some named styles to the code&mdash;I then wrote this style sheet so set those styles to something that resembles the Brackets method of colouring. So it&rsquo;s a file I developed for this website and that is why it&rsquo;s under resources and not global.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Next (and finally) the <span class="code">21-global</span> folder, this is shown in <a class="xref js--sc-f04-09 " href="#">Figure&nbsp;4.9</a>.</p>
@@ -886,17 +886,17 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t04-04">
                         <tr>
-                            <th class="leading"></th>                           <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-cent">Folder</th>
                             <th colspan="2" class="table-cent">Function</th>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div></div></td>
                             <td class="table-cent"></td>
                             <td colspan="2" class="table-left">This contains the third-party CSS files, there are two:</td>
                         </tr>
                         <tr class="no-border">                                  <!-- TABLE - Row 01 part -->
-                            <td class="leading"></td>                           <!-- Leading row (sets min-height) -->
+                            <td class="leading"></td>
                             <td class="table-cent" style="width: 23.0%">01-css</td>
                             <td class="table-left" style="width: 16.5%">normalise.css</td>
                             <td class="table-left" style="width: 60.5%">This sets various HTML element styles to make browsers render elements more consistently</td>
@@ -906,21 +906,21 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent"></td>
                             <td class="table-left">lightbox.css</td>
                             <td class="table-left">Style sheet associated with the lightbox jQuery plugin, it configures annotation styles and shading</td>
-                        </tr>                                                   <!-- TABLE - End of row 01   -->
+                        </tr>
                         <tr>                                                    <!-- TABLE - Start of row 03 -->
-                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td>
                             <td class="table-cent">03-fonts</td>
                             <td colspan="2" class="table-left">This contains the style sheet that loads the fonts for the web pages. This is the ps-fonts.css file. It also has a subdirectory that holds the individual .woff files for each font installed.</td>
                         </tr>                                                   <!-- TABLE - End of row 03   -->
                         <tr>                                                    <!-- TABLE - Start of row 04 -->
-                            <td class="leading"><div style="min-height: 5.5em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 5.5em"></div></td>
                             <td class="table-cent">05-js</td>
                             <td colspan="2" class="table-left">These are all the third party jQuery and Java script plugins that are needed for certain aspects of the website&mdash;hyphenation, displaying code fragment, a lightbox to display images and waypoints for enabling the &ldquo;sticky&rdquo; navigation bar</td>
                         </tr>                                                   <!-- TABLE - End of row 04   -->
-                        <tr class="no-border">                                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="3" class="table-caption">Table 4.4 &emsp; Subfolders and contents within the 21-global folder</td>
-                        </tr>                                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <p class="hyp">There is a common numbering structure to the level 3 subfolders, and this is:</p>
@@ -958,39 +958,39 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t04-05">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-cent" style="width: 23%">Folder</th>
                              <th class="table-cent" style="width: 77%">Function</th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent">01-css</td>
                              <td class="table-left">Holds the CSS files and CSS background images</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 02 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent">02-images</td>
                             <td class="table-left">Holds the images needed for the web page</td>
                         </tr>                                   <!-- TABLE - End of row 02   -->
                         <tr>                                    <!-- TABLE - Start of row 03 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent">03-fonts</td>
                             <td class="table-left">Holds the font CSS files and all the .woff files for each font</td>
                         </tr>                                   <!-- TABLE - End of row 03   -->
                         <tr>                                    <!-- TABLE - Start of row 04 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent">04-data</td>
                             <td class="table-left">Holds the downloadable files</td>
                         </tr>                                   <!-- TABLE - End of row 04   -->
                         <tr>                                    <!-- TABLE - Start of row 05 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent">05-js</td>
                             <td class="table-left">Holds the jQuery and Java script files</td>
                         </tr>                                   <!-- TABLE - End of row 05   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="2" class="table-caption">Table 4.5 &emsp; Common subfolder numbering</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 

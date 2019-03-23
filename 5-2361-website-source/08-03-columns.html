@@ -595,9 +595,9 @@ Date          Issue        Author         Reason for Modification
       class .note, this effectively creates a list with the bullet point set
       to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>It&rsquo;s important that the row does not have any margins or padding; we will add these with the column classes.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                    <p class="hyp">Next is the clear fix hack. This is a slightly more advanced version of that in <a class="hlink nohyp" href="06-04-box.html#js--060401">&sect;&nbsp;6.4.1</a></p>
@@ -695,9 +695,9 @@ Date          Issue        Author         Reason for Modification
       class .note, this effectively creates a list with the bullet point set
       to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>There are lots of versions of clearfix about, this seems to be a fairly common one and it works well.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1055,30 +1055,30 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t08-00a" style="width: 50%">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-left" style="width: 50%"></th>
                             <th class="table-left" style="width: 50%"></th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left">Top margin</td>
                             <td class="table-left">1%</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left">Right margin</td>
                             <td class="table-left">zero</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                              <td class="table-left">Bottom margin</td>
                             <td class="table-left">zero</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left">Left margin</td>
                             <td class="table-left">3.45%</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -1255,9 +1255,9 @@ Date          Issue        Author         Reason for Modification
       class .note, this effectively creates a list with the bullet point set
       to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>If the class exists only once in a parent element then it is both the <span class="code">:first-child</span> and the <span class="code">:last-child</span>; indeed, such a class has its own special pseudo element of (would you believe it) <span class="code">:only-child</span>&mdash;seriously.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="code">:nth-child(x)</span> selects the x<sup>th</sup> occurrence of the class, Col M for example would be <span class="code">:nth-child(2)</span>. Col R would be <span class="code">:nth-child(3)</span> &amp;c.</p>
@@ -1297,29 +1297,29 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t08-01">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-left" style="width: 60%"></th>
                             <th class="table-left" style="width: 40%"></th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">:nth-child(n+6)</span></td>
                             <td class="table-left">Selects the 6<sup>th</sup> to the last occurrence (inclusive)</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">nth-child(-n+6)</span></td>
                             <td class="table-left">Selects the first occurrence to the 6<sup>th</sup> occurrence (inclusive)</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">:nth-child(n+3):nth-child(-n+8)</span></td>
                             <td class="table-left">Selects the 3<sup>rd</sup> occurrence to the 8<sup>th</sup>  occurrence (inclusive)</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="2" class="table-caption">Table 8.1 &emsp; nth-child examples</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -1856,34 +1856,34 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t08-02">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-left" style="width: 20%">Mediatype</th>
                             <th class="table-left" style="width: 80%">Function</th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">screen</span></td>
                             <td class="table-left">The page is being viewed on a screen (computer, tablet, smart phone &amp;c.)</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">print</span></td>
                             <td class="table-left">Specifies a printer&mdash;the page is being printed</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">speech</span></td>
                             <td class="table-left">Specifies a screen reader (a device that reads the page out loud)</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left"><span class="code">all</span></td>
                             <td class="table-left">All devices, any of the above</td>
-                         </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                         </tr>
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="2" class="table-caption">Table 8.2 &emsp; Mediatypes in media queries</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -2328,163 +2328,163 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t08-03">
                         <tr>
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
+                            <th class="leading"></th>
                             <th class="table-cent" style="width: 20.2%">Class</th>
                             <th class="table-left" style="width: 29.9%">No. of columns</th>
                             <th class="table-left" style="width: 33.9%">Span arrangement</th>
                             <th class="table-cent" style="width: 17.0%">Width (%)</th>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-1</span></td>
                             <td class="table-left">1 column arrangement</td>
                             <td class="table-left">spans full width</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-2</span></td>
                             <td class="table-left">2 column arrangement</td>
                             <td class="table-left">spans 1 of the columns</td>
                             <td class="table-cent">48.27</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span2-2</span></td>
                             <td class="table-left">2 column arrangement</td>
                             <td class="table-left">spans both columns</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-3</span></td>
                             <td class="table-left">3 column arrangement</td>
                             <td class="table-left">spans 1 of the columns</td>
                             <td class="table-cent">31.03</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span2-3</span></td>
                             <td class="table-left">3 column arrangement</td>
                             <td class="table-left">spans 2 of the columns</td>
                             <td class="table-cent">65.51</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span3-3</span></td>
                             <td class="table-left">3 column arrangement</td>
                             <td class="table-left">spans all columns</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-4</span></td>
                             <td class="table-left">4 column arrangement</td>
                             <td class="table-left">spans 1 of the columns</td>
                             <td class="table-cent">22.41</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span2-4</span></td>
                             <td class="table-left">4 column arrangement</td>
                             <td class="table-left">spans 2 of the columns</td>
                             <td class="table-cent">48.27</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span3-4</span></td>
                             <td class="table-left">4 column arrangement</td>
                             <td class="table-left">spans 3 of the columns</td>
                             <td class="table-cent">74.13</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span4-4</span></td>
                             <td class="table-left">4 column arrangement</td>
                             <td class="table-left">spans all columns</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-5</span></td>
                             <td class="table-left">5 column arrangement</td>
                             <td class="table-left">spans 1 of the columns</td>
                             <td class="table-cent">17.24</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span2-5</span></td>
                             <td class="table-left">5 column arrangement</td>
                             <td class="table-left">spans 2 of the columns</td>
                             <td class="table-cent">37.93</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span3-5</span></td>
                             <td class="table-left">5 column arrangement</td>
                             <td class="table-left">spans 3 of the columns</td>
                             <td class="table-cent">58.62</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span4-5</span></td>
                             <td class="table-left">5 column arrangement</td>
                             <td class="table-left">spans 4 of the columns</td>
                             <td class="table-cent">79.31</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span5-5</span></td>
                             <td class="table-left">5 column arrangement</td>
                             <td class="table-left">spans all columns</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span1-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans 1 of the columns</td>
                             <td class="table-cent">13.79</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span2-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans 2 of the columns</td>
                             <td class="table-cent">31.03</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span3-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans 3 of the columns</td>
                             <td class="table-cent">48.27</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span4-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans 4 of the columns</td>
                             <td class="table-cent">65.51</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span5-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans 5 of the columns</td>
                             <td class="table-cent">82.75</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"><span class="code">.rg-span6-6</span></td>
                             <td class="table-left">6 column arrangement</td>
                             <td class="table-left">spans all columns</td>
                             <td class="table-cent">100.00</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        </tr>
+                        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="4" class="table-caption">Table 8.3 &emsp; All column variations in the Gerstner grid</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
+                        </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
