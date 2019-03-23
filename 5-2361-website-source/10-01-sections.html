@@ -408,8 +408,8 @@ Date          Issue        Author         Reason for Modification
                                 <td style="width: 90.0%">Code 9.5 &emsp; Link to font file</td>    <!-- Caption text  -->
                                 <td style="width: 5.0%">          <!-- download link -->
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
+                            </tr>
+                        </table>
                     </div>                                          <!-- End of code fragment -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -464,12 +464,12 @@ Date          Issue        Author         Reason for Modification
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - CLEAN TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t10-00a">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
+                    <table class="table-clean" id="js--t10-00a">
+                        <tr>
                             <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
-                             <th class="table-cent" style="width: 50%">Font size (px)</th>       <!-- set column 02 width here -->
-                            <th class="table-cent" style="width: 50%">Browser width (px)</th>    <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
+                             <th class="table-cent" style="width: 50%">Font size (px)</th>
+                            <th class="table-cent" style="width: 50%">Browser width (px)</th>
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 01 -->
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">12</td>
@@ -484,7 +484,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
                             <td colspan="2" class="table-caption"></td>
                         </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Now in practice, the maximum font size (24&nbsp;px) works at browser widths below 1276, again I judged this by eye and I found that a font size of 24&nbsp;px was ok down to a width of about 960&nbsp;px. Below 960&nbsp;px the 24&nbsp;px font size started to break the line length rules (see <a class="hlink nohyp" href="03-03-grid.html#js--030303">&sect;&nbsp;3.3.3</a>), this was the width at which 24&nbsp;px had less than 2 lowercase alphabets per line.</p>
@@ -494,12 +494,12 @@ Date          Issue        Author         Reason for Modification
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - CLEAN TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t10-00b">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
+                    <table class="table-clean" id="js--t10-00b">
+                        <tr>
                             <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
-                             <th class="table-cent" style="width: 50%">Font size (px)</th>       <!-- set column 02 width here -->
-                            <th class="table-cent" style="width: 50%">Browser width (px)</th>    <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
+                             <th class="table-cent" style="width: 50%">Font size (px)</th>
+                            <th class="table-cent" style="width: 50%">Browser width (px)</th>
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 01 -->
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">12</td>
@@ -514,7 +514,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
                             <td colspan="2" class="table-caption"></td>
                         </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Since font size is measured in pixels, and these are integer values (can&rsquo;t have half a pixel), the next font size down from 24 pixels is 23 pixels. This means that the font size will vary from 12&nbsp;pixels at a width of 520&nbsp;pixels to 23&nbsp;pixels at a width of 960&nbsp;pixels. </p>
@@ -524,12 +524,12 @@ Date          Issue        Author         Reason for Modification
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - CLEAN TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t10-01">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
+                    <table class="table-clean" id="js--t10-01">
+                        <tr>
                             <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
-                             <th class="table-cent" style="width: 50%">Font size (px)</th>       <!-- set column 02 width here -->
-                            <th class="table-cent" style="width: 50%">Browser width (px)</th>    <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
+                             <th class="table-cent" style="width: 50%">Font size (px)</th>
+                            <th class="table-cent" style="width: 50%">Browser width (px)</th>
+                        </tr>
                         <tr>
                             <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent">12</td>
@@ -599,7 +599,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
                             <td colspan="2" class="table-caption">Table 10.1 &emsp; Body text font size and responsive breakpoints</td>
                         </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">To make the body text responsive, I used the <span class="code">@media</span> media query just like we did in <a class="hlink nohyp" href="08-04-columns.html#js--080403">&sect;&nbsp;8.4.3</a>; I did this by setting the <span class="code">html font-size</span> property to different values at different browser widths:</p>
@@ -644,8 +644,8 @@ Date          Issue        Author         Reason for Modification
                                 <td style="width: 90.0%">Code 10.1 &emsp; Setting the body text font size and making it responsive</td>    <!-- Caption text  -->
                                 <td style="width: 5.0%">          <!-- download link -->
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
+                            </tr>
+                        </table>
                     </div>                                          <!-- End of code fragment -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 

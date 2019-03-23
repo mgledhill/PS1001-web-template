@@ -324,12 +324,12 @@ Date          Issue        Author         Reason for Modification
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
+                    <table class="table-clean">
+                        <tr>
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+                            <td class="table-cent" style="width: 100%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 01 -->
                             <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent formulae-bkgd">
@@ -340,7 +340,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
                             <td class="table-caption"></td>
                         </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">There, you&rsquo;ve been told.</p>
@@ -406,25 +406,25 @@ Date          Issue        Author         Reason for Modification
      By default each table row has a bottom border, this can be turned off
      by giving the <tr> element the class .no-border
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
                             <td class="table-left"><em>&dagger;1</em></td>
                             <td class="table-left"></td>
                             <td colspan="2" class="table-left">At this point I&rsquo;m probably going to get lots of emails telling me I&rsquo;ve missed the point and IDs are fundamental to my wellbeing; they will say things about specificity, browser compatibility and readability&mdash;maybe so, I just don&rsquo;t see it.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 02 -->
+                        </tr>
+                        <tr>
                             <td class="table-left"><em></em></td>
                             <td class="table-left"></td>
                             <td colspan="2" class="table-left"><span class="first-use">A note by the author 01 Feb 2017&mdash;Ok, I&rsquo;ve found a use for them; I use them to mark the code fragment tables and then use this ID to highlight certain lines in green (to show modified code). It&rsquo;s a peculiar situation and I explain how I didi it in <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a></span></td>
-                        </tr>                                   <!-- TABLE - End of footnote row 02   -->
+                        </tr>
 
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Let&rsquo;s create a new class that we will apply to the two lorem ipsum paragraphs in the HTML document and a second class that we will apply to the Henry paragraph.</p>
@@ -470,8 +470,8 @@ p {
                                 <td style="width: 5.0%">          <!-- download link -->
                                     <a class="code-nav" href="01-pages/05-08-basics/04-data/code-05-08-01.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
+                            </tr>
+                        </table>
                     </div>                                          <!-- End of code fragment -->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -525,8 +525,8 @@ p {
                                 <td style="width: 5.0%">          <!-- download link -->
                                     <a class="code-nav" href="01-pages/05-08-basics/04-data/code-05-08-02.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
+                            </tr>
+                        </table>
                     </div>                                                  <!-- End of code fragment -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -704,9 +704,9 @@ p {
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                         <table class="table-incid"> <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent">Class (and ID) naming restrictions</th>                            <!-- set column 01 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
+                        <tr>
+                            <th class="table-cent">Class (and ID) naming restrictions</th>
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 01 -->
                             <td class="table-left">
                                 <p class="hyp">Only use the characters [a-z] and [A-Z], the numbers [0-9], the underscore [ _ ] and the dash/hyphen [-]<sup>&dagger;2</sup>.</p>
@@ -714,7 +714,7 @@ p {
                                 <p class="hyp">The following have special meanings in CSS and definitely cannot be used in a class or ID name:<br><span class="c-box">!</span>&nbsp;<span class="c-box">"</span>&nbsp;<span class="c-box">#</span>&nbsp;<span class="c-box">$</span>&nbsp;<span class="c-box">%</span>&nbsp;<span class="c-box">&amp;</span>&nbsp;<span class="c-box">'</span>&nbsp;<span class="c-box">(</span>&nbsp;<span class="c-box">)</span>&nbsp;<span class="c-box">*</span>&nbsp;<span class="c-box">.</span>&nbsp;<span class="c-box">/</span>&nbsp;<span class="c-box">:</span>&nbsp;<span class="c-box">;</span>&nbsp;<span class="c-box">&lt;</span>&nbsp;<span class="c-box">=</span>&nbsp;<span class="c-box">&gt;</span>&nbsp;<span class="c-box">?</span>&nbsp;<span class="c-box">@</span>&nbsp;<span class="c-box">[</span>&nbsp;<span class="c-box">\</span>&nbsp;<span class="c-box">]</span>&nbsp;<span class="c-box">^</span>&nbsp;<span class="c-box">`</span>&nbsp;<span class="c-box">{</span>&nbsp;<span class="c-box">|</span>&nbsp;<span class="c-box">}</span>&nbsp;<span class="c-box">+</span>&nbsp;<span class="c-box">-</span>&nbsp;and&nbsp;<span class="c-box">~</span></p>
                             </td>
                         </tr>                                   <!-- TABLE - End of row 01   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">In terms of my own conventions, I make the same restrictions with class names as I do with file names (<a class="hlink nohyp" href="04-02-starting.html#js--040201">&sect;&nbsp;4.2.1</a>) i.e.:</p>
@@ -763,20 +763,20 @@ p {
      By default each table row has a bottom border, this can be turned off
      by giving the <tr> element the class .no-border
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
                             <td class="table-left"><em>&dagger;2</em></td>
                             <td class="table-left"></td>
                             <td colspan="2" class="table-left">CSS class names can contain a lot of other Unicode characters (things like this &#x2764;), but since these are not readily accessible from a standard keyboard (and because I cannot see a practical use for such names), I&rsquo;m ignoring them.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
+                        </tr>
 
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Now, having decided what characters can be used in a class name, here&rsquo;s a note on the type of name I give them.</p>
@@ -797,12 +797,12 @@ p {
       The table spans 84% of the content area, is lightly shaded  and uses
       small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
+                    <table class="table-clean">
+                        <tr>
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 100%"></td>      <!-- set column 01 width here -->
+                            <td class="table-cent" style="width: 100%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
+                        </tr>
                         <tr>                                    <!-- TABLE - Start of row 01 -->
                             <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
                             <td class="table-cent formulae-bkgd">
@@ -813,7 +813,7 @@ p {
                             <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
                             <td class="table-caption"></td>
                         </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The exact same approach should be taken when naming styles in Word.</p>
