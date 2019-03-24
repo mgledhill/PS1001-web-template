@@ -53,17 +53,17 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060401 - FORMATTING
    ************************************************************************* */
-#js--c060401 li:nth-child(2) { background: #EAF1DD }                      /* line background green */
-#js--c060401a li:nth-child(2) { background: #EAF1DD }                     /* line background green */
+#js--c060401 li:nth-child(2) { background: #EAF1DD }
+#js--c060401a li:nth-child(2) { background: #EAF1DD }
 /* ************************************************************************* */
 
 
 /* ****************************************************************************
    CODE FRAGMENT c060402 - FORMATTING
    ************************************************************************* */
-#js--c060402 li:nth-child(n+5):nth-child(-n+8 ) { background: #EAF1DD }   /* line background green */
+#js--c060402 li:nth-child(n+5):nth-child(-n+8 ) { background: #EAF1DD }
 
-#js--c060402 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060402 .pln { color: #4271ae;}
 #js--c060402 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -71,9 +71,9 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060402 - FORMATTING
    ************************************************************************* */
-#js--c060403 li:nth-child(n+3):nth-child(-n+4) { background: #EAF1DD }    /* line background green */
+#js--c060403 li:nth-child(n+3):nth-child(-n+4) { background: #EAF1DD }
 
-#js--c060403 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060403 .pln { color: #4271ae;}
 #js--c060403 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -81,14 +81,14 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060404 - FORMATTING
    ************************************************************************* */
-#js--c060404 li:nth-child(10) { background: #EAF1DD }                     /* line background green */
-#js--c060404 li:nth-child(26) { background: #EAF1DD }                     /* line background green */
-#js--c060404 li:nth-child(n+28):nth-child(-n+30) { background: #EAF1DD }  /* line background green */
-#js--c060404 li:nth-child(33) { background: #EAF1DD }                     /* line background green */
-#js--c060404 li:nth-child(37) { background: #EAF1DD }                     /* line background green */
+#js--c060404 li:nth-child(10) { background: #EAF1DD }
+#js--c060404 li:nth-child(26) { background: #EAF1DD }
+#js--c060404 li:nth-child(n+28):nth-child(-n+30) { background: #EAF1DD }
+#js--c060404 li:nth-child(33) { background: #EAF1DD }
+#js--c060404 li:nth-child(37) { background: #EAF1DD }
 
-#js--c060404 li:nth-child(17) {padding-left: 7.4rem;}                     /* adjust indent for line wrap */
-#js--c060404 li:nth-child(19) {padding-left: 7.4rem;}                     /* adjust indent for line wrap */
+#js--c060404 li:nth-child(17) {padding-left: 7.4rem;}
+#js--c060404 li:nth-child(19) {padding-left: 7.4rem;}
 #js--c060404 li:nth-child(25) {padding-left: 7.4rem;}
 /* ************************************************************************* */
 
@@ -96,9 +96,9 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060405 - FORMATTING
    ************************************************************************* */
-#js--c060405 li:nth-child(n+1):nth-child(-n+9) { background: #EAF1DD }    /* line background green */
+#js--c060405 li:nth-child(n+1):nth-child(-n+9) { background: #EAF1DD }
 
-#js--c060405 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060405 .pln { color: #4271ae;}
 #js--c060405 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -106,10 +106,10 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060406 - FORMATTING
    ************************************************************************* */
-#js--c060406 li:nth-child(3) { background: #EAF1DD }                      /* line background green */
-#js--c060406 li:nth-child(7) { background: #EAF1DD }                      /* line background green */
+#js--c060406 li:nth-child(3) { background: #EAF1DD }
+#js--c060406 li:nth-child(7) { background: #EAF1DD }
 
-#js--c060406 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060406 .pln { color: #4271ae;}
 #js--c060406 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -117,10 +117,10 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060407 - FORMATTING
    ************************************************************************* */
-#js--c060407 li:nth-child(4) { background: #EAF1DD }                      /* line background green */
-#js--c060407 li:nth-child(9) { background: #EAF1DD }                      /* line background green */
+#js--c060407 li:nth-child(4) { background: #EAF1DD }
+#js--c060407 li:nth-child(9) { background: #EAF1DD }
 
-#js--c060407 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060407 .pln { color: #4271ae;}
 #js--c060407 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -128,7 +128,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060407a - FORMATTING
    ************************************************************************* */
-#js--c060407a .pln { color: #4271ae;}                                     /* overlay style colours for CSS fragment */
+#js--c060407a .pln { color: #4271ae;}
 #js--c060407a .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -136,7 +136,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060407b - FORMATTING
    ************************************************************************* */
-#js--c060407b .pln { color: #4271ae;}                                     /* overlay style colours for CSS fragment */
+#js--c060407b .pln { color: #4271ae;}
 #js--c060407b .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -144,9 +144,9 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060408 - FORMATTING
    ************************************************************************* */
-#js--c060408 li:nth-child(n+4):nth-child(-n+8) { background: #EAF1DD }    /* line background green */
+#js--c060408 li:nth-child(n+4):nth-child(-n+8) { background: #EAF1DD }
 
-#js--c060408 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c060408 .pln { color: #4271ae;}
 #js--c060408 .lit { color: #718c00;}
 /* ************************************************************************* */
 
@@ -155,6 +155,6 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c060404 - FORMATTING
    ************************************************************************* */
-#js--c060409 li:nth-child(5) { background: #EAF1DD }                      /* line background green */
+#js--c060409 li:nth-child(5) { background: #EAF1DD }
 /* ************************************************************************* */
 

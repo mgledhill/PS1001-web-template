@@ -63,7 +63,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c100300 - FORMATTING
    ************************************************************************* */
-#js--c100300 .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--c100300 .pln { color: #4271ae;}
 #js--c100300 .lit { color: #718c00;}
 
 /* ************************************************************************* */
@@ -72,7 +72,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c100300css - FORMATTING
    ************************************************************************* */
-.js--c100300css .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+.js--c100300css .pln { color: #4271ae;}
 .js--c100300css .lit { color: #718c00;}
 
 /* ************************************************************************* */
@@ -149,10 +149,10 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT cXXYYZZ - FORMATTING
    ************************************************************************* */
-#js--cXXYYZZ li:nth-child(1) { background: #EAF1DD }                      /* line background green */
+#js--cXXYYZZ li:nth-child(1) { background: #EAF1DD }
 #js--cXXYYZZ li:nth-child(n+6):nth-child(-n+8) { background: #EAF1DD }    /* line background green (range)*/
 
-#js--cXXYYZZ .pln { color: #4271ae;}                                      /* overlay style colours for CSS fragment */
+#js--cXXYYZZ .pln { color: #4271ae;}
 #js--cXXYYZZ .lit { color: #718c00;}
 
 #js--cXXYYZZ li:nth-child(1) {padding-left: 4.1rem;}                      /* adjust indent for line wrap (standard indent) */
