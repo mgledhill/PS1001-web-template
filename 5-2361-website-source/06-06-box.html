@@ -8,13 +8,13 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="Understand the concept of formatting specific elements within a CSS class and how useful this can be">
 
@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+25 Mar 2019   d-P13.00.04e M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -81,14 +83,14 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
         <!-- PS local scroll script --> <script src="01-pages/06-06-box/05-local-js/06-06-scroll.js"></script>
 
 
@@ -98,13 +100,14 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/06-06-box/01-local-css/06-06-prettifylines.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+       <!-- Code frag highlights -->    <link rel="stylesheet" type="text/css" href="01-pages/06-06-box/01-local-css/06-06-codeline.css">
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -127,22 +130,22 @@ Date          Issue        Author         Reason for Modification
         <title>Formatting elements in a class | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="06-05-box.html#js--060500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
@@ -163,27 +166,26 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                         <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P13.00.04e-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>6</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">6</span>The CSS box model</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 06-06&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP 000004]
@@ -198,146 +200,140 @@ Date          Issue        Author         Reason for Modification
                     TOC - 6. HTML AND CSS: THE BASICS
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="toc-line">
-                        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">
+<!-- Level 1 -->        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">The CSS box model</span></div></a>
                         </li>
                     </ul>
 
                     <ul class="toc-list">
-                        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">
+<!-- Level 2 -->        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">
                             <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Block and inline elements</span></div></a>
                         </li>
-                        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">
+<!-- Level 3 -->        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.1</span><span class="toc-lev3-text">Block elements</span></div></a>
                         </li>
-                        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">
+<!-- Level 3 -->        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.2</span><span class="toc-lev3-text">Inline elements</span></div></a>
                         </li>
-                        <li><a class="js--sc-060103" href="06-00-box.html#js--060103">
+<!-- Level 3 -->         <li><a class="js--sc-060103" href="06-00-box.html#js--060103">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.3</span><span class="toc-lev3-text">Inline-block elements</span></div></a>
                          </li>
-                        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">
+<!-- Level 3 -->        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.4</span><span class="toc-lev3-text"><span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements</span></div></a>
                         </li>
-                        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">
+<!-- Level 2 -->        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">
                             <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Box structure</span></div></a>
                         </li>
                         <li><a class="js--sc-060201" href="06-02-box.html#js--060201">
                             <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">Box sizing</span></div></a>
                         </li>
-                        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">
+<!-- Level 2 -->        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">
                             <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">Adjusting margins and padding</span></div></a>
                         </li>
-                        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">
+<!-- Level 3 -->        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">
                             <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Margin and padding properties</span></div></a>
                         </li>
-                        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">
+<!-- Level 2 -->        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">
                             <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">A simple layout</span></div></a>
                         </li>
-                        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">
+<!-- Level 3 -->        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">
                             <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">The clearfix hack</span></div></a>
                         </li>
-                        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">
+<!-- Level 3 -->        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">
                             <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Using the clearfix hack</span></div></a>
                         </li>
-                        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">
+<!-- Level 2 -->        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">
                             <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Improving the appearance of the site</span></div></a>
                         </li>
-                        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">
+<!-- Level 2 -->        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">
                             <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
                         </li>
-                        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">
-                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Descendant selection and combinators</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Finishing touches</span></div></a>
                         </li>
-                        <li><a class="js--sc-060602" href="06-06-box.html#js--060602">
-                            <div class="toc-lev"><span class="toc-lev3-num">6.6.2</span><span class="toc-lev3-text">Finishing touches</span></div></a>
-                        </li>
-                        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">
+<!-- Level 2 -->        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">
                             <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
                         </li>
-                        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">
+<!-- Level 2 -->        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">
                             <div class="toc-lev"><span class="toc-lev2-num">6.8</span><span class="toc-lev2-text">The final &ldquo;first-site&rdquo; source code</span></div></a>
                         </li>
-                        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">
+<!-- Level 3 -->        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.1</span><span class="toc-lev3-text">First-site CSS source code</span></div></a>
                         </li>
-                        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">
+<!-- Level 3 -->        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.2</span><span class="toc-lev3-text">First-site HTML source code</span></div></a>
                         </li>
-                        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">
+<!-- Level 3 -->        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.3</span><span class="toc-lev3-text">Final &ldquo;first-site&rdquo; website</span></div></a>
                         </li>
-                        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">
+<!-- Level 2 -->        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">
                             <div class="toc-lev"><span class="toc-lev2-num">6.9</span><span class="toc-lev2-text">Comments &amp; indentation</span></div></a>
                         </li>
-                        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">
+<!-- Level 3 -->        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.1</span><span class="toc-lev3-text">HTML comments</span></div></a>
                         </li>
-                        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">
+<!-- Level 3 -->        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.2</span><span class="toc-lev3-text">CSS comments</span></div></a>
                         </li>
-                        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">
+<!-- Level 3 -->        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
                         </li>
-                        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
+<!-- Level 3 -->        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
                         </li>
-                        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
+<!-- Level 3 -->        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
                         </li>
-                        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">
+<!-- Level 3 -->        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
                         </li>
-                        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
+<!-- Level 2 -->        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
                             <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
                         </li>
-                        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
+<!-- Level 3 -->        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
                         </li>
-                        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">
+<!-- Level 3 -->        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.2</span><span class="toc-lev3-text">Autocomplete</span></div></a>
                         </li>
-                        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
+<!-- Level 3 -->        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
                         </li>
-                     </ul>                                       <!-- End of TOC in columns -->
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div id="rg-col rg-span1-5"></div>              <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 060600]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 6.6 - FORMATTING ELEMENTS IN A CLASS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060600">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--060600">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>6.6</h2></div>
                     <div class="sub-title-text-box"><h2>Formatting elements in a class</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -346,7 +342,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">This is an important point, it is possible to change the appearance of a specific type of element within a class; for example, we will format all the images within the <span class="code">.author-area</span> class to have a specific size and shape:</p>
 
@@ -356,7 +352,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint linenums:47 lang-css wrap" id="js--c060601">.author-area {
+                            <pre class="prettyprint linenums:47 lang-css wrap" id="js--c06-15">.author-area {
 &nbsp; &nbsp; border-top: 1px solid #333;
 &nbsp; &nbsp; padding-top: 20px;
 }
@@ -369,10 +365,10 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.6.1 &emsp; style.css (formatting elements in a class)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-06-01.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.15 &emsp; style.css (formatting elements in a class)</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-15.zip" download><span class="nav-icon">a</span></a>
                                 </td>
                             </tr>
                         </table>
@@ -381,10 +377,6 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Notes are added to the text in the form of unordered lists given the
-      class .note, this effectively creates a list with the bullet point set
-      to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="note">                           <!-- Start of note            -->
                         <li>In this case the formatting is done after the <span class="code">.autor-area</span> class is defined, this makes logical sense, but is not necessary&nbsp;&mdash;&nbsp;the qualifying <span class="code">img</span> class could be done anywhere in the CSS file.</li>
@@ -394,24 +386,17 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">This is a very powerful technique; it is called <span class="first-use">descendant selection</span> it allows specific elements within a class to be formatted without having to define another class for that object.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-17">
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-17">
                             <a href="01-pages/06-06-box/02-images/fig-06-17.png" data-lightbox="fig-set" data-title="Figure 6.17 - Border and image formatting">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/06-06-box/02-images/fig-06-17.png" alt="Figure 6.17 - Border and image formatting">
                             </a>
-                            <p>Figure 6.17 &emsp; Border and image formatting</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.17 &emsp; Border and image formatting</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 
                     <p class="hyp"><span class="first-use">Wow Henry&rsquo;s gone all round&mdash;just like a modern website.</span></p>
 
@@ -419,42 +404,41 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The <span class="code">border-radius</span> property was introduced in CSS&nbsp;3, it gives a box rounded corners. Like the <span class="code">margin</span> and <span class="code">padding</span> properties it usually has four values (one for each corner in the order top-left, top-right, bottom right and bottom left). Giving just one value sets all corners to that radius. Using 50% as the value is a common trick to make the image circular (each curve starts 50% of the way along the edge of the image&mdash;giving a circle if the image is square, and an ellipse if it&rsquo;s rectangular).</p>
 
+                </div>                                          <!-- End of section text      -->
 
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 060601]
+
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 6.6.1 - DESCENDANT SELECTION AND DESCENDANT COMBINATORS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060601">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--060601">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>6.6.1</h3></div>
                     <div class="sub-title-text-box"><h3>Descendant selection and combinators</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The previous section used a <span class="first-use">descendent selection</span> to identify all the <span class="code">&lt;img&gt;</span> elements in a particular class:</p>
 
@@ -464,7 +448,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint lang-css wrap" id="js--c060601a">.author-area img {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-15a">.author-area img {
 &nbsp; &nbsp; height: 150px;
 &nbsp; &nbsp; width: 150px;
 &nbsp; &nbsp; border-radius: 50%;
@@ -473,7 +457,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -495,7 +479,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint lang-css wrap" id="js--c060601b">.main-area p {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-15b">.main-area p {
 &nbsp; &nbsp; color: #ff0000;
 }
 
@@ -503,7 +487,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -521,14 +505,14 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint lang-css wrap" id="js--c060601c">.main-area &gt; p {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-15c">.main-area &gt; p {
 &nbsp; &nbsp; color: #ff0000;
 }
 </pre>
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -556,7 +540,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">html</div>
                         <div class="code-area">
-                            <pre class="prettyprint ang-html wrap" id="js--c060601d">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
+                            <pre class="prettyprint ang-html wrap" id="js--c06-15d">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 1&lt;/p&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="another-style"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 2&lt;/p&gt;
@@ -566,7 +550,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -584,7 +568,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint lang-css wrap" id="js--c060601e">.main-area img + p {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-15e">.main-area img + p {
 &nbsp; &nbsp; color: #ff0000;
 }
 
@@ -592,7 +576,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -608,7 +592,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">html</div>
                         <div class="code-area">
-                            <pre class="prettyprint ang-html wrap" id="js--c060601f">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
+                            <pre class="prettyprint ang-html wrap" id="js--c06-15f">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="main-area"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="logo.svg" alt="The website logo"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 1&lt;/p&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Paragraph 2&lt;/p&gt;
@@ -618,7 +602,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -638,7 +622,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint lang-css wrap" id="js--c060601g">.main-area img + p {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-15g">.main-area img + p {
 &nbsp; &nbsp; color: #ff0000;
 }
 
@@ -646,7 +630,7 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
+                                <td style="width: 5.0%"></td>
                                 <td style="width: 90.0%"></td>    <!-- Caption text  -->
                                 <td style="width: 5.0%"></td>     <!-- download link -->
                             </tr>
@@ -671,29 +655,28 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP 060602]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 6.6.2 - FINISHING TOUCHES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060602">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--060602">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>6.6.2</h3></div>
                     <div class="sub-title-text-box"><h3>Finishing touches</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The author (Henry) text would be better if it were to the right of the picture (rather than below it). To do this both the image and text must be floating, and the text must be padded correctly at the top and right:</p>
 
@@ -703,15 +686,15 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint linenums:30 lang-css wrap" id="js--c060602">.author-text{
+                            <pre class="prettyprint linenums:30 lang-css wrap" id="js--c06-16">.author-text{
 &nbsp; &nbsp; font-size: 22px;
 &nbsp; &nbsp; float: left;
 &nbsp; &nbsp; padding-top: 65px;
 &nbsp; &nbsp; padding-left:&nbsp; 25px;
 }</pre>
 
-                            <pre class="prettyprint lang-css wrap" id="js--c060602a">&nbsp; &nbsp; . . .</pre>
-                            <pre class="prettyprint linenums:54 lang-css wrap" id="js--c060602b">.author-area img {
+                            <pre class="prettyprint lang-css wrap" id="js--c06-16a">&nbsp; &nbsp; . . .</pre>
+                            <pre class="prettyprint linenums:54 lang-css wrap" id="js--c06-16b">.author-area img {
 &nbsp; &nbsp; height: 150px;
 &nbsp; &nbsp; width: 150px;
 &nbsp; &nbsp; border-radius: 50%;
@@ -721,10 +704,10 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.6.2 &emsp; style.css (floating text)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-06-02.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.16 &emsp; style.css (floating text)</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-16.zip" download><span class="nav-icon">a</span></a>
                                 </td>
                             </tr>
                         </table>
@@ -743,7 +726,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">style.css</div>
                         <div class="code-area">
-                            <pre class="prettyprint linenums:46 lang-css wrap" id="js--c060603">.side-area {
+                            <pre class="prettyprint linenums:46 lang-css wrap" id="js--c06-17">.side-area {
 &nbsp; &nbsp; width:25%;
 &nbsp; &nbsp; float: left;
 }
@@ -755,10 +738,10 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.6.3 &emsp; style.css (side area text)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-06-03.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.17 &emsp; style.css (side area text)</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-17.zip" download><span class="nav-icon">a</span></a>
                                 </td>
                             </tr>
                         </table>
@@ -774,7 +757,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-header">index.html</div>
                         <div class="code-area">
-                            <pre class="prettyprint linenums:25 lang-html wrap" id="js--c060604">&lt;p class="main-text"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
+                            <pre class="prettyprint linenums:25 lang-html wrap" id="js--c06-18">&lt;p class="main-text"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="side-area"&gt;
@@ -794,10 +777,10 @@ Date          Issue        Author         Reason for Modification
                         </div>
                         <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.6.4 &emsp; index.html (side area text)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-06-04.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.18 &emsp; index.html (side area text)</td>    <!-- Caption text  -->
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-06-box/04-data/code-06-18.zip" download><span class="nav-icon">a</span></a>
                                 </td>
                             </tr>
                         </table>
@@ -807,22 +790,16 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">This is what we get:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-18">
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-1" id="js--f06-18">
                             <a href="01-pages/06-06-box/02-images/fig-06-18.png" data-lightbox="fig-set" data-title="Figure 6.18 - Final website">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/06-06-box/02-images/fig-06-18.png" alt="Figure 6.14 - Final website">
                             </a>
-                            <p>Figure 6.18 &emsp; Final website</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.18 &emsp; Final website</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">Well&nbsp;&mdash;&nbsp;it&rsquo;s a start.</span></p>
@@ -839,66 +816,52 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="06-05-box.html#js--060500">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="06-07-box.html#js--060700">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 999901]
-     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
-     ***********************************************************************-->
-        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
-
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>
