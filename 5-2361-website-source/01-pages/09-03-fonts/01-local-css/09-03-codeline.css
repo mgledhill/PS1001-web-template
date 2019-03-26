@@ -1,14 +1,14 @@
 /* PRACTICALSERIES (c) 2016
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        09-05-PRETTIFYLINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS        09-03-PRETTIFYLINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS
@@ -30,13 +30,16 @@ of lines to green (indicating the code has changed).
 
 2. LINE INDENTATION ON LINE WRAP
 Changes how a line is indeneted when it wraps around in the code fragment
-display
+display.
 
+Common indent points:
 
-3.CSS CLASS CHANGES
-Code fragments showning CSS do not display in the correct colours, the
-.pln and .lit classes are over-riddent to give more accurate colouring
-
+    Indent 1:   1.46rem
+    Indent 2:   2.92rem
+    Indent 3:   4.38rem
+    Indent 4:   5.85rem
+    Indent 5:   7.33rem
+    Indent 6:   8.79rem
 -------------------------------------------------------------------------------
 MODIFICATION HISTORY:
 
@@ -44,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+26 Mar 2019   d-P13.00.04h M. Gledhill    Sections updated
+
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
                                           FIRST PUBLISHED COMMIT
                                           Based on PS(LIVE-non VCS) P06.02
@@ -51,41 +56,44 @@ Date          Issue        Author         Reason for Modification
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c090700 - FORMATTING
-   ************************************************************************* */
-#js--c090700 .pln { color: #4271ae;}
-#js--c090700 .lit { color: #718c00;}
-#js--c090700 li:nth-child(98) { background: #EAF1DD }
-#js--c090700 li:nth-child(104) { background: #EAF1DD }
-#js--c090700 li:nth-child(110) { background: #EAF1DD }
-#js--c090700 li:nth-child(116) { background: #EAF1DD }
-#js--c090700 li:nth-child(122) { background: #EAF1DD }
-
-#js--c090700 li:nth-child(134) { background: #EAF1DD }
-#js--c090700 li:nth-child(142) { background: #EAF1DD }
-#js--c090700 li:nth-child(148) { background: #EAF1DD }
-#js--c090700 li:nth-child(154) { background: #EAF1DD }
-#js--c090700 li:nth-child(160) { background: #EAF1DD }
-#js--c090700 li:nth-child(168) { background: #EAF1DD }
-#js--c090700 li:nth-child(174) { background: #EAF1DD }
-
-#js--c090700 li:nth-child(186) { background: #EAF1DD }
-/* ************************************************************************* */
+   REVISION
+   **************************************************************************** */
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P13.00.04h"; }
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c090700a - FORMATTING
+   CODE FRAGMENT c09-02 - FORMATTING
    ************************************************************************* */
-#js--c090700a .pln { color: #4271ae;}
-#js--c090700a .lit { color: #718c00;}
+#js--c09-02 li:nth-child(17) {padding-left: 2.92rem;}
+#js--c09-02 li:nth-child(25) {padding-left: 2.92rem;}
+#js--c09-02 li:nth-child(26) {padding-left: 2.92rem;}
+#js--c09-02 li:nth-child(27) {padding-left: 2.92rem;}
 /* ************************************************************************* */
-
 
 /* ****************************************************************************
-   CODE FRAGMENT c090700b - FORMATTING
+   CODE FRAGMENT c09-03 - FORMATTING
    ************************************************************************* */
-#js--c090700b .pln { color: #4271ae;}
-#js--c090700b .lit { color: #718c00;}
-#js--c090700b li:nth-child(3) { background: #EAF1DD }
+#js--c09-03 li:nth-child(4) { background: #EAF1DD }
+#js--c09-03 li:nth-child(4) {padding-left: 2.92rem;}
+#js--c09-03 li:nth-child(5) {padding-left: 2.92rem;}
+#js--c09-03 li:nth-child(6) {padding-left: 2.92rem;}
+#js--c09-03 li:nth-child(7) {padding-left: 2.92rem;}
 /* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c09-04 - FORMATTING
+   ************************************************************************* */
+#js--c09-04 li:nth-child(4) { background: #EAF1DD }
+#js--c09-04 li:nth-child(8) { background: #EAF1DD }
+#js--c09-04 li:nth-child(9) { background: #EAF1DD }
+#js--c09-04 li:nth-child(12) { background: #EAF1DD }
+#js--c09-04 li:nth-child(9) {padding-left: 5.85rem;}
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c09-05 - FORMATTING
+   ************************************************************************* */
+#js--c09-05 li:nth-child(5) { background: #EAF1DD }
+/* ************************************************************************* */
+
 
