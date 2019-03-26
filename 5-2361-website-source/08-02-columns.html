@@ -8,15 +8,15 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Learn how a responsive Gerstner grid and column arrangement is supposed to work; understand column stacking and column collapse.">
+        <meta name="description" content="Learn how a responsive Gerstner grid and column arrangement is supposed to work; understand column stacking and column collapse">
 
 <!-- ==========================================================================
 
@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+26 Mar 2019   d-P13.00.04g M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -76,13 +78,14 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
         <!-- PS local scroll script --> <script src="01-pages/08-02-columns/05-local-js/08-02-scroll.js"></script>
 
 
@@ -92,13 +95,14 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/08-02-columns/01-local-css/08-02-prettifylines.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights      <link rel="stylesheet" type="text/css" href="01-pages/08-02-columns/01-local-css/08-02-codeline.css">-->
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -121,22 +125,22 @@ Date          Issue        Author         Reason for Modification
         <title>Responsive columns | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="08-01-columns.html#js--080100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
@@ -151,33 +155,32 @@ Date          Issue        Author         Reason for Modification
                         <a class="nav-wide" href="09-00-fonts.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="08-03-columns.html#js--080300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
-                    </div>                                      <!-- End of navigation button row -->
-                </div>                                          <!-- End of top navigation row -->
-            </nav>                                              <!-- End of top navigation bar -->
-<!-- ========================================================================== [WP END] -->
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P13.00.04g-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>8</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">8</span>Grids &amp; columns</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 08-02&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP 000004]
@@ -192,94 +195,93 @@ Date          Issue        Author         Reason for Modification
                     TOC - 8. WEBSITE PRELIMINARIES
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="toc-line">
-                        <li><a class="js--sc-080000" href="08-00-columns.html#js--000000">
+<!-- Level 1 -->        <li><a class="js--sc-080000" href="08-00-columns.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num">8</span><span class="toc-lev1-text">Grids &amp; columns</span></div></a>
                         </li>
                     </ul>
 
                     <ul class="toc-list">
-                        <li><a class="js--sc-080100" href="08-01-columns.html#js--080100">
+<!-- Level 2 -->        <li><a class="js--sc-080100" href="08-01-columns.html#js--080100">
                             <div class="toc-lev"><span class="toc-lev2-num">8.1</span><span class="toc-lev2-text">The grid and how it works</span></div></a>
                         </li>
-                        <li><a class="js--sc-080200" href="08-02-columns.html#js--080200">
+<!-- Level 2 -->        <li><a class="js--sc-080200" href="08-02-columns.html#js--080200">
                             <div class="toc-lev"><span class="toc-lev2-num">8.2</span><span class="toc-lev2-text">Responsiveness</span></div></a>
                         </li>
-                        <li><a class="js--sc-080300" href="08-03-columns.html#js--080300">
+<!-- Level 2 -->        <li><a class="js--sc-080300" href="08-03-columns.html#js--080300">
                             <div class="toc-lev"><span class="toc-lev2-num">8.3</span><span class="toc-lev2-text">Building the responsive grid CSS file</span></div></a>
                         </li>
-                        <li><a class="js--sc-080301" href="08-03-columns.html#js--080301">
+<!-- Level 3 -->        <li><a class="js--sc-080301" href="08-03-columns.html#js--080301">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.1</span><span class="toc-lev3-text">The <span class="code">rg-row</span> class</span></div></a>
                         </li>
-                        <li><a class="js--sc-080302" href="08-03-columns.html#js--080302">
+<!-- Level 3 -->        <li><a class="js--sc-080302" href="08-03-columns.html#js--080302">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.2</span><span class="toc-lev3-text">Assigning more than one class to an element</span></div></a>
                         </li>
-                        <li><a class="js--sc-080303" href="08-03-columns.html#js--080303">
+<!-- Level 3 -->        <li><a class="js--sc-080303" href="08-03-columns.html#js--080303">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.3</span><span class="toc-lev3-text">The <span class="code">rg-col</span> class</span></div></a>
                         </li>
-                        <li><a class="js--sc-080304" href="08-03-columns.html#js--080304">
+<!-- Level 3 -->        <li><a class="js--sc-080304" href="08-03-columns.html#js--080304">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.4</span><span class="toc-lev3-text"><span class="code">first-child</span>, <span class="code">last-child</span> and <span class="code">nth-child</span> pseudo elements</span></div></a>
                         </li>
-                        <li><a class="js--sc-080305" href="08-03-columns.html#js--080305">
+<!-- Level 3 -->        <li><a class="js--sc-080305" href="08-03-columns.html#js--080305">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.5</span><span class="toc-lev3-text">The <span class="code">rg-spanS-C</span> class</span></div></a>
                         </li>
-                        <li><a class="js--sc-080306" href="08-03-columns.html#js--080306">
+<!-- Level 3 -->        <li><a class="js--sc-080306" href="08-03-columns.html#js--080306">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.6</span><span class="toc-lev3-text">Making the columns stack</span></div></a>
                         </li>
-                        <li><a class="js--sc-080307" href="08-03-columns.html#js--080307">
+<!-- Level 3 -->        <li><a class="js--sc-080307" href="08-03-columns.html#js--080307">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.7</span><span class="toc-lev3-text">Finishing off with the other column arrangements</span></div></a>
                         </li>
-                        <li><a class="js--sc-080308" href="08-03-columns.html#js--080308">
+<!-- Level 3 -->        <li><a class="js--sc-080308" href="08-03-columns.html#js--080308">
                             <div class="toc-lev"><span class="toc-lev3-num">8.3.8</span><span class="toc-lev3-text">Chrome Inspect Element feature</span></div></a>
                         </li>
-                        <li><a class="js--sc-080400" href="08-04-columns.html#js--080400">
+<!-- Level 2 -->        <li><a class="js--sc-080400" href="08-04-columns.html#js--080400">
                             <div class="toc-lev"><span class="toc-lev2-num">8.4</span><span class="toc-lev2-text">Advanced media queries</span></div></a>
                         </li>
-                        <li><a class="js--sc-080401" href="08-04-columns.html#js--080401">
+<!-- Level 3 -->        <li><a class="js--sc-080401" href="08-04-columns.html#js--080401">
                             <div class="toc-lev"><span class="toc-lev3-num">8.4.1</span><span class="toc-lev3-text">Logical operators</span></div></a>
                         </li>
-                        <li><a class="js--sc-080402" href="08-04-columns.html#js--080402">
+<!-- Level 3 -->        <li><a class="js--sc-080402" href="08-04-columns.html#js--080402">
                             <div class="toc-lev"><span class="toc-lev3-num">8.4.2</span><span class="toc-lev3-text">Media features</span></div></a>
                         </li>
-                        <li><a class="js--sc-080403" href="08-04-columns.html#js--080403">
+<!-- Level 3 -->        <li><a class="js--sc-080403" href="08-04-columns.html#js--080403">
                             <div class="toc-lev"><span class="toc-lev3-num">8.4.3</span><span class="toc-lev3-text">Breakpoints and media queries</span></div></a>
                         </li>
-                     </ul>                                       <!-- End of TOC in columns -->
-               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+                    </ul>
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP 080200]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 8.2 - THE GRID AND HOW IT WORKS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--080200">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--080200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>8.2</h2></div>
                     <div class="sub-title-text-box"><h2>Responsiveness</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -288,7 +290,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp"><span class="first-use">What do I mean by responsiveness?</span> Well, there are three things really; the first is I want the size of text (the font-size) to change as the website gets narrower, the same is true of headings and images (everything on the web page really)&mdash;I look at how this is done in <a class="hlink nohyp" href="10-01-sections.html#js--100100">&sect;&nbsp;10.1</a>.</p>
 
@@ -299,85 +301,61 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">If the browser is wider than 1276&nbsp;px (remember we set the <span class="code">body</span> style to have a maximum width of 1276&nbsp;px), the columns display at their maximum width (<a class="xref js--sc-f08-03" href="#">Figure&nbsp;8.3</a>):</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f08-03">
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f08-03">
                             <a href="01-pages/08-02-columns/02-images/fig-08-03.svg" data-lightbox="fig-set" data-title="Figure 8.3 - Three columns, maximum width">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/08-02-columns/02-images/fig-08-03.svg" alt="Figure 8.3 - Three columns, maximum width">
                             </a>
-                            <p>Figure 8.3 &emsp; Three columns, maximum width</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 8.3 &emsp; Three columns, maximum width</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">If the browser width is reduced, the columns become thinner but remain in the correct proportion to each other, <a class="xref js--sc-f08-04" href="#">Figure&nbsp;8.4</a> (the outside cream area disappears when the browser width is less than 1276&nbsp;px&mdash;the maximum width of the body area, see <a class="hlink nohyp" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>)</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f08-04">
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f08-04">
                             <a href="01-pages/08-02-columns/02-images/fig-08-04.svg" data-lightbox="fig-set" data-title="Figure 8.4 - Narrowing browser window ">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/08-02-columns/02-images/fig-08-04.svg" alt="Figure 8.4 - Narrowing browser window ">
                             </a>
-                            <p>Figure 8.4 &emsp; Narrowing browser window </p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 8.4 &emsp; Narrowing browser window</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">This will continue until the columns become too narrow to be practical&mdash;I will set this at a width of 520&nbsp;px&mdash;below this width, the columns collapse and become stacked, <a class="xref js--sc-f08-05" href="#">Figure&nbsp;8.5</a> (<span class="first-use">the more pedantic among you might think they become rows at this point</span>):</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f08-05">
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f08-05">
                             <a href="01-pages/08-02-columns/02-images/fig-08-05.svg" data-lightbox="fig-set" data-title="Figure 8.5 - Collapsing columns">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/08-02-columns/02-images/fig-08-05.svg" alt="Figure 8.5 -Collapsing columns">
                             </a>
-                            <p>Figure 8.5 &emsp; Collapsing columns</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 8.5 &emsp; Collapsing columns</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The columns will always stack in order from left to right; if there were four columns it would work like this, <a class="xref js--sc-f08-06" href="#">Figure&nbsp;8.6</a>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f08-06">
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f08-06">
                             <a href="01-pages/08-02-columns/02-images/fig-08-06.svg" data-lightbox="fig-set" data-title="Figure 8.6 - Collapsing columns (four columns)">         <!-- LIGHTBOX LINK -->
                                 <img src="01-pages/08-02-columns/02-images/fig-08-06.svg" alt="Figure 8.6 -Collapsing columns (four columns)">
                             </a>
-                            <p>Figure 8.6 &emsp; Collapsing columns (four columns)</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 8.6 &emsp; Collapsing columns (four columns)</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Once the columns collapse, they are all set to be the same width as the browser window.</p>
@@ -394,7 +372,7 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">
                         <div class="code-area">
 
-                            <pre class="prettyprint lang-css" style="font-size: 0.65rem" id="js--c080000a">body {
+                            <pre class="prettyprint lang-css" style="font-size: 0.65rem" id="js--c008-00a">body {
 &nbsp; &nbsp; max-width: 1276px;
 &nbsp; &nbsp; ...}
 </pre>
@@ -411,80 +389,64 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">So the maximum screen width is 1276&nbsp;px. It also means that the unit size in the Gerstner grid is 22&nbsp;px. These will be important numbers when it comes to building the <span class="code">grid.css</span> file; <span class="first-use">and that is the next social event.</span></p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="08-01-columns.html#js--080100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="08-03-columns.html#js--080300">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-
-
-<!-- ************************************************************************** [WP 999901]
-     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
-     ***********************************************************************-->
-        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
-
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>
