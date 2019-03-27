@@ -3,21 +3,21 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          LOCAL SCROLL - JQUERY                          10-00-SCROLL.JS
+Title :          LOCAL SCROLL - JQUERY                          09-03-SCROLL.JS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 -------------------------------------------------------------------------------
 DETAILS         LOCAL SCROLL FUNCTIONS
 
-jQuery is using version 3.1.0 from the GoogleAPIs library.
+jQuery is using the latest version from the GoogleAPIs library.
 
-This script applies the scroll to a point within the page (srollTop)
+This script applies the scroll to a point within the page (scrollTop)
 functionality for the current page.
 
 -------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ The trigger class used in the <a> element to trigger the scroll to the waypoint
 has the name .js-sc-000000 where the six digit number matches the waypoint
 number of the section that is to be scrolled to.
 
-The scrolltop function has an offset of -60px to ensure the title is visible
+The scrollTop function has an offset of -60px to ensure the title is visible
 below the fixed navigation bar.
 
 -------------------------------------------------------------------------------
@@ -49,12 +49,15 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-02 Mar 2018   P13          M. Gledhill    Published
+27 Mar 2019   d-P13.00.04i M. Gledhill    Sections updated
 
-15 Jul 2018   d-P12.10.01  M. Gledhill    Page created
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
 
+                                          - .aside-revision class
+                                            name change (.aside-right-rev)
 ---------------------------------------------------------------------------- */
-
 
 
 /* ****************************************************************************
@@ -67,13 +70,12 @@ Date          Issue        Author         Reason for Modification
 
 $(document).ready(function() {                  /* START OF PAGE READY FUNCTION */
 
-
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P13</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.04i</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -86,46 +88,82 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    ************************************************************************* */
 
 
- /* ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
    SCROLL TO TOP
    The offset is set to .to -80 - e.g.
 
-          $('.js--sc-000000').click(function () {
-           $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
-          });
+    $('.js--sc-000000').click(function () {
+       $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
+    });
    ------------------------------------------------------------------------- */
    $('.js--sc-000000').click(function () {     /* START of scroll function */
        $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
     });                                         /* END of scroll function */
 
 
- /* ---------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------
    SCROLL TO CHAPTER (Non heading level after TOC)
    The offset is set to .to -10 - e.g.
 
-          $('.js--sc-nn0000').click(function () {
-           $('html, body').animate({scrollTop: $('#js--nn0000').offset().top -10}, 1000);
-          });
+    $('.js--sc-NN0000').click(function () {
+       $('html, body').animate({scrollTop: $('#js--NN0000').offset().top -10}, 1000);
+    });
    ------------------------------------------------------------------------- */
     $('.js--sc-100000').click(function () {     /* START of scroll function */
        $('html, body').animate({scrollTop: $('#js--100000').offset().top -10}, 1000);
     });                                         /* END of scroll function */
 
+/* ---------------------------------------------------------------------------
+   SCROLL TO -  SECTIONS & SUBSECTIONS
+   The offset is set to .to -20 - e.g.
+
+    $('.js--sc-NN0100').click(function () {
+       $('html, body').animate({scrollTop: $('#js--NN0100').offset().top -20}, 1000);
+    });
+   ------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------
+   SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
+   The offset is set to .to -120 - e.g.
+
+    $('.js--sc-nn0101a').click(function () {
+        $('html, body').animate({scrollTop: $('#js--nn0101a').offset().top -120}, 1000);
+    });
+   ------------------------------------------------------------------------- */
 
 
 /* ---------------------------------------------------------------------------
    SCROLL TO -  CROSS REFERENCES
    For figures, the offset is set to .to -80 - e.g.
 
-          $('.js--sc-fnn-01').click(function () {
-           $('html, body').animate({scrollTop: $('#js--fnn-01').offset().top -80}, 1000);
-          });
+    $('.js--sc-fNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--fNN-01').offset().top -80}, 1000);
+    });
 
    For tables, the offset is set to .to -60 - e.g.
 
-          $('.js--sc-tnn-01').click(function () {
-           $('html, body').animate({scrollTop: $('#js--tnn-01').offset().top -60}, 1000);
-          });
+    $('.js--sc-tNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--tNN-01').offset().top -60}, 1000);
+    });
+
+   For codefragments, the offset is set to .to -120 - e.g.
+
+    $('.js--sc-cNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--cNN-01').offset().top -120}, 1000);
+    });
+
+   For equations, the offset is set to .to -80 - e.g.
+
+    $('.js--sc-eNN-01').click(function () {
+       $('html, body').animate({scrollTop: $('#js--eNN-01').offset().top -80}, 1000);
+    });
+
+   For footnotes, the offset is set to .to -60 - e.g.
+
+    $('.js--sc-fnNN').click(function () {
+       $('html, body').animate({scrollTop: $('#js--fnNN').offset().top -80}, 1000);
+    });
    ------------------------------------------------------------------------- */
 
 

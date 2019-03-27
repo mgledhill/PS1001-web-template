@@ -201,7 +201,7 @@ Date          Issue        Author         Reason for Modification
                         </li>
 <!-- Level 2 -->        <li><a class="js--sc-800200" href="80-00-finally.html#js--800200">
                             <div class="toc-lev"><span class="toc-lev2-num"></span><span class="toc-lev2-text">Acknowledgements</span></div></a>
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
+                            <br class="top-pad">
                         </li>
 <!-- Level 2 -->        <li><a class="js--sc-800300" href="80-00-finally.html#js--800300">
                             <div class="toc-lev"><span class="toc-lev2-num"></span><span class="toc-lev2-text">Colophon</span></div></a>
@@ -330,8 +330,8 @@ Date          Issue        Author         Reason for Modification
                                 <img src="01-pages/80-00-finally/02-images/fig-80-02.png" alt="Henry">
                             </a>
                         </figure>
-                    </div>            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Most of the images in the website are my own or of my creation (which probably explains the poor quality).</p>
 
@@ -351,13 +351,13 @@ Date          Issue        Author         Reason for Modification
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t80-01">
-                        <tr>
+<!-- Header row -->     <tr>
                             <th class="leading"></th>
                             <th class="table-cent" style="width: 32%">File</th>
-                            <th class="table-cent" style="width: 30%">Author(s)</th>    <!-- set column 02 width here -->
+                            <th class="table-cent" style="width: 30%">Author(s)</th>
                             <th class="table-left" style="width: 38%">Purpose</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="https://necolas.github.io/normalize.css/">normalise.css</a></p>(4.1.1)
@@ -365,7 +365,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">Nicolas Gallagher<br>Jonathan Neal</td>
                             <td class="table-left">Conditions various html tags so that they are rendered consistently in different browsers </td>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="https://developers.google.com/speed/libraries/">jquery.min.js</a></p>(3.1.0)
@@ -373,7 +373,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">jQuery foundation<br>(Google hosted library )</td>
                             <td class="table-left">jQuery library used to run the jQuery scripts </td>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="http://imakewebthings.com/waypoints/">waypoints.min.js</a></p>(4.0.0)
@@ -381,7 +381,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">Caleb Troughton</td>
                             <td class="table-left">Used to detect when to switch to fixed navigation bar (has many other uses) </td>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="https://github.com/mnater/Hyphenator">hyphenator.js</a></p>(5.1.0)
@@ -389,7 +389,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">Mathias Nater</td>
                             <td class="table-left">Dynamically hyphenates text within a web page </td>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="https://code.google.com/archive/p/google-code-prettify/">run-prettify.js</a></p>(04-03-2013)
@@ -397,7 +397,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">Google</td>
                             <td class="table-left">Used to display code fragments within a html page </td>
                         </tr>
-                       <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="http://lokeshdhakar.com/projects/lightbox2/">lightbox.js</a></p>(2.8.2)
@@ -405,15 +405,15 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">Lokesh Dhakar</td>
                             <td class="table-left">Used to overlay images on top of the current page </td>
                         </tr>
-                        <tr>                                    <!-- TABLE - Start of row 07 -->
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <p><a class="hlink nohyp" href="https://www.mathjax.org/">mathjax.js</a></p>(2.6.1)
                             </td>
                             <td class="table-cent">MathJax</td>
                             <td class="table-left">Renders AsciiMath, TeX/LaTeX and MathML code as standard mathematical notation</td>
-                        </tr>                                   <!-- TABLE - End of row 07   -->
-                        <tr class="no-border">
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td colspan="3" class="table-caption">Third-party software running on the website</td>
                         </tr>
@@ -426,11 +426,11 @@ Date          Issue        Author         Reason for Modification
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t8--021">
-                        <tr>
+<!-- Header row -->     <tr>
                             <th class="leading"></th>
                             <th class="table-cent">GITHUB MIT LICENCE</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-left">
                                 <p>The MIT License (MIT)</p>
@@ -443,11 +443,11 @@ Date          Issue        Author         Reason for Modification
                                 The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
                                 </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td class="table-caption">Github Massachusetts Institute of Technology (MIT)Licence</td>
                         </tr>
-                        <tr class="no-border">
+<!-- Spacing row -->    <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-caption"></td>
                         </tr>
@@ -461,10 +461,10 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                      <table class="table-clean" id="js--t80-02">
                         <tr>
-                            <th class="leading"></th>
+<!-- Header row -->     <th class="leading"></th>
                             <th class="table-cent">APACHE 2.0 LICENCE AND REFERENCE</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-left">
                                 <p>The Apache License Version 2.0, January 2004</p>
@@ -478,11 +478,11 @@ Date          Issue        Author         Reason for Modification
                                 <p class="hyp sml-caps-ns">Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "as is" basis, without warranties or conditions of any kind, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>
                                 </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td class="table-caption">Apache Licence</td>
                         </tr>
-                        <tr class="no-border">
+<!-- Spacing row -->    <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-caption"></td>
                         </tr>
@@ -497,14 +497,13 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                      <table class="table-clean" id="js--t80-03">
                         <tr>
-                            <th class="leading"></th>
+<!-- Header row -->     <th class="leading"></th>
                             <th class="table-cent">CREATIVE COMMON ZERO LICNECE</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-left">
-                                <p>CC0 1.0 Universal (CC0 1.0)<br>Public Domain Dedication
-</p>
+                                <p>CC0 1.0 Universal (CC0 1.0)<br>Public Domain Dedication</p>
 
                                 <p><em>No Copyright</em></p>
 
@@ -519,11 +518,11 @@ Date          Issue        Author         Reason for Modification
                                 <p class="hyp ">When using or citing the work, you should not imply endorsement by the author or the affirmer.</p>
                                 </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td class="table-caption">Creative Common Zero Licence</td>
                         </tr>
-                        <tr class="no-border">
+<!-- Spacing row -->    <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-caption"></td>
                         </tr>
@@ -536,10 +535,10 @@ Date          Issue        Author         Reason for Modification
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                      <table class="table-clean" id="js--t80-04">
                         <tr>
-                            <th class="leading"></th>
+<!-- Header row -->     <th class="leading"></th>
                             <th class="table-cent">sil open font license v1.10</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-left">
                                 <p>SIL Open Font License v1.10<br>26 February 2007 </p>
@@ -575,7 +574,6 @@ Date          Issue        Author         Reason for Modification
                                     <li style="padding: 0 0 0.5rem 1rem">The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.</li>
 
                                     <li style="padding: 0 0 0.5rem 1rem">The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.</li>
-
                                 </ol>
 
                                 <p><em>Termination</em></p>
@@ -586,11 +584,11 @@ Date          Issue        Author         Reason for Modification
                                 <p class="hyp sml-caps-ns">The font software is provided &ldquo;as is&rdquo;, without warranty of any kind, express or implied, including but not limited to any warranties of merchantability, fitness for a particular purpose and non-infringement of copyright, patent, trademark, or other right. In no event shall the copyright holder be liable for any claim, damages or other liability, including any general, special, indirect, incidental, or consequential damages, whether in an action of contract, tort or otherwise, arising from, out of the use or inability to use the font software or from other dealings in the font software.</p>
                                 </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td class="table-caption">SIL Open Font Licence</td>
                         </tr>
-                        <tr class="no-border">
+<!-- Spacing row -->    <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-caption"></td>
                         </tr>
@@ -603,11 +601,11 @@ Date          Issue        Author         Reason for Modification
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                      <table class="table-clean" id="js--t80-05">
-                        <tr>
+<!-- Header row -->     <tr>
                             <th class="leading"></th>
                             <th class="table-cent">paratype pt sans free font license v1.00</th>
                         </tr>
-                        <tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-left">
                                 <p>Paratype PT Sans Free Font License v1.00</p>
@@ -627,7 +625,6 @@ Date          Issue        Author         Reason for Modification
                                     <li style="padding: 0 0 0.5rem 1rem">The name of ParaType or the author(s) of the font software shall not be used to promote, endorse or advertise any modified version, except to acknowledge the contribution(s) of ParaType and the author(s) or with explicit written permission of ParaType.</li>
 
                                     <li style="padding: 0 0 0.5rem 1rem">The font software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.</li>
-
                                 </ol>
 
                                 <p><em>Termination &amp; territory</em></p>
@@ -638,7 +635,7 @@ Date          Issue        Author         Reason for Modification
                                 <p class="hyp sml-caps-ns">The font software is provided &ldquo;as is&rdquo; without warranty of any kind, express or implied, including but not limited to any warranties of merchantability, fitness for a particular purpose and non-infringement of copyright, patent, trademark, or other right. In no event shall Paratype be liable for any claim, damages or other liability, including any general, special, indirect, incidental, or consequential damages, whether in an action of contract, tort or otherwise, arising from, out of the use or inability to use the font software or from other dealings in the font software.</p>
                                 </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
                             <td class="table-caption">Paratype PT Sans Free Font License</td>
                         </tr>
@@ -685,13 +682,13 @@ Date          Issue        Author         Reason for Modification
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t80-06">
-                        <tr class="no-border">                                  <!-- TABLE - Start of header -->
+<!-- Header row -->     <tr class="no-border">                                  <!-- TABLE - Start of header -->
                             <th class="leading"></th>
                             <th class="table-cent" style="width: 33.3%"></th>   <!-- set column 01 width here -->
                             <th class="table-cent" style="width: 33.3%"></th>   <!-- set column 02 width here -->
                             <th class="table-left" style="width: 33.3%"></th>   <!-- set column 03 width here -->
                         </tr>
-                        <tr class="no-border">                                  <!-- TABLE - Start of row 01 -->
+<!-- Data row -->       <tr class="no-border">                                  <!-- TABLE - Start of row 01 -->
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <figure class="fig-row">
@@ -707,7 +704,7 @@ Date          Issue        Author         Reason for Modification
 
                             </td>
                         </tr>
-                        <tr class="no-border">
+<!-- Data row -->       <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td colspan="2" class="table-left">
                                 <p class="hyp">The website is printed mainly in the Equity typeface (serif), with headings, tables and annotation in Concourse (sans serif), and code fragments in Triplicate (monospaced).</p>
@@ -725,7 +722,7 @@ Date          Issue        Author         Reason for Modification
 
                             </td>
                         </tr>
-                       <tr class="no-border">
+<!-- Data row -->       <tr class="no-border">
                             <td class="leading"><div style="min-height: 4.5em"></div></td>
                             <td class="table-cent">
                                 <figure class="fig-row">
@@ -879,7 +876,7 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp"><em>In summary, you can browse this site with complete anonymity.</em></p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - FOOTNOTE
+     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-fnote" id="js--fn01">
                         <tr>
@@ -892,10 +889,10 @@ Date          Issue        Author         Reason for Modification
 <!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
 <!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">By default Google Analytics collects the IP address of the website user. This is deemed personally identifiable information under GDPR (i.e. it is not considered to be anonymous), it is possible to stop Google Analytics doing this (by making it anonymise the IP address data, this is done by masking the last three digits of the address, see <a class="hlink nohyp" href="https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#anonymizeIp">here</a> for how to activate this option) and this is what I have done on this site.</td>
-                        </tr>
+                         </tr>
                          <tr>
                             <td class="table-left"></td>
-                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
                             <td colspan="2" class="table-left"><em>I am not collecting IP addresses via Google Analytics</em>.</td>
                         </tr>
                    </table>
