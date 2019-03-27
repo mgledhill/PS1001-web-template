@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+27 Mar 2019   P14          M. Gledhill    Published
+
 19 Mar 2019   d-P13.00.03  M. Gledhill    Sections updated
 
 31 May 2017   P10          M. Gledhill    Migration to Git VCS
@@ -73,7 +75,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;d-P13.00.03</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P14</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -118,7 +120,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });
    ------------------------------------------------------------------------- */
     $('.js--sc-010200').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--010200').offset().top }, 1000);
+       $('html, body').animate({scrollTop: $('#js--010200').offset().top }, 250);
     });                                         /* END of scroll function */
 
 

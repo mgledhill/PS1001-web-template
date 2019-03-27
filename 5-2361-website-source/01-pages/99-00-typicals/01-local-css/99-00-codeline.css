@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+27 Mar 2019   P14          M. Gledhill    Published
+
 19 Mar 2019   d-P13.00.02  M. Gledhill    Indents corrected
 
 17 Mar 2019   d-P13.00.01  M. Gledhill    Filename changed to code
@@ -65,7 +67,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P13.00.02"; }
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P14"; }
 
 
 /* ****************************************************************************
@@ -85,6 +87,6 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c99-03 - FORMATTING
    ************************************************************************* */
-#js—-c99-03 li:nth-child(4) {padding-left: 4.38rem;}
-#js—-c99-03 li:nth-child(5) {padding-left: 4.38rem;}
+#js--c99-03 li:nth-child(4) {padding-left: 4.38rem;}
+#js--c99-03 li:nth-child(5) {padding-left: 4.38rem;}
 /* ************************************************************************* */
