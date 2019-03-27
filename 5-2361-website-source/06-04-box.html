@@ -8,13 +8,13 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="Build a simple web page layout using the CSS box model. Understand the float property and how to use the clearfix hack">
 
@@ -46,6 +46,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+27 Mar 2019   P14          M. Gledhill    Published
+
+25 Mar 2019   d-P13.00.04e M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -80,15 +84,15 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script src="01-pages/06-04-box/05-local-js/06-04-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/06-04-box/05-local-js/06-04-scroll.js"></script>
 
 
 
@@ -97,13 +101,14 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/06-04-box/01-local-css/06-04-prettifylines.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+       <!-- Code frag highlights -->    <link rel="stylesheet" type="text/css" href="01-pages/06-04-box/01-local-css/06-04-codeline.css">
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -126,35 +131,35 @@ Date          Issue        Author         Reason for Modification
         <title>A simple website layout | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="06-03-box.html#js--060300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="05-00-basics.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
-                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
-                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 05 - Next Chapter -->
+                        <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="07-00-prelim.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
-                        <!-- Button 06 - Next section -->
+                        <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="06-05-box.html#js--060500"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of navigation button row -->
                 </div>                                          <!-- End of top navigation row -->
@@ -162,27 +167,26 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>6</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">6</span>The CSS box model</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 06-04&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP 000004]
@@ -196,142 +200,146 @@ Date          Issue        Author         Reason for Modification
               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 6. HTML AND CSS: THE BASICS
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">  <!-- TOC link start -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">The CSS box model</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
-                        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">  <!-- TOC link start -->
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">
                             <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Block and inline elements</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.1</span><span class="toc-lev3-text">Block elements</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.2</span><span class="toc-lev3-text">Inline elements</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060103" href="06-00-box.html#js--060103">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->         <li><a class="js--sc-060103" href="06-00-box.html#js--060103">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.3</span><span class="toc-lev3-text">Inline-block elements</span></div></a>
-                         </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">  <!-- TOC link start -->
+                         </li>
+<!-- Level 3 -->        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">
                             <div class="toc-lev"><span class="toc-lev3-num">6.1.4</span><span class="toc-lev3-text"><span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">
                             <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Box structure</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060201" href="06-02-box.html#js--060201">  <!-- TOC link start -->
+                        </li>
+                        <li><a class="js--sc-060201" href="06-02-box.html#js--060201">
                             <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">Box sizing</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">
                             <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">Adjusting margins and padding</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">
                             <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Margin and padding properties</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">
                             <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">A simple layout</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">
                             <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">The clearfix hack</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">
                             <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Using the clearfix hack</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">
                             <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Improving the appearance of the site</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">
                             <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">  <!-- TOC link start -->
-                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Finishing touches</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Descendant selection and combinators</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060602" href="06-06-box.html#js--060602">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.2</span><span class="toc-lev3-text">Finishing touches</span></div></a>
+
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">
                             <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">
                             <div class="toc-lev"><span class="toc-lev2-num">6.8</span><span class="toc-lev2-text">The final &ldquo;first-site&rdquo; source code</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.1</span><span class="toc-lev3-text">First-site CSS source code</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.2</span><span class="toc-lev3-text">First-site HTML source code</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">
                             <div class="toc-lev"><span class="toc-lev3-num">6.8.3</span><span class="toc-lev3-text">Final &ldquo;first-site&rdquo; website</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">
                             <div class="toc-lev"><span class="toc-lev2-num">6.9</span><span class="toc-lev2-text">Comments &amp; indentation</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.1</span><span class="toc-lev3-text">HTML comments</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.2</span><span class="toc-lev3-text">CSS comments</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
                             <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.2</span><span class="toc-lev3-text">Autocomplete</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                     </ul>                                       <!-- End of TOC in columns -->
+                            <br class="toc-pad">
+                        </li>
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 060400]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 6.4 - A SIMPLE LAYOUT
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060400">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--060400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>6.4</h2></div>
                     <div class="sub-title-text-box"><h2>A simple layout</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -340,27 +348,21 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Let&rsquo;s build a simple layout for the current website that makes it look more like a proper website. The simple layout will have four boxes:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-06">
-                            <a href="01-pages/06-04-box/02-images/fig-06-06.svg" data-lightbox="fig-set" data-title="Figure 6.6 - A simple website layout">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-06">
+                            <a href="01-pages/06-04-box/02-images/fig-06-06.svg" data-lightbox="fig-set" data-title="Figure 6.6 - A simple website layout">
                                 <img src="01-pages/06-04-box/02-images/fig-06-06.svg" alt="Figure 6.6 - A simple website layout">
                             </a>
-                            <p>Figure 6.6 &emsp; A simple website layout</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.6 &emsp; A simple website layout</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
@@ -368,14 +370,10 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Notes are added to the text in the form of unordered lists given the
-      class .note, this effectively creates a list with the bullet point set
-      to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>960&nbsp;px is a fairly standard width for a website and has been for quite some time; given the advent of larger screen sizes, this is now increasing and for the proper website we will use 1276&nbsp;px (see <a class="hlink nohyp" href="03-03-grid.html#js--030301">&sect;&nbsp;3.3.1</a>). For our purposes 960 will do.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The <span class="first-use">main content</span> will hold the headings, logo and lorum ipsum paragraphs, the <span class="first-use">side area</span> we haven&rsquo;t done yet and the <span class="first-use">author and other information</span> will hold Henry&rsquo;s picture and his name.</p>
@@ -386,30 +384,30 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">index.html</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:9 lang-html wrap" id="js--c060401">&nbsp; &nbsp; &lt;body&gt;
+                    <div class="code-extract">
+                        <div class="code-header">index.html</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:9 lang-html wrap" id="js--c06-04">&nbsp; &nbsp; &lt;body&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="container"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h1&gt;My First Blog Post&lt;/h1&gt;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;This is my first blog post&lt;/h2&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; . . .</pre>
-                            <pre class="prettyprint linenums:29 lang-html wrap" id="js--c060401a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=author-text&gt;Henry Gledhill&lt;/p&gt;
+                            <pre class="prettyprint linenums:29 lang-html wrap" id="js--c06-04a">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p class=author-text&gt;Henry Gledhill&lt;/p&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp;
 &nbsp; &nbsp; &lt;/body&gt;
-&lt;/html&gt;</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+&lt;/html&gt;</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.1 &emsp; index.html (adding container)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-01.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.4 &emsp; index.html (adding container)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">All the website content that we have written so far is now contained inside the <span class="code">&lt;div&gt;</span> element. This has absolutely no effect on the website in the browser; this is because we have not yet defined the class <span class="code">.container</span>, so let&rsquo;s do just that:</p>
@@ -418,49 +416,43 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:30 lang-css wrap" id="js--c060402">.author-text{
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:30 lang-css wrap" id="js--c06-05">.author-text{
 &nbsp; &nbsp; font-size: 22px;
 }
 
 .container {
 &nbsp; &nbsp; width: 960px;
 &nbsp; &nbsp; background-color: #D8D8D8;
-}</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+}</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.2 &emsp; style.css (adding container)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-02.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.5 &emsp; style.css (adding container)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-05.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The background colour is just to help us identify the container area (we&rsquo;ll take it out at the end).</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-07">
-                            <a href="01-pages/06-04-box/02-images/fig-06-07.png" data-lightbox="fig-set" data-title="Figure 6.7 - Web page in a box">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-07">
+                            <a href="01-pages/06-04-box/02-images/fig-06-07.png" data-lightbox="fig-set" data-title="Figure 6.7 - Web page in a box">
                                 <img src="01-pages/06-04-box/02-images/fig-06-07.png" alt="Figure 6.7 - Web page in a box">
                             </a>
-                            <p>Figure 6.7 &emsp; Web page in a box</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.7 &emsp; Web page in a box</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Ok, now we&rsquo;ve got a website that doesn&rsquo;t fill the width of the browser window (unless the browser window is less than 960&nbsp;px).</p>
@@ -471,47 +463,41 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:34 lang-css wrap" id="js--c060403">.container {
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:34 lang-css wrap" id="js--c06-06">.container {
 &nbsp; &nbsp; width: 960px;
 &nbsp; &nbsp; margin-left: auto;
 &nbsp; &nbsp; margin-right:auto;
 &nbsp; &nbsp; background-color: #D8D8D8;
-}</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+}</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.3 &emsp; style.css (Centred web page)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-03.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.6 &emsp; style.css (Centred web page)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-06.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">This gives an even white gap down either side:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-08">
-                            <a href="01-pages/06-04-box/02-images/fig-06-08.png" data-lightbox="fig-set" data-title="Figure 6.8 - Centred web page">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-08">
+                            <a href="01-pages/06-04-box/02-images/fig-06-08.png" data-lightbox="fig-set" data-title="Figure 6.8 - Centred web page">
                                 <img src="01-pages/06-04-box/02-images/fig-06-08.png" alt="Figure 6.8 - Centred web page">
                             </a>
-                            <p>Figure 6.8 &emsp; Centred web page</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.8 &emsp; Centred web page</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Setting the left and right margins to auto will keep the container box centred in the web browser window (irrespective of how wide the browser becomes).</p>
@@ -527,10 +513,10 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">index.html</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums lang-html wrap" id="js--c060404">&lt;!DOCTYPE html&gt;
+                    <div class="code-extract">
+                        <div class="code-header">index.html</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c06-07">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &nbsp; &nbsp;  &lt;head&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;A first website&lt;/title&gt;
@@ -569,18 +555,19 @@ Date          Issue        Author         Reason for Modification
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
 &nbsp; &nbsp; &lt;/body&gt;
-&lt;/html&gt;</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+&lt;/html&gt;</pre>
+
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.4 &emsp; index.html (adding interior boxes)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-04.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.7 &emsp; index.html (adding interior boxes)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-07.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">And now the CSS; add the following classes to the end of the file:</p>
@@ -589,10 +576,10 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c060405">.main-area {
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c06-08">.main-area {
 &nbsp; &nbsp; background-color: #96AFCF;
 }
 .side-area {
@@ -601,39 +588,33 @@ Date          Issue        Author         Reason for Modification
 .author-area {
 &nbsp; &nbsp; background-color: #C05046;
 }
-</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.5 &emsp; style.css (adding interior boxes)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-05.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.8 &emsp; style.css (adding interior boxes)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-08.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Again, the colours just let us see where each box is on the screen</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-09">
-                            <a href="01-pages/06-04-box/02-images/fig-06-09.png" data-lightbox="fig-set" data-title="Figure 6.9 - All four boxes (div areas)">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-09">
+                            <a href="01-pages/06-04-box/02-images/fig-06-09.png" data-lightbox="fig-set" data-title="Figure 6.9 - All four boxes (div areas)">
                                 <img src="01-pages/06-04-box/02-images/fig-06-09.png" alt="Figure 6.9 - All four boxes (div areas)">
                             </a>
-                            <p>Figure 6.9 &emsp; All four boxes (div areas)</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.9 &emsp; All four boxes (div areas)</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">Right, well we&rsquo;ve got all the boxes, just not in the right place</span>.</p>
@@ -643,49 +624,43 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c060406">.main-area {
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c06-09">.main-area {
 &nbsp; &nbsp; background-color: #96AFCF;
 &nbsp; &nbsp; width: 75%;
 }
 .side-area {
 &nbsp; &nbsp; background-color: #9DBB61;
 &nbsp; &nbsp; width: 25%;
-}</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+}</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.6 &emsp; style.css (set box width)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-06.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.9 &emsp; style.css (set box width)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-09.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">And we get:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-10">
-                            <a href="01-pages/06-04-box/02-images/fig-06-10.png" data-lightbox="fig-set" data-title="Figure 6.10 - Box widths">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-10">
+                            <a href="01-pages/06-04-box/02-images/fig-06-10.png" data-lightbox="fig-set" data-title="Figure 6.10 - Box widths">
                                 <img src="01-pages/06-04-box/02-images/fig-06-10.png" alt="Figure 6.10 - Box widths">
                             </a>
-                            <p>Figure 6.10 &emsp; Box widths</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.10 &emsp; Box widths</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">Yep, it&rsquo;s going to be a long day</span>.</p>
@@ -694,24 +669,20 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Notes are added to the text in the form of unordered lists given the
-      class .note, this effectively creates a list with the bullet point set
-      to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>The blue and green boxes together add up to 100% of the width of the container box, so it doesn&rsquo;t matter that both the blue and green float left, the green box could float right, it would still fill the available space</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c060407">.main-area {
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:40 lang-css wrap" id="js--c06-10">.main-area {
 &nbsp; &nbsp; background-color: #96AFCF;
 &nbsp; &nbsp; width: 75%;
 &nbsp; &nbsp; float: left;
@@ -720,39 +691,33 @@ Date          Issue        Author         Reason for Modification
 &nbsp; &nbsp; background-color: #9DBB61;
 &nbsp; &nbsp; width: 25%;
 &nbsp; &nbsp; float: left;
-}</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+}</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.7 &emsp; style.css (with float)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-07.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.10 &emsp; style.css (with float)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-10.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">Bet that fixes it</span>.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-11">
-                            <a href="01-pages/06-04-box/02-images/fig-06-11.png" data-lightbox="fig-set" data-title="Figure 6.11 - Box with float">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-11">
+                            <a href="01-pages/06-04-box/02-images/fig-06-11.png" data-lightbox="fig-set" data-title="Figure 6.11 - Box with float">
                                 <img src="01-pages/06-04-box/02-images/fig-06-11.png" alt="Figure 6.11 - Box with float">
                             </a>
-                            <p>Figure 6.11 &emsp; Box with float</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.11 &emsp; Box with float</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">Well, not so much</span>. The blue and green boxes have done the right thing. The red box is all over the place.</p>
@@ -761,64 +726,60 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">To get round this we use a clever bit of jiggery-pokery (<span class="first-use">that to be honest I&rsquo;m not sure I fully understand</span>). We use the <span class="first-use">clearfix hack</span>:</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 060401]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 6.4.1 - THE CLEARFIX HACK
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060401">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--060401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>6.4.1</h3></div>
                     <div class="sub-title-text-box"><h3>The clearfix hack</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The <span class="first-use">clearfix hack</span> or <span class="first-use">clearfix method</span>, or just <span class="first-use">clearfix</span> is a clever bit of CSS code that forces floating elements to behave themselves. It&rsquo;s a CSS class and looks like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Single line fragments must not be preceded by a carriage return; i.e.
-     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
-     line breaks.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
+                    <div class="code-extract">
+                        <div class="code-area">
 
-                            <pre class="prettyprint lang-css" id="js--c060407a">.clearfix:after{
+                            <pre class="prettyprint lang-css" id="js--c06-10a">.clearfix:after{
 &nbsp; &nbsp; content: "";
 &nbsp; &nbsp; display: table;
 &nbsp; &nbsp; clear: both;
 }
 </pre>
 
-                        </div>                                              <!-- End of code extract holder -->
-                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
-                    </div>                                                  <!-- End of code fragment -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -833,23 +794,21 @@ Date          Issue        Author         Reason for Modification
      code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
      line breaks.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
+                    <div class="code-extract">
+                        <div class="code-area">
 
-                            <pre class="prettyprint lang-css" id="js--c060407b">.main-area {
+                            <pre class="prettyprint linenums:40 lang-css" id="js--c06-10b">.main-area {
 &nbsp; &nbsp; background-color: #96AFCF;
 &nbsp; &nbsp; width: 75%;
 &nbsp; &nbsp; float: left;
 }
 .main-area:after{
 &nbsp; &nbsp; content: "THIS IS CSS TEXT"
-}
+}</pre>
 
-</pre>
-
-                        </div>                                              <!-- End of code extract holder -->
-                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
-                    </div>                                                  <!-- End of code fragment -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -859,70 +818,39 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Footnotes use a four column table to give the appearance of a Word style
-     footnote (this has a partial border that extends part way across the page)
-
-     The footnote table has class .table-fnote.
-
-     The heading row of a footnote table is empty, it does no more than set the
-     row widths.
-
-     The footnote table has only one row (excepting the header), the first cell
-     of this row contains the footnote number.
-
-     The second cell is a spacing cell and contains no text (it simply separates
-     the number from the main text).
-
-     The final cell spans two columns and contains the text of the footnote.
-
-     Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-     By default each table row has a bottom border, this can be turned off
-     by giving the <tr> element the class .no-border
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn02">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;1</em></td>
-                            <td class="table-left"></td>
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">Technically this is referred to as block formatting context (BFC) or in CSS&nbsp;3 flow root. Now the important thing about this is that BFCs and floats can&rsquo;t overlap so it forces boxes that do (like the author-area in our example) onto a new line.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - DOUBLE FIGURE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a column figure arrangement with figures of equal width spread
-     across the page evenly (two rows with class .fig1-2).
-
-     Half width images have a maximum width of 361 px
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                     <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-2" id="js--f06-12">
-                            <a href="01-pages/06-04-box/02-images/fig-06-12.svg" data-lightbox="fig-set" data-title="Figure 6.12 - Uncleared floats">         <!-- LIGHTBOX LINK -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ xxx
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f06-12">
+                            <a href="01-pages/06-04-box/02-images/fig-06-12.svg" data-lightbox="fig-set" data-title="Figure 6.12 - Uncleared floats">
                                 <img src="01-pages/06-04-box/02-images/fig-06-12.svg" alt="Figure 6.12 - Uncleared floats">
                             </a>
-                            <p>Figure 6.12 &emsp; Uncleared floats</p>  <!-- Figure caption -->
-                        </div>
-                        <div class="fig-col fig1-2" id="js--f06-13">
-                            <a href="01-pages/06-04-box/02-images/fig-06-13.svg" data-lightbox="fig-set" data-title="Figure 6.13 - Cleared floats">         <!-- LIGHTBOX LINK -->
+                            <figcaption>Figure 6.12 &emsp; Uncleared floats</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f06-13">
+                            <a href="01-pages/06-04-box/02-images/fig-06-13.svg" data-lightbox="fig-set" data-title="Figure 6.13 - Cleared floats">
                                 <img src="01-pages/06-04-box/02-images/fig-06-13.svg" alt="Figure 6.13 - Cleared floats">
                             </a>
-                            <p>Figure 6.13 &emsp; Cleared floats</p><!-- Figure caption -->
-                        </div>
-
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.13 &emsp; Cleared floats</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">One important thing: with the <span class="code">:after</span> property in the <span class="code">clearfix</span> class; there <em>must not</em> be a space between the colon and <span class="code">after</span> or between the selector and the colon. This is true for all pseudo elements.</p>
@@ -939,58 +867,57 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP 060401]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 6.4.2 - USING THE CLEARFIX HACK
      ***********************************************************************-->
 
-        <section class="section-std" id="js--060402">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--060402">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>6.4.2</h3></div>
                     <div class="sub-title-text-box"><h3>Using the clearfix hack</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">First create a new <span class="code">clearfix</span> class (this can go at the end of the CSS file):</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">style.css</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:50 lang-css wrap" id="js--c060408">.author-area {
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:50 lang-css wrap" id="js--c06-11">.author-area {
 &nbsp; &nbsp; background-color: #C05046;
 }
 .clearfix:after{
 &nbsp; &nbsp; content: "";
 &nbsp; &nbsp; display: table;
 &nbsp; &nbsp; clear: both;
-}
-</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+}</pre>
+
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.8 &emsp; style.css (clearfix hack)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-08.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.11 &emsp; style.css (clearfix hack)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-11.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
@@ -999,10 +926,10 @@ Date          Issue        Author         Reason for Modification
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-header">index.html</div>            <!-- Code file name -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
-                            <pre class="prettyprint linenums:28 lang-html wrap" id="js--c060409">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="side-area"&gt;
+                    <div class="code-extract">
+                        <div class="code-header">index.html</div>
+                        <div class="code-area">
+                            <pre class="prettyprint linenums:28 lang-html wrap" id="js--c06-12">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="side-area"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; THIS IS THE SIDE AREA
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
@@ -1010,116 +937,95 @@ Date          Issue        Author         Reason for Modification
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="author-area"&gt;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;img src="henry.png" alt="Henry the saluki"&gt;
-</pre>                                          <!-- ^^^^ End of code extract ^^^^ -->
-                        </div>                                              <!-- End of code extract holder -->
-                        <table class="code-caption"> <!-- Caption & download  -->
+</pre>
+                        </div>
+                        <table class="code-caption">
                             <tr class="no-border">
-                                <td style="width: 5.0%"></td>     <!-- left hand padding -->
-                                <td style="width: 90.0%">Code 6.4.9 &emsp; index.html (add the clearfix hack)</td>    <!-- Caption text  -->
-                                <td style="width: 5.0%">          <!-- download link -->
-                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-04-09.zip" download><span class="nav-icon">a</span></a>
+                                <td style="width: 5.0%"></td>
+                                <td style="width: 90.0%">Code 6.12 &emsp; index.html (add the clearfix hack)</td>
+                                <td style="width: 5.0%">
+                                    <a class="code-nav" href="01-pages/06-04-box/04-data/code-06-12.zip" download><span class="nav-icon">a</span></a>
                                 </td>
-                            </tr>                                   <!-- TABLE - End of header   -->
-                        </table>                                    <!-- TABLE - End of table    -->
-                    </div>                                          <!-- End of code fragment -->
+                            </tr>
+                        </table>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">And finally we get what we want:</span></p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f06-14">
-                            <a href="01-pages/06-04-box/02-images/fig-06-14.png" data-lightbox="fig-set" data-title="Figure 6.14 - Float with clearfix">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f06-14">
+                            <a href="01-pages/06-04-box/02-images/fig-06-14.png" data-lightbox="fig-set" data-title="Figure 6.14 - Float with clearfix">
                                 <img src="01-pages/06-04-box/02-images/fig-06-14.png" alt="Figure 6.14 - Float with clearfix">
                             </a>
-                            <p>Figure 6.14 &emsp; Float with clearfix</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption>Figure 6.14 &emsp; Float with clearfix</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
                     <p class="hyp"><span class="first-use">Well wasn&rsquo;t that easy?</span></p>
 
-                 </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
-
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="06-03-box.html#js--060300">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="06-05-box.html#js--060500">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 999901]
-     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
-     ***********************************************************************-->
-        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
-
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>

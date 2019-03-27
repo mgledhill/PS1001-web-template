@@ -3,13 +3,15 @@
 ###### A series of technical documents for engineers (and others)
 
 
-# A Website Template for Online Publications <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P13.svg">
+# A Website Template for Online Publications <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg">
+
 <p align="center">
     <img width="300px" src="0-0201-repository-information/01-images/logo-lrg-min.png">
 </p>
 
 This is the website source code for the Practical Series of Publications website:
 **A Website Template for Online Publications**.
+
 
 ## Revision information
 
@@ -24,7 +26,8 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
-| master             | <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-P13.svg">
+| master             | <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg">
+
 
 
 ## Contents
@@ -101,7 +104,7 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
-<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P13.svg">
+<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P14.svg">
 
 ## Additional information
 

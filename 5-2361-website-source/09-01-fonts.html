@@ -8,15 +8,15 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Understanding the different font types, what type to convert (ttf, otf), converting to a WOFF file, open type font features.">
+        <meta name="description" content="Understanding the different font types, what type to convert (ttf, otf), converting to a WOFF file, open type font features">
 
 <!-- ==========================================================================
 
@@ -46,6 +46,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+27 Mar 2019   P14          M. Gledhill    Published
+
+26 Mar 2019   d-P13.00.04h M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -80,14 +84,15 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script src="01-pages/09-01-fonts/05-local-js/09-01-scroll.js" defer></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/09-01-fonts/05-local-js/09-01-scroll.js"></script>
 
 
 
@@ -96,13 +101,14 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/09-01-fonts/01-local-css/09-01-prettifylines.css">-->
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights      <link rel="stylesheet" type="text/css" href="01-pages/09-01-fonts/01-local-css/09-01-codeline.css">-->
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -125,63 +131,62 @@ Date          Issue        Author         Reason for Modification
         <title>Font and web font formats | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="09-00-fonts.html#js--090000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="08-00-columns.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
-                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
-                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 05 - Next Chapter -->
+                        <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
-                        <!-- Button 06 - Next section -->
+                        <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="09-02-fonts.html#js--090200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
-                    </div>                                      <!-- End of navigation button row -->
-                </div>                                          <!-- End of top navigation row -->
-            </nav>                                              <!-- End of top navigation bar -->
-<!-- ========================================================================== [WP END] -->
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>9</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">9</span>Fonts &amp; web fonts</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 09-01&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP 000004]
@@ -195,82 +200,91 @@ Date          Issue        Author         Reason for Modification
               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 9. WEBSITE PRELIMINARIES
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-090000" href="09-00-fonts.html#js--000000">  <!-- TOC link start -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-090000" href="09-00-fonts.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num">9</span><span class="toc-lev1-text">Fonts &amp; web fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
-                        <li><a class="js--sc-090100" href="09-01-fonts.html#js--090100">  <!-- TOC link start -->
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-090100" href="09-01-fonts.html#js--090100">
                             <div class="toc-lev"><span class="toc-lev2-num">9.1</span><span class="toc-lev2-text">Different types of fonts and web font formats</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090101" href="09-01-fonts.html#js--090101">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090101" href="09-01-fonts.html#js--090101">
                             <div class="toc-lev"><span class="toc-lev3-num">9.1.1</span><span class="toc-lev3-text">What type of font to convert?</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090102" href="09-01-fonts.html#js--090102">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090102" href="09-01-fonts.html#js--090102">
                             <div class="toc-lev"><span class="toc-lev3-num">9.1.2</span><span class="toc-lev3-text">What format to convert the font to?</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090103" href="09-01-fonts.html#js--090103">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090103" href="09-01-fonts.html#js--090103">
                             <div class="toc-lev"><span class="toc-lev3-num">9.1.3</span><span class="toc-lev3-text">The additional features of OpenType fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090200" href="09-02-fonts.html#js--090200">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090200" href="09-02-fonts.html#js--090200">
                             <div class="toc-lev"><span class="toc-lev2-num">9.2</span><span class="toc-lev2-text">Converting a font to a WOFF file</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090300" href="09-03-fonts.html#js--090300">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090300" href="09-03-fonts.html#js--090300">
                             <div class="toc-lev"><span class="toc-lev2-num">9.3</span><span class="toc-lev2-text">How to use a WOFF file</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090301" href="09-03-fonts.html#js--090301">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090301" href="09-03-fonts.html#js--090301">
                             <div class="toc-lev"><span class="toc-lev3-num">9.3.1</span><span class="toc-lev3-text">Loading a font with <span class="code">@font-face</span> </span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090302" href="09-03-fonts.html#js--090302">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090302" href="09-03-fonts.html#js--090302">
                             <div class="toc-lev"><span class="toc-lev3-num">9.3.2</span><span class="toc-lev3-text">Using the font</span></div></a>
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090400" href="09-04-fonts.html#js--090400">  <!-- TOC link start -->
+                            <br class="top-pad">
+                            <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090400" href="09-04-fonts.html#js--090400">
                             <div class="toc-lev"><span class="toc-lev2-num">9.4</span><span class="toc-lev2-text">Open source fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090401" href="09-04-fonts.html#js--090401">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090401" href="09-04-fonts.html#js--090401">
                             <div class="toc-lev"><span class="toc-lev3-num">9.4.1</span><span class="toc-lev3-text">Where to get open source fonts?</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090402" href="09-04-fonts.html#js--090402">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090402" href="09-04-fonts.html#js--090402">
                             <div class="toc-lev"><span class="toc-lev3-num">9.4.2</span><span class="toc-lev3-text">Replacing the Equity fonts with open source fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090403" href="09-04-fonts.html#js--090403">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090403" href="09-04-fonts.html#js--090403">
                             <div class="toc-lev"><span class="toc-lev3-num">9.4.3</span><span class="toc-lev3-text">A small confession</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090500" href="09-05-fonts.html#js--090500">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090500" href="09-05-fonts.html#js--090500">
                             <div class="toc-lev"><span class="toc-lev2-num">9.5</span><span class="toc-lev2-text">Using the Open source fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090501" href="09-05-fonts.html#js--090501">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090501" href="09-05-fonts.html#js--090501">
                             <div class="toc-lev"><span class="toc-lev3-num">9.5.1</span><span class="toc-lev3-text">An apology by the author</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090502" href="09-05-fonts.html#js--090502">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090502" href="09-05-fonts.html#js--090502">
                             <div class="toc-lev"><span class="toc-lev3-num">9.5.2</span><span class="toc-lev3-text">Changes to <span class="code">ps-fonts.css</span></span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090600" href="09-06-fonts.html#js--090600">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090600" href="09-06-fonts.html#js--090600">
                             <div class="toc-lev"><span class="toc-lev2-num">9.6</span><span class="toc-lev2-text">The Practical Series fonts</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090601" href="09-06-fonts.html#js--090601">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090601" href="09-06-fonts.html#js--090601">
                             <div class="toc-lev"><span class="toc-lev3-num">9.6.1</span><span class="toc-lev3-text">PS Icons font</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090602" href="09-06-fonts.html#js--090602">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-090602" href="09-06-fonts.html#js--090602">
                             <div class="toc-lev"><span class="toc-lev3-num">9.6.2</span><span class="toc-lev3-text">PS Index font</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-090700" href="09-07-fonts.html#js--090700">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-090700" href="09-07-fonts.html#js--090700">
                             <div class="toc-lev"><span class="toc-lev2-num">9.7</span><span class="toc-lev2-text">Web fonts the download</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                     </ul>                                       <!-- End of TOC in columns -->
-               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+                        </li>
+                    </ul>
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
@@ -282,22 +296,20 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP 090100]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 9.1 - DIFFERENT TYPES OF FONTS AND WEB FONT FORMATS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090100">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--090100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>9.1</h2></div>
                     <div class="sub-title-text-box"><h2>Different types of fonts and web font formats</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -306,7 +318,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">I waxed lyrical about the Equity fonts and why I&rsquo;m using them in <a class="hlink nohyp" href="03-02-grid.html#js--030201">&sect;&nbsp;3.2.1</a>, I also explained my reasons for swapping them for open source fonts in the downloadable version in <a class="hlink nohyp" href="01-03-typographical.html#js--010302">&sect;&nbsp;1.3</a>; the upshot is that I&rsquo;m using the Equity fonts on the website proper and this is how I went about it.</p>
 
@@ -316,42 +328,40 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">So if you&rsquo;re happy with that, the next question is: <span class="first-use">what type of font to convert?</span></p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 090101]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 9.1.1 - WHAT TYPE OF FONT TO CONVERT?
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090101">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>9.1.1</h3></div>
                     <div class="sub-title-text-box"><h3>What type of font to convert?</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
-
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
                     <p class="hyp">Fonts generally come in two formats: TrueType fonts (TTF) and OpenType fonts (OTF).</p>
 
                     <p class="hyp">TrueType fonts were developed by Apple and Microsoft (sometime in the 1980s), they are (or possibly were) the most common fonts on Windows machines. TrueType fonts have the extension <span class="code">.ttf</span>.</p>
@@ -372,128 +382,94 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
                         <li><p class="hyp">Always use OpenType CFF<sup>&dagger;2</sup> fonts, these have an <span class="code">.otf</span> extension</p></li>
 
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">If these are not available use:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num" start="2">                       <!-- Start of numbered list -->
+                    <ol class="list-num" start="2">                       <!-- Start of numbered list   -->
                         <li><p class="hyp">OpenType TT fonts, these have a <span class="code">.ttf</span> extension</p></li>
 
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">And failing that use:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num" start="3">                       <!-- Start of numbered list -->
+                    <ol class="list-num" start="3">                       <!-- Start of numbered list   -->
                         <li><p class="hyp">TrueType fonts, these also have a <span class="code">.ttf</span> extension</p></li>
 
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">This leads on to the next question: <span class="first-use">What format should I convert the font to?</span></p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Footnotes use a four column table to give the appearance of a Word style
-     footnote (this has a partial border that extends part way across the page)
-
-     The footnote table has class .table-fnote.
-
-     The heading row of a footnote table is empty, it does no more than set the
-     row widths.
-
-     The footnote table has only one row (excepting the header), the first cell
-     of this row contains the footnote number.
-
-     The second cell is a spacing cell and contains no text (it simply separates
-     the number from the main text).
-
-     The final cell spans two columns and contains the text of the footnote.
-
-     Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-     By default each table row has a bottom border, this can be turned off
-     by giving the <tr> element the class .no-border
+     TABLE - MULTIPLE FOOTNOTE
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn01">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;1</em></td>
-                            <td class="table-left"></td>
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">PostScript Type 1 was a font format developed by Adobe in the 1980s, predating TrueType, TrueType was developed as an alternative to PostScript.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;2</em></td>
-                            <td class="table-left"></td>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;2</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">Sometimes referred to as OpenType PostScript or OpenType PS</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-               </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 090102]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 9.1.2 - WHAT TYPE OF FONT TO CONVERT?
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090102">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>9.1.2</h3></div>
                     <div class="sub-title-text-box"><h3>What format to the font to?</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">CSS&nbsp;3 introduced the ability to encode fonts and make them usable on a website<sup>&dagger;3</sup>.</p>
 
@@ -501,11 +477,8 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
                         <li><p class="hyp">TrueType fonts (TTF)</p></li>
 
                         <li><p class="hyp">OpenType fonts (OTF)</p></li>
@@ -518,7 +491,7 @@ Date          Issue        Author         Reason for Modification
 
                         <li><p class="hyp">Embed Open Type fonts (EOT)</p></li>
 
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"><span class="first-use">&ldquo;Hang on&rdquo; you&rsquo;re thinking &ldquo;if it already supports OTF and TTF why are we converting them?&rdquo;</span></p>
@@ -539,92 +512,65 @@ Date          Issue        Author         Reason for Modification
 
  <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
                         <li><p class="hyp">WOFF</p></li>
 
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Footnotes use a four column table to give the appearance of a Word style
-     footnote (this has a partial border that extends part way across the page)
-
-     The footnote table has class .table-fnote.
-
-     The heading row of a footnote table is empty, it does no more than set the
-     row widths.
-
-     The footnote table has only one row (excepting the header), the first cell
-     of this row contains the footnote number.
-
-     The second cell is a spacing cell and contains no text (it simply separates
-     the number from the main text).
-
-     The final cell spans two columns and contains the text of the footnote.
-
-     Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-     By default each table row has a bottom border, this can be turned off
-     by giving the <tr> element the class .no-border
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn03">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;3</em></td>
-                            <td class="table-left"></td>
+                    <table class="table-fnote" id="js--fn03">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;3</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">Before this, websites used web safe fonts; this was a common set of fonts that were available on most internet capable machines. At the safest, this consisted of just five fonts: Arial, Courier New, Georgia, Times New Roman and Verdana. Other fonts that can be considered relatively safe are Georgia, Lucida Console, Palatino, Tahoma and Trebuchet.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-               </div>                                          <!-- End of section text area   -->
 
-               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 090103]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 9.1.3 - THE ADDITIONAL FEATURES OF OPENTYPE FONTS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090103">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>9.1.3</h3></div>
                     <div class="sub-title-text-box"><h3>The additional features of OpenType fonts</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp"><span class="first-use">This is for information and self-improvement only; skip it if you don&rsquo;t want to know about ligatures and stylistic sets.</span></p>
 
@@ -634,9 +580,6 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Unnumbered lists are an unordered list of class .list-no-num. The text of
-      each point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
                         <li><p class="hyp">Ligatures</p></li>
@@ -655,32 +598,31 @@ Date          Issue        Author         Reason for Modification
                     <p> <br class="toc-pad"></p>
                     <p> <br class="toc-pad"></p>
 
-               </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-               <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
      SECTION INLINE - LIGATURES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090103a">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090103a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <!-- <div class="sub-title-num-box"><h4></h4></div> -->
                     <div class="sub-title-text-box"><h4>Ligatures</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -689,63 +631,34 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">There are certain letter combinations with most fonts that cause the letters to &ldquo;collide&rdquo; with each other, it&rsquo;s usually lower case &lsquo;f&rsquo; and &lsquo;g; characters and is more common in italic lettering; like this:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t09-00a">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 80%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 20%"></td>      <!-- set column 01 width here -->
-
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                    <table class="table-clean" id="js--t09-00a">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 80%"></td>
+                            <td class="table-cent" style="width: 20%"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00a.png" data-lightbox="fig-set" data-title="Font without ligatures">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00a.png" data-lightbox="fig-set" data-title="Font without ligatures">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00a.png" style="width: 100%" alt="Font without ligatures">
                                 </a>
                             </td>
-                            <td class="table-left">Without ligatures</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-left">Without ligatures</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Here, the top of the f collides with the dot of the j and i characters. The bottom of the g characters also bump into each other.</p>
@@ -753,88 +666,59 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">To get around this, the font designers include special characters (<span class="first-use">called ligatures</span>) that combine these problematic combinations into single characters; like this:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t09-00b">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 80%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 20%"></td>      <!-- set column 01 width here -->
-
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                    <table class="table-clean" id="js--t09-00b">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 80%"></td>
+                            <td class="table-cent" style="width: 20%"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00b.png" data-lightbox="fig-set" data-title="Font with ligatures">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00b.png" data-lightbox="fig-set" data-title="Font with ligatures">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00b.png" style="width: 100%" alt="Font with ligatures">
                                 </a>
                             </td>
-                            <td class="table-left">With ligatures</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-left">With ligatures</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Where fonts are supplied with ligatures, they should always be used. OpenType supports ligatures and so does CSS, it&rsquo;s activated with the <span class="code">text-rendering: optimizeLegibility</span> property (this is the same property that activates kerning, see <a class="hlink nohyp" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>).</p>
 
-                 </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
 
 
 <!-- ************************************************************************** [WP INLINE]
      SECTION INLINE - SMALL CAPS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090103b">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090103b">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <!-- <div class="sub-title-num-box"><h4></h4></div> -->
                     <div class="sub-title-text-box"><h4>Small caps</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -843,103 +727,69 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Small caps (<span class="first-use">capitals</span>) are shorter capital letters that fit in with lowercase letters. They look like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f99-00c">
-                            <a href="01-pages/09-01-fonts/02-images/fig-09-00c.png" data-lightbox="fig-set" data-title="An example of small caps">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f99-00c">
+                            <a href="01-pages/09-01-fonts/02-images/fig-09-00c.png" data-lightbox="fig-set" data-title="An example of small caps">
                                 <img src="01-pages/09-01-fonts/02-images/fig-09-00c.png" style="width: 85%" alt="An example of small caps">
                             </a>
-                            <p></p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Now small caps are quite rare, most fonts don&rsquo;t have them (Equity does and that&rsquo;s what you see above). What most people think of as small caps are those that are artificially generated by word processors (and CSS), these are scaled down versions of the standard capital letters. You can see the difference below:</p>
 
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" style="width: 90%" id="js--t09-00c">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 75%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 25%"></td>      <!-- set column 01 width here -->
+                    <table class="table-clean" style="width: 90%" id="js--t09-00c">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 75%"></td>
+                            <td class="table-cent" style="width: 25%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00d.png" data-lightbox="fig-set" data-title="Real small caps">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00d.png" data-lightbox="fig-set" data-title="Real small caps">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00d.png" style="width: 100%" alt="Real small caps">
                                 </a>
                             </td>
-                            <td class="table-left">Real small caps </td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left">Real small caps </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00e.png" data-lightbox="fig-set" data-title="Artificial small caps">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00e.png" data-lightbox="fig-set" data-title="Artificial small caps">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00e.png" style="width: 100%" alt="Artificial small caps">
                                 </a>
                             </td>
-                            <td class="table-left">Artificial small caps</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-left">Artificial small caps</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00f.png" data-lightbox="fig-set" data-title="Expanded artificial small caps">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00f.png" data-lightbox="fig-set" data-title="Expanded artificial small caps">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00f.png" style="width: 100%" alt="Expanded artificial small caps">
                                 </a>
                             </td>
-                            <td class="table-left">Expanded artificial small caps</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-left">Expanded artificial small caps</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">I like small caps, I use them to highlight links on the website&mdash;they&rsquo;re a subtle alternative to bold and italic emphasis.</p>
@@ -952,32 +802,31 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">If you do want to use artificial small caps in CSS, the <span class="code">font-variant: small-caps</span> property turns it on.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
      SECTION INLINE - ALTERNATIVE FIGURES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090103c">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090103c">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <!-- <div class="sub-title-num-box"><h4></h4></div> -->
                     <div class="sub-title-text-box"><h4>Alternative figures</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -986,27 +835,21 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">When I say figures, I&rsquo;m literally talking about numbers, the 0123456789 on the keyboard. Now normally when you hit the number keys, you don&rsquo;t really think about what those number look like (they&rsquo;re just numbers) but look here:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f99-00g">
-                            <a href="01-pages/09-01-fonts/02-images/fig-09-00g.png" data-lightbox="fig-set" data-title="lining figures ">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f99-00g">
+                            <a href="01-pages/09-01-fonts/02-images/fig-09-00g.png" data-lightbox="fig-set" data-title="lining figures ">
                                 <img src="01-pages/09-01-fonts/02-images/fig-09-00g.png" style="width: 85%" alt="lining figures ">
                             </a>
-                            <p></p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The top and bottom of the numbers all line up, they are all the same height and they all start on the same base line, they are also pretty much the same height as capital letters (they&rsquo;re a bit smaller with the Equity font above). These type of figures are called lining figures (<span class="first-use">I think because they line up</span>).</p>
@@ -1015,22 +858,16 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f99-00h">
-                            <a href="01-pages/09-01-fonts/02-images/fig-09-00h.png" data-lightbox="fig-set" data-title="oldstyle figures ">         <!-- LIGHTBOX LINK -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f99-00h">
+                            <a href="01-pages/09-01-fonts/02-images/fig-09-00h.png" data-lightbox="fig-set" data-title="oldstyle figures ">
                                 <img src="01-pages/09-01-fonts/02-images/fig-09-00h.png" style="width: 85%" alt="oldstyle figures ">
                             </a>
-                            <p></p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Oldstyle figures are more like lowercase letters and they are designed to look more natural in lowercase body text.</p>
@@ -1041,32 +878,31 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">In my case, and on this website, I don&rsquo;t use oldstyle figures.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
      SECTION INLINE - STYLISTIC SETS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--090103d">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--090103d">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <!-- <div class="sub-title-num-box"><h4></h4></div> -->
                     <div class="sub-title-text-box"><h4>Stylistic sets</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -1075,65 +911,37 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Stylistic sets provide alternative character sets within a font. These can be to address regional differences, provide alternatives for specific situations (tall figures for example) or just because that&rsquo;s what the font designer wanted.</p>
 
                     <p class="hyp">Here&rsquo;s an example, the Concourse font has the following standard characters (by default this is stylistic set 0):</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t09-00i">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 80%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 20%"></td>      <!-- set column 01 width here -->
+                    <table class="table-clean" id="js--t09-00i">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 80%"></td>
+                            <td class="table-cent" style="width: 20%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00i.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 0">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00i.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 0">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00i.png" style="width: 100%" alt="Concourse Stylistic set 0">
                                 </a>
                             </td>
-                            <td class="table-cent">Concourse<br>Stylistic set 0</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Concourse<br>Stylistic set 0</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Now in England we&rsquo;re not quite so frivolous&mdash;you can&rsquo;t rule the world with &lsquo;t&rsquo;s and &lsquo;g&rsquo;s like that&mdash;<span class="first-use">it&rsquo;s not primary school for Christ&rsquo;s sake</span>.</p>
@@ -1141,58 +949,30 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">So there is a British stylistic set, in this case it is stylistic set 2 and it looks like this:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t09-00j">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 80%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 20%"></td>      <!-- set column 01 width here -->
+                    <table class="table-clean" id="js--t09-00j">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 80%"></td>
+                            <td class="table-cent" style="width: 20%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00j.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 2">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00j.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 2">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00j.png" style="width: 100%" alt="Concourse Stylistic set 2">
                                 </a>
                             </td>
-                            <td class="table-cent">Concourse<br>Stylistic set 2</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Concourse<br>Stylistic set 2</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Much more right and proper&mdash;kind of letters you can hang your hat on&mdash;just what the Empire needs.</p>
@@ -1200,67 +980,39 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">This is what the French get:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t09-00k">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                   <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
-                            <td class="table-cent" style="width: 80%"></td>      <!-- set column 01 width here -->
-                            <td class="table-cent" style="width: 20%"></td>      <!-- set column 01 width here -->
+                    <table class="table-clean" id="js--t09-00k">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 80%"></td>
+                            <td class="table-cent" style="width: 20%"></td>
 
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00k.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 0">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00k.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 0">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00k.png" style="width: 100%" alt="Concourse Stylistic set 0">
                                 </a>
                             </td>
-                            <td class="table-cent">Concourse<br>Stylistic set 0</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 4em"></div></td><!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Concourse<br>Stylistic set 0</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 4em"></div></td>
                             <td class="table-cent">
-                                <a href="01-pages/09-01-fonts/02-images/fig-09-00l.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 3">         <!-- LIGHTBOX LINK -->
+                                <a href="01-pages/09-01-fonts/02-images/fig-09-00l.png" data-lightbox="fig-set" data-title="Concourse Stylistic set 3">
                                     <img src="01-pages/09-01-fonts/02-images/fig-09-00l.png" style="width: 100%" alt="Concourse Stylistic set 3">
                                 </a>
                             </td>
-                            <td class="table-cent">Concourse<br>Stylistic set 3</td>      <!-- set column 01 width here -->
-                        </tr>                                            <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                            <td class="table-cent">Concourse<br>Stylistic set 3</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-caption"></td>
                             <td class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Letters to surrender by, something very sad about that &lsquo;Q&rsquo;<sup>&dagger;4</sup>.</p>
@@ -1277,125 +1029,85 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Footnotes use a four column table to give the appearance of a Word style
-     footnote (this has a partial border that extends part way across the page)
-
-     The footnote table has class .table-fnote.
-
-     The heading row of a footnote table is empty, it does no more than set the
-     row widths.
-
-     The footnote table has only one row (excepting the header), the first cell
-     of this row contains the footnote number.
-
-     The second cell is a spacing cell and contains no text (it simply separates
-     the number from the main text).
-
-     The final cell spans two columns and contains the text of the footnote.
-
-     Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-     By default each table row has a bottom border, this can be turned off
-     by giving the <tr> element the class .no-border
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn04">   <!-- TABLE - Start of footnote  -->
-                        <tr>                                    <!-- TABLE - footnote header line -->
-                            <th class="table-cent fnote-top" style="width: 10%"></th>      <!-- set column 01 width here -->
-                            <th class="table-left fnote-top" style="width: 10%"></th>      <!-- set column 02 width here -->
-                            <th class="table-left fnote-top" style="width: 20%"></th>      <!-- set column 03 width here -->
-                            <th class="table-left" style="width: 60%"></th>                <!-- set column 03 width here -->
-                        </tr>                                   <!-- TABLE - End of footnote header line  -->
-                        <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;4</em></td>
-                            <td class="table-left"></td>
+                    <table class="table-fnote" id="js--fn04">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;4</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
                             <td colspan="2" class="table-left">John Cleese wrote an interesting article about something similar <a class="hlink nohyp" href="http://www.goodreads.com/topic/show/926647-alerts-to-threats-in-europe-by-john-cleese">here</a>.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                       <tr>                                    <!-- TABLE - Start of footnote row 01 -->
-                            <td class="table-left"><em>&dagger;5</em></td>
-                            <td class="table-left"></td>
-                           <td colspan="2" class="table-left">My old Dad used to say <span class="first-use">&ldquo;A joke is no laughing matter to a German&rdquo;</span>&mdash;but then Hitler did blow his house up, not so much the verb at the end of the sentence as the bomb at the end of the drive.</td>
-                        </tr>                                   <!-- TABLE - End of footnote row 01   -->
-                    </table>                                    <!-- TABLE - End of footnote    -->
+                        </tr>
+                       <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;5</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">My old Dad used to say <span class="first-use">&ldquo;A joke is no laughing matter to a German&rdquo;</span>&mdash;but then Hitler did blow his house up, not so much the verb at the end of the sentence as the bomb at the end of the drive.</td>
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                 </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="09-00-fonts.html#js--090000">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="09-02-fonts.html#js--090200">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-
-
-<!-- ************************************************************************** [WP 999901]
-     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
-     ***********************************************************************-->
-        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
-
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>

@@ -8,13 +8,13 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="An example document built using the website template, this is part 1: Fairfax WTW - a functional specification">
 
@@ -46,6 +46,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+27 Mar 2019   P14          M. Gledhill    Published
+
+22 Mar 2019   d-P13.00.04  M. Gledhill    Standardisation corrections
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -80,27 +84,27 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)            <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script> -->
-        <!-- Prettify (Language)        <script src="21-global/05-js/lang-css.js" defer></script> -->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax                    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
-
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script src="01-pages/02-00-fairfax/05-local-js/02-00-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
-
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/02-00-fairfax/05-local-js/02-00-scroll.js"></script>
 
 <!-- **************************************************************************
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles            <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css"> -->
         <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights      <link rel="stylesheet" type="text/css" href="01-pages/02-00-fairfax/01-local-css/02-00-codeline.css"> -->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -123,188 +127,189 @@ Date          Issue        Author         Reason for Modification
         <title>An example document part 1 | PracticalSeries: Web Development</title>
     </head>
 
-    <body>                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="01-04-tools.html#js--010400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="01-00-introduction.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
-                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
-                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 05 - Next Chapter -->
+                        <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="03-00-grid.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
-                        <!-- Button 06 - Next section -->
+                        <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="02-02-fairfax.html#js--020200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
-                    </div>                                      <!-- End of navigation button row -->
-                </div>                                          <!-- End of top navigation row -->
-            </nav>                                              <!-- End of top navigation bar -->
-<!-- ========================================================================== [WP END] -->
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>2</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">2</span>Fairfax WTW<br>An example document</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 02-00&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 000004]
+<!-- ************************************************************************** [WP TOC]
      TABLE OF CONTENTS
      ***********************************************************************-->
 
-            <div class="rg-row">                                <!-- Start of TOC section -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
 
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - A NOTE BY THE AUTHOR
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-02" href="02-00-fairfax.html#js--02">  <!-- TOC link start -->
+                    <ul class="toc-line">
+                        <li><a class="js--sc-020000x" href="02-00-fairfax.html#js--020000x">
                                <div class="toc-lev"><span class="toc-lev1lt-num"></span><span class="toc-lev1lt-text">A note by the author</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 2. Fairfax WTW
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-020000" href="02-00-fairfax.html#js--000000">  <!-- TOC link start -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-020000" href="02-00-fairfax.html#js--020000">
                                <div class="toc-lev"><span class="toc-lev1-num">2</span><span class="toc-lev1-text">Fairfax WTW &mdash; an example document</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
-                        <li><a class="js--sc-020100" href="02-00-fairfax.html#js--020100">  <!-- TOC link start -->
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-020100" href="02-00-fairfax.html#js--020100">
                             <div class="toc-lev"><span class="toc-lev2-num">2.1</span><span class="toc-lev2-text">The main areas of the plant</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020101" href="02-00-fairfax.html#js--020101">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020101" href="02-00-fairfax.html#js--020101">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.1</span><span class="toc-lev3-text">Inlet works</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020102" href="02-00-fairfax.html#js--020102">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020102" href="02-00-fairfax.html#js--020102">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.2</span><span class="toc-lev3-text">Filtration</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020103" href="02-00-fairfax.html#js--020103">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020103" href="02-00-fairfax.html#js--020103">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.3</span><span class="toc-lev3-text">Outlet works</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020104" href="02-00-fairfax.html#js--020104">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020104" href="02-00-fairfax.html#js--020104">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.4</span><span class="toc-lev3-text">Backwash services</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020105" href="02-00-fairfax.html#js--020105">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020105" href="02-00-fairfax.html#js--020105">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.5</span><span class="toc-lev3-text">Ferric sulphate dosing</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020106" href="02-00-fairfax.html#js--020106">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020106" href="02-00-fairfax.html#js--020106">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.6</span><span class="toc-lev3-text">Sodium hypochlorite dosing</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020107" href="02-00-fairfax.html#js--020107">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020107" href="02-00-fairfax.html#js--020107">
                             <div class="toc-lev"><span class="toc-lev3-num">2.1.7</span><span class="toc-lev3-text">Other services: sampling &amp; monitoring</span></div></a>
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
-                            <br class="top-pad">                <!-- Apply padding to give symmetry to toc (must be before </li> -->
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020200" href="02-02-fairfax.html#js--020200">  <!-- TOC link start -->
+<!-- TOC PADDING  -->       <br class="top-pad">
+<!-- TOC PADDING  -->       <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-020200" href="02-02-fairfax.html#js--020200">
                             <div class="toc-lev"><span class="toc-lev2-num">2.2</span><span class="toc-lev2-text">An overview of the control system</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020201" href="02-02-fairfax.html#js--020201">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020201" href="02-02-fairfax.html#js--020201">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.1</span><span class="toc-lev3-text">The automation system (AS)</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020202" href="02-02-fairfax.html#js--020202">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020202" href="02-02-fairfax.html#js--020202">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.2</span><span class="toc-lev3-text">Remote input &amp; output (IO) racks</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020203" href="02-02-fairfax.html#js--020203">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020203" href="02-02-fairfax.html#js--020203">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.3</span><span class="toc-lev3-text">The operator station server (OSS)</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020204" href="02-02-fairfax.html#js--020204">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020204" href="02-02-fairfax.html#js--020204">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.4</span><span class="toc-lev3-text">The operator station clients (OSCs)</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020205" href="02-02-fairfax.html#js--020205">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020205" href="02-02-fairfax.html#js--020205">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.5</span><span class="toc-lev3-text">The engineering station (ES)</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020206" href="02-02-fairfax.html#js--020206">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020206" href="02-02-fairfax.html#js--020206">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.6</span><span class="toc-lev3-text">The terminal bus network</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020207" href="02-02-fairfax.html#js--020207">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020207" href="02-02-fairfax.html#js--020207">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.7</span><span class="toc-lev3-text">The plant bus network</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-020208" href="02-02-fairfax.html#js--020208">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-020208" href="02-02-fairfax.html#js--020208">
                             <div class="toc-lev"><span class="toc-lev3-num">2.2.8</span><span class="toc-lev3-text">The ProfiBus network</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of TOC in columns -->
+                        </li>
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
         </header>                                               <!-- End of header -->
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 02]
+
+<!-- ************************************************************************** [WP LEADIN]
      CHAPTER 2 - LEAD IN SECTION (NO NUMBERED HEADING)
      ***********************************************************************-->
 
-        <section class="section-std" id="js--02">               <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline (after TOC) -->
-                    <div class="sub-title-num-box"><h6>Fairfax WTW</h6></div>   <!-- Heading 6 is a placehoder heading needed in sections without a heading to satisfy html validation -->
-                <!--     <div class="sub-title-text-box"><h2>Text</h2></div> -->
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+        <section class="section-std" id="js--020000x">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
+                    <div class="sub-title-num-box"><h6>Fairfax WTW</h6></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-head">                  <!-- Start of left side bar   -->
-                        <h2>a note by the author</h2>           <!-- Side bar content         -->
+                        <h2>a note by the author</h2>
                     </aside>                                    <!-- End of left side bar     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp"><span class="sans"><span class="all-caps">This is</span> an extract from the Functional Design Specification for a fictitious water treatment plant called Fairfax Water Treatment Works (Fairfax WTW).</span></p>
 
@@ -312,35 +317,31 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp sans">Anyone reading this who thinks the names I’ve used sound familiar&nbsp;&mdash;&nbsp;well, you probably went to a certain small grammar school in Yorkshire.</p>
 
+                </div>                                          <!-- End of section text      -->
 
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
-
-<!-- ************************************************************************** [WP 020000]
+<!-- ************************************************************************** [WP SECTION]
      CHAPTER 2 - Fairfax WTW
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020000">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--020000">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>2</h2></div>
                  <div class="sub-title-text-box"><h2>Fairfax WTW&nbsp;&mdash;&nbsp;an example</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -349,7 +350,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp"><span class="all-caps">Fairfax Water Treatment Works</span> is a new development built at the bottom of the Cavendish reservoir to provide 6&nbsp;Ml/day of treated water into the water supply system.</p>
 
@@ -365,33 +366,157 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The following sections provide an overview of the plant itself (including the principal methods of operation) and of the control system (its architecture and interfaces).</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020100]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 2.1 - THE MAIN AREAS OF THE PLANT
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020100">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--020100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>2.1</h2></div>
                  <div class="sub-title-text-box"><h2>The main areas of the plant</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The water treatment works is split into nine areas; these can be seen in the following flow diagram for the water treatment works:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f02-01">
+                            <a href="01-pages/02-00-fairfax/02-images/fig-02-01.svg" data-lightbox="fig-set" data-title="Figure 2.1 - Fairfax WTW flow diagram">
+                                <img src="01-pages/02-00-fairfax/02-images/fig-02-01.svg" alt="Figure 2.1 - Fairfax WTW flow diagram">
+                            </a>
+                            <figcaption>Figure 2.1 &emsp; Fairfax WTW flow diagram</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Each of these areas is allocated a number that forms the leading digit of all system equipment numbers (<span class="first-use">tag</span> numbers). These area numbers are used to identify the area of the plant that the equipment belongs to; <a class="xref js--sc-t02-01" href="#">Table&nbsp;2.1</a> identifies the area numbers:</p>
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                      <table class="table-clean" id="js--t02-01">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 15%">Area</th>
+                            <th class="table-left" style="width: 40%">Name</th>
+                            <th class="table-left" style="width: 45%">Purpose</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">0</td>
+                            <td class="table-left">Inlet works</td>
+                            <td class="table-left">Collection and primary treatment of the water entering the works</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">1</td>
+                            <td class="table-left">Filtration &mdash; Filter 1</td>
+                            <td class="table-left"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">2</td>
+                            <td class="table-left">Filtration &mdash; Filter 2</td>
+                            <td class="table-left">Three rapid gravity filters used to remove coagulated particulates from the water</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">3</td>
+                            <td class="table-left">Filtration &mdash; Filter 3</td>
+                            <td class="table-left"></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">4</td>
+                            <td class="table-left">Outlet works</td>
+                            <td class="table-left">Final treatment of the water and distribu-tion to mains</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">5</td>
+                            <td class="table-left">Backwash services</td>
+                            <td class="table-left">Backwash water storage and dirty back-wash water treatment</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">6</td>
+                            <td class="table-left">Dosing &mdash; Ferric sulphate</td>
+                            <td class="table-left">Coagulant dosing </td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">7</td>
+                            <td class="table-left">Dosing &mdash; Sodium hypochlorite</td>
+                            <td class="table-left">Primary and secondary sterilisation</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">8</td>
+                            <td class="table-left">General plant services</td>
+                            <td class="table-left">Sampling, pneumatic supply, power monitoring etc.</td>
+                        </tr>
+ <!-- Caption -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 2.1 &emsp; Area numbers within the WTW</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The following sections give a detailed overview of each of these areas.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION 2.1.1 - INLET WORKS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--020101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>2.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Inlet works</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
@@ -401,168 +526,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
-
-                    <p class="hyp">The water treatment works is split into nine areas; these can be seen in the following flow diagram for the water treatment works:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f02-01">
-                            <a href="01-pages/02-00-fairfax/02-images/fig-02-01.svg" data-lightbox="fig-set" data-title="Figure 2.1 - Fairfax WTW flow diagram">         <!-- LIGHTBOX LINK -->
-                                <img src="01-pages/02-00-fairfax/02-images/fig-02-01.svg" alt="Figure 2.1 - Fairfax WTW flow diagram">
-                            </a>
-                            <p>Figure 2.1 &emsp; Fairfax WTW flow diagram</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">Each of these areas is allocated a number that forms the leading digit of all system equipment numbers (<span class="first-use">tag</span> numbers). These area numbers are used to identify the area of the plant that the equipment belongs to; <a class="xref js--sc-t02-01" href="#">Table&nbsp;2.1</a> identifies the area numbers:</p>
-
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                      <table class="table-clean" ID="js--t02-01">                 <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="leading"></th>                                               <!-- Leading row (sets min-height) -->
-                            <th class="table-cent" style="width: 15%">Area</th>                     <!-- set column 01 widhth here -->
-                            <th class="table-left" style="width: 40%">Name</th>                     <!-- set column 02 widhth here -->
-                            <th class="table-left" style="width: 45%">Purpose</th>                  <!-- set column 03 widhth here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">0</td>
-                            <td class="table-left">Inlet works</td>
-                            <td class="table-left">Collection and primary treatment of the water entering the works</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of row 02 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">1</td>
-                            <td class="table-left">Filtration &mdash; Filter 1</td>
-                            <td class="table-left"></td>
-                        </tr>                                   <!-- TABLE - End of row 02   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of row 03 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">2</td>
-                            <td class="table-left">Filtration &mdash; Filter 2</td>
-                            <td class="table-left">Three rapid gravity filters used to remove coagulated particulates from the water</td>
-                        </tr>                                   <!-- TABLE - End of row 03   -->
-                        <tr>                                    <!-- TABLE - Start of row 04 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">3</td>
-                            <td class="table-left">Filtration &mdash; Filter 3</td>
-                            <td class="table-left"></td>
-                        </tr>                                   <!-- TABLE - End of row 04   -->
-                        <tr>                                    <!-- TABLE - Start of row 05 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">4</td>
-                            <td class="table-left">Outlet works</td>
-                            <td class="table-left">Final treatment of the water and distribu-tion to mains</td>
-                        </tr>                                   <!-- TABLE - End of row 05   -->
-                        <tr>                                    <!-- TABLE - Start of row 06 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">5</td>
-                            <td class="table-left">Backwash services</td>
-                            <td class="table-left">Backwash water storage and dirty back-wash water treatment</td>
-                        </tr>                                   <!-- TABLE - End of row 06   -->
-                        <tr>                                    <!-- TABLE - Start of row 07 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">6</td>
-                            <td class="table-left">Dosing &mdash; Ferric sulphate</td>
-                            <td class="table-left">Coagulant dosing </td>
-                        </tr>                                   <!-- TABLE - End of row 07   -->
-                        <tr>                                    <!-- TABLE - Start of row 08 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">7</td>
-                            <td class="table-left">Dosing &mdash; Sodium hypochlorite</td>
-                            <td class="table-left">Primary and secondary sterilisation</td>
-                        </tr>                                   <!-- TABLE - End of row 08   -->
-                        <tr>                                    <!-- TABLE - Start of row 09 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td>            <!-- Leading row (sets min-height) -->
-                            <td class="table-cent">8</td>
-                            <td class="table-left">General plant services</td>
-                            <td class="table-left">Sampling, pneumatic supply, power monitoring etc.</td>
-                        </tr>                                   <!-- TABLE - End of row 09   -->
-                        <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                               <!-- Leading row (sets min-height) -->
-                            <td colspan="3" class="table-caption">Table 2.1 &emsp; Area numbers within the WTW</td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
-
-                    <p class="hyp">The following sections give a detailed overview of each of these areas.</p>
-
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 020101]
-     SUBSECTION 2.1.1 - INLET WORKS
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--020101">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <div class="sub-title-num-box"><h3>2.1.1</h3></div>
-                    <div class="sub-title-text-box"><h3>Inlet works</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
-
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                      <p class="hyp">The plant receives inlet water from both the Cavendish reservoir and from the Coverley reservoir (located 2&nbsp;km northwest of the water treatment works) and can mix water from the two reservoirs in any ratio. Flow into the plant from each reservoir is controlled by two modulating valves (one for each reservoir, and each being located in the valve house for that reservoir); the flow from each reservoir is monitored by flow meters located in the respective valve houses.</p>
 
@@ -572,55 +536,50 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Notes are added to the text in the form of unordered lists given the
-      class .note, this effectively creates a list with the bullet point set
-      to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>Supernatant is the water in the settling tank that sits above the sediment, this is decanted and returned to the works inlet for treatment.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Water is pumped from the inlet tank to the contact tank by a pair of duty-standby inlet pumps; ferric sulphate is added to the water after the pumps. The ferric sulphate is used as a coagulant to remove particulates from the water. The resulting floc is trapped downstream within the rapid gravity filters. The inlet pumps are variable speed drives, the speed of the pumps is controlled to maintain the water level in the inlet contact tank at a set value.</p>
 
                     <p class="hyp">The inlet contact tank has two mixing chambers and is of a suitable size to allow the ferric sulphate sufficient mixing and contract time to begin flocculation. Each chamber has its own mixer; each mixer will start when the level in its chamber exceeds an activation level, stopping when the level falls below this value (and associated hysteresis). Under normal operation, the inlet contact tank water level will be well in excess of the activation levels (i.e. the mixers will always run under normal operation).</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020102]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 2.1.2 - FILTRATION
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020102">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.2</h3></div>
                     <div class="sub-title-text-box"><h3>Filtration</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Water from the inlet contact tank is dosed with a sodium hypochlorite solution (for primary sterilisation) and is gravity fed onto the three rapid gravity filters. Each filter is rated for a maximum throughput of 3.5&nbsp;Ml/day and any two filters are sufficient to manage the entire plant throughput.</p>
 
@@ -636,32 +595,30 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The flow from each filter will be set to maintain the level in the outlet tank, the total flow demand from all filters will be determined and this will then be divided by the number of filters in service.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
       SECTION 2.1.2a - BACKWASHING
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020102a">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--020102a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Backwashing</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -670,19 +627,16 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The backwashing process for a filter is a sequential operation:</p>
 
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Numbered lists are an ordered list of class .list-num. The text of each
-      point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list -->
-                        <li><p class="hyp">The filter is isolated (inlet and outlet valves are closed)</p></li>
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                       <li><p class="hyp">The filter is isolated (inlet and outlet valves are closed)</p></li>
 
                         <li><p class="hyp">The air blower isolation valve is opened</p></li>
 
@@ -697,51 +651,49 @@ Date          Issue        Author         Reason for Modification
                         <li><p class="hyp">After washout time, the backwash valves are closed (the filter is now settling)</p></li>
 
                         <li><p class="hyp">After the settling time, the inlet and outlet valves are reopened and the filter is returned to service</p></li>
-                    </ol>                                       <!-- End of numbered list -->
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">The backwash tank will not begin to refill until the backwash pumps have stopped.</p>
 
                     <p class="hyp">The air blowers and the backwash pumps operate as duty-standby pairs.</p>
 
+                </div>                                          <!-- End of section text      -->
 
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
-
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP 020103]
+
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 2.1.3 - OUTLET WORKS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020103">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.3</h3></div>
                     <div class="sub-title-text-box"><h3>Outlet works</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Water from the rapid gravity filters is dosed with a sodium hypochlorite solution (for secondary sterilisation) and is gravity fed into the outlet tank.</p>
 
@@ -753,50 +705,46 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Water is further extracted from the outlet contact tank after a backwash to replenish the backwash tank; the backwash water volume is considerable (approximately 75&nbsp;m<sup>3</sup>) and the refilling of the backwash tank is restricted, requiring approximately 2&nbsp;hours. This gives an extract rate from the outlet tank of 35&nbsp;m<sup>3</sup>/h or 0.8&nbsp;ML/d in addition to the required throughput.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020104]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 2.1.4 - BACKWASH SERVICES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020104">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020104">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.4</h3></div>
                     <div class="sub-title-text-box"><h3>Backwash services</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The backwash services consist of three separate systems:</p>
 
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Unnumbered lists are an unordered list of class .list-no-num. The text of
-      each point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
                        <li><p class="hyp">Backwash water storage tank</p></li>
@@ -807,32 +755,30 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
       SECTION 2.1.4a - BACKWASHING
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020104a">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--020104a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Backwash&nbsp;tank</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -841,39 +787,36 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The backwash tank holds sufficient water to allow two backwashes to be carried out; under normal operation, the tank will be refilled after the completion of each filter backwash (see <a class="hlink js--sc-020103" href="#">&sect;&nbsp;2.1.3</a>) by the use of a duty-standby pair of pumps.</p>
 
                     <p class="hyp">During a filter backwash, two further duty-standby pumps extract water from the backwash tank and force it in a reverse direction through the aerated filter to remove particulates from the filter. This backwash water is then deposited in the settling tank for further processing.</p>
 
+                </div>                                          <!-- End of section text      -->
 
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
       SECTION 2.1.4b - BACKWASH AIR BLOWERS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020104b">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--020104b">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Backwash&nbsp;air&nbsp;blowers</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -882,36 +825,34 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Two air blowers operate as a duty-standby pair to aerate the sand bed of a filter during the backwash process (facilitating the cleaning of the filter). </p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP INLINE]
       SECTION 2.1.4c - SETTLING TANKS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020104c">          <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-num-box"><h4></h4></div> -->
+        <section class="section-std" id="js--020104c">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-text-box"><h4>Settling&nbsp;tank</h4></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
@@ -920,7 +861,7 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The backwash water used to clean a filter is deposited in the settling tank, the returned water is then allowed to settle, the particulates forming a sludge at the bottom of the tank. The water above the sludge (supernatant) is relatively clean and is returned to inlet tank for reprocessing.</p>
 
@@ -929,41 +870,40 @@ Date          Issue        Author         Reason for Modification
                     <p class="hyp">The sludge from the settling tank is discharged to a tanker at regular intervals. This is an entirely manual operation.</p>
 
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020105]
+<!-- ************************************************************************** [WP SUBSECTION]
      SECTION 2.1.5 - FERRIC SULPHATE DOSING
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020105">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020105">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.5</h3></div>
                     <div class="sub-title-text-box"><h3>Ferric sulphate dosing</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Ferric sulphate is used as a coagulant and is dosed into the inlet works prior to the inlet contact tank.</p>
 
@@ -979,41 +919,40 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The ferric sulphate is dosed into a stream of carrier water that delivers the ferric sulphate to the dosing point on the main water line</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020106]
+<!-- ************************************************************************** [WP SUBSECTION]
      SECTION 2.1.6 - SODIUM HYPOCHLORITE DOSING
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020106">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020106">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.6</h3></div>
                     <div class="sub-title-text-box"><h3>Sodium hypochlorite dosing</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Sodium hypochlorite is used to sterilise the water passing through the plant. It is dosed at two points: primary dosing prior to filtration (used as the main sterilisation mechanism), and secondary dosing prior to the outlet contact tank (used to maintain a sterilisation level within the water for distribution).</p>
 
@@ -1021,41 +960,40 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Both primary and secondary sodium hypochlorite is dosed using a duty-standby pair of variable speed and stroke dosing pumps (four pumps in total). Each duty-standby pair operates a similar flow-pace and trim regime as that of the ferric sulphate dosing pumps.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 020107]
+<!-- ************************************************************************** [WP SUBSECTION]
      SECTION 2.1.7 - OTHER SERVICES: SAMPLING & MONITORING
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020107">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--020107">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>2.1.7</h3></div>
                     <div class="sub-title-text-box"><h3>Other services: sampling &amp; monitoring</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">There are various water quality sampling instruments located at certain stages in the treatment process. Generally these are fed from small duty-standby sampling pumps that run continuously (it is a general requirement that sampling instruments are not allowed to dry out).</p>
 
@@ -1063,9 +1001,6 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Unnumbered lists are an unordered list of class .list-no-num. The text of
-      each point must be contained in its own <p> element
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
                         <li><p class="hyp">Inlet sampling (post inlet contact tank)</p></li>
@@ -1078,70 +1013,64 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">In addition there are individual turbidity monitors located at the outlet of each filter and on the supernatant return line.</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="01-04-tools.html#js--010400">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="02-02-fairfax.html#js--020200">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>

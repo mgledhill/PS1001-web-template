@@ -8,13 +8,13 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
                  Published in the United Kingdom
 
                  Email: mg@practicalseries.com
-                 Web:   www.practicalseries.com
+                 Web:   https://practicalseries.com
 
 ******************************************************************************* -->
 
-<html lang="en">                                                                <!-- Declare language -->
-    <head>                                                                      <!-- Start of head section -->
-        <meta charset="utf-8">                                                  <!-- Use unicode character set (must be within first 1024 char of file) -->
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="Learn how colour values are specified and used in CSS, understand hexadecimal notation, rgba format and three digit hex colour values">
 
@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+27 Mar 2019   P14          M. Gledhill    Published
+
 09 Aug 2018   d-P12.10.02  M. Gledhill    Site updated to HTTPS
                                           Privacy policy added
 
@@ -80,15 +82,15 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      HEAD SCRIPT AREA
      ***********************************************************************-->
-        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <!-- Waypoints (fixed nav) -->  <script src="21-global/05-js/jquery.waypoints.min.js" defer></script>
-        <!-- Prettify (main)  -->       <script src="21-global/05-js/run_prettify.js?autoload=true&amp;lang=css" defer></script>
-        <!-- Prettify (Language) -->    <script src="21-global/05-js/lang-css.js" defer></script>
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
-        <!-- MathJax -->                <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
-
-        <!-- PS main script -->         <script src="11-resources/05-js/script.js" defer></script>
-        <!-- PS local scroll script --> <script src="01-pages/05-07-basics/05-local-js/05-07-scroll.js" defer></script> <!-- ***** CHANGE TO CORRECT FOLDER ***** -->
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/05-07-basics/05-local-js/05-07-scroll.js"></script>
 
 
 
@@ -97,13 +99,14 @@ Date          Issue        Author         Reason for Modification
      HEAD CSS LOAD
      ***********************************************************************-->
         <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
         <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
-        <!-- Prettify styles  -->       <link rel="stylesheet" type="text/css" href="11-resources/01-css/prettify.css">
-        <!-- Lightbox styles  -->       <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/05-07-basics/01-local-css/05-07-prettifylines.css">
-        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+       <!-- Code frag highlights        <link rel="stylesheet" type="text/css" href="01-pages/05-07-basics/01-local-css/05-07-codeline.css">-->
+
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -126,35 +129,35 @@ Date          Issue        Author         Reason for Modification
         <title>CSS colours and transparency | PracticalSeries: Web Development</title>
     </head>
 
-    <body onload="prettyPrint()">                               <!-- Start google-code-prettify plugin -->
+    <body>
 
 
-<!-- ************************************************************************** [WP 000000]
+<!-- ************************************************************************** [WP HEADER]
      HEADER (COVER & TABLE OF CONTENTS)
      ***********************************************************************-->
 
         <header id="js--000000">
 
-<!-- ************************************************************************** [WP 000001]
+<!-- ************************************************************************** [WP TOPNAV]
      TOP NAVIGATION (ABOVE CONTENTS LIST)
      ***********************************************************************-->
 
-            <nav>                                               <!-- Start of top navigation bar -->
-                <div class="top-nav">                           <!-- Start of top navigation row -->
-                    <div class="rg-row">                        <!-- Start of navigation button row -->
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
                         <a class="nav-wide" href="05-06-basics.html#js--050600"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="04-00-starting.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
-                        <!-- Button 03a - Home wide (hidden when fixed nav activates) -->
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 03b - Top narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
-                        <!-- Button 04 - Home narrow (hidden until fixed nav activates) -->
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
-                        <!-- Button 05 - Next Chapter -->
+                        <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="06-00-box.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
-                        <!-- Button 06 - Next section -->
+                        <!-- Button 05 - Next section -->
                         <a class="nav-wide" href="05-08-basics.html#js--050800"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of navigation button row -->
                 </div>                                          <!-- End of top navigation row -->
@@ -162,27 +165,26 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END] -->
 
 
-<!-- ************************************************************************** [WP 000003]
+<!-- ************************************************************************** [WP TITLE]
      TITLE BAR (Section number and text)
      ***********************************************************************-->
 
-            <div class="rg-row title-row">                      <!-- Start of title row (section number & heading) -->
-                  <div class="rg-col rg-span1-5">
-                    <aside class="aside-left aside-left-rev" style="margin-top: 0.1rem;">       <!-- Start of left side bar -->
-                        <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/bs-d-P12-10-02.svg" alt="Build status information"> <!-- Build status -->
-                    </aside>                                    <!-- End of left side bar   -->
-                </div>                                          <!-- End of Left column -->
-                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title (centre column) -->
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
                     <div class="title-num-box"><p>5</p></div>
                     <div class="title-text-box"><h1><span class="title-small-num">5</span>HTML and CSS: the basics</h1></div>
-                </div>                                          <!-- End of title (centre column) -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-right-rev">              <!-- Start of right side bar -->
-<!--REVISION-->         <p>Rev: 05-07&nbsp;&mdash;&nbsp;P12.10.02</p>   <!-- Revision information    -->
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of title row (section number & heading) -->
-<!-- ========================================================================== [WP END] -->
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
 
 
 <!-- ************************************************************************** [WP 000004]
@@ -196,110 +198,173 @@ Date          Issue        Author         Reason for Modification
               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                     TOC - 5. HTML AND CSS: THE BASICS
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="toc-line">                       <!-- Start of full width TOC (level 1) -->
-                        <li><a class="js--sc-050000" href="05-00-basics.html#js--000000">  <!-- TOC link start -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-050000" href="05-00-basics.html#js--000000">
                                <div class="toc-lev"><span class="toc-lev1-num">5</span><span class="toc-lev1-text">HTML and CSS: the basics</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                    </ul>                                       <!-- End of full width TOC (level 1) -->
+                        </li>
+                    </ul>
 
-                    <ul class="toc-list">                       <!-- Start of TOC in columns -->
-                        <li><a class="js--sc-050100" href="05-01-basics.html#js--050100">  <!-- TOC link start -->
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-050100" href="05-01-basics.html#js--050100">
                             <div class="toc-lev"><span class="toc-lev2-num">5.1</span><span class="toc-lev2-text">The HTML document structure</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050101" href="05-01-basics.html#js--050101">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050101" href="05-01-basics.html#js--050101">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.1</span><span class="toc-lev3-text">The document type <span class="code">&lt;!DOCTYPE &gt;</span></span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050102" href="05-01-basics.html#js--050102">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050102" href="05-01-basics.html#js--050102">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.2</span><span class="toc-lev3-text">The <span class="code">&lt;html&gt;</span> tag</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050103" href="05-01-basics.html#js--050103">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050103" href="05-01-basics.html#js--050103">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.3</span><span class="toc-lev3-text">The <span class="code">&lt;head&gt;</span> tag</span></div></a>
-                         </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050104" href="05-01-basics.html#js--050104">  <!-- TOC link start -->
+                         </li>
+<!-- Level 3 -->        <li><a class="js--sc-050104" href="05-01-basics.html#js--050104">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.4</span><span class="toc-lev3-text">The <span class="code">&lt;body&gt;</span> tag</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050105" href="05-01-basics.html#js--050105">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050105" href="05-01-basics.html#js--050105">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.5</span><span class="toc-lev3-text">The other bits</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050106" href="05-01-basics.html#js--050106">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050106" href="05-01-basics.html#js--050106">
                             <div class="toc-lev"><span class="toc-lev3-num">5.1.6</span><span class="toc-lev3-text">A note on case</span></div></a>
-                            <br class="toc-pad">                <!-- Apply padding to give symmetry to toc -->
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050200" href="05-02-basics.html#js--050200">  <!-- TOC link start -->
+                            <br class="toc-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050200" href="05-02-basics.html#js--050200">
                             <div class="toc-lev"><span class="toc-lev2-num">5.2</span><span class="toc-lev2-text">HTML headings, paragraphs, images, links &amp; tag attributes</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050300" href="05-03-basics.html#js--050300">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050300" href="05-03-basics.html#js--050300">
                             <div class="toc-lev"><span class="toc-lev2-num">5.3</span><span class="toc-lev2-text">Introducing CSS</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050400" href="05-04-basics.html#js--050400">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050400" href="05-04-basics.html#js--050400">
                             <div class="toc-lev"><span class="toc-lev2-num">5.4</span><span class="toc-lev2-text">A first CSS file</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050500" href="05-05-basics.html#js--050500">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050500" href="05-05-basics.html#js--050500">
                             <div class="toc-lev"><span class="toc-lev2-num">5.5</span><span class="toc-lev2-text">The CSS rule structure</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050600" href="05-06-basics.html#js--050600">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050600" href="05-06-basics.html#js--050600">
                             <div class="toc-lev"><span class="toc-lev2-num">5.6</span><span class="toc-lev2-text">CSS inheritance</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050601" href="05-06-basics.html#js--050601">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050601" href="05-06-basics.html#js--050601">
                             <div class="toc-lev"><span class="toc-lev3-num">5.6.1</span><span class="toc-lev3-text">Inheritance, cascading and specificity</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050602" href="05-06-basics.html#js--050602">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050602" href="05-06-basics.html#js--050602">
                             <div class="toc-lev"><span class="toc-lev3-num">5.6.2</span><span class="toc-lev3-text">The <span class="code">&lt;body&gt;</span>, <span class="code">&lt;html&gt;</span> and  <span class="code">*</span> (asterisk) selectors</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050700" href="05-07-basics.html#js--050700">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050700" href="05-07-basics.html#js--050700">
                             <div class="toc-lev"><span class="toc-lev2-num">5.7</span><span class="toc-lev2-text">CSS colours &amp; transparency</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050701" href="05-07-basics.html#js--050701">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050701" href="05-07-basics.html#js--050701">
                             <div class="toc-lev"><span class="toc-lev3-num">5.7.1</span><span class="toc-lev3-text">Hexadecimal notation</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050702" href="05-07-basics.html#js--050702">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050702" href="05-07-basics.html#js--050702">
                             <div class="toc-lev"><span class="toc-lev3-num">5.7.2</span><span class="toc-lev3-text">Colour values in CSS</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050703" href="05-07-basics.html#js--050703">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050703" href="05-07-basics.html#js--050703">
                             <div class="toc-lev"><span class="toc-lev3-num">5.7.3</span><span class="toc-lev3-text">Three digit colour shorthand</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050800" href="05-08-basics.html#js--050800">  <!-- TOC link start -->
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-050800" href="05-08-basics.html#js--050800">
                             <div class="toc-lev"><span class="toc-lev2-num">5.8</span><span class="toc-lev2-text">CSS classes &amp; IDs</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                        <li><a class="js--sc-050801" href="05-08-basics.html#js--050801">  <!-- TOC link start -->
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-050801" href="05-08-basics.html#js--050801">
                             <div class="toc-lev"><span class="toc-lev3-num">5.8.1</span><span class="toc-lev3-text">A note on class names</span></div></a>
-                        </li>                                   <!-- TOC link end   -->
-                     </ul>                                       <!-- End of TOC in columns -->
+                        </li>
+                    </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                </div>                                          <!-- End of TOC column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for TOC) -->
-            </div>                                              <!-- End of TOC section -->
-<!-- ========================================================================== [WP END] -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header -->
-<!-- ========================================================================== [WP END] -->
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP fixed-nav]
+<!-- ************************************************************************** [WP FIXEDNAV]
      FIXED NAVIGATION BAR CHANGEOVER POINT
      ***********************************************************************-->
-        <div class="js--fixed-nav"></div>                       <!-- Determines fixed navigation point -->
-<!-- ========================================================================== [WP END] -->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
 
 
 
-<!-- ************************************************************************** [WP 050700]
+<!-- ************************************************************************** [WP SECTION]
      SECTION 5.7 - CSS COLOURS & TRANSPARENCY
      ***********************************************************************-->
 
-        <section class="section-std" id="js--050700">           <!-- Start of section -->
-            <!-- Subtitle row is not normally needed at the start of the first section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <div class="sub-title-overline"></div>      <!-- OVERLINE IF NEEDED -->
-                    <!-- <div class="sub-title-thinline"></div>      Thin overline (after TOC) -->
+        <section class="section-std" id="js--050700">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
                  <div class="sub-title-num-box"><h2>5.7</h2></div>
                     <div class="sub-title-text-box"><h2>CSS colours &amp; transparency</h2></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+                    <p class="hyp">In CSS colours are specified in RGB (red, green, blue) format. This gives the amount of each of the three colours as a number between 0 and 255 (#00 and #FF in hex, and in CSS, colours without transparency are always given in hex).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f05-19">
+                            <a href="01-pages/05-07-basics/02-images/fig-05-20.svg" data-lightbox="fig-set" data-title="Figure 5.20 - RGB colour notation">
+                                <img src="01-pages/05-07-basics/02-images/fig-05-20.svg" style="width: 60%" alt="Figure 5.20 - RGB colour notation">
+                            </a>
+                            <figcaption>Figure 5.20 &emsp; RGB colour notation</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Header row -->     <tr>
+                            <th class="table-cent">RGB and primary colours</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="table-left">
+                                <p class="hyp">Why RGB I hear you ask, we all grew up with the primary colours red, yellow and blue (RYB) and mixing blue and yellow paint gives green paint. The reason is that computer monitors emit certain colours of light as opposed to paint which reflects or absorbs certain colours. The former is referred to as additive (each component is added to the previous), reflected light is subtractive (each component being subtracted from the previous). This is why the central section in RGB is white (all the colours added together), the equivalent section in RYB would be black (all the colours subtracted from each other). <a class="hlink nohyp utx" href="#">Appendix&nbsp;xxx</a> gives a more complete description of this process and some explanation of colour theory.</p></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION 5.7.1 - HEXADECIMAL NOTATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--050701">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>5.7.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Hexadecimal notation</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
@@ -309,202 +374,62 @@ Date          Issue        Author         Reason for Modification
                 <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
-
-                    <p class="hyp">In CSS colours are specified in RGB (red, green, blue) format. This gives the amount of each of the three colours as a number between 0 and 255 (#00 and #FF in hex, and in CSS, colours without transparency are always given in hex).</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     FIGURE - SINGLE FIGURE FULL PAGE WIDTH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     This is a single full width figure inserted into a section of the
-     document (class .fig1-1, the numbering is similar to that of grid
-     columns).
-
-     Full width images have a maximum width of 768 px
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <figure class="fig-row">                    <!-- START OF FIGURE -->
-                        <div class="fig-col fig1-1" id="js--f05-19">
-                            <a href="01-pages/05-07-basics/02-images/fig-05-20.svg" data-lightbox="fig-set" data-title="Figure 5.20 - RGB colour notation">         <!-- LIGHTBOX LINK -->
-                                <img src="01-pages/05-07-basics/02-images/fig-05-20.svg" style="width: 60%" alt="Figure 5.20 - RGB colour notation">
-                            </a>
-                            <p>Figure 5.20 &emsp; RGB colour notation</p>     <!-- Figure caption -->
-                        </div>
-                    </figure>                                   <!-- END OF FIGURE -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - INCIDENTAL TABLE (EN PASSANT)
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Incidental tables hold additional information (in a similar way to an
-      aside) but span the central content area and can contain more information
-      than an asisde.
-
-      The table spans 84% of the content area, is lightly shaded  and uses
-      small caps for the heading.
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                        <table class="table-incid"> <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent">RGB and primary colours</th>                            <!-- set column 01 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
-                            <td class="table-left">
-                                <p class="hyp">Why RGB I hear you ask, we all grew up with the primary colours red, yellow and blue (RYB) and mixing blue and yellow paint gives green paint. The reason is that computer monitors emit certain colours of light as opposed to paint which reflects or absorbs certain colours. The former is referred to as additive (each component is added to the previous), reflected light is subtractive (each component being subtracted from the previous). This is why the central section in RGB is white (all the colours added together), the equivalent section in RYB would be black (all the colours subtracted from each other). <a class="hlink nohyp utx" href="#">Appendix&nbsp;xxx</a> gives a more complete description of this process and some explanation of colour theory.</p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                    </table>                                    <!-- TABLE - End of table    -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                </div>                                          <!-- End of section text area   -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content  -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 050701]
-     SUBSECTION 5.7.1 - HEXADECIMAL NOTATION
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--050701">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
-                    <div class="sub-title-num-box"><h3>5.7.1</h3></div>
-                    <div class="sub-title-text-box"><h3>Hexadecimal notation</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
-
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Hexadecimal number use a numerical base of 16 for writing numbers, we normally use base 10 which gives us all the digits from 0 to 9 in our numbers. With base 10 numbers (decimal) each column is 10 times the previous column, like this:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t05-02a">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
-                            <th class="table-cent" style="width: 24%"></th>      <!-- set column 01 width here -->
+                    <table class="table-clean" id="js--t05-02a">
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 24%"></th>
                             <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">100s</th>    <!-- set column 02 width here -->
-                            <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">10s</th>       <!-- set column 03 width here -->
+                            <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">10s</th>
                             <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">1s</th>    <!-- set column 04 width here -->
                             <th class="table-cent" style="width: 36%">Base 10 (decimal)</th>    <!-- set column 05 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"></td>
                             <td class="table-cent">2</td>
                             <td class="table-cent">4</td>
                             <td class="table-cent">5</td>
                             <td class="table-cent"></td>
-                        </tr>                                    <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="5" class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">So the number <em>245</em> in decimal is:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FORMULA - SIMPLE ARRANGEMENT
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     The MathJax (Java Script) is used to display formulae on the page.
-
-     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
-     is the easiest to use and is preferred.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <div class="formulae" id="js--e05-01">                   <!-- Start of formulae container -->
-                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
-                        <div class="formulae-container">                    <!-- Start of equation flexbox container -->
-                            <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(bb"2"xx100)+(bb"4"xx10)+(bb"5"xx1)=245`            <!-- The equation (AsciiMath)-->
-                            </div>                                          <!-- End of equation box -->
-                            <div class="formulae-num"></div>         <!-- Equation number-->
-                        </div>                                              <!-- End Equation flexbox container -->
-                        <div class="formulae-caption"></div>                <!-- Equation caption-->
-                    </div>                                                  <!-- End of formulae container -->
- <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                  <div class="formulae" id="js--e05-01">
+                        <div class="formulae-container">
+                            <div class="formulae-equ">
+<!-- Equation -->               `(bb"2"xx100)+(bb"4"xx10)+(bb"5"xx1)=245`
+                            </div>
+                            <div class="formulae-num"></div>
+                        </div>
+                        <div class="formulae-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
                     <p class="hyp">Hexadecimal numbers use base 16 so each column is 16 times the previous. The problem with this is that we need 16 numbers for each column and we only have 10 (0-9). We get the other 6 by using the letters a-f:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <table class="table-clean" id="js--t05-02b" style="width: 100%">    <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                          <!-- TABLE - Start of header -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
                             <td class="table-left" style="width: 20%">Hexadecimal digit</td>
                             <td class="table-cent" style="width: 5%">0</td>
                             <td class="table-cent" style="width: 5%">1</td>
@@ -522,9 +447,9 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent" style="width: 5%">D</td>
                             <td class="table-cent" style="width: 5%">E</td>
                             <td class="table-cent" style="width: 5%">F</td>
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-left">Numerical value</td>
                             <td class="table-cent">0</td>
                             <td class="table-cent">1</td>
@@ -542,68 +467,40 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-cent">13</td>
                             <td class="table-cent">14</td>
                             <td class="table-cent">15</td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="17" class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <p class="hyp">So, the hexadecimal number <em>1CE</em> is the equivalent of:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - CLEAN TABLE WITH BOTTOM BORDERS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      This is a three column table; the table is 84% of the row width (this is
-      set as part of the .table-clean class) and this is the standard
-      arrangement for tables.
-
-      The table is designated .table-clean (this is a table that is simple and
-      clean in appearance).
-
-      The table has three columns, this is set by how many <th> cells are
-      specified in the header row, the number of cells in each subsequent
-      <td> row must match the number in the header row.
-
-      The relative widths of each column are determined by the width specified
-      in the <th> elements, these widths are a percentage of the table width.
-
-      An additional column is added to the start of each row, this is of zero
-      width and makes no contribution to the table contents (it is of class .
-      leading), it can however hold a <div> element that is used to give a
-      minimum height to the row (this is done with an inline style specifying
-      the min-height of the div).
-
-      Each cell can be centred, left or right justified by applying the classes
-            .table-cent
-            .table-left
-            .table-right
-
-      By default each table row has a bottom border, this can be turned off
-      by giving the <tr> element the class .no-border
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean" id="js--t05-02c">                 <!-- TABLE - Start of table  -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of header -->
-                            <th class="leading"></th>                                   <!-- Leading row (sets min-height) -->
-                            <th class="table-cent" style="width: 24%"></th>      <!-- set column 01 width here -->
+                    <table class="table-clean" id="js--t05-02c">
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 24%"></th>
                             <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">256s</th>    <!-- set column 02 width here -->
-                            <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">16s</th>       <!-- set column 03 width here -->
+                            <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">16s</th>
                             <th class="table-cent" style="width: 13.3%; text-transform: lowercase; background-color: #e8e8e8">1s</th>    <!-- set column 04 width here -->
                             <th class="table-cent" style="width: 36%">Base 16 (hexadecimal)</th>    <!-- set column 05 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr class="no-border">                                    <!-- TABLE - Start of row 01 -->
-                            <td class="leading"><div style="min-height: 3em"></div></td><!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
                             <td class="table-cent"></td>
                             <td class="table-cent">1</td>
                             <td class="table-cent">C</td>
                             <td class="table-cent">E</td>
                             <td class="table-cent"></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                         <tr class="no-border">                  <!-- TABLE - Start of caption row -->
-                            <td class="leading"></td>                                   <!-- Leading row (sets min-height) -->
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
                             <td colspan="5" class="table-caption"></td>
-                        </tr>                                   <!-- TABLE - End of caption row   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">or:</p>
@@ -611,41 +508,31 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FORMULA - SIMPLE ARRANGEMENT
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     The MathJax (Java Script) is used to display formulae on the page.
-
-     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
-     is the easiest to use and is preferred.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <div class="formulae" id="js--e05-02">                   <!-- Start of formulae container -->
-                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
-                        <div class="formulae-container" style="border-bottom: 1px solid #fff;">                    <!-- Start of equation flexbox container -->
-                            <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(bb"1"xx256)+(bb"C"xx16)+(bb"E"xx1)=462`            <!-- The equation (AsciiMath)-->
-                            </div>                                          <!-- End of equation box -->
-                        </div>                                              <!-- End Equation flexbox container -->
-                    </div>                                                  <!-- End of formulae container -->
- <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae" id="js--e05-02">
+                        <div class="formulae-container" style="border-bottom: 1px solid transparent">
+                            <div class="formulae-equ">
+<!-- Equation -->               `(bb"1"xx256)+(bb"C"xx16)+(bb"E"xx1)=462`
+                            </div>
+                            <div class="formulae-num"></div>
+                        </div>
+
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FORMULA - SIMPLE ARRANGEMENT
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     The MathJax (Java Script) is used to display formulae on the page.
-
-     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
-     is the easiest to use and is preferred.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <div class="formulae" id="js--e05-03">                   <!-- Start of formulae container -->
-                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
-                        <div class="formulae-container" style="border-top: 1px solid #fff;">                    <!-- Start of equation flexbox container -->
-                            <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(bb"1"xx256)+(bb"12"xx16)+(bb"14"xx1)=462`            <!-- The equation (AsciiMath)-->
-                            </div>                                          <!-- End of equation box -->
-
-                        </div>                                              <!-- End Equation flexbox container -->
-                        <div class="formulae-caption"></div>                <!-- Equation caption-->
-                    </div>                                                  <!-- End of formulae container -->
- <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae" id="js--e05-03">
+                        <div class="formulae-container" style="border-top: 1px solid transparent">
+                            <div class="formulae-equ">
+<!-- Equation -->               `(bb"1"xx256)+(bb"12"xx16)+(bb"14"xx1)=462`
+                            </div>
+                            <div class="formulae-num"></div>
+                        </div>
+                        <div class="formulae-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">I.e. the hexadecimal number <em>1CE</em> is the equivalent to the decimal number <em>462</em>.</p>
 
@@ -655,77 +542,64 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FORMULA - SIMPLE ARRANGEMENT
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     The MathJax (Java Script) is used to display formulae on the page.
-
-     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
-     is the easiest to use and is preferred.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <div class="formulae" id="js--e05-04">                   <!-- Start of formulae container -->
-                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
-                        <div class="formulae-container" style="border-bottom: 1px solid #fff;">                    <!-- Start of equation flexbox container -->
-                            <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(bb"F"xx16)+(bb"F"xx1)=255`            <!-- The equation (AsciiMath)-->
-                            </div>                                          <!-- End of equation box -->
-                        </div>                                              <!-- End Equation flexbox container -->
-                    </div>                                                  <!-- End of formulae container -->
- <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae" id="js--e05-04">
+                        <div class="formulae-container" style="border-bottom: 1px solid transparent">
+                            <div class="formulae-equ">
+<!-- Equation -->               `(bb"F"xx16)+(bb"F"xx1)=255`
+                            </div>
+                            <div class="formulae-num"></div>
+                        </div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      FORMULA - SIMPLE ARRANGEMENT
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     The MathJax (Java Script) is used to display formulae on the page.
-
-     MathJax will display MathML, Tex/LaTex and AsciiMath of which the latter
-     is the easiest to use and is preferred.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <div class="formulae" id="js--e05-05">                   <!-- Start of formulae container -->
-                        <!-- <div class="formulae-header">Equation Header</div>  Equation header -->
-                        <div class="formulae-container" style="border-top: 1px solid #fff;">                    <!-- Start of equation flexbox container -->
-                            <div class="formulae-equ">                      <!-- Start of equation box -->
-                                `(bb"15"xx16)+(bb"15"xx1)=255`            <!-- The equation (AsciiMath)-->
-                            </div>                                          <!-- End of equation box -->
+                   <div class="formulae" id="js--e05-05">
+                        <div class="formulae-container" style="border-top: 1px solid transparent">
+                            <div class="formulae-equ">
+<!-- Equation -->               `(bb"15"xx16)+(bb"15"xx1)=255`
+                            </div>
+                            <div class="formulae-num"></div>
+                        </div>
 
-                        </div>                                              <!-- End Equation flexbox container -->
-                        <div class="formulae-caption"></div>                <!-- Equation caption-->
-                    </div>                                                  <!-- End of formulae container -->
- <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
+                </div>                                          <!-- End of section text      -->
 
-                </div>                                          <!-- End of section text area   -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
-
-<!-- ************************************************************************** [WP 050702]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 5.7.2 - COLOUR VALUES IN CSS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--050702">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--050702">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>5.7.2</h3></div>
                     <div class="sub-title-text-box"><h3>Colour values in CSS</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">The only colours used so far in our website are the colour green (used for the <span class="code">h1</span> headings) and the colour red (for <span class="code">h2</span> headings). These were actually specified with the words &lsquo;green&rsquo; and &lsquo;red&rsquo;, other colours could also be used, &lsquo;blue&rsquo; for example. In fact there are 147 of these predefined colours with names like darkgoldenrod (<span class="first-use">brown</span>), saddlebrown (<span class="first-use">brown</span>) sienna (<span class="first-use">brown</span>), oh and brown (<span class="first-use">brown</span>).</p>
 
@@ -733,19 +607,15 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Single line fragments must not be preceded by a carriage return; i.e.
-     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
-     line breaks.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
+                    <div class="code-extract">
+                        <div class="code-area">
 
-                            <pre class="prettyprint linenums:6 lang-css" id="js--c050701">&nbsp; &nbsp; color: green;&nbsp;</pre>
+                            <pre class="prettyprint linenums:6 lang-css" id="js--c05-11a">&nbsp; &nbsp; color: green;&nbsp;</pre>
 
-                        </div>                                              <!-- End of code extract holder -->
-                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
-                    </div>                                                  <!-- End of code fragment -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -753,19 +623,15 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Single line fragments must not be preceded by a carriage return; i.e.
-     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
-     line breaks.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
+                    <div class="code-extract">
+                        <div class="code-area">
 
-                            <pre class="prettyprint linenums:6 lang-css" id="js--c050702">&nbsp; &nbsp; color: #008000;&nbsp; </pre>
+                            <pre class="prettyprint linenums:6 lang-css" id="js--c05-11b">&nbsp; &nbsp; color: #008000;&nbsp; </pre>
 
-                        </div>                                              <!-- End of code extract holder -->
-                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
-                    </div>                                                  <!-- End of code fragment -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -775,19 +641,15 @@ Date          Issue        Author         Reason for Modification
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Single line fragments must not be preceded by a carriage return; i.e.
-     code fragment placed directly between the <pre>CODEFRAGMENT</pre> without
-     line breaks.
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                              <!-- Start of code fragment -->
-                        <div class="code-area">                             <!-- Start of code extract holder -->
+                    <div class="code-extract">
+                        <div class="code-area">
 
-                            <pre class="prettyprint  lang-css" id="js--c050703">&nbsp; &nbsp; color: rgba(0, 128, 0, 0.75);&nbsp;</pre>
+                            <pre class="prettyprint  lang-css" id="js--c05-11c">&nbsp; &nbsp; color: rgba(0, 128, 0, 0.75);&nbsp;</pre>
 
-                        </div>                                              <!-- End of code extract holder -->
-                        <div class="code-caption"></div>                    <!-- Code caption (empty)-->
-                    </div>                                                  <!-- End of code fragment -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -797,60 +659,52 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - INCIDENTAL TABLE (EN PASSANT)
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Incidental tables hold additional information (in a similar way to an
-      aside) but span the central content area and can contain more information
-      than an asisde.
-
-      The table spans 84% of the content area, is lightly shaded  and uses
-      small caps for the heading.
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                         <table class="table-incid"> <!-- TABLE - Start of table  -->
-                        <tr>                                    <!-- TABLE - Start of header -->
-                            <th class="table-cent">RGBA</th>                            <!-- set column 01 width here -->
-                        </tr>                                   <!-- TABLE - End of header   -->
-                        <tr>                                    <!-- TABLE - Start of row 01 -->
+<!-- Header row -->     <tr>
+                            <th class="table-cent">RGBA</th>
+                        </tr>
+<!-- Data row -->       <tr>
                             <td class="table-left">
                                 <p class="hyp" style="text-align: center">The &lsquo;A&rsquo; in rgba stands for alpha which apparently is code for opacity</p></td>
-                        </tr>                                   <!-- TABLE - End of row 01   -->
-                    </table>                                    <!-- TABLE - End of table    -->
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP 050703]
+<!-- ************************************************************************** [WP SUBSECTION]
      SUBSECTION 5.7.3 - THREE DIGIT COLOUR SHORTHAND
      ***********************************************************************-->
 
-        <section class="section-std" id="js--050703">           <!-- Start of section -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row (section number & heading) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for subtitle) -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column (centre column) -->
-                    <!-- <div class="sub-title-overline"></div>      OVERLINE IF NEEDED -->
+        <section class="section-std" id="js--050703">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-num-box"><h3>5.7.3</h3></div>
                     <div class="sub-title-text-box"><h3>Three digit colour shorthand</h3></div>
-                </div>                                          <!-- End of subtitle column (centre column) -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used for subtitle) -->
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row -->
 
             <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column   -->
-                <!--     <aside class="aside-left">                  Start of left side bar -->
-                <!--         <p></p>                                 Side bar content       -->
-                <!--     </aside>                                    End of left side bar   -->
-                </div>                                          <!-- End of left column     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 section-text">    <!-- Start of section text area -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
                     <p class="hyp">Some colours can be represented with just three hexadecimal digits; it&rsquo;s a kind of shorthand and it happens when the two digits in each of the three hexadecimal components is the same. Its best explained with an example:</p>
 
@@ -860,92 +714,72 @@ Date          Issue        Author         Reason for Modification
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      Notes are added to the text in the form of unordered lists given the
-      class .note, this effectively creates a list with the bullet point set
-      to be the word Note: with appropriate indentation
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note -->
+                    <ul class="note">                           <!-- Start of note            -->
                         <li>In CSS the letters in a hexadecimal number (a-f) are always given in lowercase, its <span class="code">#ffffff</span> not <span class="code">#FFFFFF</span>; this is just a convention, CSS doesn&rsquo;t care which you use&mdash;but use lowercase anyway.</li>
-                    </ul>                                       <!-- End of note -->
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp">Brackets has a quick edit facility for selecting and changing colours (see <a class="hlink nohyp" href="06-10-box.html#js--061003">&sect;&nbsp;6.10.3</a>).</p>
 
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                <!--     <aside class="aside-right">                 Start of right side bar -->
-                <!--         <p></p>                                 Side bar content        -->
-                <!--     </aside>                                    End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of section content -->
-        </section>                                              <!-- End of section -->
-<!-- ========================================================================== [WP END] -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP ADDITIONAL]
+<!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
 
         <p> <br class="toc-pad"></p>
         <p> <br class="toc-pad"></p>
-        <div class="section-std" id="js--990101b">              <!-- Start of additional row -->
-            <div class="rg-row">                                <!-- Start of row content -->
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-nav">                   <!-- Start of left side bar navigation  -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="05-06-basics.html#js--050600">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5 aside-nav">    <!-- Start of end image area -->
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
                     <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
-                </div>                                          <!-- End of section text area   -->
+                </div>                                          <!-- End of section text area -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column   -->
-                    <aside class="aside-nav">                 <!-- Start of right side bar navigation -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
                         <a class="xref" href="05-08-basics.html#js--050800">Next</a>
-                    </aside>                                    <!-- End of right side bar   -->
-                </div>                                          <!-- End of right column     -->
-            </div>                                              <!-- End of row content  -->
-        </div>                                                  <!-- End of additional row -->
-<!-- ========================================================================== [WP END] -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
 
 
-
-
-<!-- ************************************************************************** [WP 999901]
-     SECTION LAST - LAST SECTION BEFORE FOOTER (APPLIES BOTTOM BORDER)
-     ***********************************************************************-->
-        <!-- <div class="section-last"></div>                        last section before footer (bottom border) -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- ************************************************************************** [WP 999999]
+<!-- ************************************************************************** [WP FOOTER]
      FOOTER
      ***********************************************************************-->
-        <footer class="footer">                                 <!-- Start of footer -->
-            <ul class="footer-nav">                             <!-- Start of footer navigation -->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
                 <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
                 <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
-            </ul>                                               <!-- End of footer navigation -->
+            </ul>                                               <!-- End of footer nav        -->
 
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
                 <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
             </ul>
-        </footer>                                               <!-- End of footer -->
-<!-- ========================================================================== [WP END] -->
-
-
-<!-- **************************************************************************
-     JAVASCRIPT (POST PAGE LOAD)
-     ***********************************************************************-->
-        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
-
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
 
     </body>
 </html>

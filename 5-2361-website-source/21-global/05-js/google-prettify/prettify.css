@@ -1,0 +1,173 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY CUSTOMISATION STYLE SHEET         PRETTIFY.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This site uses the google-code-prettify to display code fragments in a
+formatted manner. Google-code-prettify is availble from GitHub:
+    https://github.com/google/code-prettify
+
+The software can be downloaded from:
+    https://code.google.com/archive/p/google-code-prettify/downloads
+
+Current download file is: prettify-small-4-Mar-2013.tar.bz2
+
+The google-code-prettify is available under the Apache licenced reproduce
+below:
+
+This file is an associated css file that applies appropriate styling to the
+code fragment formatted by google-code-prettify. This file has been
+created as part of the PracticalSeries website.
+
+This css file causes the google-code-prettify formatted code to have a
+similar appearance to that displayed in the Brackets Text Editor.
+
+Google-code-prettify operates on code that is held in either a <code> or
+<pre> elements (or xml element although this is not used here), that is given
+the class name .prettyprint.
+
+<pre> elements are used to hold a block of formatted code and this appears
+with its own backgound colour, width and margin specifications.
+
+<code> elements are used to hold inline formatted code that appears within a
+line of text.
+
+
+
+-------------------------------------------------------------------------------
+GOOGLE-CODE-PRETTIFY LICENCE
+
+Copyright [2015] [google]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+27 Mar 2019   P14          M. Gledhill    Published
+
+09 Aug 2018   d-P13.00.01  M. Gledhill    styles updated for lang-css
+
+31 May 2017   P10          M. Gledhill    Migration to Git VCS
+                                          FIRST PUBLISHED COMMIT
+                                          Based on PS(LIVE-non VCS) P06.02
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   BASE FORMATTING FOR PRETTYPRINT
+   ****************************************************************************
+   The .prettyprint class applied to either a <pre> or <code> element cause
+   the code to be displayed with span classes for each of the identifiable
+   elements of the code (this is done client side after the page has loaded).
+
+   This section formats the basic prettyprint class and the subsequent
+   classes associated with either <pre> or <code>.
+
+   The basic differences between the <pre> and <code> usage is:
+
+        <pre>   Holds a section of code that appears as a separate block
+                on the web page (optionally with a filename header and block
+                caption footer).
+
+       <code>   Holds a section of inline code that will appear formatted
+                within a line of text
+
+   ************************************************************************* */
+
+.prettyprint { border: 0 !important }
+
+pre.prettyprint {
+    background: #fbfbfb;
+    font-family: "trip-t4-r";
+    font-size: 0.61rem;
+    line-height: 135%;
+    width: 100%;
+    padding-left: 2.5rem;
+    overflow: auto;                         /* will apply scroll bars if required */
+}
+
+.wrap{white-space: pre-wrap;}
+
+
+code.prettyprint {
+    background: #fff;
+    font-family: "trip-t4-r";
+    font-size: 0.85rem;
+}
+
+
+/* ----------------------------------------------------------------------------
+   LINE NUMBERING
+   ----------------------------------------------------------------------------
+   adding the class .linenums to the <pre> element will add line numbering to
+   the block of code.
+
+   Line numbers are added every line, line numbers start at 1 unless specified
+   other wise (add the class linenums:10 to start numbering at 10)
+
+   ------------------------------------------------------------------------- */
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #949494;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+    background-color: rgba(255, 255, 255, 0);
+    list-style-type: decimal;
+}
+
+
+/* ----------------------------------------------------------------------------
+   TOKEN COLOURING
+   ----------------------------------------------------------------------------
+   Prettify adds span classes to the individual elements (tokens) within the
+   code; these are individually coloured in the following section
+
+   ------------------------------------------------------------------------- */
+
+.pln { color: #404030; }                    /* plain (default) text colour */
+.str { color: #e98a0b; }                    /* string content */
+.kwd { color: #8959a8; }                    /* keyword */
+.com { color: #949494; }                    /* comment */
+.typ { color: #4271ae; }                    /* variable type - e.g. int */
+.lit { color: #e98a0b; }                    /* literal value */
+.pun { color: #535353; }                    /* punctuation */
+.opn { color: #4d4d4c; }                    /* lisp open bracket */
+.clo { color: #4d4d4c; }                    /* lisp close bracket */
+.tag { color: #4f77c0; }                    /* markup tag name */
+.atn { color: #758d0f; }                    /* markup attribute name */
+.atv { color: #e98a0b; }                    /* markup attribute value */
+.dec { color: #404030; }                    /* declaration */
+.var { color: #8757ad; }                    /* variable name */
+.fun { color: #4271ae; }                    /* function name */
+
+
+.lang-css .pln { color: #4271ae;}
+.lang-css .lit { color: #718c00;}
+.lang-css .str { color: #E98A0B;}
