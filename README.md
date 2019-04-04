@@ -27,6 +27,7 @@ Development work always takes place on a separate branch. Development branches a
 | Branch             | Revision
 | ------------------ | --------------------------------------
 | master             | <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg">
+| d-14-proofread     | <img src="https://img.shields.io/badge/Dev-d--P14.00.01-BF504D.svg">
 
 
 
@@ -87,7 +88,7 @@ This repository holds both the actual website (the thing that explains how to bu
 
 The actual website itself is not open source (see **Permissions in lieu of a licence** above).
 
-The downloadable template is open source and is available under the [MIT licence](LICENCE)
+The downloadable template is open source and is available under the MIT Licence
 
 
 ## Development branch abbreviations
@@ -104,7 +105,7 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
-<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P14.svg">
+<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P14-00-01.svg">
 
 ## Additional information
 

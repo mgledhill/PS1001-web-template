@@ -114,7 +114,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c10-06a - FORMATTING
    ************************************************************************* */
-#js--c10-06a ol.linenums {color: #FBFBFB;}                                   /* make numbering invisible */
+#js--c10-06a ol.linenums {color: transparent;}                                   /* make numbering invisible */
 #js--c10-06a li:nth-child(4) {padding-left: 7.6rem;}
 #js--c10-06a li:nth-child(14) {padding-left: 7.6rem;}
 #js--c10-06a li:nth-child(n+2):nth-child(-n+6) { background: #F2DBDB }
