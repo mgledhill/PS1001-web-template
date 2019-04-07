@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   d-P14.00.04  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 27 Mar 2019   d-P13.00.04i M. Gledhill    Standardisation corrections
@@ -163,7 +165,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P14.00.04-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -414,7 +416,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">And this is fine, but it is not responsive, the font size will be 24&nbsp;pixels no matter what. It won&rsquo;t change in response to the browser window becoming narrower. When I discussed responsiveness in <a class="hlink nohyp" href="08-02-columns.html#js--080200">&sect;&nbsp;8.2</a>, I said &ldquo;<span class="first-use">I want the size of text (the font-size) to change as the website gets narrower&rdquo;</span> and I do.</p>
 
-                    <p class="hyp">This begs three questions: firstly&mdash;how do I do that? Secondly&mdash;what size should the font change to and thirdly,&nbsp;&mdash;&nbsp;when should it change?</p>
+                    <p class="hyp">This begs three questions: firstly&nbsp;&mdash;&nbsp;how do I do this? Secondly&nbsp;&mdash;&nbsp;what size should the font change to and thirdly,&nbsp;&mdash;&nbsp;when should it change?</p>
 
                     <p class="hyp">I answer these in the following section.</p>
 
@@ -453,7 +455,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">The maximum width of the web page is 1276 pixels (see <a class="hlink nohyp" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>), this is set in the body style. There is also an effective minimum width, this is the point at which the grid columns collapse into a single line, this happens at a browser width of 520 pixels (see <a class="hlink nohyp" href="08-02-columns.html#js--080200">&sect;&nbsp;8.2</a>). If the browser is less than 520&nbsp;pixels, there are no further responsive changes (520&nbsp;pixels is the point at which the website stops being responsive).</p>
+                    <p class="hyp">The maximum width of the web page is 1276 pixels (see <a class="hlink nohyp" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>), this is set in the <span class="code">body</span> style. There is also an effective minimum width, this is the point at which the grid columns collapse into a single line, this happens at a browser width of 520 pixels (see <a class="hlink nohyp" href="08-02-columns.html#js--080200">&sect;&nbsp;8.2</a>). If the browser is less than 520&nbsp;pixels, there are no further responsive changes (520&nbsp;pixels is the point at which the website stops being responsive).</p>
 
                     <p class="hyp">I determined the smallest font size by looking at body text on various smart phones and judging by eye what I thought was an acceptable size. It was somewhere between 12 and 13&nbsp;pixels. In the end I settled for 12&nbsp;pixels, this looked better on lower resolution phones.</p>
 
@@ -485,7 +487,7 @@ Date          Issue        Author         Reason for Modification
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Now in practice, the maximum font size (24&nbsp;px) works at browser widths below 1276, again I judged this by eye and I found that a font size of 24&nbsp;px was ok down to a width of about 960&nbsp;px. Below 960&nbsp;px the 24&nbsp;px font size started to break the line length rules (see <a class="hlink nohyp" href="03-03-grid.html#js--030303">&sect;&nbsp;3.3.3</a>), this was the width at which 24&nbsp;px had less than 2 lowercase alphabets per line.</p>
+                    <p class="hyp">Now in practice, the maximum font size (24&nbsp;px) works at browser widths below 1276, again I judged this by eye and I found that a font size of 24&nbsp;px was OK down to a width of about 960&nbsp;px. Below 960&nbsp;px the 24&nbsp;px font size started to break the line length rules (see <a class="hlink nohyp" href="03-03-grid.html#js--030303">&sect;&nbsp;3.3.3</a>), this was the width at which 24&nbsp;px had less than 2 lowercase alphabets per line.</p>
 
                     <p class="hyp">So I modified the above table:</p>
 

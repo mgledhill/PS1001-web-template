@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   d-P14.00.04  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 27 Mar 2019   d-P13.00.04i M. Gledhill    Standardisation corrections
@@ -161,7 +163,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P14.00.04-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -363,13 +365,13 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">I&rsquo;ve used the <span class="code">&lt;div&gt;</span> divider element a lot; the first-site example used it to establish the CSS box model (<a class="hlink nohyp" href="06-00-box.html#js--000000">section&nbsp;6</a>) and the responsive grid used to set out the column arrangement on each web page (<a class="hlink nohyp" href="08-00-columns.html#js--000000">section&nbsp;8</a>).</p>
 
-                    <p class="hyp">The <span class="code">&lt;div&gt;</span> element is the standard mechanism for dividing a web page into different areas. In the past (prior to HTML&nbsp;5), the <span class="code">&lt;div&gt;</span> was the only thing available to do this; and this was fine, it did it well. The problem was that <span class="code">&lt;div&gt;</span> was used everywhere, it was used to hold navigations, adverts, images, and also the main content of the website; and this became confusing, particularly for search engines, it was difficult for a search engine to know what were the important bits of the website and what were just asides, introductions, adverts, navigations &amp;c.</p>
+                    <p class="hyp">The <span class="code">&lt;div&gt;</span> element is the standard mechanism for dividing a web page into different areas. In the past (prior to HTML&nbsp;5), the <span class="code">&lt;div&gt;</span> was the only thing available to do this; and this was fine, it did it well. The problem was that <span class="code">&lt;div&gt;</span> was used everywhere, it was used to hold navigations, adverts, images, and also the main content of the website; and this became confusing&nbsp;&mdash;&nbsp;particularly for search engines, it was difficult for a search engine to know what were the important bits of the website and what were just asides, introductions, adverts, navigations &amp;c.</p>
 
                     <p class="hyp">With HTML&nbsp;5, this changed. HTML&nbsp;5 introduced <span class="first-use">semantic elements</span>.</p>
 
                     <p class="hyp">Semantic elements are basically <span class="code">&lt;div&gt;</span> elements with a meaningful name that gives some indication of the content of the element. There are a lot of them (<a class="xref js--sc-t10-01" href="#">Table&nbsp;10.2</a>).</p>
 
-                    <p class="hyp">Semantic elements operate, and do exactly the same as a <span class="code">&lt;div&gt;</span><sup>&dagger;1</sup> ; their purpose is simply to provide some guidance and clarity to how the web page is structured.</p>
+                    <p class="hyp">Semantic elements operate, and do, exactly the same as a <span class="code">&lt;div&gt;</span><sup>&dagger;1</sup> ; their purpose is simply to provide some guidance and clarity to how the web page is structured.</p>
 
                     <p class="hyp">The main ones I use are <span class="code">&lt;section&gt;</span>, <span class="code">&lt;aside&gt;</span>, <span class="code">&lt;nav&gt;</span>, <span class="code">&lt;header&gt;</span>, <span class="code">&lt;footer&gt;</span>, <span class="code">&lt;figure&gt;</span> and <span class="code">&lt;figcaption&gt;</span>.</p>
 
@@ -469,7 +471,7 @@ Date          Issue        Author         Reason for Modification
                         <tr>
 <!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
 <!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">Semantic elements do operate in exactly the same way as <span class="code">&lt;div&gt;</span> elements, but some of them have restrictions: <span class="code">&lt;section&gt;</span> elements must contain a heading <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span>, &amp;c. Others such as <span class="code">&lt;main&gt;</span> must only occur once on a page; that said, they work like a <span class="code">&lt;div&gt;</span> and do what a <span class="code">&lt;div&gt;</span> does&mdash;they just give it a specific name.</td>
+                            <td colspan="2" class="table-left">Semantic elements do operate in exactly the same way as <span class="code">&lt;div&gt;</span> elements, but some of them have restrictions: <span class="code">&lt;section&gt;</span> elements must contain a heading <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span>, &amp;c. Others such as <span class="code">&lt;main&gt;</span> must only occur once on a page; that said, they work like a <span class="code">&lt;div&gt;</span> and do what a <span class="code">&lt;div&gt;</span> does&nbsp;&mdash;&nbsp;they just give it a specific name.</td>
                         </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -497,9 +499,9 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Again there is only one <span class="code">&lt;footer&gt;</span> on each page.</p>
 
-                    <p class="hyp">The <span class="code">&lt;header&gt;</span>, <span class="code">&lt;footer&gt;</span> and <span class="code">&lt;nav&gt;</span> semantic elements are used together and I discuss those in <a class="hlink nohyp utx" href="11-00-headfoot.html#js--000000">section&nbsp;11</a></p>
+                    <p class="hyp">The <span class="code">&lt;header&gt;</span>, <span class="code">&lt;footer&gt;</span> and <span class="code">&lt;nav&gt;</span> semantic elements are used together and I discuss those in <a class="hlink nohyp utx" href="11-00-header.html#js--000000">section&nbsp;11</a></p>
 
-                    <p class="hyp">The rest of the page is made up of <span class="code">&lt;section&gt;</span> elements, these are arranged one on top of the other (<a class="xref js--sc-f10-01" href="#">Figure&nbsp;10.1</a> shows three such section elements, but there are no limits&mdash;some pages have many more).</p>
+                    <p class="hyp">The rest of the page is made up of <span class="code">&lt;section&gt;</span> elements, these are arranged one on top of the other (<a class="xref js--sc-f10-01" href="#">Figure&nbsp;10.1</a> shows three such section elements, but there are no limits&nbsp;&mdash;&nbsp;some pages have many more).</p>
 
                     <p class="hyp">Each <span class="code">&lt;section&gt;</span> should be self-contained (it contains a textual discussion of a subject that is, in itself, complete), each of my sections are like the sections in a fairly simple document (if you are reading the pdf version of the website, this uses the same arrangement).</p>
 
@@ -571,7 +573,7 @@ Date          Issue        Author         Reason for Modification
                         <li>The sections normally have a white background, I&rsquo;ve coloured them here to make it clear where each section starts and finishes.</li>
                     </ul>                                       <!-- End of note              -->
 
-                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">The area at the top with the white background is the &lt;header&gt; element; I cover this in <a class="hlink nohyp utx" href="11-00-headfoot.html#js--000000">Section&nbsp;11</a>.</span></p>
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">The area at the top with the white background is the &lt;header&gt; element; I cover this in <a class="hlink nohyp utx" href="11-00-header.html#js--000000">section&nbsp;11</a>.</span></p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -588,7 +590,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Let&rsquo;s start by looking at the one in orange, this is a typical section, it&rsquo;s the one that has everything (the others: lead-in, subsection and inline are all variations of it) &mdash; it&rsquo;s in the next section:</p>
+                    <p class="hyp">Let&rsquo;s start by looking at the  second one, in orange, this is a typical section, it&rsquo;s the one that has everything (the others: lead-in, subsection and inline are all variations of it)&nbsp;&mdash;&nbsp;it&rsquo;s in the next section:</p>
 
                 </div>                                          <!-- End of section text      -->
 
