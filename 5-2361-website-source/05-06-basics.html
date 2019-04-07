@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+04 Apr 2019   d-P14.00.02  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 24 Mar 2019   d-P13.00.04d M. Gledhill    Standardisation corrections
@@ -171,7 +176,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -354,7 +359,7 @@ p {
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
-                    <p class="hyp">Here, by defining the font family and basic font size in the <span class="code">body</span> selector, all text that appears in the <span class="code">&lt;body&gt;</span> section of the document will have this font family and size (in this case Arial and 18 pixels). It is now only necessary to change the bits that need to be changed for each style: for heading 1 and 2, this is the colour and the font size; for paragraph text the alignment is changed to justify.</p>
+                    <p class="hyp">Here, by defining the font family and basic font size in the <span class="code">body</span> selector, all text that appears in the <span class="code">&lt;body&gt;</span> section of the document will have this font family and size (in this case Arial and 18 pixels). It is now only necessary to change the bits that need to be changed for each style: for the heading <span class="code">&lt;h1&gt;</span> and <span class="code">&lt;h2&gt;</span> elements, this is the colour and the font size; for paragraph text the alignment is changed to justify.</p>
 
                    <p class="hyp">This gives:</p>
 
@@ -449,7 +454,7 @@ p {
 
                     <p class="hyp">Inheritance is what we have just discussed, if we define a property for an HTML element, all subsequent elements contained within that original elements will inherit the properties of the first element.</p>
 
-                    <p class="hyp">In the previous example, the <span class="code">font-family</span> was declared for the <span class="code">&lt;body&gt;</span> element. So any other element within the <span class="code">&lt;body&gt;</span> element (i.e. between the <span class="code">&lt;body&gt;</span> and <span class="code">&lt;/body&gt;</span> tags) inherits this property; that is why in the previous example the <span class="code">h1</span>, <span class="code">h2</span>, <span class="code">a</span> and <span class="code">p</span> elements (all contained within <span class="code">&lt;body&gt;...&lt;/body&gt;</span>) all have the same <span class="code">font-family</span>&mdash;they inherited it from their parent element. <span class="first-use">A bit like my grey hair, I got it from my Dad, it&rsquo;s the Gledhill curse</span>.</p>
+                    <p class="hyp">In the previous example, the <span class="code">font-family</span> was declared for the <span class="code">&lt;body&gt;</span> element. So any other element within the <span class="code">&lt;body&gt;</span> element (i.e. between the <span class="code">&lt;body&gt;</span> and <span class="code">&lt;/body&gt;</span> tags) inherits this property; that is why in the previous example the <span class="code">&lt;h1&gt;</span>, <span class="code">&lt;h2&gt;</span>, <span class="code">&lt;a&gt;</span> and <span class="code">&lt;p&gt;</span> elements (all contained within <span class="code">&lt;body&gt;...&lt;/body&gt;</span>) all have the same <span class="code">font-family</span>&nbsp;&mdash;&nbsp;they inherited it from their parent element. <span class="first-use">A bit like my grey hair, I got it from my Dad, it&rsquo;s the Gledhill curse</span>.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -487,7 +492,7 @@ p {
 
                     <p class="hyp">Cascading (the thing style sheets are named for) is what happens when conflicts arise within the styles.</p>
 
-                    <p class="hyp">In the previous example, the <span class="code">&lt;body&gt;</span> element has its font size set to 18&nbsp;px. This applies to all subsequent (<span class="first-use">child</span>) elements via inheritance. However, the <span class="code">h1</span> element has the font-size set to 40&nbsp;px, contradicting the 18&nbsp;px imposed by inheritance. Clearly, the <span class="code">h1</span> size take precedence since the <span class="code">h1</span> text is larger than 18&nbsp;px.</p>
+                    <p class="hyp">In the previous example, the <span class="code">&lt;body&gt;</span> element has its font size set to 18&nbsp;px. This applies to all subsequent <span class="first-use">(child)</span> elements via inheritance. However, the <span class="code">h1</span> element has the font-size set to 40&nbsp;px, contradicting the 18&nbsp;px imposed by inheritance. Clearly, the <span class="code">h1</span> size take precedence since the <span class="code">h1</span> text is larger than 18&nbsp;px.</p>
 
                     <p class="hyp">This is the rather obvious rule of cascading: properties assigned further down the chain override earlier properties.</p>
 
@@ -636,7 +641,7 @@ p {
 
                     <p class="hyp">It is possible to do this at the higher level of the <span class="code">&lt;html&gt;</span> element. At first sight this might not seem sensible (since as I&rsquo;ve just said, all visible elements are contained within the <span class="code">&lt;body&gt;...&lt;/body&gt;</span> element); however, defining global settings at the html level has certain advantages. In <a class="hlink nohyp" href="03-02-grid.html#js--030206">section&nbsp;3.2.6</a> I talked about a cascading problem when using <span class="first-use">percentages</span> and <span class="first-use">ems</span> to set the font-size. I actually said the problem with percentages is that they <span class="first-use">cascade (and they cascade like a bastard)</span>.</p>
 
-                    <p class="hyp">This is because these modifiers simply change the inherited properties so if we define the base font to be 25&nbsp;pixels, and we then derive a second style from this and give it a font size of 80%, it will be 20&nbsp;pixels high; if we now define a third style based on this second style and give this a font size of 80% too, it will give text that is 16&nbsp;pixels high&mdash;it takes 80% of the 80%.</p>
+                    <p class="hyp">This is because these modifiers simply change the inherited properties so if we define the base font to be 25&nbsp;pixels, and we then derive a second style from this and give it a font size of 80%, it will be 20&nbsp;pixels high; if we now define a third style based on this second style and give this a font size of 80% too, it will give text that is 16&nbsp;pixels high&nbsp;&mdash;&nbsp;it takes 80% of the 80%.</p>
 
                     <p class="hyp">This can be a problem (it can lead to very small or very large text for a start). To get round this a new modifier (<span class="first-use">rems</span>) was introduced. Now rems do not cascade, they are always applied relative to a default value and that default value is whatever properties are set for the <span class="code">&lt;html&gt;</span> element.</p>
 
@@ -699,7 +704,7 @@ p {
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">I use this to set some very basic properties, mainly the default margins and padding settings for all the elements (there are some other things to do with the box model and I discus this in <a class="hlink nohyp" href="06-02-box.html#js--060201">section&nbsp;6.2.1</a>).</p>
+                    <p class="hyp">I use this to set some very basic properties, mainly the default margins and padding settings for all the elements (there are some other things to do with the box model and I discus these in <a class="hlink nohyp" href="06-02-box.html#js--060201">section&nbsp;6.2.1</a>).</p>
 
                 </div>                                          <!-- End of section text      -->
 

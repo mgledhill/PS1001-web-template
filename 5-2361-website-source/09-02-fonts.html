@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+07 Apr 2019   d-P14.00.04  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 26 Mar 2019   d-P13.00.04h M. Gledhill    Standardisation corrections
@@ -174,7 +179,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -312,13 +317,13 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">I&rsquo;m going to demonstrate this with the Equity fonts&mdash;you may not want to use these on your site, and that&rsquo;s fine&mdash;if you&rsquo;re using open source fonts I cover this in <a class="hlink nohyp" href="09-04-fonts.html#js--090400">&sect;&nbsp;9.4</a>. Whilst I&rsquo;m using the Equity fonts, the process I describe here works for any font. If you already have the WOFF files for the font then you can skip this part.</p>
+                    <p class="hyp">I&rsquo;m going to demonstrate this with the Equity fonts&nbsp;&mdash;&nbsp;you may not want to use these on your site, and that&rsquo;s fine&nbsp;&mdash;&nbsp;if you&rsquo;re using open source fonts I cover this in <a class="hlink nohyp" href="09-04-fonts.html#js--090400">&sect;&nbsp;9.4</a>. Whilst I&rsquo;m using the Equity fonts, the process I describe here works for any font. If you already have the WOFF files for the font then you can skip this part.</p>
 
-                    <p class="hyp">WOFF&mdash;<span class="first-use">web open font format</span> files are how we get a font onto a website&mdash;it is this file that the browser renders as a font. WOFF files are basically standard OpenType font files that have undergone a compression process to make them smaller.</p>
+                    <p class="hyp">WOFF&nbsp;&mdash;&nbsp;<span class="first-use">web open font format</span> files are how we get a font onto a website&nbsp;&mdash;&nbsp;it is this file that the browser renders as a font. WOFF files are basically standard OpenType font files that have undergone a compression process to make them smaller.</p>
 
-                    <p class="hyp"><span class="first-use">So how do we get our WOFF file?</span>&mdash;Well we start with a basic OpenType font file&mdash;this is how I converted the Equity fonts and this explanation basically follows the instructions I received when I bought the fonts&mdash;but the principal is the same for any font.</p>
+                    <p class="hyp"><span class="first-use">So how do we get our WOFF file?</span>&nbsp;&mdash;&nbsp;Well we start with a basic OpenType font file&nbsp;&mdash;&nbsp;this is how I converted the Equity fonts and this explanation basically follows the instructions I received when I bought the fonts&nbsp;&mdash;&nbsp;but the principal is the same for any font.</p>
 
-                    <p class="hyp"><a class="xref js--sc-t09-01" href="#">Table&nbsp;9.1</a> lists the main font files that came with the Equity font set (there are a lot more than these), Equity and Concourse have similar sets but with tabular figures<sup>&dagger;1</sup>. Triplicate has variants for standard text, code, short form characters and proportional spacing (<span class="first-use">so that would be a proportional, non-proportional font&mdash;go figure</span>). They also all come as OpenType TT (with <span class="code">.ttf</span> extensions) and OpenType CFF (with <span class="code">.otf</span> extensions). In total there are 252 font files.</p>
+                    <p class="hyp"><a class="xref js--sc-t09-01" href="#">Table&nbsp;9.1</a> lists the main font files that came with the Equity font set (there are a lot more than these), Equity and Concourse have similar sets but with tabular figures<sup>&dagger;1</sup>. Triplicate has variants for standard text, code, short form characters and proportional spacing <span class="first-use">(so that would be a proportional, non-proportional font&nbsp;&mdash;&nbsp;go figure)</span>. They also all come as OpenType TT (with <span class="code">.ttf</span> extensions) and OpenType CFF (with <span class="code">.otf</span> extensions). In total there are 252 font files.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE
@@ -338,7 +343,7 @@ Date          Issue        Author         Reason for Modification
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Now (despite what I said in <a class="hlink nohyp" href="09-01-fonts.html#js--090101">&sect;&nbsp;9.1.1</a>&mdash;<span class="first-use">I said always use OpenType CFF files</span>) I&rsquo;m going to use the OpenType TT files (with the <span class="code">.ttf</span> extension), this is because Mr Butterick optimised these fonts for web use when he created them and recommends that these be converted to WOFF files (this is peculiar to the Equity fonts).</p>
+                    <p class="hyp">Now (despite what I said in <a class="hlink nohyp" href="09-01-fonts.html#js--090101">&sect;&nbsp;9.1.1</a>&nbsp;&mdash;&nbsp;<span class="first-use">I said always use OpenType CFF files</span>) I&rsquo;m going to use the OpenType TT files (with the <span class="code">.ttf</span> extension), this is because Mr Butterick optimised these fonts for web use when he created them and recommends that these be converted to WOFF files (this is peculiar to the Equity fonts).</p>
 
                     <p class="hyp">So I&rsquo;m converting the <span class="code">.ttf</span> files only, this brings the total number of files down to 126.</p>
 
@@ -561,7 +566,7 @@ Date          Issue        Author         Reason for Modification
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp" style="padding-left:3.3rem"><span class="first-use">Mr Butterick was kind enough to let me have a copy when I enquired about them&mdash;I like them and I&rsquo;m very grateful to Mr Butterick for allowing me to use them</span>.</p>
+                    <p class="hyp" style="padding-left:3.3rem"><span class="first-use">Mr Butterick was kind enough to let me have a copy when I enquired about them&nbsp;&mdash;&nbsp;I like them and I&rsquo;m very grateful to Mr Butterick for allowing me to use them</span>.</p>
 
                     <p class="hyp">So we&rsquo;ve got the font files, <span class="first-use">how do we convert them?</span> Well we use an online font converter; there are lots of these, but the one I&rsquo;m recommending is font squirrel. <a class="hlink nohyp" href="https://www.fontsquirrel.com/tools/webfont-generator">font squirrel</a> seems to be well respected (Mr Butterick recommends it too), it has more conversion options than other sites and it also has a policy of not converting fonts that the designers have requested not be converted.</p>
 
@@ -592,17 +597,17 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Click the expert button to get the full list of options, <a class="xref js--sc-f09-02" href="#">Figure&nbsp;9.2</a>:</p>
+                    <p class="hyp">Click the expert button <span class="first-use">(wow, we&rsquo;re experts now)</span> to get the full list of options, <a class="xref js--sc-f09-02" href="#">Figure&nbsp;9.2</a>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
 <!-- Image -->          <figure class="fig-col fig1-1" id="js--f09-02">
-                            <a href="01-pages/09-02-fonts/02-images/fig-09-02.png" data-lightbox="fig-set" data-title="Figure 9.2 - Font Squirrel web font generator&mdash;Experts page">
-                                <img src="01-pages/09-02-fonts/02-images/fig-09-02.png" style="width:90%" alt="Figure 9.2 - Font Squirrel web font generator&mdash;Experts page">
+                            <a href="01-pages/09-02-fonts/02-images/fig-09-02.png" data-lightbox="fig-set" data-title="Figure 9.2 - Font Squirrel web font generator&nbsp;&mdash;&nbsp;Experts page">
+                                <img src="01-pages/09-02-fonts/02-images/fig-09-02.png" style="width:90%" alt="Figure 9.2 - Font Squirrel web font generator&nbsp;&mdash;&nbsp;Experts page">
                             </a>
-                            <figcaption>Figure 9.2 &emsp; Font Squirrel web font generator&mdash;Experts page</figcaption>
+                            <figcaption>Figure 9.2 &emsp; Font Squirrel web font generator&nbsp;&mdash;&nbsp;Experts page</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -624,7 +629,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The reason for doing this now is that it might not let you do it later on when we&rsquo;ve changed some of the other options. The Equity fonts were designed with an Em Square of 1000 so it important that this setting is right.</p>
 
-                    <p class="hyp">Next we upload the fonts, I did this in three parts, one for Equity, one for Concourse and one for Triplicate (only because it takes longer the more fonts you add)&mdash;the process is identical for each. I&rsquo;ll go through Equity in detail:</p>
+                    <p class="hyp">Next we upload the fonts, I did this in three parts, one for Equity, one for Concourse and one for Triplicate (only because it takes longer the more fonts you add)&nbsp;&mdash;&nbsp;the process is identical for each. I&rsquo;ll go through Equity in detail:</p>
 
                     <p class="hyp">Click the <span class="menu">upload fonts</span> button <sub><img src="01-pages/09-02-fonts/02-images/fig-09-03a.png" style="height: 1rem" alt="Upload button"></sub>  and in the pop-up dialogue box navigate to where you keep the font files on your machine. In my case it looks like <a class="xref js--sc-f09-04" href="#">Figure&nbsp;9.4</a>.</p>
 
@@ -642,7 +647,7 @@ Date          Issue        Author         Reason for Modification
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <p class="hyp">Select the font files you want and click <span class="menu">open</span>.</p>
 
-                    <p class="hyp">There will be a lot of orange bar twirling&mdash;the more files, the more twirling.</p>
+                    <p class="hyp">There will be a lot of orange bar twirling&nbsp;&mdash;&nbsp;the more files, the more twirling.</p>
 
                     <p class="hyp">Eventually it will present you with a list of uploaded fonts:</p>
 
@@ -674,7 +679,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Click the <span class="menu">download your kit</span> button&mdash;<span class="first-use">sounds rude</span>.</p>
+                    <p class="hyp">Click the <span class="menu">download your kit</span> button&nbsp;&mdash;&nbsp;<span class="first-use">sounds rude</span>.</p>
 
                     <p class="hyp">I converted the Concourse and Triplicate fonts in exactly the same way, with exactly the same settings.</p>
 
@@ -697,7 +702,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The files we want are the WOFF files, there are five of these for Equity; this is because I uploaded five fonts and each font gets its own WOFF file.</p>
 
-                    <p class="hyp">These are the WOFF files we want to use on the website. The only thing is the file names&mdash;they&rsquo;re a bit long. I decide to rename the files. I used the following convention, each WOFF file is named:</p>
+                    <p class="hyp">These are the WOFF files we want to use on the website. The only thing is the file names&nbsp;&mdash;&nbsp;they&rsquo;re a bit long. I decide to rename the files. I used the following convention, each WOFF file is named:</p>
 
                     <p class="hyp" style="text-align: center;"><span class="code">FFFF-TN-SS</span></p>
 
@@ -707,11 +712,11 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp"><span class="code">eqty</span> &mdash; Equity</p></li>
+                        <li><p class="hyp"><span class="code">eqty</span>&nbsp;&mdash;&nbsp;Equity</p></li>
 
-                        <li><p class="hyp"><span class="code">conc</span> &mdash; Concourse</p></li>
+                        <li><p class="hyp"><span class="code">conc</span>&nbsp;&mdash;&nbsp;Concourse</p></li>
 
-                        <li><p class="hyp"><span class="code">trip</span> &mdash; Triplicate</p></li>
+                        <li><p class="hyp"><span class="code">trip</span>&nbsp;&mdash;&nbsp;Triplicate</p></li>
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -721,11 +726,11 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp"><span class="code">t</span> &mdash; Normal text</p></li>
+                        <li><p class="hyp"><span class="code">t</span>&nbsp;&mdash;&nbsp;Normal text</p></li>
 
-                        <li><p class="hyp"><span class="code">c</span> &mdash; Small caps</p></li>
+                        <li><p class="hyp"><span class="code">c</span>&nbsp;&mdash;&nbsp;Small caps</p></li>
 
-                        <li><p class="hyp"><span class="code">i</span> &mdash; Index</p></li>
+                        <li><p class="hyp"><span class="code">i</span>&nbsp;&mdash;&nbsp;Index</p></li>
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -737,13 +742,13 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp"><span class="code">r&nbsp;</span> &mdash; Regular</p></li>
+                        <li><p class="hyp"><span class="code">r&nbsp;</span>&nbsp;&mdash;&nbsp;Regular</p></li>
 
-                        <li><p class="hyp"><span class="code">b&nbsp;</span> &mdash; Bold</p></li>
+                        <li><p class="hyp"><span class="code">b&nbsp;</span>&nbsp;&mdash;&nbsp;Bold</p></li>
 
-                        <li><p class="hyp"><span class="code">i&nbsp;</span> &mdash; Italic</p></li>
+                        <li><p class="hyp"><span class="code">i&nbsp;</span>&nbsp;&mdash;&nbsp;Italic</p></li>
 
-                        <li><p class="hyp"><span class="code">bi</span> &mdash; Bold and italic</p></li>
+                        <li><p class="hyp"><span class="code">bi</span>&nbsp;&mdash;&nbsp;Bold and italic</p></li>
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -849,7 +854,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The path to the folder is:</p>
 
-                    <p class="hyp" style="text-align: center;"><span class="code">\1001-website\21-global\03-fonts\woff</span></p>
+                    <p class="hyp" style="text-align: center;"><span class="code">/1001-website/21-global/03-fonts/woff</span></p>
 
                     <p class="hyp">The reason these fonts are in the <span class="code">21-global</span> path is that the WOFF files are third party files (I may have converted them to WOFF files, but I did not create the original font files, someone else did so they&rsquo;re third party files).</p>
 
@@ -872,7 +877,7 @@ Date          Issue        Author         Reason for Modification
       NOTE - HANGING INDENT
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="note">                           <!-- Start of note            -->
-                        <li>The little green ticks on each folder in the directory tree are there only because I&rsquo;m synchronising the folders with local folders on my machine (a running backup as it were)&mdash;for the purpose of all this, just ignore them.</li>
+                        <li>The little green ticks on each folder in the directory tree are there only because I&rsquo;m synchronising the folders with local folders on my machine (a running backup as it were)&nbsp;&mdash;&nbsp;for the purpose of all this, just ignore them.</li>
                     </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 

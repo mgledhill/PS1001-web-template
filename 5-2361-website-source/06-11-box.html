@@ -1,0 +1,1372 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Learn how to use the quick edit, autocomplete and quick edit facilities available to brackets">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                                06-10-BOX.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+07 Apr 2019   d-P14.00.03  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/06-11-box/05-local-js/06-11-scroll.js"></script>
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+       <!-- Code frag highlights        <link rel="stylesheet" type="text/css" href="01-pages/06-11-box/01-local-css/06-11-codeline.css">-->
+
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Brackets, quick edits and shortcuts | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="06-10-box.html#js--061000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="05-00-basics.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="07-00-prelim.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="07-00-prelim.html#js--070000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of navigation button row -->
+                </div>                                          <!-- End of top navigation row -->
+            </nav>                                              <!-- End of top navigation bar -->
+<!-- ========================================================================== [WP END] -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>6</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">6</span>The CSS box model</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP 000004]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used for TOC) -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column (centre column) -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 6. HTML AND CSS: THE BASICS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-060000" href="06-00-box.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">6</span><span class="toc-lev1-text">The CSS box model</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-060100" href="06-00-box.html#js--060100">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.1</span><span class="toc-lev2-text">Block and inline elements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060101" href="06-00-box.html#js--060101">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.1</span><span class="toc-lev3-text">Block elements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060102" href="06-00-box.html#js--060102">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.2</span><span class="toc-lev3-text">Inline elements</span></div></a>
+                        </li>
+<!-- Level 3 -->         <li><a class="js--sc-060103" href="06-00-box.html#js--060103">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.3</span><span class="toc-lev3-text">Inline-block elements</span></div></a>
+                         </li>
+<!-- Level 3 -->        <li><a class="js--sc-060104" href="06-00-box.html#js--060104">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.1.4</span><span class="toc-lev3-text"><span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060200" href="06-02-box.html#js--060200">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.2</span><span class="toc-lev2-text">Box structure</span></div></a>
+                        </li>
+                        <li><a class="js--sc-060201" href="06-02-box.html#js--060201">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.2.1</span><span class="toc-lev3-text">Box sizing</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060300" href="06-03-box.html#js--060300">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.3</span><span class="toc-lev2-text">Adjusting margins and padding</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060301" href="06-03-box.html#js--060301">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.3.1</span><span class="toc-lev3-text">Margin and padding properties</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060400" href="06-04-box.html#js--060400">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.4</span><span class="toc-lev2-text">A simple layout</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060401" href="06-04-box.html#js--060401">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.1</span><span class="toc-lev3-text">The clearfix hack</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060402" href="06-04-box.html#js--060402">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.4.2</span><span class="toc-lev3-text">Using the clearfix hack</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060500" href="06-05-box.html#js--060500">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.5</span><span class="toc-lev2-text">Improving the appearance of the site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060600" href="06-06-box.html#js--060600">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.6</span><span class="toc-lev2-text">Formatting elements in a class</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060601" href="06-06-box.html#js--060601">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.1</span><span class="toc-lev3-text">Descendant selection and combinators</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060602" href="06-06-box.html#js--060602">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.6.2</span><span class="toc-lev3-text">Finishing touches</span></div></a>
+
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060700" href="06-07-box.html#js--060700">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.7</span><span class="toc-lev2-text">Relative &amp; absolute positioning</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060800" href="06-08-box.html#js--060800">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.8</span><span class="toc-lev2-text">The final &ldquo;first-site&rdquo; source code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060801" href="06-08-box.html#js--060801">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.1</span><span class="toc-lev3-text">First-site CSS source code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060802" href="06-08-box.html#js--060802">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.2</span><span class="toc-lev3-text">First-site HTML source code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060803" href="06-08-box.html#js--060803">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.8.3</span><span class="toc-lev3-text">Final &ldquo;first-site&rdquo; website</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-060900" href="06-09-box.html#js--060900">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.9</span><span class="toc-lev2-text">Comments &amp; indentation</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060901" href="06-09-box.html#js--060901">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.1</span><span class="toc-lev3-text">HTML comments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060902" href="06-09-box.html#js--060902">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.2</span><span class="toc-lev3-text">CSS comments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060903" href="06-09-box.html#js--060903">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&nbsp;&mdash;&nbsp;the downside</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-060906" href="06-09-box.html#js--060906">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&nbsp;&mdash;&nbsp;quick edits and shortcuts</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061002" href="06-10-box.html#js--061002">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.2</span><span class="toc-lev3-text">Autocomplete</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
+
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-061100" href="06-11-box.html#js--061100">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.11</span><span class="toc-lev2-text">Special and reserved characters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061101" href="06-11-box.html#js--061101">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.1</span><span class="toc-lev3-text">HTML Character codes</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061102" href="06-11-box.html#js--061102">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.2</span><span class="toc-lev3-text">CSS and JavaScript character codes</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION 6.11 - SPECIAL AND RESERVED CHARACTERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--061100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>6.11</h2></div>
+                    <div class="sub-title-text-box"><h2>Special and reserved characters</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">If you wanted to use the less than sign &ldquo;&lt;&rdquo; in normal text on a web page, let&rsquo;s say you wanted the paragraph:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;p&gt;5 &lt; 10&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Then you would have some problems; when the browser sees the character &ldquo;&lt;&rdquo; it is expecting a HTML tag (they all start with a &lt; character).</p>
+
+                    <p class="hyp">If you did put the above on a web site, it would fail validation (see <a class="hlink" href="06-09-box.html#js--060901">&sect;&nbsp;6.9.1</a>), some less lenient browsers may not display it at all. We are breaking the rules.</p>
+
+                    <p class="hyp">There are several of these reserved characters in HTML, this is a list:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Header row -->     <tr>
+                            <th colspan="5" class="table-cent">html reserved characters</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td colspan="5" class="table-left"><p>The following have special meaning in HTML:</p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left" style="width: 5%"><p></p></td>
+                            <td class="table-left" style="width: 40%"><p>Less than 	</p></td>
+                            <td class="table-left" style="width: 10%"><p><span class="c-box">&lt;</span></p></td>
+                            <td class="table-left" style="width: 25%"><p>Replacement code:</p></td>
+                            <td class="table-left" style="width: 20%"><p><span class="code">&amp;lt;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Greater than </p></td>
+                            <td class="table-left"><p><span class="c-box">&gt;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;gt;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Ampersand </p></td>
+                            <td class="table-left"><p><span class="c-box">&amp;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;amp;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Double quotation mark</p></td>
+                            <td class="table-left"><p><span class="c-box">&quot;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;quot;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Single quotation mark</p></td>
+                            <td class="table-left"><p><span class="c-box">&apos;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;apos;</span></p></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now, obviously we want to be able to put quotation marks and ampersands on a web page, they are perfectly normal punctuation marks that get used everywhere.</p>
+
+                    <p class="hyp">To get round this problem, we have to use special codes for these characters, if we want to use a less than sign (&lt;) in our text, we have to replace it with <span class="code">&amp;lt;</span>.</p>
+
+                    <p class="hyp">This is called an <span class="first-use">escape sequence</span>, sometimes a <span class="first-use">symbol code</span> and in my case an <span class="first-use">&amp;code</span>.</p>
+
+                    <p class="hyp">Basically escape sequences are a group of characters that are translated by the browser into a different symbol.</p>
+
+                    <p class="hyp">Whenever the browser comes across the sequence of characters <span class="code">&amp;lt;</span>, it will display a straight forward less than sign (&lt;). </p>
+
+                    <p class="hyp">So whenever you want to put any of the five characters above in a web page as text to be displayed, use the &amp;code that is given as a substitute.</p>
+
+                    <p class="hyp">&amp;codes always start with the ampersand character (<span class="code">&amp;</span>) and end with a semicolon (<span class="code">;</span>).</p>
+
+                    <p class="hyp">There are actually a lot more &amp;codes than the five above, they are used to display various common symbols that are not accessible via the keyboard. For example <span class="code">&amp;dagger;</span> displays the dagger symbol (&dagger;).</p>
+
+                    <p class="hyp">The following tables shows all the &amp;codes (escape sequence) characters for HTML.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION 6.11.1 - HTML CHARACTER CODES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--061101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>6.11.1</h3></div>
+                    <div class="sub-title-text-box"><h3>HTML Character codes</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - DENSE TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-dense" style="width: 100%" id="js--t06-04">
+<!-- Header row -->     <tr>
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent" style="width: 3.2%"></th>
+                            <th class="table-cent" style="width: 26%">mathematical</th>
+                            <th class="table-cent" style="width: 10.4%">html</th>
+                            <th class="table-cent" style="width: 10.4%">code</th>
+                            <th class="table-cent" style="width: 3.2%"></th>
+                            <th class="table-cent" style="width: 26%">mathematical</th>
+                            <th class="table-cent" style="width: 10.4%">html</th>
+                            <th class="table-cent" style="width: 10.4%">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent">&#0215;</td>
+                            <td class="table-left">Multiplication sign</td>
+                            <td class="table-cent"><span class="code">&amp;times;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0215;</span></td>
+                            <td class="table-cent">&#8745;</td>
+                            <td class="table-left">Intersection</td>
+                            <td class="table-cent"><span class="code">&amp;cap;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8745;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-cent">&#0247;</td>
+                            <td class="table-left">Division sign</td>
+                            <td class="table-cent"><span class="code">&amp;divide;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0247;</span></td>
+                            <td class="table-cent">&#8747;</td>
+                            <td class="table-left">Integral</td>
+                            <td class="table-cent"><span class="code">&amp;int;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8747;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8722;</td>
+                            <td class="table-left">Minus sign</td>
+                            <td class="table-cent"><span class="code">&amp;minus;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8722;</span></td>
+                            <td class="table-cent">&#8776;</td>
+                            <td class="table-left">Almost equal to</td>
+                            <td class="table-cent"><span class="code">&amp;asymp;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8776;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0177;</td>
+                            <td class="table-left">Plus/minus sign</td>
+                            <td class="table-cent"><span class="code">&amp;plusmn;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0177;</span></td>
+                            <td class="table-cent">&#8800;</td>
+                            <td class="table-left">Not equal to</td>
+                            <td class="table-cent"><span class="code">&amp;ne;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8800;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8260;</td>
+                            <td class="table-left">Fraction slash</td>
+                            <td class="table-cent"><span class="code">&amp;frasl;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8260;</span></td>
+                            <td class="table-cent">&#8801;</td>
+                            <td class="table-left">Identical to</td>
+                            <td class="table-cent"><span class="code">&amp;equiv;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8801;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8719;</td>
+                            <td class="table-left">N-array product</td>
+                            <td class="table-cent"><span class="code">&amp;prod;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8719;</span></td>
+                            <td class="table-cent">&#0060;</td>
+                            <td class="table-left">Less than </td>
+                            <td class="table-cent"><span class="code">&amp;lt;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0060;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8721;</td>
+                            <td class="table-left">N-array summation</td>
+                            <td class="table-cent"><span class="code">&amp;sum;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8721;</span></td>
+                            <td class="table-cent">&#0062;</td>
+                            <td class="table-left">Greater than</td>
+                            <td class="table-cent"><span class="code">&amp;gt;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0062;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8730;</td>
+                            <td class="table-left">Square root</td>
+                            <td class="table-cent"><span class="code">&amp;radic;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8730;</span></td>
+                            <td class="table-cent">&#8804;</td>
+                            <td class="table-left">Less than or equal to</td>
+                            <td class="table-cent"><span class="code">&amp;le;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8804;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8734;</td>
+                            <td class="table-left">Infinity</td>
+                            <td class="table-cent"><span class="code">&amp;infin;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8734;</span></td>
+                            <td class="table-cent">&#8805;</td>
+                            <td class="table-left">Greater than or equal to</td>
+                            <td class="table-cent"><span class="code">&amp;ge;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8805;</span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">html reserved</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">html reserved</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0060;</td>
+                            <td class="table-left">Less than </td>
+                            <td class="table-cent"><span class="code">&amp;lt;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0060;</span></td>
+                            <td class="table-cent">&#0034;</td>
+                            <td class="table-left">Quotation mark</td>
+                            <td class="table-cent"><span class="code">&amp;quot;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0034;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0062;</td>
+                            <td class="table-left">Greater than</td>
+                            <td class="table-cent"><span class="code">&amp;gt;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0062;</span></td>
+                            <td class="table-cent">&#0039;</td>
+                            <td class="table-left">Single quote</td>
+                            <td class="table-cent"><span class="code">&amp;apos;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0039;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0038;</td>
+                            <td class="table-left">Ampersand</td>
+                            <td class="table-cent"><span class="code">&amp;amp;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0038;</span></td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">miscellaneous</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">miscellaneous</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8592;</td>
+                            <td class="table-left">Leftwards arrow</td>
+                            <td class="table-cent"><span class="code">&amp;larr;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8592;</span></td>
+                            <td class="table-cent">&#0166;</td>
+                            <td class="table-left">Broken vertical bar</td>
+                            <td class="table-cent"><span class="code">&amp;brvbar;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0166;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8593;</td>
+                            <td class="table-left">Upwards arrow</td>
+                            <td class="table-cent"><span class="code">&amp;uarr;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8593;</span></td>
+                            <td class="table-cent">&#0176;</td>
+                            <td class="table-left">Degree sign</td>
+                            <td class="table-cent"><span class="code">&amp;deg;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0176;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8594;</td>
+                            <td class="table-left">Rightwards arrow</td>
+                            <td class="table-cent"><span class="code">&amp;rarr;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8594;</span></td>
+                            <td class="table-cent">&#0183;</td>
+                            <td class="table-left">Middle dot</td>
+                            <td class="table-cent"><span class="code">&amp;middot;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0183;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8595;</td>
+                            <td class="table-left">Downwards arrow</td>
+                            <td class="table-cent"><span class="code">&amp;darr;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8595;</span></td>
+                            <td class="table-cent">&#8226;</td>
+                            <td class="table-left">Bullet</td>
+                            <td class="table-cent"><span class="code">&amp;bull;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8226;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8596;</td>
+                            <td class="table-left">Left right arrow</td>
+                            <td class="table-cent"><span class="code">&amp;harr;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8596;</span></td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">spacing</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">currency</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8194;</td>
+                            <td class="table-left">En space</td>
+                            <td class="table-cent"><span class="code">&amp;ensp;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8194;</span></td>
+                            <td class="table-cent">&#0162;</td>
+                            <td class="table-left">Cent sign</td>
+                            <td class="table-cent"><span class="code">&amp;cent;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0162;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8195;</td>
+                            <td class="table-left">Em space</td>
+                            <td class="table-cent"><span class="code">&amp;emsp;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8195;</span></td>
+                            <td class="table-cent">&#0163;</td>
+                            <td class="table-left">Pound sign</td>
+                            <td class="table-cent"><span class="code">&amp;pound;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0163;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0160;</td>
+                            <td class="table-left">Non-breaking space </td>
+                            <td class="table-cent"><span class="code">&amp;nbsp;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0160;</span></td>
+                            <td class="table-cent">&#0128;</td>
+                            <td class="table-left">Euro sign</td>
+                            <td class="table-cent"><span class="code">&amp;euro;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0128;</span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">numbers</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">numbers</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0185;</td>
+                            <td class="table-left">Superscript one</td>
+                            <td class="table-cent"><span class="code">&amp;sup1;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0185;</span></td>
+                            <td class="table-cent">&#0189;</td>
+                            <td class="table-left">Fraction one half</td>
+                            <td class="table-cent"><span class="code">&amp;frac12;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0189;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0178;</td>
+                            <td class="table-left">Superscript two</td>
+                            <td class="table-cent"><span class="code">&amp;sup2;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0178;</span></td>
+                            <td class="table-cent">&#0188;</td>
+                            <td class="table-left">Fraction one quarter</td>
+                            <td class="table-cent"><span class="code">&amp;frac14</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0188;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0179;</td>
+                            <td class="table-left">Superscript three</td>
+                            <td class="table-cent"><span class="code">&amp;sup3;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0179;</span></td>
+                            <td class="table-cent">&#0190;</td>
+                            <td class="table-left">Fraction three quarters</td>
+                            <td class="table-cent"><span class="code">&amp;frac34</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0190;</span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">punctuation</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">punctuation</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0161;</td>
+                            <td class="table-left">Inverted exclamation mark</td>
+                            <td class="table-cent"><span class="code">&amp;iexcl;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0161;</span></td>
+                            <td class="table-cent">&#8230;</td>
+                            <td class="table-left">Horizontal ellipsis</td>
+                            <td class="table-cent"><span class="code">&amp;hellip;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8230;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0191;</td>
+                            <td class="table-left">Inverted question mark</td>
+                            <td class="table-cent"><span class="code">&amp;iquest;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0191;</span></td>
+                            <td class="table-cent">&#8254;</td>
+                            <td class="table-left">Overline</td>
+                            <td class="table-cent"><span class="code">&amp;oline;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8254;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8220;</td>
+                            <td class="table-left">Left double quote</td>
+                            <td class="table-cent"><span class="code">&amp;ldquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8220;</span></td>
+                            <td class="table-cent">&#0167;</td>
+                            <td class="table-left">Section sign</td>
+                            <td class="table-cent"><span class="code">&amp;sect;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0167;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8221;</td>
+                            <td class="table-left">Right double quote</td>
+                            <td class="table-cent"><span class="code">&amp;rdquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8221;</span></td>
+                            <td class="table-cent">&#0182;</td>
+                            <td class="table-left">Paragraph sign</td>
+                            <td class="table-cent"><span class="code">&amp;para;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0182;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8222;</td>
+                            <td class="table-left">Double low-9 quote</td>
+                            <td class="table-cent"><span class="code">&amp;bdquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8222;</span></td>
+                            <td class="table-cent">&#0169;</td>
+                            <td class="table-left">Copyright sign</td>
+                            <td class="table-cent"><span class="code">&amp;copy;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0169;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8216;</td>
+                            <td class="table-left">Left single quote</td>
+                            <td class="table-cent"><span class="code">&amp;lsquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8216;</span></td>
+                            <td class="table-cent">&#0174;</td>
+                            <td class="table-left">Registered trademark sign</td>
+                            <td class="table-cent"><span class="code">&amp;reg;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0174;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8217;</td>
+                            <td class="table-left">Right single quote</td>
+                            <td class="table-cent"><span class="code">&amp; rsquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8217;</span></td>
+                            <td class="table-cent">&#8482;</td>
+                            <td class="table-left">Trademark sign</td>
+                            <td class="table-cent"><span class="code">&amp;trade;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8482;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8218;</td>
+                            <td class="table-left">Single low-9 quote</td>
+                            <td class="table-cent"><span class="code">&amp;sbquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8218;</span></td>
+                            <td class="table-cent">&#0172;</td>
+                            <td class="table-left">Not sign</td>
+                            <td class="table-cent"><span class="code">&amp;not;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0172;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#9674;</td>
+                            <td class="table-left">Lozenge</td>
+                            <td class="table-cent"><span class="code">&amp;loz;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#9674;</span></td>
+                            <td class="table-cent">&#0181;</td>
+                            <td class="table-left">Micro sign</td>
+                            <td class="table-cent"><span class="code">&amp;micro;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0181;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0171;</td>
+                            <td class="table-left">Left double angle quote</td>
+                            <td class="table-cent"><span class="code">&amp;laquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0171;</span></td>
+                            <td class="table-cent">&#8240;</td>
+                            <td class="table-left">Per mille sign</td>
+                            <td class="table-cent"><span class="code">&amp;permil;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8240;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0187;</td>
+                            <td class="table-left">Right double angle quote</td>
+                            <td class="table-cent"><span class="code">&amp;raquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0187;</span></td>
+                            <td class="table-cent">&#8242;</td>
+                            <td class="table-left">Prime (straight quote)</td>
+                            <td class="table-cent"><span class="code">&amp;prime;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8242;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8249;</td>
+                            <td class="table-left">Single left angle quote</td>
+                            <td class="table-cent"><span class="code">&amp;lsaquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8249;</span></td>
+                            <td class="table-cent">&#8243;</td>
+                            <td class="table-left">Double prime (straight quote)</td>
+                            <td class="table-cent"><span class="code">&amp;Prime;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8243;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8250;</td>
+                            <td class="table-left">Single right angle quote</td>
+                            <td class="table-cent"><span class="code">&amp;rsaquo;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8250;</span></td>
+                            <td class="table-cent">&#8224;</td>
+                            <td class="table-left">Dagger</td>
+                            <td class="table-cent"><span class="code">&amp;dagger;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8224;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8211;</td>
+                            <td class="table-left">En dash</td>
+                            <td class="table-cent"><span class="code">&amp;ndash;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8211;</span></td>
+                            <td class="table-cent">&#8225;</td>
+                            <td class="table-left">Double dagger</td>
+                            <td class="table-cent"><span class="code">&amp;Dagger;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8225;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#8212;</td>
+                            <td class="table-left">Em dash</td>
+                            <td class="table-cent"><span class="code">&amp;mdash;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#8212;</span></td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                        </tr>
+
+<!-- Header row -->     <tr style="vertical-align: bottom">
+                            <th class="leading" style="height: 3rem"></th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">greek small letters</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                            <th class="table-cent"></th>
+                            <th class="table-cent">greek capital letters</th>
+                            <th class="table-cent">html</th>
+                            <th class="table-cent">code</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0945;</td>
+                            <td class="table-left">Alpha</td>
+                            <td class="table-cent"><span class="code">&amp;alpha</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0945;</span></td>
+                            <td class="table-cent">&#0913;</td>
+                            <td class="table-left">Alpha</td>
+                            <td class="table-cent"><span class="code">&amp;Alpha</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0913;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0946;</td>
+                            <td class="table-left">Beta</td>
+                            <td class="table-cent"><span class="code">&amp;beta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0946;</span></td>
+                            <td class="table-cent">&#0914;</td>
+                            <td class="table-left">Beta</td>
+                            <td class="table-cent"><span class="code">&amp;Beta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0914;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0947;</td>
+                            <td class="table-left">Gamma</td>
+                            <td class="table-cent"><span class="code">&amp;gamma;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0947;</span></td>
+                            <td class="table-cent">&#0915;</td>
+                            <td class="table-left">Gamma</td>
+                            <td class="table-cent"><span class="code">&amp;Gamma;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0915;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0948;</td>
+                            <td class="table-left">Delta</td>
+                            <td class="table-cent"><span class="code">&amp;delta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0948;</span></td>
+                            <td class="table-cent">&#0916;</td>
+                            <td class="table-left">Delta</td>
+                            <td class="table-cent"><span class="code">&amp;Delta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0916;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0949;</td>
+                            <td class="table-left">Epsilon</td>
+                            <td class="table-cent"><span class="code">&amp;epsilon;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0949;</span></td>
+                            <td class="table-cent">&#0917;</td>
+                            <td class="table-left">Epsilon</td>
+                            <td class="table-cent"><span class="code">&amp;Epsilon;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0917;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0950;</td>
+                            <td class="table-left">Zeta</td>
+                            <td class="table-cent"><span class="code">&amp;zeta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0950;</span></td>
+                            <td class="table-cent">&#0918;</td>
+                            <td class="table-left">Zeta</td>
+                            <td class="table-cent"><span class="code">&amp;Zeta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0918;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0951;</td>
+                            <td class="table-left">Eta</td>
+                            <td class="table-cent"><span class="code">&amp;eta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0951;</span></td>
+                            <td class="table-cent">&#0919;</td>
+                            <td class="table-left">Eta</td>
+                            <td class="table-cent"><span class="code">&amp;Eta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0919;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0952;</td>
+                            <td class="table-left">Theta</td>
+                            <td class="table-cent"><span class="code">&amp;theta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0952;</span></td>
+                            <td class="table-cent">&#0920;</td>
+                            <td class="table-left">Theta</td>
+                            <td class="table-cent"><span class="code">&amp;Theta;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0920;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0953;</td>
+                            <td class="table-left">Iota</td>
+                            <td class="table-cent"><span class="code">&amp;iota;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0953;</span></td>
+                            <td class="table-cent">&#0921;</td>
+                            <td class="table-left">Iota</td>
+                            <td class="table-cent"><span class="code">&amp;Iota;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0921;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0954;</td>
+                            <td class="table-left">Kappa</td>
+                            <td class="table-cent"><span class="code">&amp;kappa;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0954;</span></td>
+                            <td class="table-cent">&#0922;</td>
+                            <td class="table-left">Kappa</td>
+                            <td class="table-cent"><span class="code">&amp;Kappa;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0922;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0955;</td>
+                            <td class="table-left">Lambda</td>
+                            <td class="table-cent"><span class="code">&amp;lambda;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0955;</span></td>
+                            <td class="table-cent">&#0923;</td>
+                            <td class="table-left">Lambda</td>
+                            <td class="table-cent"><span class="code">&amp;Lambda;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0923;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0956;</td>
+                            <td class="table-left">Mu</td>
+                            <td class="table-cent"><span class="code">&amp;mu;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0956;</span></td>
+                            <td class="table-cent">&#0924;</td>
+                            <td class="table-left">Mu</td>
+                            <td class="table-cent"><span class="code">&amp;Mu;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0924;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0957;</td>
+                            <td class="table-left">Nu</td>
+                            <td class="table-cent"><span class="code">&amp;nu;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0957;</span></td>
+                            <td class="table-cent">&#0925;</td>
+                            <td class="table-left">Nu</td>
+                            <td class="table-cent"><span class="code">&amp;Nu;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0925;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0958;</td>
+                            <td class="table-left">Xi</td>
+                            <td class="table-cent"><span class="code">&amp;xi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0958;</span></td>
+                            <td class="table-cent">&#0926;</td>
+                            <td class="table-left">Xi</td>
+                            <td class="table-cent"><span class="code">&amp;Xi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0926;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0959;</td>
+                            <td class="table-left">Omicron</td>
+                            <td class="table-cent"><span class="code">&amp;omicron;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0959;</span></td>
+                            <td class="table-cent">&#0927;</td>
+                            <td class="table-left">Omicron</td>
+                            <td class="table-cent"><span class="code">&amp;Omicron;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0927;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0960;</td>
+                            <td class="table-left">Pi</td>
+                            <td class="table-cent"><span class="code">&amp;pi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0960;</span></td>
+                            <td class="table-cent">&#0928;</td>
+                            <td class="table-left">Pi</td>
+                            <td class="table-cent"><span class="code">&amp;Pi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0928;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0961;</td>
+                            <td class="table-left">Rho</td>
+                            <td class="table-cent"><span class="code">&amp;rho;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0961;</span></td>
+                            <td class="table-cent">&#0929;</td>
+                            <td class="table-left">Rho</td>
+                            <td class="table-cent"><span class="code">&amp;Rho;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0929;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0962;</td>
+                            <td class="table-left">Sigma 1</td>
+                            <td class="table-cent"><span class="code">&amp;sigmaf;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0962;</span></td>
+                            <td class="table-cent">&#0931;</td>
+                            <td class="table-left">Sigma</td>
+                            <td class="table-cent"><span class="code">&amp;Sigma;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0931;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0963;</td>
+                            <td class="table-left">Sigma 2</td>
+                            <td class="table-cent"><span class="code">&amp;sigma;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0963;</span></td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                            <td class="table-cent"><span class="code"></span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0964;</td>
+                            <td class="table-left">Tau</td>
+                            <td class="table-cent"><span class="code">&amp;tau;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0964;</span></td>
+                            <td class="table-cent">&#0932;</td>
+                            <td class="table-left">Tau</td>
+                            <td class="table-cent"><span class="code">&amp;Tau;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0932;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0965;</td>
+                            <td class="table-left">Upsilon</td>
+                            <td class="table-cent"><span class="code">&amp;upsilon;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0965;</span></td>
+                            <td class="table-cent">&#0933;</td>
+                            <td class="table-left">Upsilon</td>
+                            <td class="table-cent"><span class="code">&amp;Upsilon;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0933;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0966;</td>
+                            <td class="table-left">Phi</td>
+                            <td class="table-cent"><span class="code">&amp;phi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0966;</span></td>
+                            <td class="table-cent">&#0934;</td>
+                            <td class="table-left">Phi</td>
+                            <td class="table-cent"><span class="code">&amp;Phi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0934;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0967;</td>
+                            <td class="table-left">Chi</td>
+                            <td class="table-cent"><span class="code">&amp;chi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0967;</span></td>
+                            <td class="table-cent">&#0935;</td>
+                            <td class="table-left">Chi</td>
+                            <td class="table-cent"><span class="code">&amp;Chi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0935;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0968;</td>
+                            <td class="table-left">Psi</td>
+                            <td class="table-cent"><span class="code">&amp;psi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0968;</span></td>
+                            <td class="table-cent">&#0936;</td>
+                            <td class="table-left">Psi</td>
+                            <td class="table-cent"><span class="code">&amp;Psi;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0936;</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style=""></td>
+                            <td class="table-cent">&#0969;</td>
+                            <td class="table-left">Omega</td>
+                            <td class="table-cent"><span class="code">&amp;omega;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0969;</span></td>
+                            <td class="table-cent">&#0937;</td>
+                            <td class="table-left">Omega</td>
+                            <td class="table-cent"><span class="code">&amp;Omega;</span></td>
+                            <td class="table-cent"><span class="code">&amp;#0937;</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="8" class="table-caption">Table 6.4 &emsp; HTML character codes</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The above table lists all the common &amp;codes (there are a load more for accents and funny letters), <a full list can be found a class="hlink nohyp" href="https://www.freeformatter.com/html-entities.html">here</a>.</p>
+
+                    <p class="hyp">In HTML, any character can be entered by using its character code (given in the <span class="menu">code</span> columns of the above tables). HTML character codes are preceded by the ampersand and hash characters (<span class="code">&amp;#</span>) and finished with a semicolon (<span class="code">;</span>). </p>
+
+                    <p class="hyp">The character codes for all characters are predefined and standard; they are based on the original ASCII character set and then expanded with the use of Unicode characters.</p>
+
+                    <p class="hyp">The character code for the letter &ldquo;A&rdquo; is 65 (decimal). To enter the letter &ldquo;A&rdquo; in HTML using character code, use the following:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">&amp;#65;</span></p>
+
+                    <p class="hyp">Character codes can also be entered using hexadecimal notation. I cover hexadecimals in (<a class="hlink nohyp" href="05-07-basics.html#js--050701">&sect;&nbsp;5.7.1</a>)</p>
+
+                    <p class="hyp">The hexadecimal for 65 is 41 and in HTML this would be:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">&amp;#x41;</span></p>
+
+                    <p class="hyp">To use hexadecimal character codes, the hex number is preceded by <span class="code">&amp;#x</span>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION 6.11.2 - CSS AND JAVASCRIPT CHARACTER CODES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--061102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>6.11.2</h3></div>
+                    <div class="sub-title-text-box"><h3>CSS and JavaScript character codes</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">CSS and JavaScript do not support the &amp;codes of HTML, they do however allow characters to be entered directly with their character code.</p>
+
+                    <p class="hyp">To enter a Unicode character directly with its number, simply precede the hexadecimal (it must be hexadecimal) code with a &ldquo;<span class="code">\</span>&rdquo; character and enter the hexadecimal code as four digits (use leading zeros if necessary). The following would give the A character:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">\0041</span></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="06-10-box.html#js--061000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="07-00-prelim.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

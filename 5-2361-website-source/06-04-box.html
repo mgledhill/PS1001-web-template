@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+07 Apr 2019   d-P14.00.03  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 25 Mar 2019   d-P13.00.04e M. Gledhill    Standardisation corrections
@@ -174,7 +179,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -284,7 +289,7 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
-                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&nbsp;&mdash;&nbsp;the downside</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
@@ -293,7 +298,7 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
                         </li>
 <!-- Level 2 -->        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
-                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&nbsp;&mdash;&nbsp;quick edits and shortcuts</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
@@ -303,7 +308,16 @@ Date          Issue        Author         Reason for Modification
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
-                            <br class="toc-pad">
+
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-061100" href="06-11-box.html#js--061100">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.11</span><span class="toc-lev2-text">Special and reserved characters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061101" href="06-11-box.html#js--061101">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.1</span><span class="toc-lev3-text">HTML Character codes</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061102" href="06-11-box.html#js--061102">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.2</span><span class="toc-lev3-text">CSS and JavaScript character codes</span></div></a>
                         </li>
                     </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -724,7 +738,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">This is a common problem with CSS, the float instruction is a bit like the genie: once you&rsquo;ve used it it&rsquo;s hard to put it back in the bottle.</p>
 
-                    <p class="hyp">To get round this we use a clever bit of jiggery-pokery (<span class="first-use">that to be honest I&rsquo;m not sure I fully understand</span>). We use the <span class="first-use">clearfix hack</span>:</p>
+                    <p class="hyp">To get round this we use a clever bit of jiggery-pokery <span class="first-use">(that to be honest I&rsquo;m not sure I fully understand)</span>. We use the <span class="first-use">clearfix hack</span>:</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -785,7 +799,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">Now there are a few new things here. The first is the <span class="code">:after</span> in the <span class="code">clearfix</span> class selector. The <span class="code">:after</span> is a <span class="first-use">pseudo element</span> that allows content to be inserted into an HTML page directly from the CSS (that is without it needing to be in the HTML).</p>
 
-                    <p class="hyp">If we added the following code to the <span class="code">.main-area</span> class, then the text &ldquo;THIS IS CSS TEXT&rdquo; would appear after the last Lorem ipsum paragraph (this is just an example, if you try it, delete it again afterwards).</p>
+                    <p class="hyp">If we added the following code to the <span class="code">.main-area</span> class, then the text &ldquo;THIS IS CSS TEXT&rdquo; would appear after the last Lorem ipsum paragraph  <span class="first-use">(this is just an example, if you try it, delete it again afterwards)</span>.</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
@@ -814,7 +828,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The <span class="code">content</span> property simply contains a text string that is to be displayed after everything else in the class. So in the <span class="code">clearfix</span> class we are adding an empty string to the end of any element that uses this class.</p>
 
-                    <p class="hyp">The next thing is the <span class="code">display: table</span> declaration. This forces a table element (we look at tables in <a class="hlink nohyp utx" href="#">&sect;&nbsp;xxx</a>) to be created. Now when a table is created it always forces a new block region to start on a new line<sup>&dagger;1</sup> . The last part is the <span class="code">clear</span> property. The <span class="code">clear</span> property is used to clear floats (<span class="first-use">it puts them back in the bottle</span>), it can have the values <span class="code">left</span>, <span class="code">right</span> and <span class="code">both</span>. Here we use <span class="code">both</span>, we want to clear any floats that exits. It&rsquo;s this last declaration that will stop the red box filling the space under the green box (the other bits just make sure it works and&mdash;<span class="first-use">this is the bit I don&rsquo;t fully understand</span>&mdash;stop it screwing up the margins). <a class="xref js--sc-f06-12" href="#">Figure&nbsp;6.12</a> and <a class="xref js--sc-f06-13" href="#">Figure&nbsp;6.13</a> show how it works:</p>
+                    <p class="hyp">The next thing is the <span class="code">display: table</span> declaration. This forces a table element (we look at tables in <a class="hlink nohyp utx" href="14-00-tables.html">&sect;&nbsp;14</a>) to be created. Now when a table is created it always forces a new block region to start on a new line<sup>&dagger;1</sup> . The last part is the <span class="code">clear</span> property. The <span class="code">clear</span> property is used to clear floats (<span class="first-use">it puts them back in the bottle</span>), it can have the values <span class="code">left</span>, <span class="code">right</span> and <span class="code">both</span>. Here we use <span class="code">both</span>, we want to clear any floats that exist. It&rsquo;s this last declaration that will stop the red box filling the space under the green box (the other bits just make sure it works and&nbsp;&mdash;&nbsp;<span class="first-use">this is the bit I don&rsquo;t fully understand</span>&nbsp;&mdash;&nbsp;stop it screwing up the margins). <a class="xref js--sc-f06-12" href="#">Figure&nbsp;6.12</a> and <a class="xref js--sc-f06-13" href="#">Figure&nbsp;6.13</a> show how it works:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      TABLE - FOOTNOTE

@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+07 Apr 2019   d-P14.00.04  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 27 Mar 2019   d-P13.00.04i M. Gledhill    Standardisation corrections
@@ -161,7 +166,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -545,7 +550,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The first three lines are easy, they&rsquo;re just comments&mdash;it tells me this is the start of a new section.</p>
+                    <p class="hyp">The first three lines are easy, they&rsquo;re just comments&nbsp;&mdash;&nbsp;it tells me this is the start of a new section.</p>
 
                     <p class="hyp">The next line is the proper start of the section; it holds the <span class="code">&lt;section&gt;</span> element.</p>
 
@@ -585,7 +590,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp" style="text-align: center;"><span class="code">js--100102</span></p>
 
-                    <p class="hyp">The <span class="code">js--</span> is just my notation for indicating that the <span class="code">id</span> is used in a JavaScript file; in this instance it is used to identify a particular point on the web page and allows soft scrolling to that position (I explain the how and why of this is <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a> where I look at soft scrolling and navigation).</p>
+                    <p class="hyp">The <span class="code">js--</span> is just my notation for indicating that the <span class="code">id</span> is used in a JavaScript file; in this instance it is used to identify a particular point on the web page and allows slow scrolling to that position (I explain the how and why of this is <a class="hlink nohyp utx" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a> where I look at slow scrolling and navigation).</p>
 
                     <p class="hyp">Back to the <span class="code">section-std class</span>:</p>
 
@@ -650,9 +655,9 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">These both use the descendant selector (combinator) discussed in <a class="hlink nohyp" href="06-06-box.html#js--060601">&sect;&nbsp;6.6.1</a> to set the style for every <span class="code">&lt;p&gt;</span> element and <span class="code">&lt;em&gt;</span> element within the section.</p>
 
-                    <p class="hyp">This is an important point, just because I&rsquo;ve used a style in the HTML file, it doesn&rsquo;t mean I actually need that style in the CSS&mdash;I won&rsquo;t get told off, nothing will complain or throw up an error&mdash;if the style doesn&rsquo;t exist in the CSS, nothing will happen on the web page to change how the element is displayed.</p>
+                    <p class="hyp">This is an important point, just because I&rsquo;ve used a style in the HTML file, it doesn&rsquo;t mean I actually need that style in the CSS&nbsp;&mdash;&nbsp;I won&rsquo;t get told off, nothing will complain or throw up an error&nbsp;&mdash;&nbsp;if the style doesn&rsquo;t exist in the CSS, nothing will happen on the web page to change how the element is displayed.</p>
 
-                    <p class="hyp">The fact that the style doesn&rsquo;t exist in the CSS does not stop me applying a style to and element within that style (by using the descendant selector, see <a class="hlink nohyp" href="06-06-box.html#js--060601">&sect;&nbsp;6.6.1</a>).</p>
+                    <p class="hyp">The fact that the style doesn&rsquo;t exist in the CSS does not stop me applying a style to an element within that style (by using the descendant selector, see <a class="hlink nohyp" href="06-06-box.html#js--060601">&sect;&nbsp;6.6.1</a>).</p>
 
                     <p class="hyp">Looking at the first rule: <span class="code">section-std p</span>:</p>
 
@@ -749,7 +754,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I do this is in the vain hope that Chrome will one day support it. Chrome doesn&rsquo;t yet support this feature (Firefox and Edge do) so the line at the moment (if you are using Chrome) is entirely useless. To get round this problem (I want hyphenation) I use a third party JavaScript hyphenator algorithm&mdash;I go thorough how to use this in great detail in <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a>.</p>
+                    <p class="hyp">I do this is in the vain hope that Chrome will one day support it. Chrome doesn&rsquo;t yet support this feature (Firefox and Edge do) so the line at the moment (if you are using Chrome) is entirely useless. To get round this problem (I want hyphenation) I use a third party JavaScript hyphenator algorithm&nbsp;&mdash;&nbsp;I go thorough how to use this in great detail in <a class="hlink nohyp utx" href="19-00-hyphens.html#js--000000">section&nbsp;19</a>.</p>
 
                     <p class="hyp">The second rule (<span class="code">section-std em</span>) is used to provide bold<sup>&dagger;1</sup> emphasis for a section of in-line text:</p>
 
@@ -832,7 +837,7 @@ Date          Issue        Author         Reason for Modification
                         <tr>
 <!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
 <!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">Historically, the <span class="code">&lt;em&gt;</span> element was used to provide italic emphasis&mdash;I rather confusingly re-tasked it to be bold emphasis, I thought (incorrectly as it happens) there would be more bold emphasis than italic and <span class="code">&lt;em&gt;</span> is shorter to type. I&rsquo;ve learned from my mistake, but as penance, I&rsquo;m living with it.</td>
+                            <td colspan="2" class="table-left">Historically, the <span class="code">&lt;em&gt;</span> element was used to provide italic emphasis&nbsp;&mdash;&nbsp;I rather confusingly re-tasked it to be bold emphasis, I thought (incorrectly as it happens) there would be more bold emphasis than italic and <span class="code">&lt;em&gt;</span> is shorter to type. I&rsquo;ve learned from my mistake, but as penance, I&rsquo;m living with it.</td>
                         </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -930,7 +935,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">It just puts some space between the sub-title row and the section proper (adds a bottom margin of 1&nbsp;rem&mdash;24&nbsp;pixels at the maximum size).</p>
+                    <p class="hyp">It just puts some space between the sub-title row and the section proper (adds a bottom margin of 1&nbsp;rem&nbsp;&mdash;&nbsp;24&nbsp;pixels at the maximum size).</p>
 
                     <p class="hyp">The next line is the left hand column (again just like <a class="hlink nohyp" href="08-03-columns.html#js--080300">&sect;&nbsp;8.3</a>), the left column (and the right column at the bottom) are empty:</p>
 
@@ -1306,7 +1311,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This means that the inline block elements will stack next to each other in a horizontal line (until they become too wide for the screen&mdash;<a class="hlink nohyp" href="06-04-box.html#js--060400">section&nbsp;6.4</a> explains how this works).</p>
+                    <p class="hyp">This means that the inline block elements will stack next to each other in a horizontal line (until they become too wide for the screen&nbsp;&mdash;&nbsp;<a class="hlink nohyp" href="06-00-box.html#js--000000">section&nbsp;6</a> explains how this works).</p>
 
                     <p class="hyp">Next comes the only difference between the classes, in <span class="code">sub-title-num-box</span> the width of the box is set to 20% of the column width:</p>
 
@@ -1462,9 +1467,9 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">I&rsquo;ve spent a long time talking about a section and so far all we&rsquo;ve got is a heading with a line above it (ok, it can be a thick line or a thin line&mdash;<span class="first-use">woohoo</span>). </p>
+                    <p class="hyp">I&rsquo;ve spent a long time talking about a section and so far all we&rsquo;ve got is a heading with a line above it (ok, it can be a thick line or a thin line&nbsp;&mdash;&nbsp;<span class="first-use">woohoo</span>). </p>
 
-                    <p class="hyp">The main point of having a section within a website is that is should tell us something&mdash;it needs some content and it needs somewhere to put that content.</p>
+                    <p class="hyp">The main point of having a section within a website is that it should tell us something&nbsp;&mdash;&nbsp;it needs some content and it needs somewhere to put that content.</p>
 
                     <p class="hyp">In the HTML for the section (<a class="xref js--sc-c10-02" href="#">Code 10.2</a>, reproduced below):</p>
 
@@ -1770,7 +1775,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The <span class="code">hyp</span> class doesn’t exist in the CSS; there is no <span class="code">.hyp</span> in <span class="code">style.css</span>.</p>
 
-                    <p class="hyp">This <span class="code">hyp</span> class is used by the third party Java script <span class="code">hyphenator.js</span>, this hyphenates the web page text on the fly when the page renders in a browser. Assigning the class <span class="code">hyp</span> to a paragraph tells <span class="code">hyphenator.js</span> that I want it to hyphenate that paragraph; and since I nearly always want to hyphenate text, it means that virtually all of my paragraphs start:</p>
+                    <p class="hyp">This <span class="code">hyp</span> class is used by the third party JavaScript <span class="code">hyphenator.js</span>, this hyphenates the web page text on the fly when the page renders in a browser. Assigning the class <span class="code">hyp</span> to a paragraph tells <span class="code">hyphenator.js</span> that I want it to hyphenate that paragraph; and since I nearly always want to hyphenate text, it means that virtually all of my paragraphs start:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE
@@ -1785,7 +1790,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I explain how to get, configure and use the hyphenator.js software at great length in <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a>. For the time being, just accept that all paragraphs in the main section content area are assigned the class <span class="code">hyp</span>.</p>
+                    <p class="hyp">I explain how to get, configure and use the <span class="code">hyphenator.js</span> software at great length in <a class="hlink nohyp utx" href="19-00-hyphens.html#js--000000">section&nbsp;19</a>. For the time being, just accept that all paragraphs in the main section content area are assigned the class <span class="code">hyp</span>.</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
@@ -2318,7 +2323,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">Finally, I apply formatting to the <span class="code">&lt;h2&gt;</span> heading in the <span class="code">aside-head</span> style. Where I use the sidebar to hold a heading, I made the decision that the heading would always be a <span class="code">&lt;h2&gt;</span> sub heading (I reserve the <span class="code">&lt;h1&gt;</span> heading for chapter titles, see <a class="hlink nohyp utx" href="#">&sect;&nbsp;xxx</a>). Again I do this with a descendent selector, and there is a bit of buggering about to go with it:</p>
+                    <p class="hyp">Finally, I apply formatting to the <span class="code">&lt;h2&gt;</span> heading in the <span class="code">aside-head</span> style. Where I use the sidebar to hold a heading, I made the decision that the heading would always be a <span class="code">&lt;h2&gt;</span> sub heading (I reserve the <span class="code">&lt;h1&gt;</span> heading for chapter titles, see <a class="hlink nohyp utx" href="11-04-header.html#js--110400">&sect;&nbsp;11.4</a>). Again I do this with a descendent selector, and there is a bit of buggering about to go with it:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
@@ -2378,7 +2383,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp"><span class="first-use">&ldquo;How can you have a negative margin?&rdquo;</span> you ask. Well you can, it simply moves the text up above its normal starting point (where it would be if the margin were zero). It&rsquo;s a useful technique.</p>
 
-                    <p class="hyp">I&rsquo;ve used it here because the <span class="code">&lt;h2&gt;</span> text in the side bar is bigger than the body text in the main section (1.3&nbsp;rem bigger), this means that, if I did nothing, the top of the <span class="code">&lt;h2&gt;</span> text and the main body text would line up, and since the <span class="code">&lt;h2&gt;</span> text is bigger its base line would be lower down the page than body text. Hence the negative top margin, it moves the <span class="code">&lt;h2&gt;</span> text up a bit until the baselines align with each other.</p>
+                    <p class="hyp">I&rsquo;ve used it here because the <span class="code">&lt;h2&gt;</span> text in the side bar is bigger than the body text in the main section (1.3&nbsp;rem bigger), this means that, if I did nothing, the top of the <span class="code">&lt;h2&gt;</span> text and the main body text would line up, and since the <span class="code">&lt;h2&gt;</span> text is bigger its base line would be lower down the page than the body text. Hence the negative top margin, it moves the <span class="code">&lt;h2&gt;</span> text up a bit until the baselines align with each other.</p>
 
                     <p class="hyp">Finally, the line spacing, this again is set to 140%.</p>
 

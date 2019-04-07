@@ -46,6 +46,11 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+07 Apr 2019   P15          M. Gledhill    Published (all existing sections
+                                          proofread and corrected)
+
+07 Apr 2019   d-P14.00.03  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 25 Mar 2019   d-P13.00.04e M. Gledhill    Standardisation corrections
@@ -174,7 +179,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -284,7 +289,7 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.3</span><span class="toc-lev3-text">JavaScript &amp; jQuery comments</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-060904" href="06-09-box.html#js--060904">
-                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&mdash;the downside</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev3-num">6.9.4</span><span class="toc-lev3-text">Comments&nbsp;&mdash;&nbsp;the downside</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-060905" href="06-09-box.html#js--060905">
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.5</span><span class="toc-lev3-text">Minimisation</span></div></a>
@@ -293,7 +298,7 @@ Date          Issue        Author         Reason for Modification
                             <div class="toc-lev"><span class="toc-lev3-num">6.9.6</span><span class="toc-lev3-text">Indentation</span></div></a>
                         </li>
 <!-- Level 2 -->        <li><a class="js--sc-061000" href="06-10-box.html#js--061000">
-                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&mdash;quick edits and shortcuts</span></div></a>
+                            <div class="toc-lev"><span class="toc-lev2-num">6.10</span><span class="toc-lev2-text">Brackets&nbsp;&mdash;&nbsp;quick edits and shortcuts</span></div></a>
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-061001" href="06-10-box.html#js--061001">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.1</span><span class="toc-lev3-text">Changing indent levels</span></div></a>
@@ -303,7 +308,16 @@ Date          Issue        Author         Reason for Modification
                         </li>
 <!-- Level 3 -->        <li><a class="js--sc-061003" href="06-10-box.html#js--061003">
                             <div class="toc-lev"><span class="toc-lev3-num">6.10.3</span><span class="toc-lev3-text">Quick edit</span></div></a>
-                            <br class="toc-pad">
+
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-061100" href="06-11-box.html#js--061100">
+                            <div class="toc-lev"><span class="toc-lev2-num">6.11</span><span class="toc-lev2-text">Special and reserved characters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061101" href="06-11-box.html#js--061101">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.1</span><span class="toc-lev3-text">HTML Character codes</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-061102" href="06-11-box.html#js--061102">
+                            <div class="toc-lev"><span class="toc-lev3-num">6.11.2</span><span class="toc-lev3-text">CSS and JavaScript character codes</span></div></a>
                         </li>
                     </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -352,7 +366,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">The box model is a standard approach to making websites, it allows website content (text, images, links &c.) to be located in &lsquo;boxes&rsquo; that are separate from each other.</p>
 
-                    <p class="hyp">The size of a box (height and width) can be specified exactly, allowing the page layout to be accurately controlled.</p>
+                    <p class="hyp">The size of a box (height and width) can be specified exactly and adjusted dynamically, allowing the page layout to be accurately controlled.</p>
 
                     <p class="hyp">In addition to the height and width, each box has three properties for each side of the box, these determine the spacing of boxes and elements within them (<a class="xref js--sc-f06-02" href="#">Figure&nbsp;6.2</a>):</p>
 
@@ -385,7 +399,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">This is the box model. It has one major problem: <span class="first-use">it doesn&rsquo;t work like you think it does</span>.</p>
 
-                    <p class="hyp">The default arrangement for a block element is that it is based on the dimensions of the content of the box (rather than the dimensions of the box itself). This is a pain in the arse (<span class="first-use">that&rsquo;s &ldquo;ass&rdquo; for our transatlantic colonies</span>), it means that the actual size of a box (the width or height) is as follows:</p>
+                    <p class="hyp">The default arrangement for a block element is that it is based on the dimensions of the content of the box (rather than the dimensions of the box itself). This is a pain in the arse <span class="first-use">(that&rsquo;s &ldquo;ass&rdquo; for our transatlantic colonies)</span>, it means that the actual size of a box (the width or height) is as follows:</p>
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -526,7 +540,7 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">We have made every block element on the web page behave in the way we want it to; i.e. we&rsquo;ve made the width and height properties define the width and height of the box, not the content&mdash;as specified in <a class="xref js--sc-e06-02" href="#">equation&nbsp;(6.2)</a>.</p>
+                    <p class="hyp">We have made every block element on the web page behave in the way we want it to; i.e. we&rsquo;ve made the width and height properties define the width and height of the box, not the content&nbsp;&mdash;&nbsp;as specified in <a class="xref js--sc-e06-02" href="#">equation&nbsp;(6.2)</a>.</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - INCIDENTAL TABLE (EN PASSANT)
@@ -559,7 +573,7 @@ Date          Issue        Author         Reason for Modification
                      </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I&rsquo;ve also set the default margins and padding (all of them: top, bottom, left and right) to zero (I don&rsquo;t have to specify a unit&mdash;rem, em, px or %&mdash;with a value of zero, they all do the same).</p>
+                    <p class="hyp">I&rsquo;ve also set the default margins and padding (all of them: top, bottom, left and right) to zero (I don&rsquo;t have to specify a unit, i.e. rem, em, px or %, with a value of zero, they all do the same).</p>
 
                     <p class="hyp">The reason for doing this is that if I don&rsquo;t specify a value for margin and padding, browsers have a habit of applying their own default values (and these are not all the same) so, I&rsquo;ve set the margins and padding to zero for every block element, this value can then be changed by adding another class to a particular element.</p>
 
