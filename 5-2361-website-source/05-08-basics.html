@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+04 Apr 2019   d-P14.00.02  M. Gledhill    Proofreading corrections
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 24 Mar 2019   d-P13.00.04d M. Gledhill    Standardisation corrections
@@ -174,7 +176,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P14-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P14.00.02-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -349,7 +351,7 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Classes (and IDs) allow individual HTML elements (e.g. paragraphs, headings) to have their own styles, for example, the first paragraph in our <span class="code">index.html</span> document could have one style and the second paragraph a completely different style.</p>
+                    <p class="hyp">Classes (and IDs) allow individual HTML elements (e.g. paragraphs, headings &amp;c.) to have their own styles, for example, the first paragraph in our <span class="code">index.html</span> document could have one style and the second paragraph a completely different style.</p>
 
                     <p class="hyp">Classes are extremely useful and extensively used within HTML and CSS websites.</p>
 
@@ -359,9 +361,9 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Classes can be allocated as required to any number of elements in an HTML document</p></li>
+                        <li><p class="hyp">Classes can be allocated as required to any number of elements in an HTML file</p></li>
 
-                        <li><p class="hyp">IDs can only be used once in a given HTML document</p></li>
+                        <li><p class="hyp">IDs can only be used once in a given HTML file</p></li>
 
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -381,12 +383,12 @@ Date          Issue        Author         Reason for Modification
                         <tr>
 <!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
 <!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">At this point I&rsquo;m probably going to get lots of emails telling me I&rsquo;ve missed the point and IDs are fundamental to my wellbeing; they will say things about specificity, browser compatibility and readability&mdash;maybe so, I just don&rsquo;t see it.</td>
+                            <td colspan="2" class="table-left">At this point I&rsquo;m probably going to get lots of emails telling me I&rsquo;ve missed the point and IDs are fundamental to my wellbeing; they will say things about specificity, browser compatibility and readability&nbsp;&mdash;&nbsp;maybe so, I just don&rsquo;t see it.</td>
                         </tr>
                         <tr>
                             <td class="table-left"><em></em></td>
 <!-- Add. para. below -->   <td class="table-left"></td>
-                            <td colspan="2" class="table-left"><span class="first-use">A note by the author 01 Feb 2017&mdash;Ok, I&rsquo;ve found a use for them; I use them to mark the code fragment tables and then use this ID to highlight certain lines in green (to show modified code). It&rsquo;s a peculiar situation and I explain how I didi it in <a class="hlink nohyp utx" href="#">section&nbsp;xxx</a></span></td>
+                            <td colspan="2" class="table-left"><span class="first-use">A note by the author 01 Feb 2017&nbsp;&mdash;&nbsp;Ok, I&rsquo;ve changed my mind, when I started adding slow scrolling I found a use for IDs (<a class="hlink nohyp utx" href="17-00-slowscroll.htm">&sect;&nbsp;17</a>)</span></td>
                         </tr>
 
                     </table>
@@ -518,7 +520,7 @@ p {
       NOTE - HANGING INDENT
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="note">                           <!-- Start of note            -->
-                        <li>When specifying a class in HTML, there is no leading period&mdash;just the name. This is because in HTML we are using the keyword class, in CSS the period indicates that what follows is a class name. In short, don&rsquo;t use the leading period in HTML.</li>
+                        <li>When specifying a class in HTML, there is no leading period&nbsp;&mdash;&nbsp;just the name. This is because in HTML we are using the keyword class, in CSS the period indicates that what follows is a class name. In short, don&rsquo;t use the leading period in HTML.</li>
                     </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -573,7 +575,7 @@ p {
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">IDs are defined with a preceding &lsquo;#&rsquo;. The <span class="code">index.html</span> file becomes:</p>
+                    <p class="hyp">IDs are defined with a preceding &lsquo;<span class="code">#</span>&rsquo;. The <span class="code">index.html</span> file becomes:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT DISPLAY - SINGLE LINE (SIMPLE DISPLAY)
@@ -684,7 +686,7 @@ p {
 
                     <p class="hyp">Classes, like styles in Word, should be named for what it means to the content it is styling rather than the style itself. </p>
 
-                    <p class="hyp">For example, where I use code keywords in the text (like <span class="code">&lt;!DOCTYPE HTML&gt;</span>), I use a specific class that changes the font to Triplicate and changes the colour of the text to blue. I could call the class <span class="code">.triplicate-blue</span>, but this would be naming the class for the styling it applies. However, if I were later to decided that I wanted code keywords to be in orange, I would have to rename the style (if it were to be accurate) and change every occurrence in the HTML (<span class="first-use">this rather defeats the point of CSS</span>).</p>
+                    <p class="hyp">For example, where I use code keywords in the text of this website (like <span class="code">&lt;!DOCTYPE HTML&gt;</span>), I use a specific class that changes the font to Triplicate and changes the colour of the text to blue. I could call the class <span class="code">.triplicate-blue</span>, but this would be naming the class for the styling it applies. However, if I were later to decided that I wanted code keywords to be in orange, I would have to rename the style (if it were to be accurate) and change every occurrence in the HTML (<span class="first-use">this rather defeats the point of CSS</span>).</p>
 
                     <p class="hyp">So I name the class for what it does to the content, in this case it indicates the text is a keyword for the HTML code. So I call the class <span class="code">.code</span>:</p>
 
