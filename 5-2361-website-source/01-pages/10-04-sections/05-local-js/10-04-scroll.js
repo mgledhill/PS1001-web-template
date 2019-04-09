@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          LOCAL SCROLL - JQUERY                          10-03-SCROLL.JS
+Title :          LOCAL SCROLL - JQUERY                          10-04-SCROLL.JS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -49,16 +49,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-27 Mar 2019   P14          M. Gledhill    Published
-
-27 Mar 2019   d-P13.00.04i M. Gledhill    Sections updated
-
-31 May 2017   P10          M. Gledhill    Migration to Git VCS
-                                          FIRST PUBLISHED COMMIT
-                                          Based on PS(LIVE-non VCS) P06.02
-
-                                          - .aside-revision class
-                                            name change (.aside-right-rev)
+08 Apr 2019   d-P15.10.01  M. Gledhill    Page created
 ---------------------------------------------------------------------------- */
 
 

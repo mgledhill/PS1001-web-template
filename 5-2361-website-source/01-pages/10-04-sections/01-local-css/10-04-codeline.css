@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            10-03-CODELINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            10-04-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -49,37 +49,81 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-27 Mar 2019   P14          M. Gledhill    Published
-
-27 Mar 2019   d-P13.00.04i M. Gledhill    Sections updated
-
-31 May 2017   P10          M. Gledhill    Migration to Git VCS
-                                          FIRST PUBLISHED COMMIT
-                                          Based on PS(LIVE-non VCS) P06.02
+08 Apr 2019   d-P15.10.01  M. Gledhill    Page created
 ---------------------------------------------------------------------------- */
 
 
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P14"; }
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 d-P15.10.01"; }
 
 
 /* ****************************************************************************
-   CODE FRAGMENT c10-02 - FORMATTING
+   ADJUST CODE FONT-SIZE
    ************************************************************************* */
-#js--c10-02 li:nth-child(20) {padding-left: 7.33rem;}
-#js--c10-02 li:nth-child(26) {padding-left: 5.85rem;}
-#js--c10-02 li:nth-child(34) {padding-left: 7.33rem;}
 
+
+
+
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10 - FORMATTING
+   ************************************************************************* */
+#js--c10-10 ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10 {font-size: 0.5rem}
+#js--c10-10 li:nth-child(24) {padding-left: 5.85rem;}
+#js--c10-10 li:nth-child(n+9):nth-child(-n+10) { background: #EAF1DD }
 /* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10a - FORMATTING
+   ************************************************************************* */
+#js--c10-10a ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10a {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10b - FORMATTING
+   ************************************************************************* */
+#js--c10-10b ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10b {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10c - FORMATTING
+   ************************************************************************* */
+#js--c10-10c ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10c {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10d - FORMATTING
+   ************************************************************************* */
+#js--c10-10d ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10d {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c10-10e - FORMATTING
+   ************************************************************************* */
+#js--c10-10e ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
+#js--c10-10e {font-size: 0.5rem}
+/* ************************************************************************* */
+
 
 /* ****************************************************************************
    CODE FRAGMENT c10-05 - FORMATTING
    ************************************************************************* */
-#js--c10-05 li:nth-child(19) {padding-left: 7.33rem;}
-#js--c10-05 li:nth-child(25) {padding-left: 5.85rem;}
-#js--c10-05 li:nth-child(33) {padding-left: 7.33rem;}
+#js--c10-05 li:nth-child(21) {padding-left: 7.33rem;}
+#js--c10-05 li:nth-child(27) {padding-left: 5.85rem;}
+#js--c10-05 li:nth-child(35) {padding-left: 7.33rem;}
 
 /* ************************************************************************* */
 
@@ -100,11 +144,11 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c10-06 - FORMATTING
    ************************************************************************* */
-#js--c10-06 li:nth-child(20) {padding-left: 7.33rem;}
-#js--c10-06 li:nth-child(26) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(28) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(30) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(36) {padding-left: 7.33rem;}
+#js--c10-06 li:nth-child(21) {padding-left: 7.33rem;}
+#js--c10-06 li:nth-child(27) {padding-left: 5.85rem;}
+#js--c10-06 li:nth-child(29) {padding-left: 5.85rem;}
+#js--c10-06 li:nth-child(31) {padding-left: 5.85rem;}
+#js--c10-06 li:nth-child(37) {padding-left: 7.33rem;}
 
 /* ************************************************************************* */
 
@@ -124,12 +168,12 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    CODE FRAGMENT c10-09 - FORMATTING
    ************************************************************************* */
-#js--c10-09 li:nth-child(22) {padding-left: 5.85rem;}
-#js--c10-09 li:nth-child(24) {padding-left: 5.85rem;}
-#js--c10-09 li:nth-child(26) {padding-left: 5.85rem;}
+#js--c10-09 li:nth-child(23) {padding-left: 5.85rem;}
+#js--c10-09 li:nth-child(25) {padding-left: 5.85rem;}
+#js--c10-09 li:nth-child(27) {padding-left: 5.85rem;}
 
-#js--c10-09 li:nth-child(18) { background: #EAF1DD }
-#js--c10-09 li:nth-child(30) { background: #EAF1DD }
+#js--c10-09 li:nth-child(19) { background: #EAF1DD }
+#js--c10-09 li:nth-child(31) { background: #EAF1DD }
 
 /* ************************************************************************* */
 
