@@ -1,0 +1,1112 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="How the website template uses section headings">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           10-08-SECTIONS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/10-08-sections/05-local-js/10-08-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/10-08-sections/01-local-css/10-08-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Web template section headings | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="10-07-sections.html#js--100700"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="09-00-fonts.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="10-09-sections.html#js--100900"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P15.10.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>10</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">10</span>Body text, sections and headings</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 10. BODY TEXT, SECTIONS AND HEADINGS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-100000" href="10-00-sections.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">10</span><span class="toc-lev1-text">Body text, sections and headings</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-100100" href="10-01-sections.html#js--100100">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.1</span><span class="toc-lev2-text">Responsive body text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100101" href="10-01-sections.html#js--100101">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.1</span><span class="toc-lev3-text">Changing the body text point size (breakpoints)</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100200" href="10-02-sections.html#js--100200">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.2</span><span class="toc-lev2-text">Sections, asides and other alternatives to &lt;div&gt;</span></div></a>
+                        </li>
+<!-- Level 3 -->         <li><a class="js--sc-100201" href="10-02-sections.html#js--100201">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.1</span><span class="toc-lev3-text">The <span class="code">&lt;section&gt;</span> element</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100300" href="10-03-sections.html#js--100300">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.3</span><span class="toc-lev2-text">A standard section</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100301" href="10-03-sections.html#js--100301">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.1</span><span class="toc-lev3-text">The <span class="code">section-std</span> class</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100302" href="10-03-sections.html#js--100302">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.2</span><span class="toc-lev3-text">The <span class="code">sub-title-row</span> class</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100303" href="10-03-sections.html#js--100303">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.3</span><span class="toc-lev3-text">Putting content into a section</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100304" href="10-03-sections.html#js--100304">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.4</span><span class="toc-lev3-text">The central content column</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100305" href="10-03-sections.html#js--100305">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.5</span><span class="toc-lev3-text">Left and right asides</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100306" href="10-03-sections.html#js--100306">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.6</span><span class="toc-lev3-text">Making the asides responsive</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100307" href="10-03-sections.html#js--100307">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.7</span><span class="toc-lev3-text">What if I don’t want to use sidebars?</span></div></a>
+                         </li>
+<!-- Level 2 -->        <li><a class="js--sc-100400" href="10-04-sections.html#js--100400">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.4</span><span class="toc-lev2-text">A lead-in section</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100500" href="10-05-sections.html#js--100500">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.5</span><span class="toc-lev2-text">A subsection</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100600" href="10-06-sections.html#js--100600">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.6</span><span class="toc-lev2-text">An inline section</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100700" href="10-07-sections.html#js--100700">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.7</span><span class="toc-lev2-text">Additional section rows</span></div></a>
+                        <br class="top-pad">
+                       <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100800" href="10-08-sections.html#js--100800">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.8</span><span class="toc-lev2-text">Sections and headings</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100801" href="10-08-sections.html#js--100801">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.1</span><span class="toc-lev3-text">The <span class="code">&lt;h1&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100802" href="10-08-sections.html#js--100802">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.2</span><span class="toc-lev3-text">The <span class="code">&lt;h2&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100803" href="10-08-sections.html#js--100803">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.3</span><span class="toc-lev3-text">The <span class="code">&lt;h3&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100804" href="10-08-sections.html#js--100804">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.4</span><span class="toc-lev3-text">The <span class="code">&lt;h4&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100805" href="10-08-sections.html#js--100805">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.5</span><span class="toc-lev3-text">The <span class="code">&lt;h5&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100806" href="10-08-sections.html#js--100806">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.6</span><span class="toc-lev3-text">The <span class="code">&lt;h6&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100807" href="10-08-sections.html#js--100807">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.7</span><span class="toc-lev3-text">Headings: a summary</span></div></a>
+                         </li>
+<!-- Level 2 -->        <li><a class="js--sc-100900" href="10-09-sections.html#js--100900">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.9</span><span class="toc-lev2-text">Inline body text styles</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100901" href="10-09-sections.html#js--100901">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.1</span><span class="toc-lev3-text">Inline style  <span class="code">.all-caps</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100902" href="10-09-sections.html#js--100902">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.2</span><span class="toc-lev3-text">Inline style  <span class="code">.code</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100903" href="10-09-sections.html#js--100903">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.3</span><span class="toc-lev3-text">Inline style  <span class="code">&nbsp;em</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100904" href="10-09-sections.html#js--100904">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.4</span><span class="toc-lev3-text">Inline style  <span class="code">.first-use</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100905" href="10-09-sections.html#js--100905">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.5</span><span class="toc-lev3-text">Inline style  <span class="code">.index</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100906" href="10-09-sections.html#js--100906">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.6</span><span class="toc-lev3-text">Inline style  <span class="code">.menu</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100907" href="10-09-sections.html#js--100907">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.7</span><span class="toc-lev3-text">Inline style  <span class="code">.mono</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100908" href="10-09-sections.html#js--100908">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.8</span><span class="toc-lev3-text">Inline style  <span class="code">.notice</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100909" href="10-09-sections.html#js--100909">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.9</span><span class="toc-lev3-text">Inline style  <span class="code">.red</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100910" href="10-09-sections.html#js--100910">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.10</span><span class="toc-lev3-text">Inline style  <span class="code">.sans</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100911" href="10-09-sections.html#js--100911">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.11</span><span class="toc-lev3-text">Inline style  <span class="code">.sans-b</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100912" href="10-09-sections.html#js--100912">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.12</span><span class="toc-lev3-text">Inline style  <span class="code">.serif</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100913" href="10-09-sections.html#js--100913">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.13</span><span class="toc-lev3-text">Inline style  <span class="code">.serif-b</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100914" href="10-09-sections.html#js--100914">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.14</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-ns</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100915" href="10-09-sections.html#js--100915">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.15</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-s</span></span></div></a>
+                         </li>
+                    </ul>
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 10.8 AN INLINE SECTION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100800">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>10.8</h2></div>
+                 <div class="sub-title-text-box"><h2>Additional section rows</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is just a summary of the headings mentioned in the previous sections; it shows how I&rsquo;ve used the <span class="code">&lt;h1&gt;…&lt;h6&gt;</span> heading elements in the different types of <span class="code">&lt;section&gt;</span> elements: lead-in, section, subsection and inline section</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.1 THE H1 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100801">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h1&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->                    <p class="hyp"></p>
+
+                    <p class="hyp">I haven&rsquo;t discussed the <span class="code">&lt;h1&gt;</span> element, if you remember, the <span class="code">&lt;section&gt;</span> elements start with the <span class="code">&lt;h2&gt;</span> heading element and progress from there to the <span class="code">&lt;h6&gt;</span> element&nbsp;&mdash;&nbsp;I missed out the <span class="code">&lt;h1&gt;</span> heading altogether.</p>
+
+                    <p class="hyp">The <span class="code">&lt;h1&gt;</span> heading is used to give the chapter heading <span class="first-use">(we&rsquo;ve only looked at sections so far)</span>. The chapter heading appears at the top of each web page</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-25">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-25.png" data-lightbox="fig-set" data-title="Figure 10.25 - Chapter heading">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-25.png" alt="Figure 10.25 - Chapter heading">
+                            </a>
+                            <figcaption>Figure 10.25 &emsp; Chapter heading</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve highlighted it in <a class="xref js--sc-f10-25" href="#">Figure&nbsp;10.25</a>.</p>
+
+                    <p class="hyp">There is only one <span class="code">&lt;h1&gt;</span> heading on a page<sup>&dagger;1</sup> and this is always the chapter number and chapter heading text.</p>
+
+                    <p class="hyp">Chapter numbers are always in the format XX; they do not have a decimal point. Sections have the format XX.YY where XX is the chapter number and YY the section number within that chapter, subsections take this one step further with the format XX.YY.ZZ where XX and YY are the same chapter and section number, ZZ being the subsection number within the section.</p>
+
+                    <p class="hyp">The <span class="code">&lt;h1&gt;</span> heading forms part of the <span class="code">&lt;header&gt;</span> semantic element and I discuss this further in <a class="hlink nohyp" href="11-00-header.html#js--000000">section&nbsp;11</a>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Prior to HTML&nbsp;5 and CSS&nbsp;3, it was one of the cardinal rules of HTML that there could be only one <span class="code">&lt;h1&gt;</span> level heading. Additionally, the rule prescribed that this singular <span class="code">&lt;h1&gt;</span> heading should denote the primary subject matter of the page. With HTML&nbsp;5 and CSS&nbsp;3 this rule was relaxed and each <span class="code">&lt;section&gt;</span> semantic element could have its own &lt;h1&gt; heading.</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">In terms of this template, I use a chapter, section, subsection hierarchy that lends itself to the old fashioned way of doing things, so I stick to the old rule of just one <span class="code">&lt;h1&gt;</span> heading per page.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.2 THE H2 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100802">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.2</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h2&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">&lt;h2&gt;</span> heading has two uses, first (and mainly) as the heading for a standard section (highlighted below):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-26">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-26.png" data-lightbox="fig-set" data-title="Figure 10.26 - Standard section h2 heading">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-26.png" alt="Figure 10.26 - Standard section h2 heading">
+                            </a>
+                        <figcaption>Figure 10.26 &emsp; Standard section&nbsp;&mdash;&nbsp;<span class="code">&lt;h2&gt;</span> heading</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It can also be used as the sidebar title for a lead-in section:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-27">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-27.png" data-lightbox="fig-set" data-title="Figure 10.27 - Standard section h2 sidebar  heading">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-27.png" alt="Figure 10.27 - Standard section h2 sidebar  heading">
+                            </a>
+                        <figcaption>Figure 10.27 &emsp; Standard section&nbsp;&mdash;&nbsp;<span class="code">&lt;h2&gt;</span> sidebar  heading</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s look at the code behind the &lt;h2&gt; heading, this is defined near the start of the style.css file and looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c10-14">h1, h2, h3, h4, h5, h6 {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* set standard headings */
+&nbsp; &nbsp; font-family: 'conc-t3-r';
+&nbsp; &nbsp; font-weight: normal;
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 100%
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 10.14 &emsp; CSS classes for the headings</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is fairly straight forward stuff, just fonts and sizes really.</p>
+
+                    <p class="hyp">Firstly, all the headings <span class="code">&lt;h1&gt;…&lt;h6&gt;</span> are made identical; they all use the sans serif Concourse font: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - MULIPLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-family: 'conc-t3-r';
+&nbsp; &nbsp; font-weight: normal;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next line just makes sure that no embed font weights are used (there aren&rsquo;t any in these fonts, see <a class="hlink" href="09-03-fonts.html#js--090300">&sect;&nbsp;9.3</a>)</p>
+
+                    <p class="hyp">Next I set the font to use the British stylistic set:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-feature-settings: "ss02";</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Finally, I set the font size to be identical to the html element size (i.e. 24&nbsp;pixels that is responsive, reducing to 12&nbsp;pixels at a browser width of 520&nbsp;px, see <a class="hlink nohyp" href="10-01-sections.html#js--100101">&sect;&nbsp;10.1.1</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-size: 100%</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This last line is important, it imbues the headings with the responsive aspects of the <span class="code">html </span>text; and while I will subsequently change the font-size (the headings are generally bigger than the <span class="code">html</span> text), they will just be a scaled version of the <span class="code">html</span> text font size (I use the rem unit, and this is always relative to the <span class="code">html</span> text size). </p>
+
+                    <p class="hyp">Thus as the browser width becomes narrower, the headings will become smaller along with the body text, but will always maintain the same relative size difference.</p>
+
+                    <p class="hyp">The next question is <span class="first-use">&ldquo;if I&rsquo;ve set the <span class="code">&lt;h2&gt;</span> font-size to be the same as the html body text, why is it bigger in the section headings?&rdquo;</span></p>
+
+                    <p class="hyp">The answer is given in <a class="hlink nohyp" href="10-03-sections.html#js--100302b">the section title</a>, the <span class="code">&lt;h2&gt;</span> heading is embedded in either the <span class="code">sub-title-num-box</span> class (for the heading number) or the <span class="code">sub-title-text-box</span> class (for the heading text); in either case it is these classes that specify the font-size (<a class="hlink nohyp" href="10-03-sections.html#js--c10-04">Code 10.4</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - MULIPLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.sub-title-num-box {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* container for sub-title number */
+&nbsp; &nbsp;. . .
+&nbsp; &nbsp; font-size: 1.9rem;
+&nbsp; &nbsp; color: #404030;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The font size is set to 1.9&nbsp;rem and colour to the off grey <span class="code">#404030</span> (this is also true of <span class="code">sub-title-text-box</span>).</p>
+
+                    <p class="hyp">By embedding the <span class="code">&lt;h2&gt;</span> within these classes, (in both cases the <span class="code">&lt;h2&gt;</span> element is a child of the class) it adopts the property of the class so the font size becomes 190% of the body text size.</p>
+
+                    <p class="hyp">At this point you&rsquo;ve probably gone back through your notes and are about to point out that I&rsquo;m a complete idiot and don&rsquo;t know what I&rsquo;m talking about <span class="first-use">(I generally accept this type of criticism with the self-deprecating wisdom taught to all Englishmen at school)</span>.</p>
+
+                    <p class="hyp"><span class="first-use">&ldquo;Look&rdquo;</span> you will say <span class="first-use">&ldquo;in <a class="hlink nohyp" href="05-06-basics.html#js--050601">section&nbsp;5.6.1</a> you said that later properties override earlier properties and here the <span class="code">&lt;h2&gt;</span> tag already has a font size property and it is applied later than the sub-title classes&rdquo;</span></p>
+
+                    <p class="hyp">And you&rsquo;re right, but you must also remember that despite our charming self-deprecation, Englishmen are also taught to rule<sup>&dagger;1</sup> &nbsp;&mdash;&nbsp;and whilst you are right, <span class="first-use">so am I</span>. The <span class="code">&lt;h2&gt;</span> font size declaration is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-size: 100%</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Notice here that I&rsquo;ve specified the font size as a percentage (%) not as a rem. This is important; when I specify the size as a percentage it means that the text will be 100% of the text size of the parent element. In this case the parent element is either the <span class="code">sub-title-num-box</span> or <span class="code">sub-title-text-box</span> class and in both classes I&rsquo;ve set the font size to be 1.9 rem. This leads to a bit of a chain (I&rsquo;m assuming the browser width isn&rsquo;t triggering responsive adjustments):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">The <span class="code">html</span> class specifies that all text has a font size of 24&nbsp;px </p></li>
+
+                        <li><p class="hyp"><span class="code">sub-title-text</span>/<span class="code">num-box</span> sets its text to be 1.9 rem <br>(1.9 × the <span class="code">html</span> font size = 45&nbsp;px)</p></li>
+
+                        <li><p class="hyp">The <span class="code">h2</span> class specifies that the font size is 100% of the parent elements font size (that is 100% of the <span class="code">sub-title-text</span>/<span class="code">num-box</span> font size) so it remains 45&nbsp;px</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If I&rsquo;d set the <span class="code">h2</span> font size to be 1 rem, then the <span class="code">sub-title-text</span>/<span class="code">num-box</span> classes could not have changed it.</p>
+
+                    <p class="hyp">When the <span class="code">&lt;h2&gt;</span> heading is used in the sidebar, there are some other properties that have to be changed, the main one being the font family, the sidebar <span class="code">&lt;h2&gt;</span> heading uses the Equity serif font (rather than the Concourse font); these changes are made specifically in <span class="code">.aside-head h2</span> descendent class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - MULIPLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.aside-head h2 {
+&nbsp; &nbsp; font-family: "eqty-ta-bi";
+&nbsp; &nbsp; font-size: 1.3rem;
+&nbsp; &nbsp; margin-top: -0.45rem;
+&nbsp; &nbsp; line-height: 1.40;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Rather than repeat myself, I refer you to <a class="hlink nohyp" href="10-03-sections.html#js--100305c">the aside heading style</a> section.</p>
+
+                    <p class="hyp"></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left"><a class="hlink nohyp" href="https://www.youtube.com/watch?v=Y2iLA3h_u60">&ldquo;Rule, Britannia&rdquo;</a> the song says. The comma is important; it&rsquo;s not an observation, it&rsquo;s an instruction (from God, or at least from <a class="hlink nohyp" href="https://en.wikipedia.org/wiki/Rule,_Britannia!">James Thomson</a>). We&rsquo;re supposed to rule.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.3 THE H3 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100803">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.3</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h3&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">&lt;h3&gt;</span> heading is used for subsections:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-28">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-28.png" data-lightbox="fig-set" data-title="Figure 10.28 - Subsection h3 heading">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-28.png" alt="Figure 10.28 - Subsection h3 heading">
+                            </a>
+                            <figcaption>Figure 10.28 &emsp; Subsection <span class="code">&lt;h3&gt;</span> heading</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">&lt;h3&gt;</span> heading is almost identical to the <span class="code">&lt;h2&gt;</span> standard section heading; in fact they start off being identical with the declaration in <a class="xref js--sc-c10-14" href="#">Code 10.14</a>. However, this is qualified with the following CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">h3 { margin-top: 5rem; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This just adds more white space above the heading, I&rsquo;ve shown the <span class="code">&lt;h2&gt;</span> and <span class="code">&lt;h3&gt;</span> headings side-by-side for comparison here (the margins are in purple):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-29">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-29.png" data-lightbox="fig-set" data-title="Figure 10.29 - Standard section h2 and h3 heading margin differences">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-29.png" alt="Figure 10.29 - Standard section h2 and h3 heading margin differences">
+                            </a>
+                        <figcaption>Figure 10.29 &emsp; Standard section&nbsp;&mdash;&nbsp;<span class="code">&lt;h2&gt;</span> and <span class="code">&lt;h3&gt;</span> heading margin differences</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">&lt;h3&gt;</span> heading needs a bigger margin because it doesn&rsquo;t have an over-line (which in the case of the <span class="code">&lt;h2&gt;</span> heading carries the margin).</p>
+
+                    <p class="hyp">The two heading are designed to have the same distance between the preceding section and the heading, this can be seen in <a class="xref js--sc-f10-29" href="#">Figure&nbsp;10.29</a>. The difference between the section and the subsection headings is that there is no line above the subsection heading&nbsp;&mdash;&nbsp;this is done to make the subsection inferior to the section</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.4 THE H4 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100804">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.4</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h4&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">&lt;h4&gt;</span> hheading is used for in-line sections:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-30">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-30.png" data-lightbox="fig-set" data-title="Figure 10.30 - Inline section h4 heading">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-30.png" alt="Figure 10.30 - Inline section h4 heading">
+                            </a>
+                            <figcaption>Figure 10.30 &emsp; Inline section <span class="code">&lt;h4&gt;</span> heading</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">&lt;h4&gt;</span> heading is almost identical to the <span class="code">&lt;h3&gt;</span> subsection heading; they start off being identical with the declaration in <a class="xref js--sc-c10-14" href="#">Code 10.14</a>. However, this is qualified with the following CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">h4, h5 { margin-top: 2rem; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This again adds white space above the heading, but not as much as the <span class="code">&lt;h3&gt;</span> heading (the idea being that in-line sections are inferior to the subsections). To demonstrate the difference I&rsquo;ve shown the <span class="code">&lt;h4&gt;</span> and <span class="code">&lt;h3&gt;</span> headings side-by-side for comparison here (the margins are in purple):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-31">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-31.png" data-lightbox="fig-set" data-title="Figure 10.31 - Standard section h4 and h3 heading margin differences">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-31.png" alt="Figure 10.31 - Standard section h4 and h3 heading margin differences">
+                            </a>
+                        <figcaption>Figure 10.31 &emsp; Standard section&nbsp;&mdash;&nbsp;<span class="code">&lt;h4&gt;</span> left and <span class="code">&lt;h3&gt;</span> right &mdash; heading margin differences</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">&lt;h3&gt;</span> heading needs a bigger margin because it doesn&rsquo;t have an over-line (which in the case of the <span class="code">&lt;h2&gt;</span> heading carries the margin).</p>
+
+                    <p class="hyp">The two heading are designed to have the same distance between the preceding section and the heading, this can be seen in <a class="xref js--sc-f10-29" href="#">Figure&nbsp;10.29</a>. The difference between the section and the subsection headings is that there is no line above the subsection heading&nbsp;&mdash;&nbsp;this is done to make the subsection inferior to the section</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.5 THE H5 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100805">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.5</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h5&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This one&rsquo;s easy, I don&rsquo;t use it. It has exactly the same settings as the <span class="code">&lt;h4&gt;</span> heading, but it doesn&rsquo;t appear in the HTML.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.6 THE H6 HEADING ELEMENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100806">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.6</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">&lt;h5&gt;</span> heading element</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the invisible heading used for lead-in sections. Inline sections look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-32">
+                            <a href="01-pages/10-08-sections/02-images/fig-10-32.png" data-lightbox="fig-set" data-title="Figure 10.32 - h6 invisible heading used in lead-in section headings">
+                                <img src="01-pages/10-08-sections/02-images/fig-10-32.png" alt="Figure 10.32 - h6 invisible heading used in lead-in section headings">
+                            </a>
+                        <figcaption>Figure 10.32 &emsp; <span class="code">&lt;h6&gt;</span> &mdash; invisible heading used in lead-in section headings</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve already explained how this works, see <a class="hlink nohyp" href="10-04-sections.html#js--100400">section&nbsp;10.4</a>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.8.7 HEADINGS: A SUMMARY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100807">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.8.7</h3></div>
+                    <div class="sub-title-text-box"><h3>Headings: a summary</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t10-03">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 14.5%">Heading</th>
+                            <th class="table-cent" style="width: 28%">Used for</th>
+                            <th class="table-left" style="width: 30%">Apperance</th>
+                            <th class="table-cent" style="width: 27.5%">Over-line</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h1</td>
+                            <td class="table-cent">Chapter headings</td>
+                            <td class="table-left">Very large chapter number with smaller heading text</td>
+                            <td class="table-cent">No</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h2</td>
+                            <td class="table-cent">Standard section</td>
+                            <td class="table-left">Large chapter number with same sized heading text</td>
+                            <td class="table-cent">Yes, thick, dark grey line</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h2</td>
+                            <td class="table-cent">Lead-in sidebar</td>
+                            <td class="table-left">Bold and italic serif font used in the sidebar area of Lead-in sections</td>
+                            <td class="table-cent">No</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h3</td>
+                            <td class="table-cent">Subsection</td>
+                            <td class="table-left">Large chapter number with same sized heading text</td>
+                            <td class="table-cent">No</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h4</td>
+                            <td class="table-cent">Inline section</td>
+                            <td class="table-left">Large chapter number with same sized heading text</td>
+                            <td class="table-cent">No, and has less whitespace above it</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h5</td>
+                            <td class="table-cent">Not used</td>
+                            <td class="table-left">Identical to h4</td>
+                            <td class="table-cent"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">h6</td>
+                            <td class="table-cent">Lead-in section</td>
+                            <td class="table-left">Not visible</td>
+                            <td class="table-cent">Yes, thin, light grey line</td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 10.3 &emsp; Headings and their usage</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="10-07-sections.html#js--100700">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="10-09-sections.html#js--100900">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

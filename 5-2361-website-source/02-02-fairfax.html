@@ -298,48 +298,48 @@ Date          Issue        Author         Reason for Modification
      SECTION 2.2 - AN OVERVIEW OF THE CONTROL SYSTEM
      ***********************************************************************-->
 
-        <section class="section-std" id="js--020200">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>2.2</h2></div>
-                    <div class="sub-title-text-box"><h2>An overview of the control system</h2></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row      -->
+<section class="section-std" id="js--020200">           <!-- Start of section         -->
+    <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+        <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+        <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+            <div class="sub-title-overline"></div>      <!-- Overline                 -->
+         <div class="sub-title-num-box"><h2>2.2</h2></div>
+            <div class="sub-title-text-box"><h2>An overview of the control system</h2></div>
+        </div>                                          <!-- End of subtitle column   -->
+        <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+    </div>                                              <!-- End of Subtitle row      -->
 
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
+    <div class="rg-row">                                <!-- Start of section content -->
+        <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+        <!--     <aside class="aside-left">                  Start of left side bar   -->
+        <!--         <p></p>                                 Side bar content         -->
+        <!--     </aside>                                    End of left side bar     -->
+        </div>                                          <!-- End of left column       -->
 
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-                    <p class="hyp"><span class="all-caps">The water treatment works</span> will be controlled by a <span class="first-use">Siemens Simatic Process Control System</span> (PCS&nbsp;7 system). This system has four basic components, the <span class="first-use">Automation Systems</span> (AS), the <span class="first-use">Operator Station Server</span> (OSS), the <span class="first-use">Operator Station clients</span> (OSC) and the <span class="first-use">Engineering Station</span> (ES).</p>
+        <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+            <p class="hyp"><span class="all-caps">The water treatment works</span> will be controlled by a <span class="first-use">Siemens Simatic Process Control System</span> (PCS&nbsp;7 system). This system has four basic components, the <span class="first-use">Automation Systems</span> (AS), the <span class="first-use">Operator Station Server</span> (OSS), the <span class="first-use">Operator Station clients</span> (OSC) and the <span class="first-use">Engineering Station</span> (ES).</p>
 
-                    <p class="hyp">The Automation Systems interface directly with the plant and control the plant devices (motors, valves &c.) and instrumentation (flow, level, pressure sensors etc.).</p>
+            <p class="hyp">The Automation Systems interface directly with the plant and control the plant devices (motors, valves &c.) and instrumentation (flow, level, pressure sensors etc.).</p>
 
-                    <p class="hyp">The Operator Station Server (hereafter just the Server or OSS) interfaces with the Automation Systems and collates the data from those systems (instrument reading, device status, events etc.).</p>
+            <p class="hyp">The Operator Station Server (hereafter just the Server or OSS) interfaces with the Automation Systems and collates the data from those systems (instrument reading, device status, events etc.).</p>
 
-                    <p class="hyp">The Server will also identify alarm conditions within the process itself, within devices and within instrumentation. These conditions along with critical plant data will be logged and stored for offline analysis.</p>
+            <p class="hyp">The Server will also identify alarm conditions within the process itself, within devices and within instrumentation. These conditions along with critical plant data will be logged and stored for offline analysis.</p>
 
-                    <p class="hyp">The Operator Station Clients provide the operator interface to the plant&nbsp;&mdash;&nbsp;allowing the operator to start and stop automated processes, change set-points, take manual control of plant devices and generally operate the plant. The OSCs also provides a visual representation of the plant, allowing the operator to monitor the state of the plant devices (stopped, running, opened, closed, in fault etc.) and react to anomalous conditions within the plant. Each OSC communicates with the Server, reading the data to be displayed and writing operator instructions to the system. </p>
+            <p class="hyp">The Operator Station Clients provide the operator interface to the plant&nbsp;&mdash;&nbsp;allowing the operator to start and stop automated processes, change set-points, take manual control of plant devices and generally operate the plant. The OSCs also provides a visual representation of the plant, allowing the operator to monitor the state of the plant devices (stopped, running, opened, closed, in fault etc.) and react to anomalous conditions within the plant. Each OSC communicates with the Server, reading the data to be displayed and writing operator instructions to the system. </p>
 
-                    <p class="hyp">The Engineering Station is used to configure (programme) the system.</p>
+            <p class="hyp">The Engineering Station is used to configure (programme) the system.</p>
 
-                    <p class="hyp">PCS&nbsp;7 has its own standard library of objects (referred to as the <span class="first-use">Advanced Process Library</span> or APL) and this library will be used as the basis for all devices, instrumentation and graphical representations. </p>
+            <p class="hyp">PCS&nbsp;7 has its own standard library of objects (referred to as the <span class="first-use">Advanced Process Library</span> or APL) and this library will be used as the basis for all devices, instrumentation and graphical representations. </p>
 
-                </div>                                          <!-- End of section text      -->
+        </div>                                          <!-- End of section text      -->
 
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
+        <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+        <!--     <aside class="aside-right">                 Start of right side bar  -->
+        <!--         <p></p>                                 Side bar content         -->
+        <!--     </aside>                                    End of left side bar     -->
+        </div>                                          <!-- End of right column      -->
+    </div>                                              <!-- End of section content   -->
+</section>                                              <!-- End of section           -->
 <!-- ========================================================================== [WP END]      -->
 
 

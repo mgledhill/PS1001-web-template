@@ -100,6 +100,10 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+10 Apr 2019   d-P15.10.02  M. Gledhill    Margin added above figcaption and
+                                          code-caption
+                                          .sans-b font changed to conc-t4-b
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 19 Mar 2019   d-P13.00.02  M. Gledhill    .sans-b style added
@@ -151,7 +155,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:before { content: "style.css\00a0\2014\00a0 P14"; }
+.aside-right-rev:before { content: "style.css\00a0\2014\00a0 d-P15.10.02"; }
 
 
 
@@ -1446,9 +1450,12 @@ a:active { color: #404030; }
 
 .sans { font-family: "conc-t3-r"; }         /* TEXT STYLE - sans serif font (override) */
 
-.sans-b { font-family: "conc-t4-r"; }       /* TEXT STYLE - sans serif font bold (override) */
+.sans-b { font-family: "conc-t4-b"; }       /* TEXT STYLE - sans serif font bold (override) */
 
-.index { font-family: "conc-i3-r"; }        /* TEXT STYLE - index font (override) */
+.index {                                    /* TEXT STYLE - index font (override) */
+    font-family: "conc-i3-r";
+    font-feature-settings: "ss00";
+}
 
 .mono { font-family: "trip-t4-r"; }         /* TEXT STYLE - monospaced font (override) */
 
@@ -1663,7 +1670,10 @@ a:active { color: #404030; }
  }
 .fig-col:first-child { margin-left: 0; } /* remove left margin from first column */
 
-figcaption { margin-bottom: 1.2rem; }
+figcaption {
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem
+}
 
 @media only screen and (max-width: 520px) { .fig-row{ width: 100%; font-size: 0.8rem;} }
 
@@ -2185,7 +2195,7 @@ tr.in-no-border th {                        /* incidental table no-bottom border
     text-align: center;
     color: #404030;
     padding-top: 0.2rem;
-    margin: 0 auto 1rem 0;
+    margin: 0.5rem auto 1rem 0;
     border-collapse: collapse;
 }
 

@@ -60,15 +60,6 @@ Date          Issue        Author         Reason for Modification
 
 
 /* ****************************************************************************
-   ADJUST CODE FONT-SIZE
-   ************************************************************************* */
-
-
-
-
-
-
-/* ****************************************************************************
    CODE FRAGMENT c10-10 - FORMATTING
    ************************************************************************* */
 #js--c10-10 ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
@@ -115,73 +106,4 @@ Date          Issue        Author         Reason for Modification
    ************************************************************************* */
 #js--c10-10e ol.linenums {color: transparent; margin-left: -2rem}                                   /* make numbering invisible */
 #js--c10-10e {font-size: 0.5rem}
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-05 - FORMATTING
-   ************************************************************************* */
-#js--c10-05 li:nth-child(21) {padding-left: 7.33rem;}
-#js--c10-05 li:nth-child(27) {padding-left: 5.85rem;}
-#js--c10-05 li:nth-child(35) {padding-left: 7.33rem;}
-
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-05a - FORMATTING
-   ************************************************************************* */
-#js--c10-05a li:nth-child(4) {padding-left: 7.33rem;}
-#js--c10-05a li:nth-child(10) {padding-left: 5.85rem;}
-#js--c10-05a li:nth-child(18) {padding-left: 7.33rem;}
-#js--c10-05a li:nth-child(n+2):nth-child(-n+6) { background: #F2DBDB }
-#js--c10-05a li:nth-child(n+8):nth-child(-n+14) { background: #EAF1DD }
-#js--c10-05a li:nth-child(n+16):nth-child(-n+20) { background: #DBE5F1 }
-
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-06 - FORMATTING
-   ************************************************************************* */
-#js--c10-06 li:nth-child(21) {padding-left: 7.33rem;}
-#js--c10-06 li:nth-child(27) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(29) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(31) {padding-left: 5.85rem;}
-#js--c10-06 li:nth-child(37) {padding-left: 7.33rem;}
-
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-06a - FORMATTING
-   ************************************************************************* */
-#js--c10-06a ol.linenums {color: transparent;}                                   /* make numbering invisible */
-#js--c10-06a li:nth-child(4) {padding-left: 7.6rem;}
-#js--c10-06a li:nth-child(14) {padding-left: 7.6rem;}
-#js--c10-06a li:nth-child(n+2):nth-child(-n+6) { background: #F2DBDB }
-#js--c10-06a li:nth-child(n+12):nth-child(-n+16) { background: #DBE5F1 }
-
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-09 - FORMATTING
-   ************************************************************************* */
-#js--c10-09 li:nth-child(23) {padding-left: 5.85rem;}
-#js--c10-09 li:nth-child(25) {padding-left: 5.85rem;}
-#js--c10-09 li:nth-child(27) {padding-left: 5.85rem;}
-
-#js--c10-09 li:nth-child(19) { background: #EAF1DD }
-#js--c10-09 li:nth-child(31) { background: #EAF1DD }
-
-/* ************************************************************************* */
-
-
-/* ****************************************************************************
-   CODE FRAGMENT c10-09 - FORMATTING
-   ************************************************************************* */
-#js--c10-09a li:nth-child(n+3):nth-child(-n+5) { background: #EAF1DD }
-#js--c10-09a li:nth-child(31) { background: #EAF1DD }
-
 /* ************************************************************************* */

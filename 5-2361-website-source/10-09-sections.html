@@ -1,0 +1,2315 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="How the website template uses inline body text sytling">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           10-09-SECTIONS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/10-09-sections/05-local-js/10-09-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/10-09-sections/01-local-css/10-09-codeline.css">-->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Web template inline body text styles | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="10-08-sections.html#js--100800"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="09-00-fonts.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P15.10.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>10</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">10</span>Body text, sections and headings</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 10. BODY TEXT, SECTIONS AND HEADINGS
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-100000" href="10-00-sections.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">10</span><span class="toc-lev1-text">Body text, sections and headings</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-100100" href="10-01-sections.html#js--100100">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.1</span><span class="toc-lev2-text">Responsive body text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100101" href="10-01-sections.html#js--100101">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.1.1</span><span class="toc-lev3-text">Changing the body text point size (breakpoints)</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100200" href="10-02-sections.html#js--100200">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.2</span><span class="toc-lev2-text">Sections, asides and other alternatives to &lt;div&gt;</span></div></a>
+                        </li>
+<!-- Level 3 -->         <li><a class="js--sc-100201" href="10-02-sections.html#js--100201">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.2.1</span><span class="toc-lev3-text">The <span class="code">&lt;section&gt;</span> element</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100300" href="10-03-sections.html#js--100300">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.3</span><span class="toc-lev2-text">A standard section</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100301" href="10-03-sections.html#js--100301">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.1</span><span class="toc-lev3-text">The <span class="code">section-std</span> class</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100302" href="10-03-sections.html#js--100302">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.2</span><span class="toc-lev3-text">The <span class="code">sub-title-row</span> class</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100303" href="10-03-sections.html#js--100303">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.3</span><span class="toc-lev3-text">Putting content into a section</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100304" href="10-03-sections.html#js--100304">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.4</span><span class="toc-lev3-text">The central content column</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100305" href="10-03-sections.html#js--100305">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.5</span><span class="toc-lev3-text">Left and right asides</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100306" href="10-03-sections.html#js--100306">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.6</span><span class="toc-lev3-text">Making the asides responsive</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100307" href="10-03-sections.html#js--100307">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.3.7</span><span class="toc-lev3-text">What if I don’t want to use sidebars?</span></div></a>
+                         </li>
+<!-- Level 2 -->        <li><a class="js--sc-100400" href="10-04-sections.html#js--100400">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.4</span><span class="toc-lev2-text">A lead-in section</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100500" href="10-05-sections.html#js--100500">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.5</span><span class="toc-lev2-text">A subsection</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100600" href="10-06-sections.html#js--100600">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.6</span><span class="toc-lev2-text">An inline section</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100700" href="10-07-sections.html#js--100700">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.7</span><span class="toc-lev2-text">Additional section rows</span></div></a>
+                        <br class="top-pad">
+                       <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-100800" href="10-08-sections.html#js--100800">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.8</span><span class="toc-lev2-text">Sections and headings</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100801" href="10-08-sections.html#js--100801">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.1</span><span class="toc-lev3-text">The <span class="code">&lt;h1&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100802" href="10-08-sections.html#js--100802">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.2</span><span class="toc-lev3-text">The <span class="code">&lt;h2&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100803" href="10-08-sections.html#js--100803">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.3</span><span class="toc-lev3-text">The <span class="code">&lt;h3&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100804" href="10-08-sections.html#js--100804">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.4</span><span class="toc-lev3-text">The <span class="code">&lt;h4&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100805" href="10-08-sections.html#js--100805">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.5</span><span class="toc-lev3-text">The <span class="code">&lt;h5&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100806" href="10-08-sections.html#js--100806">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.6</span><span class="toc-lev3-text">The <span class="code">&lt;h6&gt;</span> heading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100807" href="10-08-sections.html#js--100807">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.8.7</span><span class="toc-lev3-text">Headings: a summary</span></div></a>
+                         </li>
+<!-- Level 2 -->        <li><a class="js--sc-100900" href="10-09-sections.html#js--100900">
+                            <div class="toc-lev"><span class="toc-lev2-num">10.9</span><span class="toc-lev2-text">Inline body text styles</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100901" href="10-09-sections.html#js--100901">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.1</span><span class="toc-lev3-text">Inline style  <span class="code">.all-caps</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100902" href="10-09-sections.html#js--100902">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.2</span><span class="toc-lev3-text">Inline style  <span class="code">.code</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100903" href="10-09-sections.html#js--100903">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.3</span><span class="toc-lev3-text">Inline style  <span class="code">&nbsp;em</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100904" href="10-09-sections.html#js--100904">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.4</span><span class="toc-lev3-text">Inline style  <span class="code">.first-use</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100905" href="10-09-sections.html#js--100905">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.5</span><span class="toc-lev3-text">Inline style  <span class="code">.index</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100906" href="10-09-sections.html#js--100906">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.6</span><span class="toc-lev3-text">Inline style  <span class="code">.menu</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100907" href="10-09-sections.html#js--100907">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.7</span><span class="toc-lev3-text">Inline style  <span class="code">.mono</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100908" href="10-09-sections.html#js--100908">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.8</span><span class="toc-lev3-text">Inline style  <span class="code">.notice</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100909" href="10-09-sections.html#js--100909">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.9</span><span class="toc-lev3-text">Inline style  <span class="code">.red</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100910" href="10-09-sections.html#js--100910">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.10</span><span class="toc-lev3-text">Inline style  <span class="code">.sans</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100911" href="10-09-sections.html#js--100911">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.11</span><span class="toc-lev3-text">Inline style  <span class="code">.sans-b</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100912" href="10-09-sections.html#js--100912">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.12</span><span class="toc-lev3-text">Inline style  <span class="code">.serif</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100913" href="10-09-sections.html#js--100913">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.13</span><span class="toc-lev3-text">Inline style  <span class="code">.serif-b</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100914" href="10-09-sections.html#js--100914">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.14</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-ns</span></span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-100915" href="10-09-sections.html#js--100915">
+                            <div class="toc-lev"><span class="toc-lev3-num">10.9.15</span><span class="toc-lev3-text">Inline style  <span class="code">.sml-caps-s</span></span></div></a>
+                         </li>
+                    </ul>
+              <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 10.9 INLINE BODY TEXT STYLES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100900">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>10.9</h2></div>
+                 <div class="sub-title-text-box"><h2>Inline body text styles</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">You have probably noticed that as I write, I use different inline styles for things such as <span class="all-caps">all caps</span>, <span class="code">code text</span>, <span class="menu">menu selections</span>, <span class="sml-caps-s">small caps</span>, <span class="first-use">italic highlighting</span>, &amp;c.</p>
+
+                    <p class="hyp">These are all made available on the website by using the <span class="code">&lt;span&gt;</span> inline element (one of them uses the <span class="code">&lt;em&gt;</span> element to make the text bold, see the footnote in <a class="hlink nohyp" href="10-03-sections.html#js--fn01">&sect;&nbsp;10.3.1</a> for the reasons behind this). The HTML code for the above paragraph is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - MULIPLE LINE - SIMPLE DISPLAY (html)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums: lang-html wrap" id="js--c10-15a">&lt;p class="hyp"&gt;You have probably noticed that as I write, I use different inline styles for things such as &lt;span class="all-caps"&gt;all caps&lt;/span&gt;, &lt;span class="code"&gt;code text&lt;/span&gt;, &lt;span class="menu"&gt;menu selections&lt;/span&gt;, &lt;span class="sml-caps-s"&gt;small caps&lt;/span&gt;, &lt;span class="first-use"&gt;italic highlighting&lt;/span&gt;, &amp;amp;c.&lt;/p&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To make part of the text appear as all capitals, that part of the text is surrounded by the <span class="code">&lt;span&gt;…&lt;/span&gt;</span> HTML element and given the class <span class="code">.all-caps</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (html)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums: lang-html wrap" id="js--c10-15b">&lt;p class="hyp"&gt;... &lt;span class="all-caps"&gt;all caps&lt;/span&gt;...&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In the <span class="code">style.css</span> file, the <span class="code">.all-caps</span> class contains the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - MULIPLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css wrap">.all-caps {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;all caps */
+&nbsp; &nbsp; text-transform: uppercase;
+&nbsp; &nbsp; letter-spacing: 0.086em;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s fairly simple; it converts the text to uppercase:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css wrap">&nbsp; &nbsp; text-transform: uppercase;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And then it adds some lateral spacing to the letters, this moves the letters further apart<sup>&dagger;1</sup> and makes them easier to read. I&rsquo;ve added 8.6% of additional spacing between the capital letters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css wrap">&nbsp; &nbsp; letter-spacing: 0.086em;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve specified this with the em unit (<span class="code">0.086em</span>), not the rem unit. I generally specify things in rems, but here I&rsquo;ve used ems, this is because I don&rsquo;t exactly know where the <span class="code">all-caps</span> class is to be used (it&rsquo;s perfectly possible to use it in section headings) and I want the letter spacing to be associated with the actual size of the text in use, not the size of the text specified in the HTML class. Although I&rsquo;ve used <span class="code">0.086em</span> I could just as easily used <span class="code">8.6%</span> the result would have been just the same.</p>
+
+                    <p class="hyp">This is how all these styles work. This is also the biggest pain in the arse when copying text from Word into the website. Where I&rsquo;ve used any of these styles in the Word document, italics for example, I have to find that word or section of the text and put the <span class="code">&lt;span&gt;…&lt;/span&gt;</span> around it. In the case of this example it would be:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;span class="first-use"&gt;italics&lt;/span&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;m not going to explain every one of my span styles in detail, they&rsquo;re all very similar, but I&rsquo;ve listed them, shown an example, explained where I use them (you don&rsquo;t have to stick to my rules, use them for what you like) and given the CSS behind each one. Here they are (the extract used is compulsory reading for engineers and is from: <span class="first-use">The Race to the Moon by, Catherine Bly Cox &amp; Charles Murray&nbsp;&mdash;&nbsp;Simon and Schuster, 1989</span>. There is a Kindle version by the same authors, but just called <a class="hlink nohyp" href="https://www.amazon.co.uk/Apollo-Catherine-Bly-Cox-ebook/dp/B003KN3Z4M/ref=sr_1_1?ie=UTF8&qid=1530457131&sr=8-1&keywords=apollo+bly+cox">Apollo</a>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Letter spacing (or character spacing) adjusts the horizontal gap between letters in a section of text. Single capital letters (like those at the start of a sentence) do not need any additional spacing, where a word is completely capitalized, the normal spacing between the letters it too close, the letters look cramped together and more spacing is required. For a more detailed discussion, I refer you to <a class="hlink nohyp" href="https://practicaltypography.com/letterspacing.html">Mr&nbsp;Butterick</a></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.1 INLINE STYLE .all-caps
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100901">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.all-caps</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Converts text to uppercase and increases the letter (character) spacing</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used at the start of chapters and sections as a lead-in text (leads the eye to where the text starts)</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem"><span class="all-caps">In principle</span>, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;<span class="h-light">&lt;span class="all-caps"&gt;In principle&lt;/span&gt;</span>, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.all-caps {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;all caps */
+&nbsp; &nbsp; text-transform: uppercase;
+&nbsp; &nbsp; letter-spacing: 0.086em;
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.2 INLINE STYLE .code
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100902">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.code</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Converts text to a blue coloured monospaced font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to denote an extract of code or sometimes a user entry, filename or data &amp;c.</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. <span class="code">Liquid fuel is pumped</span> into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. <span class="h-light">&lt;span class="code"&gt;Liquid fuel is pumped&lt;/span&gt;</span> into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.code {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;code fragment */
+&nbsp; &nbsp; font-family: "trip-t4-r";
+&nbsp; &nbsp; font-size: 0.95em;
+&nbsp; &nbsp; color: #4F81BD;
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The smaller font size is because the Triplicate font just looks larger than normal text, the 0.95&nbsp;rem makes it line up better with the body text.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.3 INLINE STYLE em
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100903">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">em</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Applies a bold serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used for emphasis in the main body text</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <em>It burns</em>. That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;em&gt;It burns&lt;/em&gt;</span>. That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.section-std em {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;bold */
+&nbsp; &nbsp; font-family: "eqty-ta-b";
+&nbsp; &nbsp; font-style:normal;
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>This style uses the html element <span class="code">&lt;em&gt;</span>, rather than the &lt;span&gt; element (see the footnote in <a class="hlink nohyp" href="10-03-sections.html#js--fn01">&sect;&nbsp;10.3.1</a> for the reasons behind this), it uses the descendant selector (combinator) discussed in <a class="hlink nohyp" href="06-06-box.html#js--060601">&sect;&nbsp;6.6.1</a> to set the style for every &lt;em&gt; element within the section.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.4 INLINE STYLE em
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100904">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.first-use</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Applies an italic serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to highlight the first use of a term, also used to indicate a comment by the author</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. <span class="first-use">That&rsquo;s all there is to it</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. <span class="h-light">&lt;span class="first-use"&gt;That&rsquo;s all there is to it&lt;/span&gt;</span>.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.first-use {font-family: "eqty-ta-i"}&nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;first use */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.5 INLINE STYLE .index
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100905">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.index</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies an index font, a number in a circle <span class="index" >1</span>, <span class="index" >2</span>, <span class="index" >3</span> &amp;c.</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to identify a numbered point (from a numbered list) in the main body text</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. <span class="index" >1</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. <span class="h-light">&lt;span class="index"&gt;1&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.index {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* TEXT STYLE&nbsp;-&nbsp;index font */
+&nbsp; &nbsp; font-family: "conc-i3-r";
+&nbsp; &nbsp; font-feature-settings: "ss00";
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT WITH MULTIPLE PARAGRAPHS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>Only numbers (0, 1, 2, …97, 98, 99) can be used inside the <span class="code">&lt;span&gt;</span> element with the Concourse Index font set, letters and other characters will appear as they are the normal Concourse font.</li>
+                    </ul>                                       <!-- End of note              -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">If you are using my PS Index font, then only the numbers 0 to 26 are available, see <a class="hlink nohyp" href="09-06-fonts.html#js--090602">&sect;&nbsp;9.6.2</a>.</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.6 INLINE STYLE .menu
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100906">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.6</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.menu</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Converts text to a blue coloured san-serif, small capitals font. With the Equity font set, a slightly heavier version of the Concourse small caps font is used </td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to indicate a menu option, a web page selection or some other on-screen clickable item</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, <span class="menu">liquid rocket engines</span> are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">lt;p class="hyp"&gt;In principle, <span class="h-light">&lt;span class="menu"&gt;liquid rocket engines&lt;/span&gt;</span> are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.menu {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;code fragment */
+&nbsp; &nbsp; font-family: "conc-c4-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; color: #4F81BD;
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>Stylistic set 02 is applied to the Concourse font; this ensures the British settings are used see <a class="hlink nohyp" href="09-01-fonts.html#js--090103d">&sect;&nbsp;Stylistic sets</a></li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.7 INLINE STYLE .mono
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100907">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.7</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.mono</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a monospace font to body text (all other properties stay the same)</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to apply a monospaced font (usually, within standard body text) to indicate the difference between fonts, used where required.</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, <span class="mono">liquid rocket engines</span> are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">lt;p class="hyp"&gt;In principle, <span class="h-light">&lt;span class="mono"&gt;liquid rocket engines&lt;/span&gt;</span> are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. It burns. That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.mono { font-family: "trip-t4-r"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE&nbsp;-&nbsp;monospaced font */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.8 INLINE STYLE .notice
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100908">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.8</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.notice</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a large, red sans-serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used for proof reading and highlighting an important notification</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="notice">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="notice"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.notice {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;&mdash;&nbsp;important notice */
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 130%;
+&nbsp; &nbsp; color: #C0504D!important;
+}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>There is something new in the css for this inline style, I&rsquo;ve added <span class="code">!important</span> to the end of the colour declaration. If you remember, I talked about the hierarchy and specificity of css selectors, <a class="hlink nohyp" href="05-06-basics.html#js--050601">&sect;&nbsp;5.6.1</a> and top of the list is <span class="code">!important</span>, it out ranks everything else. So when I use it with the red colour above, the colour will be red no matter what, it cannot be overridden.</li>
+                    </ul>                                       <!-- End of note              -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">Some purists will accuse me of being lazy, using the <span class="code">!important rule</span> is considered to be bad form, I use it here because this style is important and I do want it to override everything else.</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.9 INLINE STYLE .red
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100909">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.9</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.red</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Changes to colour of the selected text to red</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used for emphasis in the main body text (use sparingly)</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="red">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="red"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.red {color: #C0504D}</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.10 INLINE STYLE .sans
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100910">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.10</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.sans</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a san-serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to apply a san-serif font (usually, within standard body text) to indicate the difference between fonts, used where required</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="sans">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="sans"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.sans { font-family: "conc-t3-r"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE&nbsp;-&nbsp;sans serif font */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.10 INLINE STYLE .sans-b
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100911">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.11</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.sans-b</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a bold san-serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to apply a bold san-serif font for emphasis in tables</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="sans-b">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="sans-b"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.sans-b { font-family: "conc-t4-b"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE&nbsp;-&nbsp;sans serif bold */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.12 INLINE STYLE .serif
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100912">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.12</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.serif</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to apply a serif font (usually, within a table where it is normal to use a san-serif base font) to indicate the difference between fonts, used where required</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp sans" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="serif">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp sans"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="serif"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.serif { font-family: " eqty-ta-r"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE&nbsp;-&nbsp;serif font */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.13 INLINE STYLE .serif-b
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100913">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.13</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.serif-b</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a bold, serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to apply a bold, serif font (usually, within a table where it is normal to use a san-serif base font) to indicate the difference between fonts, used where required</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp sans" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="serif-b">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp sans"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="serif-b"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.serif-b { font-family: " eqty-ta-b"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE&nbsp;-&nbsp;serif bold */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.14 INLINE STYLE .sml-caps-ns
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100914">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.14</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.sml-caps-ns</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a small capitals, san-serif (non-serif) font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to for emphasis, an alternative to bold or italics, be consistent in where it is used</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="sml-caps-ns">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="sml-caps-ns"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.sml-caps-ns { font-family: "conc-c3-r"; }&nbsp; /* TEXT STYLE&nbsp;-&nbsp;small caps sans */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 10.9.15 INLINE STYLE .sml-caps-s
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--100915">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>10.9.15</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline style&nbsp;&mdash;&nbsp;<span class="code">.sml-caps-s</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      STYLE TABLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">Appearance</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left">Applies a small capitals, serif font</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Usage</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Used to for emphasis, an alternative to bold or italics, be consistent in where it is used</td>
+                        </tr>
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-left">Example</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      EXAMPLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp sans" style="margin-top: -0.5rem">In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="sml-caps-s">It burns.</span> That&rsquo;s all there is to it.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%;">HTML</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     HTML CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class="hyp sans"&gt;In principle, liquid rocket engines are simple, far simpler than the internal combustion engine. Liquid fuel is pumped into a combustion chamber in the presence of liquid oxygen and a flame. <span class="h-light">&lt;span class="sml-caps-s"&gt;It burns.&lt;/span&gt;</span> That&rsquo;s all there is to it.&lt;/p&gt;</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TITLE
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%">CSS</th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CSS CODE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract" style="margin-top: -0.5rem">
+                        <div class="code-area" style="border: none">
+
+                            <pre class="prettyprint lang-css wrap">.sml-caps-s { font-family: " eqty-ca-r"; }&nbsp; &nbsp; &nbsp; &nbsp;/* TEXT STYLE - small caps */</pre>
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE END BORDER
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" style="width: 100%">
+<!-- Header row -->     <tr class="no-border" style="border-top: 1px solid #cccccc">
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 100%"></th>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="10-08-sections.html#js--100800">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-00-header.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
