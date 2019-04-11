@@ -49,6 +49,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+11 Apr 2019   P16          M. Gledhill    Published
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 27 Mar 2019   d-P13.00.04i M. Gledhill    Sections updated
@@ -77,7 +79,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P14</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P16</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
