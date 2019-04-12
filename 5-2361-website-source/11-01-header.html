@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="The web template header and footer semantic elements and basic navigation">
+        <meta name="description" content="How the web template header element works">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                             11-00-HEADER.HTML
+Title :          WEBSITE TEMPLATE                             11-01-HEADER.HTML
 *******************************************************************************
 DETAILS
 
@@ -73,7 +73,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/11-00-header/05-local-js/11-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/11-01-header/05-local-js/11-01-scroll.js"></script>
 
 
 
@@ -88,7 +88,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights     <link rel="stylesheet" type="text/css" href="01-pages/11-00-header//01-local-css/11-00-codeline.css">-->
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/11-01-header//01-local-css/11-01-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -108,7 +108,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>The header components | PracticalSeries: Web Development</title>
+        <title>Headers, footers &amp; basic navigation | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -128,7 +128,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="10-09-sections.html#js--100900"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="10-00-sections.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -140,7 +140,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="12-00-lists.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="11-01-header.html#js--110100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="11-02-header.html#js--110200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -257,7 +257,7 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END]      -->
 
 
-        </header>                                               <!-- End of header            -->
+    </header>                                               <!-- End of header            -->
 <!-- ========================================================================== [WP END]      -->
 
 
@@ -270,16 +270,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - HEADERS, FOOTERS AND BASIC NAVIGATION
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 11.1 THE HEADER COMPONENTS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--110000">           <!-- Start of section         -->
+        <section class="section-std" id="js--110100">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Headers, footers &amp; basic navigation</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>11.1</h2></div>
+                 <div class="sub-title-text-box"><h2>The header components</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -293,44 +294,89 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Having introduced semantic elements</span> in the previous chapter and examined the <span class="code">&lt;section&gt;</span> and <span class="code">&lt;aside&gt;</span> elements in great detail, I look at the semantic elements that come above and below all the sections: the <span class="code">&lt;header&gt;</span> element and the <span class="code">&lt;footer&gt;</span> element (in green and blue respectively in <a class="xref js--sc-f11-01 utx" href="#">Figure&nbsp;11.1</a> below).</p>
-
-                    <p class="hyp">I also cover the basic navigation structures that live in these elements: the navigation bar at the top, the table of contents area and the common navigation elements in the footer.</p>
+                    <p class="hyp">The header is the bit at the top of every page; this is the header for section 3 of the website:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-01">
-                            <a href="01-pages/11-00-header/02-images/fig-11-01.jpg" data-lightbox="fig-set" data-title="Figure 11.1 - Website page semantic element structure">
-                                <img src="01-pages/11-00-header/02-images/fig-11-01.jpg" alt="Figure 11.1 - Website page semantic element structure">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-02">
+                            <a href="01-pages/11-01-header/02-images/fig-11-02.png" data-lightbox="fig-set" data-title="Figure 11.2 - Section 3 header">
+                                <img src="01-pages/11-01-header/02-images/fig-11-02.png" alt="Figure 11.2 - Section 3 header">
                             </a>
-                            <figcaption>Figure 11.1 &emsp; Website page semantic element structure</figcaption>
+                            <figcaption>Figure 11.2 &emsp; Section 3 header</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp">I&rsquo;ve highlighted everything in the header (contained in the <span class="code">&lt;header&gt;</span> element) in blue. </p>
 
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
+                    <p class="hyp">There are three bits to the header:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      NUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <table class="table-incid">
-<!-- Header row -->     <tr>
-                            <th class="table-cent">The software </th>
-                        </tr>
-<!-- Data row -->       <tr>
-                            <td class="table-left">
-                                <p>The explanations and instructions used in this section are based around the deployable web site software; i.e. it uses the template pages for the HTML and the final versions of style.css, grid.css and other files issued with the website template software.</p>
-                                <p>The website template software is available <a class="hlink nohyp" href="11-resources/04-data/web-template.zip" download>here</a>.</p>
-                            </td>
-                        </tr>
-                    </table>
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">The navigation bar at the top:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-02a">
+                            <a href="01-pages/11-01-header/02-images/fig-11-02a.png" data-lightbox="fig-set" data-title="Figure 11.2a - Nav bar">
+                                <img src="01-pages/11-01-header/02-images/fig-11-02a.png" alt="Figure 11.2a - Nav bar">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol start="2" class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">The title:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-02b">
+                            <a href="01-pages/11-01-header/02-images/fig-11-02b.png" data-lightbox="fig-set" data-title="Figure 11.2b - Title">
+                                <img src="01-pages/11-01-header/02-images/fig-11-02b.png" alt="Figure 11.2b - Title">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol start="2" class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">The table of contents:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-02c">
+                            <a href="01-pages/11-01-header/02-images/fig-11-02c.png" data-lightbox="fig-set" data-title="Figure 11.2c - Table of contents">
+                                <img src="01-pages/11-01-header/02-images/fig-11-02c.png" alt="Figure 11.2c - Table of contents">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">These three components occur on every page within the website (there is some slight variation on the main landing page. I look at that in <a class="hlink nohyp" href="23-00-landing.html#js--000000">section&nbsp;23</a>). </p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -338,6 +384,132 @@ Date          Issue        Author         Reason for Modification
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
                 <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.1.1 THE BASIC HEADER CODE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The basic <span class="code">&lt;header&gt;</span> code</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">&lt;header&gt;</span> code is the first thing in the <span class="code">&lt;body&gt;</span> section of the page, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">header html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html" id="js--c11-01">&lt;body&gt;
+
+
+&lt;!-- ****************************************************************** [WP HEADER]
+&nbsp; &nbsp;  HEADER (COVER &amp; TABLE OF CONTENTS)
+&nbsp; &nbsp;  ***************************************************************--&gt;
+&nbsp; &nbsp; &lt;header id="js--000000"&gt;
+
+&lt;!-- ****************************************************************** [WP TOPNAV]
+&nbsp; &nbsp;  TOP NAVIGATION (ABOVE CONTENTS LIST)
+&nbsp; &nbsp;  ***************************************************************--&gt;
+
+&nbsp; &nbsp; &lt;nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top nav bar&nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="top-nav"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top nav row&nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-row"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of nav button row&nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;... &lt;!-- NAVIGATION BAR CODE --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of nav button row&nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top nav row&nbsp; &nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &lt;/nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top nav bar&nbsp; &nbsp; &nbsp;  --&gt;
+&lt;!-- ================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;
+
+&lt;!-- ****************************************************************** [WP TITLE]
+&nbsp; &nbsp;  TITLE BAR (Section number and text)
+&nbsp; &nbsp;  ***************************************************************--&gt;
+
+&nbsp; &nbsp; &lt;div class="rg-row title-row"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of title row&nbsp; &nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- left column (not used)&nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="title-num-box"&gt;&lt;p&gt;3&lt;/p&gt;&lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="title-text-box"&gt;&lt;h1&gt;&lt;span class="title-small-num"&gt;3&lt;/span&gt;Grids&lt;/h1&gt;&lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- right column (not used)&nbsp; --&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of title&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  --&gt;
+
+&lt;!-- ****************************************************************** [WP TOC]
+&nbsp; &nbsp;  TABLE OF CONTENTS
+&nbsp; &nbsp;  ***************************************************************--&gt;
+
+&nbsp; &nbsp; &lt;div class="rg-row"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of TOC section&nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Left column (not used)&nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span3-5"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC column&nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;... &lt;!-- TOC CONTENTS --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC column&nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Right column (not used)&nbsp; --&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC section&nbsp; &nbsp; &nbsp;  --&gt;
+&lt;!-- ================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;
+
+&nbsp; &nbsp; &lt;/header&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of header&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&lt;!-- ================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.1 &emsp; HTML associated with the &lt;header&gt; element</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I haven&rsquo;t included the full code for the navigation bar (where it says <span class="code">&lt;!-- NAVIGATION BAR CODE --&gt;</span>) or the table of contents (where it says <span class="code">&lt;!-- TOC CONTENTS --&gt;</span>); I look at these separately in the following sections.</p>
+
+                    <p class="hyp">I&rsquo;ve coloured the areas for the three components, navigation bar (red), title (green) and table of contents (blue) and again, I look at each in the following sections.</p>
+
+                    <p class="hyp">The <span class="code">&lt;header&gt;</span> element itself just surrounds all these components (in orange). There is not much to the header, just an ID:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html" id="js--c11-01a">&nbsp; &nbsp; &nbsp; &nbsp; &lt;header id="js--000000"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The ID is used as a scroll point (I discussed this <a class="hlink nohyp" href="10-03-sections.html#js--100300a">here</a> where I&rsquo;d used it in the <span class="code">&lt;section&gt;</span> code. There is a more involved discussion in <a class="hlink nohyp utx" href="13-04-links.html#js--130400">&sect;&nbsp;13.4</a>).</p>
+
+                    <p class="hyp">The header, on every page, always has the id:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">js--000000</span></p>
+
+                    <p class="hyp">Indicating it is the first thing on the page. There is nothing else to the <span class="code">&lt;header&gt;</span> (there are no CSS classes associated with it).</p>
+
+                    <p class="hyp">Of the three components mentioned here, there is only one that is in anyway complicated and this is the navigation bar and that&rsquo;s what I&rsquo;m going to look at next:</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -354,7 +526,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="10-09-sections.html#js--100900">Prev</a>
+                        <a class="xref" href="11-00-header.html#js--000000">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -364,7 +536,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="11-01-header.html#js--110100">Next</a>
+                        <a class="xref" href="11-02-header.html#js--110200">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

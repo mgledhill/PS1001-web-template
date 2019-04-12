@@ -1,0 +1,979 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="The fundamentals of navigation and links">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             11-02-HEADER.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+10 Apr 2019   d-P16.11.01  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/11-02-header/05-local-js/11-02-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/11-02-header//01-local-css/11-02-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The fundamentals of navigation and links | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="11-01-header.html#js--110100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="10-00-sections.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="12-00-lists.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="11-03-header.html#js--110300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P16.11.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>11</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">11</span>Headers, footers and basic navigation</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 11 Header
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-110000" href="11-00-header.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">11</span><span class="toc-lev1-text">Headers, footers and basic navigation</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-110100" href="11-01-header.html#js--110100">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.1</span><span class="toc-lev2-text">The header components</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110101" href="11-01-header.html#js--110101">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.1.1</span><span class="toc-lev3-text">The basic <span class="code">&lt;header&gt;</span> code</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110200" href="11-02-header.html#js--110200">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.2</span><span class="toc-lev2-text">The fundamentals of navigation and links</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110201" href="11-02-header.html#js--110201">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.1</span><span class="toc-lev3-text"><span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> selectors</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110202" href="11-02-header.html#js--110202">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.2</span><span class="toc-lev3-text">The <span class="code">transition</span> property</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110300" href="11-03-header.html#js--110300">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.3</span><span class="toc-lev2-text">The basic navigation bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110301" href="11-03-header.html#js--110301">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.1</span><span class="toc-lev3-text">The navigation bar row containers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110302" href="11-03-header.html#js--110302">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.2</span><span class="toc-lev3-text">The navigation bar buttons</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110303" href="11-03-header.html#js--110303">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.3</span><span class="toc-lev3-text">The navigation bar link text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110304" href="11-03-header.html#js--110304">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.4</span><span class="toc-lev3-text">Making the basic navigation bar responsive</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110400" href="11-04-header.html#js--110400">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.4</span><span class="toc-lev2-text">The chapter title bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110401" href="11-04-header.html#js--110401">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.4.1</span><span class="toc-lev3-text">Title bar responsive elements</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110500" href="11-05-header.html#js--110500">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.5</span><span class="toc-lev2-text">The table of contents (TOC)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110501" href="11-05-header.html#js--110501">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.1</span><span class="toc-lev3-text">A brief explanation of the unordered list</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110502" href="11-05-header.html#js--110502">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.2</span><span class="toc-lev3-text">Table of contents, the underlying construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110503" href="11-05-header.html#js--110503">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.3</span><span class="toc-lev3-text">Balancing TOC columns</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110504" href="11-05-header.html#js--110504">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.4</span><span class="toc-lev3-text">Table of contents responsive elements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110505" href="11-05-header.html#js--110505">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.5</span><span class="toc-lev3-text">Copying and implementing a TOC list</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110600" href="11-06-header.html#js--110600">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.6</span><span class="toc-lev2-text">The footer</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110601" href="11-06-header.html#js--110601">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.6.1</span><span class="toc-lev3-text">Footer responsive elements</span></div></a>
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+    </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 11.2 THE HEADER COMPONENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>11.2</h2></div>
+                 <div class="sub-title-text-box"><h2>The fundamentals of navigation and links</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I need to backtrack a little here, there&rsquo;s some stuff to do with links that I haven&rsquo;t covered yet, and although I looked at links very briefly in <a class="hlink nohyp" href="05-02-basics.html#js--050200">&sect;&nbsp;5.2</a> they just had that standard web page appearance that has been around since the 90s:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-03">
+                            <a href="01-pages/11-02-header/02-images/fig-11-03.png" data-lightbox="fig-set" data-title="Figure 11.3 - The very first website (apparently)">
+                                <img src="01-pages/11-02-header/02-images/fig-11-03.png" alt="Figure 11.3 - The very first website (apparently)">
+                            </a>
+                            <figcaption>Figure 11.3 &emsp; The very first website (apparently)</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I.e. the links are all underlined and are in blue; these turn purple if I&rsquo;ve already clicked the link. And that&rsquo;s exactly what I had in first-site example that was built in sections 5 and 6. It looked like this if you remember:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-04">
+                            <a href="01-pages/11-02-header/02-images/fig-11-04.png" data-lightbox="fig-set" data-title="Figure 11.4 - My final first-site website from section 6">
+                                <img src="01-pages/11-02-header/02-images/fig-11-04.png" alt="Figure 11.4 - My final first-site website from section 6">
+                            </a>
+                            <figcaption>Figure 11.4 &emsp; My final first-site website from section 6</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The two links <span class="menu">google.co.uk</span> and <span class="menu">Henry</span> have exactly that appearance.</p>
+
+                    <p class="hyp">Nowadays, websites have moved on and this blue, underlined link is nowhere to be seen&nbsp;&mdash;&nbsp;except Google, they still use it (or something very similar):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-05">
+                            <a href="01-pages/11-02-header/02-images/fig-11-05.png" data-lightbox="fig-set" data-title="Figure 11.5 - Links in google">
+                                <img src="01-pages/11-02-header/02-images/fig-11-05.png" alt="Figure 11.5 - Links in google">
+                            </a>
+                            <figcaption>Figure 11.5 &emsp; Links in google</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Hey, that&rsquo;s my site (second one down)</span>.</p>
+
+                    <p class="hyp"><span class="first-use">So how do we get rid of it?</span></p>
+
+                    <p class="hyp">Well, CSS allows us to modify the styles applied to a link (and other elements) when we do different things to it&nbsp;&mdash;&nbsp;e.g. hover a mouse over it, click it &amp;c.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.2.1 [SUBSECTION NAME]
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3><span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> selectors</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">These <span class="first-use">selectors</span> are most commonly applied to the anchor element <span class="code">&lt;a …&gt;</span> which, if you remember is used to provide links on a web page.</p>
+
+                    <p class="hyp">There are four of these:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE WITH UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table>
+                        <tr>
+                            <td style="width: 30%; vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">a:link</span></p></li></ul></td>
+                            <td style="width: 50%; vertical-align: top"><p class="hyp">a normal, unvisited link</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">a:visited</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">a link the user has already visited</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">a:hover</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">a link when the user moves the mouse over it (but doesn&rsquo;t click)</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">a:active</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">a link at the moment it is clicked (and while the mouse button is pressed)</p></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To demonstrate, let&rsquo;s take our basic web page and put a link in it. The basic web page currently has the following: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html" id="js--c11-02">&lt;!DOCTYPE html&gt;&nbsp;    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &lt;!-- HTML 5 file --&gt;
+
+&lt;html lang="en"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        &lt;!-- Declare language&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;              &lt;!-- Start of head section&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset="utf-8"&gt; &nbsp; &nbsp; &lt;!-- Use unicode char set (&lt; 1024 char from SOF)&nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;&nbsp;
+
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css"&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;A work in progress | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;
+
+&nbsp; &nbsp; &lt;body&gt;&nbsp;
+&lt;!-- ************************************************************************** [WP HEADER]
+&nbsp; &nbsp;  HEADER
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;header id="js--000000"&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;a href="https://practicalseries.com"&gt;Practical Series website&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/header&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of header --&gt;
+&lt;!-- ========================================================================== [WP END] --&gt;
+
+&nbsp; &nbsp; &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.2 &emsp; A single link on the web page</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve added a <span class="code">&lt;header&gt;</span> section with a link in it.</p>
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-06">
+                            <a href="01-pages/11-02-header/02-images/fig-11-06.png" data-lightbox="fig-set" data-title="Figure 11.6 - Basic link on a web page">
+                                <img src="01-pages/11-02-header/02-images/fig-11-06.png" alt="Figure 11.6 - Basic link on a web page">
+                            </a>
+                            <figcaption>Figure 11.6 &emsp; Basic link on a web page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And if the link is clicked and the back key pressed it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-07">
+                            <a href="01-pages/11-02-header/02-images/fig-11-07.png" data-lightbox="fig-set" data-title="Figure 11.7 - Basic visited link on a web page">
+                                <img src="01-pages/11-02-header/02-images/fig-11-07.png" alt="Figure 11.7 - Basic visited link on a web page">
+                            </a>
+                            <figcaption>Figure 11.7 &emsp; Basic visited link on a web page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It goes from blue to purple if the site has been visited (i.e. is in the web browsers history).</p>
+
+                    <p class="hyp">Right, all well and good, very <a class="hlink nohyp" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>. Now let&rsquo;s tinker with it a bit; we&rsquo;ll do this in CSS, specifically in <span class="code">style.css</span>. Add the following (near the start after the body definition).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-03">body {
+&nbsp; &nbsp; max-width: 1276px;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; background-color: #fff;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* make content area background white */
+&nbsp; &nbsp; border-left: 1px solid #ededed;
+&nbsp; &nbsp; border-right: 1px solid #ededed;
+}
+
+
+a:link {
+&nbsp; &nbsp; font-family: 'conc-t3-r';
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.3 &emsp; Basic link selector</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This changes the font to Concourse in a different blue colour and removes the underline.</p>
+
+                    <p class="hyp">Most of these properties you have seen before (font-family and color), the</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; text-decoration: none;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="code">text-decoration</span> property is responsible for changing the underlining arrangements (none stops all decorations, other options are <span class="code">line-through</span>, <span class="code">overline</span> and <span class="code">underline</span>; you can guess what they do)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-08">
+                            <a href="01-pages/11-02-header/02-images/fig-11-08.png" data-lightbox="fig-set" data-title="Figure 11.8 - Modified link property">
+                                <img src="01-pages/11-02-header/02-images/fig-11-08.png" alt="Figure 11.8 - Modified link property">
+                            </a>
+                            <figcaption>Figure 11.8 &emsp; Modified link property</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now, only the <span class="code">:link</span> selector has changed, but if you hover a mouse over the link or click it and go back to the page, you will see that while the colour changes, some other properties don&rsquo;t, it remains in the concourse font and the underlining doesn&rsquo;t come back. This is because the <span class="code">:link</span> defines various properties that are inherited by the other selectors; color however is an exception, it has to be defined for each selector.</p>
+
+                    <p class="hyp">Add the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-04">a:link {
+&nbsp; &nbsp; font-family: 'conc-t3-r';
+&nbsp; &nbsp; text-decoration:none ;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+a:visited {
+&nbsp; &nbsp; color: #ff0000;
+}
+a:hover {
+&nbsp; &nbsp; color: #00ff00;
+}
+a:active {
+&nbsp; &nbsp; color: #000;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.4 &emsp; Link, visited, hover and active selectors</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The basic (unclicked link) looks the same as before (<a class="xref js--sc-f11-08" href="#">Figure&nbsp;11.8</a>), however if you hover the mouse over the link you get a green link:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-09">
+                            <a href="01-pages/11-02-header/02-images/fig-11-09.png" data-lightbox="fig-set" data-title="Figure 11.9 - Modified hover property">
+                                <img src="01-pages/11-02-header/02-images/fig-11-09.png" alt="Figure 11.9 - Modified hover property">
+                            </a>
+                            <figcaption>Figure 11.9 &emsp; Modified hover property</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Click the link and hold down the mouse button, this turns the link black:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-10">
+                            <a href="01-pages/11-02-header/02-images/fig-11-10.png" data-lightbox="fig-set" data-title="Figure 11.10 - Modified active property">
+                                <img src="01-pages/11-02-header/02-images/fig-11-10.png" alt="Figure 11.10 - Modified active property">
+                            </a>
+                            <figcaption>Figure 11.10 &emsp; Modified active property</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And finally, if you click the link (it will take you to a new page) and then hit the back button (<span class="menu">alt+left cursor key</span>), the visited link will be red:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-11">
+                            <a href="01-pages/11-02-header/02-images/fig-11-11.png" data-lightbox="fig-set" data-title="Figure 11.11 - Modified visited property">
+                                <img src="01-pages/11-02-header/02-images/fig-11-11.png" alt="Figure 11.11 - Modified visited property">
+                            </a>
+                            <figcaption>Figure 11.11&emsp; Modified visited property</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">These selectors (or more properly pseudo-classes) have certain rules:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp"><span class="code">:visited</span> must come after <span class="code">:link</span> and can only modify properties defined in <span class="code">:link</span><sup>&dagger;1</sup></p></li>
+
+                        <li><p class="hyp"><span class="code">:hover</span> must come after <span class="code">:link</span> and <span class="code">:visited</span></p></li>
+
+                        <li><p class="hyp"><span class="code">:active</span> must come after <span class="code">:hover</span></p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">This is a privacy issue; a malicious website could test the visual style of a link with JavaScript to report back to a server which sites the user has visited, violating the user&rsquo;s privacy.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In practice, these four selectors tend to get grouped into pairs; <span class="code">:link</span> and <span class="code">:visited</span> are usually grouped together and <span class="code">:hover</span> and <span class="code">:active</span>are grouped together. As follows:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-05">a:link,
+a:visited{
+&nbsp; &nbsp; font-family: "eqty-ca-r";
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; background-color: #fff;
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+}
+a:hover,
+a:active {
+&nbsp; &nbsp; background-color: #e8e8ff;
+&nbsp; &nbsp; border-bottom: 1px solid #404030;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.5 &emsp; Link, visited, hover and active selectors</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This now gives a fairly consistent approach to links, the basic link looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-12">
+                            <a href="01-pages/11-02-header/02-images/fig-11-12.png" data-lightbox="fig-set" data-title="Figure 11.12 - Combined link and visited properties">
+                                <img src="01-pages/11-02-header/02-images/fig-11-12.png" alt="Figure 11.12 - Combined link and visited properties">
+                            </a>
+                            <figcaption>Figure 11.12&emsp; Combined link and visited properties</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And hovering or clicking the link produces: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-13">
+                            <a href="01-pages/11-02-header/02-images/fig-11-13.png" data-lightbox="fig-set" data-title="Figure 11.13 - Combined hover and active properties">
+                                <img src="01-pages/11-02-header/02-images/fig-11-13.png" alt="Figure 11.13 - Combined hover and active properties">
+                            </a>
+                            <figcaption>Figure 11.13&emsp; Combined hover and active properties</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Hovering (or clicking and holding) produces a blue (purple) background and a dark, grey line underneath the link. </p>
+
+                    <p class="hyp">This is because both selectors have a <span class="code">background-color</span> property that sets the background colour (to white in the case of <span class="code">:link/:visited</span> and blue for <span class="code">:hover/:active</span>).</p>
+
+                    <p class="hyp">The <span class="code">:hover/:active</span> css also sets a bottom border::hover/:active css also sets a bottom border:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid #404030;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This puts a 1 pixel high border at the bottom. The more observant amongst you will also notice that the <span class="code">:link/:visited</span> css has something similar:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid transparent;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This also draws a 1 pixel high border at the bottom of the link; however, with the border set to transparent, nothing is actually displayed.</p>
+
+                    <p class="hyp">This may seem pointless, but it allows us to do something clever, we can use the transition property to change things.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>These pseudo-classes (<span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span>) can be applied to any class, not just links.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.2.2 THE TRANSITION PROPERTY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>The <span class="code">transition</span> property</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">It&rsquo;s easier to just show you what it does: add the following line:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-06">a:link,
+a:visited{
+&nbsp; &nbsp; font-family: "eqty-ca-r";
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; background-color: #e8e8ff;
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+&nbsp; &nbsp; transition: background-color 0.2s, border-bottom 0.2s;
+}
+a:hover,
+a:active {
+&nbsp; &nbsp; background-color: #e8e8ff;
+&nbsp; &nbsp; border-bottom: 1px solid #404030;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.6 &emsp; Transition property</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now if you hover over the link, the background colour and the bottom border fade into existence (in this case over a period of 0.2 seconds). It&rsquo;s a subtle effect, but it works and it looks good.</p>
+
+                    <p class="hyp">It is achieved with the <span class="code">transition</span> property; this can be used to affect pretty much any other property applied with a <span class="first-use">pseudo-class</span>, allowing it to change from one state to another, at its simplest, it has the following arrangement:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css" style="font-size: 0.6rem" >transition: [affected-property] [duration], [affected-property] [duration], ...</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">transition</span> property can change as many other properties as required, the only condition being that the properties must be applied in both applicable pseudo-classes (that is why there is a transparent border property in the <span class="code">:link</span> selector, so it can transition from transparent in <span class="code">:link</span> to dark grey in <span class="code">:hover</span>). The duration just sets the time over which the transition occurs.</p>
+
+                    <p class="hyp">The full transition property structure has more components:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css" style="font-size: 0.6rem" >transition: [affected-property] [duration] [function] [delay], ...</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Setting the <span class="code">affected-property</span> to <span class="code">all</span> will change all the properties that are defined in the pseudo-class selector.</p>
+
+                    <p class="hyp">The duration is in seconds (e.g.<span class="code">10.2s</span>) or milliseconds (e.g. <span class="code">534ms</span>); the default value is <span class="code">0s</span> if no value is included (i.e. the transition is instantaneous).</p>
+
+                    <p class="hyp">The function is how the transform is applied; it can have the following values (most of which sound vaguely rude to me):</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE WITH UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table>
+                        <tr>
+                            <td style="width: 30%; vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">ease-in</span></p></li></ul></td>
+                            <td style="width: 50%; vertical-align: top"><p class="hyp">slow to start and then speeds up</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">ease-out</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">fast to start and then slows down</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">ease-in-out</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">slow to start and stop, fast in the middle</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">ease</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">(default) a variation of ease-in-out (bit faster)</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">linear</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">steady change over the duration period</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">step-start</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">instantly jumps to final state and then waits</p></td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top"><ul class="list-no-num"><li><p class="hyp"><span class="code">step-end</span></p></li></ul></td>
+                            <td style="vertical-align: top"><p class="hyp">waits and then jumps to final state </p></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+                    <p class="hyp">The default (<span class="code">ease</span>) looks the best and (pretty much) is the one everybody uses.</p>
+
+                    <p class="hyp">These functions all use some form of <a class="hlink nohyp" href="https://vimeo.com/106757336">cubic Bezier curve</a> and this can be specified too (if you know what you are doing&nbsp;&mdash;&nbsp;<span class="first-use">I&rsquo;m afraid I don&rsquo;t)</span>:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">cubic-bezier(0, 0, 0.58, 1)</span></p>
+
+                    <p class="hyp">The <span class="code">delay</span> is simply a delay before the transition starts again in seconds or milliseconds.</p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-01-header.html#js--110100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-03-header.html#js--110300">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
