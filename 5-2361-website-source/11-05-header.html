@@ -1,0 +1,2036 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understaning the web template table of contents">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             11-05-HEADER.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+10 Apr 2019   d-P16.11.02  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/11-05-header/05-local-js/11-05-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/11-05-header/01-local-css/11-05-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The table of contents | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="11-04-header.html#js--110400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="10-00-sections.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="12-00-lists.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="11-04-header.html#js--110400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P16.11.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>11</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">11</span>Headers, footers and basic navigation</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 11 Header
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-110000" href="11-00-header.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">11</span><span class="toc-lev1-text">Headers, footers and basic navigation</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-110100" href="11-01-header.html#js--110100">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.1</span><span class="toc-lev2-text">The header components</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110101" href="11-01-header.html#js--110101">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.1.1</span><span class="toc-lev3-text">The basic <span class="code">&lt;header&gt;</span> code</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110200" href="11-02-header.html#js--110200">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.2</span><span class="toc-lev2-text">The fundamentals of navigation and links</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110201" href="11-02-header.html#js--110201">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.1</span><span class="toc-lev3-text"><span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> selectors</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110202" href="11-02-header.html#js--110202">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.2</span><span class="toc-lev3-text">The <span class="code">transition</span> property</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110300" href="11-03-header.html#js--110300">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.3</span><span class="toc-lev2-text">The basic navigation bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110301" href="11-03-header.html#js--110301">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.1</span><span class="toc-lev3-text">The navigation bar row containers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110302" href="11-03-header.html#js--110302">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.2</span><span class="toc-lev3-text">The navigation bar buttons</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110303" href="11-03-header.html#js--110303">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.3</span><span class="toc-lev3-text">The navigation bar link text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110304" href="11-03-header.html#js--110304">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.4</span><span class="toc-lev3-text">Making the basic navigation bar responsive</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110400" href="11-04-header.html#js--110400">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.4</span><span class="toc-lev2-text">The chapter title bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110401" href="11-04-header.html#js--110401">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.4.1</span><span class="toc-lev3-text">Title bar responsive elements</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110500" href="11-05-header.html#js--110500">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.5</span><span class="toc-lev2-text">The table of contents (TOC)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110501" href="11-05-header.html#js--110501">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.1</span><span class="toc-lev3-text">A brief explanation of the unordered list</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110502" href="11-05-header.html#js--110502">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.2</span><span class="toc-lev3-text">Table of contents, the underlying construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110503" href="11-05-header.html#js--110503">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.3</span><span class="toc-lev3-text">Balancing TOC columns</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110504" href="11-05-header.html#js--110504">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.4</span><span class="toc-lev3-text">Table of contents responsive elements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110505" href="11-05-header.html#js--110505">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.5</span><span class="toc-lev3-text">Copying and implementing a TOC list</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110600" href="11-06-header.html#js--110600">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.6</span><span class="toc-lev2-text">The footer</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110601" href="11-06-header.html#js--110601">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.6.1</span><span class="toc-lev3-text">Footer responsive elements</span></div></a>
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+    </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 11.5 THE TABLE OF CONTENTS (TOC)
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110500">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>11.5</h2></div>
+                 <div class="sub-title-text-box"><h2>The table of contents (TOC)</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The table of contents (TOC) is just a series of links to all the other sections and subsections within the chapter; the TOC, like the title bar, is identical for all pages within a chapter.</p>
+
+                    <p class="hyp">The TOC appears directly below the title bar and is normally divided into two columns:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-32">
+                            <a href="01-pages/11-05-header/02-images/fig-11-32.png" data-lightbox="fig-set" data-title="Figure 11.32 - Table of contents as two columns">
+                                <img src="01-pages/11-05-header/02-images/fig-11-32.png" alt="Figure 11.32 - Table of contents as two columns">
+                            </a>
+                            <figcaption>Figure 11.32 &emsp; Table of contents as two columns</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are three styles of text: the first line of the TOC is level 1 (it&rsquo;s the <span class="first-use">&ldquo;3 Grid, fonts, columns and responsive design&rdquo;</span> in the above figure) this is a slightly larger font and is in bold. Level 1 entries just have one number, the chapter number.</p>
+
+                    <p class="hyp">Next comes level 2, this is a link to a section; it has two numbers (<span class="first-use">&ldquo;3.1 The Gerstner Grid&rdquo;</span>, <span class="first-use">&ldquo;3.2 Fonts, point size and line spacing&rdquo;</span> &amp;c.). Level 2 links are in a heavier Concourse font (t4, not t3), but have a smaller font size; level 2 links are indented from the level 1 links.</p>
+
+                    <p class="hyp">Level 3 links are sub-sections; these have three numbers (<span class="first-use">&ldquo;3.1.1 How the Gerstner grid works&rdquo;</span>, <span class="first-use">&ldquo;3.2.1 Fonts&rdquo;</span> &amp;c.). Level 3 links are have the same font size as level 2, but are in a t3 font. These are also indented from the level 1 entries.</p>
+
+                    <p class="hyp">Under responsive conditions, the two columns become a single column:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-33">
+                            <a href="01-pages/11-05-header/02-images/fig-11-33.png" data-lightbox="fig-set" data-title="Figure 11.33 - Table of contents as a single column">
+                                <img style="max-width: 729px" src="01-pages/11-05-header/02-images/fig-11-33.png" alt="Figure 11.33 - Table of contents as a single column">
+                            </a>
+                            <figcaption>Figure 11.33 &emsp; Table of contents as a single column</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The table of contents is made up of a series of links to the various different web pages on the website. It is actually constructed as a <span class="first-use">list</span> of entries and lists are HTML elements and they get a whole section to themselves later on (<a class="hlink nohyp" href="12-00-lists.html#js--000000">section&nbsp;12</a>). But before I can go on explaining the TOC, I need to explain the basics of how lists work; so that&rsquo;s the next bit:</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.5.1 A BRIEF EXPLANATION OF THE UNORDERED LIST
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110501">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.5.1</h3></div>
+                    <div class="sub-title-text-box"><h3>A brief explanation of the unordered list</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Lists come in two varieties ordered lists (preceded by a number) and unordered lists (preceded by a bullet point). They work in exactly the same way and I cover both in <a class="hlink nohyp" href="12-00-lists.html#js--000000">section&nbsp;12</a>. For the TOC we only need the unordered list.</p>
+
+                    <p class="hyp">The basic HTML for an unordered list is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Unordered list html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-html wrap" id="js--c11-13">&lt;ul&gt;
+&nbsp; &nbsp; &lt;li&gt;Nuts&lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;Bolts&lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;Washers&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.13 &emsp; Unordered list html</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And it renders like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-34">
+                            <a href="01-pages/11-05-header/02-images/fig-11-34.png" data-lightbox="fig-set" data-title="Figure 11.34 - An unordered list">
+                                <img style="max-width: 642px" src="01-pages/11-05-header/02-images/fig-11-34.png" alt="Figure 11.34 - An unordered list">
+                            </a>
+                            <figcaption>Figure 11.34 &emsp; An unordered list</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Pretty impressive stuff.</span></p>
+
+                    <p class="hyp">An unordered list is the HTML element <span class="code">&lt;ul&gt;…&lt;/ul&gt;</span>; the <span class="code">ul</span> unsurprisingly stands for unordered list.</p>
+
+                    <p class="hyp">Each list entry lives inside a list element <span class="code">&lt;li&gt;…&lt;/li&gt;</span> and there can be as many of these as you want.</p>
+
+                    <p class="hyp">Each list entry is by default indented slightly and gets a bullet point.</p>
+
+                    <p class="hyp">As far as the TOC is concerned, we don&rsquo;t want the bullet point (none of the entries in the TOC have a bullet point in front of them) and this is achieved with a bit of CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">ul{ list-style: none; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This gives:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-35">
+                            <a href="01-pages/11-05-header/02-images/fig-11-35.png" data-lightbox="fig-set" data-title="Figure 11.35 - An unordered list without bullet points">
+                                <img style="max-width: 642px" src="01-pages/11-05-header/02-images/fig-11-35.png" alt="Figure 11.35 - An unordered list without bullet points">
+                            </a>
+                            <figcaption>Figure 11.35 &emsp; An unordered list without bullet points</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The bullet points have disappeared, but nothing else has changed, the indentation remains just as it was.</p>
+
+                    <p class="hyp">To get rid of the indentations, simply set the margin and padding to zero:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">ul {
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; margin: 0;
+&nbsp; &nbsp; padding: 0;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The style of the text can also be changed like any other text by adding <span class="code">font-size</span>, <span class="code">font-family</span> &amp;c. to the CSS for the <span class="code">ul</span> element.</p>
+
+                    <p class="hyp"><a class="hlink nohyp" href="12-00-lists.html#js--000000">section&nbsp;12</a> gives a more detailed explanation of unordered lists, including how to change the bullet point to any character you want</p>
+
+                    <p class="hyp">The above brief introduction is all we need for the TOC.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.5.2 TABLE OF CONTENTS, THE UNDERLYING CONSTRUCTION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110502">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.5.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Table of contents, the underlying construction</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The table of contents has two parts; the first part is the level 1 entry that links to the chapter (it&rsquo;s the <span class="first-use">&ldquo;3 Grid, fonts, columns and responsive design&rdquo;</span> in Figure 11.32 and Figure 11.33), this links to the top of the first page in the specified chapter (chapter 3 in the above examples).</p>
+
+                    <p class="hyp">There is only one of these links on a page (the TOC only concerns itself with the current chapter and the sections and sub-sections within it) and it is not in a column, it actually spans the page.</p>
+
+                    <p class="hyp">The second part of the TOC is the links to all the other sections and sub-sections within the chapter, these are the level 2 and level 3 entries and these are arranged in two columns across the central section of the web page.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION INLINE - TOC Level 1
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110502a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-text-box"><h4>TOC Level 1</h4></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Let&rsquo;s look at the first bit first, it&rsquo;s simpler and explains a lot of the details needed for the second bit, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-36">
+                            <a href="01-pages/11-05-header/02-images/fig-11-36.png" data-lightbox="fig-set" data-title="Figure 11.36 - Level 1 TOC entry">
+                                <img style="max-width: 761" src="01-pages/11-05-header/02-images/fig-11-36.png" alt="Figure 11.36 - Level 1 TOC entry">
+                            </a>
+                            <figcaption>Figure 11.36 &emsp; Level 1 TOC entry</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The HTML for the first bit is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC level 1 html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-14">&lt;!-- ************************************************************************** [WP TOC]
+&nbsp; &nbsp;  TABLE OF CONTENTS
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-row"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of TOC section&nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Left column (not used)&nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span3-5"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC column&nbsp; &nbsp; &nbsp; --&gt;
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="toc-line"&gt;
+&lt;!-- Level 1 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC column&nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Right column (not used)&nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC section&nbsp; &nbsp; &nbsp;  --&gt;
+&lt;!-- ========================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.14 &emsp; HTML associated with the first line of the TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Apart from the normal responsive grid classes there are four other classes that are associated with the first line of the TOC: <span class="code">toc-line</span>, <span class="code">toc-lev</span>, <span class="code">toc-lev1-num</span> and <span class="code">toc-lev1-text</span>.</p>
+
+                    <p class="hyp">There is also a peculiar class in the <span class="code">&lt;a&gt;</span> anchor element: <span class="code">js--sc-030000</span>; this class is used for slow scrolling (if the link is on the same page, it scrolls down to the link point fast at first and more slowly as it approaches the link point. It&rsquo;s called <span class="first-use">slow scrolling</span> and it will be our first venture into JavaScript. I cover it in <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a>. For the time being I will explain how it should be formatted, there isn&rsquo;t actually a class with that name in any of the CSS files, it is effectively a label that triggers a bit of Java code when it is clicked.</p>
+
+                    <p class="hyp">The other four classes are fairly standard and they are:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC level 1 css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c11-15">.toc-line {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for the TOC */
+&nbsp; &nbsp; margin:0;
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.8rem;
+}
+.toc-line li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the TOC list text */
+.toc-line li a:visited,
+.toc-line li a:hover,
+.toc-line li a:active {
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+
+.toc-lev:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the link hover background */
+.toc-lev:visited { transition: background-color 0.2s; }
+.toc-lev:hover,
+.toc-lev:active&nbsp; { background-color: #f8f8f8; }
+
+.toc-lev1-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for TOC level 1 number */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; width: 5%;
+&nbsp; &nbsp; margin-top: 0.6rem;
+&nbsp; &nbsp; margin-bottom: 0.4rem;
+}
+.toc-lev1-text {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* container for TOC level 1 text */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; width: 95%;
+&nbsp; &nbsp; margin-top: 0.6rem;
+&nbsp; &nbsp; margin-bottom: 0.4rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.15 &emsp; CSS associated with the first line of the TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Working through the HTML, the first line of the TOC is an unordered list in the central column area of the responsive grid, it has the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;ul class="toc-line"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is declared with a <span class="code">&lt;ul&gt;</span> element and is given the class <span class="code">toc-line</span>.</p>
+
+                    <p class="hyp">The CSS behind the <span class="code">toc-line</span> class is the same sort of stuff we have for most of the other things we&rsquo;ve looked at, it assigns fonts, font-size, margins, text colour &amp;c. specifically it does the following (in no particular order):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin:0;
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.8rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It clears the margins (sets them to zero)</p>
+
+                    <p class="hyp">The text is set to a <span style="color: #466c9c">dark blue</span> colour (<span class="code">#466c9c</span>), using the Concourse font with British settings and a font size of 0.8&nbsp;rem (19&nbsp;px on a full width screen).</p>
+
+                    <p class="hyp">Boiler plate stuff.</p>
+
+                    <p class="hyp">The only new thing it does is set the list style:</p>
+
+                    <p class="hyp">I covered this (briefly) in the previous section (<a class="xref js--sc-110501" href="#">&sect;&nbsp;11.5.1</a>), the <span class="code">toc-line</span> style is being applied to an unordered list element <span class="code">&lt;ul&gt;</span> and this will have list entries within it, these are normally displayed with a bullet point (&bull;), setting the list-style to none (<span class="code">list-style: none</span>) prevents this. We don&rsquo;t want bullet points preceding the TOC entries.</p>
+
+                    <p class="hyp">The entries in the TOC are all clickable links; they will either transfer the browser to a new web page or will scroll to a point on the current web page; and that means that the <span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> pseudo-classes need to be set up. That&rsquo;s what the next bit does:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-line li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the TOC list text */
+.toc-line li a:visited,
+.toc-line li a:hover,
+.toc-line li a:active {
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #4C6C9C;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is slightly different to the approach taken in the brief introduction of <a class="xref js--sc-110501" href="#">&sect;&nbsp;11.5.1</a>, essentially all I&rsquo;ve done here is remove the underlining from the links (<span class="code">text-decoration: none</span>) and I&rsquo;ve made sure that the link colour matches that for the <span class="code">toc-line</span> style, I&rsquo;ve set it to (<span class="code">#466c9c</span>).</p>
+
+                    <p class="hyp">The unusual thing is that I&rsquo;ve applied those properties to all four states of the link (<span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span>), with these rules the link will never change appearance. Now at this point you may think I&rsquo;m being even more stupid than usual; <span class="first-use">&ldquo;but your links do change&rdquo;</span> you might say, and you would be right, if you go to the web page and hover the mouse over the first line of the TOC it does indeed change, it goes from this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-37">
+                            <a href="01-pages/11-05-header/02-images/fig-11-37.png" data-lightbox="fig-set" data-title="Figure 11.37 - Level 1 TOC entry normal state">
+                                <img style="max-width: 700" src="01-pages/11-05-header/02-images/fig-11-37.png" alt="Figure 11.37 - Level 1 TOC entry normal state">
+                            </a>
+                            <figcaption>Figure 11.37 &emsp; Level 1 TOC entry normal state</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">to this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-38">
+                            <a href="01-pages/11-05-header/02-images/fig-11-38.png" data-lightbox="fig-set" data-title="Figure 11.38 - Level 1 TOC with mouse hover">
+                                <img style="max-width: 700" src="01-pages/11-05-header/02-images/fig-11-38.png" alt="Figure 11.38 - Level 1 TOC with mouse hover">
+                            </a>
+                            <figcaption>Figure 11.38 &emsp; Level 1 TOC with mouse hover</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The background goes grey. So yes there is a difference when the mouse hovers over the link, but it isn&rsquo;t quite what you think, the link itself is split into two parts, the number and the text and these in turn are held in another <span class="code">div</span> (within the <span class="code">&lt;a&gt;</span> element) and this has its own class <span class="code">toc-lev</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-15a">&lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;&nbsp;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now in the <span class="first-use">note</span> at the end of<a class="hlink nohyp" href="11-02-header.html#js--110201a">&sect;&nbsp;11.2.1</a> I made a bit of a throw-away statement, I said &ldquo;These pseudo-classes (<span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span>) can be applied to any class, not just links.&rdquo;</p>
+
+                    <p class="hyp">And that&rsquo;s what I&rsquo;ve done here, if I just applied it to the link I would get:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-39">
+                            <a href="01-pages/11-05-header/02-images/fig-11-39.png" data-lightbox="fig-set" data-title="Figure 11.39 - Level 1 TOC with hover applied just to the link">
+                                <img style="max-width: 700" src="01-pages/11-05-header/02-images/fig-11-39.png" alt="Figure 11.39 - Level 1 TOC with hover applied just to the link">
+                            </a>
+                            <figcaption>Figure 11.39 &emsp; Level 1 TOC with hover applied just to the link</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The changed background would be just around the link itself and I want it to span the whole area (in this case, the width of the page). To do this I&rsquo;ve applied the <span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> pseudo classes to the <span class="code">div</span> within the <span class="code">&lt;a&gt;</span> element.</p>
+
+                    <p class="hyp">Let&rsquo;s go through it in stages. So far we have a <span class="code">&lt;ul&gt;</span> element with class <span class="code">toc-line</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;ul class="toc-line"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Next I add a list element with a link (anchor) element within it</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-15b">&lt;ul class="toc-line"&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;&nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ok, the list element is just a standard list element<span class="code"> &lt;li&gt;</span> without any associated classes. Next is the anchor element and this actually contains the address we want to link to, in this example it is <span class="code">href="03-00-grid.html#js--000000</span>, it will open the page <span class="code">03-00-grid.html</span> and position it so that the id <span class="code">js--000000</span> is at the top of the page.</p>
+
+                    <p class="hyp">The bit before this, the <span class="code">class="js--sc-030000"</span> is used to manage the slow scrolling, I explain everything about it in <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a> (it&rsquo;s basically the scroll point for a section <span class="code">030000</span> in this case preceded by <span class="code">js--sc-</span>) for the time being we can ignore it.</p>
+
+                    <p class="hyp">The next thing with the anchor is the text that is displayed on the page; this is on the next line and is contained within a <span class="code">div</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-15c">&lt;ul class="toc-line"&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;&nbsp;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now we&rsquo;re getting to it.</p>
+
+                    <p class="hyp">All the text for the link (everything between <span class="code">&lt;a&gt; and &lt;/a&gt;</span>) is contained in a <span class="code">div</span> with class <span class="code">toc-lev</span> and this class has the following entries in the CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-lev:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the link hover background */
+.toc-lev:visited { transition: background-color 0.2s; }
+.toc-lev:hover,
+.toc-lev:active&nbsp; { background-color: #f8f8f8; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If the mouse is hovering over any part of the <span class="code">toc-lev</span> class, or if the mouse is clicked (active) on any part of the class, the background colour for the class will change to light grey (<span class="code">#f8f8f8</span>), this is done with the last two lines:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-lev:hover,
+.toc-lev:active&nbsp; { background-color: #f8f8f8; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In addition, the transition property has been used to fade-in the background colour change over 0.2 seconds (short, but noticeable), this is done with the first two lines:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-lev:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the link hover background */
+.toc-lev:visited { transition: background-color 0.2s; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And that is all the <span class="code">toc-lev</span> class does, it is a container, the background colour of which will change whenever a mouse is hovered over any part of it or its contents.</p>
+
+                    <p class="hyp">The only reason for doing this is it gives more control over the size and positioning of the links&nbsp;&mdash;&nbsp;it just makes it look better. It is a useful technique.</p>
+
+                    <p class="hyp">The last thing is the actual text that appears, this has been designed to look like the contents of a document with different text sizes, indents and formatting; to analyse it in slightly more detail I&rsquo;ve added some construction lines: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-40">
+                            <a href="01-pages/11-05-header/02-images/fig-11-40.png" data-lightbox="fig-set" data-title="Figure 11.40 - TOC indent construction">
+                                <img src="01-pages/11-05-header/02-images/fig-11-40.png" alt="Figure 11.40 - TOC indent construction">
+                            </a>
+                            <figcaption>Figure 11.40 &emsp; TOC indent construction</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The green line in the middle is the centre line of the central column, the width of the central column is the same as the black line at the top.</p>
+
+                    <p class="hyp">The level 1 TOC entry (starting with the single number 3) is aligned with the left edge of the central area. The number (3) and the text (Grid, fonts, columns and responsive design) are placed in separate boxes (in a very similar way to the heading number and text (see <a class="hlink nohyp" href="11-04-header.html#js--110400">&sect;&nbsp;11.4</a>). The number is in an inline block with the class <span class="code">toc-lev1-num</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;...</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the text is in another inline element with the class <span class="code">toc-lev1-text</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">...&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This allows the number and text to be separated (by adding margins) to create the effect shown in <a class="xref js--sc-f11-40" href="#">Figure&nbsp;11.40</a>, there is a gap (A) between the number and the text, when it comes to the remaining elements of the TOC, the number of each entry is indented and aligned with the text of the level 1 entry.</p>
+
+                    <p class="hyp">This can be seen with the CSS for these two classes:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-lev1-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for TOC level 1 number */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; width: 5%;
+&nbsp; &nbsp; margin-top: 0.6rem;
+&nbsp; &nbsp; margin-bottom: 0.4rem;
+}
+.toc-lev1-text {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* container for TOC level 1 text */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; width: 95%;
+&nbsp; &nbsp; margin-top: 0.6rem;
+&nbsp; &nbsp; margin-bottom: 0.4rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There is a lot of common stuff in these classes, mostly to do with the text and spacing so let&rsquo;s get that out of the way:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t3-b";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; margin-top: 0.6rem;
+&nbsp; &nbsp; margin-bottom: 0.4rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Both entries are defined as <span class="code">inline-block</span>; this means that margins can be assigned to them.</p>
+
+                    <p class="hyp">The font is Concourse bold and uses the British settings (<span class="code">ss02</span>), the top margin is set to 0.6 rem (giving space above) and the bottom margin is 0.4 rem (slightly less space below, this leads the eye to think that the links that follow are associated with this link, which they are).</p>
+
+                    <p class="hyp">The <span class="code">vertical-align: top</span> property (for the number) ensures that the number is not being centred vertically if the text spans two lines.</p>
+
+                    <p class="hyp">The only other thing specified is the width; the number is given a width of 5% of the screen width:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; width: 5%;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the text gets the other 95%:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">nbsp; &nbsp; width: 95%;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This means that on a full width screen, the inline-block holding the number is 37 pixels wide, being 5% of the central column width (and that is 748 pixels).</p>
+
+                    <p class="hyp">The text has the remaining 95% and this is 711 pixels.</p>
+
+                    <p class="hyp">This means that the distance A in <a class="xref js--sc-f11-40" href="#">Figure&nbsp;11.40</a> is the 5% or 37&nbsp;px on a full width screen.</p>
+
+                    <p class="hyp">That is pretty much it for the level 1 TOC entry, there is some responsive stuff and I cover that in <a class="xref js--sc-110504 utx" href="#">&sect;&nbsp;11.5.4</a>. The only other thing is completing all the list elements:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It closes the list entry and the unordered list.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION INLINE - TOC LEVEL 2/3 AND COLUMNS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110502b">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-text-box"><h4>TOC Level 2/3 and columns</h4></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The second part of the TOC is the level 2 and 3 entries that are placed in columns (shown in blue):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-41">
+                            <a href="01-pages/11-05-header/02-images/fig-11-41.png" data-lightbox="fig-set" data-title="Figure 11.41 - TOC level 2 and 3 entries">
+                                <img  src="01-pages/11-05-header/02-images/fig-11-41.png" alt="Figure 11.41 - TOC level 2 and 3 entries">
+                            </a>
+                            <figcaption>Figure 11.41 &emsp; TOC level 2 and 3 entries</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Apart from the columns, the level 2 and level 3 TOC entries are very similar in construction to the level 1 entries discussed in the previous section (there are just more of them).</p>
+
+                    <p class="hyp">Let&rsquo;s look at the code, HTML first</p>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC level 1, 2 &amp; 3 html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-16">&lt;!-- ************************************************************************** [WP TOC]
+&nbsp; &nbsp;  TABLE OF CONTENTS
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-row"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of TOC section&nbsp; &nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Left column (not used)&nbsp;  --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span3-5"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC column&nbsp; &nbsp; &nbsp; --&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="toc-line"&gt;
+&lt;!-- Level 1 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="toc-list"&gt;
+&lt;!-- Level 2 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030100" href="03-00-grid.html#js--030100"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.1&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;The Gerstner grid&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030101" href="03-00-grid.html#js--030101"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.1.1&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;How the Gerstner grid works&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030200" href="03-02-grid.html#js--030200"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.2&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;Fonts, point size and line spacing&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030201" href="03-02-grid.html#js--030201"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.1&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Fonts&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030202" href="03-02-grid.html#js--030202"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.2&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Point size and the anatomy of a font&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030203" href="03-02-grid.html#js--030203"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.3&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Line spacing&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030204" href="03-02-grid.html#js--030204"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.4&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Different fonts, same point size&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030205" href="03-02-grid.html#js--030205"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.5&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Anatomy of a font on a website&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030206" href="03-02-grid.html#js--030206"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.2.6&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Pixels, percentage, ems and rems&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 2 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030300" href="03-03-grid.html#js--030300"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.3&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;The website layout&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030301" href="03-03-grid.html#js--030301"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.3.1&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Website page widths&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030302" href="03-03-grid.html#js--030302"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.3.2&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Number of columns&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030303" href="03-03-grid.html#js--030303"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.3.3&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Font size&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 2 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030400" href="03-04-grid.html#js--030400"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.4&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;Summary&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC column&nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Right column (not used)&nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC section&nbsp; &nbsp; &nbsp;  --&gt;
+&lt;!-- ========================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.16 &emsp; HTML associated with level 2 and 3 of the TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The bit in green is all the level 2 and level 3 entries for section 3 of the website, it&rsquo;s a bit confusing because there is so much of it, let&rsquo;s simplify it by having only two entries</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC level 2 &amp; 3 html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-17">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="toc-line"&gt;
+&lt;!-- Level 1 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030000" href="03-00-grid.html#js--000000"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;3&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="toc-list"&gt;
+&lt;!-- Level 2 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030100" href="03-00-grid.html#js--030100"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.1&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;The Gerstner grid&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&lt;!-- Level 3 --&gt;&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-030101" href="03-00-grid.html#js--030101"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;3.1.1&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;How the Gerstner grid works&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC column&nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="rg-col rg-span1-5"&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Right column (not used)&nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of TOC section&nbsp; &nbsp; &nbsp;  --&gt;
+&lt;!-- ========================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.17 &emsp; Simplified HTML associated with level 2 and 3 of the TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now there is just one level 2 entry and one level 3 entry and they are virtually identical to the level 1 entries of the previous section.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC level 2 &amp; 3 css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c11-18">.toc-list {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for the TOC */
+&nbsp; &nbsp; margin:0;
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; column-count: 2;
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.8rem;
+}
+.toc-list li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the TOC list text */
+.toc-list li a:visited,
+.toc-list li a:hover,
+.toc-list li a:link {
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+
+
+.toc-lev2-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for TOC level 2 number */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t4-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.75rem;&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; width: 20%;
+&nbsp; &nbsp; margin-left: 10%;
+&nbsp; &nbsp; margin-top: 0.5rem;
+&nbsp; &nbsp; margin-bottom: 0.1rem;
+}
+.toc-lev2-text {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* container for TOC level 2 text */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t4-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.75rem;
+&nbsp; &nbsp; width: 70%;
+&nbsp; &nbsp; margin-top: 0.5rem;
+&nbsp; &nbsp; margin-bottom: 0.1rem;
+}
+
+
+.toc-lev3-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for TOC level 3 number */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-size: 0.7rem;
+&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; width: 20%;
+&nbsp; &nbsp; margin-left: 10%;
+&nbsp; &nbsp; margin-top: 0.2rem;
+&nbsp; &nbsp; margin-bottom: 0.2rem;
+}
+.toc-lev3-text {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* container for TOC level 3 text */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-size: 0.7rem;
+&nbsp; &nbsp; width: 70%;
+&nbsp; &nbsp; margin-top: 0.2rem;
+&nbsp; &nbsp; margin-bottom: 0.2rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.18 &emsp; CSS associated with level 2 and 3 of the TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In exactly the same way as the level 1 entries, the level 2 and 3 entries are contained in an unordered list:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;ul class="toc-list"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The level 1 entries had the class <span class="code">toc-line</span> (and this spanned the entire central column), the level 2 and 3 unordered list is of class <span class="code">toc-list</span> and this is very similar to the <span class="code">toc-line</span> class, the only important difference being the column structure it applies, here&rsquo;s the CSS</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-18a">.toc-list {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for the TOC */
+&nbsp; &nbsp; margin:0;
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; column-count: 2;
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.8rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This compares with the level 1 <span class="code">toc-line</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c11-18b">.toc-line {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for the TOC */
+&nbsp; &nbsp; margin:0;
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.8rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s identical apart from the column-count property (i.e. it clears the margins, removes any bullet point with list-style and sets the font to Concourse at 0.8&nbsp;rem in the same blue colour).</p>
+
+                    <p class="hyp">The <span class="code">column-count</span> property is new, it splits the element it is applied to into columns on the screen; the number of columns being specified by the number that follows the property, in our case it is two columns (<span class="code">column-count:2</span>).</p>
+
+                    <p class="hyp">The column property is a standard (but not that widely used) feature of websites, it tries to split everything to which the column count applies (in our case this is the unordered list holding all the level 2 and level 3 TOC entries) into even length columns. By default the columns have a gap in the middle:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-42">
+                            <a href="01-pages/11-05-header/02-images/fig-11-42.png" data-lightbox="fig-set" data-title="Figure 11.42 - 2 column arrangement">
+                                <img  src="01-pages/11-05-header/02-images/fig-11-42.png" alt="Figure 11.42 - 2 column arrangement">
+                            </a>
+                            <figcaption>Figure 11.42 &emsp; 2 column arrangement</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If the count were set to 3 the arrangement would be:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-43">
+                            <a href="01-pages/11-05-header/02-images/fig-11-43.png" data-lightbox="fig-set" data-title="Figure 11.43 - 3 column arrangement">
+                                <img  src="01-pages/11-05-header/02-images/fig-11-43.png" alt="Figure 11.43 - 3 column arrangement">
+                            </a>
+                            <figcaption>Figure 11.43 &emsp; 3 column arrangement</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The default gap between the columns stays the same (about 0.8&nbsp;rem). It is perfectly possible to adjust the gap between the columns (gap C in <a class="xref js--sc-f11-40" href="#">Figure&nbsp;11.40</a>) using the <span class="code">column-gap</span> property, this can be set in all the same units as margins and padding (rem, em, px, percentage &amp;c.).</p>
+
+                    <p class="hyp">The default arrangement if fine for us, it looks about right.</p>
+
+                    <p class="hyp">Surprisingly that is all there is to columns&nbsp;&mdash;&nbsp;<span class="first-use">easy isn&rsquo;t it</span>.</p>
+
+                    <p class="hyp">The <span class="code">toc-list</span> class finally sets the base properties for links within it (this is identical to the <span class="code">toc-line</span> class in the previous section):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css">.toc-list li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format the TOC list text */
+.toc-list li a:visited,
+.toc-list li a:hover,
+.toc-list li a:link {
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; color: #4C6C9C;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Text decoration (underlining) is taken off all forms of the link and the colour is set to the TOC blue colour (<span class="code">#4C6C9C</span>).</p>
+
+                    <p class="hyp">The rest of the level 2 and 3 entries are just the same as that for the level 1 stuff, let&rsquo;s go through it anyway.</p>
+
+                    <p class="hyp">Each TOC entry is an anchor link <span class="code">&lt;a&gt;</span> contained in a list element <span class="code">&lt;li&gt;</span>: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-18c">&lt;li&gt;&lt;a class="js--sc-030100" href="03-00-grid.html#js--030100"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;3.1&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;The Gerstner grid&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is a level 2 link (the only difference being it uses classes with <span class="code">lev2</span> in them).</p>
+
+                    <p class="hyp">Firstly there is the <span class="code">&lt;a class="js--sc-030100"</span>, this is the JavaScript link to the section being referenced (for slow scrolling, see <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a>) followed by the link to the point on the relevant page: <span class="code">href="03-00-grid.html#js--030100"&gt;</span> in this case. This links to the section 3.1 ID (<span class="code">js--030100</span>) on web page <span class="code">03-00-grid.html</span>.</p>
+
+                    <p class="hyp">The number and text displayed for this link is (just like the level 1 entries) contained in a div with a class for the number (<span class="code">toc-lev2-num</span>) and another for the text (<span class="code">toc-lev2-text</span>).</p>
+
+                    <p class="hyp">Again these classes are almost identical to those of the level 1 entries:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-lev2-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TOC level 2 number */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t4-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.75rem;
+&nbsp; &nbsp; vertical-align: top;
+&nbsp; &nbsp; width: 20%;
+&nbsp; &nbsp; margin-left: 10%;
+&nbsp; &nbsp; margin-top: 0.5rem;
+&nbsp; &nbsp; margin-bottom: 0.1rem;
+}
+.toc-lev2-text {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* TOC level 2 text */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; font-family: "conc-t4-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.75rem;
+&nbsp; &nbsp; width: 70%;
+&nbsp; &nbsp; margin-top: 0.5rem;
+&nbsp; &nbsp; margin-bottom: 0.1rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Both classes use the Concourse t4 variant (this is slightly heavier than the t3 variety, but not as heavy as t3 bold) with British styling (<span class="code">ss02</span>) and a font size of 0.75&nbsp;rem (a bit smaller than the level 1 entries). Top and bottom margins are defined to give the correct spacing and both classes are set to <span class="code">inline-block</span>.</p>
+
+                    <p class="hyp">The thing that may be slightly confusing is the left margin; this is set to 10%. Now, I want the number of the level 2 and 3 entries to be indented to align with the text of the level 1 entry. In the level 1 entry, the inline-block holding the number was set to a width of 5% (of the central column).</p>
+
+                    <p class="hyp">Logically then, the left margin of the level 2 number should also be 5% of the central column width, <span class="first-use">so why is it set to 10%?</span></p>
+
+                    <p class="hyp">Well, it&rsquo;s because of the columns, the left margin percentage is of the containing element and in this case that is the TOC columns (remember there are two columns each half the width of the central column area), since the column is half the width of the central column (374&nbsp;px) the indent needs to be 10% to give the 37&nbsp;pixel indentation (i.e. 5% of 748&nbsp;pixels for the whole central column).</p>
+
+                    <p class="hyp">The width of the <span class="code">toc-lev2-num</span> class is 20% (equivalent to 10% of the central columns width), this is to allow for the extra number in the level 2 and 3 entries (level 2 entries have two number separated by a full stop, level 3 have three numbers separated by full stops compared with level 1 that only have single number).</p>
+
+                    <p class="hyp">The text class <span class="code">toc-lev2-text</span> has its width set to 70%; logically if the number block is 10% you would expect the text block to be the remaining 80%, the reason it isn&rsquo;t is to accommodate the gap between the columns, this is just shy of 1&nbsp;rem or 10%; hence the text block is only 70% and not 80% (I deducted the 10% from the text block).</p>
+
+                    <p class="hyp">The level 3 classes are identical to the level 2 classes except that they are called <span class="code">toc-lev3-num</span> and <span class="code">toc-lev3-text</span>. The level 3 classes use the default font and font size set in the <span class="code">toc-list</span> class (Concourse t3 regular) and so no font declarations are included in these classes, they are inherited from the <span class="code">toc-list</span> class.</p>
+
+                    <p class="hyp">A table of contents should only have one level 1 entry, but can have as many level 2 and 3 entries as required, each entry being everything between the <span class="code">&lt;li&gt;…&lt;/li&gt;</span> tags.</p>
+
+                    <p class="hyp">In the example HTML above (<a class="xref js--sc-c11-16" href="#">Code&nbsp;11.16</a>) there are 14 level 2 and level 3 entries</p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.5.3 BALANCING TOC COLUMNS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110503">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.5.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Balancing TOC columns</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Look at the following TOC from the website (this is section 1):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-44">
+                            <a href="01-pages/11-05-header/02-images/fig-11-44.png" data-lightbox="fig-set" data-title="Figure 11.44 - Columns with gaps">
+                                <img  src="01-pages/11-05-header/02-images/fig-11-44.png" alt="Figure 11.44 - Columns with gaps">
+                            </a>
+                            <figcaption>Figure 11.44 &emsp; Columns with gaps</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve done something here to stop the columns wrapping the 1.4 entry into the previous columns, if I did nothing it would look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-45">
+                            <a href="01-pages/11-05-header/02-images/fig-11-45.png" data-lightbox="fig-set" data-title="Figure 11.45 - Columns without gaps">
+                                <img  src="01-pages/11-05-header/02-images/fig-11-45.png" alt="Figure 11.45 - Columns without gaps">
+                            </a>
+                            <figcaption>Figure 11.45 &emsp; Columns without gaps</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The level 2 entry 1.4 is in the left column and all the level 3 entries are in the right columns (the 1.4.1, 1.4.2 &amp;c. entries). This is because the column property just tries to make the left and right columns the same height.</p>
+
+                    <p class="hyp">Now this is just a stylistic point, but I think it is better to have the 1.4 at the top of the right column, keeping it with all its sub-sections.</p>
+
+                    <p class="hyp">To do this, I have to convince the column property that there are more entries than there actually are. Look at the HTML for this section:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC Section 1 html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-19">               &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC&nbsp;-&nbsp;1. introduction
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+                    &lt;ul class="toc-line"&gt;
+&lt;!-- Level 1 --&gt;        &lt;li&gt;&lt;a class="js--sc-010000" href="01-00-introduction.html#js--010000"&gt;
+                               &lt;div class="toc-lev"&gt;&lt;span class="toc-lev1-num"&gt;1&lt;/span&gt;&lt;span class="toc-lev1-text"&gt;Introduction&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+
+                    &lt;ul class="toc-list"&gt;
+&lt;!-- Level 2 --&gt;        &lt;li&gt;&lt;a class="js--sc-010100" href="01-01-howtouse.html#js--010100"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;1.1&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;How to use this website&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 2 --&gt;        &lt;li&gt;&lt;a class="js--sc-010200" href="01-02-paying.html#js--010200"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;1.2&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;How to pay for this document&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 2 --&gt;        &lt;li&gt;&lt;a class="js--sc-010300" href="01-03-typographical.html#js--010300"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;1.3&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;Open source fonts: a compromise&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                            &lt;br class="toc-pad"&gt;
+                            &lt;br class="toc-pad"&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 2 --&gt;        &lt;li&gt;&lt;a class="js--sc-010400" href="01-04-tools.html#js--010400"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev2-num"&gt;1.4&lt;/span&gt;&lt;span class="toc-lev2-text"&gt;Tools of the trade&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 3 --&gt;        &lt;li&gt;&lt;a class="js--sc-010401" href="01-04-tools.html#js--010401"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;1.4.1&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Tools for website development&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 3 --&gt;        &lt;li&gt;&lt;a class="js--sc-010402" href="01-04-tools.html#js--010402"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;1.4.2&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Tools for the words&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 3 --&gt;        &lt;li&gt;&lt;a class="js--sc-010403" href="01-04-tools.html#js--010403"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;1.4.3&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Tools for the images&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+&lt;!-- Level 3 --&gt;        &lt;li&gt;&lt;a class="js--sc-010404" href="01-04-tools.html#js--010404"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev3-num"&gt;1.4.4&lt;/span&gt;&lt;span class="toc-lev3-text"&gt;Summary&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+               &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.19&emsp; Section 1 TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is all bog standard TOC stuff; it looks just like the stuff we did in the previous section, just with links for section 1 instead of section 3.</p>
+
+                    <p class="hyp">The only unusual thing is the two lines in green (lines 19 &amp; 20). Here there are two identical break elements:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;br class="toc-pad"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To recap, all the &lt;br&gt; element does is force a line break; in this case it has been given a class (<span class="code">toc-pad</span>) short for TOC padding.</p>
+
+                    <p class="hyp">The CSS for this is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.toc-pad { visibility: visible;}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* Padding for even columns */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Not much to it, I just make sure it&rsquo;s visible (i.e. it is actually displayed on the web page).</p>
+
+                    <p class="hyp">This works by making the column rendering logic in the browser think a line break has occurred and that the particular element is taking up an addition line in the column and it rebalances the column accordingly.</p>
+
+                    <p class="hyp">The number of <span class="code">&lt;br class="toc-pad"&gt;</span> lines required is purely dependent on how far you have to push the list down before the element you want breaks into the next columns. You have to judge it by trying it.</p>
+
+                    <p class="hyp">The only rule for using the <span class="code">&lt;br class="toc-pad"&gt;</span> in a list is that it has to be within the confines of a <span class="code">&lt;li&gt;…&lt;/li&gt;</span> element (for some reason that I&rsquo;m not sure about), you can&rsquo;t put it after the closing <span class="code">&lt;/li&gt;</span>. </p>
+
+                    <p class="hyp">Remember this it is only to manage my own pedantic proclivities, if you are perfectly happy with the columns breaking wherever they will don&rsquo;t bother with the <span class="code">toc-pad</span> breaks.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.5.4 TABLE OF CONTENTS RESPONSIVE ELEMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110504">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.5.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Table of contents responsive elements</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There isn&rsquo;t much to this, basically when the screen narrows to 760&nbsp;px or less, the level 2 and level 3 entries become a single column and any <span class="code">toc-pad</span> breaks disappear:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC responsive css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-css wrap" id="js--c11-20">@media all and (max-width:760px){
+&nbsp; &nbsp; .toc-list { column-count: 1; }
+&nbsp; &nbsp; .toc-pad { display: none; }
+&nbsp; &nbsp; .toc-lev1-num, .toc-lev1-text { font-size: 120% ;}
+&nbsp; &nbsp; .toc-lev2-num, .toc-lev2-text { font-size: 120% ;}
+&nbsp; &nbsp; .toc-lev3-num, .toc-lev3-text { font-size: 120% ;}
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.20 &emsp; TOC responsive CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">When the screen reaches 760&nbsp;px, the <span class="code">toc-list</span> class column count is set to 1</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; .toc-list { column-count: 1; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Any <span class="code">toc-pad</span> line breaks are removed:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; .toc-pad { display: none; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the fonts are all set to a larger size:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; .toc-lev1-num, .toc-lev1-text { font-size: 120% ;}
+&nbsp; &nbsp; .toc-lev2-num, .toc-lev2-text { font-size: 120% ;}
+&nbsp; &nbsp; .toc-lev3-num, .toc-lev3-text { font-size: 120% ;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.5.5 COPYING AND IMPLEMENTING A TOC LIST
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110505">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.5.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Copying and implementing a TOC list</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The hardest thing about the TOC list is setting it up and adding all the bits that are needed.</p>
+
+                    <p class="hyp">Let&rsquo;s say we are going to make the TOC list for section 4 of this website, this has the following sections, web pages and section IDs:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t98-01">
+<!-- Header row -->     <tr class="no-border">
+                            <th class="leading"></th>
+                            <th class="table-cent">Toc lev</th>
+                            <th colspan="2" class="table-left">TOC ENTRY (NUM &amp; TEXT)</th>
+                           <th class="table-left">WEB PAGE</th>
+                           <th class="table-cent">SECTION ID</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                        <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent" style="width: 14%"><span class="code">L</span></td>
+                        <td class="table-cent" style="width: 9.9%"><span class="code">NNN</span></td>
+                        <td class="table-left" style="width: 34.0%"><span class="code">TTTT</span></td>
+                        <td class="table-left" style="width: 24%"><span class="code">filename.html</span></td>
+                        <td class="table-cent" style="width: 18.1%"><span class="code">SSSSSS</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">1</td>
+                            <td class="table-cent">4</td>
+                            <td class="table-left">Getting started</td>
+                            <td class="table-left">04-00-starting.html</td>
+                            <td class="table-cent">040000</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">2</td>
+                            <td class="table-cent">4.1</td>
+                            <td class="table-left">The Brackets text editor</td>
+                            <td class="table-left">04-01-starting.html</td>
+                            <td class="table-cent">040100</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">3</td>
+                            <td class="table-cent">4.1.1</td>
+                            <td class="table-left">Getting and installing Brackets</td>
+                            <td class="table-left">04-01-starting.html</td>
+                            <td class="table-cent">040101</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">3</td>
+                            <td class="table-cent">4.1.2</td>
+                            <td class="table-left">Adding extensions to Brackets</td>
+                            <td class="table-left">04-01-starting.html</td>
+                            <td class="table-cent">040102</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">2</td>
+                            <td class="table-cent">4.2</td>
+                            <td class="table-left">The Website structure</td>
+                            <td class="table-left">04-02-starting.html</td>
+                            <td class="table-cent">040200</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">3</td>
+                            <td class="table-cent">4.2.1</td>
+                            <td class="table-left">Naming conventions</td>
+                            <td class="table-left">04-02-starting.html</td>
+                            <td class="table-cent">040201</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">3</td>
+                            <td class="table-cent">4.2.2</td>
+                            <td class="table-left">The website folder structure</td>
+                            <td class="table-left">04-02-starting.html</td>
+                            <td class="table-cent">040202</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">2</td>
+                            <td class="table-cent">4.3</td>
+                            <td class="table-left">The basics of a web page</td>
+                            <td class="table-left">04-03-starting.html</td>
+                            <td class="table-cent">040300</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="5" class="table-caption">Table 11.2 &emsp; Example TOC entries for section 4</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Each TOC entry has a very similar format:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-20a">&lt;li&gt;&lt;a class="js--sc-<span class="h-light">SSSSSS</span>" href="<span class="h-light">filename.html</span>#js--<span class="h-light">SSSSSS</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">L</span>-num"&gt;<span class="h-light">NNN</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">L</span>-text"&gt;<span class="h-light">TTTT</span>&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The bits in bold and underlined in red need to be filled in for each entry (three in the first <span class="code">&lt;li&gt;</span> and four in the <span class="code">&lt;div&gt;</span>). The final thing looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">TOC Section 4 html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-21">&lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TOC&nbsp;-&nbsp;4. GETTING STARTED
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&lt;ul class="toc-line"&gt;&nbsp;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040000</span>" href="<span class="h-light">04-00-starting.html</span>#js--<span class="h-light">040000</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">1</span>-num"&gt;<span class="h-light">4</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">1</span>-text"&gt;Getting started&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+&lt;ul class="toc-list"&gt;&nbsp;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040100</span>" href="<span class="h-light">04-01-starting.html</span>#js--<span class="h-light">040100</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">2</span>-num"&gt;<span class="h-light">4.1</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">2</span>-text"&gt;The Brackets text editor&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040101</span>" href="<span class="h-light">04-01-starting.html</span>#js--<span class="h-light">040101</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">3</span>-num"&gt;<span class="h-light">4.1.1</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">3</span>-text"&gt;Getting and installing Brackets&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040102</span>" href="<span class="h-light">04-01-starting.html</span>#js--<span class="h-light">040102</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">3</span>-num"&gt;<span class="h-light">4.1.2</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">3</span>-text"&gt;Adding extensions to Brackets&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040200</span>" href="<span class="h-light">04-02-starting.html</span>#js--<span class="h-light">040200</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">2</span>-num"&gt;<span class="h-light">4.2</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">2</span>-text"&gt;The Website Structure&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040201</span>" href="<span class="h-light">04-02-starting.html</span>#js--<span class="h-light">040201</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">3</span>-num"&gt;<span class="h-light">4.2.1</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">3</span>-text"&gt;Naming conventions&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040202</span>" href="<span class="h-light">04-02-starting.html</span>#js--<span class="h-light">040202</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">3</span>-num"&gt;<span class="h-light">4.2.2</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">3</span>-text"&gt;The website folder structure&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &lt;li&gt;&lt;a class="js--sc-<span class="h-light">040300</span>" href="<span class="h-light">04-03-starting.html</span>#js--<span class="h-light">040300</span>"&gt;
+&lt;div class="toc-lev"&gt;&lt;span class="toc-lev<span class="h-light">2</span>-num"&gt;<span class="h-light">4.3</span>&lt;/span&gt;<br>&lt;span class="toc-lev<span class="h-light">2</span>-text"&gt;The basics of a web page&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &lt;/li&gt;&nbsp;
+ &lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.21&emsp; Completed section 4 TOC</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Keep copying everything between the &lt;li&gt; and &lt;/li&gt; and change the bits shown in red. Remember the level 1 entry has its own unordered list declaration.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-04-header.html#js--110400">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-06-header.html#js--110600">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
