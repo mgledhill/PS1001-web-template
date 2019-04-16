@@ -27,7 +27,7 @@ Development work always takes place on a separate branch. Development branches a
 | Branch             | Revision
 | ------------------ | --------------------------------------
 | master             | <img src="https://img.shields.io/badge/Published-P16-4BABC5.svg">
-| d-11-header        | <img src="https://img.shields.io/badge/d-P16.11.02.svg">
+| d-11-header        | <img src="https://img.shields.io/badge/d-P16.11.03.svg">
 
 
 
@@ -106,7 +106,7 @@ The following table contains the development branch abbreviations and associated
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
-<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P16.11.02.svg">
+<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P16.11.03.svg">
 
 ## Additional information
 

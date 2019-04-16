@@ -1,0 +1,1085 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understaning the web template footer element">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             11-04-HEADER.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+16 Apr 2019   d-P16.11.03  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/11-06-header/05-local-js/11-06-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/11-06-header/01-local-css/11-06-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The footer element | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="11-03-header.html#js--110500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="10-00-sections.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="12-00-lists.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="12-00-lists.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P16.11.03-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>11</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">11</span>Headers, footers and basic navigation</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 11 Header
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-110000" href="11-00-header.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">11</span><span class="toc-lev1-text">Headers, footers and basic navigation</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-110100" href="11-01-header.html#js--110100">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.1</span><span class="toc-lev2-text">The header components</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110101" href="11-01-header.html#js--110101">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.1.1</span><span class="toc-lev3-text">The basic <span class="code">&lt;header&gt;</span> code</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110200" href="11-02-header.html#js--110200">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.2</span><span class="toc-lev2-text">The fundamentals of navigation and links</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110201" href="11-02-header.html#js--110201">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.1</span><span class="toc-lev3-text"><span class="code">:link</span>, <span class="code">:visited</span>, <span class="code">:hover</span> and <span class="code">:active</span> selectors</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110202" href="11-02-header.html#js--110202">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.2.2</span><span class="toc-lev3-text">The <span class="code">transition</span> property</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110300" href="11-03-header.html#js--110300">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.3</span><span class="toc-lev2-text">The basic navigation bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110301" href="11-03-header.html#js--110301">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.1</span><span class="toc-lev3-text">The navigation bar row containers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110302" href="11-03-header.html#js--110302">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.2</span><span class="toc-lev3-text">The navigation bar buttons</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110303" href="11-03-header.html#js--110303">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.3</span><span class="toc-lev3-text">The navigation bar link text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110304" href="11-03-header.html#js--110304">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.3.4</span><span class="toc-lev3-text">Making the basic navigation bar responsive</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110400" href="11-04-header.html#js--110400">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.4</span><span class="toc-lev2-text">The chapter title bar</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110401" href="11-04-header.html#js--110401">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.4.1</span><span class="toc-lev3-text">Title bar responsive elements</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110500" href="11-05-header.html#js--110500">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.5</span><span class="toc-lev2-text">The table of contents (TOC)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110501" href="11-05-header.html#js--110501">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.1</span><span class="toc-lev3-text">A brief explanation of the unordered list</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110502" href="11-05-header.html#js--110502">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.2</span><span class="toc-lev3-text">Table of contents, the underlying construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110503" href="11-05-header.html#js--110503">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.3</span><span class="toc-lev3-text">Balancing TOC columns</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110504" href="11-05-header.html#js--110504">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.4</span><span class="toc-lev3-text">Table of contents responsive elements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110505" href="11-05-header.html#js--110505">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.5.5</span><span class="toc-lev3-text">Copying and implementing a TOC list</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-110600" href="11-06-header.html#js--110600">
+                            <div class="toc-lev"><span class="toc-lev2-num">11.6</span><span class="toc-lev2-text">The footer</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-110601" href="11-06-header.html#js--110601">
+                        <div class="toc-lev"><span class="toc-lev3-num">11.6.1</span><span class="toc-lev3-text">Footer responsive elements</span></div></a>
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+    </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 11.6 THE FOOTER
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110600">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>11.6</h2></div>
+                 <div class="sub-title-text-box"><h2>The footer</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The footer lives at the end of each page (before the closing <span class="code">&lt;/body&gt;</span> tag). The footer is identical for every page. It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-46">
+                            <a href="01-pages/11-06-header/02-images/fig-11-46.png" data-lightbox="fig-set" data-title="Figure 11.46 - A typical footer">
+                                <img src="01-pages/11-06-header/02-images/fig-11-46.png" alt="Figure 11.46 - A typical footer">
+                            </a>
+                            <figcaption>Figure 11.46 &emsp; A typical footer</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The footer is everything below the white central area (with the slight cream colour). The footer does the following things:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">It provides a border that terminates the white central area following the sections</p></li>
+
+                        <li><p class="hyp">It provides links to common sections of the website and a quick link back to the top of the page</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All the links in the footer animate, the common links are underlined when the mouse hovers over the link:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-47">
+                            <a href="01-pages/11-06-header/02-images/fig-11-47.png" data-lightbox="fig-set" data-title="Figure 11.47 - Example animated footer links">
+                                <img src="01-pages/11-06-header/02-images/fig-11-47.png" alt="Figure 11.47 - Example animated footer links">
+                            </a>
+                            <figcaption>Figure 11.47 &emsp; Example animated footer links</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is pretty easy, and even better, short.</p>
+
+                    <p class="hyp">Here&rsquo;s the HTML, I&rsquo;ve shown it in relation to the <span class="code">&lt;/body&gt;</span> and <span class="code">&lt;/html&gt;</span> elements that end the page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footer html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-22">&lt;!-- ************************************************************************** [WP FOOTER]
+&nbsp; &nbsp;  FOOTER
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;footer class="footer"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of footer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class="footer-nav"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of footer nav&nbsp; &nbsp; &nbsp; --&gt;
+&lt;li&gt;&lt;a class="js--sc-000000" href="#"&gt;&lt;span class="top-nav-icon" style="color:#5b7daf"&gt;t&lt;/span&gt;Top&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800100"&gt;Contact MG&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800200"&gt;Acknowledgments&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800300"&gt;Colophon&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800400"&gt;Legal &amp;amp; Privacy&lt;/a&gt;&lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of footer nav&nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/footer&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of footer&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&lt;!-- ========================================================================== [WP END]&nbsp; &nbsp; &nbsp; --&gt;
+
+&nbsp; &nbsp; &lt;/body&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.22 &emsp; Footer HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footer css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c11-23">.footer {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* footer row */
+&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; margin-left: -1px;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* offset start to cover body left border */
+&nbsp; &nbsp; width: 100.16%;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* make wider than body to cover borders */
+&nbsp; &nbsp; padding-top: 15px;
+&nbsp; &nbsp; padding-bottom: 0;
+&nbsp; &nbsp; background-color: #fbfaf6;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.85rem;
+&nbsp; &nbsp; line-height: 100%;
+&nbsp; &nbsp; border-top: 1px solid #ebebeb
+ }
+.footer-spacer {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* spacing between navigation entries */
+&nbsp; &nbsp; margin-left:2rem;
+&nbsp; &nbsp; font-size: 0.8rem;
+}
+
+.footer-nav {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for footer navigation list */
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; text-align: center;
+}
+
+.footer-nav li {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format list elements */
+&nbsp; &nbsp; display: inline;
+&nbsp; &nbsp; margin-left:2rem;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+.footer-nav li:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove left margin from first nav link */
+&nbsp; &nbsp; margin-left: 0;
+}
+.footer-nav li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format anchor properties */
+.footer-nav li a:visited {
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+&nbsp; &nbsp; transition: border-bottom 0.2s;}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+&nbsp; &nbsp; border-bottom: 2px solid #5b7daf;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.23 &emsp; footer css</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The footer starts with the <span class="code">&lt;footer&gt;</span> semantic element and this is given the class <span class="code">footer</span>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;footer class="footer"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The footer is a wrapper for the whole footer and its class defines the basic properties for things within the footer (fonts, background colour &amp;c.). It starts with something peculiar though:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; margin-left: -1px;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/* offset start to cover body left border */
+&nbsp; &nbsp; width: 100.16%;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* make wider than body to cover borders */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first bit is OK, it just sets the bottom margin to zero (there is no gap after the footer). The next bit is the odd bit; I&rsquo;ve set the left margin to -1 pixel and then set the width to be 100.16%.</p>
+
+                    <p class="hyp">The reason for this becomes obvious if I set the margin to zero and the width to 100% (what you would think is the normal setting). If I do this I get:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-48">
+                            <a href="01-pages/11-06-header/02-images/fig-11-48.png" data-lightbox="fig-set" data-title="Figure 11.48 - Footer set to a width of 100%">
+                                <img src="01-pages/11-06-header/02-images/fig-11-48.png" alt="Figure 11.48 - Footer set to a width of 100%">
+                            </a>
+                            <figcaption>Figure 11.48 &emsp; Footer set to a width of 100%</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s the border at the edges; it&rsquo;s hard to see in the above so I&rsquo;ve enlarged it below:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-49">
+                            <a href="01-pages/11-06-header/02-images/fig-11-49.png" data-lightbox="fig-set" data-title="Figure 11.49 - Footer set to a width of 100% and body borders">
+                                <img style="max-width: 290px" src="01-pages/11-06-header/02-images/fig-11-49.png" alt="Figure 11.49 - Footer set to a width of 100% and body borders">
+                            </a>
+                            <figcaption>Figure 11.49 &emsp; Footer set to a width of 100% and body borders</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The problem is the left and right borders (highlighted in orange), these borders are the ones defined ages ago when we set up the <span class="code">body</span> style (<a class="hlink nohyp" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">body {
+&nbsp; &nbsp; max-width: 1276px;
+&nbsp; &nbsp; height: 1000px;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; background-color: #fff;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* make content area white */
+&nbsp; &nbsp; border-left:&nbsp; 1px solid #ededed;
+&nbsp; &nbsp; border-right: 1px solid #ededed;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There is a 1 pixel wide border to the left and right of everything within the <span class="code">&lt;body&gt;...&lt;/body&gt;</span> elements and since the footer is within the <span class="code">body</span> element it gets the border too.</p>
+
+                    <p class="hyp">Now, I don&rsquo;t want the border lines at the side of the footer, I want the footer to draw a border at the top that completes the page.</p>
+
+                    <p class="hyp">To get round this, I make the footer start 1 pixel to the left (hence the <span class="code">margin-left: -1px</span>), this moves the footer over the border defined by the <span class="code">body</span> class, hiding it.</p>
+
+                    <p class="hyp">The problem now is that if the footer starts one pixel to the left and has a width of 100%; it will finish one pixel before the right border. I need to make it two pixels wider than this (to cover the right border as well), at the maximum page width of 1276 pixels, 2 pixels is 0.16%; so I need to make the footer width 100.16% and that is what I have done:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-left: -1px;&nbsp;  &nbsp; &nbsp; &nbsp;  /* offset start to cover body left border */
+&nbsp; &nbsp; width: 100.16%;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;/* make wider than body to cover borders */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s a bit fiddly but it works.</p>
+
+                    <p class="hyp">The rest of the footer style is more boiler plate:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; padding-top: 15px;
+&nbsp; &nbsp; padding-bottom: 0;
+&nbsp; &nbsp; background-color: #fbfaf6;
+&nbsp; &nbsp; font-family: "conc-t3-r";
+&nbsp; &nbsp; font-feature-settings: "ss02";
+&nbsp; &nbsp; font-size: 0.85rem;
+&nbsp; &nbsp; line-height: 100%;
+&nbsp; &nbsp; border-top: 1px solid #ebebeb</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve added some padding at the top to give a gap between the last section of the page and the footer links, there is no padding at the bottom.</p>
+
+                    <p class="hyp">The background colour is set to <span class="code">#fbfaf6</span>; this is the same colour as the borders outside the page area (defined in the <span class="code">&lt;html&gt;</span> class). This makes the web page look finished, the white body text area stops and is finished at the bottom with an area that is the same colour as the outside edges&nbsp;&mdash;&nbsp;<span class="first-use">it looks right</span>.</p>
+
+                    <p class="hyp">Next is the usual text properties, it&rsquo;s all Concourse with the British stylistic set, the font size is 0.85 rem and the line height is set to 100%.</p>
+
+                    <p class="hyp">Finally, I give the footer a top border, 1 pixel high in the same colour as the left and right borders of the body area (<span class="code">#ebebeb</span>); again this is just to finish the page properly.</p>
+
+                    <p class="hyp">By itself it just finishes the page off, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f11-50">
+                            <a href="01-pages/11-06-header/02-images/fig-11-49.png" data-lightbox="fig-set" data-title="Figure 11.50 - Empty footer">
+                                <img src="01-pages/11-06-header/02-images/fig-11-50.png" alt="Figure 11.50 - Empty footer">
+                            </a>
+                            <figcaption>Figure 11.50 &emsp; Empty footer</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If that&rsquo;s all you want, all you need is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;footer class="footer"&gt;&lt;/footer&gt;
+&nbsp; &nbsp; &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To add the five basic links:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Top</p></li>
+
+                        <li><p class="hyp">Contacts</p></li>
+
+                        <li><p class="hyp">Acknowledgements</p></li>
+
+                        <li><p class="hyp">Colophon</p></li>
+
+                        <li><p class="hyp">Legal &amp; privacy</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Then another unordered list is needed. This is fairly similar to the TOC in the previous section. The HTML is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c11-23a">&lt;ul class="footer-nav"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of footer nav --&gt;
+&lt;li&gt;&lt;a class="js--sc-000000" href="#"&gt;&lt;span class="top-nav-icon" style="color:#4C6C9C"&gt;t&lt;/span&gt;Top&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800100"&gt;Contact MG&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800200"&gt;Acknowledgments&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800300"&gt;Colophon&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="80-00-finally.html#js--800400"&gt;Legal &amp;amp; Privacy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                     &lt;!-- End of footer nav   --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"> The unordered list is of class <span class="code">footer-nav</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;ul class="footer-nav"&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="code">footer-nav</span> has the same function as <span class="code">toc-line</span> and <span class="code">toc-list</span> in the previous section:</p>
+
+                    <p class="hyp">The basic <span class="code">footer-nav</span> removes the bullet points from the list entries (<span class="code">list-style: none</span>) and centre aligns the text within it (<span class="code">text-align: center</span>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.footer-nav {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* container for footer navigation list */
+&nbsp; &nbsp; list-style: none;
+&nbsp; &nbsp; text-align: center;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Next comes the basic properties for the list entries themselves:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.footer-nav li {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format list elements */
+&nbsp; &nbsp; display: inline;
+&nbsp; &nbsp; margin-left:2rem;
+&nbsp; &nbsp; color: #4C6C9C;
+}
+.footer-nav li:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove left margin from first nav link */
+&nbsp; &nbsp; margin-left: 0;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is slightly different; I&rsquo;ve set the list to be <span class="code">inline</span>, not <span class="code">inline-block</span>. The reason for this is that I don&rsquo;t want to specify a width for the list elements; I want them to be just as wide as the text they contain (plus a left margin), other than that they behave the same, the all stack up next to each other on the same line.</p>
+
+                    <p class="hyp">The left margin of 2 rem is used to space the entries. This margin is the gap between the lozenge character (<span class="code">&loz;</span>) and the following link (to the right) is 48&nbsp;px at the maximum screen width.</p>
+
+                    <p class="hyp">The left margin is qualified by the <span class="code">first-child</span> pseudo class, </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.footer-nav li:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove left margin from first nav link */
+&nbsp; &nbsp; margin-left: 0;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first (left most) link does not follow a lozenge character and it doesn&rsquo;t need a margin at the left, hence the pseudo-class removes the margin from the first list entry.</p>
+
+                    <p class="hyp">Finally, the link text colour is set to a blue colour (<span class="code">#4c6c9c</span>), same blue as the TOC entries.</p>
+
+                    <p class="hyp">The <span class="code">footer-nav</span> is also used to define the appearance of the links contained in each list entry:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.footer-nav li a:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* format anchor properties */
+.footer-nav li a:visited {
+&nbsp; &nbsp; color: #4C6C9C;
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+&nbsp; &nbsp; transition: border-bottom 0.2s;}
+.footer-nav li a:hover,
+.footer-nav li a:active {
+&nbsp; &nbsp; border-bottom: 2px solid #5b7daf;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The links have no text decoration</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; text-decoration: none;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The link text colour is set to the same standard blue under all circumstances:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; color: #4C6C9C;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">:link</span> and <span class="code">:visited</span> text is given a transparent bottom border (this does not show on the screen)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid transparent;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And a transition condition is added to fade in the bottom border when a mouse is hovered over the link:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; transition: border-bottom 0.2s;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">:hover</span> and <span class="code">:active</span> links just apply the bottom border:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 2px solid #5b7daf;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The bottom border is 2 pixels high and is in a slightly lighter (but complementary) blue.</p>
+
+                    <p class="hyp">Back to the HTML to join it together:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;li&gt;&lt;a class="js--sc-000000" href="#"&gt;&lt;span class="top-nav-icon" style="color:#4C6C9C"&gt;t&lt;/span&gt;Top&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first class <span class="code">js--sc-000000</span> is again used for slow scrolling (see <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a>), in this case it is the ID at the very top of the current web page.</p>
+
+                    <p class="hyp">The <span class="code">href="#"</span> is a place holder, it effectively means a link to a point (an ID) on the current page, again this is to do with the slow scrolling in <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a>. For the time being just accept that it works.</p>
+
+                    <p class="hyp">This is followed by the text that is to be the visible link text. The first link (above) has the text <span class="menu">t Top</span>. The up arrow is part of my icon font (PS Icons) and is used in exactly the same way as it was in the nav bar (<a class="hlink nohyp" href="11-03-header.html#js--110303">&sect;&nbsp;11.3.3</a>). The font is selected by using a <span class="code">&lt;span&gt;</span> element of class <span class="code">top-nav-icon</span> (again see <a class="hlink nohyp" href="11-03-header.html#js--110303">&sect;&nbsp;11.3.3</a>). This time I&rsquo;ve applied a qualifying style directly in the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;span class="top-nav-icon" style="color:#4C6C9C"&gt;t&lt;/span&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">style="color:#4C6C9C"</span> applies CSS code directly in the HTML. This is one of the mechanisms for applying CSS that I discussed right at the start in <a class="hlink nohyp" href="05-03-basics.html#js--050300">&sect;&nbsp;5.3</a>. I&rsquo;ve used it here to change the colour applied in top-nav-icon (this was a light grey inherited from its parent class) to the same blue as the link text. </p>
+
+                    <p class="hyp">Doing it this way, the style property overrides any colour set in the CSS. It is a useful technique for manipulating individual properties of a style&nbsp;&mdash;&nbsp;<span class="first-use">use it sparingly though; if you are using it everywhere, you should define another class.</span></p>
+
+                    <p class="hyp">The rest of the first link is just standard text with the word &ldquo;Top&rdquo; and this is followed by the closing link <span class="code">&lt;/a&gt;</span>.</p>
+
+                    <p class="hyp">There is one more thing; the link is followed by another <span class="code">&lt;span&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You may be wondering what <span class="code">&amp;#x25C7;</span> means.</p>
+
+                    <p class="hyp">Well, it is a way of entering special character in HTML. I explain how to use special characters in HTML in <a class="hlink nohyp" href="06-11-box.html#js--061100">&sect;&nbsp;6.11</a>. I&rsquo;ll give a quick explanation here.</p>
+
+                    <p class="hyp">All fonts have special characters that are not available via keys on the key board. In Word, they are called symbols and are added by pressing the <span class="menu">&Omega;</span> button (<span class="menu">insert tab</span>).</p>
+
+                    <p class="hyp">In HTML, any character can be entered by using its character code. HTML character codes are preceded by the ampersand and hash characters (<span class="code">&amp;#</span>) and finished with a semicolon (<span class="code">;</span>). </p>
+
+                    <p class="hyp">The character codes for all characters are predefined and standard; they are based on the original ASCII character set and then expanded with the use of Unicode characters.</p>
+
+                    <p class="hyp">The character code for the letter &ldquo;A&rdquo; is 65 (decimal).</p>
+
+                    <p class="hyp">To enter the letter &ldquo;A&rdquo; in HTML using character code, use the following:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">&amp;#65;</span></p>
+
+                    <p class="hyp">Character codes can also be entered using hexadecimal notation <span class="first-use">(just like Mark Watney in the Martian)</span>. I cover hexadecimals in (<a class="hlink nohyp" href="05-07-basics.html#js--050701">&sect;&nbsp;5.7.1</a>)</p>
+
+                    <p class="hyp">The hexadecimal for 65 is 41 and in HTML this would be:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">&amp;#x41;</span></p>
+
+                    <p class="hyp">To use hexadecimal character codes, the hex number is preceded by <span class="code">&amp;#x</span>.</p>
+
+                    <p class="hyp">In the footer I&rsquo;m using the hexadecimal character code <span class="code">&amp;#x25C7;</span> this displays the lozenge character (<span class="code">&loz;</span>). The same character in decimal is <span class="code">&amp;#9671;</span>.</p>
+
+                    <p class="hyp">In this particular instance I&rsquo;ve enclosed the lozenge character in a <span class="code">&lt;span&gt;</span> with class <span class="code">footer-spacer</span>. This has the following CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.footer-spacer {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* spacing between navigation entries */
+&nbsp; &nbsp; margin-left:2rem;
+&nbsp; &nbsp; font-size: 0.8rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Not much too it, it just separates the lozenge from the preceding text by 2&nbsp;rem:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-left:2rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And sets the font size to 0.8 rem (slightly smaller than the text, again this just looks right).</p>
+
+                    <p class="hyp">The remaining links all have the following format (this example is for contact):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;li&gt;&lt;a href="80-00-finally.html#js--800100"&gt;Contact MG&lt;/a&gt;&lt;span class="footer-spacer"&gt;&amp;#x25C7;&lt;/span&gt;&lt;/li&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s identical in structure to the first (Top) link, but it doesn&rsquo;t have the PS-Icon character and the link is to a point on a different web page (ID <span class="code">js--800100</span> on web page <span class="code">80-00-finally.html</span>). In my case, all the remaining links point to the same web page (<span class="code">80-00-finally.html</span>), just to different points on that page.</p>
+
+                    <p class="hyp">Each link apart from the last is followed by a lozenge separator.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 11.6.1 FOOTER RESPONSIVE ELEMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--110601">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>11.6.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Footer responsive elements</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The responsive elements of the footer are very straight forward, basically I stop displaying the lozenge separator character at a screen width of 1120&nbsp;px or less and I adjust the height of the footer and its top padding (making it shorter) as the screen width reduces:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footer responsive css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c11-24">@media all {.footer { height: 60px; }}
+@media all and (max-width:1276px) {.footer { height: 60px; padding-top: 15px; }}
+@media all and (max-width:1120px) {.footer-spacer { display: none; } }
+@media all and (max-width:960px)&nbsp; {.footer { height: 57px; padding-top: 15px; }}
+@media all and (max-width:920px)&nbsp; {.footer { height: 54px; padding-top: 14px; }}
+@media all and (max-width:880px)&nbsp; {.footer { height: 54px; padding-top: 13px; }}
+@media all and (max-width:840px)&nbsp; {.footer { height: 51px; padding-top: 12px; }}
+@media all and (max-width:800px)&nbsp; {.footer { height: 50px; padding-top: 12px; }}
+@media all and (max-width:760px)&nbsp; {.footer { height: 47px; padding-top: 11px; }}
+@media all and (max-width:720px)&nbsp; {.footer { height: 44px; padding-top: 10px; }}
+@media all and (max-width:680px)&nbsp; {.footer { height: 41px; padding-top:&nbsp; 9px; }}
+@media all and (max-width:520px)&nbsp; {.footer-nav li { margin-left:0.5rem; }}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 11.24 &emsp; footer responsive css</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">At the minimum screen width I set a standard left margin of 0.5 rem.</p>
+
+                    <p class="hyp">And that&rsquo;s it for the header and footer.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="11-05-header.html#js--110500">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="12-00-lists.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
