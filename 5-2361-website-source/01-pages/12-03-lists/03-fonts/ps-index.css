@@ -1,0 +1,39 @@
+/* PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+Title :          WEBSITE FONTS                                     PS-INDEX.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   www.practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+Loads the PS_INDEX.WOFF file and assigns a style to it.
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue    Author         Reason for Modification
+-------------------------------------------------------------------------------
+16 Apr 2019   d-P17.12.01  M. Gledhill    Page created
+-----------------------------------------------------------------------------*/
+
+
+/* ****************************************************************************
+   PS-INDEX FONT
+   ************************************************************************* */
+
+@font-face {                    /* Concourse T3 Index - regular */
+    font-family: 'ps-index';
+    src: url(woff/ps-index.woff) format('woff');
+}
+
+
+.ps-index {font-family: "ps-index"}

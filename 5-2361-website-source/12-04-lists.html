@@ -17,14 +17,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="Metadata">
-        <meta name="description" content="how unordered lists work and how to change the sybmol used">
+        <meta name="description" content="how to use unordered lists as hanging indents">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              12-01-LISTS.HTML
+Title :          WEBSITE TEMPLATE                              12-04-LISTS.HTML
 *******************************************************************************
 DETAILS
 
@@ -47,7 +47,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-16 Apr 2019   d-P17.12.01  M. Gledhill    Page created
+16 Apr 2019   d-P17.12.02  M. Gledhill    Page created
 
 ******************************************************************************* -->
 
@@ -74,7 +74,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/12-01-lists/05-local-js/12-01-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/12-04-lists/05-local-js/12-04-scroll.js"></script>
 
 
 
@@ -89,7 +89,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/12-01-lists/01-local-css/12-01-codeline.css">
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/12-04-lists/01-local-css/12-04-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +109,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Unordered lists | PracticalSeries: Web Development</title>
+        <title>Hanging indents | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +129,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="12-00-lists.html#js--120000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="12-03-lists.html#js--120300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +141,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="12-02-lists.html#js--120200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -155,7 +155,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Dev-d--P17.12.01-BF504D.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P17.12.02-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -229,16 +229,16 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP SECTION]
-     SECTION - 12.1 THE UNNUMBERED LIST
+     SECTION - 12.4 HANGING INDENTS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--120100">           <!-- Start of section         -->
+        <section class="section-std" id="js--120400">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>12.1</h2></div>
-                 <div class="sub-title-text-box"><h2>The unnumbered list</h2></div>
+                 <div class="sub-title-num-box"><h2>12.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Hanging indents</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -252,130 +252,74 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">Numbered lists and unnumbered lists are very similar in the way they operate, the unnumbered list is slightly easier to grasp and that is where I&rsquo;m going to start.</p>
-
-                    <p class="hyp">Unnumbered lists consist of a series of list entries <span class="code">&lt;li&gt;...&lt;/li&gt;</span> contained in an unordered list element <span class="code">&lt;ul&gt;...&lt;/ul&gt;</span>. There is no limit to the number of list elements that can be in an unordered list.</p>
-
-                    <p class="hyp">A default unnumbered list looks like this:</p>
+                    <p class="hyp">Hanging indents (sometimes called hanging paragraphs) are where the text is indented from the left margin (sometimes with prefixed text such as <span class="first-use">&ldquo;Note:&rdquo;)</span>. An example being:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-01">
-                            <a href="01-pages/12-01-lists/02-images/fig-12-01.png" data-lightbox="fig-set" data-title="Figure 12.1 - Default unnumbered list">
-                                <img src="01-pages/12-01-lists/02-images/fig-12-01.png" alt="Figure 12.1 - Default unnumbered list">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-12">
+                            <a href="01-pages/12-04-lists/02-images/fig-12-12.png" data-lightbox="fig-set" data-title="Figure 12.12 - A hanging indent">
+                                <img src="01-pages/12-04-lists/02-images/fig-12-12.png" alt="Figure 12.12 - A hanging indent">
                             </a>
-                            <figcaption>Figure 12.1 &emsp; Default unnumbered list</figcaption>
+                            <figcaption>Figure 12.12 &emsp; A hanging indent</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This isn&rsquo;t quite what I want, for a start the bullet point is actually positioned to the left of the central column area (the &ldquo;Entry&rdquo; text is aligned with the left edge of the central column). I want it to look like this:</p>
+                    <p class="hyp">Although it is not particularly obvious, this is actually another example of an unordered list. The only difference being that instead of using a bullet point, it is using the word &ldquo;Note:&rdquo; and this is aligned with the left margin of the central area.</p>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-02">
-                            <a href="01-pages/12-01-lists/02-images/fig-12-02.png" data-lightbox="fig-set" data-title="Figure 12.2 - Default unnumbered list">
-                                <img src="01-pages/12-01-lists/02-images/fig-12-02.png" alt="Figure 12.2 - Default unnumbered list">
-                            </a>
-                            <figcaption>Figure 12.2 &emsp; Required unnumbered list arrangement</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">Four things have changed here: the bullet point is now indented into the central column area, the spacing between the bullet point and the list text is larger, the bullet point is bigger and finally, the line spacing has been increased.</p>
-
-                    <p class="hyp">The HTML for the default unnumbered list (<a class="xref js--sc-f12-01" href="#">Figure&nbsp;12.1</a>) is:</p>
+                    <p class="hyp">The HTML for this is:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="code-extract">
-                        <div class="code-header">Unnumbered list html</div>
+                        <div class="code-header">Hanging indent HTML</div>
                         <div class="code-area">
 
-                            <pre class="prettyprint linenums lang-html wrap" id="js--c12-01">&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Entry 1&lt;/li&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Entry 2&lt;/li&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Entry 3&lt;/li&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Entry 4&lt;/li&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Entry 5&lt;/li&gt;
-&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
-
-</pre>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c12-08">&nbsp; &nbsp; &lt;ul class="note"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Supernatant is the water in the settling tank&lt;/li&gt;
+&nbsp; &nbsp; &lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;</pre>
 
                         </div>
-                        <div class="code-caption">Code 12.1 &emsp; Basic unordered list</div>
+                        <div class="code-caption">Code 12.8 &emsp; Hanging indent HTML</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">It&rsquo;s easy, declare an unordered (unnumbered) element <span class="code">&lt;ul&gt;</span> and put each entry in a <span class="code">&lt;li&gt;</span> element.</p>
+                    <p class="hyp">Ok, it&rsquo;s just an unordered list <span class="code">&lt;ul&gt;</span> with a single list entry that contains the text of the note. The class of the <span class="code">&lt;ul&gt;</span> is called <span class="code">note</span>.</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note            -->
-                        <li>Unordered, unnumbered which is it? Well officially it&rsquo;s unordered, I use unnumbered because it doesn&rsquo;t have numbers and the numbered list does. I use unnumbered and unordered interchangeably&nbsp;&mdash;&nbsp;unordered is the official and correct name.</li>
-                    </ul>                                       <!-- End of note              -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The proper HTML for the web template version (Figure 12.2) is pretty similar:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">
-                        <div class="code-header">Web template unordered list html</div>
-                        <div class="code-area">
-
-                            <pre class="prettyprint linenums lang-html wrap" id="js--c12-02">&lt;ul class="list-no-num"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of unnumbered list --&gt;
-&nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 1&lt;/p&gt;&lt;/li&gt;
-&nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 2&lt;/p&gt;&lt;/li&gt;
-&nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 3&lt;/p&gt;&lt;/li&gt;
-&nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 4&lt;/p&gt;&lt;/li&gt;
-&nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 5&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of unnumbered list   --&gt;</pre>
-
-                        </div>
-                        <div class="code-caption">Code 12.2 &emsp; Web template unordered list</div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The main difference is that the <span class="code">&lt;ul&gt;</span> element has been given a class: <span class="code">list-no-num;</span> let&rsquo;s have a look at that (in fact all the associated CSS):</p>
+                    <p class="hyp">The work is done in the CSS:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="code-extract">
-                        <div class="code-header">Web template unnumbered list css</div>
+                        <div class="code-header">hanging indent css</div>
                         <div class="code-area">
 
-                            <pre class="prettyprint linenums lang-css wrap" id="js--c12-03">.list-no-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* TEXT STYLE&nbsp;-&nbsp;Unnumbered list */
-&nbsp; &nbsp; font-family: "conc-t3-r";
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c12-09">.note {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* TEXT STYLE&nbsp;-&nbsp;Note (hanging indent) */
+&nbsp; &nbsp; font-family: "eqty-ta-i";&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* notes are unordered lists with some */
+}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* margin manipulation to create hanging effect */
+.note li {
 &nbsp; &nbsp; list-style: none;
-&nbsp; &nbsp; margin-left: 5rem;
-}
-.list-no-num li:before {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* prefix the list with a large dot and */
-&nbsp; &nbsp; content: "\25cf"; float: left;&nbsp; &nbsp; &nbsp; &nbsp; /* force the margin to the correct position */
-&nbsp; &nbsp; margin-left: -2rem;
-}
-.list-no-num li p {
-&nbsp; &nbsp; font-family: "eqty-ta-r";
-&nbsp; &nbsp; padding-left: 1rem;
+&nbsp; &nbsp; margin-left: 3.3rem;
+&nbsp; &nbsp; margin-right: 0.2rem;
 &nbsp; &nbsp; margin-bottom: 0.85rem;
+}
+.note li:before {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* prefix the list with Note: and */
+&nbsp; &nbsp; content: "Note:"; float: left;&nbsp; &nbsp;  /* force the margin to the edge of the row */
+&nbsp; &nbsp; margin-left: -3.3rem;
 }</pre>
 
                         </div>
-                        <div class="code-caption">Code 12.3 &emsp; Web template unnumbered list css</div>
+                        <div class="code-caption">Code 12.9 &emsp; Hanging indent css</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The first bit of this is fairly easy:</p>
+                    <p class="hyp">I don&rsquo;t think any of this will surprise you.</p>
 
-                    <p class="hyp">The basic font for the unordered list is set to Concourse (I know it is showing as Equity, that&rsquo;s because I change the style further down):</p>
+                    <p class="hyp">The first bit sets the unordered <span class="code">note</span> class to use the Equity italic font (notes are always in an italic serif font):</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -383,14 +327,17 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-family: "conc-t3-r";</pre>
+                            <pre class="prettyprint lang-css">.note {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* TEXT STYLE&nbsp;-&nbsp;Note (hanging indent) */
+&nbsp; &nbsp; font-family: "eqty-ta-i";&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* notes are unordered lists with some */
+}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* margin manipulation to create hanging effect */
+</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I also set the <span class="code">list-style</span> to <span class="code">none</span>:</p>
+                    <p class="hyp">Next I turn off any bullet point styling (just like we did for the unnumbered list <a class="hlink nohyp" href="12-01-lists.html#js--120100">&sect;&nbsp;12.1</a>), this is done in the descendant class <span class="code">.note li</span>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -398,20 +345,15 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; list-style: none;</pre>
+                            <pre class="prettyprint lang-css">.note li {
+&nbsp; &nbsp; list-style: none;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The list style determines what bullet point is used, by setting it to none it doesn&rsquo;t display any bullet point at all (I know the list has bullet points, all I&rsquo;ve done here is turn all the default bullet points off).</p>
-
-                    <p class="hyp">There are lots of different options for list-style (circle, disk, square, &amp;c.), I don&rsquo;t want any of them, I want my own and so I&rsquo;ve turned all the default ones off.</p>
-
-                    <p class="hyp">Next is the margin; this determines where the text in the <span class="code">&lt;li&gt;</span> element starts (not the position of the bullet point).</p>
-
-                    <p class="hyp">All my text starts 5&nbsp;rem in so the margin is set to 5&nbsp;rem:</p>
+                    <p class="hyp">This is followed by some margin manipulation; I want the text for the note to be indented by 3.3&nbsp;rem from the left edge of the central area:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -419,14 +361,14 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-left: 5rem;</pre>
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-left: 3.3rem;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The next bit of the CSS is another of those descendant selectors (in combination with a <span class="first-use">before</span> pseudo-element):</p>
+                    <p class="hyp">I also indent very slightly from the right side, this was just to accommodate the italic font, this had a habit of extending past the page boundary, indenting by 0.2&nbsp;rem just makes it look right:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -434,9 +376,39 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">.list-no-num li:before {
-&nbsp; &nbsp; content: "\25cf"; float: left;
-&nbsp; &nbsp; margin-left: -2rem;
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-right: 0.2rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Finally, I add a bottom margin to act as line spacing between the list entry and anything that follows (this is all very similar to the unnumbered list of <a class="hlink nohyp" href="12-01-lists.html#js--120100">&sect;&nbsp;12.1</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">nbsp; &nbsp; margin-bottom: 0.85rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The only other thing is to add the word &ldquo;Note:&rdquo; and align it with the left edge of the central area. This is very similar to adding the bullet point in <a class="hlink nohyp" href="12-01-lists.html#js--120100">&sect;&nbsp;12.1</a> and is done in exactly the same way. It uses the <span class="code">:before</span> pseudo element. I&rsquo;ll go through it again here:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.note li:before {
+&nbsp; &nbsp; content: "Note:"; float: left;
+&nbsp; &nbsp; margin-left: -3.3rem;
 }</pre>
 
                         </div>
@@ -444,28 +416,9 @@ Date          Issue        Author         Reason for Modification
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is the bit that puts the bullet point in for each <span class="code">&lt;li&gt;</span> element in the unordered list.</p>
+                    <p class="hyp">The <span class="code">:before</span> pseudo element means that the CSS that follows will be inserted before any text that is between the <span class="code">&lt;li&gt;...&lt;/li&gt;</span> tags in the HTML.</p>
 
-                    <p class="hyp">The unordered list element has class <span class="code">list-no-num</span> this means that all the <span class="code">&lt;li&gt;</span> elements in the list are descendants of that class; it is therefore possible to use the descendant selector to select all these <span class="code">&lt;li&gt;</span> elements within the <span class="code">list-no-num</span> class and do something to them. The line</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint lang-css">.list-no-num li:before {</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">selects all the <span class="code">&lt;li&gt;</span> elements in an unordered list within the <span class="code">list-no-num</span> class.</p>
-
-                    <p class="hyp">The <span class="code">:before</span> pseudo element means that the CSS that follows will be inserted <span class="first-use">before</span> any text that is between the <span class="code">&lt;li&gt;...&lt;/li&gt;</span> tags in the HTML.</p>
-
-                    <p class="hyp">The next line puts in the bullet point:</p>
+                    <p class="hyp">The next line puts in the word <span class="first-use">&ldquo;Note:&rdquo;</span>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -473,41 +426,16 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; content: "\25cf"; float: left;</pre>
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; content: "Note:"; float: left;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This inserts the Unicode character 25cf (hexadecimal) before the text within the<span class="code"> &lt;li&gt;</span> element. Unicode character <span class="code">25cf</span> is a big black dot (&#x25CF;).</p>
+                    <p class="hyp">This inserts the text between the quotes (Note:) before any text in the <span class="code">&lt;li&gt;</span> element in the HTML. The text will be in the same style as that defined in the parent class note (i.e. Equity italics). The text is also set to <span class="code">float: left</span> to stop any line breaks.</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NOTE - HANGING INDENT WITH MULTIPLE PARAGRAPHS
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note            -->
-                        <li>In <a class="hlink nohyp" href="06-11-box.html#js--061101">&sect;&nbsp;6.11</a> I explained that Unicode characters could be entered directly in HTML by prefixing the decimal character code with <span class="code">&amp;#</span> and following it with a semicolon(<span class="code">;</span>):</li>
-                    </ul>                                       <!-- End of note              -->
-
-                    <p class="hyp" style="margin-left: 3.4rem; text-align: center"><span class="code">&amp;#65;</span></p>
-
-                    <p class="hyp" style="margin-left: 3.4rem">The above enters an A character. Hexadecimal character codes can be entered by prefixing them with <span class="code">&amp;#x</span>:</p>
-
-                    <p class="hyp" style="margin-left: 3.4rem; text-align: center"><span class="code">&amp;#x41;</span></p>
-
-                    <p class="hyp" style="margin-left: 3.4rem">CSS supports a similar feature; to enter a Unicode character directly with its number, simply precede the hexadecimal (it must be hexadecimal) code with a &ldquo;\&rdquo; character and enter the hexadecimal code as four digits (use leading zeros if necessary). The following would give the A character:</p>
-
-                    <p class="hyp" style="margin-left: 3.4rem; text-align: center"><span class="code">\0041</span></p>
-
-                    <p class="hyp" style="margin-left: 3.4rem"><a class="hlink nohyp" href="06-11-box.html#js--061101">Section&nbsp;6.11</a> gives a full explanation of how to use Unicode characters in HTML, CSS and JavaScript.</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">It works by inserting content before the text in the <span class="code">&lt;li&gt;</span> element, in this case it inserts everything inside the quotes that follow the <span class="code">content</span> property; specifically Unicode character <span class="code">25cf</span> (&#x25CF;). </p>
-
-                    <p class="hyp">The <span class="code">float: left</span> ensures that there is no line break after the bullet point (the content property can be a bit hit and miss in this regard, the <span class="code">float: left</span> makes sure it behaves properly in all browsers).</p>
-
-                    <p class="hyp">The final line:</p>
+                    <p class="hyp">Finally the position of this leading text is set to align with the left edge of the central area:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
@@ -515,97 +443,106 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-left: -2rem;</pre>
+                            <pre class="prettyprint lang-css">nbsp; &nbsp; margin-left: -3.3rem;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Ensures that the bullet point is moved 2&nbsp;rem to the left of where the text starts (the margin is relative to the start of the text, hence the -2rem in the instruction). The final margins look like this:</p>
+                    <p class="hyp">The <span class="code">&lt;li&gt;</span> element has a margin of 3.3&nbsp;rem, giving the <span class="code">:before</span> pseudo element a margin of -3.3&nbsp;rem moves it back to the left edge of the central area.</p>
+
+                    <p class="hyp">And that is it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 12.4.1 Adding a second paragraph without the word Note
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--120401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>12.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Adding a second paragraph without the word &ldquo;Note:&rdquo;</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Sometime these notes require a second paragraph:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-03">
-                            <a href="01-pages/12-01-lists/02-images/fig-12-03.png" data-lightbox="fig-set" data-title="Figure 12.3 - Margin and padding arrangements for unordered lists">
-                                <img src="01-pages/12-01-lists/02-images/fig-12-03.png" alt="Figure 12.3 - Margin and padding arrangements for unordered lists">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-13">
+                            <a href="01-pages/12-04-lists/02-images/fig-12-13.png" data-lightbox="fig-set" data-title="Figure 12.13 - A hanging indent">
+                                <img src="01-pages/12-04-lists/02-images/fig-12-13.png" alt="Figure 12.13 - A hanging indent">
                             </a>
-                            <figcaption>Figure 12.3 &emsp; Margin and padding arrangements for unordered lists</figcaption>
+                            <figcaption>Figure 12.13 &emsp; A hanging indent</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">There is one final thing with the unordered list; it&rsquo;s the last bit of the CSS:</p>
+                    <p class="hyp">This is all done in the HTML. The first paragraph is just an unordered list of class <span class="code">note</span>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
+                    <div class="code-extract">
+                        <div class="code-header">Hanging indent HTML</div>
+                        <div class="code-area">
 
-                            <pre class="prettyprint lang-css">.list-no-num li p {
-&nbsp; &nbsp; font-family: "eqty-ta-r";
-&nbsp; &nbsp; padding-left: 1rem;
-&nbsp; &nbsp; margin-bottom: 0.85rem;
-}</pre>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c12-09a">&nbsp; &nbsp; &lt;ul class="note"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;
+&lt;li&gt;The last Concourse font in the list (Concourse Index 3) does not come with the Equity font set; it provides index numbers with a circular surround.&lt;/li&gt;
+&nbsp; &nbsp; &lt;/ul&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of note&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; --&gt;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is another descendant selector; it says that any <span class="code">&lt;p&gt;</span> element that is contained within <span class="code">&lt;li&gt;</span> elements (that are also contained within the class <span class="code">list-no-num</span>) will have the following properties applied:</p>
+                    <p class="hyp">just like before, the following paragraph is a bit different:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
+                    <div class="code-extract">
+                        <div class="code-header">Hanging indent HTML</div>
+                        <div class="code-area">
 
-                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-family: "eqty-ta-r";
-&nbsp; &nbsp; padding-left: 1rem;
-&nbsp; &nbsp; margin-bottom: 0.85rem;</pre>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c12-09b">&lt;p class="hyp" style="padding-left:3.3rem"&gt;&lt;span class="first-use"&gt;Mr Butterick was kind enough to let me have a copy when I enquired about them&amp;mdash;I like them and I&amp;rsquo;m very grateful to Mr Butterick for allowing me to use them&lt;/span&gt;.&lt;/p&gt;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I.e. the font is changed from Concourse (specified in <span class="code">list-no-num</span>) to Equity, some left padding is applied and a bottom border to 0.85rem is also applied. This makes the text look like normal body text in terms of the font and line spacing.</p>
+                    <p class="hyp">The text is in a normal paragraph element <span class="code">&lt;p class="hyp"&gt;</span>. But has an additional styling element: <span class="code">style="padding-left:3.3rem"</span>. All this does is indent the paragraph by 3.3&nbsp;rem to align with the previous &ldquo;Note&rdquo; paragraph.</p>
 
-                    <p class="hyp">In the HTML, normal unnumbered list entries are contained in both a <span class="code">&lt;li&gt;</span> element and a <span class="code">&lt;p&gt;</span> element:</p>
+                    <p class="hyp">To put the text in italic, it is contained within an <span class="code">&lt;span class="first-use"&gt;</span> element (see <a class="hlink nohyp" href="10-09-sections.html#js--100904">&sect;&nbsp;10.9.4</a>).</p>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint lang-ht,">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;p&gt;Entry 1&lt;/p&gt;&lt;/li&gt;</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">This makes the text appear as it does in <a class="xref js--sc-f12-02" href="#">Figure&nbsp;12.2</a>, i.e. in the Equity (serif) font. If I missed out the <span class="code">&lt;p&gt;</span>, the result would be in Concourse and would have closer spacing, like this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-04">
-                            <a href="01-pages/12-01-lists/02-images/fig-12-04.png" data-lightbox="fig-set" data-title="Figure 12.4 - Unordered list without the &lt;p&gt; element">
-                                <img src="01-pages/12-01-lists/02-images/fig-12-04.png" alt="Figure 12.4 - Unordered list without the &lt;p&gt; element">
-                            </a>
-                            <figcaption>Figure 12.4 &emsp; Unordered list without the &lt;p&gt; element</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The reason for this is it allows the unnumbered list to be used in tables (that generally use the san serif Concourse font.) The general rule is use <span class="code">&lt;p&gt;</span> in the <span class="code">&lt;li&gt;</span> element if the list is in the body text and omit the <span class="code">&lt;p&gt;</span> if the list is in a table.</p>
+                    <p class="hyp">This just turns a normal paragraph into an indented paragraph that matches the first paragraph of a note.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -629,7 +566,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="12-00-lists.html#js--120000">Prev</a>
+                        <a class="xref" href="12-03-lists.html#js--120300">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -639,7 +576,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="12-02-lists.html#js--120200">Next</a>
+                        <a class="xref" href="13-00-links.html#js--000000">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

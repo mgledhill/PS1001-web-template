@@ -17,14 +17,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
         <meta name="description" content="Metadata">
-        <meta name="description" content="An introduction to ordered and unordered lists">
+        <meta name="description" content="Using the web template ps-index font for numbered lists">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              12-00-LISTS.HTML
+Title :          WEBSITE TEMPLATE                              12-03-LISTS.HTML
 *******************************************************************************
 DETAILS
 
@@ -47,9 +47,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-16 Apr 2019   d-P17.12.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+16 Apr 2019   d-P17.12.02  M. Gledhill    Page created
 
 ******************************************************************************* -->
 
@@ -76,7 +74,8 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/12-00-lists/05-local-js/12-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/12-03-lists/05-local-js/12-03-scroll.js"></script>
+
 
 
 
@@ -91,7 +90,8 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/12-00-lists/01-local-css/12-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/12-03-lists/01-local-css/12-03-codeline.css">
+        <!-- PS-Index font  -->         <link rel="stylesheet" type="text/css" href="01-pages/12-03-lists/03-fonts/ps-index.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -111,7 +111,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Lists and notes | PracticalSeries: Web Development</title>
+        <title>Ordered lists with the PS Index font | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -131,7 +131,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="11-06-header.html#js--110600"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="12-02-lists.html#js--120200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -143,7 +143,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="12-01-lists.html#js--120100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="12-04-lists.html#js--120400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -157,7 +157,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Dev-d--P17.12.01-BF504D.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P17.12.02-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -230,16 +230,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 12 LISTS AND NOTES
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 12.3 THE NUMBERED LIST WITH THE PS-INDEX FONT
      ***********************************************************************-->
 
-        <section class="section-std" id="js--120000">           <!-- Start of section         -->
+        <section class="section-std" id="js--120300">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>12.3</h2></div>
+                 <div class="sub-title-text-box"><h2>The numbered list with the<br>PS-Index font</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -253,70 +254,233 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Lists are a common way</span> of grouping items; they come in two forms: Numbered and unnumbered, they look like this:</p>
+                    <p class="hyp">The numbered list in the previous section uses the index version of the Concourse font; it provides index numbers with a circular surround, like this:</p>
 
-                    <p class="hyp"><em>Numbered list:</em></p>
+                    <p class="hyp" style="text-align: center"><span class="index">1 2 3 4 5 6 7 8 9 10 11 12 13</span></p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list   -->
-                        <li><p class="hyp">Formatting text to give a pleasing layout and appearance</p></li>
+                    <p class="hyp">If you are using the open source fonts supplied with the website (rather than the paid for Equity fonts), the chances are that you are using the PS-Index font that I made.</p>
 
-                        <li><p class="hyp">Configuring responsive side bars</p></li>
+                    <p class="hyp">It looks like this:</p>
 
-                        <li><p class="hyp">Different types of headings</p></li>
+                    <p class="hyp" style="text-align: center"><span class="ps-index">A&emsp;B&emsp;C&emsp;D&emsp;E&emsp;F&emsp;G&emsp;H&emsp;I&emsp;J&emsp;K&emsp;L&emsp;M</span></p>
 
-                        <li><p class="hyp">Incorporating figures, tables and footnotes</p></li>
-
-                        <li><p class="hyp">Navigation and links</p></li>
-                    </ol>                                       <!-- End of numbered list     -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp"><em>Unnumbered list:</em></p>
+                    <p class="hyp">I created 26 characters (font designers call them <span class="first-use">glyphs</span>) and mapped them to the following characters:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Using scalable graphics</p></li>
-
-                        <li><p class="hyp">Creating icon fonts</p></li>
-
-                        <li><p class="hyp">Optimising code and graphics</p></li>
-
-                        <li><p class="hyp">How to move content from Word to the website </p></li>
-
-                        <li><p class="hyp">Pictures of my dogs (maybe not so useful)</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                    <table style=" font-size: 2rem" class="table-clean" id="js--t12-01">
+<!-- Data row -->       <tr class="no-border ps-index" style="border-top: 1px solid #cccccc">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 7.692%;">A</td>
+                            <td class="table-cent" style="width: 7.692%;">B</td>
+                            <td class="table-cent" style="width: 7.692%;">C</td>
+                            <td class="table-cent" style="width: 7.692%;">D</td>
+                            <td class="table-cent" style="width: 7.692%;">E</td>
+                            <td class="table-cent" style="width: 7.692%;">F</td>
+                            <td class="table-cent" style="width: 7.692%;">G</td>
+                            <td class="table-cent" style="width: 7.692%;">H</td>
+                            <td class="table-cent" style="width: 7.692%;">I</td>
+                            <td class="table-cent" style="width: 7.692%;">J</td>
+                            <td class="table-cent" style="width: 7.692%;">K</td>
+                            <td class="table-cent" style="width: 7.692%;">L</td>
+                            <td class="table-cent" style="width: 7.692%;">M</td>
+                        </tr>
+<!-- Data row -->       <tr class="serif">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 7.692%;">A</td>
+                            <td class="table-cent" style="width: 7.692%;">B</td>
+                            <td class="table-cent" style="width: 7.692%;">C</td>
+                            <td class="table-cent" style="width: 7.692%;">D</td>
+                            <td class="table-cent" style="width: 7.692%;">E</td>
+                            <td class="table-cent" style="width: 7.692%;">F</td>
+                            <td class="table-cent" style="width: 7.692%;">G</td>
+                            <td class="table-cent" style="width: 7.692%;">H</td>
+                            <td class="table-cent" style="width: 7.692%;">I</td>
+                            <td class="table-cent" style="width: 7.692%;">J</td>
+                            <td class="table-cent" style="width: 7.692%;">K</td>
+                            <td class="table-cent" style="width: 7.692%;">L</td>
+                            <td class="table-cent" style="width: 7.692%;">M</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption"></td>
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I also use a form of unnumbered list to apply a notational style of hanging paragraph (hanging indent):</p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table style=" font-size: 2rem" class="table-clean" id="js--t12-01a">
+<!-- Data row -->       <tr class="no-border ps-index" style="border-top: 1px solid #cccccc">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 7.692%;">N</td>
+                            <td class="table-cent" style="width: 7.692%;">O</td>
+                            <td class="table-cent" style="width: 7.692%;">P</td>
+                            <td class="table-cent" style="width: 7.692%;">Q</td>
+                            <td class="table-cent" style="width: 7.692%;">R</td>
+                            <td class="table-cent" style="width: 7.692%;">S</td>
+                            <td class="table-cent" style="width: 7.692%;">T</td>
+                            <td class="table-cent" style="width: 7.692%;">U</td>
+                            <td class="table-cent" style="width: 7.692%;">V</td>
+                            <td class="table-cent" style="width: 7.692%;">W</td>
+                            <td class="table-cent" style="width: 7.692%;">X</td>
+                            <td class="table-cent" style="width: 7.692%;">Y</td>
+                            <td class="table-cent" style="width: 7.692%;">Z</td>
+                        </tr>
+<!-- Data row -->       <tr class="serif">
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 7.692%;">N</td>
+                            <td class="table-cent" style="width: 7.692%;">O</td>
+                            <td class="table-cent" style="width: 7.692%;">P</td>
+                            <td class="table-cent" style="width: 7.692%;">Q</td>
+                            <td class="table-cent" style="width: 7.692%;">R</td>
+                            <td class="table-cent" style="width: 7.692%;">S</td>
+                            <td class="table-cent" style="width: 7.692%;">T</td>
+                            <td class="table-cent" style="width: 7.692%;">U</td>
+                            <td class="table-cent" style="width: 7.692%;">V</td>
+                            <td class="table-cent" style="width: 7.692%;">W</td>
+                            <td class="table-cent" style="width: 7.692%;">X</td>
+                            <td class="table-cent" style="width: 7.692%;">Y</td>
+                            <td class="table-cent" style="width: 7.692%;">Z</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="27" class="table-caption">Table 12.1 &emsp; PS Index, font characters</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Side-by-side with the Concourse Index font it looks like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table style=" font-size: 2rem" class="table-clean" id="js--t12-01b">
+<!-- Data row -->       <tr class="no-border index">
+                            <td class="leading"></td>
+                            <td class="table-cent sans" style="width: 23.08%; font-size: 1rem">Concourse</td>
+                            <td class="table-cent" style="width: 7.692%;">1</td>
+                            <td class="table-cent" style="width: 7.692%;">2</td>
+                            <td class="table-cent" style="width: 7.692%;">3</td>
+                            <td class="table-cent" style="width: 7.692%;">4</td>
+                            <td class="table-cent" style="width: 7.692%;">5</td>
+                            <td class="table-cent" style="width: 7.692%;">6</td>
+                            <td class="table-cent" style="width: 7.692%;">7</td>
+                            <td class="table-cent" style="width: 7.692%;">8</td>
+                            <td class="table-cent" style="width: 7.692%;">9</td>
+                            <td class="table-cent" style="width: 7.692%;">10</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border ps-index" style="border-top: 1px solid #cccccc">
+                            <td class="leading"></td>
+                            <td class="table-cent sans" style="width: 23.08%; font-size: 1rem">PS-Index</td>
+                            <td class="table-cent" style="width: 7.692%;">A</td>
+                            <td class="table-cent" style="width: 7.692%;">B</td>
+                            <td class="table-cent" style="width: 7.692%;">C</td>
+                            <td class="table-cent" style="width: 7.692%;">D</td>
+                            <td class="table-cent" style="width: 7.692%;">E</td>
+                            <td class="table-cent" style="width: 7.692%;">F</td>
+                            <td class="table-cent" style="width: 7.692%;">G</td>
+                            <td class="table-cent" style="width: 7.692%;">H</td>
+                            <td class="table-cent" style="width: 7.692%;">I</td>
+                            <td class="table-cent" style="width: 7.692%;">J</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="12" class="table-caption"></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now the main difference is that the Concourse Index font is mapped to the numbers (with some clever jiggery-pokery when a double digit is entered).</p>
+
+                    <p class="hyp">My font is nowhere near as clever as that (I don&rsquo;t know how ligatures work and I think that that is how the Concourse Index handles the double digits); I just mapped 26 index characters to the letters A to Z</p>
+
+                    <p class="hyp">Now you may be wondering how this helps with the numbered lists, these list use numbers (starting at 1 and going up to however many entries are in the list) so what&rsquo;s the use of mapping the characters to the letters?</p>
+
+                    <p class="hyp">Well, numbered lists don&rsquo;t have to use numbers, they can also use letters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-08">
+                            <a href="01-pages/12-03-lists/02-images/fig-12-08.png" data-lightbox="fig-set" data-title="Figure 12.8 - A numbered list using uppercase alphanumeric characters">
+                                <img src="01-pages/12-03-lists/02-images/fig-12-08.png" alt="Figure 12.8 - A numbered list using uppercase alphanumeric characters">
+                            </a>
+                            <figcaption>Figure 12.8 &emsp; A numbered list using uppercase alphanumeric characters</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are various options for this, in this case it is using uppercase letters, it could use lower case (a, b, c,&hellip;, &amp;c.), Roman numerals (i, ii, iii, iv, v,&hellip;, &amp;c.) and lots of other things. I want to use the uppercase letters option. This will use the letters starting with A, B, C, D,&hellip; and once it gets to Z, it will carry on with AA, AB, AC&hellip;&amp;c.</p>
+
+                    <p class="hyp">You can probably see where this is going. If the list uses the letters A to Z in order and if I tell it to use a font where the A to Z characters are mapped to glyphs that go from <span class="ps-index">A</span> to <span class="ps-index">Z</span> then it will look just like the Concourse Index version (at least if you only have 26 list entries).</p>
+
+                    <p class="hyp">And that is just what I&rsquo;ve done; in the open source font version, the PS-Index font is used in place of the Concourse Index font. The problem is to tell the list to use uppercase letter rather than numbers.</p>
+
+                    <p class="hyp">I do this at the end of the <span class="code">style.css</span> file in the open source font version of that file; this is where I modify certain character styles to manipulate the open source fonts, making them look better.</p>
+
+                    <p class="hyp">It is actually very easy; I just add another property to the <span class="code">list-num</span> class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.list-num { list-style-type: upper-alpha; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">list-style-type: upper-alpha</span> tells the list to start with uppercase letters rather than numbers&nbsp;&mdash;&nbsp;and that&rsquo;s all there is to it.</p>
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f12-09">
+                            <a href="01-pages/12-03-lists/02-images/fig-12-09.png" data-lightbox="fig-set" data-title="Figure 12.9 - A numbered list using the PS-Index font">
+                                <img src="01-pages/12-03-lists/02-images/fig-12-09.png" alt="Figure 12.9 - A numbered list using the PS-Index font">
+                            </a>
+                            <figcaption>Figure 12.9 &emsp; A numbered list using the PS-Index font</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Side-by-side they look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f12-10">
+                            <a href="01-pages/12-03-lists/02-images/fig-12-10.png" data-lightbox="fig-set" data-title="Figure 12.10 - Concourse Index numbered list">
+                                <img style="max-width: 150px" src="01-pages/12-03-lists/02-images/fig-12-10.png" alt="Figure 12.10 - Concourse Index numbered list">
+                            </a>
+                            <figcaption>Figure 12.10 &emsp; Concourse Index numbered list</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f12-11">
+                            <a href="01-pages/12-03-lists/02-images/fig-12-11.png" data-lightbox="fig-set" data-title="Figure 12.11 - PS-Index numbered list">
+                                <img style="max-width: 150px" src="01-pages/12-03-lists/02-images/fig-12-11.png" alt="Figure 12.11 - PS-Index numbered list">
+                            </a>
+                            <figcaption>Figure 12.11 &emsp; PS-Index numbered list</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       NOTE - HANGING INDENT
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="note">                           <!-- Start of note            -->
-                        <li>For most fonts, ascenders and descenders are of a similar height with, generally, the descenders being if anything, slightly shorter.</li>
+                        <li>Again, the main restriction of the open source font version is that a numbered list can only have 26 entries.</li>
                     </ul>                                       <!-- End of note              -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">I briefly looked at unnumbered lists in <a class="hlink nohyp" href="11-05-header.html#js--110501">&sect;&nbsp;11.5.1</a> when examining entries in the table of contents. This section gives a much more detailed analysis of lists.</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      TABLE - INCIDENTAL TABLE (EN PASSANT)
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                   <table class="table-incid">
-<!-- Header row -->     <tr>
-                            <th class="table-cent">The software </th>
-                        </tr>
-<!-- Data row -->       <tr>
-                            <td class="table-left">
-                                <p>The explanations and instructions used in this section are based around the deployable web site software; i.e. it uses the template pages for the HTML and the final versions of style.css, grid.css and other files issued with the website template software.</p>
-                                <p>The website template software is available <a class="hlink nohyp" href="11-resources/04-data/web-template.zip" download>here</a>.</p>
-                            </td>
-                        </tr>
-                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                 </div>                                          <!-- End of section text      -->
@@ -341,7 +505,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="11-06-header.html#js--110600">Prev</a>
+                        <a class="xref" href="12-02-lists.html#js--120200">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -351,7 +515,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="12-01-lists.html#js--120100">Next</a>
+                        <a class="xref" href="12-04-lists.html#js--120400">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

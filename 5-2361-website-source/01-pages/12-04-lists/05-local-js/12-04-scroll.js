@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          LOCAL SCROLL - JQUERY                          12-01-SCROLL.JS
+Title :          LOCAL SCROLL - JQUERY                          12-04-SCROLL.JS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -49,7 +49,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-16 Apr 2019   d-P17.12.01  M. Gledhill    Page created
+16 Apr 2019   d-P17.12.02  M. Gledhill    Page created
 
 ---------------------------------------------------------------------------- */
 
@@ -69,7 +69,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P17.12.01</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;P17.12.02</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -113,12 +113,12 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--NN0100').offset().top -20}, 1000);
     });
    ------------------------------------------------------------------------- */
-    $('.js--sc-120100').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--120100').offset().top -20}, 250);
+    $('.js--sc-120400').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--120400').offset().top -20}, 250);
     });                                         /* END of scroll function */
 
-    $('.js--sc-120101').click(function () {     /* START of scroll function */
-       $('html, body').animate({scrollTop: $('#js--120101').offset().top -20}, 1000);
+    $('.js--sc-120401').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--120401').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
 
@@ -165,14 +165,6 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--fnNN').offset().top -80}, 1000);
     });
    ------------------------------------------------------------------------- */
-
-    $('.js--sc-f12-01').click(function () {
-       $('html, body').animate({scrollTop: $('#js--f12-01').offset().top -80}, 1000);
-    });
-
-    $('.js--sc-f12-02').click(function () {
-       $('html, body').animate({scrollTop: $('#js--f12-02').offset().top -80}, 1000);
-    });
 
 
 
