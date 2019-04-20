@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="An introduction to the different types of website links">
+        <meta name="description" content="how links to another page within the same website work">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              13-00-LISTS.HTML
+Title :          WEBSITE TEMPLATE                              13-02-LISTS.HTML
 *******************************************************************************
 DETAILS
 
@@ -73,7 +73,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/13-00-links/05-local-js/13-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/13-02-links/05-local-js/13-02-scroll.js"></script>
 
 
 
@@ -88,7 +88,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/13-00-links/01-local-css/13-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/13-02-links/01-local-css/13-02-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -108,7 +108,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Links | PracticalSeries: Web Development</title>
+        <title>Internal links to a different page | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -128,7 +128,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="12-04-lists.html#js--120400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="13-01-links.html#js--130100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -140,7 +140,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="13-01-links.html#js--130100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="13-03-links.html#js--130300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -224,16 +224,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 13 LINKS
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 13.2 INTERNAL LINKS TO A DIFFERENT PAGE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--130000">           <!-- Start of section         -->
+        <section class="section-std" id="js--130200">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>13.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Internal links to a different page</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -247,34 +248,51 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Links are exactly</span> what you think they are, they&rsquo;re clickable objects in the main body text that take you to another page, a different point on the same page or to a completely different website. </p>
+                    <p class="hyp">This is virtually identical to the external link. It looks exactly the same on the web page:<br><a class="hlink nohyp" href="01-00-introduction.html">section&nbsp;1</a></p>
 
-                    <p class="hyp">Broadly there are two types of link:</p>
+                    <p class="hyp">If the mouse is hovered over the link, it looks like this:<br><a class="hlink nohyp" style="border-bottom: 1px solid #404030" href="01-00-introduction.html">section&nbsp;1</a>.</p>
 
+                    <p class="hyp">The HTML is the same too:</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">External links (that link to someone else&rsquo;s website)</p></li>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">internal link to a different page html</div>
+                        <div class="code-area">
 
-                        <li><p class="hyp">Internal links (that link to some page or point within this website)</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c13-03">&lt;p class="hyp"&gt;Linking to another page within the website will open that page with the top of the page displayed in the browser. Such a link has the following appearance: <br>&lt;a class="hlink" href="01-00-introduction.html"&gt;Section 1&lt;/a&gt;.&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 13.3 &emsp; Internal link to a different page typical HTML</div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Internal links have two slightly different modes:</p>
+                    <p class="hyp">Again the link is in the anchor element and again it has the class <span class="code">hlink</span>:</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Internal link to a point on a different page within the website</p></li>
+                    <p class="hyp">The only difference is the web address inside the <span class="code">href</span> attribute, it doesn&rsquo;t start with <span class="code">http</span>; it just has the file name (and if the file were in a different directory, it would have the path name too, see <a class="hlink nohyp" href="07-03-prelim.html#js--070306">&sect;&nbsp;7.3.6</a>) of the target page.</p>
 
-                        <li><p class="hyp">Internal link to a point on the same page (with slow scrolling)</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                    <p class="hyp">If the <span class="code">http://</span> (or <span class="code">https://</span>) is missing, the browser knows the link is referring to a page within the current website and will look for it in the current directory (or, if a path is supplied, in the directory pointed to by that path).</p>
+
+                    <p class="hyp">The class used is identical to that of an external link (listed in <a class="hlink nohyp" href="13-01-links.html#js--c13-02">Code&nbsp;13.2</a>). Internal links to a different page are identical in appearance to an external link.</p>
+
+                    <p class="hyp">To use an internal link to a different page within the website, simply copy the HTML text above, the format is:</p>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap" style="min-height: 0.9rem">&lt;a class="hlink" href="<span class="h-light">PATH/FILENAME</span>"&gt;<span class="h-light">VISIBLE TEXT</span>&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I go through all the options in the following sections.</p>
+                    <p class="hyp">Insert the <span class="menu">path/filename</span> for the target page (if no path is entered, the browser will look for the file in the current directory). The <span class="menu">visible text</span> is the visible, clickable text that shows up on the web page. </p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -298,7 +316,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="12-04-lists.html#js--120400">Prev</a>
+                        <a class="xref" href="13-01-links.html#js--130100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -308,7 +326,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="13-01-links.html#js--130100">Next</a>
+                        <a class="xref" href="13-03-links.html#js--130300">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

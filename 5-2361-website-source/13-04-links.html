@@ -1,0 +1,578 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="how link to a particular point on the same web page">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                              13-04-LISTS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+17 Apr 2019   d-P18.13.01  M. Gledhill    Page created
+
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/13-04-links/05-local-js/13-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/13-04-links/01-local-css/13-04-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Internal links to a point on the same page | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="13-03-links.html#js--130300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P18.13.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>13</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">13</span>Links</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 13 links
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-130000" href="13-00-links.html#js--130000">
+                               <div class="toc-lev"><span class="toc-lev1-num">13</span><span class="toc-lev1-text">links and notes</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-130100" href="13-01-links.html#js--130100">
+                            <div class="toc-lev"><span class="toc-lev2-num">13.1</span><span class="toc-lev2-text">External links</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-130200" href="13-02-links.html#js--130200">
+                            <div class="toc-lev"><span class="toc-lev2-num">13.2</span><span class="toc-lev2-text">Internal links to a different page</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-130300" href="13-03-links.html#js--130300">
+                            <div class="toc-lev"><span class="toc-lev2-num">13.3</span><span class="toc-lev2-text">Internal links to a particular point on a different page</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-130400" href="13-04-links.html#js--130400">
+                            <div class="toc-lev"><span class="toc-lev2-num">13.4</span><span class="toc-lev2-text">Internal links to a point on the same page</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-130401" href="13-04-links.html#js--130401">
+                            <div class="toc-lev"><span class="toc-lev3-num">13.4.1</span><span class="toc-lev3-text">Direct scrolling to a point without using slow scrolling</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 13.4 INTERNAL LINKS TO A POINT ON THE SAME PAGE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--130400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>13.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Internal links to a point on the same page</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Linking to a point within the current web page uses a slow scrolling technique that makes the browser visibly scroll to the specified point in a given time period (rather than jumping instantly to it). I&rsquo;ve discussed slow scrolling in previous section and promised to explain it when we start the JavaScript bits of the web site, and I&rsquo;m going to say same again here (patience is a virtue&nbsp;&mdash;&nbsp;apparently). I explain all the slow scrolling stuff in <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a>.</p>
+
+                    <p class="hyp">For now, the link won&rsquo;t do anything (it won&rsquo;t do the slow scrolling until we add the JavaScript), but it will be correct in all respects and when the JavaScript is added, it will automatically use slow scrolling without any further changes to either the HTML or the CSS.</p>
+
+                    <p class="hyp">Links to a point on the same page are more subtle than links to another page or to an external site; they use exactly the same font as the body text (the other links use a small caps font). The link looks like this: <a class="xref js--sc-t13-01" href="#">Table&nbsp;13.1</a></p>
+
+                    <p class="hyp">If the mouse is hovered over the link, it looks like this: <a class="xref js--sc-t13-01" href="#" style="border-bottom: 1px solid #404030">Table&nbsp;13.1</a></p>
+
+                    <p class="hyp">This time the HTML is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">internal link to a point on the same page html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c13-04">&lt;p class="hyp"&gt;Internal links to a point on the same page use the class &lt;span class="code"&gt;xref&lt;/span&gt;; this is less noticeable on the page: <br>&lt;a class="xref js--sc-t13-01" href="#"&gt;Table 13.1&lt;/a&gt;.&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 13.4 &emsp; Internal link to a point on the same page typical HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Again, all the important stuff is inside the anchor element, I&rsquo;ll come back to the class that starts <span class="code">js--sc</span>, the rest of it does look a bit odd:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;a class="xref js--sc-t13-01" href="#"&gt;Table 13.1&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ok, there is a class called <span class="code">xref</span> (cross reference is what I meant when I named it) and this is virtually identical to the <span class="code">hlink</span> class we looked at in <a class="hlink nohyp" href="13-01-links.html#js--130100">&sect;&nbsp;13.1</a>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">xref class css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c13-05">.xref:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;cross reference hyperlink */
+.xref:visited{
+&nbsp; &nbsp; background-color: #f8f8f8;
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+&nbsp; &nbsp; transition: border-bottom 0.2s;
+}
+.xref:hover,
+.xref:active { border-bottom: 1px solid #404030; }</pre>
+
+                        </div>
+                        <div class="code-caption">Code 13.5 &emsp; xref class css</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In fact it is identical except it does not use a small caps font. This means it has the same light grey background and transitions to a darker bottom borer when a mouse hovers over it (just like <span class="code">hlink</span> links).</p>
+
+                    <p class="hyp">Now let&rsquo;s look at the rest of the HTML; the oddest bit is the <span class="code">href</span> attribute, it just has a <span class="code">#</span> in it. In this context the <span class="code">#</span> just refers to a null value&nbsp;&mdash;&nbsp;essentially it is just a placeholder, it&rsquo;s needed to make the HTML correct (using <span class="code">#</span> in a HTML link is a way of satisfying HTML validation, it will accept the link as being correct even though there is no address or file name in the link).</p>
+
+                    <p class="hyp">To make the link work with slow scroll, we need that funny class from above:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">js--sc-f99-01</span></p>
+
+                    <p class="hyp">All sections, figures, tables, code fragments &amp;c. get an ID that allows it to be referenced within the web pages. The following are examples of each type:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t13-01">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 18%">Item</th>
+                            <th class="table-cent" style="width: 18%">ID format</th>
+                            <th class="table-cent" style="width: 33%">Example</th>
+                            <th class="table-cent" style="width: 31%">slow scroll class</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Lead-in section</td>
+                            <td class="table-cent">XX0000</td>
+                            <td class="table-cent">Lead-in section X<br><span class="code">id="js--030000"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-030000</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Section</td>
+                            <td class="table-cent">XXYY00</td>
+                            <td class="table-cent">Section X.Y<br><span class="code">id="js--030100"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-030100</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Subsection</td>
+                            <td class="table-cent">XXYYZZ</td>
+                            <td class="table-cent">Subsection X.Y.Z<br><span class="code">id="js--030101"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-030101</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Inline section</td>
+                            <td class="table-cent">XXYYZZa</td>
+                            <td class="table-cent">Inline section of a section<br><span class="code">id="js--030101a"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-030101a</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Figure</td>
+                            <td class="table-cent">fXX-YY</td>
+                            <td class="table-cent">Figure X.Y<br><span class="code">id="js--f99-01"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-f99-01</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Table</td>
+                            <td class="table-cent">tXX-YY</td>
+                            <td class="table-cent">Table X.Y<br><span class="code">id="js--t99-01"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-t99-01</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Code</td>
+                            <td class="table-cent">cXX-YY</td>
+                            <td class="table-cent">Code X.Y<br><span class="code">id="js--c99-01"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-c99-01</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Equation</td>
+                            <td class="table-cent">eXX-YY</td>
+                            <td class="table-cent">Equation X.Y<br><span class="code">id="js--e99-01"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-e99-01</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">Footnote</td>
+                            <td class="table-cent">fnXX</td>
+                            <td class="table-cent">Footnote XX<br><span class="code">id="js--fnXX"</span></td>
+                            <td class="table-cent"><span class="code">js--sc-fnXX</span></td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 13.1 &emsp; ID formats and soft scroll classes for different items</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The ID given to the section, table, figure &amp;c. has the ID <span class="code">js--</span> followed by the ID format given in the above table (the XX, YY and ZZ depending on the exact section within which the ID occurs).</p>
+
+                    <p class="hyp">This is done in the HTML by giving an ID to the start of the object, e.g.:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html" style="min-height: 0.9rem">&lt;div class="fig-col fig1-1" <span class="h-light">id="js--f99-01"&gt;</span></pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Here the object has been given the ID <span class="code">js--f99-01</span>.</p>
+
+                    <p class="hyp">To make the soft scroll work, the anchor element must be given a <em>class</em> (not an ID) that matches the given ID. This class has the same name as the ID except that the <span class="code">js--</span> of the ID is replaced with <span class="code">js--sc-</span>, i.e. there is an extra <span class="code">sc-</span> after the <span class="code">--</span>.</p>
+
+                    <p class="hyp">This works because the JavaScript (when we get to it) looks for a class called <span class="code">js--sc-[ID]</span> and then uses this to trigger a slow scroll the point on the page that has a formal ID of <span class="code">js--[ID]</span> (where <span class="code">[ID]</span> is the <span class="menu">id</span> format given in <a class="xref js--sc-t13-01" href="#">Table&nbsp;13.1</a>).</p>
+
+                    <p class="hyp">To use a slow scroll link to a particular point on the current page, simply copy the HTML text above, the format is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html" style="min-height: 0.9rem">&lt;a class="xref js--sc-<span class="h-light">[ID]</span>" href="#"&gt;<span class="h-light">VISIBLE TEXT</span>&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">where <span class="code">[ID]</span> is the <span class="menu">id format</span> given in <a class="xref js--sc-t13-01" href="#">Table&nbsp;13.1</a> and <span class="menu">visible text</span> is the visible, clickable text that shows up on the web page. </p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 13.4.1 DIRECT SCROLLING TO A POINT WITHOUT USING SLOW SCROLLING
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--130401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>13.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Direct scrolling to a point without using slow scrolling</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I tend to use slow scrolling on this website, I like it. However, it is not universally popular, and many people feel it is an unnecessary affectation.</p>
+
+                    <p class="hyp">If you don&rsquo;t want to use slow scrolling (clicking the link will jump instantly to the associated point on the page), the HTML is simplified to (in this case):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;a class="xref" href="#js--f99-01"&gt;Figure 99.1&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I.e. remove any <span class="code">js--sc...</span> class (just leaving the <span class="code">xref</span>) and make the <span class="code">href</span> link the ID of the point to which you want to jump.</p>
+
+                    <p class="hyp">To use a direct link to a particular point on the current page, simply copy the HTML text above, the format is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html" style="min-height: 0.9rem">&lt;a class="xref" href="#js--<span class="h-light">[ID]</span>"&gt;<span class="h-light">VISIBLE TEXT</span>&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">where <span class="menu">[ID]</span> is the id format given in <a class="xref js--sc-t13-01" href="#">Table&nbsp;13.1</a> and <span class="menu">visible text</span> is the visible, clickable text that shows up on the web page.</p>
+
+                    <p class="hyp">That&rsquo;s it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="13-03-links.html#js--130300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-00-tables.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

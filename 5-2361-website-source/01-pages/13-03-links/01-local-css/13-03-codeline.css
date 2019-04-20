@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            10-08-CODELINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            13-03-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -49,18 +49,20 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+17 Apr 2019   d-P18.13.01  M. Gledhill    Page created
 ---------------------------------------------------------------------------- */
 
 
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P16"; }
-
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P18.13.01"; }
 
 /* ****************************************************************************
    CODE FRAGMENT FORMATTING
    ************************************************************************* */
-.h-light {font-family: "conc-t4-b"}
+.h-light {
+    font-family: "conc-t4-b";
+    border-bottom: 2px solid #ff0000;
+}
 /* ************************************************************************* */

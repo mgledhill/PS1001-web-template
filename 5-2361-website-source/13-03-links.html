@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="An introduction to the different types of website links">
+        <meta name="description" content="how link to a particular point on a web page by using IDs">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              13-00-LISTS.HTML
+Title :          WEBSITE TEMPLATE                              13-03-LISTS.HTML
 *******************************************************************************
 DETAILS
 
@@ -73,7 +73,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/13-00-links/05-local-js/13-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/13-03-links/05-local-js/13-03-scroll.js"></script>
 
 
 
@@ -88,7 +88,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/13-00-links/01-local-css/13-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/13-03-links/01-local-css/13-03-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -108,7 +108,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Links | PracticalSeries: Web Development</title>
+        <title>Internal links to a point on a different page | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -128,7 +128,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="12-04-lists.html#js--120400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="13-02-links.html#js--130200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="11-00-header.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -140,7 +140,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="13-01-links.html#js--130100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="13-04-links.html#js--130400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -224,16 +224,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 13 LINKS
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 13.3 INTERNAL LINKS TO A PARTICULAR POINT ON A DIFFERENT PAGE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--130000">           <!-- Start of section         -->
+        <section class="section-std" id="js--130300">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>13.3</h2></div>
+                 <div class="sub-title-text-box"><h2>Internal links to a particular point on a different page</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -247,34 +248,77 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Links are exactly</span> what you think they are, they&rsquo;re clickable objects in the main body text that take you to another page, a different point on the same page or to a completely different website. </p>
+                    <p class="hyp">This is just a slight variation on the link to another page(<a class="hlink nohyp" href="13-02-links.html#js--130200">&sect;&nbsp;13.2</a>) .</p>
 
-                    <p class="hyp">Broadly there are two types of link:</p>
+                    <p class="hyp">To link to a particular point on another page, we need to add the ID of the section (see <a class="hlink nohyp" href="10-03-sections.html#js--100300a">&sect;&nbsp;10.3</a>) to the href attribute in the link:</p>
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">External links (that link to someone else&rsquo;s website)</p></li>
+                            <pre class="prettyprint lang-html">&lt;a class="hlink" href="04-02-starting.html#js--040202"&gt;Section 4.2.2&lt;/a&gt;</pre>
 
-                        <li><p class="hyp">Internal links (that link to some page or point within this website)</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Internal links have two slightly different modes:</p>
+                    <p class="hyp">Everything else stays the same and it still uses the <span class="code">hlink</span> class.</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Internal link to a point on a different page within the website</p></li>
+                    <p class="hyp">This time the <span class="code">href</span> attribute still has the filename (and any associated path), just like the internal link of the previous section; however, it is then followed by a <span class="code">#</span> character and the ID of the point at which the page is to be opened. In this case:</p>
 
-                        <li><p class="hyp">Internal link to a point on the same page (with slow scrolling)</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                    <p class="hyp" style="text-align: center"><span class="code">#js--040202</span></p>
+
+                    <p class="hyp">The <span class="code">#</span> tells the browser to look for a particular ID and, if it can find it, position that ID at the top of the browser window.</p>
+
+                    <p class="hyp">In the case of the above example, clicking the link will open the web page with the name <span class="code">04-02-starting.html</span> about one third of the way down, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--13-01">
+                            <a href="01-pages/13-03-links/02-images/fig-13-01.png" data-lightbox="fig-set" data-title="Figure 13.1 - Clicking an internal link to a point on a different page">
+                                <img src="01-pages/13-03-links/02-images/fig-13-01.png" alt="Figure 13.1 - Clicking an internal link to a point on a different page">
+                            </a>
+                            <figcaption>Figure 13.1 &emsp; Clicking an internal link to a point on a different page</figcaption>
+                        </figure>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">I go through all the options in the following sections.</p>
+                    <p class="hyp">If the <span class="code">#js--040202</span> was missing, the page would open at the top of the page, i.e.:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--13-02">
+                            <a href="01-pages/13-03-links/02-images/fig-13-02.png" data-lightbox="fig-set" data-title="Figure 13.2 - Opening a different page without the ID reference">
+                                <img src="01-pages/13-03-links/02-images/fig-13-02.png" alt="Figure 13.2 - Opening a different page without the ID reference">
+                            </a>
+                            <figcaption>Figure 13.2 &emsp; Opening a different page without the ID reference</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To use an internal link to a particular point on a different page within the website, simply copy the HTML text above, the format is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap" style="min-height: 0.9rem">&lt;a class="hlink" href="<span class="h-light">PATH/FILENAME#ID</span>"&gt;<span class="h-light">VISIBLE TEXT</span>&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Insert the <span class="menu">path/filename</span> for the target page (if no path is entered, the browser will look for the file in the current directory), <span class="menu">id</span> is the ID given to the point on the page that is to be positioned at the top of the browser window (all IDs within this template start <span class="menu">js--</span>). The <span class="menu">visible text</span> is the visible, clickable text that shows up on the web page, see <a class="hlink nohyp utx" href="13-04-links.html#js--t13-01">Table&nbsp;13.1</a> in the next section. </p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -298,7 +342,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="12-04-lists.html#js--120400">Prev</a>
+                        <a class="xref" href="13-02-links.html#js--130200">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -308,7 +352,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="13-01-links.html#js--130100">Next</a>
+                        <a class="xref" href="13-04-links.html#js--130400">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
