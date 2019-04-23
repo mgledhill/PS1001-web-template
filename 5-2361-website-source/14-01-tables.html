@@ -1,0 +1,1245 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="The basics of HTML tables">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             14-01-TABLES.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+20 Apr 2019   d-P19.14.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/14-01-tables/05-local-js/14-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/14-01-tables/01-local-css/14-01-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Tables: the basics | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="14-00-tables.html#js--140000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="14-02-tables.html#js--140200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P19.14.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>14</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">14</span>Tables and Footnotes</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 14 tables
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-140000" href="14-00-tables.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">14</span><span class="toc-lev1-text">Tables and footnotes</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-140100" href="14-01-tables.html#js--140100">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.1</span><span class="toc-lev2-text">The basics of tables</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140101" href="14-01-tables.html#js--140101">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.1</span><span class="toc-lev3-text">HTML table construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140102" href="14-01-tables.html#js--140102">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.2</span><span class="toc-lev3-text">Adding table borders and border collapse</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140103" href="14-01-tables.html#js--140103">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.3</span><span class="toc-lev3-text">Specifying a column width</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140104" href="14-01-tables.html#js--140104">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.4</span><span class="toc-lev3-text">Specifying a row height</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140105" href="14-01-tables.html#js--140105">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.5</span><span class="toc-lev3-text">Aligning text in a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140106" href="14-01-tables.html#js--140106">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.6</span><span class="toc-lev3-text">Merging cells</span></div></a>
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140200" href="14-02-tables.html#js--140200">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.2</span><span class="toc-lev2-text">The standard table</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140201" href="14-02-tables.html#js--140201">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.1</span><span class="toc-lev3-text">The leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140202" href="14-02-tables.html#js--140202">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.2</span><span class="toc-lev3-text">Margin and padding arrangements for the leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140203" href="14-02-tables.html#js--140203">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.3</span><span class="toc-lev3-text">Paragraph styling within a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140204" href="14-02-tables.html#js--140204">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.4</span><span class="toc-lev3-text">Setting the width of each column</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140205" href="14-02-tables.html#js--140205">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.5</span><span class="toc-lev3-text">Aligning the text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140206" href="14-02-tables.html#js--140206">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.6</span><span class="toc-lev3-text">Table borders</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140207" href="14-02-tables.html#js--140207">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.7</span><span class="toc-lev3-text">Table captions</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140300" href="14-03-tables.html#js--140300">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.3</span><span class="toc-lev2-text">The dense table</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140400" href="14-04-tables.html#js--140400">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.4</span><span class="toc-lev2-text">Incidental tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140500" href="14-05-tables.html#js--140500">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.5</span><span class="toc-lev2-text">Footnote tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140600" href="14-06-tables.html#js--140600">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.6</span><span class="toc-lev2-text">Tables, responsive elements</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 14.1 THE BASICS OF TABLES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>14.1</h2></div>
+                 <div class="sub-title-text-box"><h2>The basics of tables</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">We haven&rsquo;t looked at tables before in any context so let&rsquo;s get a basic idea of how they look and how they work.</p>
+
+                    <p class="hyp">Tables are defined with the <span class="code">&lt;table&gt;...&lt;/table&gt;</span> element. Each row of a table is enclosed in <span class="code">&lt;tr&gt;...&lt;/tr&gt;</span> elements and these are stacked one on top of the other. Within a given row, each cell is enclosed in either <span class="code">&lt;th&gt;...&lt;/th&gt;</span> tags or <span class="code">&lt;td&gt;...&lt;/td&gt;</span> tags. </p>
+
+                    <p class="hyp">The <span class="code">&lt;th&gt;</span> tags contain a single cell that acts as a header (table header is what it stands for) or label for the column. The <span class="code">&lt;td&gt;</span> tags (table data) are standard cells within a table that contain some information.</p>
+
+                    <p class="hyp">Look at the following table, this is a very similar to a table in Word:</p>
+
+                    <table border="1" style="border-collapse: collapse">
+                        <tr style="font-family: 'conc-c2-r'; font-size: 0.9rem; color: #808080">
+                            <th style="width: 16.66%">mileage</th><th style="width: 16.66%">birmingham</th><th style="width: 16.66%">liverpool</th><th style="width: 16.66%">london</th><th style="width: 16.66%">manchester</th><th style="width: 16.66%">newcastle</th>
+                        </tr>
+                        <tr style="font-family: 'conc-t3-r'; font-size: 0.9rem; text-align: center">
+                            <th style="font-family: 'conc-c2-r'; color: #808080">birmingham</th><td>0</td><td>113</td><td>126</td><td>221</td><td>146</td>
+                        </tr>
+                        <tr style="font-family: 'conc-t3-r'; font-size: 0.9rem; text-align: center">
+                            <th style="font-family: 'conc-c2-r'; color: #808080">liverpool</th><td>113</td><td>0</td><td>221</td><td>34</td><td>174</td>
+                        </tr>
+                        <tr style="font-family: 'conc-t3-r'; font-size: 0.9rem; text-align: center">
+                            <th style="font-family: 'conc-c2-r'; color: #808080">london</th><td>126</td><td>221</td><td>0</td><td>209</td><td>283</td>
+                        </tr>
+                        <tr style="font-family: 'conc-t3-r'; font-size: 0.9rem; text-align: center">
+                            <th style="font-family: 'conc-c2-r'; color: #808080">manchester</th><td>87</td><td>34</td><td>209</td><td>0</td><td>145</td>
+                        </tr>
+                        <tr style="font-family: 'conc-t3-r'; font-size: 0.9rem; text-align: center">
+                            <th style="font-family: 'conc-c2-r'; color: #808080">newcastle</th><td>146</td><td>174</td><td>283</td><td>145</td><td>0</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">This table has 6 rows and each row has 6 cells (it&rsquo;s a 6×6 table). The top row is acting as a header for each of the columns and the first cell in each row is also a header.</p>
+
+                    <p class="hyp">At the most basic level, the HTML it would be constructed as follows:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f14-03a">
+                            <a href="01-pages/14-01-tables/-tables/02-images/fig-14-03a.png" data-lightbox="fig-set" data-title="Figure 14.3 - A typical table">
+                                <img src="01-pages/14-01-tables/02-images/fig-14-03a.png" alt="Figure 14.3 - A typical table">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If we were to build this very basic table, the HTML behind it would be:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Basic table HTML</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html" id="js--c14-01">&lt;table&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Mileage&lt;/th&gt;&lt;th&gt;Birmingham&lt;/th&gt;&lt;th&gt;Liverpool&lt;/th&gt;&lt;th&gt;London&lt;/th&gt;&lt;th&gt;Manchester&lt;/th&gt;&lt;th&gt;Newcastle&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Birmingham&lt;/th&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;113&lt;/td&gt;&lt;td&gt;126&lt;/td&gt;&lt;td&gt;87&lt;/td&gt;&lt;td&gt;146&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Liverpool&lt;/th&gt;&lt;td&gt;0113&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;221&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;174&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;London&lt;/th&gt;&lt;td&gt;126&lt;/td&gt;&lt;td&gt;221&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;209&lt;/td&gt;&lt;td&gt;283&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Manchester&lt;/th&gt;&lt;td&gt;87&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;209&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;145&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Newcastle&lt;/th&gt;&lt;td&gt;146&lt;/td&gt;&lt;td&gt;174&lt;/td&gt;&lt;td&gt;283&lt;/td&gt;&lt;td&gt;145&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.1 &emsp; Basic table HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And it looks like this (it&rsquo;s not much to write home about):</p>
+
+                    <table>
+                        <tr>
+                            <th>Mileage</th><th>Birmingham</th><th>Liverpool</th><th>London</th><th>Manchester</th><th>Newcastle</th>
+                        </tr>
+                        <tr>
+                            <th>Birmingham</th><td>0</td><td>113</td><td>126</td><td>87</td><td>146</td>
+                        </tr>
+                        <tr>
+                            <th>Liverpool</th><td>0113</td><td>0</td><td>221</td><td>34</td><td>174</td>
+                        </tr>
+                        <tr>
+                            <th>London</th><td>126</td><td>221</td><td>0</td><td>209</td><td>283</td>
+                        </tr>
+                        <tr>
+                            <th>Manchester</th><td>87</td><td>34</td><td>209</td><td>0</td><td>145</td>
+                        </tr>
+                        <tr>
+                            <th>Newcastle</th><td>146</td><td>174</td><td>283</td><td>145</td><td>0</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">Although it&rsquo;s very basic, you can see that with a bit of tidying up it will do what we want of it.</p>
+
+                    <p class="hyp">There are a few of things to note:</p>
+
+                    <p class="hyp">Firstly, the table has been drawn without borders; this wasn&rsquo;t always the case, in earlier browsers and version of HTML, tables were drawn with borders by default.</p>
+
+                    <p class="hyp">Secondly, there is a difference between entries contained within <span class="code">&lt;th&gt;</span> elements, these are in a bold font and those in a <span class="code">&lt;td&gt;</span> element, these are in a regular font.</p>
+
+                    <p class="hyp">Thirdly, all the rows have exactly the same number of cells (six in this case). </p>
+
+                    <p class="hyp">Now this last point isn&rsquo;t an absolute rule, different numbers of cells within different rows is perfectly valid in terms of the HTML; it will just shuffle the cells up next to each other and leave a gap at the end of the row. </p>
+
+                    <p class="hyp">However, having different number of cells in different rows is really confusing to work with, so there is a rule as far as we are concerned:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Header row -->     <tr>
+                            <th class="table-cent">the Gledhill rule for tables</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="table-cent">
+                                <p>Always have the same number of cells on each row within a table</p>
+                            </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Sometimes it is necessary to merge two or more cells and there are techniques for doing this that I cover later in the section. When defining the table layout always start with the same number of cells per row. </p>
+
+                    <p class="hyp">There are also some problems with this table: it&rsquo;s not very even, the cells are not all the same width, the column with London at the top is narrower than the one with Birmingham.</p>
+
+                    <p class="hyp">The centring of entries within a cell is inconsistent, some are centred within the cell (the city name in the column on the left are centred) and some are left justified (the ones with the numbers).</p>
+
+                    <p class="hyp">That said, tables are very easy to understand, the following explains the basic construction of any table within the HTML:</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.1 HTML TABLE CONSTRUCTION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>HTML table construction</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The entire table is contained within a <span class="code">&lt;table&gt;...&lt;/table&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;table&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Each row within the table is contained within <span class="code">&lt;tr&gt;...&lt;/tr&gt;</span> elements (for 3 rows, there are 3 <span class="code">&lt;tr&gt;</span> elements):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01a">&lt;table&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Within each row there are a fixed number of cells. These cells can be any mixture of <span class="code">&lt;th&gt;</span> or <span class="code">&lt;td&gt;</span> cells, generally, the first row of a table is usually a title row, giving the names or purpose of the columns, a title row will use <span class="code">&lt;th&gt;</span> (table heading) elements and the data contained in the remaining rows will be in <span class="code">&lt;td&gt;</span> (table data) elements. Again, this is not a hard and fast rule, in the table above; the first cell in each row is also a title and would be a <span class="code">&lt;th&gt;</span> element.</p>
+
+                    <p class="hyp">Let&rsquo;s assume we want each row to have 2 cells and that the first row is a heading row. Now we would have:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01b">&lt;table&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s populate the rest of the table listing the row and column position of the cell:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01c">&lt;table&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This would give us the following:</p>
+
+                    <table>
+                        <tr>   <!-- Row 1 -->
+                            <th>Col 1 Heading</th>
+                            <th>Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td>R2C1</td>
+                            <td>R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td>R3C1</td>
+                            <td>R3C2</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">You can see how it works. It&rsquo;s straight forward. Declare a table with <span class="code">&lt;table&gt;</span> put in however many rows you want, each with a <span class="code">&lt;tr&gt;</span> element and then add the same number of cells to each row with either <span class="code">&lt;th&gt;</span> or <span class="code">&lt;td&gt;</span> elements.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.2 ADDING TABLE BORDERS AND BORDER COLLAPSE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Adding table borders and border collapse</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Let&rsquo;s add a border to the cells:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01d">&lt;table&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve add a border to all four sides of each cell with the style attribute. Now we get:</p>
+
+                    <table>
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black">Col 1 Heading</th>
+                            <th style="border: 1px solid black">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                            <td style="border: 1px solid black">R3C2</td>
+                        </tr>
+                    </table>                    <p class="hyp"></p>
+
+                    <p class="hyp" style="margin-top: 1rem"></p>
+
+                    <p class="hyp"><span class="first-use">Hmm, not really what I want;</span> it has literally drawn a box around each cell and left a small gap between them. My first thought when I saw this was <span class="first-use">that&rsquo;s stupid</span>&nbsp;&mdash;&nbsp;and I haven&rsquo;t changed my mind.</p>
+
+                    <p class="hyp">Don&rsquo;t worry, someone else obviously that it was stupid too, and added another declaration that can sort it out, it&rsquo;s called <span class="first-use">border collapse</span> and it can be applied to the whole table:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01e">&lt;table style=&quot;border-collapse: collapse&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This <span class="code">collapses</span> the borders between cells into single border. </p>
+
+                    <p class="hyp">It looks like this:</p>
+
+                    <table style="border-collapse: collapse">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black">Col 1 Heading</th>
+                            <th style="border: 1px solid black">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                            <td style="border: 1px solid black">R3C2</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">It looks how you would expect it to look; the property that puts it back how it was is <span class="code">border-collapse: separate</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>Borders can be applied individually to any side of a cell using <span class="code">border-top</span>, <span class="code">border-left</span> &amp;c. just like any block object.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">So what else can we do, well we can change the cell size:</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.3 SPECIFYING A COLUMN WIDTH
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Specifying a column width</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Let&rsquo;s make the columns wider by setting a width property: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01f">&lt;table style=&quot; border-collapse: collapse&rdquo;&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This gives:</p>
+
+                    <table style=" border-collapse: collapse">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                            <td style="border: 1px solid black">R3C2</td>
+                        </tr>
+                    </table>
+
+
+                    <p class="hyp" style="margin-top: 1rem"></p>
+
+                    <p class="hyp">Ok, I&rsquo;ve set the width of the cells in the first row and this has change the width of all the cells below this. <span class="first-use">Why?</span></p>
+
+                    <p class="hyp">Well, a column of cells in a table is always set to the width of the widest cell in the column; you could see this in the previous examples where the cells in each row had been set to match the width of the cell with the widest text content (the text in the first row in all the previous cases).</p>
+
+                    <p class="hyp">In the above example, setting a cell width to 30% makes it wider than the content of any of the cells; it wouldn&rsquo;t have mattered if I&rsquo;d made the row 2 cells 30% wide, the thing would look exactly the same.</p>
+
+                    <p class="hyp">This is useful, it means we only have to set the cell width for a single cell in each column, all the other cells will automatically adopt the same setting. For clarity, I always set the cell width in the first row of a table.</p>
+
+                    <p class="hyp"><span class="first-use">And again, as with most things here, I occasionally break this rule.</span></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.4 SPECIFYING A COLUMN WIDTH
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140104">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Specifying a row height</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Like column widths, the row defaults to the height of the highest cell within the row; in this example all the cells have text that is the same height, hence all the rows are the same height adding a height declaration to any cell within a row will make the whole row that height:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01g">&lt;table style=&quot;border-collapse:collapse; text-align: center&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black; height: 100px&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black; height: 100px &quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp" style="margin-top: 1rem"></p>
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black; height: 100px">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black; height: 100px ">R3C1</td>
+                            <td style="border: 1px solid black">R3C2</td>
+                        </tr>
+                    </table>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note" style="margin-top: 1rem">                           <!-- Start of note            -->
+                        <li>The <span class="code">height</span> declaration acts as a minimum height for the cell, if the cell contents require the cell to be higher than this, the cell will expand to meet the content.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.5 SPECIFYING A COLUMN WIDTH
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140105">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Aligning text in a cell</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The heading cells, by default, centre any text within them, data cells left justify text.</p>
+
+                    <p class="hyp">It is perfectly easy to align text to the left, right or centre of a cell with the standard CSS text-align property. The following centres all the text in every cell:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01h">&lt;table style="border-collapse:collapse; text-align: center"&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note" style="margin-top: 1rem">                           <!-- Start of note            -->
+                        <li>I&rsquo;ve removed the <span class="code">height</span> styling from this example, row are just as high as they need to be.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                            <td style="border: 1px solid black">R3C2</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">Individual cells can also have unique text alignments, here I&rsquo;ve centred everything and then right justified the R3C3 cell:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01i">&lt;table style=&quot;border-collapse:collapse; text-align: center&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black; text-align: right&quot;&gt;R3C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp" style="margin-top: 1rem">Giving:</p>
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                            <td style="border: 1px solid black; text-align: right">R3C2</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">To align cells vertically, use <span class="code">vertical-align</span> instead of <span class="code">text-align</span>, the values for this property are (amongst others), <span class="code">top</span>, <span class="code">bottom</span> and <span class="code">middle</span>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.1.6 MERGING CELLS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140106">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.1.6</h3></div>
+                    <div class="sub-title-text-box"><h3>Merging cells</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Cells can be merged either horizontally or vertically (or both); by making a cell span either more than one column (horizontal merge) or more than one row (vertical merge).</p>
+
+                    <p class="hyp">Let&rsquo;s start by merging horizontally, this uses the <span class="code">colspan</span> property; let&rsquo;s make the R3C1 cell span two columns:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01j">&lt;table style=&quot;border-collapse:collapse; text-align: center&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td colspan="2" style="border: 1px solid black">R3C1</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem">I&rsquo;ve had to do two things here:</p>
+
+                    <p class="hyp">First add the <span class="code">colspan=&quot;2&quot;</span> attribute to the cell I that I want to span more than one column.</p>
+
+                    <p class="hyp">Second I have to remove the cell or cells that are being overwritten, here I&rsquo;ve added the <span class="code">colspan</span> to the R3C1 cell <span class="code">&lt;td&gt;</span> element as an attribute. I&rsquo;ve also removed the R3C2 cell completely.</p>
+
+                    <p class="hyp">If I didn&rsquo;t remove the R3C2 cell I would get this:</p>
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td colspan="2" style="border: 1px solid black">R3C1</td>
+                           <td style="border: 1px solid black; text-align: right">R3C2</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem"><span class="first-use">Yeah, remember to delete the merged cell</span>.</p>
+
+                    <p class="hyp">Go back to the original code (with four cells), this time we&rsquo;ll merge R2C2 <span class="first-use">(almost a robot in a film)</span> with R3C2.</p>
+
+                    <p class="hyp">This time it is a <span class="code">rowspan</span> attribute:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-01k">&lt;table style=&quot;border-collapse:collapse; text-align: center&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 1 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 1 Heading&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;border: 1px solid black; width: 30%&quot;&gt;Col 2 Heading&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 2 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R2C1&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td rowspan=&quot;2&quot; style=&quot;border: 1px solid black&quot;&gt;R2C2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;   &lt;!-- Row 3 --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td style=&quot;border: 1px solid black&quot;&gt;R3C1&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <table style="border-collapse:collapse; text-align: center">
+                        <tr>   <!-- Row 1 -->
+                            <th style="border: 1px solid black; width: 30%">Col 1 Heading</th>
+                            <th style="border: 1px solid black; width: 30%">Col 2 Heading</th>
+                        </tr>
+                        <tr>   <!-- Row 2 -->
+                            <td style="border: 1px solid black">R2C1</td>
+                            <td rowspan="2" style="border: 1px solid black">R2C2</td>
+                        </tr>
+                        <tr>   <!-- Row 3 -->
+                            <td style="border: 1px solid black">R3C1</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp" style="margin-top: 1rem"><span class="first-use">Guess what happens:</span></p>
+
+                    <p class="hyp">Ok, I think that covers the basics, let’s look at the Practical Series tables.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-00-tables.html#js--140000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-02-tables.html#js--140200">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
