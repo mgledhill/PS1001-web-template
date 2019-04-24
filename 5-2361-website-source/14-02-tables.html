@@ -1,0 +1,1688 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understanding the standard table used in the web template">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             14-02-TABLES.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+24 Apr 2019   d-P19.14.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/14-02-tables/05-local-js/14-02-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/14-02-tables/01-local-css/14-02-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Tables: the standard table | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="14-01-tables.html#js--140100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="14-03-tables.html#js--140300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P19.14.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>14</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">14</span>Tables and Footnotes</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 14 tables
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-140000" href="14-00-tables.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">14</span><span class="toc-lev1-text">Tables and footnotes</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-140100" href="14-01-tables.html#js--140100">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.1</span><span class="toc-lev2-text">The basics of tables</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140101" href="14-01-tables.html#js--140101">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.1</span><span class="toc-lev3-text">HTML table construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140102" href="14-01-tables.html#js--140102">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.2</span><span class="toc-lev3-text">Adding table borders and border collapse</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140103" href="14-01-tables.html#js--140103">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.3</span><span class="toc-lev3-text">Specifying a column width</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140104" href="14-01-tables.html#js--140104">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.4</span><span class="toc-lev3-text">Specifying a row height</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140105" href="14-01-tables.html#js--140105">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.5</span><span class="toc-lev3-text">Aligning text in a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140106" href="14-01-tables.html#js--140106">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.6</span><span class="toc-lev3-text">Merging cells</span></div></a>
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140200" href="14-02-tables.html#js--140200">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.2</span><span class="toc-lev2-text">The standard table</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140201" href="14-02-tables.html#js--140201">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.1</span><span class="toc-lev3-text">The leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140202" href="14-02-tables.html#js--140202">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.2</span><span class="toc-lev3-text">Margin and padding arrangements for the leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140203" href="14-02-tables.html#js--140203">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.3</span><span class="toc-lev3-text">Paragraph styling within a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140204" href="14-02-tables.html#js--140204">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.4</span><span class="toc-lev3-text">Setting the width of each column</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140205" href="14-02-tables.html#js--140205">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.5</span><span class="toc-lev3-text">Aligning the text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140206" href="14-02-tables.html#js--140206">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.6</span><span class="toc-lev3-text">Table borders</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140207" href="14-02-tables.html#js--140207">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.7</span><span class="toc-lev3-text">Table captions</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140300" href="14-03-tables.html#js--140300">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.3</span><span class="toc-lev2-text">The dense table</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140400" href="14-04-tables.html#js--140400">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.4</span><span class="toc-lev2-text">Incidental tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140500" href="14-05-tables.html#js--140500">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.5</span><span class="toc-lev2-text">Footnote tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140600" href="14-06-tables.html#js--140600">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.6</span><span class="toc-lev2-text">Tables, responsive elements</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 14.2 THE STANDARD TABLE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>14.2</h2></div>
+                 <div class="sub-title-text-box"><h2>The standard table</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The tables within the template website are based around the properties discussed in the previous section; except this time the basic styles are all done in the <span class="code">style.css</span> file.</p>
+
+                    <p class="hyp">The tables are also much more subtle than that shown in the previous examples.</p>
+
+                    <p class="hyp">Where I&rsquo;ve used tables to represent a grid of information, I&rsquo;ve generally used borders very sparingly (and colours not at all), here is an example: </p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t14-01">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">Item</th>
+                            <th class="table-left" style="width: 78%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">01</td>
+                            <td class="table-left">Functional description 1</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">02</td>
+                            <td class="table-left">Functional description 2</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">03</td>
+                            <td class="table-left">Functional description 3</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 14.1 &emsp; A simple table style</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In practice, I probably wouldn&rsquo;t even go this far, the following is more typical of my tables:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t14-02">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">Item</th>
+                            <th class="table-left" style="width: 78%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">01</td>
+                            <td class="table-left">Functional description 1</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">02</td>
+                            <td class="table-left">Functional description 2</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">03</td>
+                            <td class="table-left">Functional description 3</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 14.2 &emsp; The standard table</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The eye tends to fill in the rows and columns automatically. I don&rsquo;t use vertical borders at all.</p>
+
+                    <p class="hyp">To highlight the table and distinguish it from the body text, the table is narrower than the width of the body text (it is 84% of the body text width). </p>
+
+                    <p class="hyp">The table also uses a san-serif font (Concourse) as opposed to the serif (Equity) font of the body text. The headings are in light-grey all-caps version and are smaller than the body text. </p>
+
+                    <p class="hyp">So how have I done it? Let&rsquo;s have a look at the basic HTML for the very simple table above (<a class="xref js--sc-t14-02" href="#">Table&nbsp;14.2</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">standard table html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html" id="js--c14-02">&lt;table class=&quot;table-clean&quot; id=&quot;js--t14-02&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                                   &lt;!-- Header row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;leading&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-cent&quot; style=&quot;width: 25%&quot;&gt;Item&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left&quot; style=&quot;width: 75%&quot;&gt;Function&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr class=&quot;no-border&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                 &lt;!-- Data row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-cent&quot;&gt;01&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;Functional description 1&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr class=&quot;no-border&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                 &lt;!-- Data row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-cent&quot;&gt;02&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;Functional description 2&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                 &lt;!-- Data row --&gt;
+&nbsp; &nbsp; &nbsp;  &nbsp;&lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-cent&quot;&gt;03&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;Functional description 3&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr class=&quot;no-border&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Caption row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-caption&quot;&gt;Table 14.2 Standard table&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.2 &emsp; Standard table HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now, with the exception of a few classes, this is pretty much the same as the example table of <a class="hlink nohyp" href="14-01-tables.html#js--140100">&sect;&nbsp;14.1</a>. The only peculiarity is that there is an extra column, it&rsquo;s the first cell in each row (even the header row) and it always has the class <span class="code">leading</span> (that is <span class="first-use">leading</span> to rhyme with <span class="first-use">bedding</span> not <span class="first-use">speeding</span>, see <a class="hlink nohyp" href="03-02-grid.html#js--030202">&sect;&nbsp;3.2.2</a>). I use this as a placeholder to set the height of the row (I explain further below).</p>
+
+                    <p class="hyp">Ok, first things first, I declare the table and give it the class <span class="code">table-clean</span>, I also give the table an ID in the form <span class="code">js--tcc-nn</span> (where <span class="code">t</span> just means table, <span class="code">cc</span> is the chapter number and <span class="code">nn</span> is the consecutive number of the table within the chapter); the table has an ID because it has a numbered caption and is an object that can be scrolled to by clicking a link (this is similar to figures and code fragments; <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">section&nbsp;17</a> gives a full description of how these IDs are specified and how the slow scrolling works).</p>
+
+                    <p class="hyp">Let&rsquo;s look at the CSS for <span class="code">table-clean</span>, there is a fair amount of code here, but it straight forward styling stuff&nbsp;&mdash;&nbsp;it just has to cover each type of cell (<span class="code">&lt;th&gt;</span> and <span class="code">&lt;td&gt;</span>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">standard table css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c14-03">.table-clean {
+&nbsp; &nbsp; width: 84%;
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; border-collapse: collapse;
+&nbsp; &nbsp; margin-bottom: 1rem;
+&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.7rem;
+}
+.table-clean th {
+&nbsp; &nbsp; font-family: &quot;conc-t2-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; text-transform: uppercase;
+&nbsp; &nbsp; letter-spacing: 0.086em;
+&nbsp; &nbsp; color: #7F7F7F;
+&nbsp; &nbsp; padding: 0.8rem 0.2rem 0.25rem 0.2rem;&nbsp; /* top padding to separate from prev text */
+&nbsp; &nbsp; border-bottom: 1px solid #cccccc;
+}
+.table-clean td {
+&nbsp; &nbsp; padding: 0.25rem 0.2rem;
+&nbsp; &nbsp; line-height: 120%;
+&nbsp; &nbsp; border-bottom: 1px solid #cccccc;
+}
+
+.table-clean th:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* first-child is leading */
+&nbsp; &nbsp; padding: 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* remove margins and padding */
+&nbsp; &nbsp; margin: 0;
+}
+.table-clean td:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* first-child is leading */
+&nbsp; &nbsp; padding: 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove margins and padding */
+&nbsp; &nbsp; margin: 0;
+}
+
+.table-clean p {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* if paragraphs are used add more space */
+&nbsp; &nbsp; margin-top: 0.3rem;
+&nbsp; &nbsp; margin-bottom: 0.8rem;
+}
+.table-clean p:last-child {
+&nbsp; &nbsp; margin-bottom: 0.3rem;
+}
+
+.table-clean em {
+&nbsp; &nbsp; font-family: &quot;conc-t3-b&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-style:normal;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.3 &emsp; Standard table CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The whole table has the class <span class="code">table-clean</span> and this defines the basic properties for the table. The first bit sets the table to a width of 84%, this is 84% of the parent element which in this case is the central area of the web page (where the body text lives), if looking at the web page in a full width browser the central area is 748&nbsp;px wide and the table will be 84% of this or 628&nbsp;px:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean {
+&nbsp; &nbsp; width: 84%;
+&nbsp; &nbsp; margin: 0 auto;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">margin</span> removes any top and bottom margins and centres the table in the web page (by setting the left and right margins to <span class="code">auto</span>).</p>
+
+                    <p class="hyp">Next I make any borders applied to cells within the table join up with each other (see <a class="hlink nohyp" href="14-01-tables.html#js--140102">&sect;&nbsp;14.1.2</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-collapse: collapse;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I also add a bottom margin to leave a space after the table and before any following paragraph:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin-bottom: 1rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This spacing makes the distance from the baseline of the text in the table caption to the baseline of a following paragraph correct (I measured it&nbsp;&mdash;&nbsp;with a ruler&nbsp;&mdash;&nbsp;<span class="first-use">still an engineer</span>).</p>
+
+                    <p class="hyp">The rest of it sets the text properties (this is the same stuff we do everywhere):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.7rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The text is Concourse t3 (san-serif) font with the British stylistic set (<span class="code">ss02</span>) and a smaller font size of 0.7&nbsp;rem (all the usual stuff).</p>
+
+                    <p class="hyp">Now I set the styles for the different cell types (heading and data), these are part of the <span class="code">&lt;table&gt;</span> element and thus use the descendant selector. Heading first:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean th {
+&nbsp; &nbsp; font-family: &quot;conc-t2-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; text-transform: uppercase;
+&nbsp; &nbsp; letter-spacing: 0.086em;
+&nbsp; &nbsp; color: #7F7F7F;
+&nbsp; &nbsp; padding: 0.8rem 0.2rem 0.25rem 0.2rem;
+&nbsp; &nbsp; border-bottom: 1px solid #cccccc;
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To start with I&rsquo;ve selected only the <span class="code">&lt;th&gt;</span> elements that are associated with the <span class="code">table-clean</span> class (rather than every <span class="code">&lt;th&gt;</span> element which is what would have been selected if I hadn&rsquo;t added <span class="code">.table-clean</span> beforehand):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean th {</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The code then is just being applied to heading elements (<span class="code">&lt;th&gt;</span>) within a table that has been given the <span class="code">table-clean</span> class (this is important because, as you will see, there are other types of table and I don&rsquo;t want to cross contaminate them).</p>
+
+                    <p class="hyp">The heading uses a slightly lighter font (Concourse t2 rather than t3) and again applies the British stylistic set:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; font-family: &quot;conc-t2-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next two lines make the heading text all-caps (<span class="code">text-transform: uppercase</span>) and increase the spacing between the letters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; text-transform: uppercase;
+&nbsp; &nbsp; letter-spacing: 0.086em;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The letter spacing is increased to make the text look better (see <a class="hlink nohyp" href="https://practicaltypography.com/letterspacing.html">Mr Butterick&rsquo;s website</a> for an explanation).</p>
+
+                    <p class="hyp">I also change the colour of the heading text to a lighter grey, I do this to dilute the effect of the all-caps, If I left the colour the standard dark grey of the body text the headings are a too noticeable (a bit <span class="first-use">shouty</span>).</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; color: #7F7F7F;
+&nbsp; &nbsp; padding: 0.8rem 0.2rem 0.25rem 0.2rem;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I add some padding to the heading cells: 0.2&nbsp;rem to the left and right to stop text in adjacent cells butting up to each other. I add 0.8&nbsp;rem above the heading to give the correct spacing from any previous paragraph and finally I add some bottom padding to leave a gap between the text and the bottom border.</p>
+
+                    <p class="hyp">The bottom border is a solid 1&nbsp;pixel high line in a light grey colour:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid #cccccc;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The border is applied by default; a heading cell will always have a bottom border unless action is taken to remove it (see below, <a class="xref nohyp js--sc-140206" href="#">&sect;&nbsp;14.2.6</a>).</p>
+
+                    <p class="hyp">The specific setting for a data cell (<span class="code">&lt;td&gt;</span>) is done in much the same way as the settings for a heading cell:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean td {
+&nbsp; &nbsp; padding: 0.25rem 0.2rem;
+&nbsp; &nbsp; line-height: 120%;
+&nbsp; &nbsp; border-bottom: 1px solid #cccccc;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Again, I&rsquo;ve selected only the <span class="code">&lt;td&gt;</span> elements that are associated with the <span class="code">table-clean</span> class and for the same reason:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean td {</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The data cells use the font set in the <span class="code">table-clean</span> class and so there are no font declaration applied here (they&rsquo;re not needed).</p>
+
+                    <p class="hyp">I&rsquo;ve added some padding to the cells: 0.25&nbsp;rem above and below the text and 0.2&nbsp;rem to either side, again this is to stop any text brushing up against the edges of the cell.</p>
+
+                    <p class="hyp">The line height has been set to 120% (body text is set to 135%), I judged this setting by eye, 120% is the smallest line spacing that should be used see <a class="hlink nohyp" href="03-02-grid.html#js--030203">&sect;&nbsp;3.2.3</a>, and it looks right in the tables, I want the table text to be denser than body text.</p>
+
+                    <p class="hyp">Finally, there is a bottom border:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid #cccccc;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is identical to the heading cell border and is again applied by default to every cell (unless steps are taken to prevent this see <a class="xref nohyp js--sc-140206" href="#">&sect;&nbsp;14.2.6</a>).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.1 THE LEADING CELL
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The leading cell</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Before I finish the <span class="code">table-clean</span> class description, I need to explain the peculiar cell I&rsquo;ve added to the start of each row in the table. It looks like this for a row of data cells (<span class="code">&lt;td&gt;</span>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And for the heading row:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;leading&quot;&gt;&lt;/th&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The only purpose of this cell is to set the height of the row that contains it. </p>
+
+                    <p class="hyp">The cell has been given the class <span class="code">leading</span>. The CSS for which is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.leading { width: 0; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There is not much too it, it has a width of zero pixels (i.e. it has no visible width).</p>
+
+                    <p class="hyp">There is also no text content to the cell, there is no text between the <span class="code">&lt;td&gt;</span> and the <span class="code">&lt;/td&gt;</span>; <em>this is important leading cell must not contain any text.</em> If text is placed in a leading cell it will appear on the screen and give the cell a visible width.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">
+<!-- Header row -->     <tr>
+                            <td class="leading"></td>
+                            <td class="table-cent" style="width: 100%"></td>
+
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 4em"></div></td>
+                            <td class="table-cent formulae-bkgd">
+                                <p><span class="serif-b" style="font-size: 0.94rem; color:#404030; line-height: 135%">Never put text in a leading cell</span></p>
+                            </td>
+                         </tr>
+                         <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-caption"></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The idea behind the leading cell is to give a common point in each row within which the defining height for the row can be set.</p>
+
+                    <p class="hyp">By default, the height of a row of cells is set by the cell that has the highest content (see <a class="hlink nohyp" href="14-01-tables.html#js--140104">&sect;&nbsp;14.1.4</a>). The purpose of the leading cell it to make this the highest cell in the row and this is done simply by specifying a height for the leading cell using the style attribute in the HTML&nbsp;&mdash;&nbsp;you can see it below (in bold and highlighted in green):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In this case, I&rsquo;ve set the height of the leading cell to be 3&nbsp;em, giving the row artificial height (the row is taller than it needs to be to accommodate the cell contents in that row).</p>
+
+                    <p class="hyp"><span class="first-use">Why ems and not rems?</span> Well, I&rsquo;ve used ems to make the spacing proportional to the text within the table (I know that this in turn is defined in rems), if the table font size is change (or overridden with a style attribute), the spacing will change with it.</p>
+
+                    <p class="hyp">So here are the rules for the leading cell:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">Each row including the heading row should have a leading cell</p></li>
+
+                        <li><p class="hyp">The leading cell should be the first cell in each row</p></li>
+
+                        <li><p class="hyp">The leading cell sets the height of the row by using the style attribute in the HTML</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You might also wonder why I use the leading cell to set the height in the HTML. The reason is that each table is unique, some tables may have long texts within them and some short, the height of a row is thus entirely dependent on what the table contains. If I were to set the height of the leading cell in the CSS file, it would apply to every table on the website.</p>
+
+                    <p class="hyp">Hence, this is one of those situations where it is better to use the style attribute directly in the HTML for each instance of a standard table.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>If no height is applied to a leading cell, the row will adopt the height of the cell with the highest content; the leading cell will do nothing (this tends to be the case with the heading row). The leading cell must always be there though, even if it is not supplying a height.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.2 MARGIN AND PADDING ARRANGEMENTS FOR THE LEADING CELL
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Margin and padding arrangements for the leading cell</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Back to the <span class="code">table-clean</span> CSS; the <span class="code">table-clean</span> class applies margins and padding to <span class="code">&lt;th&gt;</span> and <span class="code">&lt;td&gt;</span> elements to keep them clear of the cell borders.</p>
+
+                    <p class="hyp">These settings are also applied to the leading cell and this will effectively give some dimensions to the leading cell (i.e. it will have the width defined in the margin and padding settings) and we don&rsquo;t want this, the leading cell should specify the height of the row, but should have zero width. </p>
+
+                    <p class="hyp">It is necessary to remove the margin and padding settings for the leading cell; and since the leading cell is always the first cell in a row, we can use the first-child pseudo class to remove the margins:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean th:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* first-child is leading */
+&nbsp; &nbsp; padding: 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* remove margins and padding */
+&nbsp; &nbsp; margin: 0;
+}
+.table-clean td:first-child {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* first-child is leading */
+&nbsp; &nbsp; padding: 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove margins and padding */
+&nbsp; &nbsp; margin: 0;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are two of these, one for the <span class="code">&lt;th&gt;</span> leading cell (used in the heading row) and one for the <span class="code">&lt;td&gt;</span> leading cell (used on all rows apart from the heading row). The actions are the same for each, it just sets the margin and padding to zero for the first cell in each row:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; padding: 0;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* remove margins and padding */
+&nbsp; &nbsp; margin: 0;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.3 PARAGRAPH STYLING WITHIN A CELL
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140203">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Paragraph styling within a cell</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Tables generally hold data in the form of brief entries: numbers, names, brief descriptions &amp;c. and the table-clean class is setup for just such usage and most entries are just made between the <span class="code">&lt;td&gt;</span> and <span class="code">&lt;/td&gt;</span> tags without any qualification (just put the text or numbers that are to appear in the cell in between the tags and it just works).</p>
+
+                    <p class="hyp">However, there are situations where a cell needs more information and this might consist of more than one paragraph (this is the flexibility of tables, they can be used for anything); where multiple paragraphs are used in a cell, paragraph spacing is required.</p>
+
+                    <p class="hyp">Let&rsquo;s suppose we want to add to the <span class="code">Functional description 1</span> text in the above example and make it read:</p>
+
+                    <p class="hyp" style="margin-left: 5rem"><span class="sans">Functional description 1<br>
+                        The basic operator controls</span></p>
+
+                    <p class="hyp">If in the HTML. I add a <span class="code">&lt;br&gt;</span> element and the remaining text to the cell as follows:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;td class=&quot;table-left&quot;&gt;Functional description 1&lt;br&gt;The basic operator controls&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It gives the following result:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t14-02a">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">Item</th>
+                            <th class="table-left" style="width: 78%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">01</td>
+                            <td class="table-left">Functional description 1<br>The basic operator controls</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">02</td>
+                            <td class="table-left">Functional description 2</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">03</td>
+                            <td class="table-left">Functional description 3</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 14.2 &emsp; The standard table</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It puts the text onto two lines, but without any additional paragraph spacing. To get around this I&rsquo;ve defined another descendant selector for the paragraph element <span class="code">&lt;p&gt;</span> within the <span class="code">table-clean</span> class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-clean p {
+&nbsp; &nbsp; margin-top: 0.3rem;
+&nbsp; &nbsp; margin-bottom: 0.8rem;
+}
+.table-clean p:last-child {
+&nbsp; &nbsp; margin-bottom: 0.3rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first descendant selector: <span class="code">table-clean p</span>, just applies paragraph spacing above and below each <span class="code">&lt;p&gt;...&lt;/p&gt;</span> entry in a cell in the table.</p>
+
+                    <p class="hyp">The second entry <span class="code">table-clean p:last-child</span> removes some of the additional space below the last paragraph, this is because the <span class="code">table-clean</span> class already has margins set to give some spacing above the bottom edge of the cell, the last paragraph doesn&rsquo;t need as much space below it.</p>
+
+                    <p class="hyp">If I change the table cell to use paragraphs instead of the &lt;br&gt;, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;td class=&quot;table-left&quot;&gt;&lt;p&gt;Functional description 1&lt;/p&gt;<br>&lt;p&gt;The basic operator controls&lt;/p&gt;&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the table now looks like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t14-02b">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">Item</th>
+                            <th class="table-left" style="width: 78%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">01</td>
+                            <td class="table-left"><p>Functional description 1</p><p>The basic operator controls</p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">02</td>
+                            <td class="table-left">Functional description 2</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">03</td>
+                            <td class="table-left">Functional description 3</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 14.2 &emsp; The standard table</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The separate paragraphs are now properly spaced.</p>
+
+                    <p class="hyp">The general rules for this are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">For single sentence entries in a cell, just enter the text directly after the <span class="code">&lt;td&gt;</span> or <span class="code">&lt;th&gt;</span> tag</p></li>
+
+                        <li><p class="hyp">Where multiple paragraphs are required, enter the text after the <span class="code">&lt;td&gt;</span> or <span class="code">&lt;th&gt;</span> tag but this time surround the text for each paragraph with a <span class="code">&lt;p&gt;...&lt;/p&gt;</span> element</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">em</span> style within the standard table is again set to a Concourse (san-serif), with normal body text the <span class="code">em</span> style is a serif font, but within the table we want it to be a san-serif.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.4 SETTING THE WIDTH OF EACH COLUMN
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Setting the width of each column</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I used the leading cell as the first entry in a row to set the height of a row; the table has by default a heading row at the top and I use the cells within this to set the width of the columns.</p>
+
+                    <p class="hyp">It can be seen in the HTML (in bold with a red underline):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;leading&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-cent&quot; <span class="h-light">style=&quot;width: 25%&quot;</span>&gt;Item&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left&quot; <span class="h-light">style=&quot;width: 75%&quot;</span>&gt;Function&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ignoring the leading cell (the first cell of the row), each cell in the heading row has a <span class="code">style</span> attribute that sets the <span class="code">width</span> of the column. In this case there are two; the Item column is set to 25% and the Function column to 75%. </p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>These percentages are percentages of the table width, which in itself, is 84% of the central column area. I.e. in this example, the 25% and 75% are 25% and 75% is of the 84% table width.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If the table had three proper columns (not including the leading column), there would be three percentages.</p>
+
+                    <p class="hyp">The percentages for each column must always add up to 100%. </p>
+
+                    <p class="hyp">If the percentages do not add up to 100%, the columns distribution will look odd, the browser will decide that one column needs to be wider and will adjust the table accordingly&nbsp;&mdash;&nbsp;<span class="first-use">it&rsquo;s fair to say that it usually picks the wrong column</span>.</p>
+
+                    <p class="hyp">The <span class="code">style</span> attribute is used in exactly the same way as that described in the example of <a class="hlink nohyp" href="14-01-tables.html#js--140103">&sect;&nbsp;14.1.3</a>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.5 ALIGNING THE TEXT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140205">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Aligning the text</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Text in a cell can be horizontally aligned as follows:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Left justified</p></li>
+
+                        <li><p class="hyp">Centred</p></li>
+
+                        <li><p class="hyp">Right justified</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">By default <span class="code">&lt;th&gt;</span> cells will be centred and <span class="code">&lt;td&gt;</span> cells left justified.</p>
+
+                    <p class="hyp">To change the alignment of a particular cell just apply one of the following classes to the cell:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><span class="code">table-left</span></p></li>
+
+                        <li><p class="hyp"><span class="code">table-cent</span></p></li>
+
+                        <li><p class="hyp"><span class="code">table-right</span></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The do exactly what you think. Looking at the heading row of the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;leading&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-cent&quot; style=&quot;width: 25%&quot;&gt;Item&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left&quot; style=&quot;width: 75%&quot;&gt;Function&lt;/th&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The Item cell has class <span class="code">table-cent</span> to centre the text and the Function cell has <span class="code">table-left</span> to left justify it. These classes work exactly as you would expect:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-left&nbsp; {text-align: left;}
+.table-cent&nbsp; {text-align: center;}
+.table-right {text-align: right;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It uses the <span class="code">text-align</span> property to <span class="code">left</span>, <span class="code">centre</span> or <span class="code">right</span> justify the text.</p>
+
+                    <p class="hyp">I don&rsquo;t have any code to vertically align the text, the text will by default be vertically centred within a cell (this is the default action of the table), and generally this is exactly what I want a cell to do.</p>
+
+                    <p class="hyp">If you do want to vertically align text within in a cell, do exactly what I did in <a class="hlink nohyp" href="14-01-tables.html#js--140105">&sect;&nbsp;14.1.5</a></p>
+
+                    <p class="hyp">Use the <span class="code">style</span> attribute with <span class="code">vertical-align</span> in the HTML for that cell. The values for this property are: <span class="code">top</span>, <span class="code">middle</span> and <span class="code">bottom</span>. For example to make the number 01 align vertically with the top of its cell change the line to:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap" style="height: 0.9rem">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-cent&quot; <span class="h-light">style=&quot;vertical-align: top&quot;</span> &gt;01&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It would be perfectly possible to define CSS classes for this (just like the horizontal alignment), <span class="first-use">I should have I know, I just haven&rsquo;t</span>&nbsp;&mdash;&nbsp;I pretty much always want the text to be centred vertically and to be honest it didn&rsquo;t occur to me that something was missing until I started writing it up. Add them if you like&nbsp;&mdash;&nbsp;I will be doing so at the next revision of the website, they will be called <span class="code">table-top</span>, <span class="code">table-mid</span> and <span class="code">table-bot</span>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.6 TABLE BORDERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140206">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.6</h3></div>
+                    <div class="sub-title-text-box"><h3>Table borders</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">By default the table-clean (standard) type of table always has a light grey border at the bottom of each row. The previous table would look like this with default settings:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t14-02c">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">Item</th>
+                            <th class="table-left" style="width: 78%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">01</td>
+                            <td class="table-left"><p>Functional description 1</p><p>The basic operator controls</p></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">02</td>
+                            <td class="table-left">Functional description 2</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">03</td>
+                            <td class="table-left">Functional description 3</td>
+                        </tr>
+<!-- Caption -->        <tr>
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 14.2 &emsp; The standard table</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Every row gets a bottom border, even the last one; this is because the <span class="code">table-clean</span> defines a bottom border for both the <span class="code">&lt;th&gt;</span> and <span class="code">&lt;td&gt;</span> descendant selectors:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; border-bottom: 1px solid #cccccc;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If a border is not required for a particular row, that row must have the class <span class="code">no-border</span> applied to it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&nbsp; &nbsp; &lt;tr <span class="h-light">class=&quot;no-border&quot;</span>&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot; style=&quot;height: 3em&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-cent&quot;&gt;01&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;Functional description 1&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Here the <span class="code">&lt;tr&gt;</span> element has been given the class <span class="code">no-border</span> and the result is that there is no visible border.</p>
+
+                    <p class="hyp">The CSS behind this is straight forward:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">tr.no-border td,
+tr.no-border th {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* no-bottom border */
+&nbsp; &nbsp; border-bottom: 1px solid transparent;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It sets the border for both <span class="code">&lt;th&gt;</span>and <span class="code">&lt;td&gt;</span> elements to solid white with a height of 1&nbsp;pixel.</p>
+
+                    <p class="hyp">It doesn&rsquo;t actually turn the border off; it makes it transparent so it doesn&rsquo;t show up. The reason I do this instead of just turning the border off is that it keeps everything aligned properly, if I turned the border off, a row without a border would be 1&nbsp;pixel shorter than the one with a border (the border takes up one pixel).</p>
+
+                    <p class="hyp">So the rule is:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">If you <em>don&rsquo;t</em> want a border use <code class="prettyprint lang-html nohyp">&lt;tr class=&quot;no-border&quot;&gt;</code></p></li>
+
+                        <li><p class="hyp">If you <em>do</em> want a border use <code class="prettyprint lang-html nohyp">&lt;tr&gt;</code></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 14.2.7 TABLE CAPTIONS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140207">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>14.2.7</h3></div>
+                    <div class="sub-title-text-box"><h3>Table captions</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the last bit.</p>
+
+                    <p class="hyp">The last row of a table is the caption row:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums" id="js--c14-03a">&nbsp; &nbsp; &lt;tr class=&quot;no-border&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- caption row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-caption&quot;&gt;Table 14.2 &amp;emsp; Standard table&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This starts off as a normal row with the <span class="code">no-border</span> class (there is no border after the caption row):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &lt;tr class=&quot;no-border&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first cell in the row is a basic leading cell (this time it does not specify any height):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;leading&quot;&gt;&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All standard stuff so far. Next comes the only odd bit, the caption itself, this merges the cells in the row using a <span class="code">colspan</span> attribute (see <a class="hlink nohyp" href="14-01-tables.html#js--140106">&sect;&nbsp;14.1.6</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-caption&quot;&gt;Table 14.2 Standard table&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">colspan</span> should be set to span all the visible columns in the table; it must not include the leading column. In this case there are two rows (Item and Function) and so the <span class="code">colspan</span> attribute is set to <span class="code">2</span>, if there were three columns it would be set to <span class="code">3</span> &amp;c.</p>
+
+                    <p class="hyp">This is followed by the table-caption class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.table-caption {
+&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.6rem;
+&nbsp; &nbsp; text-align: left;
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This just defines the text properties for the caption text: Concourse with British styling and a font-size of 0.6&nbsp;rem (the caption is quite small). It also ensures that the text is left justified.</p>
+
+                    <p class="hyp">Table captions are not compulsory, but I tend to use them. Where they are used, the table number in the caption should match the table number given in the ID (right at the start of this section). In this example the table has ID <span class="code">js&#8209;&#8209;t14&#8209;02</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;table class=&quot;table-clean&quot; id=&quot;js--t14-02&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I.e. table 14.2.</p>
+
+                    <p class="hyp">The text in the caption cell reflects this, it has:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-caption&quot;&gt;Table 14.2 Standard table&lt;/td&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Table 14.2, both the caption and the ID refer to the same table.</p>
+
+                    <p class="hyp">Tables that have numbered captions are often referenced in body text and this ID allows a link to be instated that will navigate directly to the table in question (see <a class="hlink nohyp" href="17-00-slowscroll.html#js--000000">&sect;&nbsp;17</a>).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-01-tables.html#js--140100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-03-tables.html#js--140300">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

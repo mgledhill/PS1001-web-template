@@ -1,0 +1,690 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understanding how footnotes work">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                             14-05-TABLES.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+24 Apr 2019   d-P19.14.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/14-05-tables/05-local-js/14-05-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/14-05-tables/01-local-css/14-05-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Tables: the footnote | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="14-04-tables.html#js--140400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="13-00-links.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="14-06-tables.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P19.14.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>14</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">14</span>Tables and Footnotes</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 14 tables
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-140000" href="14-00-tables.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">14</span><span class="toc-lev1-text">Tables and footnotes</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-140100" href="14-01-tables.html#js--140100">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.1</span><span class="toc-lev2-text">The basics of tables</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140101" href="14-01-tables.html#js--140101">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.1</span><span class="toc-lev3-text">HTML table construction</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140102" href="14-01-tables.html#js--140102">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.2</span><span class="toc-lev3-text">Adding table borders and border collapse</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140103" href="14-01-tables.html#js--140103">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.3</span><span class="toc-lev3-text">Specifying a column width</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140104" href="14-01-tables.html#js--140104">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.4</span><span class="toc-lev3-text">Specifying a row height</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140105" href="14-01-tables.html#js--140105">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.5</span><span class="toc-lev3-text">Aligning text in a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140106" href="14-01-tables.html#js--140106">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.1.6</span><span class="toc-lev3-text">Merging cells</span></div></a>
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                            <br class="top-pad">
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140200" href="14-02-tables.html#js--140200">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.2</span><span class="toc-lev2-text">The standard table</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140201" href="14-02-tables.html#js--140201">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.1</span><span class="toc-lev3-text">The leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140202" href="14-02-tables.html#js--140202">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.2</span><span class="toc-lev3-text">Margin and padding arrangements for the leading cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140203" href="14-02-tables.html#js--140203">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.3</span><span class="toc-lev3-text">Paragraph styling within a cell</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140204" href="14-02-tables.html#js--140204">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.4</span><span class="toc-lev3-text">Setting the width of each column</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140205" href="14-02-tables.html#js--140205">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.5</span><span class="toc-lev3-text">Aligning the text</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140206" href="14-02-tables.html#js--140206">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.6</span><span class="toc-lev3-text">Table borders</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-140207" href="14-02-tables.html#js--140207">
+                            <div class="toc-lev"><span class="toc-lev3-num">14.2.7</span><span class="toc-lev3-text">Table captions</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140300" href="14-03-tables.html#js--140300">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.3</span><span class="toc-lev2-text">The dense table</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140400" href="14-04-tables.html#js--140400">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.4</span><span class="toc-lev2-text">Incidental tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140500" href="14-05-tables.html#js--140500">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.5</span><span class="toc-lev2-text">Footnote tables</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-140600" href="14-06-tables.html#js--140600">
+                            <div class="toc-lev"><span class="toc-lev2-num">14.6</span><span class="toc-lev2-text">Tables, responsive elements</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 14.5 THE FOOTNOTE TABLE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--140500">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>14.5</h2></div>
+                 <div class="sub-title-text-box"><h2>Footnote tables</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Footnotes are a bit like incidental tables, they&rsquo;re used to add some information to a point made within the body text; they tend to be things like bibliographic references, clarifications and my case, the odd sarcastic comment and occasional joke.</p>
+
+                    <p class="hyp">Footnotes look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn00">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Footnotes usually provide additional information or references for particular items in the main body of the text&nbsp;&mdash;&nbsp;bibliographical information, clarification etc.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Footnotes have two parts, a superscript number preceded by the dagger sign (<sup>&dagger;1</sup>) somewhere within the body text (indicating that to which the footnote is applied) and then the footnote itself, this can be anywhere within the text page (by and large, I tend to put the footnote or notes at the end of the section within which they apply). The footnote consists of a line that partially spans the page, underneath which is a dagger and number (corresponding to the number in the body text) followed by the indented text of the foot note. </p>
+
+                    <p class="hyp">The footnote is actually a two row by four column table (I&rsquo;ve given each cell a false colour below) that is 95% of the central area width and is centred in the central area:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%; background-color: #E5B9B7"></th>
+                            <th class="fnote-top" style="width: 10%; background-color: #B8CCE4"></th>
+                            <th class="fnote-top" style="width: 20%; background-color: #D7E3BC"></th>
+                            <th style="width: 60%; background-color: #CCC1D9"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left" style="background-color: #D99694"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left" style="background-color: #95B3D7"></td>
+                            <td colspan="2" class="table-left" style="background-color: #FAC08F">Footnotes usually provide additional information or references for particular items in the main body of the text&nbsp;&mdash;&nbsp;bibliographical information, clarification etc.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The table needs four columns to allow the top border to span an area over the footnote text, it artistically spans a quarter of the width of the text area <span class="first-use">(I know, it&rsquo;s quite beautiful&nbsp;&mdash;&nbsp;there&rsquo;s no need to thank me)</span>. The four columns are coloured red, blue, green and purple (all four columns are visible in the first row).</p>
+
+                    <p class="hyp">The first column is used to hold the footnote number (the dagger followed by a number), the second column just gives a space between the footnote number and the footnote text, this column never has anything in it.</p>
+
+                    <p class="hyp">The last two columns hold the footnote text; these two columns are merged together in the second row (coloured orange in the above example).</p>
+
+                    <p class="hyp">I&rsquo;m going to go through the code now; this is pretty similar to how all the other tables work, if you&rsquo;re bored with it <span class="first-use">(I know I am)</span>, just skip to the next section.</p>
+
+                    <p class="hyp">Ok, dig deep. The HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footnote table html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c14-07">&lt;table class=&quot;table-fnote&quot; id=&quot;js--fn01&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 20%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;width: 60%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;em&gt;&amp;dagger;1&lt;/em&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;Footnotes usually provide additional information or references for particular items in the main body of the text&amp;amp;nbsp;&amp;amp;mdash;&amp;amp;nbsp;bibliographical information, clarification etc.&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.7 &emsp; Footnote table HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footnote table css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c14-08">.table-fnote {
+&nbsp; &nbsp; width: 95%;
+&nbsp; &nbsp; margin: 2rem auto 2rem auto;
+&nbsp; &nbsp; border-collapse: collapse;
+&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.65rem;
+}
+.table-fnote th {
+&nbsp; &nbsp; padding: 0 0 0.25rem 0;
+}
+.table-fnote td {
+&nbsp; &nbsp; vertical-align: text-top;
+&nbsp; &nbsp; padding: 0.25rem 0.2rem;
+&nbsp; &nbsp; line-height: 130%;
+}
+.table-fnote td em {
+&nbsp; &nbsp; font-family: &quot;conc-t4-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.7rem;
+}
+
+.fnote-top {border-top: 1px solid #404030;}
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.8 &emsp; Footnote table CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In much the same way as all the other tables, the footnote is a table of, in this case, class <span class="code">table-fnote</span>; and <span class="code">table-fnote</span> is itself much the same as all the other table classes (<span class="code">table-clean</span>, <span class="code">table-dense</span> and <span class="code">table-incid</span>).</p>
+
+                    <p class="hyp">The first bit sets the table to 95% of the central column width, it sets the top and bottom margins (applying whitespace above and below the table) and centres the table in the central area (auto left and right margins). Next it sets the font (Concourse with British settings) to quite a small size (0.65&nbsp;em).</p>
+
+                    <p class="hyp">It also sets the descendant selectors for the heading and data cells. In this case, the heading row just has some padding applied to separate it from the following row.</p>
+
+                    <p class="hyp">The data descendant (<span class="code">table-fnote td</span>) again adds some padding and sets an appropriate line height. It also vertically aligns the text, the text would by default be centred vertically within the cell, in this case I want the footnote number to be at the top of the cell (aligned with the first line of the footnote text).</p>
+
+                    <p class="hyp">Finally, I define a descendant selector for the <span class="code">em</span> element; this just uses a heavier version of the Concourse font at a slightly larger font size. This is used for the footnote number.</p>
+
+                    <p class="hyp">So let&rsquo;s look at how it all works; the heading row first.</p>
+
+                    <p class="hyp">The heading row is just there to set the width of the columns and draw a line across part of the table:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-cent fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left fnote-top&quot; style=&quot;width: 20%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;table-left&quot; style=&quot;width: 60%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The row has four cells (for the four columns) and each cell sets the width of that column. The column widths are (from the left) 10%, 10%, 20% and 60% (all add up to 100).</p>
+
+                    <p class="hyp">The first three cells have also been given the class <span class="code">fnote-top</span>. This class just puts a dark border above the cell:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fnote-top {border-top: 1px solid #404030;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is the line that appears above the footnote and spans a portion of the screen width. I make it span just a portion of the screen by only applying it to the first three columns. It applies a top border of 1&nbsp;pixel in the same colour as the text.</p>
+
+                    <p class="hyp">The content row is as follows:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html linenums wrap" id="js--c14-08a">&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;Footnotes usually provide additional information or references for particular items in the main body of the text&amp;nbsp;&amp;mdash;&amp;nbsp;bibliographical information, clarification etc.&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The most noticeable thing here is that there are only three cells, the last cell uses the <span class="code">colspan=&quot;2&quot;</span> attribute to merge the last two columns (see <a class="hlink nohyp" href="14-01-tables.html#js--140106">&sect;&nbsp;14.1.6</a>).</p>
+
+                    <p class="hyp">The first cell contains the footnote number and has the <span class="code">table-left</span> class to left justify the footnote number.</p>
+
+                    <p class="hyp">The footnote is entered between the <span class="code">&lt;em&gt;...&lt;em&gt;</span> tags (giving a larger and heavier font).</p>
+
+                    <p class="hyp">The footnote number is entered with a preceding dagger symbol; this is another one of the special HTML characters that can be entered with an <span class="code">&amp;code</span> (see <a class="hlink nohyp" href="06-11-box.html#js--061100">&sect;&nbsp;6.11</a>). Entering <span class="code">&amp;dagger;</span> displays the symbol (&dagger;), this is followed by the number (1 in this case).</p>
+
+                    <p class="hyp">The next cell is always empty; this is just the gap between the number and the text.</p>
+
+                    <p class="hyp">Finally, the third cell contains the textual content of the footnote, just type it directly between the <span class="code">&lt;td&gt;...&lt;/td&gt;</span> tags.</p>
+
+                    <p class="hyp">If an extra paragraph is needed, just add another content (data) row and delete the footnote number:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">footnote table with additional paragraph html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c14-09">&lt;table class=&quot;table-fnote&quot; id=&quot;js--fn01&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 20%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;width: 60%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;em&gt;&amp;dagger;1&lt;/em&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;Footnotes usually provide additional information or references for particular items in the main body of the text&amp;amp;nbsp;&amp;amp;mdash;&amp;amp;nbsp;bibliographical information, clarification etc.&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;Additional paragraph here.&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.9 &emsp; Footnote table with additional paragraph HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+                    <table class="table-fnote" id="js--fn01a">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Footnotes usually provide additional information or references for particular items in the main body of the text&amp;nbsp;&amp;mdash;&amp;nbsp;bibliographical information, clarification etc.</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Additional paragraph here.</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp">If a section has several footnotes, it is possible to put them all in a single footnote table, just add another content (data) row and update the footnote number and text:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">multiple footnotes in a single table</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c14-10">&lt;table class=&quot;table-fnote&quot; id=&quot;js--fn01&quot;&gt;
+&nbsp; &nbsp; &lt;tr&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 10%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th class=&quot;fnote-top&quot; style=&quot;width: 20%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;th style=&quot;width: 60%&quot;&gt;&lt;/th&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;em&gt;&amp;dagger;1&lt;/em&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;Footnotes usually provide additional information or references for particular items in the main body of the text&amp;amp;nbsp;&amp;amp;mdash;&amp;amp;nbsp;bibliographical information, clarification etc.&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+&nbsp; &nbsp; &lt;tr&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Footnote content row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;em&gt;&amp;dagger;2&lt;/em&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td class=&quot;table-left&quot;&gt;&lt;/td&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan=&quot;2&quot; class=&quot;table-left&quot;&gt;This is the second footnote&lt;/td&gt;
+&nbsp; &nbsp; &lt;/tr&gt;
+
+&lt;/table&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 14.10 &emsp; Multiple footnotes in a single table</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+
+                    <table class="table-fnote" id="js--fn01b">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+                            <td class="table-left"><em>&dagger;1</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Footnotes usually provide additional information or references for particular items in the main body of the text&amp;nbsp;&amp;mdash;&amp;nbsp;bibliographical information, clarification etc.</td>
+                        </tr>
+                        <tr>                                    <!-- Footnote content row -->
+                            <td class="table-left"><em>&dagger;2</em></td>
+                            <td class="table-left"></td>
+                            <td colspan="2" class="table-left">This is the second footnote</td>
+                        </tr>
+
+                    </table>
+
+                    <p class="hyp">One final note, to put the dagger in the body text, the paragraph looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;p&gt;Footnotes<span class="h-light">&lt;sup&gt;&amp;dagger;1&lt;/sup&gt;</span> are used to reference a particular item in the text and add a clarification or explanation; e.g. explaining an acronym.&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Use <span class="code">&lt;sup&gt;&amp;dagger;1&lt;/sup&gt;</span> the <span class="code">&lt;sup&gt;</span> makes it superscript and the <span class="code">&amp;dagger;</span> puts in the dagger symbol (obviously use the correct number).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-04-tables.html#js--140400">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="14-06-tables.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
