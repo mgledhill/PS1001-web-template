@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Basic concepts for using images within a website">
+        <meta name="description" content="Explains how to insert two side-by-side images on a website">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            15-00-FIGURES.HTML
+Title :          WEBSITE TEMPLATE                            15-02-FIGURES.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-25 Apr 2019   d-P20.15.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+25 Apr 2019   d-P20.15.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/15-00-figures/05-local-js/15-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/15-02-figures/05-local-js/15-02-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/15-00-figures/01-local-css/15-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/15-02-figures/01-local-css/15-02-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Basic figures | PracticalSeries: Web Development</title>
+        <title>Two side-by-side images | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="14-06-tables.html#js-000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="15-01-figures.html#js--150100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="15-01-figures.html#js--150100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="15-03-figures.html#js--150300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -241,16 +239,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 15 BASIC FIGURES
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 15.2 TWO SIDE-BY-SIDE IMAGES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--150000">           <!-- Start of section         -->
+        <section class="section-std" id="js--150200">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Basic figures</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>15.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Two side-by-side images</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -264,52 +263,140 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Figures are the boxes</span> that hold images in one form or another on any given web page.</p>
-
-                    <p class="hyp">The template website supports two versions of figures; the first (covered in this section) is just a basic image that appears on any web page:</p>
+                    <p class="hyp">I&rsquo;ll go through each of the different image arrangements that are provided by default with the website template, the previous section covered the single, full width image; this looks at the next type: two half width images that are side-by-side:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     FIGURE - DOUBLE FIGURE (361 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-01">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-01.png" data-lightbox="fig-set" data-title="Figure 15.1 - An image on a website">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-01.png" alt="Figure 15.1 - An image on a website">
-                            </a>
-                            <figcaption>Figure 15.1 &emsp; An image on a website</figcaption>
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f99-02">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-02.png" alt="Figure 99.2 - Tall image">
+                            <figcaption>Figure 99.2 &emsp; Tall image</figcaption>
                         </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f99-03">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-03.png" alt="Figure 99.3 - short image">
+                            <figcaption>Figure 99.3 &emsp; short image</figcaption>
+                        </figure>
+                    </div>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is very similar to the full width image of previous section, the HTML being:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic half width image html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c15-03">&lt;div class=&quot;fig-row&quot;&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-2&quot; id=&quot;js--f99-02&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-02.png&quot; alt=&quot;Figure 99.2&nbsp;-&nbsp;Tall image&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.2 &amp;emsp; Tall image&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-2&quot; id=&quot;js--f99-03&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-03.png&quot; alt=&quot;Figure 99.3&nbsp;-&nbsp;short image&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.3 &amp;emsp; short image&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 15.3 &emsp; Basic half width side-by-side images HTML</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is just a straight forward image, clicking it doesn&rsquo;t do anything</p>
+                    <p class="hyp">The <span class="code">fig-row</span> classes and the <span class="code">fig-col</span> classes are the same classes of the previous sections.</p>
 
-                    <p class="hyp">Then we have <span class="first-use">lightbox</span> images, where clicking the image opens a bigger version of the image and greys out the background website:</p>
+                    <p class="hyp">The HTML starts in just the same way, a <span class="code">div</span> element with class <span class="code">fig-row</span> that again establishes a row in the central column area</p>
+
+                    <p class="hyp">The difference is that there are now two <span class="code">figure</span> elements (one for each image), each of which if virtually identical to the figure element of <a class="hlink nohyp" href="15-01-figures.html#js--150101">&sect;&nbsp;15.1.1</a>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-02">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-02.png" data-lightbox="fig-set" data-title="Figure 15.2 - A lightbox image">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-02.png" alt="Figure 15.2 - A lightbox image">
-                            </a>
-                            <figcaption>Figure 15.2 &emsp; A lightbox image</figcaption>
-                        </figure>
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &lt;div class=&quot;fig-col fig1-2&quot; id=&quot;js--f99-02&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This section is only concerned with the first type, displaying a simple image on a website. The second, lightbox image requires a Java plug-in and is explained in <a class="hlink nohyp" href="20-00-lightbox.html#js--000000">section&nbsp;20</a>.</p>
+                    <p class="hyp">Each figure element has the class <span class="code">fig-col</span> (just like the full width image), the difference is it now has the class <span class="code">fig1-2</span>; the full width image had the class <span class="code">fig1-1</span>.</p>
 
-                    <p class="hyp">That said, the lightbox arrangement is based on the basic figure construction discussed here; it has all the same containers and captions &amp;c.</p>
+                    <p class="hyp">In this case <span class="code">fig1-2</span> means it spans one column of a two column row.</p>
 
-                    <p class="hyp">For a website that uses images of one sort or another, this section is the place to start.</p>
+                    <p class="hyp">The CSS for this is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig1-2 { width: 48.25%; }
+.fig1-2 img { width: 100%; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">fig1-1</span> class set the width to be 100%; the <span class="code">fig1-2</span> class is setting the width to be 48.5%, roughly half the screen less the margins that give the central column.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT WITH MULTIPLE PARAGRAPHS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The more observant amongst you may be wondering about the 48.25% and thinking I&rsquo;ve got the maths wrong&nbsp;&mdash;&nbsp;you would be right. The width of the central column is 100%; a single margin of 2.5% has been applied to the second <span class="code">fig-col</span> class, that leave 97.5% of the screen area and half of this would be 48.75% not 48.25%.</li>
+                    </ul>                                       <!-- End of note              -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">The reason I reduced the percentage is if I used exactly 48.75%, I occasionally found that the images were stacking up one on top of the other and I think this was down to rounding errors (unlike the responsive grid, which always gave whole number results, here we&rsquo;re dealing with fractions of a pixel and I think this is what leads to the rounding errors). To get round this I made the percentage value slightly less, I rounded down to 48.25.</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The image descendant class (<span class="code">img</span>) is again set to be 100%, this is 100% of the <span class="code">fig1-2</span> width which in turn is 48.25% of the central column width (i.e. the image is just less than 50% of the central area.</p>
+
+                    <p class="hyp">The first <span class="code">div</span> contains the image to be displayed (with the <span class="code">src</span> and <span class="code">alt</span> attributes just like before:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-02.png&quot; alt=&quot;Figure 99.2&nbsp;-&nbsp;Tall image&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And this is followed by the <span class="code">figcaption</span> for the first image (again this is just like the full page image)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;figcaption&gt;Figure 99.2 &amp;emsp; Tall image&lt;/figcaption&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The second image is contained in another <span class="code">div</span> that apart from the actual image and caption being used is identical to the first.</p>
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -326,7 +413,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="14-06-tables.html#js-000000">Prev</a>
+                        <a class="xref" href="15-01-figures.html#js--150100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +423,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-01-figures.html#js--150100">Next</a>
+                        <a class="xref" href="15-03-figures.html#js--150300">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

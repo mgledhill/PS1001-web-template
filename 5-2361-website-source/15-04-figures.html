@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Basic concepts for using images within a website">
+        <meta name="description" content="Explains how to insert asymmetric  side-by-side images on a website">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            15-00-FIGURES.HTML
+Title :          WEBSITE TEMPLATE                            15-04-FIGURES.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-25 Apr 2019   d-P20.15.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+25 Apr 2019   d-P20.15.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/15-00-figures/05-local-js/15-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/15-04-figures/05-local-js/15-04-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/15-00-figures/01-local-css/15-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/15-04-figures/01-local-css/15-04-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Basic figures | PracticalSeries: Web Development</title>
+        <title>Asymmetric side-by-side images | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="14-06-tables.html#js-000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="15-03-figures.html#js--150300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="15-01-figures.html#js--150100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="15-05-figures.html#js--150500"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -241,16 +239,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 15 BASIC FIGURES
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 15.4 ASYMMETRIC SIDE-BY-SIDE IMAGES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--150000">           <!-- Start of section         -->
+        <section class="section-std" id="js--150400">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Basic figures</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>15.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Asymmetric side-by-side images</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -264,52 +263,85 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Figures are the boxes</span> that hold images in one form or another on any given web page.</p>
-
-                    <p class="hyp">The template website supports two versions of figures; the first (covered in this section) is just a basic image that appears on any web page:</p>
+                    <p class="hyp">This is the final type of image display provided in the template, it is two side-by-side images (like &sect;&nbsp;15.2), but in this case the images are different widths; the first image is approximately one-third of the central column wide, the second is two-thirds wide:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     FIGURE - DOUBLE FIGURE ASYMMETRIC PAGE WIDTH (232 px/465 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-01">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-01.png" data-lightbox="fig-set" data-title="Figure 15.1 - An image on a website">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-01.png" alt="Figure 15.1 - An image on a website">
-                            </a>
-                            <figcaption>Figure 15.1 &emsp; An image on a website</figcaption>
+<!-- Image 01 -->       <figure class="fig-col fig1-3" id="js--f99-07">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-07.png" alt="Figure 99.7 - 1/3 width">
+                            <figcaption>Figure 99.7 &emsp; &#x2153; width</figcaption>
                         </figure>
+<!-- Image 02 -->       <figure class="fig-col fig2-3" id="js--f99-08">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-08.png" alt="Figure 99.8 - 2/3 width">
+                            <figcaption>Figure 99.8 &emsp; &#x2154; width</figcaption>
+                        </figure>
+
+                    </div>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In terms of the <span class="code">figx-y</span> classes used, I&rsquo;ve considered this to be a three column arrangement with the first image spanning one of the three columns (a <span class="code">fig1-3</span> class); the second image spans two of the three columns (i.e. a new <span class="code">fig2-3</span> class).</p>
+
+                    <p class="hyp">There are only two images, so the HTML only has two of the <span class="code">div</span> elements within the <span class="code">figure</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">two asymmetric width images html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c15-05">&lt;div class=&quot;fig-row&quot;&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-3&quot; id=&quot;js--f99-07&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-07.png&quot; alt=&quot;Figure 99.7&nbsp;-&nbsp;1/3 width&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.7 &amp;emsp; &amp;#x2153; width&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig2-3&quot; id=&quot;js--f99-08&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-08.png&quot; alt=&quot;Figure 99.8&nbsp;-&nbsp;2/3 width&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.8 &amp;emsp; &amp;#x2154; width&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure&gt;
+&lt;/div&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 15.5 &emsp; Basic asymmetric width side-by-side images HTML</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is just a straight forward image, clicking it doesn&rsquo;t do anything</p>
-
-                    <p class="hyp">Then we have <span class="first-use">lightbox</span> images, where clicking the image opens a bigger version of the image and greys out the background website:</p>
+                    <p class="hyp">Apart from the <span class="code">fig2-3</span> class, this is identical to the half width side-by-side image of <a class="hlink nohyp" href="15-02-figures.html#js--150200">&sect;&nbsp;15.2</a>, the only thing to do is to add the <span class="code">fig2-3</span> class, it looks like this</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-02">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-02.png" data-lightbox="fig-set" data-title="Figure 15.2 - A lightbox image">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-02.png" alt="Figure 15.2 - A lightbox image">
-                            </a>
-                            <figcaption>Figure 15.2 &emsp; A lightbox image</figcaption>
-                        </figure>
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig2-3 { width: 64.82%; }
+.fig2-3 img { width: 100%; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This section is only concerned with the first type, displaying a simple image on a website. The second, lightbox image requires a Java plug-in and is explained in <a class="hlink nohyp" href="20-00-lightbox.html#js--000000">section&nbsp;20</a>.</p>
+                    <p class="hyp">The <span class="code">fig2-3</span> class spans the space of two of the <span class="code">fig1-3</span> classes plus the 2.5% column that would have been between them in a three column arrangement, its width is thus 2&nbsp;&times;&nbsp;<span class="code">fig1-3</span> width&nbsp;+&nbsp;2.5%, that works out at 64.82%.</p>
 
-                    <p class="hyp">That said, the lightbox arrangement is based on the basic figure construction discussed here; it has all the same containers and captions &amp;c.</p>
+                    <p class="hyp">The image and <span class="code">figcaption</span> are just the same as all the other examples.</p>
 
-                    <p class="hyp">For a website that uses images of one sort or another, this section is the place to start.</p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>If you want the wide image first, just make the first <span class="code">div fig2-3</span> and the second <span class="code">div fig1-3</span>.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -326,7 +358,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="14-06-tables.html#js-000000">Prev</a>
+                        <a class="xref" href="15-03-figures.html#js--150300">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +368,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-01-figures.html#js--150100">Next</a>
+                        <a class="xref" href="15-05-figures.html#js--150500">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

@@ -1,0 +1,881 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Explains how to strucutre a container for a figure on a website">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                            15-01-FIGURES.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+25 Apr 2019   d-P20.15.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/15-01-figures/05-local-js/15-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/15-01-figures/01-local-css/15-01-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>The basic figure structure | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="15-02-figures.html#js--150200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P20.15.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>15</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">15</span>Basic figures</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 15 Figures
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-150000" href="15-00-figures.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">15</span><span class="toc-lev1-text">Basic figures</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-150100" href="15-01-figures.html#js--150100">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.1</span><span class="toc-lev2-text">The basic figure structure</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-150101" href="15-01-figures.html#js--150101">
+                            <div class="toc-lev"><span class="toc-lev3-num">15.1.1</span><span class="toc-lev3-text">The basic row and column structure of figures</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-150102" href="15-01-figures.html#js--150102">
+                            <div class="toc-lev"><span class="toc-lev3-num">15.1.2</span><span class="toc-lev3-text">Loading the image</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-150103" href="15-01-figures.html#js--150103">
+                            <div class="toc-lev"><span class="toc-lev3-num">15.1.3</span><span class="toc-lev3-text">The figure caption</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150200" href="15-02-figures.html#js--150200">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.2</span><span class="toc-lev2-text">Two side-by-side images</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150300" href="15-03-figures.html#js--150300">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.3</span><span class="toc-lev2-text">Three side-by-side images</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150400" href="15-04-figures.html#js--150400">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.4</span><span class="toc-lev2-text">Asymmetric side-by-side images</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150500" href="15-05-figures.html#js--150500">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.5</span><span class="toc-lev2-text">Other column arrangements</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150600" href="15-06-figures.html#js--150600">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.6</span><span class="toc-lev2-text">Restricting the width of an image</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-150700" href="15-07-figures.html#js--150700">
+                            <div class="toc-lev"><span class="toc-lev2-num">15.7</span><span class="toc-lev2-text">Making figures responsive</span></div></a>
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 15.1 THE BASIC FIGURE STRUCTURE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--150100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>15.1</h2></div>
+                 <div class="sub-title-text-box"><h2>The basic figure structure</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The website template has four typical arrangements of a basic figure:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">A full width image (a single image that spans the central column)</p></li>
+
+                        <li><p class="hyp">Half width images (two equal width images side-by-side)</p></li>
+
+                        <li><p class="hyp">One third width images (three equal width images side-by-side)</p></li>
+
+                        <li><p class="hyp">Asymmetric images (two side-by-side images, one twice the width of the other)</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">They are shown below:</p>
+
+                    <p class="hyp"><em>Full width figure</em>. Full width figures occupy a maximum width of 748&nbsp;px.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f99-01">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-01.png" alt="Figure 99.1 - Full width image">
+                            <figcaption>Figure 99.1 &emsp; Full width figure</figcaption>
+                        </figure>
+                    </div>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><em>Half width figure</em>. Half width figures occupy a maximum width of 361&nbsp;px each.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - DOUBLE FIGURE (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f99-02">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-02.png" alt="Figure 99.2 - Tall image">
+                            <figcaption>Figure 99.2 &emsp; Tall image</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f99-03">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-03.png" alt="Figure 99.3 - short image">
+                            <figcaption>Figure 99.3 &emsp; short image</figcaption>
+                        </figure>
+                    </div>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><em>One third width figure</em>. One third width figures occupy a maximum width of 232&nbsp;px each.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - TRIPLE FIGURE ONE THIRD PAGE WIDTH (232 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-3" id="js--f99-04">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-04.png" alt="Figure 99.4 - short image">
+                            <figcaption>Figure 99.4 &emsp; short image</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-3" id="js--f99-05">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-05.png" alt="Figure 99.5 - Tall image">
+                            <figcaption>Figure 99.5 &emsp; Tall image</figcaption>
+                        </figure>
+<!-- Image 03 -->       <figure class="fig-col fig1-3" id="js--f99-06">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-06.png" alt="Figure 99.6 - short image">
+                            <figcaption>Figure 99.6 &emsp; short image</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><em>Asymmetric  display</em>, &#x2153; and &#x2154;. The first (narrow) image has a maximum width of 232&nbsp;px, the second (wide) image has a maximum width of 465&nbsp;px</p>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FIGURE - DOUBLE FIGURE ASYMMETRIC PAGE WIDTH (232 px/465 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-3" id="js--f99-07">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-07.png" alt="Figure 99.7 - 1/3 width">
+                            <figcaption>Figure 99.7 &emsp; &#x2153; width</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig2-3" id="js--f99-08">
+                            <img src="01-pages/15-01-figures/02-images/fig-99-08.png" alt="Figure 99.8 - 2/3 width">
+                            <figcaption>Figure 99.8 &emsp; &#x2154; width</figcaption>
+                        </figure>
+
+                    </div>                                   <!-- END OF FIGURE -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The structure behind each of these is very similar and once you understand the first two, you will understand all the rest and you will be able to create any combination you want.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 15.1.1 THE BASIC ROW AND COLUMN STRUCTURE OF FIGURES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--150101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>15.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The basic row and column structure of figures</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Figures span the whole of the central column area, at the maximum screen width this is 748&nbsp;pixels wide (see <a class="hlink nohyp" href="08-02-columns.html#js--080200">&sect;&nbsp;8.2</a>). At its most basic, this would be a single image (like the example <a class="xref js--sc-f99-01" href="#">Figure&nbsp;99.1</a> above) and the HTML for this is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic full width image html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c15-01">&lt;div class=&quot;fig-row&quot;&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-1&quot; id=&quot;js--f99-01&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-01.png&quot; alt=&quot;Figure 99.1&nbsp;-&nbsp;Full width image&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.1 &amp;emsp; Full width figure&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure &gt;
+&lt;/div&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 15.1 &emsp; Basic full width image HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This uses two more semantic elements (see <a class="hlink nohyp" href="10-02-sections.html#js--100200">&sect;&nbsp;10.2</a>): <span class="code">figure</span> and <span class="code">figcaption</span>. In terms of usage, they&rsquo;re identical to the <span class="code">&lt;div&gt;</span> element, I&rsquo;ve used them here to provide information to search engines, these semantic elements identify the contents of the element as a figure (an image of some sort) and identify the text of the caption applied to the figure.</p>
+
+                    <p class="hyp">There are three classes used within the full width figure: <span class="code">fig-row</span>, <span class="code">fig-col</span> and <span class="code">fig1-1</span>, some of you might be thinking <span class="first-use">&ldquo;that looks similar to the responsive grid classes&rdquo;</span> and you would be right.</p>
+
+                    <p class="hyp">Here&rsquo;s the underlying CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic full width image CSS</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css" id="js--c15-02">.fig-row {
+&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.6rem;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; text-align: center;
+&nbsp; &nbsp; width: 100%;
+&nbsp; &nbsp; margin: 1.5rem auto 0 auto;
+&nbsp; &nbsp; padding: 0;&nbsp;
+}
+
+.fig-col {
+&nbsp; &nbsp; margin: 0 0 0 2.5%;
+&nbsp; &nbsp; display:inline-block;
+}
+.fig-col:first-child { margin-left: 0; } /* remove left margin from first column */
+
+figcaption { margin-bottom: 1.2rem; }
+
+/* ----------------------------------------------------------------------------
+&nbsp;  Single column span arrangement
+&nbsp;  ------------------------------------------------------------------------- */
+.fig1-1 { display:inline-block; width: 100%; }
+.fig1-1 img { width: 100%; }</pre>
+
+                        </div>
+                        <div class="code-caption">Code 15.2 &emsp; Basic full width image CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The way this works is a bit similar to the <span class="code">rg-row</span> and <span class="code">rg-col classes</span> (see <a class="hlink nohyp" href="08-03-columns.html#js--080301">&sect;&nbsp;8.3.1</a> and <a class="hlink nohyp" href="08-03-columns.html#js--080303">&sect;&nbsp;8.3.3</a>), it was certainly my starting point.</p>
+
+                    <p class="hyp">The idea is that each row of figures (this could be one figure, two side-by-side figures or three side-by-side figures) is held in a <span class="code">&lt;div&gt;</span> element with the class <span class="code">fig-row</span>. This is the row that contains all the figures (similar to the <span class="code">rg-row</span> of <a class="hlink nohyp" href="08-03-columns.html#js--080301">&sect;&nbsp;8.3.1</a>).</p>
+
+                    <p class="hyp">Each figure within the row is contained in <span class="code">&lt;figure&gt;</span> element with its own <span class="code">fig-col</span> class, it is a single full width image, there will be only one <span class="code">fig-col</span> class; if it two side-by-side images there will be two <span class="code">fig-col</span> classes (one for each image). If there are three side-by-side images, there will be three <span class="code">fig-col</span> classes:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-03">
+                            <a href="01-pages/15-01-figures/02-images/fig-15-03.svg" data-lightbox="fig-set" data-title="Figure 15.3 - Figure row and columns arrangements">
+                                <img src="01-pages/15-01-figures/02-images/fig-15-03.svg" alt="Figure 15.3 - Figure row and columns arrangements">
+                            </a>
+                            <figcaption>Figure 15.3 &emsp; Figure row and columns arrangements</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s start with the first line of the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;div class=&quot;fig-row&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">fig-row</span> class sets the text properties for everything within the row that contains the figure (or figures):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig-row {
+&nbsp; &nbsp; font-family: &quot;conc-t3-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 0.6rem;
+&nbsp; &nbsp; color: #404030;
+&nbsp; &nbsp; text-align: center;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s the usual, Concourse with British settings at a fairly small font size (0.6&nbsp;rem), it has the standard text colour (<span class="code">#404030</span>), the only unusual thing is the text is centre justified&nbsp;&mdash;&nbsp;this is mainly for the caption text which is indeed centre justified.</p>
+
+                    <p class="hyp">Next, the figure is set to span the whole of the central column area:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; width: 100%;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Finally, it sets the margins and clears any padding: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin: 1.5rem auto 0 auto;
+&nbsp; &nbsp; padding: 0;&nbsp;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The margins are set to give some whitespace before the figure (separating it from the preceding text). The left and right margins are set to auto to centre the row (this is probably unnecessary, the row is 100% wide and will occupy the whole of the area anyway&nbsp;&mdash;&nbsp;still, belt and braces).</p>
+
+                    <p class="hyp">All straight forward stuff. We&rsquo;ve defined a font, made the row occupy the whole width of the central area and applied some margins to give the necessary whitespace. <span class="first-use">Easy</span>.</p>
+
+                    <p class="hyp">The next bit is a <span class="code">&lt;figure&gt;</span> element that holds column containing the picture, there is one of these for each picture, in this case there is just one full width image:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-1&quot; id=&quot;js--f99-01&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s get the ID out of the way first, this is just a standard ID that uniquely identifies the figure, it is used purely to allow a link to be made to jump directly to the image from somewhere else (see <a class="hlink nohyp" href="13-04-links.html#js--t13-01">Table&nbsp;13.1</a>). If you do not intend to link to the image from elsewhere on the website, you don&rsquo;t need the ID (just delete the whole <span class="code">id=&quot;js--f99-01&quot;</span>).</p>
+
+                    <p class="hyp">Ok, the classes, there are two of these, the first one is the <span class="code">fig-col</span> class and this is used to define a whitespace margin on the left of the image, the second is used to define how many images are in the row&nbsp;&mdash;&nbsp;in this case it is a single image that occupies the whole row and is designated <span class="code">fig1-1</span> (this is similar to the <span class="code">rg-span</span> class names of <a class="hlink nohyp" href="08-03-columns.html#js--080305">&sect;&nbsp;8.3.5</a>, it spans one column of one column)</p>
+
+                    <p class="hyp">Taking these classes in turn, <span class="code">fig-col</span> first:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig-col {
+&nbsp; &nbsp; display:inline-block;
+&nbsp; &nbsp; margin: 0 0 0 2.5%;
+}
+.fig-col:first-child { margin-left: 0; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first thing this does is define the column as an <span class="code">inline-block</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; display:inline-block;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This just makes sure that if there is more than one <span class="code">fig-col</span>, they line up next to each other in a row (if it were missing, the columns would be on top of each other).</p>
+
+                    <p class="hyp">The main thing the <span class="code">fig-col</span> class does is establish a left margin of 2.5% of the central column width (at its largest this is 18&nbsp;pixels):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; margin: 0 0 0 2.5%;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It then removes the margin from the first <span class="code">fig-col</span> class in the row:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig-col:first-child { margin-left: 0; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The very first column doesn&rsquo;t need the left margin; it should be aligned with the left edge of the central column area.</p>
+
+                    <p class="hyp">The upshot of this, in the case of a full width image, is that the <span class="code">fig-col</span> class does not do anything, the <span class="code">first-child</span> is the only occurrence of <span class="code">fig-col</span> in a full width image and so the margin is removed. I leave it in for consistency.</p>
+
+                    <p class="hyp">Next is the <span class="code">fig1-1</span> class, this has two parts:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig1-1 { width: 100%; }
+.fig1-1 img { width: 100%; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first thing sets the width of the column, in this case it is set to 100% to occupy the whole width of the row (this is a single, full width image).</p>
+
+                    <p class="hyp">The next bit you might think is not necessary, but it is. It sets any image that is contained within a <span class="code">fig1-1</span> class to be 100% of the width of the <span class="code">fig1-1</span> class. </p>
+
+                    <p class="hyp">Images by default will be displayed at the actual size of the image (in the case of the image being displayed here: <span class="code">fig-99-01.png</span> its actual size is 1920&nbsp;×&nbsp;1080 and this is too big to fit the page), we want the image to be the same size as the column that holds it&nbsp;&mdash;&nbsp;if its actual size is smaller than the column width the image will be made bigger until it fits and vice-versa, if it&rsquo;s too big it will be made smaller.</p>
+
+                    <p class="hyp">The easiest way to do this is to use the <span class="code">img</span> descendant selector to set the image to be 100% (i.e. the image will always be the same width as the <span class="code">fig1-1</span> class):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fig1-1 img { width: 100%; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">After all that, all we&rsquo;ve done is define a row that is the width of the central area column and define within it a <span class="code">div</span> that in this case has a column class that applies a margin and then removes it and a <span class="code">fig</span> class that ensures the column is the same width as the row and the image it contains matches this width.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 15.1.2 THE BASIC ROW AND COLUMN STRUCTURE OF FIGURES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--150102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>15.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Loading the image</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">So essentially, at this point, we&rsquo;ve built a container to hold the image and in this case, that image will fill the full width of the central column.</p>
+
+                    <p class="hyp">Now comes the picture itself:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-01.png&quot; alt=&quot;Figure 99.1&nbsp;-&nbsp;Full width image&quot;&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is a straight forward <span class="code">img</span> element, there is absolutely nothing odd about it and there are no classes associated with it. It just loads whatever picture it is given in the <span class="code">src</span> attribute (just like the picture of Henry in <a class="hlink nohyp" href="05-02-basics.html#js--f05-09">&sect;&nbsp;5.2</a>).</p>
+
+                    <p class="hyp">The images should be stored in the folder structure of <a class="hlink nohyp" href="04-02-starting.html#js--040202">&sect;&nbsp;4.2.2</a>, in this case the path is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">01-pages/[pagename]/02-images/</span></p>
+
+                    <p class="hyp">Where <span class="code">[pagename]</span> is the name of the HTML page without the <span class="code">.html</span> at the end (in this case, the web page is called <span class="code">99-00-typicals.html</span> and consequently the path is: <span class="code">01-pages/99-00-typicals/02-images/</span>).</p>
+
+                    <p class="hyp">All the image within my website start with the word <span class="code">fig-</span>, this is followed by the number of the picture (in this case it is figure 99.1 and so the filename of the image is <span class="code">fig-99-01</span>, I make all the numbers two digits. The extension depends on the type of image being displayed&nbsp;&mdash;&nbsp;in this case it is a <span class="code">.png</span> file, other common ones being <span class="code">.svg</span> and <span class="code">.jpeg</span>).</p>
+
+                    <p class="hyp">The <span class="code">alt</span> attribute should always be used (search engines don&rsquo;t like it if you don&rsquo;t put it in, it&rsquo;s considered bad form); it gives a very brief explanation of what the image is. In my case I use exactly the same text that is in the caption (see below).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 15.1.3 THE BASIC ROW AND COLUMN STRUCTURE OF FIGURES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--150103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>15.1.3</h3></div>
+                    <div class="sub-title-text-box"><h3>The figure caption</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The figure caption is contained in a <span class="code">&lt;figcaption&gt;</span> semantic element, and this itself is contained in the same <span class="code">div</span> as the image (the <span class="code">fig-col div</span>)</p>
+
+                    <p class="hyp">The figure caption is just a text entry:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.1 &amp;emsp; Full width figure&lt;/figcaption&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In this case the text is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">Figure 99.1 &emsp; Full width figure</span></p>
+
+                    <p class="hyp">The <span class="code">&amp;emsp;</span> in the middle is another one of the special HTML characters that can be entered with an <span class="code">&amp;code</span> (see <a class="hlink nohyp" href="06-11-box.html#js--061100">&sect;&nbsp;6.11</a>). In this case, <span class="code">&amp;emsp;</span> is an em-space character (basically a large space) that leaves a noticeable gap between the figure number and the associated text.</p>
+
+                    <p class="hyp">The <span class="code">&lt;figcaption&gt;</span> has some associated CSS, not much:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">figcaption { margin-bottom: 1.2rem; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It just applies a bottom margin to give some whitespace between the bottom of the caption and any text that may follow.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The <span class="code">&lt;figcaption&gt;</span> element must be a direct child of the <span class="code">&lt;figure&gt;</span> element, the <span class="code">&lt;figcaption&gt;</span> must be inside the <span class="code">&lt;figure&gt;...&lt;/figure&gt;</span> element. It will fail validation if it is not.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="15-00-figures.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="15-02-figures.html#js--150200">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

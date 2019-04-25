@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Basic concepts for using images within a website">
+        <meta name="description" content="Explains how to restrict the width of an image">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            15-00-FIGURES.HTML
+Title :          WEBSITE TEMPLATE                            15-06-FIGURES.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-25 Apr 2019   d-P20.15.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+25 Apr 2019   d-P20.15.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/15-00-figures/05-local-js/15-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/15-06-figures/05-local-js/15-06-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/15-00-figures/01-local-css/15-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/15-06-figures/01-local-css/15-06-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Basic figures | PracticalSeries: Web Development</title>
+        <title>Restricting the width of an image | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="14-06-tables.html#js-000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="15-05-figures.html#js--150500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="15-01-figures.html#js--150100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="15-07-figures.html#js--150700"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -241,16 +239,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 15 BASIC FIGURES
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 15.6 RESTRICTING THE WIDTH OF AN IMAGE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--150000">           <!-- Start of section         -->
+        <section class="section-std" id="js--150600">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Basic figures</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>15.6</h2></div>
+                 <div class="sub-title-text-box"><h2>Restricting the width of an image</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -264,52 +263,97 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Figures are the boxes</span> that hold images in one form or another on any given web page.</p>
+                    <p class="hyp">All of the images we&rsquo;ve looked at so far have had the same width as the <span class="code">div</span> within which they are embedded, and generally, this is OK, it is what we want to happen.</p>
 
-                    <p class="hyp">The template website supports two versions of figures; the first (covered in this section) is just a basic image that appears on any web page:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-01">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-01.png" data-lightbox="fig-set" data-title="Figure 15.1 - An image on a website">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-01.png" alt="Figure 15.1 - An image on a website">
-                            </a>
-                            <figcaption>Figure 15.1 &emsp; An image on a website</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">This is just a straight forward image, clicking it doesn&rsquo;t do anything</p>
-
-                    <p class="hyp">Then we have <span class="first-use">lightbox</span> images, where clicking the image opens a bigger version of the image and greys out the background website:</p>
+                    <p class="hyp">Now look at this image (it is a copy of <a class="hlink nohyp" href="10-03-sections.html#js--f10-08">Figure&nbsp;10.8</a>) from <a class="hlink nohyp" href="10-03-sections.html#js--100305">section&nbsp;10.3.5</a>, on the website it looks like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-02">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-02.png" data-lightbox="fig-set" data-title="Figure 15.2 - A lightbox image">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-02.png" alt="Figure 15.2 - A lightbox image">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-08">
+                            <a href="01-pages/10-03-sections/02-images/fig-10-08.svg" data-lightbox="fig-set" data-title="Figure 10.8 - How the side bars behave at narrow browser widths">
+                                <img style="max-width:400px" src="01-pages/10-03-sections/02-images/fig-10-08.svg" alt="Figure 10.8 - How the side bars behave at narrow browser widths">
                             </a>
-                            <figcaption>Figure 15.2 &emsp; A lightbox image</figcaption>
+                            <figcaption>Figure 10.8 &emsp; How the side bars behave at narrow browser widths</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This section is only concerned with the first type, displaying a simple image on a website. The second, lightbox image requires a Java plug-in and is explained in <a class="hlink nohyp" href="20-00-lightbox.html#js--000000">section&nbsp;20</a>.</p>
+                    <p class="hyp">The image is only as wide as the grey boxes so why doesn&rsquo;t if fill the central column? It should look like this:</p>
 
-                    <p class="hyp">That said, the lightbox arrangement is based on the basic figure construction discussed here; it has all the same containers and captions &amp;c.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f10-08a">
+                            <a href="01-pages/10-03-sections/02-images/fig-10-08.svg" data-lightbox="fig-set" data-title="Figure 10.8 - How the side bars behave at narrow browser widths">
+                                <img src="01-pages/10-03-sections/02-images/fig-10-08.svg" alt="Figure 10.8 - How the side bars behave at narrow browser widths">
+                            </a>
+                            <figcaption>Figure 10.8 &emsp; How the side bars behave at narrow browser widths</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">For a website that uses images of one sort or another, this section is the place to start.</p>
+                    <p class="hyp">Well, the reason it doesn&rsquo;t is because I&rsquo;ve set a maximum width for the image itself.</p>
+
+                    <p class="hyp">In this case, I didn&rsquo;t want the image to fill the full width of the screen, it was just too big and it didn&rsquo;t fit nicely in the browser window. </p>
+
+                    <p class="hyp">This is quite a common occurrence, particularly where full width images are used; it is often the case that you want to display a single image, but if that image is significantly smaller than 748&nbsp;px (the central column maximum width) and if it is a png or jpeg type image, then expanding it to the full width can make it look pixelated or show distortion effects, or it can just look too big.</p>
+
+                    <p class="hyp">So I needed some way to restrict the size of an image and since every image is unique, I decided to do it with a style attribute in the HTML.</p>
+
+                    <p class="hyp">Look at the HTML for the above image (the smaller one at the top):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c15-05c">&lt;div class=&quot;fig-row&quot;&gt;
+&nbsp; &nbsp; &lt;figure class=&quot;fig-col fig1-1&quot; id=&quot;js--f10-09&quot;&gt;
+&lt;img <span class="h-light">style=&quot;max-width:400px&quot;</span> src=&quot;01-pages/10-03-sections/02-images/fig-10-09.svg&quot; alt=&quot;Figure 10.9&nbsp;-&nbsp;How the side bars behave at narrow browser widths&quot;&gt;
+&lt;figcaption&gt;Figure 10.9 &amp;emsp; How the side bars behave at narrow browser widths&lt;/figcaption&gt;
+&nbsp; &nbsp; &lt;/figure&gt;
+&lt;/div&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is a straight forward single, full width image. It is loading image <span class="code">fig-10-09.svg</span> from the path:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">01-pages/10-03-sections/02-images/</span></p>
+
+                    <p class="hyp">It is using the standard <span class="code">fig1-1</span> class that wants to make the image 100% of the central column area.</p>
+
+                    <p class="hyp">The reason the image is not 100% of the central column area is that I&rsquo;ve added the following <span class="code">style</span> attribute to the <span class="code">img</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">style=&quot;max-width:400px&quot;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This style attribute overrides the <span class="code">.fig1-1 img { width: 100%; }</span> class (it comes after it) and establishes a <span class="code">max-width</span> for the image of 400&nbsp;pixels (if the columns is narrower than this, the image will shrink to fit the available space, if the column is wider, the image will be restricted to a width of 400&nbsp;px).</p>
+
+                    <p class="hyp">I do this for all the images where I want to restrict the maximum size of the image on the website.</p>
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -326,7 +370,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="14-06-tables.html#js-000000">Prev</a>
+                        <a class="xref" href="15-05-figures.html#js--150500">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +380,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-01-figures.html#js--150100">Next</a>
+                        <a class="xref" href="15-07-figures.html#js--150700">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

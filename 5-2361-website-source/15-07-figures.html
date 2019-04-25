@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Basic concepts for using images within a website">
+        <meta name="description" content="How to make rows of images responsive">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            15-00-FIGURES.HTML
+Title :          WEBSITE TEMPLATE                            15-07-FIGURES.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-25 Apr 2019   d-P20.15.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+25 Apr 2019   d-P20.15.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/15-00-figures/05-local-js/15-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/15-07-figures/05-local-js/15-07-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/15-00-figures/01-local-css/15-00-codeline.css">-->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/15-07-figures/01-local-css/15-07-codeline.css">-->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Basic figures | PracticalSeries: Web Development</title>
+        <title>Making figures responsive | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="14-06-tables.html#js-000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="15-06-figures.html#js--150600"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="14-00-tables.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="15-01-figures.html#js--150100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="16-00-jscript.html#js-000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -241,16 +239,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 15 BASIC FIGURES
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 15.7 MAKING FIGURES RESPONSIVE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--150000">           <!-- Start of section         -->
+        <section class="section-std" id="js--150700">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Basic figures</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>15.7</h2></div>
+                 <div class="sub-title-text-box"><h2>Making figures responsive</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -264,52 +263,59 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Figures are the boxes</span> that hold images in one form or another on any given web page.</p>
+                    <p class="hyp">Images are naturally responsive; the text associated with them is all set in units of rems and will get smaller as the screen narrows. Similarly, the images are all scaled as percentages and will also get smaller as their containers get smaller.</p>
 
-                    <p class="hyp">The template website supports two versions of figures; the first (covered in this section) is just a basic image that appears on any web page:</p>
+                    <p class="hyp">These containers are all held in the central column of a responsive grid that will itself get narrower and eventually collapse into a single full width column.</p>
+
+                    <p class="hyp">All this happens automatically, we&rsquo;ve already made everything responsive in the previous sections.</p>
+
+                    <p class="hyp">The only thing left to do is, where images are arranged side-by-side, stack those images one on top of the other (a bit like the column collapse) and like those responsive columns, it&rsquo;s very easy. We just need to set all the <span class="code">figx-y</span> classes to fill the whole width of the column.</p>
+
+                    <p class="hyp">This is done (as in all these cases) with an <span class="code">@media query</span>:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-01">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-01.png" data-lightbox="fig-set" data-title="Figure 15.1 - An image on a website">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-01.png" alt="Figure 15.1 - An image on a website">
-                            </a>
-                            <figcaption>Figure 15.1 &emsp; An image on a website</figcaption>
-                        </figure>
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">@media only screen and (max-width: 520px) {&nbsp; /* stack columns at &lt;=520 px */
+&nbsp; &nbsp; .fig1-2,
+&nbsp; &nbsp; .fig1-3,
+&nbsp; &nbsp; .fig2-3 { width: 90%;}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* by making all columns 90% */
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This is just a straight forward image, clicking it doesn&rsquo;t do anything</p>
+                    <p class="hyp">Here, if the screen width is 520&nbsp;px or less wide (the column collapse point), the width of all the <span class="code">figx-y</span> classes is set to 90%.</p>
 
-                    <p class="hyp">Then we have <span class="first-use">lightbox</span> images, where clicking the image opens a bigger version of the image and greys out the background website:</p>
+                    <p class="hyp"><span class="first-use">Why 90% and not 100%?</span> Well, it just leaves a gap between the image and the edge of the screen.</p>
+
+                    <p class="hyp">The only other thing is to remove any margins applied by the <span class="code">fig-col</span> class:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - SIMPLE DISPLAY (CSS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f15-02">
-                            <a href="01-pages/15-00-figures/02-images/fig-15-02.png" data-lightbox="fig-set" data-title="Figure 15.2 - A lightbox image">
-                                <img src="01-pages/15-00-figures/02-images/fig-15-02.png" alt="Figure 15.2 - A lightbox image">
-                            </a>
-                            <figcaption>Figure 15.2 &emsp; A lightbox image</figcaption>
-                        </figure>
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">@media only screen and (max-width: 520px) { .fig-col{ margin:0; } }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">This section is only concerned with the first type, displaying a simple image on a website. The second, lightbox image requires a Java plug-in and is explained in <a class="hlink nohyp" href="20-00-lightbox.html#js--000000">section&nbsp;20</a>.</p>
-
-                    <p class="hyp">That said, the lightbox arrangement is based on the basic figure construction discussed here; it has all the same containers and captions &amp;c.</p>
-
-                    <p class="hyp">For a website that uses images of one sort or another, this section is the place to start.</p>
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -326,7 +332,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="14-06-tables.html#js-000000">Prev</a>
+                        <a class="xref" href="15-06-figures.html#js--150600">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +342,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-01-figures.html#js--150100">Next</a>
+                        <a class="xref" href="16-00-jscript.html#js-000000">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
