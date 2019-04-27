@@ -1,0 +1,653 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Explains how to Load the jQuery library from within a web page">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                            16-03-JSCRIPT.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+27 Apr 2019   d-P21.16.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/16-03-jscript/05-local-js/16-03-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/16-03-jscript/01-local-css/16-03-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Loading jQuery | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="16-02-jscript.html#js--160200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="16-04-jscript.html#js--160400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P21.16.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>16</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">16</span>Introducing JavaScript and jQuery</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 16 jscript
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-160000" href="16-00-jscript.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">16</span><span class="toc-lev1-text">Introducing JavaScript  and jQuery</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-160100" href="16-01-jscript.html#js--160100">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.1</span><span class="toc-lev2-text">JavaScript and jQuery, what&rsquo;s the difference?</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160101" href="16-01-jscript.html#js--160101">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.1</span><span class="toc-lev3-text">JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160102" href="16-01-jscript.html#js--160102">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.2</span><span class="toc-lev3-text">jQuery</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160200" href="16-02-jscript.html#js--160200">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.2</span><span class="toc-lev2-text">Enabling JavaScript in the browsers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160201" href="16-02-jscript.html#js--160201">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.1</span><span class="toc-lev3-text">Enabling JavaScript in Chrome</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160202" href="16-02-jscript.html#js--160202">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.2</span><span class="toc-lev3-text">Enabling JavaScript in Firefox</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160203" href="16-02-jscript.html#js--160203">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.3</span><span class="toc-lev3-text">Enabling JavaScript in IE</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160204" href="16-02-jscript.html#js--160204">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.4</span><span class="toc-lev3-text">Other browsers</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160300" href="16-03-jscript.html#js--160300">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.3</span><span class="toc-lev2-text">Loading jQuery from a web page</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160301" href="16-03-jscript.html#js--160301">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.3.1</span><span class="toc-lev3-text">Loading the jQuery library</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160400" href="16-04-jscript.html#js--160400">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.4</span><span class="toc-lev2-text">Files to hold the JavaScript code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160401" href="16-04-jscript.html#js--160401">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.4.1</span><span class="toc-lev3-text">Creating the basic file.</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160402" href="16-04-jscript.html#js--160402">
+                        <div class="toc-lev"><span class="toc-lev3-num">16.4.2</span><span class="toc-lev3-text">Understanding <span class="code">$(document).ready(function())</span></span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160500" href="16-05-jscript.html#js--160500">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.5</span><span class="toc-lev2-text">Loading our JavaScript files</span></div></a>
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 16.3 Loading jQuery from within a web page
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160300">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>16.3</h2></div>
+                 <div class="sub-title-text-box"><h2>Loading jQuery from a web page</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There are two ways of loading the jQuery library, the first (and most popular) is for every web page to download the library from a third party web server somewhere on the internet.</p>
+
+                    <p class="hyp">This type of server is called a <span class="first-use">content delivery network</span> (CDN); CDNs are usually a group of geographically distributed servers that are able to provide a very fast delivery of a file or other content.</p>
+
+                    <p class="hyp">Generally, it is often faster to download a file from a CDN than it is to hold a copy of the file on your own website and download it from there, this is because CDNs are geared up for a high volume of traffic and very fast deliveries&nbsp;&mdash;&nbsp;they have lots of servers with large bandwidths. It also means that the browser can download the CDN files while it is downloading the web page from your site (it does it in parallel).</p>
+
+                    <p class="hyp">Browsers will also cache the file from the CDN and since there are a lot of sites that use jQuery, there is a fair chance that the browser may already have downloaded the file and doesn&rsquo;t need to load it again.</p>
+
+                    <p class="hyp">There are several CDNs that host the jQuery library, the main ones are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">StackPath</p></li>
+
+                        <li><p class="hyp">Google</p></li>
+
+                        <li><p class="hyp">Microsoft</p></li>
+
+                        <li><p class="hyp">CDNJS</p></li>
+
+                        <li><p class="hyp">jsDelivr</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The one we are going to use is <a class="hlink nohyp" href="https://developers.google.com/speed/libraries/#jquery">Google</a>. To my mind it was by far the easiest to use and the best explained.</p>
+
+                    <p class="hyp">The second way of loading the jQuery library is to download the version you want from the jQuery website and store it within your own website. You can download the latest version (and other versions) <a class="hlink nohyp" href="https://jquery.com/download/">here</a>. You want the compressed (minimised) file for the latest version, 3.3.1 at the time of writing.</p>
+
+                    <p class="hyp">The file isn&rsquo;t very big, version 3.3.1 is 85KB, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-13">
+                            <a href="01-pages/16-03-jscript/02-images/fig16-13.png" data-lightbox="fig-set" data-title="Figure 16.13 - jQuery in the raw">
+                                <img src="01-pages/16-03-jscript/02-images/fig16-13.png" alt="Figure 16.13 - jQuery in the raw">
+                            </a>
+                            <figcaption>Figure 16.13 &emsp; jQuery in the raw</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Not so easy to read, but then again, we don&rsquo;t have to.</span></p>
+
+                    <p class="hyp">So which to use, the CDN option or the download option?</p>
+
+                    <p class="hyp">The answer is generally the CDN option and that is what I&rsquo;m going to explain here. This seems to be good practice with website development for the reasons explained above.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.3.1 LOADING THE JQUERY LIBRARY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160301">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.3.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Loading the jQuery library</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The jQuery library is just a bunch of JavaScript code that someone else has written, we don&rsquo;t need to know how it works, we just need to know how to use the bits we want.</p>
+
+                    <p class="hyp">To make the library work, we need the web page to load it, in <a class="hlink nohyp" href="16-01-jscript.html#js--160101">section&nbsp;16.1.1</a>, we ran a bit of JavaScript from directly within the web page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-00b">&lt;script&gt;
+document.write('&lt;br&gt;&lt;center&gt;THIS IS JAVASCRIPT'.fontsize(10).fontcolor('red'));
+&lt;/script&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">That was fine for that tiny bit of code, but to do this properly, we want to load the jQuery library as a file and that is quite easy to do. It is very similar to how we load a CSS file.</p>
+
+                    <p class="hyp">The CSS file was loaded with a <span class="code">&lt;link&gt;</span> element, see <a class="hlink nohyp" href="05-04-basics.html#js--050400">&sect;&nbsp;5.4</a></p>
+
+                    <p class="hyp">JavaScript files are loaded with the <span class="code">&lt;scrip&gt;...&lt;/script&gt;</span> element, this is the same element used to implement JavaScript directly. This time though we will load the code from a file and we will place the <span class="code">&lt;script&gt;</span> element within the <span class="code">&lt;head&gt;</span> element (the same place we load the CSS files). The format is this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-00c">&lt;head&gt;
+...
+    &lt;script src=&quot;URL or Path/FileName&quot;&gt;&lt;/script&gt;
+...
+&lt;/head&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">src</span> (source) attribute tells the browser where to get the file, this can either be a filename or filename and path within the website or it can be a URL to some offsite location where the file is stored.</p>
+
+                    <p class="hyp">In our case we want to use a CDN to deliver the jQuery library, so that begs the question <span class="first-use">where do we get the address?</span></p>
+
+                    <p class="hyp">The answer is from the jQuery website, follow this link to the <a class="hlink nohyp" href="https://jquery.com/download/">jQuery download</a> page (a Google search for jQuery download will find it).</p>
+
+                    <p class="hyp">Scroll down to the <span class="menu">Other CDNs</span> section (it&rsquo;s near the bottom):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-14">
+                            <a href="01-pages/16-03-jscript/02-images/fig16-14.png" data-lightbox="fig-set" data-title="Figure 16.14 - jQuery CDN list">
+                                <img style="max-width: 698px" src="01-pages/16-03-jscript/02-images/fig16-14.png" alt="Figure 16.14 - jQuery CDN list">
+                            </a>
+                            <figcaption>Figure 16.14 &emsp; jQuery CDN list</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I want to use the Google CDN, so click that link (highlighted) and this takes you to the Google CDN link page for jQuery, this is the link</p>
+
+                    <p class="hyp" style="text-align: center"><a class="hlink nohyp" href="https://developers.google.com/speed/libraries/%23jquery">https://developers.google.com/speed/libraries/</a></p>
+
+                    <p class="hyp">It opens the page at the jQuery section:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-15">
+                            <a href="01-pages/16-03-jscript/02-images/fig16-15.png" data-lightbox="fig-set" data-title="Figure 16.15 - Google Hosted Libraries">
+                                <img src="01-pages/16-03-jscript/02-images/fig16-15.png" alt="Figure 16.15 - Google Hosted Libraries">
+                            </a>
+                            <figcaption>Figure 16.15 &emsp; Google Hosted Libraries</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This website is the Google Hosted Libraries website, it is the Google content distribution network and it gives links to all the various JavaScript libraries that Google hosts.</p>
+
+                    <p class="hyp">The one we want is jQuery (the page will open at the correct position), the link we want is the latest version, this is always at the top. At the time of writing the latest version of jQuery was 3.3.1. </p>
+
+                    <p class="hyp">We just need to copy the snippet, select the text as shown in <a class="xref js--sc-f16-15" href="#">Figure&nbsp;16.15</a> and copy it with <span class="menu">ctrl+c</span> (I&rsquo;ve reproduced the snippet below):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-00d">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now paste it into the web page in Brackets, in my case I&rsquo;m using the web page <span class="code">99-00-typicals.html</span>.</p>
+
+                    <p class="hyp">The HTML looks like this (the script line is shown in green):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Loading the jQuery library html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-01">&lt;html lang=&quot;en&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&lt;!-- Declare language --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&lt;!-- Start of head section --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Use unicode char set--&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD SCRIPT AREA
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/03-fonts/ps-fonts.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/normalise.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/grid.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/style.css&quot;&gt;
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Website template typicals | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.1 &emsp; Loading the jQuery library</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Add the line and preview the web page.</p>
+
+                    <p class="hyp"><span class="first-use">How can we tell if it&rsquo;s worked?</span></p>
+
+                    <p class="hyp">If it has worked and you used the <span class="code">99-00-typicals</span> page, all the slow scrolling will be working (click a TOC link), you might have to refresh the browser window to force a re-load (hit <span class="menu">f5</span>).</p>
+
+                    <p class="hyp">If you are developing you own page, you won&rsquo;t yet have any code to demonstrate the library. So let&rsquo;s add some.</p>
+
+                    <p class="hyp">Add the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Test code for jQuery</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-02">&lt;html lang=&quot;en&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&lt;!-- Declare language --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&lt;!-- Start of head section --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Use unicode char set--&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD SCRIPT AREA
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; window.onload = function() {
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; if (window.jQuery) { // jQuery is loaded
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Woohoo!&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; } else {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  // jQuery is not loaded
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;d'oh!&quot;);
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/script&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/03-fonts/ps-fonts.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/normalise.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/grid.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/style.css&quot;&gt;
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Website template typicals | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.2 &emsp; Test code for jQuery</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Save the file and re-load the web page, if it&rsquo;s worked, this will happen <span class="first-use">(Woohoo!):</span></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-16">
+                            <a href="01-pages/16-03-jscript/02-images/fig16-16.png" data-lightbox="fig-set" data-title="Figure 16.16 - jQuery is loaded properly&nbsp;&mdash;&nbsp;Woohoo">
+                                <img src="01-pages/16-03-jscript/02-images/fig16-16.png" alt="Figure 16.16 - jQuery is loaded properly&nbsp;&mdash;&nbsp;Woohoo">
+                            </a>
+                            <figcaption>Figure 16.16 &emsp; jQuery is loaded properly&nbsp;&mdash;&nbsp;Woohoo</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If it hasn&rsquo;t worked, you get <span class="first-use">D&rsquo;oh!:</span></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-17">
+                            <a href="01-pages/16-03-jscript/02-images/fig16-17.png" data-lightbox="fig-set" data-title="Figure 16.17 - jQuery hasn&rsquo;t loaded&nbsp;&mdash;&nbsp;D&rsquo;oh!">
+                                <img src="01-pages/16-03-jscript/02-images/fig16-17.png" alt="Figure 16.17 - jQuery hasn&rsquo;t loaded&nbsp;&mdash;&nbsp;D&rsquo;oh!">
+                            </a>
+                            <figcaption>Figure 16.17 &emsp; jQuery hasn&rsquo;t loaded&nbsp;&mdash;&nbsp;D&rsquo;oh!</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp" style="text-align: center"><span class="notice">Now take that bit of code out, we don&rsquo;t want it doing that all the time.</span></p>
+
+               </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-02-jscript.html#js--160200">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-04-jscript.html#js--160400">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

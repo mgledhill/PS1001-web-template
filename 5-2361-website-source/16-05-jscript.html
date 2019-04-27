@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Installing jQuery and an explanation of both jQuery and JavaScript">
+        <meta name="description" content="Loading the javascript files needed by a web page">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            16-00-JSCRIPT.HTML
+Title :          WEBSITE TEMPLATE                            16-05-JSCRIPT.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-27 Apr 2019   d-P21.16.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+27 Apr 2019   d-P21.16.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/16-00-jscript/05-local-js/16-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/16-05-jscript/05-local-js/16-05-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/16-00-jscript/01-local-css/16-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/16-05-jscript/01-local-css/16-05-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Introducing JavaScript and jQuery | PracticalSeries: Web Development</title>
+        <title>Loading our JavaScript files | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="15-07-figures.html#js--150700"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="16-04-jscript.html#js--160400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="16-01-jscript.html#js--160100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -255,16 +253,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 16 INTRODUCING JAVASCRIPT AND JQUERY
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 16.5 LOADING OUR JAVASCRIPT FILES
      ***********************************************************************-->
 
-        <section class="section-std" id="js--160000">           <!-- Start of section         -->
+        <section class="section-std" id="js--160400">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Introducing JavaScript and jQuery</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>16.5</h2></div>
+                 <div class="sub-title-text-box"><h2>Loading our JavaScript files</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -278,50 +277,211 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Javascript is a</span> full blown programming language that is supported by all the modern web browsers (they understand JavaScript just like they understand HTML and CSS).</p>
+                    <p class="hyp">At this point we have two files with identical contents: <span class="code">99-00-scroll.js</span> and <span class="code">script.js</span>. The first is in the <span class="code">05-js</span> directory for the page in question (<span class="code">01-pages/99-00-typicals/05-js</span>); the second is in the <span class="code">05-js</span> directory of the resources folder (<span class="code">11 resources/05-js</span>). </p>
 
-                    <p class="hyp">JavaScript is generally used to create clever visual effects on web page or to store and manipulate data provided by the website user.</p>
+                    <p class="hyp">I&rsquo;ve reproduced the contents of both files below:</p>
 
-                    <p class="hyp">JavaScript is a proper programming language (like C, Basic, Lisp &amp;c.) and can do all the things that computer programming languages can do: declare variables, store data, define and use functions, detect and respond to events &amp;c.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">01-pages/99-00-typicals/05-js/99-00-scroll.js</div>
+                        <div class="code-area">
 
-                    <p class="hyp">We can just put JavaScript in our website and the browser will automatically interpret the language and run whatever programme we&rsquo;ve put there. </p>
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-04">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
 
-                    <p class="hyp">Now, JavaScript is a very powerful programming language and this template uses it for certain things (mainly navigation and slow scrolling), it also uses various third party JavaScript add-ons that do certain things (display code fragments, properly render equations, hyphenate the text &amp;c.).</p>
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
 
-                    <p class="hyp">This and the following sections explain the bits of JavaScript that I&rsquo;ve used and I try to explain it as fully and clearly as I can&nbsp;&mdash;&nbsp;however, this is not a full blown JavaScript tutorial, that would be beyond the scope of this site, this is basically a template for a publishing website.</p>
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
 
-                    <p class="hyp">I can however, recommend a very good on line learning course by <a class="hlink nohyp" href="http://codingheroes.io/">Jonas Schmedtmann</a>. It is available through <a class="hlink nohyp" href="https://www.udemy.com/the-complete-javascript-course/">udemy</a>; it&rsquo;s not free but it is very good (it normally cost around £200, but there are special offers at Udemy several time a year and these drastically reduce the price, at the time of writing it was on offer for £12.99).</p>
-
-                    <p class="hyp">I also use jQuery; this is a library of JavaScript functions that are specifically designed to make selecting and modifying elements (and classes &amp;c.) within a web page very easy.</p>
-
-                    <p class="hyp">In combination, JavaScript and jQuery give us a very flexible and powerful platform to do pretty much anything we like with our web pages.</p>
-
-                    <p class="hyp">I&rsquo;m going to cover various aspects of jQuery, JavaScript and third party plug-ins, starting in this section. This and the following sections progress (in broad order of usefulness) as follows:</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Slow scrolling</p></li>
-
-                        <li><p class="hyp">Sticky navigation</p></li>
-
-                        <li><p class="hyp">Hyphenation</p></li>
-
-                        <li><p class="hyp">Lightbox images</p></li>
-
-                        <li><p class="hyp">Code fragments</p></li>
-
-                        <li><p class="hyp">Displaying equations</p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                        </div>
+                        <div class="code-caption">Code 16.4 &emsp; 99-00-scroll.js</div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                </div>                                          <!-- End of section text      -->
+                    <p class="hyp">and:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">11-resources/05-js/script.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-05">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.5 &emsp; script.js</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">So far all we&rsquo;ve done is create the files and put the basic jQuery code in them. The next thing to do is load these files from within the HTML, this just requires two more of the <span class="code">&lt;script&gt;</span> elements, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Loading our JavaScript files html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-06">&lt;html lang=&quot;en&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&lt;!-- Declare language --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&lt;!-- Start of head section --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Use unicode char set--&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD SCRIPT AREA
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;11-resources/05-js/script.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;01-pages/99-00-typicals/05-local-js/99-00-scroll.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/03-fonts/ps-fonts.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/normalise.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/grid.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/style.css&quot;&gt;
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Website template typicals | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.6 &emsp; Loading our JavaScript files</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Right then, how do we know it&rsquo;s worked?</p>
+
+                    <p class="hyp">Well, we can add a bit of test code to each file, this will also serve to give a very basic demonstration of how the jQuery stuff works.</p>
+
+                    <p class="hyp">Make the following changes to the files:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">99-00-scroll.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-07">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+&nbsp; &nbsp; $('h1').css('color','#ff0000');
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.7 &emsp; Test code in 99-00-scroll.js </div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">and</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">script.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-08">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+&nbsp; &nbsp; $('h2').css('color','#0000ff');
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.8 &emsp; Test code in script.js</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now load the web page, if it&rsquo;s worked, it should look something like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-20">
+                            <a href="01-pages/16-05-jscript/02-images/fig16-20.png" data-lightbox="fig-set" data-title="Figure 16.20 - Storage locations for JavaScript files">
+                                <img src="01-pages/16-05-jscript/02-images/fig16-20.png" alt="Figure 16.20 - Storage locations for JavaScript files">
+                            </a>
+                            <figcaption>Figure 16.20 &emsp; jStorage locations for JavaScript files</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">&lt;h1&gt;</span> heading at the top is red and the <span class="code">&lt;h2&gt;</span> heading at the side (and at the start of each section) is blue.</p>
+
+                    <p class="hyp">This is just a silly example, but it does illustrate some of the capabilities that we have with jQuery, I&rsquo;ll run through how it works.</p>
+
+                    <p class="hyp">Remember from the previous section, the syntax for jQuery is</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">$(selector).action();</span></p>
+
+                    <p class="hyp">Now compare this to the code we added to the first file:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">$('h1').css('color','#ff0000');</span></p>
+
+                    <p class="hyp">It is exactly the same form, here the selector is <span class="code">'h1'</span>, that is jQuery for select all the <span class="code">h1</span> elements in the HTML page.</p>
+
+                    <p class="hyp">The next bit is the action, here the action is to <span class="first-use">&ldquo;apply&rdquo;</span> a CSS property, the action is <span class="code">css</span> and that means modify some CSS property, the property is contained in the brackets, in this case it is the CSS property <span class="code">color</span> and the value it is set to is <span class="code">#ff0000</span>. </p>
+
+                    <p class="hyp">The format is a bit peculiar, the property and value are contained in single quotes (<span class="code">'</span>) and are separated by a comma (<span class="code">,</span>)&nbsp;&mdash;&nbsp;that is just the peculiarity of how the jQuery syntax works, but you get the idea; we could change any CSS property we want for any HTML element.</p>
+
+                    <p class="hyp">The selector doesn&rsquo;t have to be an HTML element; it could be a CSS class or any ID on the web page, changing the code to:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-js wrap">&nbsp; &nbsp; $('.toc-lev').css('color','#ff0000');</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Will change the colour of any text that is part of the toc-lev class, the result is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-21">
+                            <a href="01-pages/16-05-jscript/02-images/fig16-21.png" data-lightbox="fig-set" data-title="Figure 16.21 - The effects of the test code">
+                                <img src="01-pages/16-05-jscript/02-images/fig16-21.png" alt="Figure 16.21 - The effects of the test code">
+                            </a>
+                            <figcaption>Figure 16.21 &emsp; The effects of the test code</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All entries within the table of contents have the class toc-lev, so they&rsquo;ve all gone red.</p>
+
+                    <p class="hyp">JavaScript is very powerful, particularly when it is used with jQuery; this makes the selection and manipulation of individual parts of a web page very easy.</p>
+
+                    <p class="hyp">Ok, that&rsquo;s enough for now, take the test code out of both files, put them back to how they were in the code fragments of <a class="xref js--sc-c16-04" href="#">Code&nbsp;16.4</a> and <a class="xref js--sc-c16-05" href="#">Code&nbsp;16.5</a>. Leave the HTML as it is though, we still want to load both files.</p>
+
+                    <p class="hyp">Slow scrolling is next.</p>
+
+               </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -338,7 +498,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-07-figures.html#js--150700">Prev</a>
+                        <a class="xref" href="16-04-jscript.html#js--160400">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -348,7 +508,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="16-01-jscript.html#js--160100">Next</a>
+                        <a class="xref" href="17-00-slowscroll.html#js-000000">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

@@ -1,0 +1,660 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Explains how to enable JavaScript on all common browsers">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                            16-02-JSCRIPT.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+27 Apr 2019   d-P21.16.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/16-02-jscript/05-local-js/16-02-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/16-02-jscript/01-local-css/16-02-codeline.css">-->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Enabling JavaScript in browsers | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="16-01-jscript.html#js--160100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="16-03-jscript.html#js--160300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P21.16.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>16</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">16</span>Introducing JavaScript and jQuery</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 16 jscript
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-160000" href="16-00-jscript.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">16</span><span class="toc-lev1-text">Introducing JavaScript  and jQuery</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-160100" href="16-01-jscript.html#js--160100">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.1</span><span class="toc-lev2-text">JavaScript and jQuery, what&rsquo;s the difference?</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160101" href="16-01-jscript.html#js--160101">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.1</span><span class="toc-lev3-text">JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160102" href="16-01-jscript.html#js--160102">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.2</span><span class="toc-lev3-text">jQuery</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160200" href="16-02-jscript.html#js--160200">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.2</span><span class="toc-lev2-text">Enabling JavaScript in the browsers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160201" href="16-02-jscript.html#js--160201">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.1</span><span class="toc-lev3-text">Enabling JavaScript in Chrome</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160202" href="16-02-jscript.html#js--160202">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.2</span><span class="toc-lev3-text">Enabling JavaScript in Firefox</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160203" href="16-02-jscript.html#js--160203">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.3</span><span class="toc-lev3-text">Enabling JavaScript in IE</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160204" href="16-02-jscript.html#js--160204">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.4</span><span class="toc-lev3-text">Other browsers</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160300" href="16-03-jscript.html#js--160300">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.3</span><span class="toc-lev2-text">Loading jQuery from a web page</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160301" href="16-03-jscript.html#js--160301">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.3.1</span><span class="toc-lev3-text">Loading the jQuery library</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160400" href="16-04-jscript.html#js--160400">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.4</span><span class="toc-lev2-text">Files to hold the JavaScript code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160401" href="16-04-jscript.html#js--160401">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.4.1</span><span class="toc-lev3-text">Creating the basic file.</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160402" href="16-04-jscript.html#js--160402">
+                        <div class="toc-lev"><span class="toc-lev3-num">16.4.2</span><span class="toc-lev3-text">Understanding <span class="code">$(document).ready(function())</span></span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160500" href="16-05-jscript.html#js--160500">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.5</span><span class="toc-lev2-text">Loading our JavaScript files</span></div></a>
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 16.2 ENABLING JAVASCRIPT IN THE BROWSERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>16.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Enabling JavaScript in the browsers</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Before we can start using JavaScript (or jQuery) it must be enabled in the web browser, most have it enabled by default&nbsp;&mdash;&nbsp;if you haven&rsquo;t changed the settings you don&rsquo;t have to do anything, if you are not sure, read on.</p>
+
+                    <p class="hyp">I give details for enabling JavaScript on the three most common desktop web browsers; at the time of writing these were (in order): Chrome (69%), Firefox (11%) and Internet Explorer (6%)&nbsp;&mdash;&nbsp;<span class="first-use">IE still?)</span>. I got the data from <a class="hlink nohyp" href="http://gs.statcounter.com/browser-market-share/desktop/worldwide/#monthly-201802-201902-bar">GlobalStats</a>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.2.1 ENABLING JAVASCRIPT IN THE CHROME BROWSER
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Enabling JavaScript in Chrome</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I&rsquo;m using Chrome as my browser of choice; at the time of writing (February 2019), it was on version 72.0.3626.109 this being the most up to date version.</p>
+
+                    <p class="hyp">To check your version click the <span class="menu">customise and control</span> button at the top right of the screen, it looks like this: <sub><img src="01-pages/16-02-jscript/02-images/fig16-01a.png" style="height: 1rem" alt="Chrome menu"></sub>, in the dropdown click <span class="menu">help</span> and <span class="menu">about google chrome</span>. It will display a tab showing the current version:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-02">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-02.png" data-lightbox="fig-set" data-title="Figure 16.2 - Chrome&nbsp;&mdash;&nbsp;current version">
+                                <img style="max-width: 659px" src="01-pages/16-02-jscript/02-images/fig16-02.png" alt="Figure 16.2 - Chrome&nbsp;&mdash;&nbsp;current version">
+                            </a>
+                            <figcaption>Figure 16.2 &emsp; Chrome&nbsp;&mdash;&nbsp;current version</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To make sure that JavaScript is enabled, click the <span class="menu">customise and control</span> button at the top right of the screen (<sub><img src="01-pages/16-02-jscript/02-images/fig16-01a.png" style="height: 1rem" alt="Chrome menu"></sub>) and select <span class="menu">settings</span> from the dropdown, this opens a new tab with various settings displayed, scroll to the bottom of the page and expand the <span class="menu">advanced</span> section.</p>
+
+                    <p class="hyp">The first entry in the advanced section is <span class="menu">privacy and security</span> and the bit we are looking for is under <span class="menu">content settings</span> (highlighted in orange):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f16-03">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-03.png" data-lightbox="fig-set" data-title="Figure 16.3 - Chrome&nbsp;&mdash;&nbsp;Privacy and Security">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-03.png" alt="Figure 16.3 - Chrome&nbsp;&mdash;&nbsp;Privacy and Security">
+                            </a>
+                            <figcaption>Figure 16.2 &emsp; Chrome&nbsp;&mdash;&nbsp;Privacy and Security</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f16-04">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-04.png" data-lightbox="fig-set" data-title="Figure 16.4 - Chrome&nbsp;&mdash;&nbsp;JavaScript settings">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-04.png" alt="Figure 16.4 - Chrome&nbsp;&mdash;&nbsp;JavaScript settings">
+                            </a>
+                            <figcaption>Figure 16.4 &emsp; Chrome&nbsp;&mdash;&nbsp;JavaScript settings</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Click the arrow on the far right to expand the selection; we&rsquo;re looking for JavaScript (the sixth entry, <a class="xref js--sc-f16-04" href="#">Figure&nbsp;16.4</a>). If this is set to <span class="menu">allowed</span>, then JavaScript is enabled and all is well, if not, click the arrow and flick the switch at the top to enable it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-05">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-05.png" data-lightbox="fig-set" data-title="Figure 16.5 - Chrome&nbsp;&mdash;&nbsp;enable JavaScript">
+                                <img style="max-width: 659px" src="01-pages/16-02-jscript/02-images/fig16-05.png" alt="Figure 16.5 - Chrome&nbsp;&mdash;&nbsp;enable JavaScript">
+                            </a>
+                            <figcaption>Figure 16.5 &emsp; Chrome&nbsp;&mdash;&nbsp;enable JavaScript</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now just close the tab, any changes will have been saved.</p>
+
+               </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.2.2 ENABLING JAVASCRIPT IN THE FIREFOX BROWSER
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Enabling JavaScript in Firefox</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Enabling JavaScript in the Firefox browser</p>
+
+                    <p class="hyp">To check your version click the open menu button at the top right of the screen, it looks like this: <sub><img src="01-pages/16-02-jscript/02-images/fig16-05a.png" style="height: 1rem" alt="Firefox menu"></sub>, in the dropdown click <span class="menu">help</span> and <span class="menu">about firefox</span>. It will display a pop-up showing the current version:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-06">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-06.png" data-lightbox="fig-set" data-title="Figure 16.6 - Firefox&nbsp;&mdash;&nbsp;current version">
+                                <img style="max-width: 660px" src="01-pages/16-02-jscript/02-images/fig16-06.png" alt="Figure 16.6 - Firefox&nbsp;&mdash;&nbsp;current version">
+                            </a>
+                            <figcaption>Figure 16.6 &emsp; Firefox&nbsp;&mdash;&nbsp;current version</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It seems to me that Firefox really don&rsquo;t want you messing about with JavaScript settings, it&rsquo;s a right palaver to change them. Forget the menu button, it&rsquo;s not there.</p>
+
+                    <p class="hyp"><span class="first-use">Brace yourself</span>.</p>
+
+                    <p class="hyp">In the address bar (where you type a web address) type: <span class="code">about:config</span>. <a class="xref js--sc-f16-07" href="#">Figure&nbsp;16.7</a></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f16-07">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-07.png" data-lightbox="fig-set" data-title="Figure 16.7 - Firefox&nbsp;&mdash;&nbsp;open configuration page">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-07.png" alt="Figure 16.7 - Firefox&nbsp;&mdash;&nbsp;open configuration page">
+                            </a>
+                            <figcaption>Figure 16.7 &emsp; Firefox&nbsp;&mdash;&nbsp;open configuration page</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f16-08">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-08.png" data-lightbox="fig-set" data-title="Figure 16.8 - Firefox&nbsp;&mdash;&nbsp;danger, danger, Will Robinson">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-08.png" alt="Figure 16.8 - Firefox&nbsp;&mdash;&nbsp;danger, danger, Will Robinson">
+                            </a>
+                            <figcaption>Figure 16.8 &emsp; Firefox&nbsp;&mdash;&nbsp;Danger, danger, Will Robinson</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This opens the scary <span class="first-use">&ldquo;void warranty!&rdquo;</span> display, treat it with the contempt it deserves and click <span class="menu">I accept the risk!</span> (can&rsquo;t have too many exclamation marks).</p>
+
+                    <p class="hyp">This opens up the super, user-friendly configuration page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-09">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-09.png" data-lightbox="fig-set" data-title="Figure 16.9 - Firefox&nbsp;&mdash;&nbsp;current version">
+                                <img style="max-width: 521px" src="01-pages/16-02-jscript/02-images/fig16-09.png" alt="Figure 16.9 - Firefox&nbsp;&mdash;&nbsp;current version">
+                            </a>
+                            <figcaption>Figure 16.9 &emsp; Firefox&nbsp;&mdash;&nbsp;current version</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Type <span class="code">javascript</span> in the search box at the top and look for the <span class="menu">javascript.enabled</span> entry in the list (both highlighted).</p>
+
+                    <p class="hyp">The <span class="menu">javascript.enabled</span> must have a <span class="menu">true</span> in the <span class="menu">value</span> column, if it hasn&rsquo;t just double click the entry to change it. It will be automatically saved.</p>
+
+                    <p class="hyp"><span class="first-use">Fuck me Firefox. I was looking under the menu options for ages. Maybe it&rsquo;s this sort of thing that puts people off using Firefox in the first place. It&rsquo;s basic stuff put it on the settings page.</span></p>
+
+               </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.2.3 ENABLING JAVASCRIPT IN INTERNET EXPLORER
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160203">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.2.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Enabling JavaScript in Internet Explorer</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp"><span class="first-use">Sigh.</span></p>
+
+                    <p class="hyp"><span class="first-use">I can&rsquo;t believe that IE is still the third most popular desktop browser, it&rsquo;s holding fairly steady at 6% market share, Edge is at 4%.&nbsp;&mdash;&nbsp;Anyway:</span></p>
+
+                    <p class="hyp">My version of Internet Explorer is version 11 <span class="first-use">(I had to do a bit of digging to find it on my machine, I don&rsquo;t normally use it and I didn&rsquo;t have any links left to it. It was there though and I was surprised to find that it is still installed as part of Windows 10)</span>, to be specific version 11.0.9600.18282. I think this is the latest version.</p>
+
+                    <p class="hyp">To check your version click the tools button at the top right of the screen, it looks like a cogwheel: <sub><img src="01-pages/16-02-jscript/02-images/fig16-09a.png" style="height: 1rem" alt="IE menu"></sub>, in the dropdown click <span class="menu">about internet explorer</span>. It will display a pop-up showing the current version:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-10">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-10.png" data-lightbox="fig-set" data-title="Figure 16.10 - IE&nbsp;&mdash;&nbsp;current version">
+                                <img style="max-width: 375px" src="01-pages/16-02-jscript/02-images/fig16-10.png" alt="Figure 16.10 - IE&nbsp;&mdash;&nbsp;current version">
+                            </a>
+                            <figcaption>Figure 16.10 &emsp; IE&nbsp;&mdash;&nbsp;current version</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">To make sure that JavaScript is enabled, click the tools button at the top right of the screen (<sub><img src="01-pages/16-02-jscript/02-images/fig16-09a.png" style="height: 1rem" alt="IE menu"></sub>) and select <span class="menu">internet options</span> from the dropdown, this opens a pop-up with various settings tabs, select the <span class="menu">security</span> tab (<a class="xref js--sc-f16-11" href="#">Figure&nbsp;16.11</a>).</p>
+
+                    <p class="hyp">Click the custom level button (highlighted) to open the Internet Zone security pop-up (<a class="xref js--sc-f16-11" href="#">Figure&nbsp;16.12</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f16-11">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-11.png" data-lightbox="fig-set" data-title="Figure 16.11 - IE&nbsp;&mdash;&nbsp;security settings">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-11.png" alt="Figure 16.11 - IE&nbsp;&mdash;&nbsp;security settings">
+                            </a>
+                            <figcaption>Figure 16.11 &emsp; IE&nbsp;&mdash;&nbsp;security settings</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f16-12">
+                            <a href="01-pages/16-02-jscript/02-images/fig16-12.png" data-lightbox="fig-set" data-title="Figure 16.12 - IE&nbsp;&mdash;&nbsp;enable active scripting">
+                                <img src="01-pages/16-02-jscript/02-images/fig16-12.png" alt="Figure 16.12 - IE&nbsp;&mdash;&nbsp;enable active scripting">
+                            </a>
+                            <figcaption>Figure 16.12 &emsp; IE&nbsp;&mdash;&nbsp;enable active scripting</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Scroll down to <span class="menu">scripting</span> (it&rsquo;s in alphabetical order, it&rsquo;s near the bottom) and then find <span class="menu">active scripting</span> (it&rsquo;s not called JavaScript).</p>
+
+                    <p class="hyp">Make sure that the option is enabled (highlighted in <a class="xref js--sc-f16-11" href="#">Figure&nbsp;16.12</a>) by clicking enable.</p>
+
+                    <p class="hyp">Click ok to make the change, this will open an <span class="menu">are you sure pop-up</span>, click <span class="menu">yes</span> and then click <span class="menu">ok</span> on the security tab (<a class="xref js--sc-f16-11" href="#">Figure&nbsp;16.11</a>) to close the whole thing.</p>
+
+               </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.2.4 OTHER BROWSERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Other browsers</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There are plenty of online results for how to enable JavaScript on any browser, just google enable <span class="code">javascript on name-of-brower</span>.</p>
+
+                    <p class="hyp">The following site gives a good explanation for all the common browsers: <a class="hlink nohyp" href="http://www.enable-javascript.com/">www.enable-javascript.com</a>.</p>
+
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-01-jscript.html#js--160100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-03-jscript.html#js--160300">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

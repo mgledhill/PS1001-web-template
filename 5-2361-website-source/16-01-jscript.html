@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Installing jQuery and an explanation of both jQuery and JavaScript">
+        <meta name="description" content="Explains the difference between jQuery and JavaScript">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            16-00-JSCRIPT.HTML
+Title :          WEBSITE TEMPLATE                            16-01-JSCRIPT.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-27 Apr 2019   d-P21.16.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+27 Apr 2019   d-P21.16.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/16-00-jscript/05-local-js/16-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/16-01-jscript/05-local-js/16-01-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/16-00-jscript/01-local-css/16-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/16-01-jscript/01-local-css/16-01-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Introducing JavaScript and jQuery | PracticalSeries: Web Development</title>
+        <title>JavaScript and jQuery, what&rsquo;s the difference? | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="15-07-figures.html#js--150700"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="16-01-jscript.html#js--160100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="16-02-jscript.html#js--160200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -255,16 +253,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 16 INTRODUCING JAVASCRIPT AND JQUERY
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 16.1 JAVASCRIPT AND JQUERY, WHAT&RSQUO;S THE DIFFERENCE?
      ***********************************************************************-->
 
-        <section class="section-std" id="js--160000">           <!-- Start of section         -->
+        <section class="section-std" id="js--160100">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Introducing JavaScript and jQuery</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>16.1</h2></div>
+                 <div class="sub-title-text-box"><h2>JavaScript and jQuery, what&rsquo;s the difference?</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -278,43 +277,229 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Javascript is a</span> full blown programming language that is supported by all the modern web browsers (they understand JavaScript just like they understand HTML and CSS).</p>
-
-                    <p class="hyp">JavaScript is generally used to create clever visual effects on web page or to store and manipulate data provided by the website user.</p>
-
-                    <p class="hyp">JavaScript is a proper programming language (like C, Basic, Lisp &amp;c.) and can do all the things that computer programming languages can do: declare variables, store data, define and use functions, detect and respond to events &amp;c.</p>
-
-                    <p class="hyp">We can just put JavaScript in our website and the browser will automatically interpret the language and run whatever programme we&rsquo;ve put there. </p>
-
-                    <p class="hyp">Now, JavaScript is a very powerful programming language and this template uses it for certain things (mainly navigation and slow scrolling), it also uses various third party JavaScript add-ons that do certain things (display code fragments, properly render equations, hyphenate the text &amp;c.).</p>
-
-                    <p class="hyp">This and the following sections explain the bits of JavaScript that I&rsquo;ve used and I try to explain it as fully and clearly as I can&nbsp;&mdash;&nbsp;however, this is not a full blown JavaScript tutorial, that would be beyond the scope of this site, this is basically a template for a publishing website.</p>
-
-                    <p class="hyp">I can however, recommend a very good on line learning course by <a class="hlink nohyp" href="http://codingheroes.io/">Jonas Schmedtmann</a>. It is available through <a class="hlink nohyp" href="https://www.udemy.com/the-complete-javascript-course/">udemy</a>; it&rsquo;s not free but it is very good (it normally cost around £200, but there are special offers at Udemy several time a year and these drastically reduce the price, at the time of writing it was on offer for £12.99).</p>
-
-                    <p class="hyp">I also use jQuery; this is a library of JavaScript functions that are specifically designed to make selecting and modifying elements (and classes &amp;c.) within a web page very easy.</p>
-
-                    <p class="hyp">In combination, JavaScript and jQuery give us a very flexible and powerful platform to do pretty much anything we like with our web pages.</p>
-
-                    <p class="hyp">I&rsquo;m going to cover various aspects of jQuery, JavaScript and third party plug-ins, starting in this section. This and the following sections progress (in broad order of usefulness) as follows:</p>
+                    <p class="hyp">I use JavaScript and jQuery to do various things on this website:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Slow scrolling</p></li>
+                        <li><p class="hyp">Slow scrolling to a point on a page</p></li>
 
-                        <li><p class="hyp">Sticky navigation</p></li>
+                        <li><p class="hyp">Create the &ldquo;sticky&rdquo; navigation bar</p></li>
 
-                        <li><p class="hyp">Hyphenation</p></li>
+                        <li><p class="hyp">Hyphenate the text on the web page</p></li>
 
-                        <li><p class="hyp">Lightbox images</p></li>
+                        <li><p class="hyp">Create a &ldquo;lightbox&rdquo; effect to display images</p></li>
 
-                        <li><p class="hyp">Code fragments</p></li>
+                        <li><p class="hyp">Display colour versions of code fragments</p></li>
 
-                        <li><p class="hyp">Displaying equations</p></li>
+                        <li><p class="hyp">Properly display equations on the web page</p></li>
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Some of these are done by me and some are third party add-ons (plugins, whatever you want to call them); they all use JavaScript and most of them rely on jQuery.</p>
+
+                    <p class="hyp"><span class="first-use">&ldquo;What&rsquo;s the difference?&rdquo;</span> you ask</p>
+
+                    <p class="hyp">Well, JavaScript is a programming language that is understood by all web browsers. A web browser will interpret JavaScript code whenever it finds it on a web page in the same way that it renders HTML and CSS.</p>
+
+                    <p class="hyp">JavaScript is supported in its native form by web browsers, you don&rsquo;t have to do anything to make the browser run it <span class="first-use">(obviously you have to write the code)</span>.</p>
+
+                    <p class="hyp">jQuery is a standardised library of JavaScript functions that we can use wherever we want (we don&rsquo;t have to write the background code, we just call it).</p>
+
+                    <p class="hyp">The jQuery library is not built into web browsers and we have to load it before we can use it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.1.1 JAVASCRIPT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>JavaScript</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">JavaScript is a high level programming languages (higher level than HTML and CSS) that is supported by web browsers; it is an object oriented language<sup>&dagger;1</sup> which at first sight looks a lot like C (lots of braces and squiggly brackets).</p>
+
+                    <p class="hyp">In use JavaScript is a lot more forgiving than C, it is not so type sensitive (sensitive to the type of data: integer, floating point number &amp;c.), in this regard it is more like BASIC. In actuality, JavaScript has a lot in common with the Lisp types of language.</p>
+
+                    <p class="hyp">To add to the confusion, there is already a programming language called Java, Java and JavaScript are not the same thing at all. Java was developed by Sun Microsystems and JavaScript by Netscape, neither is a derivative of the other.</p>
+
+                    <p class="hyp">JavaScript was originally named &ldquo;Mocha&rdquo;, another coffee reference, its proper name (that no one ever uses) is ECMAScript, (ECMA historically being the European Computer Manufacturer&rsquo;s Association), it is also called Jscript.</p>
+
+                    <p class="hyp">As far as we are concerned JavaScript can be included in a website and the browser that loads the page will know what to do with it, just like it does with HTML and CSS; JavaScript completes the triumvirate of web languages:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">HTML&nbsp;&mdash;&nbsp;the web page content</p></li>
+
+                        <li><p class="hyp">CSS&nbsp;&mdash;&nbsp;The web page appearance</p></li>
+
+                        <li><p class="hyp">JavaScript&nbsp;&mdash;&nbsp;Dynamic effects and programmability</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Object oriented language (OOL) is model for a programming language that is based around an <span class="first-use">&ldquo;object&rdquo;</span> rather than actions (action driven languages are called procedural languages). Objects are concepts that are eventually turned into code and data; objects can be reused and modified in a very controlled way. OOL is considered to be faster to develop, easier to understand and generally more efficient than procedural programming. Virtually all modern programming languages are object oriented. </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">JavaScript can be used directly within the HTML by inserting it between <span class="code">&lt;script&gt;...&lt;/script&gt;</span> elements; alternatively, it can be stored in its own file and loaded from within the HTML, in much the same way that we load a CSS file.</p>
+
+                    <p class="hyp">To demonstrate some JavaScript, open one of the template web pages in Brackets (or whichever text editor you are using), I&rsquo;m using the <span class="code">99-00-typicals.html</span> page, and add the following after the <span class="code">&lt;/header&gt;</span> tag (with the green background):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c16-00a">&lt;/header&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of header --&gt;
+
+&lt;script&gt;
+document.write('&lt;br&gt;&lt;center&gt;THIS IS JAVASCRIPT'.fontsize(10).fontcolor('red'));
+&lt;/script&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Save the file and start live preview (or open the file in a web browser). The result will be something like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-01">
+                            <a href="01-pages/16-01-jscript/02-images/fig16-01.png" data-lightbox="fig-set" data-title="Figure 16.1 - JavaScript, a first attempt">
+                                <img src="01-pages/16-01-jscript/02-images/fig16-01.png" alt="Figure 16.1 - JavaScript, a first attempt">
+                            </a>
+                            <figcaption>Figure 16.1 &emsp; JavaScript, a first attempt</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">There it is in bright red at the bottom, our first bit of JavaScript&nbsp;&mdash;&nbsp;impressive stuff.</p>
+
+                    <p class="hyp">Now, if you didn&rsquo;t get the red text on your version, it is probably because JavaScript is disabled on your browser.</p>
+
+                    <p class="hyp">JavaScript can be enabled or disabled by the browser settings, all major web browsers have JavaScript enabled by default.</p>
+
+                    <p class="hyp">If you are not sure whether JavaScript is enabled on your browser, go to the following website: <a class="hlink nohyp" href="http://www.enable-javascript.com//">www.enable-javascript.com</a> and it will tell you, it also has instructions for enabling JavaScript within all the common web browsers (I give details for Chrome, Firefox and Internet Explorer in the next section).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.1.2 JQUERY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>jQuery</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">jQuery is simply a library of JavaScript modules that we can call to make life easier. These modules are commonly referred to as <span class="first-use">&ldquo;methods&rdquo;</span> and there are a lot of them.</p>
+
+                    <p class="hyp">The jQuery library is itself written in JavaScript and must be loaded by each web page that intends to use it. All of the template web pages use jQuery and all load the library file in the <span class="code">&lt;head&gt;</span> element of the web page.</p>
+
+                    <p class="hyp">The jQuery library is a standard library and is maintained by the <a class="hlink nohyp" href="https://js.foundation/">JS Foundation</a>, it has its own <a class="hlink nohyp" href="https://jquery.com/">jQuery</a> website. jQuery is used by virtually everyone: Google, Netflix, Microsoft, pretty much all the large web companies. There are some statistics that show that 79% of the top one million websites all use jQuery&nbsp;&mdash;&nbsp;so we&rsquo;re probably in good company <span class="first-use">(unless of course the top one million websites are all porn sites; it wouldn&rsquo;t surprise me)</span>.</p>
+
+                    <p class="hyp"><span class="first-use">So what can we do with jQuery?</span></p>
+
+                    <p class="hyp">There are many uses for jQuery, the main ones that we will use are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Event detection (detects clicks and scroll operations)</p></li>
+
+                        <li><p class="hyp">Select and change elements on a web page</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Other common uses (though not so much on this website) are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Effects and animations</p></li>
+
+                        <li><p class="hyp">Search functions</p></li>
+
+                        <li><p class="hyp">Send and receive information from a server</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The jQuery library is very extensive, it&rsquo;s been under development since 2006 and it is currently at version 3.3.1 (released January 2018). </p>
+
+                    <p class="hyp">The library supports a lot of functions (methods), this is a <a class="hlink nohyp" href="https://api.jquery.com/">full&nbsp;list</a>, most of which I don&rsquo;t understand.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -338,7 +523,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="15-07-figures.html#js--150700">Prev</a>
+                        <a class="xref" href="16-00-jscript.html#js--000000">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -348,7 +533,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="16-01-jscript.html#js--160100">Next</a>
+                        <a class="xref" href="16-02-jscript.html#js--160200">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

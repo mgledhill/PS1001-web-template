@@ -1,0 +1,704 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Where to keep JavaScript and jQuery files">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                            16-04-JSCRIPT.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+27 Apr 2019   d-P21.16.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/16-04-jscript/05-local-js/16-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/16-04-jscript/01-local-css/16-04-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Files to hold the JavaScript code | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="16-03-jscript.html#js--160300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="15-00-figures.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="17-00-slowscroll.html#js-000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="16-05-jscript.html#js--160500"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P21.16.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>16</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">16</span>Introducing JavaScript and jQuery</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 16 jscript
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-160000" href="16-00-jscript.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">16</span><span class="toc-lev1-text">Introducing JavaScript  and jQuery</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-160100" href="16-01-jscript.html#js--160100">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.1</span><span class="toc-lev2-text">JavaScript and jQuery, what&rsquo;s the difference?</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160101" href="16-01-jscript.html#js--160101">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.1</span><span class="toc-lev3-text">JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160102" href="16-01-jscript.html#js--160102">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.1.2</span><span class="toc-lev3-text">jQuery</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160200" href="16-02-jscript.html#js--160200">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.2</span><span class="toc-lev2-text">Enabling JavaScript in the browsers</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160201" href="16-02-jscript.html#js--160201">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.1</span><span class="toc-lev3-text">Enabling JavaScript in Chrome</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160202" href="16-02-jscript.html#js--160202">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.2</span><span class="toc-lev3-text">Enabling JavaScript in Firefox</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160203" href="16-02-jscript.html#js--160203">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.3</span><span class="toc-lev3-text">Enabling JavaScript in IE</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160204" href="16-02-jscript.html#js--160204">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.2.4</span><span class="toc-lev3-text">Other browsers</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160300" href="16-03-jscript.html#js--160300">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.3</span><span class="toc-lev2-text">Loading jQuery from a web page</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160301" href="16-03-jscript.html#js--160301">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.3.1</span><span class="toc-lev3-text">Loading the jQuery library</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160400" href="16-04-jscript.html#js--160400">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.4</span><span class="toc-lev2-text">Files to hold the JavaScript code</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160401" href="16-04-jscript.html#js--160401">
+                            <div class="toc-lev"><span class="toc-lev3-num">16.4.1</span><span class="toc-lev3-text">Creating the basic file.</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-160402" href="16-04-jscript.html#js--160402">
+                        <div class="toc-lev"><span class="toc-lev3-num">16.4.2</span><span class="toc-lev3-text">Understanding <span class="code">$(document).ready(function())</span></span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-160500" href="16-05-jscript.html#js--160500">
+                            <div class="toc-lev"><span class="toc-lev2-num">16.5</span><span class="toc-lev2-text">Loading our JavaScript files</span></div></a>
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                            <br class="toc-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 16.4 FILES TO HOLD THE JAVASCRIPT CODE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>16.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Files to hold the JavaScript code</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">All the JavaScript and jQuery code that we write will be stored in separate files, in just the same way that the CSS is stored in separate files.</p>
+
+                    <p class="hyp">Each web page will need two JavaScript files, a common JavaScript file that is loaded by the web page to handle the sticky navigation (this is the same for every page, just like <span class="code">style.css</span>) and a page specific JavaScript file that handles all the slow scrolling on the web page. The files are named as follows</p>
+
+                    <table>
+                        <tr>
+                            <td style="width: 50%"><ul class="list-no-num"><li><p class="hyp"><span class="code">script.js</span></p></li></ul></td>
+                            <td style="width: 50%">Common file to handle the sticky navigation</td>
+                        </tr>
+                        <tr>
+                            <td><ul class="list-no-num"><li><p class="hyp"><span class="code">cc-ss-scroll.js</span></p></li></ul></td>
+                            <td>Page specific file to handle slow scrolling</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp">The files are stored as follows in the directory structure:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-18">
+                            <a href="01-pages/16-04-jscript/02-images/fig16-18.png" data-lightbox="fig-set" data-title="Figure 16.18 - Storage locations for JavaScript files">
+                                <img style="max-width: 400px" src="01-pages/16-04-jscript/02-images/fig16-18.png" alt="Figure 16.18 - Storage locations for JavaScript files">
+                            </a>
+                            <figcaption>Figure 16.18 &emsp; jStorage locations for JavaScript files</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">JavaScript files always have the extension <span class="code">.js</span> (again this is not an absolute requirement, but do it anyway, Brackets expects JavaScript files to have the <span class="code">.js</span> extension and it is common practice everywhere).</p>
+
+                    <p class="hyp">If you&rsquo;re starting from scratch with these files, create the folder structure for your page within the <span class="code">01-pages</span> directory (as shown in <a class="xref js--sc-f16-18" href="#">Figure&nbsp;16.18</a> above) and within the <span class="code">05-js</span> folder create an new file in Brackets and rename it <span class="code">cc-ss-scroll.js</span> where <span class="code">cc</span> is the chapter number and <span class="code">ss</span> is the section number (these should match the start of the HTML filename). For the rest of this section I&rsquo;m using the <span class="code">99-00-typicals.html</span> file and the <span class="code">01-pages</span> directory has this in it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f16-19">
+                            <a href="01-pages/16-04-jscript/02-images/fig16-19.png" data-lightbox="fig-set" data-title="Figure 16.19 - 99-00-typicals folder structure">
+                                <img style="max-width: 400px" src="01-pages/16-04-jscript/02-images/fig16-19.png" alt="Figure 16.19 - 99-00-typicals folder structure">
+                            </a>
+                            <figcaption>Figure 16.19 &emsp; 99-00-typicals folder structure</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Next create the <span class="code">script.js</span> file in the <span class="code">11-resources/05-js</span> directory.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>I&rsquo;m going to assume that these files are empty and build up the code from scratch, if you have downloaded the completed file from the website template, the <span class="code">.js</span> files will already be complete, you can either just delete the stuff that&rsquo;s in there if you want to build it yourself or just accept what&rsquo;s there and compare it with what I&rsquo;m doing here.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.4.1 CREATING THE BASIC FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Creating the basic file</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There is a standard format for the contents of a JavaScript file, the basic container for all the JavaScript and jQuery code, looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">the basic JavaScript file container</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-03">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 16.3 &emsp; The basic JavaScript file</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">JavaScript really likes brackets, braces and semicolons, they&rsquo;re everywhere and, <span class="first-use">best of all</span>, if you miss one, it screws everything up.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Header row -->     <tr>
+                            <th class="table-cent">Author&rsquo;s note</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="table-left">
+                                <p class="hyp">I&rsquo;m not entirely sure that I like JavaScript; I can see that it is very powerful and lets you do pretty much anything you want on a web site. It looks awful though and trying to read and understand it is virtually impossible.</p>
+
+                                <p class="hyp">It is hard to get a grip of JavaScript, it&rsquo;s slightly easier when using the jQuery aspects, but even then it is not very intuitive. I struggle with it and I&rsquo;ve been coding with C and machine code since I was at school (on an old <a class="hlink nohyp" href="https://mz-80a.com/">Sharp MZ80A</a>, my second computer&nbsp;&mdash;&nbsp;my first was a <a class="hlink nohyp" href="https://www.zdnet.com/pictures/sinclair-zx81-teardown/">ZX81</a>).</p>
+
+                                <p class="hyp">I think JavaScript is a language that you have to use a lot before it clicks, I tend to just use it when I need to and it is almost a re-learning exercise every time.</p>
+
+                                <p class="hyp"><span class="first-use">Mostly I just hate all those fucking brackets, braces and semicolons.</span></p>
+
+                            </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let me take you through the bit of meaningless (but nonetheless, essential) drivel we&rsquo;ve just written.</p>
+
+                    <p class="hyp">I could compress the whole thing into a single line, and that is kind of what it is, it is a single instruction that will contain all our code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-js wrap">$(document).ready(function() {&nbsp; /* YOUR CODE */&nbsp; });</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is jQuery at its most fundamental, wherever you see the dollar sign (<span class="code">$</span>), you know you are dealing with jQuery.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The dollar sign only has a special meaning once the jQuery library has been loaded, it does not mean anything in JavaScript itself (it could be assigned to a variable just like any letter, e.g. <span class="code">var $=500;</span> has the same usage as <span class="code">var A=500;</span>).</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The general syntax for jQuery syntax is (I&rsquo;ve coloured the brackets to show the paring):</p>
+
+                    <p class="hyp"><span class="code">$<span style="color: #ff0000">(</span>selector<span style="color: #ff0000">)</span>.action<span style="color: #00b080">()</span>;</span></p>
+
+                    <p class="hyp">Where:</p>
+
+                    <table class="table-clean" style="width: 100%">
+                        <tr>
+                            <td style="width: 35%"><ul class="list-no-num"><li><p class="hyp"><span class="code">$</span></p></li></ul></td>
+                            <td style="width: 65%">Indicates this is accessing some method within the jQuery library</td>
+                        </tr>
+                        <tr>
+                            <td><ul class="list-no-num"><li><p class="hyp"><span class="code"><span style="color: #ff0000">(</span>selector<span style="color: #ff0000">)</span></span></p></li></ul></td>
+                            <td>Is used to identify some HTML component or element</td>
+                        </tr>
+                        <tr>
+                            <td><ul class="list-no-num"><li><p class="hyp"><span class="code">action<span style="color: #00b080">()</span></span></p></li></ul></td>
+                            <td>Whatever is in the brackets gets executed when the action is detected, some actions are event driven e.g. click, some happen no matter what (they always execute)</td>
+                        </tr>
+                    </table>
+
+                    <p class="hyp">You can see that what we have at the start of the file fits this kind of syntax (I&rsquo;ve coloured the brackets to match the colours in the syntax above:</p>
+
+                    <p class="hyp"><span class="code">$<span style="color: #ff0000">(</span>document<span style="color: #ff0000">)</span>.ready<span style="color: #00b080">(</span>function() {  /* YOUR CODE */  }<span style="color: #00b080">)</span>;</span></p>
+
+                    <p class="hyp"><span class="first-use">So, what are we doing?</span></p>
+
+                    <p class="hyp">The simple answer is that we are waiting for the HTML page and all its associated files to load (be <span class="code">ready</span> in jQuery terminology) before we execute any of our JavaScript code.</p>
+
+                    <p class="hyp">That&rsquo;s all it does, it waits for the web page to load completely and then executes any code we put in between the braces (or <span class="first-use">squiggly brackets</span> as everyone calls them).</p>
+
+                    <p class="hyp">If you are happy with that explanation, skip the next bit, it is detailed and at the end of it, it will just confirm what I said above.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 16.4.2 CREATING THE BASIC FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--160402">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>16.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Understanding <span class="code">$(document).ready(function());</span></h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The code <span class="code">$(document).ready(function() {&nbsp;});</span> is the jQuery way of waiting for the page to load before we do anything (execute any code).</p>
+
+                    <p class="hyp">This is good practice, our JavaScript files are all loaded in the <span class="code">&lt;head&gt;</span> section of the HTML, if the code started executing straight away, the rest of the page wouldn&rsquo;t have been rendered in the browser (yet) and the code would fail.</p>
+
+                    <p class="hyp">Let&rsquo;s say we were using the code to manipulate the appearance of a table, the code would have loaded before the table was loaded into the browser and it would fail because it couldn&rsquo;t find the specified table (the table wouldn&rsquo;t be in the browser yet).</p>
+
+                    <p class="hyp">In its simplest form, the code is this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-js wrap">$(document).ready();</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In the jQuery context (document)is a selector where document<sup>&dagger;1</sup>  is the thing that loaded our <span class="code">.js</span> file, in this case it is the <span class="code">99-00-typicals.html</span> file.</p>
+
+                    <p class="hyp">With web pages that run jQuery, it is a fair assumption that document means the HTML file of the web page.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">The document is often called the DOM in jQuery terminology. DOM stands for Document Object Model; it means the HTML page that ran the JavaScript code. I think it is called an object model because it turns the page into a series of objects, these being the elements, classes and IDs that have been defined for the page. It identifies them as specific objects so that we can do things to them (e.g. hide or display them, change their properties &amp;c.).</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The action in this case is <span class="code">ready()</span>. This is a jQuery method; you can see its formal description <a class="hlink nohyp" href="https://api.jquery.com/ready/">here</a>. The ready method executes any function that is contained within its brackets when the document (in this case) has fully loaded. </p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>It is the browser itself that knows when the page has loaded; the ready method just interrogates the browser to find out if this has happened</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In this case, the ready method is going to execute the function: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-js wrap">function() { }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The word <span class="code">function</span> is a JavaScript keyword; it defines what follows as a function (a module or section of code that does something.</p>
+
+                    <p class="hyp">The formal syntax for a function is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">function</span> <span class="first-use">functionName</span> <span class="code">(parameters) {code}</span></p>
+
+                    <p class="hyp">The function we are using is a bit of a cut down version of the full thing, its missing the parameters, it&rsquo;s also missing a name and for the moment it is missing any code as well.</p>
+
+                    <p class="hyp">Parameters are things that are passed into functions from outside, if we had a function that converted Fahrenheit to Celsius, it would have a parameter called Fahrenheit that passed the Fahrenheit value into the function.</p>
+
+                    <p class="hyp">It is not necessary for functions to have parameters and in our case, the function will have a series of operations within it, all of which will use elements of the document and these do not need to be passed as parameters (they are accessible via jQuery methods). Hence our function has empty brackets <span class="code">()</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>For those familiar with C, the <span class="code">function()</span> here is comparable to the <span class="code">main()</span> function in C. It holds the executable code.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The absence of a function name is perhaps more unusual, generally functions are given names; it would be very confusing trying to call them if they didn&rsquo;t have a name.</p>
+
+                    <p class="hyp">In JavaScript, functions without a name are called <span class="first-use">anonymous functions</span> and they are generally assigned at runtime. </p>
+
+                    <p class="hyp">In our case, we are defining a single function that holds all our code, it is created when the browser executes the code (it is essentially just acting as a container for whatever we write), and will run until it is finished (i.e. when the page closes).</p>
+
+                    <p class="hyp">Anonymous functions are not called by other functions, they are created at runtime and execute until they finish what they are doing, they cannot be called repeatedly (like a named function acting as a subroutine), if it&rsquo;s needed again, it must be recreated as part of the code).</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>It is perfectly acceptable to give the function a name, <br><span class="code">$(document).ready(function MGfunc() {});</span><br>works just as well as:<br><span class="code">$(document).ready(function() {&nbsp;});</span></li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The final form of the code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c16-03a">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">is the standard form to use and it is used absolutely everywhere on the internet. </p>
+
+                    <p class="hyp">It is just a placeholder to put your code and it waits until the web page is fully loaded before running your code.</p>
+
+                    <p class="hyp">Put this code in both the <span class="code">cc-ss-scroll.js</span> and the <span class="code">script.js</span> files, they should be identical at this stage.</p>
+
+               </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-03-jscript.html#js--160300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="16-05-jscript.html#js--160500">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
