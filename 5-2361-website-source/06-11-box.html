@@ -16,7 +16,7 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Learn how to use the quick edit, autocomplete and quick edit facilities available to brackets">
+        <meta name="description" content="Using special and reserved characters in HTML, escape sequences and Unicode characters">
 
 <!-- ==========================================================================
 
@@ -46,6 +46,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
+28 Apr 2019   P23          M. Gledhill    Published (typographical corrections)
+
 07 Apr 2019   P15          M. Gledhill    Published (all existing sections
                                           proofread and corrected)
 
@@ -142,7 +144,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="07-00-prelim.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="07-00-prelim.html#js--070000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="07-00-prelim.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of navigation button row -->
                 </div>                                          <!-- End of top navigation row -->
             </nav>                                              <!-- End of top navigation bar -->
@@ -156,7 +158,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Published-P23-4BABC5.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -729,7 +731,7 @@ Date          Issue        Author         Reason for Modification
                             <td class="table-left">Non-breaking space </td>
                             <td class="table-cent"><span class="code">&amp;nbsp;</span></td>
                             <td class="table-cent"><span class="code">&amp;#0160;</span></td>
-                            <td class="table-cent">&#0128;</td>
+                            <td class="table-cent">&euro;</td>
                             <td class="table-left">Euro sign</td>
                             <td class="table-cent"><span class="code">&amp;euro;</span></td>
                             <td class="table-cent"><span class="code">&amp;#0128;</span></td>
@@ -1250,7 +1252,7 @@ Date          Issue        Author         Reason for Modification
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The above table lists all the common &amp;codes (there are a load more for accents and funny letters), <a full list can be found a class="hlink nohyp" href="https://www.freeformatter.com/html-entities.html">here</a>.</p>
+                    <p class="hyp">The above table lists all the common &amp;codes (there are a load more for accents and funny letters), a full list can be found <a class="hlink nohyp" href="https://www.freeformatter.com/html-entities.html">here</a>.</p>
 
                     <p class="hyp">In HTML, any character can be entered by using its character code (given in the <span class="menu">code</span> columns of the above tables). HTML character codes are preceded by the ampersand and hash characters (<span class="code">&amp;#</span>) and finished with a semicolon (<span class="code">;</span>). </p>
 

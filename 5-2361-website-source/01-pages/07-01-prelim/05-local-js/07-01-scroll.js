@@ -75,7 +75,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;p!4</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;p14</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
