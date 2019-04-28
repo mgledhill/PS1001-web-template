@@ -1,0 +1,771 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Using a link to trigger a slow-scroll action with JavaScript">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                         17-01-slowscroll.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+28 Apr 2019   d-P22.17.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/17-01-slowscroll/05-local-js/17-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/17-01-slowscroll/01-local-css/17-01-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Slow scrolling with a link | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="17-00-slowscroll.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="17-02-slowscroll.html#js--170200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P22.17.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>17</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">17</span>Slow scrolling</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 17 slowscroll
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-170000" href="17-00-slowscroll.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">17</span><span class="toc-lev1-text">Slow scrolling</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-170100" href="17-01-slowscroll.html#js--170100">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.1</span><span class="toc-lev2-text">Slow scrolling with a link</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-170101" href="17-01-slowscroll.html#js--170101">
+                            <div class="toc-lev"><span class="toc-lev3-num">17.1.1</span><span class="toc-lev3-text">The soft scroll jQuery</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-170200" href="17-02-slowscroll.html#js--170200">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.2</span><span class="toc-lev2-text">Slow scrolling within the TOC</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-170300" href="17-03-slowscroll.html#js--170300">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.3</span><span class="toc-lev2-text">Slow scrolling summary</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-170301" href="17-03-slowscroll.html#js--170301">
+                            <div class="toc-lev"><span class="toc-lev3-num">17.3.1</span><span class="toc-lev3-text">Building the slow scroll file</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 17.1 SLOW SCROLLING WITH A LINK
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--170100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>17.1</h2></div>
+                 <div class="sub-title-text-box"><h2>Slow scrolling with a link</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Slow scrolling is easy; we need four things, the first three of which are in the HTML:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">An ID on the target element we want to scroll to</p></li>
+
+                        <li><p class="hyp">A link (anchor element)</p></li>
+
+                        <li><p class="hyp">A class in the link that references the ID</p></li>
+
+                        <li><p class="hyp">Some jQuery to join it all together</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">We&rsquo;ve actually covered everything here in other sections, usually with the caveat that I&rsquo;ll explain the slow scrolling later (well, here it is).</p>
+
+                    <p class="hyp">To explain this, I&rsquo;m going to use a simple link to a point on the same page; I&rsquo;ll use the exact example from the introduction, the link and soft scroll to figure 99.1 on the <span class="code">99-00-typicals.html</span> page of the website template.</p>
+
+                    <p class="hyp">This is the completion of what we started in <a class="hlink nohyp" href="13-04-links.html#js--130400">&sect;&nbsp;13.4</a>, in fact it is exactly the same link. Let&rsquo;s look at what we have in the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">99-00-typicals.html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c17-01">&lt;p class=&quot;hyp&quot;&gt;Internal links to a point on the same page use the class &lt;span class=&quot;code&quot;&gt;xref&lt;/span&gt;; this is less noticeable on the page: <br>&lt;a class=&quot;xref <span class="h-light">js--sc-f99-01</span>&quot; href=&quot;#&quot;&gt;Figure 99.1&lt;/a&gt;.&lt;/p&gt;
+
+...
+
+&lt;figure class=&quot;fig-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of figure --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;fig-col fig1-1&quot; id=&quot;<span class="h-light-02">js--f99-01</span>&quot;&gt;
+&lt;img src=&quot;01-pages/99-00-typicals/02-images/fig-99-01.png&quot; alt=&quot;Figure 99.1&nbsp;-&nbsp;Full width image&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;figcaption&gt;Figure 99.1 &amp;emsp; Full width figure&lt;/figcaption&gt;  &lt;!-- Caption --&gt;
+&nbsp; &nbsp; &lt;/div&gt;
+&lt;/figure&gt;</pre>
+
+                        </div>
+                        <div class="code-caption">Code 17.1 &emsp; Link to figure 99.1</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s look at figure 99.1 first, this is just a standard full width image, in fact it is exactly the same full width image we created in <a class="hlink nohyp" href="15-01-figures.html#js--150101">&sect;&nbsp;15.1.1</a>, this is it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-02">
+                            <a href="01-pages/17-01-slowscroll/02-images/fig-17-02.png" data-lightbox="fig-set" data-title="Figure 17.2 - Figure 99.1 from the templates page">
+                                <img src="01-pages/17-01-slowscroll/02-images/fig-17-02.png" alt="Figure 17.2 - Figure 99.1 from the templates page">
+                            </a>
+                            <figcaption>Figure 17.2 &emsp; Figure 99.1 from the templates page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The figure has been given the unique ID (<span class="code">id=&quot;js--f99-01&quot;</span>), I&rsquo;ve shown it underlined in dark blue and bold in the listing above (<a class="xref js--sc-c17-01" href="#">Code&nbsp;17.1</a>). This is the standard form for the ID of a figure; see <a class="hlink nohyp" href="13-04-links.html#js--t13-01">Table&nbsp;13.1</a>.</p>
+
+                    <p class="hyp">All well and good, it is a unique ID for the figure in question.</p>
+
+                    <p class="hyp">Next let&rsquo;s look at the link in the listing, I&rsquo;ve shown it underlined in dark red and bold in <a class="xref js--sc-c17-01" href="#">Code&nbsp;17.1</a>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html" style="height: 0.9rem">&lt;a class=&quot; xref <span class="h-light">js--sc-f99-01</span>&quot; href=&quot;#&quot;&gt;Figure 99.1&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The anchor for the link <span class="code">&lt;a&gt;</span> has two classes, the first is the <span class="code">xref</span> styling class that determines the appearance of the link (see <a class="hlink nohyp" href="13-04-links.html#js--130400">&sect;&nbsp;13.4</a>). The second is the peculiar class:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">js--sc-f99-01</span></p>
+
+                    <p class="hyp">I first introduced this class in <a class="hlink nohyp" href="13-04-links.html#js--130400">&sect;&nbsp;13.4</a>; it is needed to make the soft scroll work; it matches the given ID of the object we want to soft scroll to. </p>
+
+                    <p class="hyp">This class has the same name as the target ID except that the <span class="code">js--</span> of the ID is replaced with <span class="code">js--sc-</span>, i.e. there is an extra <span class="code">sc-</span> after the <span class="code">--</span>.</p>
+
+                    <p class="hyp">The names of these IDs and corresponding classes, the <span class="code">js--</span> and <span class="code">js--sc-</span> look kind of official, as if they have a particular meaning to the JavaScript, but they don&rsquo;t, they are a complete product of my imagination. You could use anything, <span class="code">hector</span> and <span class="code">henry</span> will work just as well.</p>
+
+                    <p class="hyp">In my mind, <span class="code">js</span> was intended to indicate that it was applicable to the JavaScript, the double dashes <span class="code">--</span> allowed me to search for it easily and the <span class="code">sc</span> is my abbreviation for scroll. </p>
+
+                    <p class="hyp"><span class="first-use">I&rsquo;m sorry if you thought I was doing something clever&nbsp;&mdash;&nbsp;you should know by now that I hardly do anything clever and when I do it&rsquo;s usually by accident.</span></p>
+
+                    <p class="hyp">To summarise:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">The target (the thing we want to scroll to) has the <em>ID</em>:<br><span class="code">js--f99-01</span></p></li>
+
+                        <li><p class="hyp">The link (to the object) has the <em>class</em> <span class="code">js--sc-f99-01</span> i.e. exactly the same as the ID but with <span class="code">js--sc-</span> instead of <span class="code">js--</span></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Both the ID (<span class="code">js--f99-01</span>) and the class (<span class="code">js--sc-f99-01</span>) are missing from any CSS file (there isn&rsquo;t actually a class <span class="code">js--sc-f99-01</span> in <span class="code">style.css</span>), these are purely for use in a JavaScript file, specifically the <span class="code">scroll.js</span> file for the web page.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 17.1.1 THE SOFT SCROLL JQUERY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--170101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>17.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The soft scroll jQuery</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the clever stuff.</p>
+
+                    <p class="hyp">The soft scrolling is different for each web page, each web page has different sections, tables, figures &amp;c. and no two are the same. Thus the soft scrolling goes in the <span class="code">.js</span> file for the web page in particular; specifically it is the <span class="code">c-ss-scroll.js</span> file. Even more specifically, in this case it is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">01-pages/99-00-typicals/05-js/99-00-scroll.js</span></p>
+
+                    <p class="hyp">This is the scroll.js<sup>&dagger;1</sup> file for the web page <span class="code">99-00-typicals.html</span>.</p>
+
+                    <p class="hyp">That is why it&rsquo;s called scroll; it has all the slow scroll jQuery stuff in it.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Generally, when I refer to the <span class="code">scroll.js</span> file, I&rsquo;m referring to the <span class="code">cc-ss-scroll.js</span> file for the particular web page in question.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">At the moment, this file just has the jQuery container for our code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">01-pages/99-00-typicals/05-js/99-00-scroll.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c17-02">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 17.2 &emsp; 99-00-scroll.js</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s add the slow scroll stuff we need for this particular link:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">01-pages/99-00-typicals/05-js/99-00-scroll.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c17-03">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+&nbsp; &nbsp; $('.js--sc-f99-01').click(function () {&nbsp; &nbsp;  /* START of scroll function */
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--f99-01').offset().top -80}, 1000);
+&nbsp; &nbsp; });
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 17.3 &emsp; 99-00-scroll.js with slow scroll code</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I know what you&rsquo;re thinking, you&rsquo;re thinking <span class="first-use">&ldquo;that&rsquo;s a shitload of brackets&rdquo;</span> and you&rsquo;re right, I count 14 brackets and four braces&nbsp;&mdash;&nbsp;for just three lines of code? I refer you to my earlier <a class="hlink nohyp" href="16-04-jscript.html#js--t16-01">comment</a>.</p>
+
+                    <p class="hyp">You&rsquo;re probably also thinking <span class="first-use">&ldquo;that doesn&rsquo;t look like the stuff we did before, it looks complicated&rdquo;</span>&nbsp;&mdash;&nbsp;you&rsquo;re less right this time, it does looks complicated <span class="first-use">(Linux people<sup>&dagger;2</sup> . I blame you)</span>, but it sort of isn&rsquo;t, you get used to it.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;2</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Q.&emsp;How do you tell an extroverted Linux person from an introverted one?</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">A.&emsp;The extravert looks at your shoes when you talk to him.</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left"><span class="first-use">And for C programmers:</span></td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left" style="padding-left: 2rem">99 definite bugs in the code<br>99 definite bugs<br>You fix one bug and you re-compile <br>100 definite bugs in the code.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s look at this in terms of the jQuery syntax:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">$(selector).action();</span></p>
+
+                    <p class="hyp">What we have here is just this, except that in the action, we create a function that has another jQuery in it. </p>
+
+                    <p class="hyp">Think of it like this (I&rsquo;ve simplified the brackets):</p>
+
+                    <p class="hyp"><span class="code"><span style="color: #C0504D">$(selector1).action1(</span><br>&emsp;&emsp;&emsp;$(selector2).action2();<br><span style="color: #C0504D">);</span></span></p>
+
+                    <p class="hyp">If <span class="code">selctor1</span> is true, <em>THEN</em> we test another condition (<span class="code">selector2</span>) and if that is true, carryout <span class="code">action2</span>. If <span class="code">selector1</span> was false, we don&rsquo;t do anything. </p>
+
+                    <p class="hyp">The only other thing we have to do concerns the second line; we need to put in another function (another anonymous function).</p>
+
+                    <p class="hyp">Let&rsquo;s go through it. The first line:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">&nbsp; &nbsp; $('.js--sc-f99-01').click(function () {</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first bit (the selector) is looking for the class <span class="code">js--sc-f99-01</span> that we used in the link (<code class="prettyprint lang-html nohyp">&lt;a class=&quot;xref <span class="h-light" style="font-size: 0.8rem">js--sc-f99-01</span>&quot;...&gt;</code>).</p>
+
+                    <p class="hyp">In short, <code class="prettyprint lang-js nohyp">$('.js--sc-f99-01').click()</code> is waiting for something with the class <span class="code">js--sc-f99-01</span> to be clicked. In our case, the link to figure 99.1 has that class because we gave it that class in the HTML:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;p class=&quot;hyp&quot;&gt;Internal links to a point on the same page use the class &lt;span class=&quot;code&quot;&gt;xref&lt;/span&gt;; this is less noticeable on the page: <br>&lt;a class=&quot;xref <span class="h-light">js--sc-f99-01</span>&quot; href=&quot;#&quot;&gt;Figure 99.1&lt;/a&gt;.&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It applies to everything inside the link (i.e. the Figure 99.1 that displays on the web page), if we click anywhere in the link, the jQuery <code class="prettyprint lang-js nohyp">$('.js--sc-f99-01').click()</code> will be true and everything in the brackets of the <span class="code">.click</span> action will execute.</p>
+
+                    <p class="hyp">What&rsquo;s in those brackets is: <code class="prettyprint lang-js nohyp">function () {</code> <span class="first-use"> &emsp;so what does this mean?</span></p>
+
+                    <p class="hyp">It means that if the class has been clicked (i.e. the link has been clicked), I create another anonymous function that has no parameters (the empty brackets) and executes it. </p>
+
+                    <p class="hyp">When it is executed it runs all the code between the braces <span class="code">{}</span>.</p>
+
+                    <p class="hyp">In this case, it executes the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js linenums" id="js--c17-03a">$('html, body').animate({scrollTop: $('#js--f99-01').offset().top -80}, 1000);</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is another jQuery, <span class="code">$(selector)</span> &amp;c. This is also a standard bit of code for the <span class="code">scrollTop</span> method, you see it everywhere.</p>
+
+                    <p class="hyp">This time the selector is <span class="code">$('html, body')</span><sup>&dagger;3</sup> it is selecting anything that is within the html element or the body element, this essentially is everything on the web page, so this selector is always true. The <span class="code">.animate()</span> performs some sort of animation, in this case it is the <span class="code">scrollTop</span> animation.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn03">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">You may be wondering why I use both <span class="code">html</span> and <span class="code">body</span> in the selector, the <span class="code">body</span> element is after all within the <span class="code">html</span> element. The reason is for browser consistency (and this is a fairly standard method for overcoming it), some browsers (Firefox and Internet Explorer) need this to be <span class="code">html</span>, some (Chrome, Safari and Edge) need it to be <span class="code">body</span>. Using both satisfies everyone.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The syntax for the animate method is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">.animate({property}, duration)</span></p>
+
+                    <p class="hyp">The duration is in milliseconds</p>
+
+                    <p class="hyp">The property is <span class="code">scrollTop</span> and its syntax is:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">scrollTop: $(target).offset().top nn</span></p>
+
+                    <p class="hyp">Where <span class="code">nn</span> is the number of pixels <em>below</em> the top of the screen where the scroll will position the target.</p>
+
+                    <p class="hyp">Nearly there.</p>
+
+                    <p class="hyp">The <span class="code">scrollTop</span> property is the thing that actually does the scrolling, it will scroll to the target, in this case the target is the ID of the object: <span class="code">$('#js--f99-01')</span>, it is the bit between the quotes and it is the CSS class or ID, if it were a class, the <span class="code">#</span> would be replace with a <span class="code">.</span>, just like it is in CSS.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>I tend to use single quotes in jQuery, but double quotes work in just the same way; i.e. <span class="code">$(&quot;#js--f99-01&quot;)</span>. JavaScript and jQuery don&rsquo;t care which you use, just be consistent, it doesn&rsquo;t like it if you start with one and finish with the other, for example <span class="code">$(&quot;#js--f99-01')</span> won&rsquo;t work (double quote at the start, single quote at the end).</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">offset().top</span> is entirely optional, if you miss it out or set the offset to zero, the top of the target will be positioned exactly at the top of the browser window:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-03">
+                            <a href="01-pages/17-01-slowscroll/02-images/fig-17-03.png" data-lightbox="fig-set" data-title="Figure 17.3 - ScrollTop with zero offset">
+                                <img src="01-pages/17-01-slowscroll/02-images/fig-17-03.png" alt="Figure 17.3 - ScrollTop with zero offset">
+                            </a>
+                            <figcaption>Figure 17.3 &emsp; ScrollTop with zero offset</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The offset moves the stop point, if the number is positive it is further down the page, the following is an example with an offset of 100 (pixels, offset is always in pixels) <span class="code">offset().top +100</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>For positive offsets, you have to use the plus sign (+), it doesn&rsquo;t work if you just give it a number.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-04">
+                            <a href="01-pages/17-01-slowscroll/02-images/fig-17-04.png" data-lightbox="fig-set" data-title="Figure 17.4 - ScrollTop with positive offset">
+                                <img src="01-pages/17-01-slowscroll/02-images/fig-17-04.png" alt="Figure 17.4 - ScrollTop with positive offset">
+                            </a>
+                            <figcaption>Figure 17.4 &emsp; ScrollTop with positive offset</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It chops the top off the image.</p>
+
+                    <p class="hyp">Generally, we want negative offsets to leave a bit of a gap between the target and the top of the browser. This is an offset of -20: <span class="code">offset().top -20</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-05">
+                            <a href="01-pages/17-01-slowscroll/02-images/fig-17-05.png" data-lightbox="fig-set" data-title="Figure 17.5 - ScrollTop with negative offset">
+                                <img src="01-pages/17-01-slowscroll/02-images/fig-17-05.png" alt="Figure 17.5 - ScrollTop with negative offset">
+                            </a>
+                            <figcaption>Figure 17.5 &emsp; ScrollTop with negative offset</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now in practice, there will be the sticky navigation bar (next chapter) at the top of the browser, and that has maximum height of 60&nbsp;px; to make the slow scroll stop before the sticky navigation bar, we need to increase the gap by 60&nbsp;pixels.</p>
+
+                    <p class="hyp">I tend to use an offset of -80 pixels for figures: <span class="code">offset().top -80</span>.</p>
+
+                    <p class="hyp">With the sticky nav it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-06">
+                            <a href="01-pages/17-01-slowscroll/02-images/fig-17-06.png" data-lightbox="fig-set" data-title="Figure 17.6 - ScrollTop with negative offset and sticky navigation bar">
+                                <img src="01-pages/17-01-slowscroll/02-images/fig-17-06.png" alt="Figure 17.6 - ScrollTop with negative offset and sticky navigation bar">
+                            </a>
+                            <figcaption>Figure 17.6 &emsp; ScrollTop with negative offset and sticky navigation bar</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Tables and code fragments have different offsets (-60 for tables and -120 for code fragments), this is because these objects have different top margins. Sections, subsections and inline sections also have different offsets; the summary at the end gives examples of each (<a class="hlink nohyp" href="17-03-slowscroll.html#js--t17-01">Table&nbsp;17.1</a>).</p>
+
+                    <p class="hyp">The final thing is the duration; this is the 1000 in the second line:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js linenums" id="js--c17-03b">&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--f99-01').offset().top -80}, 1000);</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This is the duration of the animation, i.e. how long it takes the browser to scroll for where it is to the target. This value is in milliseconds (one thousandth of a second) so a value of 1000 is equivalent to a duration of one second.</p>
+
+                    <p class="hyp">It is actually part of the <span class="code">animate</span> method, not the <span class="code">scrollTop</span>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="17-00-slowscroll.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="17-02-slowscroll.html#js--170200">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="A summary of slow scrolling when used within a website and particularly with the practical series web template">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                         17-03-slowscroll.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+28 Apr 2019   d-P22.17.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/17-03-slowscroll/05-local-js/17-03-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/17-03-slowscroll/01-local-css/17-03-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Slow scrolling summary | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="17-02-slowscroll.html#js--170200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P22.17.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>17</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">17</span>Slow scrolling</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 17 slowscroll
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-170000" href="17-00-slowscroll.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">17</span><span class="toc-lev1-text">Slow scrolling</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-170100" href="17-01-slowscroll.html#js--170100">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.1</span><span class="toc-lev2-text">Slow scrolling with a link</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-170101" href="17-01-slowscroll.html#js--170101">
+                            <div class="toc-lev"><span class="toc-lev3-num">17.1.1</span><span class="toc-lev3-text">The soft scroll jQuery</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-170200" href="17-02-slowscroll.html#js--170200">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.2</span><span class="toc-lev2-text">Slow scrolling within the TOC</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-170300" href="17-03-slowscroll.html#js--170300">
+                            <div class="toc-lev"><span class="toc-lev2-num">17.3</span><span class="toc-lev2-text">Slow scrolling summary</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-170301" href="17-03-slowscroll.html#js--170301">
+                            <div class="toc-lev"><span class="toc-lev3-num">17.3.1</span><span class="toc-lev3-text">Building the slow scroll file</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 17.3 SLOW SCROLLING SUMMARY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--170300">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>17.3</h2></div>
+                 <div class="sub-title-text-box"><h2>Slow scrolling summary</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">scroll.js</span> file for each page needs a jQuery for each slow scroll link. The full <span class="code">scroll.js</span> file for the web page 99-00-typicals is this (sorry this is a bit long):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">01-pages/99-00-typicals/05-js/99-00-scroll.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c17-05">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+ /* ---------------------------------------------------------------------------
+&nbsp;  SCROLL TO TOP
+&nbsp;  ------------------------------------------------------------------------- */
+&nbsp;  $('.js--sc-000000').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--000000').offset().top -80}, 1000);
+&nbsp; &nbsp; });
+
+ /* ---------------------------------------------------------------------------
+&nbsp;  SCROLL TO CHAPTER (Non heading level after TOC)
+&nbsp;  ------------------------------------------------------------------------- */
+&nbsp; &nbsp; $('.js--sc-990000').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990000').offset().top -10}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; /* ---------------------------------------------------------------------------
+&nbsp;  SCROLL TO -&nbsp; SECTIONS &amp; SUBSECTIONS
+&nbsp;  ------------------------------------------------------------------------- */
+&nbsp; &nbsp; $('.js--sc-990100').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990100').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990101').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990101').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990200').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990200').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990400').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990400').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990500').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990500').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990600').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990600').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990700').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990700').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990800').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990800').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990900').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990900').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-991000').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--991000').offset().top -20}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; /* ---------------------------------------------------------------------------
+&nbsp;  SCROLL TO -&nbsp; INLINE SECTIONS
+&nbsp;  ------------------------------------------------------------------------- */
+&nbsp; &nbsp; $('.js--sc-990101a').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990101a').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990101b').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990101b').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990200a').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990200a').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990200b').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990200b').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990200c').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990200c').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300a').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300a').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300b').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300b').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300c').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300c').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300d').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300d').offset().top -120}, 1000);
+&nbsp; &nbsp; });&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* END of scroll function */
+
+&nbsp; &nbsp; $('.js--sc-990300e').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300e').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990300f').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990300f').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990400a').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990400a').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990400b').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990400b').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990400c').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990400c').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990400d').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990400d').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990700a').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990700a').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-990700b').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--990700b').offset().top -120}, 1000);
+&nbsp; &nbsp; });
+
+/* ---------------------------------------------------------------------------
+&nbsp;  SCROLL TO -&nbsp; CROSS REFERENCES
+&nbsp;  ------------------------------------------------------------------------- */
+&nbsp; &nbsp; $('.js--sc-f99-01').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--f99-01').offset().top -80}, 1000);
+&nbsp; &nbsp; });
+
+&nbsp; &nbsp; $('.js--sc-t99-01').click(function () {
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('#js--t99-01').offset().top -60}, 1000);
+&nbsp; &nbsp; });
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 17.5 &emsp; 99-00-scroll.js in its entirety</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ok, that is a very long listing; it has 32 slow scroll points. The <span class="first-use">typicals</span> page has examples of everything available to the web site and most of it has a link of some form or another, hence that large number of slow scroll point in the file. </p>
+
+                    <p class="hyp">Most pages have fewer than 10 scroll points (I think the average for the whole website works out at six per page).</p>
+
+                    <p class="hyp">I tend to group my scroll points into chapters, sections &amp; subsections, inline sections and everything else (cross references).</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 17.3.1 BUILDING THE SLOW SCROLL FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--170301">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>17.3.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Building the slow scroll file</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The easiest way to build the file is to copy one of the three lines groups of jQuery:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-js" id="js--c17-05a">&nbsp; &nbsp;$('.js--sc-<span class="h-light">IDNO</span>').click(function () {
+&nbsp; &nbsp; &nbsp; $('html, body').animate({scrollTop: $('#js--<span class="h-light">IDNO</span>').offset().top -<span class="h-light-02">OFFSET</span>}, 1000);
+&nbsp; &nbsp;});</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Replicate it and change the <span class="code">IDNO</span> (underlined in red) and the <span class="code">OFFSET</span> (uinderlined in blue) for the slow scroll point in question.</p>
+
+                    <p class="hyp">The following table (<a class="xref js--sc-t17-01" href="#">Table&nbsp;17.1</a>) shows the ID, class and offset arrangements for the standard sections and objects.</p>
+
+                    <p class="hyp">The examples shown beneath each entry can be copied and pasted into a <span class="code">scroll.js</span> file.</p>
+
+                    <p class="hyp">I use a duration of 1 second (1000ms) in all my slow scroll code; this is purely my preference, any longer and the effect takes an annoying amount of time. Any shorter and I start to feel seasick.</p>
+
+                    <p class="hyp">I leave it up to you.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-dense" id="js--t17-01" style="width: 100%">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-left" style="width: 16.7%">Item</th>
+                            <th class="table-cent" style="width: 20.3%">ID</th>
+                            <th class="table-cent" style="width: 30.7%">Example</th>
+                            <th class="table-cent" style="width: 21.7%">Class</th>
+                            <th class="table-cent" style="width: 10.6%">Offset</th>
+                        </tr>
+
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Lead-in section</span></td>
+                            <td class="table-cent"><span class="code">js--XX0000</span></td>
+                            <td class="table-cent">Lead-in section X<br><span class="code">id=&quot;js--030000&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-XX0000</span></td>
+                            <td class="table-cent"><span class="code">-10</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-990000').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--990000').offset().top -10}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Section</span></td>
+                            <td class="table-cent"><span class="code">js--XXYY00</span></td>
+                            <td class="table-cent">Section X.Y<br><span class="code">id=&quot;js--030100&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-XXYY00</span></td>
+                            <td class="table-cent"><span class="code">-20</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-990100').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--990100').offset().top -20}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Subsection</span></td>
+                            <td class="table-cent"><span class="code">js--XXYYZZ</span></td>
+                            <td class="table-cent">Subsection X.Y.Z<br><span class="code">id=&quot;js--030101&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-XXYYZZ</span></td>
+                            <td class="table-cent"><span class="code">-20</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-990101').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--990101').offset().top -20}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Inline section</span></td>
+                            <td class="table-cent"><span class="code">js--XXYYZZa</span></td>
+                            <td class="table-cent">Inline section of section X.Y.Z<br><span class="code">id=&quot;js--030101a&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-XXYYZZa</span></td>
+                            <td class="table-cent"><span class="code">-120</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-990101a').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--990101a').offset().top -120}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Figure</span></td>
+                            <td class="table-cent"><span class="code">js--fXX-YY</span></td>
+                            <td class="table-cent">Figure X.Y<br><span class="code">id=&quot;js--f99-01&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-fXX-YY</span></td>
+                            <td class="table-cent"><span class="code">-80</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-f99-01').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--f99-01').offset().top -80}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Table</span></td>
+                            <td class="table-cent"><span class="code">js--tXX-YY</span></td>
+                            <td class="table-cent">Table X.Y<br><span class="code">id=&quot;js--t99-01&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-tXX-YY</span></td>
+                            <td class="table-cent"><span class="code">-60</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-t99-01').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--t99-01').offset().top -60}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Code</span></td>
+                            <td class="table-cent"><span class="code">js--cXX-YY</span></td>
+                            <td class="table-cent">Code X.Y<br><span class="code">id=&quot;js--c99-01&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-cXX-YY</span></td>
+                            <td class="table-cent"><span class="code">-120</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-c99-01').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--c99-01').offset().top -120}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Equation</span></td>
+                            <td class="table-cent"><span class="code">js--eXX-YY</span></td>
+                            <td class="table-cent">Equation X.Y<br><span class="code">id=&quot;js--e99-01&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-eXX-YY</span></td>
+                            <td class="table-cent"><span class="code">-80</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-e99-01').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--e99-01').offset().top -80}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-left"><span class="sans-b" style="font-size: 0.65rem">Footnote</span></td>
+                            <td class="table-cent"><span class="code">js--fnXX</span></td>
+                            <td class="table-cent">Footnote XX<br><span class="code">id=&quot;js--fnXX&quot;</span></td>
+                            <td class="table-cent"><span class="code">js--sc-fnXX</span></td>
+                            <td class="table-cent"><span class="code">-80</span></td>
+                        </tr>
+<!-- Example row -->    <tr class="formulae-bkgd">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left">E.g.</td>
+                            <td  colspan="4" class="table-left">
+                                <pre class="prettyprint linenums lang-js">$('.js--sc-fn01').click(function () {
+&nbsp;  $('html, body').animate({scrollTop: $('#js--fn01').offset().top -80}, 1000);
+});</pre>
+                            </td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="5" class="table-caption">Table 17.1 &emsp; ID, class and offsets for typical slow scroll arrangements</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="17-02-slowscroll.html#js--170200">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="18-00-stickynav.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

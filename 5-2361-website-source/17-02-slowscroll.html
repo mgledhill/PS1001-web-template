@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Understanding how to use JavaScript to achieve a slow-scrolling effect on a web page">
+        <meta name="description" content="Slow-scroll action using JavaScript from within the table of contents">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                         17-00-slowscroll.HTML
+Title :          WEBSITE TEMPLATE                         17-02-slowscroll.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-28 Apr 2019   d-P22.17.02  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+28 Apr 2019   d-P22.17.02  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/17-00-slowscroll/05-local-js/17-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/17-02-slowscroll/05-local-js/17-02-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/17-00-slowscroll/01-local-css/17-00-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/17-02-slowscroll/01-local-css/17-02-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>An introduction to Slow scrolling | PracticalSeries: Web Development</title>
+        <title>Slow scrolling within the TOC | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="16-05-jscript.html#js--160500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="17-01-slowscroll.html#js--170100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="16-00-jscript.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="17-01-slowscroll.html#js--170100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="17-03-slowscroll.html#js--170300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -225,16 +223,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 17 SLOW SCROLLING
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 17.2 SLOW SCROLLING WITHIN THE TOC
      ***********************************************************************-->
 
-        <section class="section-std" id="js--170000">           <!-- Start of section         -->
+        <section class="section-std" id="js--170200">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Slow scrolling</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>17.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Slow scrolling within the TOC</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -248,37 +247,107 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Slow scrolling</span> is the first of the jQuery effects that we are going to look at, it is one of the easiest to understand and to implement.</p>
+                    <p class="hyp">The TOC also uses slow scrolling if the link is to a point on the same page.</p>
 
-                    <p class="hyp">Slow scrolling is an animated technique for scrolling to a particular point on the same web page. </p>
+                    <p class="hyp">The HTML for the TOC link is slightly different to that of the straight forward link of the previous section.</p>
 
-                    <p class="hyp">The browser visibly scrolls to the specified point as if you were scrolling down the page with the middle mouse button (at least that how scrolling works with Windows, on a Mac you probably have to cross your fingers, turn round three times and spit), it starts off fast and slows down as it approaches the target. The time it takes to get there can be specified. </p>
+                    <p class="hyp">This is a TOC link from <span class="code">99-00-typicals.html</span> to a point on the same page:</p>
 
-                    <p class="hyp">I think it is a nice effect.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">99-00-typicals.html</div>
+                        <div class="code-area">
 
-                    <p class="hyp">You will already have experienced it in using the website, but just to be sure, click the following link; it will open the 99-00-typicals page in a new tab:</p>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c17-04">&lt;li&gt;&lt;a class=&quot;js--sc-990300&quot; href=&quot;99-00-typicals.html#js--990300&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev2-num&quot;&gt;99.3&lt;/span&gt;&lt;span class=&quot;toc-lev2-text&quot;&gt;Typicals&amp;nbsp;&amp;mdash;&amp;nbsp;Links&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;/li&gt;
 
-                    <p class="hyp" style="text-align: center"><a class="hlink nohyp" href="https://www.practicalseries.com/1001-webdevelopment/99-00-typicals.html#js--000000">99-00-typicals</a></p>
+...
 
-                    <p class="hyp">Now click <span class="menu">link to a point on the same page</span> (in section 99.3 of the TOC), the browser will slow scroll to that point, it takes exactly one second to get there.</p>
+&lt;section class=&quot;section-std&quot; id=&quot;js--990300&quot;&gt;
+&nbsp; &nbsp; &lt;div class=&quot;rg-row sub-title-row&quot;&gt; (section number &amp; heading) --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-col rg-span1-5&quot;&gt;&lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-col rg-span3-5&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;sub-title-overline&quot;&gt;&lt;/div&gt;
+...
+</pre>
 
-                    <p class="hyp">If you now (manually) scroll to the end of that section, you will see a link to figure 99.1:</p>
+                        </div>
+                        <div class="code-caption">Code 17.4 &emsp; TOC link to section 99.3</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The link is this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;a class=&quot;js--sc-990300&quot; href=&quot;99-00-typicals.html#js--990300&quot;&gt;&nbsp;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Compare this with the straight forward link of the previous section:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;a class=&quot; xref js--sc-f99-01&quot; href=&quot;#&quot;&gt;Figure 99.1&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The main difference is that the <span class="code">href</span> in the TOC is populated, it has the full page link in it: <span class="code">href=&quot;99-00-typicals.html#js--990300&quot;</span>. This just means that the link will work even if there is no jQuery there to make it work (it will re-load the page and jump straight to the ID point). It means the TOC will work on browsers where JavaScript has been disabled.</p>
+
+                    <p class="hyp">Other than that it is exactly the same as the link in the previous section, in this case the ID is <span class="code">js--990300</span> and the associated class is <span class="code">js--sc-990300</span>. </p>
+
+                    <p class="hyp">This works in exactly the same way as the class and ID in the previous section, the class has the same name as the target ID except that the <span class="code">js--</span> of the ID is replaced with <span class="code">js--sc-</span>, i.e. there is an extra <span class="code">sc-</span> after the <span class="code">--</span>.</p>
+
+                    <p class="hyp">The jQuery in the <span class="code">scroll.js</span> file has exactly the same format (just the class, ID and offset change, shown underlined in red):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-js" id="js--c17-04a">&nbsp; &nbsp; $('<span class="h-light">.js--sc-990300</span>').click(function () {&nbsp; &nbsp;  /* START of scroll function */
+&nbsp; &nbsp; &nbsp;  $('html, body').animate({scrollTop: $('<span class="h-light">#js--990300</span>').offset().top -20}, 1000);
+&nbsp; &nbsp; });</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The offset is just -20, you might think that this will put the start of the section behind the sticky navigation&nbsp;&mdash;&nbsp;it would except that the section starts with the over-line bar and this has a large top margin so we don&rsquo;t need quite so much offset to make the thing look right. It looks like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-01">
-                            <a href="01-pages/17-00-slowscroll/02-images/fig-17-01.png" data-lightbox="fig-set" data-title="Figure 17.1 - Link to a figure on the same page">
-                                <img src="01-pages/17-00-slowscroll/02-images/fig-17-01.png" alt="Figure 17.1 - Link to a figure on the same page">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f17-07">
+                            <a href="01-pages/17-02-slowscroll/02-images/fig-17-07.png" data-lightbox="fig-set" data-title="Figure 17.7 - Slow scroll from the TOC to a section">
+                                <img src="01-pages/17-02-slowscroll/02-images/fig-17-07.png" alt="Figure 17.7 - Slow scroll from the TOC to a section">
                             </a>
-                            <figcaption>Figure 17.1 &emsp; Link to a figure on the same page</figcaption>
+                            <figcaption>Figure 17.7 &emsp; Slow scroll from the TOC to a section</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <p class="hyp">If you click that link, the browser will again slow scroll down to figure 99.1, it will stop scrolling when the image is at the top of the screen. Again it gets there in one second.</p>
 
-                    <p class="hyp">Read on to see how I do this.</p>
+                    <p class="hyp">The jQuery for the TOC has just the same format as the link in the previous section, it is just a question of copying the code and changing the class, ID and offset for each instance.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -302,7 +371,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="16-05-jscript.html#js--160500">Prev</a>
+                        <a class="xref" href="17-01-slowscroll.html#js--170100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -312,7 +381,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="17-01-slowscroll.html#js--170100">Next</a>
+                        <a class="xref" href="17-03-slowscroll.html#js--170300">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
