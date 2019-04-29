@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Creating navigation bars the stick to the top edge of a browser when the user scrolls down the page">
+        <meta name="description" content="Using the waypoints plugin within the Practical Series web template">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                          18-00-STICKYNAV.HTML
+Title :          WEBSITE TEMPLATE                          18-03-STICKYNAV.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-29 Apr 2019   d-P23.18.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+29 Apr 2019   d-P23.18.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/18-00-stickynav/05-local-js/18-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/18-03-stickynav/05-local-js/18-03-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/18-00-stickynav/01-local-css/18-00-codeline.css">-->
+        <!-- Code frag highlights -->      <link rel="stylesheet" type="text/css" href="01-pages/18-03-stickynav/01-local-css/18-03-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Sticky navigation | PracticalSeries: Web Development</title>
+        <title>Using Waypoints plugin | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="17-03-slowscroll.html#js--170300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="18-02-stickynav.html#js--180200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="17-00-slowscroll.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="19-00-hyphens.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="18-01-stickynav.html#js--180100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="18-04-stickynav.html#js--180400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -230,16 +228,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 18 STICKY NAVIGATION
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 18.3 THE WAYPOINTS PLUGIN
      ***********************************************************************-->
 
-        <section class="section-std" id="js--180000">           <!-- Start of section         -->
+        <section class="section-std" id="js--180300">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Sticky navigation</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>18.3</h2></div>
+                 <div class="sub-title-text-box"><h2>Using the Waypoints plugin</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -253,63 +252,239 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Sticky navigation</span> is what you get when you sneeze on your steering wheel.</p>
+                    <p class="hyp">The sticky navigation takes place on every web page within the website. The code to make this work is identical for every page too; the links within the navigation bar change for each page, but the operation of the sticky navigation is the same for all pages.</p>
 
-                    <p class="hyp">It&rsquo;s also a reference to navigation bars that stick to some point on the screen and remain fixed there while the rest of the web page scrolls past underneath it.</p>
+                    <p class="hyp">As such, the sticky navigation jQuery code is in the common <span class="code">script.js</span> file (rather than the page specific <span class="code">scroll.js</span> file.</p>
 
-                    <p class="hyp">The easiest way is to look at it on the web page, go to <a class="hlink nohyp" href="https://www.practicalseries.com/1001-webdevelopment/99-00-typicals.html">99-00-typicals</a> and it starts with the navigation bar at the top of the screen (<a class="xref js--sc-f18-01" href="#">Figure&nbsp;18.1</a>), this is the basic navigation bar we built in <a class="hlink nohyp" href="11-03-header.html#js--110300">&sect;&nbsp;11.3</a>:</p>
+                    <p class="hyp">At present, all the <span class="code">script.js</span> file has in it is the basic jQuery code:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-01">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-01.png" data-lightbox="fig-set" data-title="Figure 18.1 - Web page with navigation bar at the top">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-01.png" alt="Figure 18.1 - Web page with navigation bar at the top">
-                            </a>
-                            <figcaption>Figure 18.1 &emsp; Web page with navigation bar at the top</figcaption>
-                        </figure>
+                    <div class="code-extract">
+                        <div class="code-header">11-resources/05-js/script.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c18-02">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+/* ****************************************************************************
+&nbsp;  YOUR CODE GOES IN HERE
+&nbsp;  **************************************************************************** */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.2 &emsp; script.js</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">If you slowly scroll down the page, the navigation bar disappears off the top (<a class="xref js--sc-f18-02" href="#">Figure&nbsp;18.2</a>):</p>
+                    <p class="hyp">The only thing we need to add is the Waypoints code. It looks like this:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (JS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-02">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-02.png" data-lightbox="fig-set" data-title="Figure 18.2 - Web page with navigation bar scrolled off the top">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-02.png" alt="Figure 18.2 - Web page with navigation bar scrolled off the top">
-                            </a>
-                            <figcaption>Figure 18.2 &emsp; Web page with navigation bar scrolled off the top</figcaption>
-                        </figure>
+                    <div class="code-extract">
+                        <div class="code-header">11-resources/05-js/script.js</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-js wrap" id="js--c18-03">$(document).ready(function() {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* START OF PAGE READY FUNCTION */
+
+&nbsp; &nbsp; $('#js--fixed-nav').waypoint(function (direction) { /* START of Waypoint function
+&nbsp; &nbsp; &nbsp; &nbsp; if (direction == &quot;down&quot;) {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* check direction */
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $('nav').addClass('fixed-nav');&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* if down add fixed-nav class */
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $('nav').removeClass('fixed-nav');&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* if up clear fixed-nav class */
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }, {
+&nbsp; &nbsp; offset: '70px'&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* check 70px before top */
+&nbsp; &nbsp; });&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END of Waypoint function */
+
+});&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* END OF PAGE READY FUNCTION */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.3 &emsp; Waypoints code</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">But then, if you keep scrolling down it comes back again (with an extra button) and sits there at the top of the screen (<a class="xref js--sc-f18-03" href="#">Figure&nbsp;18.3</a>):</p>
+                    <p class="hyp">The Waypoints method can do a lot of different things, it is a powerful bit of code (I don&rsquo;t understand most of it). I&rsquo;m just using if to detect when a particular ID reaches the top of the browser window when I scroll down the page.</p>
+
+                    <p class="hyp">The ID I&rsquo;m looking for is called <span class="code">js--fixed-nav</span> (I haven&rsquo;t added it to the HTML yet).</p>
+
+                    <p class="hyp">I&rsquo;m using this ID as a jQuery selector that uses the Waypoints method:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-03">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-03.png" data-lightbox="fig-set" data-title="Figure 18.3 - Web page with &ldquo;sticky&rdquo; navigation bar">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-03.png" alt="Figure 18.3 - Web page with &ldquo;sticky&rdquo; navigation bar">
-                            </a>
-                            <figcaption>Figure 18.3 &emsp; Web page with &ldquo;sticky&rdquo; navigation bar</figcaption>
-                        </figure>
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">$('#js--fixed-nav').waypoint(function (direction) {</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">This last part is the sticky navigation and that is the bit we are going to build in this section.</p>
+                    <p class="hyp">The waypoint executes the function when the HTML ID <span class="code">js--fixed-nav</span> passes the top of the browser window. It does this in both directions (I.e. scrolling up or down).</p>
+
+                    <p class="hyp">This time the function has a parameter <span class="code">(direction)</span> that is populated by the Waypoint method. It gets the value <span class="code">down</span> if the user is scrolling down the page when the ID passes the top of the browser window; it gets the value <span class="code">up</span> if the user is scrolling up the page when the ID passes the top of the browser window</p>
+
+                    <p class="hyp">And that is all the Waypoints method does. It executes the function when the ID passes through the top of the browser window and tells us if the user is scrolling <span class="code">up</span> or <span class="code">down</span>.</p>
+
+                    <p class="hyp">The rest is up to us.</p>
+
+                    <p class="hyp">The next bit is a mixture of both JavaScript and jQuery. The first bit is an <span class="code">if else</span> statement and that is JavaScript:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">if (direction == &quot;down&quot;) { }<br>else { }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It says if the value of the variable <span class="code">direction</span> <em>is equivalent</em> to <span class="code">&quot;down&quot;</span> then do what is between the braces (<span class="code">==</span> means equivalent to). If the value of the variable <span class="code">direction</span> is <em>not equivalent</em> to <span class="code">&quot;down&quot;</span> then do what is in the braces following <span class="code">else</span>.</p>
+
+                    <p class="hyp">It is a straight forward if else structure:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">if (condition) {code to execute if condition is true}<br>else {code to execute if condition is false}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Thus, if we are scrolling down the page and the ID <span class="code">js--fixed-nav</span> passes the top of the browser window we execute the following bit of code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">$('nav').addClass('fixed-nav')</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This bit is jQuery and it demonstrates just how powerful and useful jQuery is with websites. This <span class="code">addClass</span> method literally adds another class to a HTML element.</p>
+
+                    <p class="hyp">Our original <span class="code">&lt;nav&gt;</span> element looked like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Start of top navigation bar --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Start of top navigation row --&gt;
+...
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If the <span class="code">addClass</span> bit of code were executed, it would do the same as:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;nav <span class="h-light">class=&quot;fixed-nav&quot;</span>&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Start of top navigation bar --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Start of top navigation row --&gt;
+...
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The syntax is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">$(target).addClass(new-class)</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">When executed, the <span class="code">target</span> element gets the class <span class="code">new-class</span> attached to it.</p>
+
+                    <p class="hyp">So in our case, when the user scrolls down the web page and passes the <span class="code">js--fixed-nav</span> ID, the <span class="code">&lt;nav&gt;</span> element effectively becomes <span class="code">&lt;nav class=&quot;fixed-nav&quot;&gt;</span>.</p>
+
+                    <p class="hyp">Conversely, if the user is scrolling up the web page and passes the point, where the <span class="code">js--fixed-nav</span> ID passes the top of the window, the <span class="code">if else</span> gets executed again, this time direction has the value <span class="code">&quot;up&quot;</span>, so this time the condition is false and the code in the <span class="code">else</span> braces executes and that does this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">$('nav').removeClass('fixed-nav')</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Can you guess what it does?</span></p>
+
+                    <p class="hyp">Well bugger me, it only goes and takes that class off again.</p>
+
+                    <p class="hyp">The whole thing works like a switch, when we scroll down past the point, we add a class to the <span class="code">&lt;nav&gt;</span> element, when we scroll up again past the same point it takes it off again.</p>
+
+                    <p class="hyp">It took me ages to get this right, and it&rsquo;s very simple really&nbsp;&mdash;&nbsp;except when you are starting from scratch and don&rsquo;t know what you are doing. It did make me smile once I&rsquo;d figured it out. That smug self-satisfied, aren&rsquo;t I clever, pat yourself on the back, sort of smile.</p>
+
+                    <p class="hyp"><span class="first-use">Yey Caleb Troughton</span>.</p>
+
+                    <p class="hyp">There is one final thing, the offset:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">offset: '70px'</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This allows us to control exactly when the Waypoints method gets triggered, in this case it is 70&nbsp;pixels before the ID reaches the top of the screen, this means that when the sticky nav appears, it doesn&rsquo;t cover the text we&rsquo;re targeting&nbsp;&mdash;&nbsp;it just makes it look right.</p>
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -326,7 +501,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="17-03-slowscroll.html#js--170300">Prev</a>
+                        <a class="xref" href="18-02-stickynav.html#js--180200">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +511,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="18-01-stickynav.html#js--180100">Next</a>
+                        <a class="xref" href="18-04-stickynav.html#js--180400">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

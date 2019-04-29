@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Creating navigation bars the stick to the top edge of a browser when the user scrolls down the page">
+        <meta name="description" content="Understanding jQuery plugins">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                          18-00-STICKYNAV.HTML
+Title :          WEBSITE TEMPLATE                          18-01-STICKYNAV.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-29 Apr 2019   d-P23.18.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+29 Apr 2019   d-P23.18.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/18-00-stickynav/05-local-js/18-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/18-01-stickynav/05-local-js/18-01-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/18-00-stickynav/01-local-css/18-00-codeline.css">-->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/18-01-stickynav/01-local-css/18-01-codeline.css">-->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Sticky navigation | PracticalSeries: Web Development</title>
+        <title>jQuery plugins | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="17-03-slowscroll.html#js--170300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="17-00-slowscroll.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="19-00-hyphens.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="18-01-stickynav.html#js--180100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="18-02-stickynav.html#js--180200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -230,16 +228,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 18 STICKY NAVIGATION
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 18.1 JQUERY PLUGINS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--180000">           <!-- Start of section         -->
+        <section class="section-std" id="js--180100">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Sticky navigation</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>18.1</h2></div>
+                 <div class="sub-title-text-box"><h2>jQuery plugins</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -253,56 +252,42 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">Sticky navigation</span> is what you get when you sneeze on your steering wheel.</p>
+                    <p class="hyp">In the last section (slow scrolling), we just used plain jQuery to achieve everything that we wanted.</p>
 
-                    <p class="hyp">It&rsquo;s also a reference to navigation bars that stick to some point on the screen and remain fixed there while the rest of the web page scrolls past underneath it.</p>
+                    <p class="hyp">With the sticky navigation we are going to use our first <span class="first-use">jQuery plugin</span>. </p>
 
-                    <p class="hyp">The easiest way is to look at it on the web page, go to <a class="hlink nohyp" href="https://www.practicalseries.com/1001-webdevelopment/99-00-typicals.html">99-00-typicals</a> and it starts with the navigation bar at the top of the screen (<a class="xref js--sc-f18-01" href="#">Figure&nbsp;18.1</a>), this is the basic navigation bar we built in <a class="hlink nohyp" href="11-03-header.html#js--110300">&sect;&nbsp;11.3</a>:</p>
+                    <p class="hyp">jQuery plugins are third party bits of code (they&rsquo;ve been written by somebody else) that expand or add to the methods available to the jQuery library</p>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-01">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-01.png" data-lightbox="fig-set" data-title="Figure 18.1 - Web page with navigation bar at the top">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-01.png" alt="Figure 18.1 - Web page with navigation bar at the top">
-                            </a>
-                            <figcaption>Figure 18.1 &emsp; Web page with navigation bar at the top</figcaption>
-                        </figure>
-                    </div>
+                    <p class="hyp">It is fair to say that most plugins are free to use, some you have to pay for, but most and indeed all the ones I installed within this website are free&nbsp;&mdash;&nbsp;you don&rsquo;t have to pay for them. </p>
+
+                    <p class="hyp">These plugins are available under some form of Open Source licence.</p>
+
+                    <p class="hyp">Generally, these types of licence allow you, me or anyone to use the plugin free of charge and do pretty much what we like with it: modify it, include it in our code, even sell it in some cases. The only thing we have to do is acknowledge the author of the code and include the licence within our own software (I do this on the <a class="hlink nohyp" href="80-00-finally.html#js--800200">acknowledgments</a> page of the website; I also include the licences as comments in the various files that make up the website). </p>
+
+                    <p class="hyp">The thing we can&rsquo;t do with software that uses this form of licencing is attach any blame to the author, the licences all contain phrases such as:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div></div></td>
+                            <td class="table-left">
+                                <p class="hyp sml-caps-ns">The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
+                                </td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-caption"></td>
+                        </tr>
+                    </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">If you slowly scroll down the page, the navigation bar disappears off the top (<a class="xref js--sc-f18-02" href="#">Figure&nbsp;18.2</a>):</p>
+                    <p class="hyp">I.e. by using it you indemnify the author against any liability or losses you may incur when using it. This is fair enough, you got it for nothing.</p>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-02">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-02.png" data-lightbox="fig-set" data-title="Figure 18.2 - Web page with navigation bar scrolled off the top">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-02.png" alt="Figure 18.2 - Web page with navigation bar scrolled off the top">
-                            </a>
-                            <figcaption>Figure 18.2 &emsp; Web page with navigation bar scrolled off the top</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">jQuery itself is made available under the MIT Open Source licence (the same one I use for the downloadable version of this website).</p>
 
-                    <p class="hyp">But then, if you keep scrolling down it comes back again (with an extra button) and sits there at the top of the screen (<a class="xref js--sc-f18-03" href="#">Figure&nbsp;18.3</a>):</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-03">
-                            <a href="01-pages/18-00-stickynav/02-images/fig-18-03.png" data-lightbox="fig-set" data-title="Figure 18.3 - Web page with &ldquo;sticky&rdquo; navigation bar">
-                                <img src="01-pages/18-00-stickynav/02-images/fig-18-03.png" alt="Figure 18.3 - Web page with &ldquo;sticky&rdquo; navigation bar">
-                            </a>
-                            <figcaption>Figure 18.3 &emsp; Web page with &ldquo;sticky&rdquo; navigation bar</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">This last part is the sticky navigation and that is the bit we are going to build in this section.</p>
+                    <p class="hyp">We will use jQuery plugins in much the same way that we use the <span class="code">normalize.css</span> file crated by Messrs Gallagher and Neal&nbsp;&mdash;&nbsp;we download it and incorporate it into our website.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -326,7 +311,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="17-03-slowscroll.html#js--170300">Prev</a>
+                        <a class="xref" href="18-00-stickynav.html#js--000000">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -336,7 +321,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="18-01-stickynav.html#js--180100">Next</a>
+                        <a class="xref" href="18-02-stickynav.html#js--180200">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

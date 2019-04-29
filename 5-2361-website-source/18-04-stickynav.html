@@ -1,0 +1,872 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="The CSS neccessary to make the sticky navigation work">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                          18-04-STICKYNAV.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+29 Apr 2019   d-P23.18.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/18-04-stickynav/05-local-js/18-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->      <link rel="stylesheet" type="text/css" href="01-pages/18-04-stickynav/01-local-css/18-04-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Sticky navigation CSS | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="18-03-stickynav.html#js--180300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="17-00-slowscroll.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="19-00-hyphens.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="19-00-hyphens.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P23.18.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>18</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">18</span>Sticky navigation</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 18 stickynav
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-180000" href="18-00-stickynav.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">18</span><span class="toc-lev1-text">Sticky navigation</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-180100" href="18-01-stickynav.html#js--180100">
+                            <div class="toc-lev"><span class="toc-lev2-num">18.1</span><span class="toc-lev2-text">jQuery plugins</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-180200" href="18-02-stickynav.html#js--180200">
+                            <div class="toc-lev"><span class="toc-lev2-num">18.2</span><span class="toc-lev2-text">The Waypoints plugin</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-180201" href="18-02-stickynav.html#js--180201">
+                            <div class="toc-lev"><span class="toc-lev3-num">18.2.1</span><span class="toc-lev3-text">A note on GitHub</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-180202" href="18-02-stickynav.html#js--180202">
+                            <div class="toc-lev"><span class="toc-lev3-num">18.2.2</span><span class="toc-lev3-text">Loading Waypoints within a web page</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-180300" href="18-03-stickynav.html#js--180300">
+                            <div class="toc-lev"><span class="toc-lev2-num">18.3</span><span class="toc-lev2-text">Using the Waypoints plugin</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-180400" href="18-04-stickynav.html#js--180400">
+                            <div class="toc-lev"><span class="toc-lev2-num">18.4</span><span class="toc-lev2-text">Making the navigation &ldquo;sticky&rdquo;</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 18.4 THE WAYPOINTS PLUGIN
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--180400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>18.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Making the navigation &ldquo;sticky&rdquo;</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">At this point, we&rsquo;ve loaded the Waypoints JavaScript file and written a bit of code ourselves that adds or removes the class <span class="code">fixed-nav</span> to the <span class="code">&lt;nav&gt;</span> navigation element when a particular ID (<span class="code">js--fixed-nav</span>) passes a point that is 70&nbsp;pixels below the top of the browser window.</p>
+
+                    <p class="hyp">I created the navigation bar in <a class="hlink nohyp" href="11-03-header.html#js--110300">&sect;&nbsp;11.3</a>, let&rsquo;s remind ourselves what is in there:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic navigation bar html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c18-04">&nbsp; &nbsp; &lt;nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation bar --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of navigation button row --&gt;
+&lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. section&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 02&nbsp;-&nbsp;Previous Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. chapter&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03&nbsp;-&nbsp;Home wide (hidden when fixed nav activates) --&gt;
+&lt;a class=&quot;nav-wide nav-home&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 04&nbsp;-&nbsp;Next Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next chapter&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;d&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 05&nbsp;-&nbsp;Next section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next section&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;r&lt;/span&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of navigation button row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation row --&gt;
+&nbsp; &nbsp; &lt;/nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation bar --&gt;
+&lt;!-- ========================================================================== [WP END] --&gt;
+
+&nbsp; &nbsp;...
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.4 &emsp; HTML associated with the basic &lt;nav&gt; element</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The CSS behind this is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic navigation bar css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c18-05">.top-nav {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* top-nav is the row holding the */
+&nbsp; &nbsp; max-width: 1276px;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* navigation areas&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  */
+&nbsp; &nbsp; margin: 0 auto;
+&nbsp; &nbsp; width: 100%;
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 1.0);
+&nbsp; &nbsp; color: #CCCCCC;
+&nbsp; &nbsp; font-family: &quot;conc-c4-r&quot;;
+&nbsp; &nbsp; font-feature-settings: &quot;ss02&quot;;
+&nbsp; &nbsp; font-size: 80%;
+}
+
+.nav-wide {&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* nav-wide navigation buttons */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; float: left;
+&nbsp; &nbsp; height: 60px;
+&nbsp; &nbsp; padding-top: 18px;
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; text-align: center;
+&nbsp; &nbsp; border-bottom: 1px solid #CCCCCC;
+&nbsp; &nbsp; border-right: 1px solid #CCCCCC;
+}
+.nav-wide { width: 20%; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* nav-wide is 20% of top-nav */
+
+.nav-wide:last-child { border-right: 0; }&nbsp;  /* remove right border on last area */
+
+.nav-wide:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* navigation link options */
+.nav-wide:visited {
+&nbsp; &nbsp; color: #cccccc;
+&nbsp; &nbsp; transition: background-color 0.2s, color 0.2s;
+}
+.nav-wide:hover,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* navigation hover options */
+.nav-wide:active {
+&nbsp; &nbsp; color: #686868;
+&nbsp; &nbsp; background-color: #f8f8f8;
+}
+
+.top-nav-text { visibility: visible; }
+
+.top-nav-icon {
+&nbsp; &nbsp; font-family: &quot;icon-ps-r&quot;;
+&nbsp; &nbsp; margin-left: 5px;
+&nbsp; &nbsp; margin-right: 5px;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.5 &emsp; CSS associated with the basic &lt;nav&gt; element</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the whole thing looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-11">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-11.png" data-lightbox="fig-set" data-title="Figure 18.11 - The basic navigation bar">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-11.png" alt="Figure 18.11 - The basic navigation bar">
+                            </a>
+                            <figcaption>Figure 18.11 &emsp;The basic navigation bar</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If I scroll down the page it disappears:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-12">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-12.png" data-lightbox="fig-set" data-title="Figure 18.12 - The basic navigation bar (disappearing off the top)">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-12.png" alt="Figure 18.12 - The basic navigation bar (disappearing off the top)">
+                            </a>
+                            <figcaption>Figure 18.12 &emsp;The basic navigation bar (disappearing off the top)</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And that is to be expected, although the Waypoints code is in there, there is no ID to trigger it and no CSS to do anything with the new style.</p>
+
+                    <p class="hyp">So let&rsquo;s address those two point, I&rsquo;m going to add the ID just before the very first section of the web page (in practice, this is just after the <span class="code">&lt;/header&gt;</span> tag):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">fixed nav html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c18-06">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/header&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- End of header --&gt;
+&lt;!-- ===================================================================== [WP END] --&gt;
+
+&lt;!-- ********************************************************************* [WP fixed-nav]
+&nbsp; &nbsp;  FIXED NAVIGATION BAR CHANGEOVER POINT
+&nbsp; &nbsp;  *********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div id=&quot;js--fixed-nav&quot;&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Determines fixed navigation point --&gt;
+&lt;!-- ===================================================================== [WP END] --&gt;
+&nbsp; &nbsp;...
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.6 &emsp; Add the js--fixed-nav ID after the &lt;header&gt;...&lt;/header&gt;</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is just an empty <span class="code">div</span>, it goes in that position on every web page.</p>
+
+                    <p class="hyp">Now let&rsquo;s add some CSS for the new <span class="code">fixed-nav</span> class:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c18-07">.fixed-nav {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* fixed (sticky) navigation */
+&nbsp; &nbsp; position: fixed;
+&nbsp; &nbsp; display: inline;
+&nbsp; &nbsp; top: 0;
+&nbsp; &nbsp; left: 0;
+&nbsp; &nbsp; width: 100%;
+&nbsp; &nbsp; z-index: 9999;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* Ensure nav is at top level */
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.7 &emsp; CSS associated with the basic &lt;nav&gt; element classes</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now reload the page and scroll down, now we get this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-13">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-13.png" data-lightbox="fig-set" data-title="Figure 18.13 - The first attempt at a sticky navigation">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-13.png" alt="Figure 18.13 - The first attempt at a sticky navigation">
+                            </a>
+                            <figcaption>Figure 18.13 &emsp;The first attempt at a sticky navigation</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">As we scroll down, the navigation bar disappears from the top of the screen, as we get closer to the first in-line section, it comes back exactly as it was (all five buttons).</p>
+
+                    <p class="hyp">To understand why, we need to look at the CSS for the new class that was applied to the <span class="code">&lt;nav&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.fixed-nav {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* fixed (sticky) navigation */
+&nbsp; &nbsp; position: fixed;
+&nbsp; &nbsp; display: inline;
+&nbsp; &nbsp; top: 0;
+&nbsp; &nbsp; left: 0;
+&nbsp; &nbsp; width: 100%;
+&nbsp; &nbsp; z-index: 9999;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* Ensure nav is at top level */
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first thing:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; position: fixed;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Is similar to the relative and absolute positioning we looked at ages ago in <a class="hlink nohyp" href="06-07-box.html#js--060700">&sect;&nbsp;6.7</a>. </p>
+
+                    <p class="hyp">This property fixes the object at a given position relative to the browser window, in this case it is positioned at the top left corner, I&rsquo;ve done this by given it the position:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; top: 0;
+&nbsp; &nbsp; left: 0;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This means that the <span class="code">&lt;nav&gt;</span> bar now always stays in the same position on the screen; I&rsquo;ve also set the width to be 100% of the body width.</p>
+
+                    <p class="hyp">The <span class="code">display: inline;</span> just makes sure it behaves as an inline block</p>
+
+                    <p class="hyp">The last thing is new:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; z-index: 9999;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* Ensure nav is at top level */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">A <span class="code">z-index</span> (sounds impressive), the <span class="code">z-index</span> is the stacking order of positioned elements, (it is z as in depth into the screen), it is a bit similar to <span class="first-use">bring forward</span> and <span class="first-use">send back</span> in a drawing package.</p>
+
+                    <p class="hyp">If we had two positioned elements that overlapped with each other, the one with the higher <span class="code">z-index</span> number would be on top.</p>
+
+                    <p class="hyp">Normally, we don&rsquo;t have to worry about <span class="code">z-index</span> numbers, they are applied automatically by the browser in the order in which they occur in the HTML, if it occurs later it has a higher number and is on top of elements that preceded it. It generally just works without us having to think about it.</p>
+
+                    <p class="hyp">The problem with the sticky navigation is that the <span class="code">&lt;nav&gt;</span> element is one of the first thing on the page, so everything that comes after it has a higher <span class="code">z-index</span> and would therefore overwrite the nav bar, it would look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-14">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-14.png" data-lightbox="fig-set" data-title="Figure 18.14 - Sticky navigation without changing the z-index">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-14.png" alt="Figure 18.14 - Sticky navigation without changing the z-index">
+                            </a>
+                            <figcaption>Figure 18.14 &emsp;Sticky navigation without changing the z-index</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Everything is in front of the now sticky navigation bar.</p>
+
+                    <p class="hyp">That&rsquo;s not what we want so I set the <span class="code">z-index</span> for the sticky navigation (in the <span class="code">fixed-nav</span> class) to <span class="code">9999</span> (a big number), it effectively brings it to the front.</p>
+
+                    <p class="hyp">That makes it look like this</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-15">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-15.png" data-lightbox="fig-set" data-title="Figure 18.15 - Sticky navigation with high z-index">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-15.png" alt="Figure 18.15 - Sticky navigation with high z-index">
+                            </a>
+                            <figcaption>Figure 18.15 &emsp;Sticky navigation with high z-index</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Getting there.</p>
+
+                    <p class="hyp">The next thing is that central (home) button, that takes us back to the landing page for the website (the <span class="code">index.html</span> page) and that is fine if we are at the top of the page, everything else is available through the TOC.</p>
+
+                    <p class="hyp">Now, when we scroll down the page and the sticky navigation bar appears, I want to have an extra button, I want a top button that takes us back to the top of the page. I want the sticky navigation bar to look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-16">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-16.png" data-lightbox="fig-set" data-title="Figure 18.16 - Sticky navigation with six buttons">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-16.png" alt="Figure 18.16 - Sticky navigation with six buttons">
+                            </a>
+                            <figcaption>Figure 18.16 &emsp;Sticky navigation with six buttons</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Instead of:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f18-17">
+                            <a href="01-pages/18-04-stickynav/02-images/fig-18-17.png" data-lightbox="fig-set" data-title="Figure 18.17 - Basic navigation with five buttons">
+                                <img src="01-pages/18-04-stickynav/02-images/fig-18-17.png" alt="Figure 18.17 - Basic navigation with five buttons">
+                            </a>
+                            <figcaption>Figure 18.17 &emsp;Basic navigation with five buttons</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I do this by having two smaller buttons and replacing the central home button with two buttons half the width.</p>
+
+                    <p class="hyp">To do this, I need to modify the HTML for the basic navigation bar:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic navigation bar html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c18-08">&nbsp; &nbsp; &lt;nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation bar --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of navigation button row --&gt;
+&lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. section&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 02&nbsp;-&nbsp;Previous Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. chapter&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03&nbsp;-&nbsp;Home wide (hidden when fixed nav activates) --&gt;
+&lt;a class=&quot;nav-wide <span class="h-light">nav-home</span>&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03a&nbsp;-&nbsp;Top narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow js--sc-000000&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Top&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03b&nbsp;-&nbsp;Home narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 04&nbsp;-&nbsp;Next Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next chapter&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;d&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 05&nbsp;-&nbsp;Next section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next section&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;r&lt;/span&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of navigation button row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation row --&gt;
+&nbsp; &nbsp; &lt;/nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation bar --&gt;
+&lt;!-- ========================================================================== [WP END] --&gt;
+
+&nbsp; &nbsp;...
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.8 &emsp; HTML associated with the basic &lt;nav&gt; element</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">So what have I done?</span></p>
+
+                    <p class="hyp">The first thing is I&rsquo;ve added another class to button 3 (the wide home button):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;a class=&quot;nav-wide <span class="h-light">nav-home</span>&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The new class is called <span class="code">nav-home</span> (In bold with a red underline).</p>
+
+                    <p class="hyp">I&rsquo;ve also added two new buttons (button 3a which will be the narrow top button and button 3b which will be the narrow home button):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html wrap">&lt;!-- Button 03a&nbsp;-&nbsp;Top narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow js--sc-000000&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Top&lt;/span&gt;&lt;/a&gt;
+
+&lt;!-- Button 03b&nbsp;-&nbsp;Home narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The original (wide) buttons were all links with the class <span class="code">nav-wide</span>, the new buttons work in exactly the same way, but have the class <span class="code">nav-narrow</span>.</p>
+
+                    <p class="hyp">The <span class="code">nav-narrow</span> buttons have all the same properties as the <span class="code">nav-wide</span> button, with the exception of width (if you remember, in <a class="hlink nohyp" href="11-03-header.html#js--110302">&sect;&nbsp;11.3.2</a>, I set the <span class="code">nav-wide</span> button width in a separate declaration), so I&rsquo;ve just combined the common properties for <span class="code">nav-wide</span> and <span class="code">nav-narrow</span> by adding <span class="code">nav-narrow</span> to the selectors.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">navigation bar css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c18-09">.nav-wide,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* nav-wide/nav-narrow are the */
+.nav-narrow {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* navigation buttons&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; */
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; height: 60px;
+&nbsp; &nbsp; padding-top: 18px;
+&nbsp; &nbsp; float: left;
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; text-align: center;
+&nbsp; &nbsp; border-bottom: 1px solid #CCCCCC;
+&nbsp; &nbsp; border-right: 1px solid #CCCCCC;
+}
+.nav-wide { width: 20%; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* nav-wide is 20% of top-nav */
+
+.nav-narrow { width: 10%; display: none; }&nbsp; /* nav-narrow is 10% of top-nav */
+
+.nav-wide:link,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* navigation link options */
+.nav-wide:visited,
+.nav-narrow:link,
+.nav-narrow:visited {
+&nbsp; &nbsp; color: #cccccc;
+&nbsp; &nbsp; transition: background-color 0.2s, color 0.2s;
+}
+.nav-wide:hover,&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* navigation hover options */
+.nav-wide:active,
+.nav-narrow:hover,
+.nav-narrow:active {
+&nbsp; &nbsp; color: #686868;
+&nbsp; &nbsp; background-color: #f8f8f8;
+}
+
+.nav-home { display: inline-block;; }&nbsp; &nbsp; &nbsp; &nbsp; /* make the wide home button visible */
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.9 &emsp; Navigation bar CSS modified for narrow buttons</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The new class <span class="code">nav-narrow</span> has exactly the same properties as <span class="code">nav-wide</span>, the only difference being the <span class="code">nav-narrow</span> width is set to 10%, half the width of <span class="code">nav-wide</span>:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.nav-narrow { width: 10%; display: none; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve also stopped the <span class="code">nav-narrow</span> button from being displayed by setting <span class="code">display: none</span>, under normal circumstances, I don&rsquo;t want to display the narrow button (not until the sticky navigation activates).</p>
+
+                    <p class="hyp">All the anchor properties: <span class="code">link</span>, <span class="code">active</span>, <span class="code">hover</span> and <span class="code">visited</span> are the same for the <span class="code">nav-narrow</span> and <span class="code">nav-wide</span> buttons (I&rsquo;ve just make them common to both classes).</p>
+
+                    <p class="hyp">Finally, the <span class="code">nav-home</span> class that applies uniquely to the wide <span class="menu">home</span> button is set to make it display the button as an inline block <span class="first-use">(yes, I know it already was an inline block, just bear with me for the last bit)</span>.</p>
+
+                    <p class="hyp"><span class="first-use">The last bit.</span></p>
+
+                    <p class="hyp">So, I&rsquo;ve now added two invisible buttons (top and home) both with the class <span class="code">nav-narrow</span> and I&rsquo;ve made sure an inline block button is, well, an inline block button.</p>
+
+                    <p class="hyp">The next thing is to add the very last bit of CSS. This is again is to do with the <span class="code">fixed-nav</span> class that gets applied by Waypoints; <span class="first-use">you can probably guess what&rsquo;s coming:</span></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">style.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c18-10">.fixed-nav .nav-home { display: none; }&nbsp; &nbsp;  /* hide large home button */
+.fixed-nav .nav-narrow { display: inline-block; }&nbsp; /* display narrow buttons */
+.fixed-nav .nav-wide:first-child { border-left: 1px solid #ededed; }
+.fixed-nav .nav-wide:last-child { border-right: 1px solid #ededed; }
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 18.10 &emsp; </div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Ok, the first thing is we turn off the wide home button by setting it not to display (this is why I turned it on again in the <span class="code">nav-home</span> class):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">fixed-nav .nav-home { display: none; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And we display the two narrow buttons by turning them into inline blocks:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">fixed-nav .nav-narrow { display: inline-block; }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You might think that that is it, and it very nearly is; the last two lines apply borders to the first and last buttons on the sticky navigation, these borders look exactly like the borders applied by the <span class="code">body</span> element.</p>
+
+                    <p class="hyp">I noticed, that when the sticky navigation appeared, the body border lines disappeared, I don&rsquo;t know exactly why, but I think it is because of the <span class="code">z-index</span> placing the sticky nav above everything else, anyway they disappeared, I didn&rsquo;t like it so I added them back in.</p>
+
+                    <p class="hyp">That is it for the sticky navigation.</p>
+
+                    <p class="hyp">It will just work on every web page; you don&rsquo;t need to do anything with it at all. The only thing to do with the navigation is change the <span class="code">href</span> in the <span class="code">&lt;a&gt;</span> elements to point at the correct web pages.</p>
+
+                    <p class="hyp">The most important lesson here is to understand the usefulness of using jQuery to change the classes applied to a particular element.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="18-03-stickynav.html#js--180300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="19-00-hyphens.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
