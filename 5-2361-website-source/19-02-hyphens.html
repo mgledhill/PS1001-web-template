@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="How to use Hyphenator.js to dynamically hyphenate a web page when it renders in a browser">
+        <meta name="description" content="How to load and use Hyphenator.js on a web page">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            19-00-HYPHENS.HTML
+Title :          WEBSITE TEMPLATE                            19-01-HYPHENS.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,9 +46,7 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-30 Apr 2019   d-P24.19.01  M. Gledhill    Page build
-
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+30 Apr 2019   d-P24.19.01  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -74,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/19-00-hyphens/05-local-js/19-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/19-02-hyphens/05-local-js/19-02-scroll.js"></script>
 
 
 
@@ -89,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/19-00-hyphens/01-local-css/19-00-codeline.css">
+        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/19-02-hyphens/01-local-css/19-02-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -109,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Hyphenation and Hyphenator | PracticalSeries: Web Development</title>
+        <title>Loading and using Hyphenator | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -129,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="18-04-stickynav.html#js--180400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="19-01-hyphens.html#js--190100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="18-00-stickynav.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -141,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="19-01-hyphens.html#js--190100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -223,16 +221,17 @@ Date          Issue        Author         Reason for Modification
 
 
 
-<!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - 19 HYPHENATION AND HYPHENATOR
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 19.1 GETTING HYPHENATOR
      ***********************************************************************-->
 
-        <section class="section-std" id="js--190000">           <!-- Start of section         -->
+        <section class="section-std" id="js--190200">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Hyphenation and Hyphenator</h6></div>
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>19.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Loading and using Hyphenator</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -246,72 +245,99 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"><span class="all-caps">You will be pleased</span> to know CSS&nbsp;3 supports hyphenation <span class="first-use">(yey):</span></p>
+                    <p class="hyp">The Hyphenator package is a single <span class="code">hyphenator.js</span> file that we run on each web page and that is it. It looks after itself.</p>
+
+                    <p class="hyp">We can tell Hyphenator what to do: if we give an element the class <span class="code">hyp</span>, Hyphenator will hyphenate it. If we give an element the class <span class="code">nohyp</span> (or just don&rsquo;t give it the class <span class="code">hyp</span>), Hyphenator will do nothing, it won&rsquo;t hyphenate the text. </p>
+
+                    <p class="hyp">If you have downloaded the website template, you will already have a copy of the <span class="code">hyphenator.js</span> file installed in the correct folder (you don&rsquo;t need to do what follows). </p>
+
+                    <p class="hyp">Hyphenator has a configuration web page that allows us to pick certain options before downloading the file. We need to do this so go to the following website:</p>
+
+                    <p class="hyp" style="text-align: center"><a class="hlink nohyp" href="http://mnater.github.io/Hyphenator/mergeAndPack.html">http://mnater.github.io/Hyphenator/mergeAndPack.html</a></p>
+
+                    <p class="hyp">It takes you to the Hyphenator merge and pack web page. This page allows us to set various options.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 19.1.1 CREATING A FILE TO HOLD THE HYPHENATOR CODE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--190101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>19.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Creating a file to hold the Hyphenator code</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Now that we have created the <span class="code">hyphenator.js</span> file, the next thing to do is load it into each web page. This is another <span class="code">&lt;script&gt;</span> element in the <span class="code">&lt;head&gt;</span> section:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="code-extract">
-                        <div class="code-header">css</div>
+                        <div class="code-header">Loading Hyphenator</div>
                         <div class="code-area">
 
-                            <pre class="prettyprint lang-css wrap" id="js--c19-00">&nbsp; &nbsp; -webkit-hyphens: auto;
-&nbsp; &nbsp; -moz-hyphens: auto;
-&nbsp; &nbsp; -ms-hyphens: auto;
-&nbsp; &nbsp; hyphens: auto;&nbsp;
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c19-01">&lt;html lang=&quot;en&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&lt;!-- Declare language --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&lt;!-- Start of head section --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Use unicode char set--&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD SCRIPT AREA
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/jquery.waypoints.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/hyphenator.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;11-resources/05-js/script.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;01-pages/99-00-typicals/05-local-js/99-00-scroll.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/03-fonts/ps-fonts.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/normalise.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot; stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/grid.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/style.css&quot;&gt;
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Website template typicals | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;
 </pre>
 
                         </div>
-                        <div class="code-caption">CSS automatic hyphenation</div>
+                        <div class="code-caption">Code 19.1 &emsp; Loading Hyphenator.js</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">And that&rsquo;s great&nbsp;&mdash;&nbsp;tell it what language you&rsquo;re using, load the hyphenation resource and off you go&nbsp;&mdash;&nbsp;except it isn&rsquo;t. CSS supports hyphenation but not all browsers do (boo), most frustratingly Chrome doesn&rsquo;t. </p>
+                    <p class="hyp">This loads Hyphenator, and Hyphenator will now hyphenate anything on the page that has the class <span class="code">hyp</span>.</p>
 
-                    <p class="hyp">Firefox, Edge and Internet Explorer all support it.</p>
+                    <p class="hyp">The <span class="code">hyp</span> class is not defined in any CSS file; it is purely a trigger class for the <span class="code">hyphenator.js</span> code.</p>
 
-                    <p class="hyp">Chrome and Opera don&rsquo;t support it.</p>
-
-                    <p class="hyp">I was surprised, Internet Explorer can do it but Chrome can&rsquo;t (Chrome can do it with the Android and Mac versions, but not with the Windows version). It&rsquo;s disappointing, but there we are.</p>
-
-                    <p class="hyp">Now since I use Chrome as my browser (along with 70% of the rest of the world), this is a bit of a problem.</p>
-
-                    <p class="hyp">So no Chrome, <span class="first-use">what to do?&nbsp;&mdash;&nbsp;What to do?</span></p>
-
-                    <p class="hyp">Well there are algorithms that you can run that will insert soft hyphens<sup>&dagger;1</sup>  into the text before it is placed on the website and all browsers (pretty much) support these. Alternatively I even considered adding soft hyphens manually to the text.</p>
-
-                    <p class="hyp">For example, if the website contains the word &ldquo;legibility&rdquo; with soft hyphens, then the word will actually be leg-i-bil-ity (<span class="code">leg&amp;shy;i&amp;shy;bil&amp;shy;ity</span> in HTML); that is to say it will have three soft hyphens in it.</p>
-
-                    <p class="hyp">This is a particular problem with text editors, the soft hyphens show up in text editors<sup>&dagger;2</sup> and just searching for &ldquo;legibility&rdquo; won&rsquo;t work, you would have to search for the word with the soft hyphens in it and you would have to know where the hyphens were.</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - MULTIPLE FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn03">
-                        <tr>
-                            <th class="table-cent fnote-top" style="width: 10%"></th>
-                            <th class="table-left fnote-top" style="width: 10%"></th>
-                            <th class="table-left fnote-top" style="width: 20%"></th>
-                            <th class="table-left" style="width: 60%"></th>
-                        </tr>
-                        <tr>
-<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
-<!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">Soft hyphens are Unicode character U+00AD (&amp;shy;), this is an invisible character that tells a browser where it is permissible to break a word across a line boundary</td>
-                        </tr>
-                        <tr>
-<!-- Footnote number -->    <td class="table-left"><em>&dagger;2</em></td>
-<!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">Word processors and even browsers are clever enough to ignore soft hyphens when searching, text editors, however, deal with the text as they find it and don&rsquo;t (generally) ignore them.</td>
-                        </tr>
-                    </table>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">So hyphenating my text beforehand wasn&rsquo;t going to work, I want people to be able to copy and search the HTML if they want to; it makes it easier to find things and debug the website.</p>
-
-                    <p class="hyp">What I really want is for the browser to hyphenate my website on the fly (come on Chrome, catch up) and then I wouldn&rsquo;t have to worry about it. But I do worry, and here is my solution; I&rsquo;m using a third-party JavaScript hyphenator (<a class="hlink nohyp" href="https://github.com/mnater/Hyphenator">hyphenator.js</a>). This works well and hyphenates the page automatically as the browser renders the page, it has the advantage of not including the soft hyphens when copying the text, and this means that searching the text works as expected.</p>
-
-                    <p class="hyp">This website itself has been setup to use the CSS3 hyphenation; it needs two things, firstly it needs a <span class="code">lang</span> attribute in the HTML and all my web pages have this at the start in the <span class="code">html</span> element:</p>
+                    <p class="hyp">To enable hyphenation on any paragraph in the body text just add the class <span class="code">hyp</span> to it in the HTML, here is an example form the website:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
@@ -319,91 +345,39 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-html">&lt;html lang=&quot;en&quot;&gt;&nbsp; </pre>
+                            <pre class="prettyprint lang-html wrap">&lt;p class=&quot;hyp&quot;&gt;&lt;em&gt;This is an additional section row.&lt;/em&gt; Additional section rows can follow any other type of section and are generally used to align sidebars with a particular paragraph (if the paragraph is placed in an additional row, the sidebar for that additional row will align with the first line of the paragraph within it).&lt;/p&gt;
+
+
+&lt;p class=&quot;hyp&quot;&gt;additional section rows are constructed with &lt;span class=&quot;code&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt; elements (rather than &lt;span class=&quot;code&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt; elements and consequently do not require a heading).&lt;/p&gt;
+
+
+&lt;p class=&quot;hyp&quot;&gt;Additional rows are constructed with &lt;span class=&quot;code&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt; elements (rather than &lt;span class=&quot;code&quot;&gt;&amp;lt;section&amp;gt;&lt;/span&gt; elements) and consequently do not require a heading. Additional rows support both left and right side bars.&lt;/p&gt;
+
+
+&lt;p class=&quot;hyp&quot;&gt;As many additional section rows can be added as are needed. &lt;/p&gt;
+
+
+&lt;p class=&quot;hyp&quot;&gt;Generally, additional rows are not given an ID. If necessary (for navigation purposes), additional rows can be given an ID in the form used for inline sections: in the form &lt;span class=&quot;code&quot;&gt;js--XXYYZZL&lt;/span&gt; (where &lt;span class=&quot;code&quot;&gt;XX&lt;/span&gt; is the chapter number, &lt;span class=&quot;code&quot;&gt;YY&lt;/span&gt; the section number and &lt;span class=&quot;code&quot;&gt;ZZ&lt;/span&gt; the subsection number. L represents the letters a, b, c, d…&amp;amp;c., these are used in sequence).&lt;/p&gt;</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Secondly, we need some CSS to turn it on and I do this in the <span class="code">sytle.css</span> file for every paragraph (it is the bit in green):</p>
+                    <p class="hyp">Each paragraph starts with <span class="code">&lt;p class=&quot;hyp&quot;&gt;</span> and this turns on hyphenation for that paragraph.</p>
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
+                    <p class="hyp">If you miss out the class, the paragraph will not be hyphenated. Similarly, if you specifically want to label the paragraph as one that should not be hyphenated, use the class <span class="code">nohyp</span>.</p>
 
-                            <pre class="prettyprint linenums lang-css" id="js--c19-00a">.section-std p {&nbsp; &nbsp;
-&nbsp; &nbsp; margin-bottom: 1.2rem;&nbsp;
-&nbsp; &nbsp; line-height: 135%;
-&nbsp; &nbsp; color: #404030;
-&nbsp; &nbsp; hyphens: auto;
-}
-</pre>
+                    <p class="hyp">This distinction is only cosmetically important, not using either may just indicate that the paragraph should be hyphenated, but you have just forgotten to do so.</p>
 
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">You can see what it does in the following images, the first is of the lead-in section of the <span class="code">99-00-typicals.html</span> page and this has the hyphens code setup as above. The screen shot was taken using Firefox.</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f19-01">
-                            <a href="01-pages/19-00-hyphens/02-images/fig-19-01.png" data-lightbox="fig-set" data-title="Figure 19.1 - CSS3 hyphenation in Firefox">
-                                <img src="01-pages/19-00-hyphens/02-images/fig-19-01.png" alt="Figure 19.1 - CSS3 hyphenation in Firefox">
-                            </a>
-                            <figcaption>Figure 19.1 &emsp; CSS3 hyphenation in Firefox</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">You can see that the page has been rendered and hyphenated (highlighted in orange).</p>
-
-                    <p class="hyp">If I take out the line of code in green, I get this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f19-02">
-                            <a href="01-pages/19-00-hyphens/02-images/fig-19-02.png" data-lightbox="fig-set" data-title="Figure 19.2 - CSS3 hyphenation removed from code">
-                                <img src="01-pages/19-00-hyphens/02-images/fig-19-02.png" alt="Figure 19.2 - CSS3 hyphenation removed from code">
-                            </a>
-                            <figcaption>Figure 19.2 &emsp; CSS3 hyphenation removed from code</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <p class="hyp">The hyphens have gone. So the CSS3 hyphens code works</p>
-
-                    <p class="hyp">If I do the same experiment with Chrome, it doesn&rsquo;t work, it just looks like the second image.</p>
-
-                    <p class="hyp">The website should be hyphenated, it looks better, and I want it to be hyphenated.</p>
-
-                    <p class="hyp">This is where <a class="hlink nohyp" href="https://github.com/mnater/Hyphenator">hyphenator.js</a> comes in. It is easy to use, it works well and hyphenates the page automatically as the browser renders the page.</p>
-
-                    <p class="hyp">There is a bit of configuration to do before you download the file (read on).</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NOTE - HANGING INDENT
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="note">                           <!-- Start of note            -->
-                        <li>Hyphenator has been superseded by a new algorithm called Hyphenopoly, it is by the same person. I found the new version to be quite difficult to use and so I&rsquo;m sticking with Hyphenator</li>
-                    </ul>                                       <!-- End of note              -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">Hyphenator has been written by Mr Mathias Nater, he also is on <a class="hlink nohyp" href="https://github.com/mnater">GitHub</a>. Hyphenator is available under the MIT licence.</p>
+                    <p class="hyp">Using <span class="code">nohyp</span> means you have thought about it, and decided that hyphenation is not required.</p>
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -420,7 +394,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="18-04-stickynav.html#js--180400">Prev</a>
+                        <a class="xref" href="19-01-hyphens.html#js--190100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -430,7 +404,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="19-01-hyphens.html#js--190100">Next</a>
+                        <a class="xref" href="20-00-lightbox.html#js--000000">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
