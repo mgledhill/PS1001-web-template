@@ -1,0 +1,930 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Getting and installing Lightbox">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           20-00-LIGHTBOX.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+30 Apr 2019   d-P24.19.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/20-01-lightbox/05-local-js/20-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/20-01-lightbox/01-local-css/20-01-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Getting and installing Lightbox | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="19-00-hyphens.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="21-00-codefrag.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="20-02-lightbox.html#js--200200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P24.19.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>20</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">20</span>Lightbox</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 20 LIGHTBOX
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-200000" href="20-00-lightbox.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">20</span><span class="toc-lev1-text">Lightbox</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-200100" href="20-01-lightbox.html#js--200100">
+                            <div class="toc-lev"><span class="toc-lev2-num">20.1</span><span class="toc-lev2-text">Getting and installing Lightbox</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200101" href="20-01-lightbox.html#js--200101">
+                            <div class="toc-lev"><span class="toc-lev3-num">20.1.1</span><span class="toc-lev3-text">Modifying the images</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200102" href="20-01-lightbox.html#js--200102">
+                            <div class="toc-lev"><span class="toc-lev3-num">20.1.2</span><span class="toc-lev3-text">Modifying the CSS</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200103" href="20-01-lightbox.html#js--200103">
+                        <div class="toc-lev"><span class="toc-lev3-num">20.1.3</span><span class="toc-lev3-text">Modifications to the <span class="code">.js</span> file</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-200200" href="20-02-lightbox.html#js--200200">
+                            <div class="toc-lev"><span class="toc-lev2-num">20.2</span><span class="toc-lev2-text">Loading the Lightbox files</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-200300" href="20-03-lightbox.html#js--200300">
+                            <div class="toc-lev"><span class="toc-lev2-num">20.3</span><span class="toc-lev2-text">Using Lightbox</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-200400" href="20-04-lightbox.html#js--200400">
+                            <div class="toc-lev"><span class="toc-lev2-num">20.4</span><span class="toc-lev2-text">Example code for common arrangements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200401" href="20-04-lightbox.html#js--200401">
+                        <div class="toc-lev"><span class="toc-lev3-num">20.4.1</span><span class="toc-lev3-text">Single full width image</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200402" href="20-04-lightbox.html#js--200402">
+                        <div class="toc-lev"><span class="toc-lev3-num">20.4.2</span><span class="toc-lev3-text">Two half width images</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200403" href="20-04-lightbox.html#js--200403">
+                        <div class="toc-lev"><span class="toc-lev3-num">20.4.3</span><span class="toc-lev3-text">Three one-third width images</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-200404" href="20-04-lightbox.html#js--200404">
+                        <div class="toc-lev"><span class="toc-lev3-num">20.4.4</span><span class="toc-lev3-text">Two asymmetric images</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 20.1 GETTING AND INSTALLING LIGHTBOX
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--200100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>20.1</h2></div>
+                 <div class="sub-title-text-box"><h2>Getting and installing Lightbox</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I&rsquo;ll go through the steps for downloading and modifying the original files, I have to do some cosmetic modifications to make it find all the right directories, I also have to modify some of the files to make it work properly with my website.</p>
+
+                    <p class="hyp">I&rsquo;m doing this for the sake of completeness, the easiest thing for you to do is just use the downloaded file and jump to <a class="hlink nohyp utx" href="20-02-lightbox.html#js--200200">&sect;&nbsp;20.2</a> (how to use it).</p>
+
+                    <p class="hyp">Here&rsquo;s the website:</p>
+
+                    <p class="hyp" style="text-align: center"><a class="hlink nohyp" href="https://lokeshdhakar.com/projects/lightbox2/">https://lokeshdhakar.com/projects/lightbox2/</a></p>
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-03">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-03.png" data-lightbox="fig-set" data-title="Figure 20.3 - Lightbox website">
+                                <img src="01-pages/20-01-lightbox/02-images/fig-20-03.png" alt="Figure 20.3 - Lightbox website">
+                            </a>
+                            <figcaption>Figure 20.3 &emsp; Lightbox website</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">First thing, download the software (hit <span class="menu">download</span> highlighted).</p>
+
+                    <p class="hyp">This downloads a file called <span class="code">lightbox2-master.zip</span>. Copy it somewhere and extract it.</p>
+
+                    <p class="hyp">Everything we need is in the <span class="code">src</span> subdirectory:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-04">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-04.png" data-lightbox="fig-set" data-title="Figure 20.4 - Lightbox downloaded files">
+                                <img src="01-pages/20-01-lightbox/02-images/fig-20-04.png" alt="Figure 20.4 - Lightbox downloaded files">
+                            </a>
+                            <figcaption>Figure 20.4 &emsp; Lightbox downloaded files</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are several files that we need:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t20-01" style="width: 100%; font-size: 0.65rem">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 14.6%">src<br>directory</th>
+                            <th class="table-cent" style="width: 16.8%">src<br>filename</th>
+                            <th class="table-cent" style="width: 50.0%">target directory</th>
+                            <th class="table-cent" style="width: 18.6%">target <br>filename</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">src/css</span></td>
+                            <td class="table-cent"><span class="code">lightbox.css</span></td>
+                            <td class="table-cent"><span class="code">21-global/01-css</span></td>
+                            <td class="table-cent"><span class="code">lightbox.css</span></td>
+                        </tr>
+
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td rowspan="4" class="table-cent"><span class="code">src/images</span></td>
+                            <td class="table-cent"><span class="code">close.png</span></td>
+                            <td rowspan="4" class="table-cent"><span class="code">21-global/01-css/01-css-images/lightbox</span></td>
+                            <td class="table-cent"><span class="code">lb-close.png</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">loading.gif</span></td>
+                            <td class="table-cent"><span class="code">lb-loading.gif</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">next.png</span></td>
+                            <td class="table-cent"><span class="code">lb-next.png</span></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">prev.png</span></td>
+                            <td class="table-cent"><span class="code">lb-prev.png</span></td>
+                        </tr>
+
+<!-- Data row -->       <tr>
+                            <td colspan="5" class="leading"><div></div></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">src/js</span></td>
+                            <td class="table-cent"><span class="code">lightbox.js</span></td>
+                            <td class="table-cent"><span class="code">21-global/05-js</span></td>
+                            <td class="table-cent"><span class="code">lightbox.js</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 20.1 &emsp; Lightbox files</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The target directories show where I want the files to be copied to in the website folder structure, note also that I&rsquo;ve renamed the image files, they&rsquo;ve all got <span class="code">lb-</span> in front of them.</p>
+
+                    <p class="hyp">Copy the files to the correct directories and rename them, you will have to create the 01-css-images/lightbox directories, the final thing should look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-05">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-05.png" data-lightbox="fig-set" data-title="Figure 20.5 - Lightbox files in the web template folder structure">
+                                <img style="max-width: 400px" src="01-pages/20-01-lightbox/02-images/fig-20-05.png" alt="Figure 20.5 - Lightbox files in the web template folder structure">
+                            </a>
+                            <figcaption>Figure 20.5 &emsp; Lightbox files in the web template folder structure</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 20.1.1 MODIFYING THE IMAGES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--200101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>20.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Modifying the images</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Easy bit first, the images. The images from the download look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-06">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-06.png" data-lightbox="fig-set" data-title="Figure 20.6 - Lightbox original images">
+                                <img src="01-pages/20-01-lightbox/02-images/fig-20-06.png" alt="Figure 20.6 - Lightbox original images">
+                            </a>
+                            <figcaption>Figure 20.6 &emsp; Lightbox original images</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The ones I use are:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-07">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-07.png" data-lightbox="fig-set" data-title="Figure 20.7 - Lightbox modified images">
+                                <img src="01-pages/20-01-lightbox/02-images/fig-20-07.png" alt="Figure 20.7 - Lightbox modified images">
+                            </a>
+                            <figcaption>Figure 20.7 &emsp; Lightbox modified images</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve change the next and previous images. These images appear on top of the image in the lightbox to navigate through the images, I&rsquo;ve highlighted two of them below:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-08">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-08.png" data-lightbox="fig-set" data-title="Figure 20.8 - Lightbox images as they appear in a gallery">
+                                <img style="max-width: 418px" src="01-pages/20-01-lightbox/02-images/fig-20-08.png" alt="Figure 20.8 - Lightbox images as they appear in a gallery">
+                            </a>
+                            <figcaption>Figure 20.8 &emsp; Lightbox images as they appear in a gallery</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It doesn&rsquo;t matter which you use, obviously I prefer the new ones (I wouldn&rsquo;t have changed them otherwise), I changed them to make them more noticeable.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 20.1.2 MODIFYING THE IMAGES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--200102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>20.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Modifying the CSS</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The CSS file needs three types of modifications:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">Change the path and filename of the image files</p></li>
+
+                        <li><p class="hyp">Change the fonts used to display the image captions (bottom of <a class="xref js--sc-f20-08" href="#">Figure&nbsp;20.8</a>)</p></li>
+
+                        <li><p class="hyp">Change aspects of the classes to make them work with the relative positioning that is applied to the web page as a whole</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve included the whole CSS file below and indicated where I&rsquo;ve changed things (in green):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">lightbox.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c20-01">html.lb-disable-scrolling {
+&nbsp; overflow: hidden;
+&nbsp; /* Position fixed required for iOS. Putting overflow: hidden; on body not enough. */
+&nbsp; position: fixed;
+&nbsp; height: 100vh;
+&nbsp; width: 100vw;
+}
+
+.lightboxOverlay {
+&nbsp; position: fixed;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* MG CHANGED&nbsp;-&nbsp;WAS ABSOLUTE */
+&nbsp; top: 0;
+&nbsp; left: 0;
+&nbsp; z-index: 9999;
+&nbsp; background-color: black;
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+&nbsp; opacity: 0.8;
+&nbsp; display: none;
+}
+
+.lightbox {
+&nbsp; position: fixed;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* MG CHANGED&nbsp;-&nbsp;WAS ABSOLUTE */
+&nbsp; left: 0;
+&nbsp; top: 25px !important;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;MAKES IMAGE VISIBLE */
+&nbsp; width: 100%;
+&nbsp; z-index: 10000;
+&nbsp; text-align: center;
+&nbsp; line-height: 0;
+&nbsp; font-weight: normal;
+}
+
+.lightbox .lb-image {
+&nbsp; display: block;
+&nbsp; height: auto;
+&nbsp; max-width: inherit;
+&nbsp; max-height: none;
+&nbsp; border-radius: 3px;
+
+&nbsp; /* Image border */
+&nbsp; border: 4px solid white;
+}
+
+.lightbox a img {
+&nbsp; border: none;
+}
+.lb-outerContainer {
+&nbsp; position: relative;
+&nbsp; *zoom: 1;
+&nbsp; width: 250px;
+&nbsp; height: 250px;
+&nbsp; margin: 0 auto;
+&nbsp; border-radius: 4px;
+
+&nbsp; /* Background color behind image.
+&nbsp; &nbsp;  This is visible during transitions. */
+&nbsp; background-color: white;
+}
+
+.lb-outerContainer:after {
+&nbsp; content: &quot;&quot;;
+&nbsp; display: table;
+&nbsp; clear: both;
+}
+
+.lb-loader {
+&nbsp; position: absolute;
+&nbsp; top: 43%;
+&nbsp; left: 0;
+&nbsp; height: 25%;
+&nbsp; width: 100%;
+&nbsp; text-align: center;
+&nbsp; line-height: 0;
+}
+
+.lb-cancel {
+&nbsp; display: block;
+&nbsp; width: 32px;
+&nbsp; height: 32px;
+&nbsp; margin: 0 auto;
+&nbsp; background: url(01-css-images/lightbox/lb-loading.gif) no-repeat;&nbsp;
+                                /* MG CHANGED&nbsp;-&nbsp;PATH AND NAME */
+}
+
+.lb-nav {
+&nbsp; position: absolute;
+&nbsp; top: 0;
+&nbsp; left: 0;
+&nbsp; height: 100%;
+&nbsp; width: 100%;
+&nbsp; z-index: 10;
+}
+
+.lb-container &gt; .nav {
+&nbsp; left: 0;
+}
+
+.lb-nav a {
+&nbsp; outline: none;
+&nbsp; background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+&nbsp; height: 100%;
+&nbsp; cursor: pointer;
+&nbsp; display: block;
+}
+
+.lb-nav a.lb-prev {
+&nbsp; width: 34%;
+&nbsp; left: 0;
+&nbsp; float: left;
+&nbsp; background: url(01-css-images/lightbox/lb-prev.png) left 48% no-repeat;&nbsp;  <br>                                /* MG CHANGED&nbsp;-&nbsp;PATH AND NAME */
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+&nbsp; opacity: 0;
+&nbsp; -webkit-transition: opacity 0.6s;
+&nbsp; -moz-transition: opacity 0.6s;
+&nbsp; -o-transition: opacity 0.6s;
+&nbsp; transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+&nbsp; opacity: 1;
+}
+
+.lb-nav a.lb-next {
+&nbsp; width: 64%;
+&nbsp; right: 0;
+&nbsp; float: right;
+&nbsp; background: url(01-css-images/lightbox/lb-next.png) right 48% no-repeat;&nbsp;  <br>                                /* MG CHANGED&nbsp;-&nbsp;PATH AND NAME */
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+&nbsp; opacity: 0;
+&nbsp; -webkit-transition: opacity 0.6s;
+&nbsp; -moz-transition: opacity 0.6s;
+&nbsp; -o-transition: opacity 0.6s;
+&nbsp; transition: opacity 0.6s;
+}
+.lb-nav a.lb-next:hover {
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+&nbsp; opacity: 1;
+}
+
+.lb-dataContainer {
+&nbsp; margin: 0 auto;
+&nbsp; padding-top: 5px;
+&nbsp; *zoom: 1;
+&nbsp; width: 100%;
+&nbsp; border-bottom-left-radius: 4px;
+&nbsp; border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+&nbsp; content: &quot;&quot;;
+&nbsp; display: table;
+&nbsp; clear: both;
+}
+
+.lb-data {
+&nbsp; padding: 0 4px;
+&nbsp; color: #ccc;
+}
+
+.lb-data .lb-details {
+&nbsp; font-family: &quot;conc-t4-b&quot;;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;USES PS FONTS */&nbsp;
+&nbsp; width: 85%;
+&nbsp; float: left;
+&nbsp; text-align: left;
+&nbsp; line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+&nbsp; font-family: &quot;conc-t4-b&quot;;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;USES PS FONTS */&nbsp;
+&nbsp; font-size: 13px;
+&nbsp; font-weight: bold;
+&nbsp; line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+&nbsp; font-family: &quot;conc-t4-b&quot;;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;USES PS FONTS */&nbsp;
+&nbsp; color: #4ae;
+}
+
+.lb-data .lb-number {
+&nbsp; display: block;
+&nbsp; clear: left;
+&nbsp; padding-bottom: 1em;
+&nbsp; font-family: &quot;conc-t4-r&quot;;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;USES PS FONTS */&nbsp;
+&nbsp; font-size: 12px;
+&nbsp; color: #999999;
+}
+
+.lb-data .lb-close {
+&nbsp; display: block;
+&nbsp; float: right;
+&nbsp; width: 30px;
+&nbsp; height: 30px;
+&nbsp; background: url(01-css-images/lightbox/lb-close.png) top right no-repeat;&nbsp;  <br>                                /* MG CHANGED&nbsp;-&nbsp;PATH AND NAME */
+&nbsp; text-align: right;
+&nbsp; outline: none;
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+&nbsp; opacity: 0.7;
+&nbsp; -webkit-transition: opacity 0.2s;
+&nbsp; -moz-transition: opacity 0.2s;
+&nbsp; -o-transition: opacity 0.2s;
+&nbsp; transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+&nbsp; cursor: pointer;
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+&nbsp; opacity: 1;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 20.1 &emsp; Lightbox modified CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The most important changes are in the classes <span class="code">lightboxOverlay</span> and <span class="code">lightbox</span>:</p>
+
+                    <p class="hyp">I&rsquo;ve shown how it has changed; I deleted the red lines and added the green:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                         <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-css wrap" id="js--c20-01a">.lightboxOverlay {
+&nbsp; position: absolute;
+&nbsp; position: fixed;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* MG CHANGED&nbsp;-&nbsp;WAS ABSOLUTE */
+&nbsp; top: 0;
+&nbsp; left: 0;
+&nbsp; z-index: 9999;
+&nbsp; background-color: black;
+&nbsp; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+&nbsp; opacity: 0.8;
+&nbsp; display: none;
+}
+
+.lightbox {
+&nbsp; position: absolute;
+&nbsp; position: fixed;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* MG CHANGED&nbsp;-&nbsp;WAS ABSOLUTE */
+&nbsp; left: 0;
+&nbsp; top: 25px !important;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;MAKES IMAGE VISIBLE */
+&nbsp; width: 100%;
+&nbsp; z-index: 10000;
+&nbsp; text-align: center;
+&nbsp; line-height: 0;
+&nbsp; font-weight: normal;
+}
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve switched it from <span class="code">absolute</span> to <span class="code">fixed</span>, the reason for this is that the <span class="code">absolute</span> position is relative to the parent container and in this case it is ultimately the <span class="code">body</span> element. The <span class="code">body</span> element is centred in the web page (it has cream coloured bars either side <a class="hlink nohyp utx" href="07-04-prelim.html#js--070403">&sect;&nbsp;7.4.3</a>. The <span class="code">lightbox</span> class originally had an absolute position of <span class="code">top: 0</span>; <span class="code">left: 0</span>; this put it at the top left corner of the body element and on a wide screen it shifted the image over to the right, it lined up with the left edge of the body area rather than being centred on the screen.</p>
+
+                    <p class="hyp">It looked like this (there is a cream coloured bar on the left):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f20-09">
+                            <a href="01-pages/20-01-lightbox/02-images/fig-20-09.png" data-lightbox="fig-set" data-title="Figure 20.9 - Lightbox with absolute addressing">
+                                <img src="01-pages/20-01-lightbox/02-images/fig-20-09.png" alt="Figure 20.9 - Lightbox with absolute addressing">
+                            </a>
+                            <figcaption>Figure 20.9 &emsp; Lightbox with absolute addressing</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">By changing to position: fixed, I made the lightbox image be positioned relative to the view port (i.e. the browser window) rather than the <span class="code">body</span> element. I did this in two places: the <span class="code">lightboxOverlay</span> class and <span class="code">lightbox</span> class, one positions the semi-transparent grey background and the other the image itself.</p>
+
+                    <p class="hyp">I also moved the image to the right position with the top property</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                         <div class="code-area">
+
+                            <pre class="prettyprint lang-css">&nbsp; top: 25px !important;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* MG ADDED&nbsp;-&nbsp;MAKES IMAGE VISIBLE */ </pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If you are wondering why I used the <span class="code">!important</span> instruction, it is because I just couldn&rsquo;t get it to work without. Something was obviously overwriting the property and I couldn&rsquo;t figure it out (it&rsquo;s hard when it&rsquo;s somebody else&rsquo;s code). In the end I decided to be brutal and used the <span class="code">!important</span> nuclear option.</p>
+
+                    <p class="hyp">The other changes are all either changing the path to the images and the image filename, there were four of these, one for each image.</p>
+
+                    <p class="hyp">I also changed the fonts used at various point to the Concourse font again there were four of these.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 20.1.3 MODIFYING THE .JS FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--200103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>20.1.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Modifications to the <span class="code">.js</span> file</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is easy, there aren&rsquo;t any, just leave it as it is.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="20-00-lightbox.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="20-02-lightbox.html#js--200200">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

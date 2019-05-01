@@ -1,0 +1,89 @@
+
+
+/* PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            20-02-CODELINES.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file is used to change the background colour of individual lines in the
+google Prettify code fragements and format certain elements for css use.
+
+This is done by giving each code fragment a unique ID reference and setting
+modifying the specific properties and lines for that particular fragment.
+
+IDs have the format js--cXXYYZZ
+
+There are three common modifications:
+
+
+1. LINE BACKGROUND SHADING
+This is done to change the background colour of a line of code or a range
+of lines to green (indicating the code has changed).
+
+2. LINE INDENTATION ON LINE WRAP
+Changes how a line is indeneted when it wraps around in the code fragment
+display.
+
+Common indent points:
+
+    Indent 1:   1.46rem
+    Indent 2:   2.92rem
+    Indent 3:   4.38rem
+    Indent 4:   5.85rem
+    Indent 5:   7.33rem
+    Indent 6:   8.79rem
+#js--c11-07 li:nth-child(n+10):nth-child(-n+11) { background: #EAF1DD }
+#js--c11-07 li:nth-child(n+12):nth-child(-n+13) { background: #D6E3BC }
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+30 Apr 2019   P25          M. Gledhill    Published
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   REVISION
+   **************************************************************************** */
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P25"; }
+
+/* ****************************************************************************
+   CODE FRAGMENT FORMATTING
+   ************************************************************************* */
+.h-light {
+    font-family: "conc-t3-b";
+    font-size: 0.6rem;
+    border-bottom: 2px solid #ff0000;
+}
+
+.h-light-02 {
+    font-family: "conc-t3-b";
+    font-size: 0.6rem;
+    border-bottom: 2px solid #1F497D;
+}
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c20-02 - FORMATTING
+   ************************************************************************* */
+#js--c20-02 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c20-02 {font-size: 0.5rem}
+#js--c20-02 li:nth-child(12) { background: #EAF1DD }
+#js--c20-02 li:nth-child(21) { background: #EAF1DD }
+/* ************************************************************************* */
+
