@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Metadata">
+        <meta name="description" content="Understanding how to display code fragments on a web page">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              98-00-BLANK.HTML
+Title :          WEBSITE TEMPLATE                           21-00-CODEFRAG.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,8 +46,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+02 May 2019   d-P25.21.01  M. Gledhill    Page build
 
+10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -73,7 +74,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/98-00-blank/05-local-js/98-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/21-00-codefrag/05-local-js/21-00-scroll.js"></script>
 
 
 
@@ -88,7 +89,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/98-00-blank/01-local-css/98-00-codeline.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/21-00-codefrag/01-local-css/21-00-codeline.css">-->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -108,7 +109,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Title | PracticalSeries: Web Development</title>
+        <title>Displaying code fragments | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -128,9 +129,9 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="80-00-finally.html#js--800500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="20-04-lightbox.html#js--200400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
-                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
                         <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
@@ -138,9 +139,9 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
                         <!-- Button 04 - Next Chapter -->
-                        <a class="nav-wide" href="99-00-typicals.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="99-00-typicals.html#js--990000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="21-01-codefrag.html#js--210100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -154,12 +155,12 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P25.21.01-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
-                    <div class="title-num-box"><p>98</p></div>
-                    <div class="title-text-box"><h1><span class="title-small-num">98</span>Blank page</h1></div>
+                    <div class="title-num-box"><p>21</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">21</span>Displaying code fragmentse</h1></div>
                 </div>                                          <!-- End of title             -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-right-rev">             <!-- Start of right side bar  -->
@@ -178,28 +179,110 @@ Date          Issue        Author         Reason for Modification
                 <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
 
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                    TOC - 98 Blank
+                    TOC - 21 codefrag
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="toc-line">
-<!-- Level 1 -->        <li><a class="js--sc-980000" href="98-00-blank.html#js--000000">
-                               <div class="toc-lev"><span class="toc-lev1-num">98</span><span class="toc-lev1-text">Blank page</span></div></a>
+<!-- Level 1 -->        <li><a class="js--sc-210000" href="21-00-codefrag.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">21</span><span class="toc-lev1-text">Displaying code fragments</span></div></a>
                         </li>
                     </ul>
 
                     <ul class="toc-list">
-<!-- Level 2 -->        <li><a class="js--sc-980100" href="98-00-blank.html#js--980100">
-                            <div class="toc-lev"><span class="toc-lev2-num">98.1</span><span class="toc-lev2-text">Empty Section</span></div></a>
+<!-- Level 2 -->        <li><a class="js--sc-210100" href="21-01-codefrag.html#js--210100">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.1</span><span class="toc-lev2-text">Getting and configuring  Google Prettify</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101" href="98-00-blank.html#js--980101">
-                            <div class="toc-lev"><span class="toc-lev3-num">98.1.1</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-01-codefrag.html#js--210101">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.1</span><span class="toc-lev3-text">Downloading Google Prettify</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101a" href="98-00-blank.html#js--980101a">
-                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Empty inline section</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-210102" href="21-01-codefrag.html#js--210102">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.2</span><span class="toc-lev3-text">Modifying Google Prettify</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101b" href="98-00-blank.html#js--980101b">
-                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Additional section</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-210103" href="21-01-codefrag.html#js--210103">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.3</span><span class="toc-lev3-text">Not a clever bastard, just a lucky one</span></div></a>
                         </li>
-
+<!-- Level 2 -->        <li><a class="js--sc-210200" href="21-02-codefrag.html#js--210200">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.2</span><span class="toc-lev2-text">Loading and understanding Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-02-codefrag.html#js--210201">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.1</span><span class="toc-lev3-text">Loading the Google Prettify JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210202" href="21-02-codefrag.html#js--210202">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.2</span><span class="toc-lev3-text">The Google Prettify JavaScript parameters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210203" href="21-02-codefrag.html#js--210203">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.3</span><span class="toc-lev3-text">Google Prettify supported languages</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210204" href="21-02-codefrag.html#js--210204">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.4</span><span class="toc-lev3-text">Understanding how Google Prettify displays code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210205" href="21-02-codefrag.html#js--210205">
+                        <div class="toc-lev"><span class="toc-lev3-num">21.2.5</span><span class="toc-lev3-text">The Google <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210206" href="21-02-codefrag.html#js--210206">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.6</span><span class="toc-lev3-text">The Practical Series <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210300" href="21-03-codefrag.html#js--210300">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.3</span><span class="toc-lev2-text">Using Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210301" href="21-03-codefrag.html#js--210301">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.1</span><span class="toc-lev3-text">The problem with displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210302" href="21-03-codefrag.html#js--210302">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.2</span><span class="toc-lev3-text">The solution to displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210303" href="21-03-codefrag.html#js--210303">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.3</span><span class="toc-lev3-text">The Practical Series HTML conversion document</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210304" href="21-03-codefrag.html#js--210304">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.4</span><span class="toc-lev3-text">Copying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210305" href="21-03-codefrag.html#js--210305">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.5</span><span class="toc-lev3-text">Understanding the Practical Series classes</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210400" href="21-04-codefrag.html#js--210400">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.4</span><span class="toc-lev2-text">Code fragments, some Worked examples</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210401" href="21-04-codefrag.html#js--210401">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.1</span><span class="toc-lev3-text">HTML without numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210402" href="21-04-codefrag.html#js--210402">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.2</span><span class="toc-lev3-text">HTML with numbers and text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210403" href="21-04-codefrag.html#js--210403">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.3</span><span class="toc-lev3-text">HTML with false line numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210404" href="21-04-codefrag.html#js--210404">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.4</span><span class="toc-lev3-text">HTML with a fixed height fragment (no text wrapping)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210405" href="21-04-codefrag.html#js--210405">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.5</span><span class="toc-lev3-text">CSS with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210406" href="21-04-codefrag.html#js--210406">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.6</span><span class="toc-lev3-text">ANSI C with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210407" href="21-04-codefrag.html#js--210407">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.7</span><span class="toc-lev3-text">Visual Basic with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210408" href="21-04-codefrag.html#js--210408">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.8</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;single line</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210409" href="21-04-codefrag.html#js--210409">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.9</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;multiple lines</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210410" href="21-04-codefrag.html#js--210410">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.10</span><span class="toc-lev3-text">Inline code fragment</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210500" href="21-05-codefrag.html#js--210500">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.5</span><span class="toc-lev2-text">Code fragment enhancements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Colouring particular lines in a code fragment</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Fixing problems with line wrap for indented sections</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
                     </ul>
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
@@ -223,25 +306,21 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - X
+     CHAPTER - 21 DISPLAYING CODE FRAGMENTS
      ***********************************************************************-->
 
-        <section class="section-std" id="js--980000">           <!-- Start of section         -->
+        <section class="section-std" id="js--210000">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>
+                    <div class="sub-title-num-box"><h6>Displaying code fragments</h6></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-head">                  <!-- Start of left side bar   -->
-                        <h2>Side heading (h2 level)</h2>
-                        <p>Optional sidebar</p>
-                    </aside>                                    <!-- End of left side bar     -->
                 <!--     <aside class="aside-left">                  Start of left side bar   -->
                 <!--         <p></p>                                 Side bar content         -->
                 <!--     </aside>                                    End of left side bar     -->
@@ -249,15 +328,67 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp"><span class="all-caps">Displaying code on a web page</span> is harder than you think, the browser wants to run it as if it were part of the web page itself (it tries to render it). In short, it means there is a fair bit of buggering about if you want to display code on a website.</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">It&rsquo;s even harder if you want to put it in box and have it coloured syntactically.</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">I want something that looks like this:</p>
 
-                    <p class="hyp"></p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-01">
+                            <a href="01-pages/21-00-codefrag/02-images/fig-21-01.png" data-lightbox="fig-set" data-title="Figure 21.1 - A typical code fragment">
+                                <img src="01-pages/21-00-codefrag/02-images/fig-21-01.png" alt="Figure 21.1 - A typical code fragment">
+                            </a>
+                            <figcaption>Figure 21.1 &emsp; A typical code fragment</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp">But to do that I have to make the code fragment on the HTML page look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-01a">
+                            <a href="01-pages/21-00-codefrag/02-images/fig-21-01a.png" data-lightbox="fig-set" data-title="Figure 21.1a - How the code fragment looks in the HTML">
+                                <img src="01-pages/21-00-codefrag/02-images/fig-21-01a.png" alt="Figure 21.1a - How the code fragment looks in the HTML">
+                            </a>
+                            <figcaption>Figure 21.1a &emsp; How the code fragment looks in the HTML</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s a bastard.&nbsp;&mdash;&nbsp;<span class="first-use">Welcome to the world of code fragments.</span></p>
+
+                    <p class="hyp">There are a few plugins that try to do this sort of thing. The three main ones seem to be:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><a class="hlink nohyp" href="https://github.com/google/code-prettify">Google Prettify</a></p></li>
+
+                        <li><p class="hyp"><a class="hlink nohyp" href="https://prismjs.com/index.html">Prism</a></p></li>
+
+                        <li><p class="hyp"><a class="hlink nohyp" href="https://highlightjs.org/">Highlight</a></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The one I&rsquo;m going to use is the top one, Google Prettify.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT WITH MULTIPLE PARAGRAPHS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>I&rsquo;m using Google Prettify, not because it is the best, but because it was the one I was most familiar with. I think all three of the above work in much the same way and I think Prism may be the best. </li>
+                    </ul>                                       <!-- End of note              -->
+
+                    <p class="hyp" style="margin-left: 3.4rem"><span class="first-use">At some point I may switch over, Google Prettify does everything I want, but I&rsquo;m not sure it will be supported much longer. This is just my feeling, it&rsquo;s been around a long time and I sense it will be coming to an end.</span></p>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                 </div>                                          <!-- End of section text      -->
 
@@ -271,177 +402,6 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP SECTION]
-     SECTION - X.Y
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980100">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>98.1</h2></div>
-                 <div class="sub-title-text-box"><h2>Section</h2></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row      -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar    -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP SUBSECTION]
-     SUBSECTION - X.Y.Z
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980101">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-num-box"><h3>98.1.1</h3></div>
-                    <div class="sub-title-text-box"><h3>Subsection</h3></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP INLINE]
-     SECTION
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980101a">          <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-text-box"><h4>Inline section</h4></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row      -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP ADDITIONAL]
-     SECTION - ADDITIONAL ROW
-     ***********************************************************************-->
-
-        <div class="section-std" id="js--980101b">              <!-- Start of additional row  -->
-            <div class="rg-row">                                <!-- Start of row content     -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                 </div>                                         <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </div>                                                  <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
 <!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
      ***********************************************************************-->
@@ -452,7 +412,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="80-00-finally.html#js--800500">Prev</a>
+                        <a class="xref" href="20-04-lightbox.html#js--200400">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -462,7 +422,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="99-00-typicals.html#js--990000">Next</a>
+                        <a class="xref" href="21-01-codefrag.html#js--210100">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
