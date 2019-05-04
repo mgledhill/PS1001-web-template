@@ -529,9 +529,57 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp">The Google Prettify <span class="code">run_prettify.js</span> is designed as an all-in-one package, it loads everything it needs (even the CSS file) and gets on with the job. We tell it what we want it to do by the string that follows the question mark in the <span class="code">&lt;script&gt;</span> element:</p>
 
-                    <p class="hyp"></p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;script src=&quot;21-global/05-js/run_prettify.js?autoload=true&amp;lang=css&quot;&gt;&lt;/script&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are three main options:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-01">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 24.5%">Parameter</th>
+                            <th class="table-cent" style="width: 15.0%">Default value</th>
+                            <th class="table-left" style="width: 60.5%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">autorun=[true,false]</span></td>
+                            <td class="table-cent">True</td>
+                            <td class="table-left">Automatically runs Google Prettify when the page has loaded. If set to false, the function must be manually triggered</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">lang=[name]</span></td>
+                            <td class="table-cent">None</td>
+                        <td class="table-left">Loads the language handler for the specific language (what follows the equal sign). It will load a language file called <span class="code">lang-[name].js</span> from the <span class="code">21-global/-05-js/google-prettify</span> directory</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">skin=[name]</span></td>
+                            <td class="table-cent">None</td>
+                        <td class="table-left">Loads an alternative CSS file to replace <span class="code">prettify.css</span>. If the skin parameter is not present, <span class="code">prettify.css</span> will be loaded by default. If present, the parameter will load <span class="code">[name].css</span> from the <span class="code">21-global/-05-js/google-prettify/skins</span> directory</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 21.1 &emsp; Google Prettify common parameters</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                     <p class="hyp"></p>
 
