@@ -632,6 +632,318 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
+                    <p class="hyp">Google Prettify can interpret certain language by default. These languages are built in and do not need separate <span class="code">lang-[name].js</span> files. Google Prettify. The default languages are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-02">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 30%">language</th>
+                            <th class="table-cent" style="width: 15%"></th>
+                            <th class="table-left" style="width: 55%">Prettyprint Class</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Bash and shell languages</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-bash<br>lang-bsh<br>lang-csh<br>lang-sh</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">C, C++, C#</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-c<br>lang-cpp<br>lang-cs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Coffee Script</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-coffee</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">HTML</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-html</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Java, JavaScript, JSON</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-java<br>lang-js or lang-javascript<br>lang-json</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Perl</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-pl<br>lang-pearl</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Python</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-py or lang-python or lang-cv</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Ruby</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-rb or lang-ruby</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">XML, XSL</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-xml<br>lang-xsl</span></td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 21.2 &emsp; Google Prettify built in (default) languages</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All these language are present <em>without</em> using the <span class="code">lang=</span> parameter in the script element.</p>
+
+                    <p class="hyp">Other languages have to be loaded (with the use of the <span class="code">lang=</span> parameter) before they can be used. CSS is one of these, hence that is why it is in my Google Prettify script element.</p>
+
+                    <p class="hyp">The following languages are available:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-03">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">language</th>
+                            <th class="table-left" style="width: 26%">File(s)</th>
+                            <th class="table-left" style="width: 26%">Script Parameter</th>
+                            <th class="table-left" style="width: 26%">Prettyprint Class</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Apollo</td>
+                            <td class="table-left"><span class="code">lang-apollo.js<br>lang-aea.js<br>lang-agc.js</span></td>
+                            <td class="table-left"><span class="code">lang=apollo<br>lang=aea<br>lang=agc</span></td>
+                            <td class="table-left"><span class="code">lang-apollo<br>lang-aea<br>lang-agc</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Basic</td>
+                            <td class="table-left"><span class="code">lang-basic.js</span></td>
+                            <td class="table-left"><span class="code">lang=basic</span></td>
+                            <td class="table-left"><span class="code">lang-basic</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Clojure</td>
+                            <td class="table-left"><span class="code">lang-cl.js<br>lang-clj.js</span></td>
+                            <td class="table-left"><span class="code">lang=cl<br>lang=clj</span></td>
+                            <td class="table-left"><span class="code">lang-cl<br>lang-clj</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">CSS</td>
+                            <td class="table-left"><span class="code">lang-css.js</span></td>
+                            <td class="table-left"><span class="code">lang=css</span></td>
+                            <td class="table-left"><span class="code">lang-css</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Dart</td>
+                            <td class="table-left"><span class="code">lang-dart.js</span></td>
+                            <td class="table-left"><span class="code">lang=dart</span></td>
+                            <td class="table-left"><span class="code">lang-dart</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Delphi</td>
+                            <td class="table-left"><span class="code">lang-pascal.js</span></td>
+                            <td class="table-left"><span class="code">lang=pascal</span></td>
+                            <td class="table-left"><span class="code">lang-pascal</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Elixir</td>
+                            <td class="table-left"><span class="code">lang-ex.js<br>lang-exs.js</span></td>
+                            <td class="table-left"><span class="code">lang=erl<br>lang=erlang</span></td>
+                            <td class="table-left"><span class="code">lang-erl<br>lang-erlang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Erlang</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Go</td>
+                            <td class="table-left"><span class="code">lang-go.js</span></td>
+                            <td class="table-left"><span class="code">lang=go</span></td>
+                            <td class="table-left"><span class="code">lang-go</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Haskell</td>
+                            <td class="table-left"><span class="code">lang-hs.js</span></td>
+                            <td class="table-left"><span class="code">lang=hs</span></td>
+                            <td class="table-left"><span class="code">lang-hs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Kotlin</td>
+                            <td class="table-left"><span class="code">lang-kotlin.js</span></td>
+                            <td class="table-left"><span class="code">lang=kotlin</span></td>
+                            <td class="table-left"><span class="code">lang-kotlin</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">LaTeX and TeX</td>
+                            <td class="table-left"><span class="code">lang-latex.js<br>lang-tex.js</span></td>
+                            <td class="table-left"><span class="code">lang=latex<br>lang=tex</span></td>
+                            <td class="table-left"><span class="code">lang-latex<br>lang-tex</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Lisp, Scheme and Racket</td>
+                            <td class="table-left"><span class="code">lang-cl.js<br>lang-el.js<br>lang-lisp.js<br>lang-lsp.js<br>lang-scm.js<br>lang-ss.js<br>lang-rkt.js</span></td>
+                            <td class="table-left"><span class="code">lang=cl<br>lang=el<br>lang=lisp<br>lang=lsp<br>lang=scm<br>lang=ss<br>lang=rkt</span></td>
+                            <td class="table-left"><span class="code">lang-cl<br>lang-el<br>lang-lisp<br>lang-lsp<br>lang-scm<br>lang-ss<br>lang-rkt</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">LLVM</td>
+                            <td class="table-left"><span class="code">lang-ll.js<br>lang-llvm.js</span></td>
+                            <td class="table-left"><span class="code">lang=ll<br>lang=llvm</span></td>
+                            <td class="table-left"><span class="code">lang-ll<br>lang-llvm</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Logtalk</td>
+                            <td class="table-left"><span class="code">lang-logtalk.js</span></td>
+                            <td class="table-left"><span class="code">lang=logtalk</span></td>
+                            <td class="table-left"><span class="code">lang-logtalk</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Lua</td>
+                            <td class="table-left"><span class="code">lang-lua.js</span></td>
+                            <td class="table-left"><span class="code">lang=lua</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Makefile</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">OCaml, SML, F#, et al</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Pascal</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">PHP</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Protocol buffers</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">R and S</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Regex</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Rust</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Scala</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">S-plus</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">SQL</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">VHDL</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Visual Basic</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">YAML</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 21.3 &emsp; Google Prettify other languages (must be loaded explicitly)</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
                     <p class="hyp"></p>
 
                     <p class="hyp"></p>
