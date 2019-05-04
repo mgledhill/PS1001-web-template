@@ -94,3 +94,34 @@ Date          Issue        Author         Reason for Modification
 #js--c21-01a li:nth-child(4) { background: #EAF1DD }
 #js--c21-01a li:nth-child(15) { background: #EAF1DD }
 /* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-02 - FORMATTING
+   ************************************************************************* */
+#js--c21-02 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-02 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03 - FORMATTING
+   ************************************************************************* */
+#js--c21-03 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03a - FORMATTING
+   ************************************************************************* */
+#js--c21-03a ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03a li:nth-child(5) { background: #EAF1DD }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03b - FORMATTING
+   ************************************************************************* */
+#js--c21-03b ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03b li:nth-child(3) { background: #EAF1DD }
+#js--c21-03b li:nth-child(5) { background: #EAF1DD }
+/* ************************************************************************* */
+

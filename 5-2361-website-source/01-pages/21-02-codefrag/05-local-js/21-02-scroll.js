@@ -199,6 +199,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--t21-03').offset().top -60}, 1000);
     });
 
+    $('.js--sc-t21-04').click(function () {
+       $('html, body').animate({scrollTop: $('#js--t21-04').offset().top -60}, 1000);
+    });
+
 
 
 });                                             /* END OF PAGE READY FUNCTION */

@@ -1425,35 +1425,500 @@ If missing there are no numbers</td>
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp">The <span class="code">prettify.css</span> file is loaded by default by the <span class="code">run_prettify.js</span> JavaScript file that is loaded by the web page (<a class="xref js--sc-210201" href="#">&sect;&nbsp;21.2.1</a>).</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">The <span class="code">prettify.css</span> file came with Google Prettify (we downloaded the un-minimised version of it, see <a class="hlink nohyp" href="21-01-codefrag.html#js--f21-08">&sect;&nbsp;21.1.1</a>), you will find it in the <span class="code">21-global/05-js/google-prettify</span> directory.</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">The default file looks like this:</p>
 
-                    <p class="hyp"></p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">default prettify.css</div>
+                        <div class="code-area">
 
-                    <p class="hyp"></p>
+                            <pre class="prettyprint lang-css" id="js--c21-02">.pln { color: #000 }&nbsp; /* plain text */
 
-                    <p class="hyp"></p>
+@media screen {
+&nbsp; .str { color: #080 }&nbsp; /* string content */
+&nbsp; .kwd { color: #008 }&nbsp; /* a keyword */
+&nbsp; .com { color: #800 }&nbsp; /* a comment */
+&nbsp; .typ { color: #606 }&nbsp; /* a type name */
+&nbsp; .lit { color: #066 }&nbsp; /* a literal value */
+&nbsp; /* punctuation, lisp open bracket, lisp close bracket */
+&nbsp; .pun, .opn, .clo { color: #660 }
+&nbsp; .tag { color: #008 }&nbsp; /* a markup tag name */
+&nbsp; .atn { color: #606 }&nbsp; /* a markup attribute name */
+&nbsp; .atv { color: #080 }&nbsp; /* a markup attribute value */
+&nbsp; .dec, .var { color: #606 }&nbsp; /* a declaration; a variable name */
+&nbsp; .fun { color: red }&nbsp; /* a function name */
+}
 
-                    <p class="hyp"></p>
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+&nbsp; .str { color: #060 }
+&nbsp; .kwd { color: #006; font-weight: bold }
+&nbsp; .com { color: #600; font-style: italic }
+&nbsp; .typ { color: #404; font-weight: bold }
+&nbsp; .lit { color: #044 }
+&nbsp; .pun, .opn, .clo { color: #440 }
+&nbsp; .tag { color: #006; font-weight: bold }
+&nbsp; .atn { color: #404 }
+&nbsp; .atv { color: #060 }
+}
 
-                    <p class="hyp"></p>
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
 
-                    <p class="hyp"></p>
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { background: #eee }
+</pre>
 
-                    <p class="hyp"></p>
+                        </div>
+                        <div class="code-caption">Code 21.2 &emsp; Default prettify.css file</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp">You can see that basically all it does is assign colours to the various span classes; it does it in two goes, one if the code is being displayed on a screen (the only one we are interested in) and a higher contrast version if it is being printed out.</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">It also assigns some properties for an ordered list (the ordered list is used to display line numbers).</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">OK, that is the default <span class="code">prettify.css</span> that came with Google Prettify. Take a good look, we aren&rsquo;t going to use any of it.</p>
 
-                    <p class="hyp"></p>
+                </div>                                          <!-- End of section text      -->
 
-                    <p class="hyp"></p>
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.6 THE PRACTICAL SERIES PRETTIFY.CSS FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210206">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.6</h3></div>
+                    <div class="sub-title-text-box"><h3>The Practical Series <span class="code">prettify.css</span> file</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the file we are going to use:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">practical series prettify.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-css" id="js--c21-03">/* ****************************************************************************
+&nbsp;  BASE FORMATTING FOR PRETTYPRINT
+&nbsp;  ****************************************************************************
+&nbsp;  The .prettyprint class applied to either a &lt;pre&gt; or &lt;code&gt; element cause
+&nbsp;  the code to be displayed with span classes for each of the identifiable
+&nbsp;  elements of the code (this is done client side after the page has loaded).
+
+&nbsp;  This section formats the basic prettyprint class and the subsequent
+&nbsp;  classes associated with either &lt;pre&gt; or &lt;code&gt;.
+
+&nbsp;  The basic differences between the &lt;pre&gt; and &lt;code&gt; usage is:
+
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;pre&gt;&nbsp;  Holds a section of code that appears as a separate block
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; on the web page (optionally with a filename header and block
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; caption footer).
+
+&nbsp; &nbsp; &nbsp;  &lt;code&gt;&nbsp;  Holds a section of inline code that will appear formatted
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; within a line of text
+
+&nbsp;  ************************************************************************* */
+
+.prettyprint { border: 0 !important }
+
+pre.prettyprint {
+&nbsp; &nbsp; background: #fbfbfb;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.61rem;
+&nbsp; &nbsp; line-height: 135%;
+&nbsp; &nbsp; width: 99%;
+&nbsp; &nbsp; padding-left: 2.5rem;
+&nbsp; &nbsp; overflow: auto;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* will apply scroll bars if required */
+}
+
+code.prettyprint {
+&nbsp; &nbsp; background: #fff;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.85rem;
+}
+
+.wrap{white-space: pre-wrap;}
+
+/* ----------------------------------------------------------------------------
+&nbsp;  LINE NUMBERING
+&nbsp;  ----------------------------------------------------------------------------
+&nbsp;  adding the class .linenums to the &lt;pre&gt; element will add line numbering to
+&nbsp;  the block of code.
+
+&nbsp;  Line numbers are added every line, line numbers start at 1 unless specified
+&nbsp;  other wise (add the class linenums:10 to start numbering at 10)
+&nbsp;  ------------------------------------------------------------------------- */
+ol.linenums {
+&nbsp; &nbsp; margin-top: 0;
+&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; color: #949494;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}
+
+/* ----------------------------------------------------------------------------
+&nbsp;  TOKEN COLOURING
+&nbsp;  ----------------------------------------------------------------------------
+&nbsp;  Prettify adds span classes to the individual elements (tokens) within the
+&nbsp;  code; these are individually coloured in the following section
+&nbsp;  ------------------------------------------------------------------------- */
+
+.pln { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* plain (default) text colour */
+.str { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* string content */
+.kwd { color: #8959a8; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* keyword */
+.com { color: #949494; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* comment */
+.typ { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable type&nbsp;-&nbsp;e.g. int */
+.lit { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* literal value */
+.pun { color: #535353; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* punctuation */
+.opn { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp open bracket */
+.clo { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp close bracket */
+.tag { color: #4f77c0; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup tag name */
+.atn { color: #758d0f; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute name */
+.atv { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute value */
+.dec { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* declaration */
+.var { color: #8757ad; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable name */
+.fun { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* function name */
+
+.lang-css .pln { color: #4271ae;}&nbsp;
+.lang-css .lit { color: #718c00;}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.3 &emsp; Default prettify.css file</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">My file is bigger than the original (but it does have more comments in it)</p>
+
+                    <p class="hyp">Let&rsquo;s go through it. The first bit turns off the borders that have been activated somewhere in the JavaScript (I don&rsquo;t want those borders), the <span class="code">!important</span> just makes my instruction take precedence over the JavaScript. Those borders are definitely turned off.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.prettyprint { border: 0 !important }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Next I set the font and various other fairly standard properties:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">pre.prettyprint {
+&nbsp; &nbsp; background: #fbfbfb;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.61rem;
+&nbsp; &nbsp; line-height: 135%;
+&nbsp; &nbsp; width: 99%;
+&nbsp; &nbsp; padding-left: 2.5rem;
+&nbsp; &nbsp; overflow: auto;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* will apply scroll bars if required */
+}
+
+code.prettyprint {
+&nbsp; &nbsp; background: #fff;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.85rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve split this into two, one for the <span class="code">&lt;pre&gt;</span> element and one for the <span class="code">&lt;code&gt;</span> element, Google Prettify will use either element, I use the <span class="code">&lt;pre&gt;</span> to put a code fragment in its own box and I use the <span class="code">&lt;code&gt;</span> element to display inline code (code that fits into a line of text), I give example of each in <a class="hlink nohyp utx" href="21-04-codefrag.html#js--210400">&sect;&nbsp;21.4</a>.</p>
+
+                    <p class="hyp">I&rsquo;ve set them to use the Triplicate font and defined the various font sizes, paddings, widths, line heights, &amp;c. the usual stuff.</p>
+
+                    <p class="hyp">The width is set to 99% rather than 100%, this is to accommodate any scroll bars that might be needed, the scroll bar extends slightly outside of the container and setting a width of 99% just lines things up properly.</p>
+
+                    <p class="hyp">There is one property here that we haven&rsquo;t used before:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; overflow: auto;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">overflow</span> property assigns scroll bars to an HTML element if its content is too big for its container. The <span class="code">auto</span> value just means that both horizontal and vertical scroll bars will be applied, but only if needed. It makes the code fragment look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-18">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-18.png" data-lightbox="fig-set" data-title="Figure 21.18 - Automatic application of scroll bars">
+                                <img style="max-width: 746px" src="01-pages/21-02-codefrag/02-images/fig-21-18.png" alt="Figure 21.18 - Automatic application of scroll bars">
+                            </a>
+                            <figcaption>Figure 21.18 &emsp; Automatic application of scroll bars</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next thing is the <span class="code">wrap</span> class, this is a class that we can apply with the <span class="code">prettyprint</span> class to make the text wrap in the element (see <a class="xref js--sc-t21-04" href="#">Table&nbsp;21.4</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.wrap {white-space: pre-wrap;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">white-space</span> property is another new property, it determines how the browser should wrap text that goes over the end of line, the <span class="code">pre-wrap</span> value ensures that when text is wrapped (at a space), the space character is preserved; i.e. it will be present in the correct place if the code fragment is copied from within the browser window. This is important for code fragments; we don&rsquo;t want spaces to go missing.</p>
+
+                    <p class="hyp">The <span class="code">wrap</span> class does the following: the first image is a line of code without the wrap class, the second one with it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-19">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-19.png" data-lightbox="fig-set" data-title="Figure 21.19 - Code fragment without the wrap class">
+                                <img style="max-width: 747px" src="01-pages/21-02-codefrag/02-images/fig-21-19.png" alt="Figure 21.19 - Code fragment without the wrap class">
+                            </a>
+                            <figcaption>Figure 21.19 &emsp; Code fragment without the wrap class</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-20">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-20.png" data-lightbox="fig-set" data-title="Figure 21.20 - Same code fragment with the wrap class">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-20.png" alt="Figure 21.20 - Same code fragment with the wrap class">
+                            </a>
+                            <figcaption>Figure 21.20 &emsp; Same code fragment with the wrap class</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next thing is the line numbers; if a <span class="code">linenum</span> class is applied, then line numbers will be displayed at the left side of the code fragment. These line numbers are just an ordered list applied by the JavaScript. I covered ordered lists in <a class="hlink nohyp" href="12-02-lists.html#js--120200">&sect;&nbsp;12.2</a>, the CSS here just sets the basic properties for the numbers:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">ol.linenums {
+&nbsp; &nbsp; margin-top: 0;
+&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; color: #949494;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The top and bottom margins are removed (I don&rsquo;t actually think there were any to start with). Next the text colour of the line numbers is set to a lighter grey (<span class="code">#949494</span>).</p>
+
+                    <p class="hyp">The next bit is a little strange; it selects the <span class="code">li</span> elements, but has an additional selector <span class="code">L0</span> to <span class="code">L9</span>. These represent the individual line entries <span class="code">L0</span> indicates the first line and every such occurrence in each decade, <span class="code">L0</span> thus represents line 1, line 11, line 21, line 31 &amp;c.</p>
+
+                    <p class="hyp"><span class="code">L1</span> represents the second line e.g. line 2, line 12, line 22 &amp;c. <span class="code">L9</span> being the 10th entry e.g. line 10, line 20, line 30 &amp;c.</p>
+
+                    <p class="hyp">Here I&rsquo;ve ensured that every line has exactly the same properties:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve made the background colour transparent <span class="code">rgba(255, 255, 255, 0)</span>, this means that each line will have the same background colour set for the prettyprint class (<span class="code">#fbfbfb</span>) in this case.</p>
+
+                    <p class="hyp">Setting <span class="code">list-style-type: decimal;</span> makes the line number use decimal notation.</p>
+
+                    <p class="hyp">If alternate line colouring was required, the following lines could be added:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c21-03a">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 { background-color: #eee }
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This would apply a different background colour to each alternate line:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-21">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-21.png" data-lightbox="fig-set" data-title="Figure 21.21 - Alternate line colouring">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-21.png" alt="Figure 21.21 - Alternate line colouring">
+                            </a>
+                            <figcaption>Figure 21.21 &emsp; Alternate line colouring</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is also possible to number only certain lines:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c21-03b">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: none;
+}
+li.L4, li.L9 { list-style-type: decimal }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It gives:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-22">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-22.png" data-lightbox="fig-set" data-title="Figure 21.22 - Specific line numbering">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-22.png" alt="Figure 21.22 - Specific line numbering">
+                            </a>
+                            <figcaption>Figure 21.22 &emsp; Specific line numbering</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The final bit of <span class="code">pretty.css</span> sets all the colours:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.pln { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* plain (default) text colour */
+.str { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* string content */
+.kwd { color: #8959a8; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* keyword */
+.com { color: #949494; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* comment */
+.typ { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable type&nbsp;-&nbsp;e.g. int */
+.lit { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* literal value */
+.pun { color: #535353; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* punctuation */
+.opn { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp open bracket */
+.clo { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp close bracket */
+.tag { color: #4f77c0; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup tag name */
+.atn { color: #758d0f; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute name */
+.atv { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute value */
+.dec { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* declaration */
+.var { color: #8757ad; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable name */
+.fun { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* function name */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Easy. There is just a little more:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.lang-css .pln { color: #4271ae;}&nbsp;
+.lang-css .lit { color: #718c00;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This changes the colour if the code is CSS (if it is it will have the class <span class="code">lang-css</span>).</p>
+
+                    <p class="hyp">All these colours have been picked to make the code fragments have similar colouring to Brackets.</p>
 
                     <p class="hyp"></p>
 
