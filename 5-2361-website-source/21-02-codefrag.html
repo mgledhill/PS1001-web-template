@@ -980,155 +980,44 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">And the file <span class="code">lang-sql.js</span> must be available in the directory:<br> <span class="code">21-global/-05-js/google-prettify/</span>.</p>
 
-                    <p class="hyp"></p>
+                </div>                                          <!-- End of section text      -->
 
-                    <p class="hyp"></p>
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
-                    <p class="hyp"></p>
 
-                    <p class="hyp"></p>
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.4 UNDERSTANDING HOW GOOGLE PRETTIFY DISPLAYS CODE FRAGMENTS
+     ***********************************************************************-->
 
-                    <p class="hyp"></p>
+        <section class="section-std" id="js--210204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Understanding how Google Prettify displays code fragments</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
 
-                    <p class="hyp"></p>
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-02">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-02.png" data-lightbox="fig-set" data-title="Figure 21.2 - Prettify on GitHub">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-02.png" alt="Figure 21.2 - Prettify on GitHub">
-                            </a>
-                            <figcaption>Figure 21.2 &emsp; Prettify on GitHub</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">GitHub is a software storage and version tracking system and it is complicated (I&rsquo;ve written at great length about the subject <a class="hlink nohyp" href="https://www.practicalseries.com/1002-vcs/index.html">here</a>), what we are seeing here is the latest release of the Prettify repository; you can tell it is the latest version, it says so in the blue band (I&rsquo;ve underlined it). It says:</p>
+                    <p class="hyp">Google Prettify works by analysing any code fragment that is present on a web page. The code fragment must be contained in the semantic element <span class="code">&lt;pre&gt;...&lt;/pre&gt;</span> or in the sematic element <span class="code">&lt;code&gt;...&lt;/code&gt;</span> and in both cases that element must be given the class <span class="code">prettyprint</span>.</p>
 
-                    <p class="hyp" style="text-align: center"><span class="code">Latest commit f20e152  4 days ago</span></p>
-
-                    <p class="hyp">A &ldquo;commit&rdquo; is a fixed point in the development of the software; usually it means the software has been released. In this case it says it is release <span class="code">f20e152</span> this is a unique number (it looks like a random hexadecimal number) and it is a reference to the current commit<sup>&dagger;2</sup>. At the time of writing (March 1<sup>st</sup>, 2019) the commit was made four days earlier (this is the last time the software was modified).</p>
-
-                    <p class="hyp">Repositories always open at the most current commit point (i.e. the latest version of the software).</p>
-
-                    <p class="hyp">I&rsquo;m not going to dwell too long on GitHub, just accept that it is an online storage and version tracking site used by pretty much every software developer in the world. It is very powerful and very useful (once you learn how, again I refer you to my other publications: <a class="hlink nohyp" href="https://www.practicalseries.com/1002-vcs/index.html">here</a>). If you are serious about web development, I recommend that you learn it and use it.</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn02">
-                        <tr>
-                            <th class="table-cent fnote-top" style="width: 10%"></th>
-                            <th class="table-left fnote-top" style="width: 10%"></th>
-                            <th class="table-left fnote-top" style="width: 20%"></th>
-                            <th class="table-left" style="width: 60%"></th>
-                        </tr>
-                        <tr>
-<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
-<!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">These commit numbers are of course not random numbers. They are a checksum carried out of all the files in the repository, plus a header that contains other information (the commit numbers that immediately preceded this commit, plus some information about directory structures &amp;c.). </td>
-                        </tr>
-                        <tr>
-                            <td class="table-left"></td>
-<!-- Add. para. below -->   <td class="table-left"></td>
-                            <td colspan="2" class="table-left">A checksum is basically a function applied to the binary value of every byte in a file that gives a reproducible figure that can be used to check to see if two files are the same or to identify data corruption within a file</td>
-                        </tr>
-                        <tr>
-                            <td class="table-left"></td>
-<!-- Add. para. below -->   <td class="table-left"></td>
-                            <td colspan="2" class="table-left">The commit number used by GitHub is a checksum encode by using the SHA-1 algorithm (Secure Hash Algorithm 1). This produces a 20-byte (40 digit) hexadecimal number that uniquely identifies a commit. The commit number shown is just the first seven digits of the full commit number. This is usually enough to uniquely identify a commit (even on very large projects). </td>
-                        </tr>
-                        <tr>
-                            <td class="table-left"></td>
-<!-- Add. para. below -->   <td class="table-left"></td>
-                            <td colspan="2" class="table-left">The first seven digits of a commit number gives 268 million unique values, the full 20 byte number has 1.5×1048 unique values (a similar number to the quantity of atoms that make up the Earth); these values also only apply within a repository (two different repositories can have the same commit number, they don&rsquo;t interfere with each other).</td>
-                        </tr>
-                        <tr>
-                            <td class="table-left"></td>
-<!-- Add. para. below -->   <td class="table-left"></td>
-                            <td colspan="2" class="table-left">The chance of a duplicate 20 byte commit number is vanishingly small, even with just the first seven digits it won&rsquo;t happen on any project you are likely to be working on.</td>
-                        </tr>
-                    </table>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">All we need from the Prettify repository (sometime just called a <span class="first-use">repo</span>&nbsp;&mdash;&nbsp;see, you&rsquo;re already picking up the lingo, you&rsquo;ll be using Linux before you know it) is a copy of the code.</p>
-
-                    <p class="hyp">The easiest way to get this is to click the big green <span class="menu">clone or download</span> button (highlighted in <a class="xref js--sc-f21-02" href="#">Figure&nbsp;21.2</a>).</p>
-
-                    <p class="hyp">In the pop-up, click the <span class="menu">download zip</span> button. </p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-03">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-03.png" data-lightbox="fig-set" data-title="Figure 21.3 - GitHub download repository">
-                                <img style="max-width: 352px" src="01-pages/21-01-codefrag/02-images/fig-21-03.png" alt="Figure 21.3 - GitHub download repository">
-                            </a>
-                            <figcaption>Figure 21.3 &emsp; GitHub download repository</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">This downloads a zip file called: <span class="code">code-prettify-master.zip</span></p>
-
-                    <p class="hyp">Copy this file somewhere and extract it, it will look remarkably similar to the GitHub web page:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-04">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-04.png" data-lightbox="fig-set" data-title="Figure 21.4 - Prettify download code (extracted)">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-04.png" alt="Figure 21.4 - Prettify download code (extracted)">
-                            </a>
-                            <figcaption>Figure 21.4 &emsp; Prettify download code (extracted)</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">There is some logic to this, we asked for a download of the repository and that is exactly what it gave us. The problem is knowing where to look for things. Usually, this takes a bit of perseverance&nbsp;&mdash;&nbsp;fortunately for you I&rsquo;ve already done it.</p>
-
-                    <p class="hyp">The bit we need is everything in the <span class="code">loader</span> folder, it is full of <span class="code">.js</span> files with the odd <span class="code">.css</span> file as well:</p>
-
-                    <p class="hyp">It looks like this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-05">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-05.png" data-lightbox="fig-set" data-title="Figure 21.5 - Prettify loader folder">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-05.png" alt="Figure 21.5 - Prettify loader folder">
-                            </a>
-                            <figcaption>Figure 21.5 &emsp; Prettify loader folder</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The bulk of these files are language plugins for Prettify, <span class="code">lang-pascal.js</span> allow Prettify to syntactically interpret Pascal code. We don&rsquo;t actually need all those files, the chance of me needing to display MUMPS<sup>&dagger;3</sup> code (<span class="code">lang-mumps.js</span>) is remote to say the least.</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     TABLE - FOOTNOTE
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-fnote" id="js--fn03">
-                        <tr>
-                            <th class="fnote-top" style="width: 10%"></th>
-                            <th class="fnote-top" style="width: 10%"></th>
-                            <th class="fnote-top" style="width: 20%"></th>
-                            <th style="width: 60%"></th>
-                        </tr>
-                        <tr>
-<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
-<!-- Footnote text below --><td class="table-left"></td>
-                            <td colspan="2" class="table-left">MUMPS:&ensp;Massachusetts General Hospital Utility Multi-Programming System&mdash; go figure.</td>
-                        </tr>
-                    </table>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">We don&rsquo;t need all of them, but they are very small and I tend to keep them, just in case at some time in the future I do need to show some MUMPS code: it looks like this in case you were wondering:</p>
+                    <p class="hyp">This is an example of the HTML code needed to display a CSS code fragment:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
@@ -1136,138 +1025,376 @@ Date          Issue        Author         Reason for Modification
                     <div class="code-extract">                  <!-- Start of code fragment   -->
                         <div class="code-area">                 <!-- Start of code holder     -->
 
-                            <pre class="prettyprint lang-mumps">hello() w &quot;Hello, World!&quot;,! q</pre>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c21-01a">&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;css&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;pre class=&quot;prettyprint linenums lang-css&quot;&gt;&nbsp;
+.list-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;Numbered list */
+&nbsp; &nbsp; font-family: &quot;conc-i3-r&quot;;
+&nbsp; &nbsp; margin-left: 5rem;
+&nbsp; &nbsp; /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-num li p {
+&nbsp; &nbsp; font-family: &quot;eqty-ta-r&quot;;
+&nbsp; &nbsp; padding-left: 1rem;
+&nbsp; &nbsp; margin-bottom: 0.85rem;
+}
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code 99.3 &amp;mdash; Code Fragment&amp;mdash;CSS&lt;/div&gt;&nbsp;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code fragment --&gt;
+</pre>
 
                         </div>
                         <div class="code-caption"></div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The three files we definitely do need are:</p>
+                    <p class="hyp">The code between the <span class="code">&lt;pre&gt;...&lt;/pre&gt;</span> tags is displayed as:</p>
 
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp"><span class="code">run-prettify.js</span></p></li>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
 
-                        <li><p class="hyp"><span class="code">prettify.css</span></p></li>
+                            <pre class="prettyprint linenums lang-css wrap">
+.list-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;Numbered list */
+&nbsp; &nbsp; font-family: &quot;conc-i3-r&quot;;
+&nbsp; &nbsp; margin-left: 5rem;
+&nbsp; &nbsp; /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-num li p {
+&nbsp; &nbsp; font-family: &quot;eqty-ta-r&quot;;
+&nbsp; &nbsp; padding-left: 1rem;
+&nbsp; &nbsp; margin-bottom: 0.85rem;
+}</pre>
 
-                        <li><p class="hyp"><span class="code">lang-css.js</span></p></li>
-                    </ul>                                       <!-- End of unnumbered list   -->
+                        </div>
+                        <div class="code-caption">Code 99.3 &mdash; Code Fragment&mdash;CSS</div>
+                    </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The main file we need is <span class="code">run-prettify.js</span> this is the JavaScript that interprets the code. Prettify can interpret various programming languages by itself:</p>
+                    <p class="hyp">The three <span class="code">&lt;div&gt;</span> elements at the top of the code and the caption <span class="code">&lt;div&gt;</span> at the bottom are containers to hold the code extract and give it a heading, a bit like figures and tables and done in much the same way, I explain those in sections&nbsp;<a class="hlink nohyp" href="14-00-tables.html#js--000000">14</a> &amp; <a class="hlink nohyp" href="15-00-figures.html#js--000000">15</a> (it is just the usual styling stuff, fonts, background colours &amp;c.).</p>
+
+                    <p class="hyp">The important bit is the <span class="code">&lt;pre&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;pre class=&quot;prettyprint linenums lang-css&gt;&nbsp; </pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Google Prettify, started by the <span class="code">run_prettify.js</span> software is looking for a <span class="code">&lt;pre&gt;</span> element with the class <span class="code">prettyprint</span>. If it finds one, it tries to interpret everything between the opening <span class="code">&lt;pre&gt;</span> and closing <span class="code">&lt;/pre&gt;</span> as whatever is specified in the <span class="code">lang-...</span> class (the <span class="code">lang-...</span> class for each language are specified in the prettyprint class columns of <a class="xref js--sc-t21-02" href="#">Table&nbsp;21.2</a> and <a class="xref js--sc-t21-03" href="#">Table&nbsp;21.3</a>)</p>
+
+                    <p class="hyp">The way Google Prettify works is it looks at the code contained in the <span class="code">&lt;pre&gt;</span> (or <span class="code">&lt;code&gt;</span>) element, it examines it in terms of whatever language has been specified for that bit of code (the <span class="code">lang-...</span> class) and works out which bits of the code are keywords, functions, strings, constants, tags &amp;c. and when it figures it out, it puts a <span class="code">&lt;span&gt;...&lt;/span&gt;</span> element around it with a class that represents what it is (e.g. <code class="prettyprint">&lt;span class=&quot;kwd&quot;&gt;font-family&lt;/span&gt;</code>).</p>
+
+                    <p class="hyp">I.e. wherever <span class="code">font-family</span> (or similar property) is found in the code, it is given a <span class="code">span</span> with the class <span class="code">kwd</span>.</p>
+
+                    <p class="hyp">This class (<span class="code">kwd</span> in this case) can then be given a particular colour by assigning CSS properties to it. This is done in the <span class="code">pretty.css</span> file, that is what it is for.</p>
+
+                    <p class="hyp">I&rsquo;ll come to the <span class="code">pretty.css</span> file in a moment, but first I&rsquo;ll look at the options available to the <span class="code">prettyprint</span> operation.</p>
+
+                    <p class="hyp">Where Google Prettify finds a <span class="code">&lt;pre&gt;</span> (or <span class="code">&lt;code&gt;</span>) element with the class <span class="code">prettyprint</span>, it also looks for other classes to be present and does certain things if they are:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <table class="table-clean">
-<!-- Data row -->       <tr style="border-top: 1px solid #cccccc">
+                    <table class="table-clean" id="js--t21-04">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 20%">Class</th>
+                            <th class="table-cent" style="width: 40%">Function</th>
+                            <th class="table-cent" style="width: 40%">Example</th>
+                        </tr>
+<!-- Data row -->       <tr>
                             <td class="leading"><div style="min-height: 3em"></div></td>
-                            <td class="table-cent">Bash, C, Coffee, HTML, JavaScript, Pearl , Python, Ruby and XML,  </td>
+                            <td class="table-cent"><span class="code">linenums</span></td>
+                            <td class="table-left">If present turns on line numbering at the left side of each line of code.
+If missing there are no numbers</td>
+                            <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums lang-css&gt;</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">linenums:n</span></td>
+                            <td class="table-left">Starts the line numbering at value n</td>
+                            <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums:25 lang-css&gt;</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">wrap</span></td>
+                            <td class="table-left">Forces a line to wrap around, rather than use a horizontal scroll bar.
+                                If missing, any text that is too long for the <span class="code">&lt;pre&gt;</span> container will not be displayed, and a horizontal scroll bar will appear (allowing the rest of the line to be viewed)</td>
+                        <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums wrap lang-css&gt;</span></td>
                         </tr>
 <!-- Caption -->        <tr class="no-border">
                             <td class="leading"></td>
-                            <td class="table-caption"></td>
+                            <td colspan="3" class="table-caption">Table 21.4 &emsp; Google Prettify command classes</td>
                         </tr>
                     </table>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Other languages are supported by including the relevant <span class="code">lang-....js</span> files, there is a full list in <a class="hlink nohyp utx" href="21-02-codefrag.html#js--210203">&sect;&nbsp;21.2.3</a>, we need the <span class="code">lang-css.js</span> file for just this reason, Google Prettify doesn&rsquo;t support CSS by default so we need to add it.</p>
+                    <p class="hyp">I&rsquo;ll go through how to use each of these in the following sections.</p>
 
-                    <p class="hyp">Finally, <span class="code">prettify.css</span>. This is where we&rsquo;ll apply the styles that syntactically colour the code to look like Brackets; this is where we apply the colours we want.</p>
-
-                    <p class="hyp">I want to move the files into our website directory structure, and I&rsquo;m going to break my own rules in doing so (I&rsquo;m putting a CSS file in the JavaScript folder, it is sensible to keep them together). This is the folder arrangement I&rsquo;m using</p>
+                    <p class="hyp">Look again at the code fragment, this time I&rsquo;ve indicated what span classes have been applied to each part of the code:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-06">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-06.png" data-lightbox="fig-set" data-title="Figure 21.6 - Prettify folder locations in the website">
-                                <img style="max-width: 400px" src="01-pages/21-01-codefrag/02-images/fig-21-06.png" alt="Figure 21.6 - Prettify folder locations in the website">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-16">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-16.png" data-lightbox="fig-set" data-title="Figure 21.16 - CSS span classes assigned by Google Prettify">
+                                <img src="01-pages/21-02-codefrag/02-images/fig-21-16.png" alt="Figure 21.16 - CSS span classes assigned by Google Prettify">
                             </a>
-                            <figcaption>Figure 21.6 &emsp;Prettify folder locations in the website</figcaption>
+                            <figcaption>Figure 21.16 &emsp; CSS span classes assigned by Google Prettify</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">Create the <span class="code">google-prettify</span> folder under <span class="code">21-global/05-js</span>.</p>
-
-                    <p class="hyp">Now select all the files extracted from the zip file that are in the loader folder (<a class="xref js--sc-f21-05" href="#">Figure&nbsp;21.5</a>), copy them all and past them into the new <span class="code">google-prettify</span> folder in the web template.</p>
-
-                    <p class="hyp">At this point I need to explain something, all the files we have copied are minimised files, all the comments, spaces and line breaks have been taken out to make the file smaller (see <a class="hlink nohyp" href="06-09-box.html#js--060905">&sect;&nbsp;6.9.5</a>), this also makes them unreadable. I don&rsquo;t care so much about the <span class="code">lang-....js</span> files, I just use these and don&rsquo;t need to see what is inside them; but I want to modify run-<span class="code">prettify.js</span> and <span class="code">prettify.css</span> so I want the un-minimised versions.</p>
-
-                    <p class="hyp">For the time being delete <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> from the new folder&nbsp;&mdash;&nbsp;<span class="first-use">yes, delete them</span>.</p>
-
-                    <p class="hyp">After the deletions folder should look like this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-07">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-07.png" data-lightbox="fig-set" data-title="Figure 21.7 - Files in the website&rsquo;s google-prettify directory">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-07.png" alt="Figure 21.7 - Files in the website&rsquo;s google-prettify directory">
-                            </a>
-                            <figcaption>Figure 21.7 &emsp;Files in the website&rsquo;s google-prettify directory</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">It has 59 files and the folder called <span class="code">skins</span>.</p>
-
-                    <p class="hyp">Now to get the un-minimised versions of the <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> files.</p>
-
-                    <p class="hyp">We get these from the uncompressed zip file we downloaded from GitHub, this time it is the <span class="code">src</span> folder:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-08">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-08.png" data-lightbox="fig-set" data-title="Figure 21.8 - Google-prettify src directory">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-08.png" alt="Figure 21.8 - Google-prettify src directory">
-                            </a>
-                            <figcaption>Figure 21.8 &emsp;Google-prettify src directory</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The two files need to be put in <em>different</em> locations:</p>
+                    <p class="hyp">In this case there are 6 different ones: <span class="code">.com</span>, <span class="code">.kwd</span>, <span class="code">.lit</span>, <span class="code">.pln</span>, <span class="code">.pun</span> and <span class="code">.str</span>.</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      UNNUMBERED LIST
+      NOTE - HANGING INDENT
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Copy <span class="code">run-prettify.js</span> and paste it into the directory<br><span class="code">21-global/-05-js</span></p></li>
-
-                        <li><p class="hyp">Copy <span class="code">prettify.css </span> and paste it into the directory<br><span class="code">21-global/-05-js directory/google-prettify</span></p></li>
-
-                    </ul>                                       <!-- End of unnumbered list   -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>If you are wondering how I can tell what class has been assigned to which bit of the code, I use a Chrome extension called <a class="hlink nohyp" href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce">CSSViewer</a>, I highly recommend it, it is very useful for quickly identifying the CSS properties applied to any element on a web page.</li>
+                    </ul>                                       <!-- End of note              -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The final set of files should look like the following:</p>
+                    <p class="hyp">If I look at an HTML fragment I get some slightly different classes:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f21-09">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-09.png" data-lightbox="fig-set" data-title="Figure 21.9 - Final 21-global/-05-js directory">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-09.png" alt="Figure 21.9 - Final 21-global/-05-js directory">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-17">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-17.png" data-lightbox="fig-set" data-title="Figure 21.17 - HTML span classes assigned by Google Prettify">
+                                <img src="01-pages/21-02-codefrag/02-images/fig-21-17.png" alt="Figure 21.17 - HTML span classes assigned by Google Prettify">
                             </a>
-                            <figcaption>Figure 21.9 &emsp; Final 21-global/-05-js</figcaption>
-                        </figure>
-<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f21-10">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-10.png" data-lightbox="fig-set" data-title="Figure 21.10 - Final 21-global/-05-js/google-prettify directory">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-10.png" alt="Figure 21.10 - Final 21-global/-05-js/google-prettify directory">
-                            </a>
-                            <figcaption>Figure 21.10 &emsp; Final 21-global/-05-js/google-prettify</figcaption>
+                            <figcaption>Figure 21.17 &emsp; HTML span classes assigned by Google Prettify</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The HTML has some of the same classes as the CSS and a few new ones.</p>
+
+                    <p class="hyp">Google Prettify can assign up to sixteen such classes:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - DENSE TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-dense" id="js--t98-02">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent">Class</th>
+                            <th class="table-cent">Description</th>
+                            <th colspan="2" class="table-cent">Default colour</th>
+                            <th colspan="2" class="table-cent">PS HTML colour</th>
+                            <th colspan="2" class="table-cent">PS CSS<br>colour</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent" style="width: 14.6%"><span class="code">.atn</span></td>
+                            <td class="table-cent" style="width: 28%">Attribute name</td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">#606</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">#758d0f</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #758d0f; border-bottom: 1px solid #758d0f"></td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.atv</span></td>
+                            <td class="table-cent">Attribute value</td>
+                            <td class="table-cent"><span class="code">#080</span></td>
+                            <td class="table-cent" style="background-color: #080; border-bottom: 1px solid #080"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.clo</span></td>
+                            <td class="table-cent">Lisp close bracket</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#4d4d4c</span></td>
+                            <td class="table-cent" style="background-color: #4d4d4c; border-bottom: 1px solid #4d4d4c"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.com</span></td>
+                            <td class="table-cent">Comment</td>
+                            <td class="table-cent"><span class="code">#800</span></td>
+                            <td class="table-cent" style="background-color: #800; border-bottom: 1px solid #800"></td>
+                            <td class="table-cent"><span class="code">#949494</span></td>
+                            <td class="table-cent" style="background-color: #949494; border-bottom: 1px solid #949494"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.dec</span></td>
+                            <td class="table-cent">Declaration</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.fun</span></td>
+                            <td class="table-cent">Function</td>
+                            <td class="table-cent"><span class="code">#f00</span></td>
+                            <td class="table-cent" style="background-color: #f00; border-bottom: 1px solid #f00"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.kwd</span></td>
+                            <td class="table-cent">Keyword</td>
+                            <td class="table-cent"><span class="code">#008</span></td>
+                            <td class="table-cent" style="background-color: #008; border-bottom: 1px solid #008"></td>
+                            <td class="table-cent"><span class="code">#8959a8</span></td>
+                            <td class="table-cent" style="background-color: #8959a8; border-bottom: 1px solid #8959a8"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.lit</span></td>
+                            <td class="table-cent">Literal (a value)</td>
+                            <td class="table-cent"><span class="code">#066</span></td>
+                            <td class="table-cent" style="background-color: #066; border-bottom: 1px solid #066"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">#718c00</span></td>
+                            <td class="table-cent" style="background-color: #718c00; border-bottom: 1px solid #718c00"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.opn</span></td>
+                            <td class="table-cent">Lisp open bracket</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#4d4d4c</span></td>
+                            <td class="table-cent" style="background-color: #4d4d4c; border-bottom: 1px solid #4d4d4c"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.pln</span></td>
+                            <td class="table-cent">Plain text</td>
+                            <td class="table-cent"><span class="code">#000</span></td>
+                            <td class="table-cent" style="background-color: #000; border-bottom: 1px solid #000"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.pun</span></td>
+                            <td class="table-cent">Punctuation</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#535353</span></td>
+                            <td class="table-cent" style="background-color: #535353; border-bottom: 1px solid #535353"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.src</span></td>
+                            <td class="table-cent">Source</td>
+                            <td class="table-cent"><span class="code">none</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.str</span></td>
+                            <td class="table-cent">String</td>
+                            <td class="table-cent"><span class="code">#080</span></td>
+                            <td class="table-cent" style="background-color: #080; border-bottom: 1px solid #080"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.tag</span></td>
+                            <td class="table-cent">Tag</td>
+                            <td class="table-cent"><span class="code">#008</span></td>
+                            <td class="table-cent" style="background-color: #008; border-bottom: 1px solid #008"></td>
+                            <td class="table-cent"><span class="code">#4f77c0</span></td>
+                            <td class="table-cent" style="background-color: #4f77c0; border-bottom: 1px solid #4f77c0"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.typ</span></td>
+                            <td class="table-cent">Type</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.var</span></td>
+                            <td class="table-cent">Variable</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#8757ad</span></td>
+                            <td class="table-cent" style="background-color: #8757ad; border-bottom: 1px solid #8757ad"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="8" class="table-caption">Table 98.2 &emsp; DenseTable</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -1275,284 +1402,6 @@ Date          Issue        Author         Reason for Modification
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
                 <!--     </aside>                                    End of right side bar    -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP SUBSECTION]
-     SUBSECTION - 21.1.2 DOWNLOADING GOOGLE PRETTIFY
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--210102">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-num-box"><h3>21.1.2</h3></div>
-                    <div class="sub-title-text-box"><h3>Modifying Google Prettify</h3></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp">You may be wondering what the difference is between <span class="code">run-prettify.js</span> and <span class="code">prettify.js</span> and why I&rsquo;m not using <span class="code">prettify.js</span>?</p>
-
-                    <p class="hyp">Well, the <span class="code">run-prettify.js</span> is a version of <span class="code">prettify.js</span> that runs automatically after the page has loaded (to use <span class="code">prettify.js</span> the function within it has to be called from within the web page to make it run, this could be done from within our <span class="code">script.js</span> file or even directly in the HTML).</p>
-
-                    <p class="hyp">The <span class="code">run-prettify.js</span> also automatically loads any language files (any of the <span class="code">lang-....js</span> files) that we specify.</p>
-
-                    <p class="hyp">The long and short of it is that using <span class="code">run-prettify.js</span> is much easier and more convenient than using <span class="code">prettify.js</span>, the code within the two does the same thing though.</p>
-
-                    <p class="hyp">There is a problem with <span class="code">run-prettify.js</span> however; the basic way that all this works is that when we tell Google Prettify to display a fragment of code, it analyses that code and identifies the components within it, it is looking for keywords, classes, constants, strings, properties &amp;c. it then puts a <span class="code">&lt;span&gt;</span> element with a particular class around each type of component, and that is all it does.</p>
-
-                    <p class="hyp">The syntactic colouring is then applied with a CSS file, the CSS just applies a colour to each of the classes assigned by <span class="code">run-prettify.js</span> such that keywords get one colour, constants another, classes a third &amp;c.</p>
-
-                    <p class="hyp">Now, the problem:</p>
-
-                    <p class="hyp">The trouble starts with <span class="code">run-prettify.js</span>; it tries to be a bit too clever. The default CSS file that applies the syntactic colouring is the one we&rsquo;ve been copying backwards and forwards: <span class="code">prettify.css</span> and we have a copy of it in our very own <span class="code">google-prettify</span> directory.</p>
-
-                    <p class="hyp">The problem is that <span class="code">run-prettify.js</span> doesn&rsquo;t use our copy of <span class="code">prettify.css</span>. It loads one from the GitHub server, specifically from the address:	<span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader</span>.</p>
-
-                    <p class="hyp"><span class="first-use">&ldquo;Well,&rdquo;</span> you might think, <span class="first-use">&ldquo;that&rsquo;s not a problem, well just load our version and that will take priority&rdquo;</span>. </p>
-
-                    <p class="hyp">That&rsquo;s what I thought too. Didn&rsquo;t work though. And then I realised, I loaded my version of <span class="code">prettify.css</span> in the <span class="code">&lt;head&gt;</span> section of the web page and I loaded it after the <span class="code">&lt;script&gt;</span> for Google Prettify thinking what comes after take priority right?&nbsp;&mdash;&nbsp;Wrong. It does normally, but it is the JavaScript that, in this, case is loading the <span class="code">prettify.css</span> file from the GitHub server; and the first thing that JavaScript does is wait for the page to load before it does anything. The upshot is the GitHub server version of <span class="code">prettify.css</span> doesn&rsquo;t load until after everything else has loaded (including my version of <span class="code">prettify.css</span>), so the server version comes last and takes priority over mine.&nbsp;&mdash;&nbsp;<span class="first-use">Bugger</span>.</p>
-
-                    <p class="hyp"><span class="first-use">So, what to do?</span></p>
-
-                    <p class="hyp"><span class="first-use">Well, re-write the Google Prettify code, that&rsquo;s what. So I did.</span></p>
-
-                    <p class="hyp">Now, this is going to make me look like a right clever bastard. A clever bastard who can dissect someone else&rsquo;s code, even though I&rsquo;m not that familiar with the programming language, fix the problem, put it all back together and have it work, just like that <span class="first-use">(bit like an engineer I suppose)</span>.</p>
-
-                    <p class="hyp">That&rsquo;s not quite how it happened; see the note <a class="hlink js--sc-210103 utx" href="#">here</a>.</p>
-
-                    <p class="hyp">Navigate to <span class="code">21-global/-05-js</span> and open <span class="code">run-prettify.js</span> in Brackets.</p>
-
-                    <p class="hyp">It looks like this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-11">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-11.png" data-lightbox="fig-set" data-title="Figure 21.11 - run-prettify.js in Brackets">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-11.png" alt="Figure 21.11 - run-prettify.js in Brackets">
-                            </a>
-                            <figcaption>Figure 21.11 &emsp;run-prettify.js in Brackets</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">You can tell it&rsquo;s the non-minimised version.</p>
-
-                    <p class="hyp">We have precisely one line to change and that is line 231, scroll down to it, I&rsquo;ve highlighted it in blue in the following image (<a class="xref js--sc-f21-12 utx" href="#">Figure&nbsp;21.12</a>):</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-12">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-12.png" data-lightbox="fig-set" data-title="Figure 21.12 - run-prettify.js line to modify">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-12.png" alt="Figure 21.12 - run-prettify.js line to modify">
-                            </a>
-                            <figcaption>Figure 21.12 &emsp;run-prettify.js line to modify</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">What this is doing is loading the web address:<br> <span class="code" style="font-size: 0.9rem">https://cdn.rawgit.com/google/code-prettify/master/loader</span><br>into a variable called <span class="code">LOADER_BASE_URL</span>.</p>
-
-                    <p class="hyp">It then uses this variable in different places to load the language file and also the CSS file. You can see the language file a bit further down (highlighted in orange)</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint lang-js">&nbsp; &nbsp; script.src = LOADER_BASE_URL
-&nbsp; &nbsp; &nbsp; + '/lang-' + encodeURIComponent(langs[i]) + '.js';
-</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">You can sort of see what this is doing; it is building a source address from various components it has decoded earlier.</p>
-
-                    <p class="hyp">The <span class="code">LOADER_BASE_URL</span> is the web address above:<br><span class="code" style="font-size: 0.9rem">https://cdn.rawgit.com/google/code-prettify/master/loader</span></p>
-
-                    <p class="hyp">It then adds <span class="code">lang-</span>.</p>
-
-                    <p class="hyp">Followed by <span class="code">encodeURIComponent(langs[i])</span>, this contains the last bit of the language specified when the function was called, (this is the bit that comes after the <span class="code">-</span> in all those language files, in our case it will be <span class="code">css</span>).</p>
-
-                    <p class="hyp">Finally it adds <span class="code">.js</span>.</p>
-
-                    <p class="hyp">The whole thing is thus the equivalent of:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint lang-js wrap">script.src ='https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js'</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">It does the same with the CSS file a bit further down (line 277)</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint lang-js wrap">'https://cdn.rawgit.com/google/code-prettify/master/loader/'</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">Now I don&rsquo;t want it looking in <span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader/</span></p>
-
-                    <p class="hyp">I want it to look in our <span class="code">21-global/-05-js/google-prettify</span> directory, that is where <span class="code">prettify.css</span> is.</p>
-
-                    <p class="hyp">The change is easy, modify line 231 to read:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="code-extract">                  <!-- Start of code fragment   -->
-                        <div class="code-area">                 <!-- Start of code holder     -->
-
-                            <pre class="prettyprint linenums:230 lang-js wrap">&nbsp; var LOADER_BASE_URL =
-&nbsp; &nbsp;  '21-global/05-js/google-prettify';
-</pre>
-
-                        </div>
-                        <div class="code-caption"></div>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">And that is it; it is now looking at our website directory and not the GitHub server.</p>
-
-                    <p class="hyp">In Brackets the final thing looks like this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-13">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-13.png" data-lightbox="fig-set" data-title="Figure 21.13 - Modified run-prettify.js">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-13.png" alt="Figure 21.13 - Modified run-prettify.js">
-                            </a>
-                            <figcaption>Figure 21.13 &emsp;Modified run-prettify.js</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">We still need to modify the CSS, but that comes later. This is the only modification we need to make to the JavaScript.</p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar    -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP SUBSECTION]
-     SUBSECTION - 21.1.3 NOT A CLEVER BASTARD, JUST A LUCKY ONE
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--210103">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-num-box"><h3>21.1.3</h3></div>
-                    <div class="sub-title-text-box"><h3>Not a clever bastard, just a lucky one</h3></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp" style="padding-left: 6.4rem"><span class="sml-caps-ns">A note by the author</span></p>
-
-                    <p class="hyp">Truth be told, I didn&rsquo;t wade through all that code and cleverly decide what the problem was&nbsp;&mdash;&nbsp;I was lucky.</p>
-
-                    <p class="hyp">I first started this website in 2016, but I was working on some of the ideas way before that and one of the things I&rsquo;d been looking at was syntactically displaying code fragments, and I found Google Prettify, but I didn&rsquo;t find it on GitHub, it was on a Google code archive site, it is still there: <a class="hlink nohyp" href="https://code.google.com/archive/p/google-code-prettify/">google-code-prettify</a>. The actual code was under the <a class="hlink nohyp" href="https://code.google.com/archive/p/google-code-prettify/downloads">download</a> link.</p>
-
-                    <p class="hyp">I downloaded the file: <span class="code">prettify-4-Mar-2013.tar.bz2</span>.</p>
-
-                    <p class="hyp">I installed it in the website just as it was and it ran perfectly, I could load my <span class="code">prettify.css</span> file and it all just worked, it was using my <span class="code">prettify.css</span>.</p>
-
-                    <p class="hyp">Later on, when I was building the site for real, I loaded the latest version at the time (it was on GitHub by then) it was the 28<sup>th</sup> April 2015 release.</p>
-
-                    <p class="hyp">When I loaded this release on the web site, it stopped using my colours, it was ignoring my <span class="code">prettify.css</span> file and I didn&rsquo;t know why.</p>
-
-                    <p class="hyp">Since I had two versions of <span class="code">run-prettify.js</span>, a 2013 version that worked and a 2015 version that didn&rsquo;t, I decided to see what the differences were.</p>
-
-                    <p class="hyp">I just compared the <span class="code">.js</span> text files. Most of the changes were to the comments so I could ignore those, and there were only a couple of other differences and I could tell (from the comments) that these were to do with the addition of new language files.</p>
-
-                    <p class="hyp">The only thing that looked significant was this:</p>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-14">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-14.png" data-lightbox="fig-set" data-title="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-14.png" alt="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
-                            </a>
-                            <figcaption>Figure 21.14 &emsp;Comparison of earlier (left) and later (right) run-prettify.js files</figcaption>
-                        </figure>
-                    </div>
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">The 2013 file was looking at:<br><span class="code" style="background-color: #FF8983; font-size: 0.85rem">'https://google-code-prettify.googlecode.com/svn/loader';</span></p>
-
-                    <p class="hyp">The 2015 file at:<br><span class="code" style="background-color: #6BDFB8; font-size: 0.85rem">'https://cdn.rawgit.com/google/code-prettify/master/loader';</span></p>
-
-                    <p class="hyp">When I tried to go the top address in a web browser, I got a <span class="menu">404 error</span> (URL not found). The second one returned some kind of access error (it was there, but I wasn&rsquo;t allowed to view it &mdash; fair enough).</p>
-
-                    <p class="hyp">Then it dawned on me, the original file (2013) was trying to load files from an address that no longer existed (it had all been migrated to GitHub), it couldn&rsquo;t load the CSS file, because it wasn&rsquo;t there. If it couldn&rsquo;t load the file, it couldn&rsquo;t overwrite mine so mine took precedence.</p>
-
-                    <p class="hyp">The new site had a perfectly valid web address with the CSS file in residence and so my file was overwritten.</p>
-
-                    <p class="hyp">That&rsquo;s how I figured it out. Just luck really &mdash; story of my life.</p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->

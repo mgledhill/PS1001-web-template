@@ -183,5 +183,14 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     });
    ------------------------------------------------------------------------- */
 
+    $('.js--sc-t21-02').click(function () {
+       $('html, body').animate({scrollTop: $('#js--t21-02').offset().top -60}, 1000);
+    });
+
+    $('.js--sc-t21-03').click(function () {
+       $('html, body').animate({scrollTop: $('#js--t21-03').offset().top -60}, 1000);
+    });
+
+
 
 });                                             /* END OF PAGE READY FUNCTION */
