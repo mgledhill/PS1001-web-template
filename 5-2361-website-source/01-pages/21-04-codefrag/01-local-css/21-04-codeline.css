@@ -1,0 +1,178 @@
+
+
+/* PRACTICALSERIES (c) 2017
+
+*******************************************************************************
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            21-04-CODELINES.CSS
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+-------------------------------------------------------------------------------
+DETAILS
+
+This file is used to change the background colour of individual lines in the
+google Prettify code fragements and format certain elements for css use.
+
+This is done by giving each code fragment a unique ID reference and setting
+modifying the specific properties and lines for that particular fragment.
+
+IDs have the format js--cXXYYZZ
+
+There are three common modifications:
+
+
+1. LINE BACKGROUND SHADING
+This is done to change the background colour of a line of code or a range
+of lines to green (indicating the code has changed).
+
+2. LINE INDENTATION ON LINE WRAP
+Changes how a line is indeneted when it wraps around in the code fragment
+display.
+
+Common indent points:
+
+    Indent 1:   1.46rem
+    Indent 2:   2.92rem
+    Indent 3:   4.38rem
+    Indent 4:   5.85rem
+    Indent 5:   7.33rem
+    Indent 6:   8.79rem
+#js--c11-07 li:nth-child(n+10):nth-child(-n+11) { background: #EAF1DD }
+#js--c11-07 li:nth-child(n+12):nth-child(-n+13) { background: #D6E3BC }
+
+-------------------------------------------------------------------------------
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+-------------------------------------------------------------------------------
+03 May 2019   P26          M. Gledhill    Published
+---------------------------------------------------------------------------- */
+
+
+/* ****************************************************************************
+   REVISION
+   **************************************************************************** */
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P26"; }
+
+/* ****************************************************************************
+   CODE FRAGMENT FORMATTING
+   ************************************************************************* */
+.h-light {
+    font-family: "conc-t3-b";
+    font-size: 0.6rem;
+    border-bottom: 2px solid #ff0000;
+}
+
+.h-light-02 {
+    font-family: "conc-t3-b";
+    font-size: 0.6rem;
+    border-bottom: 2px solid #1F497D;
+}
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-06 - FORMATTING
+   ************************************************************************* */
+#js--c21-06 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-06 {font-size: 0.5rem}
+#js--c21-06 li:nth-child(4) { background: #EAF1DD }
+#js--c21-06 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-06a - FORMATTING
+   ************************************************************************* */
+#js--c21-06 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-06 {font-size: 0.5rem}
+#js--c21-06 li:nth-child(4) { background: #EAF1DD }
+#js--c21-06a li:nth-child(n+4):nth-child(-n+10) { padding-left: 4.38rem }
+/* ************************************************************************* */
+/* ****************************************************************************
+   CODE FRAGMENT c21-07 - FORMATTING
+   ************************************************************************* */
+#js--c21-07 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-07 {font-size: 0.5rem}
+#js--c21-07 li:nth-child(4) { background: #EAF1DD }
+#js--c21-07 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-08 - FORMATTING
+   ************************************************************************* */
+#js--c21-08 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-08 {font-size: 0.5rem}
+#js--c21-08 li:nth-child(4) { background: #EAF1DD }
+#js--c21-08 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-09 - FORMATTING
+   ************************************************************************* */
+#js--c21-09 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-09 {font-size: 0.5rem}
+#js--c21-09 li:nth-child(4) { background: #EAF1DD }
+#js--c21-09 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-10 - FORMATTING
+   ************************************************************************* */
+#js--c21-10 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-10 {font-size: 0.5rem}
+#js--c21-10 li:nth-child(4) { background: #EAF1DD }
+#js--c21-10 li:nth-child(n+5):nth-child(-n+14) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-11 - FORMATTING
+   ************************************************************************* */
+#js--c21-11 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-11 {font-size: 0.5rem}
+#js--c21-11 li:nth-child(4) { background: #EAF1DD }
+#js--c21-11 li:nth-child(n+5):nth-child(-n+19) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-12 - FORMATTING
+   ************************************************************************* */
+#js--c21-12 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-12 {font-size: 0.5rem}
+#js--c21-12 li:nth-child(4) { background: #EAF1DD }
+#js--c21-12 li:nth-child(n+5):nth-child(-n+19) { background: #DBE5F1 }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-13 - FORMATTING
+   ************************************************************************* */
+#js--c21-13 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-13 {font-size: 0.5rem}
+#js--c21-13 li:nth-child(3) { background: #EAF1DD }
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-14 - FORMATTING
+   ************************************************************************* */
+#js--c21-14 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-14 {font-size: 0.5rem}
+#js--c21-14 li:nth-child(3) { background: #EAF1DD }
+
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-15 - FORMATTING
+   ************************************************************************* */
+#js--c21-15 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-15 {font-size: 0.5rem}
+#js--c21-15 li:nth-child(1) { background: #EAF1DD }
+
+/* ************************************************************************* */
+

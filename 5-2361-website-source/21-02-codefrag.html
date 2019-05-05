@@ -1,0 +1,1985 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="understanding how to load GooglePrettify and how it works">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           21-02-CODEFRAG.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+05 May 2019   P26          M. Gledhill    Published
+
+02 May 2019   d-P25.21.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/21-02-codefrag/05-local-js/21-02-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/21-02-codefrag/01-local-css/21-02-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Getting and configuring Google Prettify | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="21-01-codefrag.html#js--210100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="21-03-codefrag.html#js--210300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P26-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>21</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">21</span>Displaying code fragmentse</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 21 codefrag
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-210000" href="21-00-codefrag.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">21</span><span class="toc-lev1-text">Displaying code fragments</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-210100" href="21-01-codefrag.html#js--210100">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.1</span><span class="toc-lev2-text">Getting and configuring  Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-01-codefrag.html#js--210101">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.1</span><span class="toc-lev3-text">Downloading Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210102" href="21-01-codefrag.html#js--210102">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.2</span><span class="toc-lev3-text">Modifying Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210103" href="21-01-codefrag.html#js--210103">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.3</span><span class="toc-lev3-text">Not a clever bastard, just a lucky one</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210200" href="21-02-codefrag.html#js--210200">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.2</span><span class="toc-lev2-text">Loading and understanding Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210201" href="21-02-codefrag.html#js--210201">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.1</span><span class="toc-lev3-text">Loading the Google Prettify JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210202" href="21-02-codefrag.html#js--210202">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.2</span><span class="toc-lev3-text">The Google Prettify JavaScript parameters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210203" href="21-02-codefrag.html#js--210203">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.3</span><span class="toc-lev3-text">Google Prettify supported languages</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210204" href="21-02-codefrag.html#js--210204">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.4</span><span class="toc-lev3-text">Understanding how Google Prettify displays code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210205" href="21-02-codefrag.html#js--210205">
+                        <div class="toc-lev"><span class="toc-lev3-num">21.2.5</span><span class="toc-lev3-text">The Google <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210206" href="21-02-codefrag.html#js--210206">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.6</span><span class="toc-lev3-text">The Practical Series <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210300" href="21-03-codefrag.html#js--210300">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.3</span><span class="toc-lev2-text">Using Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210301" href="21-03-codefrag.html#js--210301">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.1</span><span class="toc-lev3-text">The problem with displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210302" href="21-03-codefrag.html#js--210302">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.2</span><span class="toc-lev3-text">The solution to displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210303" href="21-03-codefrag.html#js--210303">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.3</span><span class="toc-lev3-text">The Practical Series HTML conversion document</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210304" href="21-03-codefrag.html#js--210304">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.4</span><span class="toc-lev3-text">Copying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210305" href="21-03-codefrag.html#js--210305">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.5</span><span class="toc-lev3-text">Understanding the Practical Series classes</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210400" href="21-04-codefrag.html#js--210400">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.4</span><span class="toc-lev2-text">Code fragments, some Worked examples</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210401" href="21-04-codefrag.html#js--210401">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.1</span><span class="toc-lev3-text">HTML without numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210402" href="21-04-codefrag.html#js--210402">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.2</span><span class="toc-lev3-text">HTML with numbers and text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210403" href="21-04-codefrag.html#js--210403">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.3</span><span class="toc-lev3-text">HTML with false line numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210404" href="21-04-codefrag.html#js--210404">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.4</span><span class="toc-lev3-text">HTML with a fixed height fragment (no text wrapping)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210405" href="21-04-codefrag.html#js--210405">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.5</span><span class="toc-lev3-text">CSS with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210406" href="21-04-codefrag.html#js--210406">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.6</span><span class="toc-lev3-text">ANSI C with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210407" href="21-04-codefrag.html#js--210407">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.7</span><span class="toc-lev3-text">Visual Basic with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210408" href="21-04-codefrag.html#js--210408">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.8</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;single line</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210409" href="21-04-codefrag.html#js--210409">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.9</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;multiple lines</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210410" href="21-04-codefrag.html#js--210410">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.10</span><span class="toc-lev3-text">Inline code fragment</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210500" href="21-05-codefrag.html#js--210500">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.5</span><span class="toc-lev2-text">Code fragment enhancements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Colouring particular lines in a code fragment</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210502" href="21-05-codefrag.html#js--210502">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.2</span><span class="toc-lev3-text">Fixing problems with line wrap for indented sections</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 21.2 LOADING AND UNDERSTANDING GOOGLE PRETTIFY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>21.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Loading and understanding Google Prettify</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+
+                    <p class="hyp">This is in two parts, the first bit is how to start Google Prettify on a web page and what options to use, the second bit explains how to display code fragments.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.1 LOADING THE GOOGLE PRETTIFY JAVASCRIPT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Loading the Google Prettify JavaScript</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">You&rsquo;ve probably already guessed, but we run Google Prettify with a <span class="code">&lt;script&gt; </span>element in the <span class="code">&lt;head&gt; of the HTML</span>, just like all the other plugins, here it is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">Loading Google Prettify html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html" id="js--c21-01">&lt;html lang=&quot;en&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&lt;!-- Declare language --&gt;
+&nbsp; &nbsp; &lt;head&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&lt;!-- Start of head section --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Use unicode char set--&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD SCRIPT AREA
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/jquery.waypoints.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/hyphenator.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/lightbox.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;21-global/05-js/run_prettify.js?autoload=true&amp;lang=css&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;11-resources/05-js/script.js&quot;&gt;&lt;/script&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;script src=&quot;01-pages/99-00-typicals/05-local-js/99-00-scroll.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  HEAD CSS LOAD
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/03-fonts/ps-fonts.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/normalise.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;21-global/01-css/lightbox.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/grid.css&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;11-resources/01-css/style.css&quot;&gt;
+&lt;!-- **************************************************************************
+&nbsp; &nbsp;  TITLE
+&nbsp; &nbsp;  ***********************************************************************--&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;title&gt;Website template typicals | PracticalSeries: Web Development&lt;/title&gt;
+&nbsp; &nbsp; &lt;/head&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.1 &emsp; Loading Google Prettify</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now this is a bit different to the JavaScript files we&rsquo;ve loaded, it has parameters:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;script src=&quot;21-global/05-js/run_prettify.js?autoload=true&amp;lang=css&quot;&gt;&lt;/script&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first bit <span class="code">21-global/05-js/run_prettify.js</span> is OK, it just loads the <span class="code">run_prettify.js</span> file from within our website, same as all the other JavaScript we&rsquo;ve loaded.</p>
+
+                    <p class="hyp">But then we get a question mark (<span class="code">?</span>) followed by a load of other stuff:<br><span class="code">autoload=true&amp;lang=css</span>.</p>
+
+                    <p class="hyp">This drove me mad. I could just say it&rsquo;s a way of passing parameters to a JavaScript file (which it is, sort of) and you would probably believe me and we could all just carry on living our lives in ignorant bliss.</p>
+
+                    <p class="hyp">But no, I had to digging.</p>
+
+                    <p class="hyp" style="padding-left: 3rem">Sigh. So here&rsquo;s the rant</p>
+
+                    <p class="hyp" style="padding-left: 3rem">All I can say is:<br><span class="first-use">&ldquo;Fucking. Fuck. Fuck.&nbsp;&mdash;&nbsp;Fucking Linux People.&nbsp;&mdash;&nbsp;Fuckers.&nbsp;&mdash;&nbsp;You should all be shoved up your own felching<sup>&dagger;1</sup> GNU&rdquo;</span>.</p>
+
+                    <p class="hyp" style="padding-left: 3rem">Sigh.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left"><span class="first-use">Felcher</span> [noun, slang]&emsp;A well-established term in the Engineer&rsquo;s Lexicon of Insults. Usually reserved for project managers. <span class="first-use">Er... if you are of a squeamish nature, I shouldn&rsquo;t look it up</span>.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It turns out that the question mark isn&rsquo;t doing anything at all, it is just a separator that has no special meaning in HTML, it treats the question mark just as if the line was <span class="code">&lt;script src=&quot;21-global/05-js/run_prettify.js&quot;&gt;&lt;/script&gt;</span>; it doesn&rsquo;t know what to do with the <span class="code">?</span>  so it ignores the it and everything after it.</p>
+
+                    <p class="hyp"><span class="first-use">So how does it work?</span></p>
+
+                    <p class="hyp">Well, the HTML just runs the JavaScript file <span class="code">run_prettify.js</span>, this file then goes looking for its own call in the HTML, remember we can look up any element with jQuery so it goes off and looks up a script element that has the string <span class="code">run_prettify.js</span> in it (i.e. it finds itself in the HTML code, <span class="first-use">it&rsquo;s a bit like bending over and looking up your own fundament</span>). It then looks for the question mark and copies everything after it (up to the last quote) into a string variables inside itself.</p>
+
+                    <p class="hyp">Once it&rsquo;s done this, it can search the string and separate out the different parameters, each parameter is separated by an ampersand (<span class="code">&amp;</span>). It identifies each parameter, stores it in separate variables or an array and then performs some action based on the value of the parameter.</p>
+
+                    <p class="hyp">The HTML doesn&rsquo;t actually pass anything into the file, in fact HTML is incapable of doing this, it just doesn&rsquo;t have the facility. All we&rsquo;ve done is add some stuff after the filename that is completely ignored by the HTML.</p>
+
+                    <p class="hyp">The JavaScript, once it is called goes sniffing for the stuff at the end of the filename, interprets what&rsquo;s there and does something with it.</p>
+
+                    <p class="hyp">OK, I can see this is quite clever. It is an ingenious way of getting additional data in to JavaScript file and I have a sneaking admiration for whoever thought of it.</p>
+
+                    <p class="hyp">However, there is no explanation of this anywhere. The internet is a big place, and while I could find some hints and few oblique references, I couldn&rsquo;t find a proper explanation. I had to work it out for myself.</p>
+
+                    <p class="hyp">I appreciate that figuring things out is character building, but why is this information a secret? Surely someone could explain these things?</p>
+
+                    <p class="hyp">I blame the FLPs<sup>&dagger;2</sup>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;2</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Fucking Linux People&nbsp;&mdash;&nbsp;I&rsquo;ve promoted them.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.2 THE GOOGLE PRETTIFY JAVASCRIPT PARAMETERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>The Google Prettify JavaScript parameters</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The Google Prettify <span class="code">run_prettify.js</span> is designed as an all-in-one package, it loads everything it needs (even the CSS file) and gets on with the job. We tell it what we want it to do by the string that follows the question mark in the <span class="code">&lt;script&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;script src=&quot;21-global/05-js/run_prettify.js?autoload=true&amp;lang=css&quot;&gt;&lt;/script&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There are three main options:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-01">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 24.5%">Parameter</th>
+                            <th class="table-cent" style="width: 15.0%">Default value</th>
+                            <th class="table-left" style="width: 60.5%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">autorun=[true,false]</span></td>
+                            <td class="table-cent">True</td>
+                            <td class="table-left">Automatically runs Google Prettify when the page has loaded. If set to false, the function must be manually triggered</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">lang=[name]</span></td>
+                            <td class="table-cent">None</td>
+                        <td class="table-left">Loads the language handler for the specific language (what follows the equal sign). It will load a language file called <span class="code">lang-[name].js</span> from the <span class="code">21-global/-05-js/google-prettify</span> directory</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td class="table-cent"><span class="code">skin=[name]</span></td>
+                            <td class="table-cent">None</td>
+                        <td class="table-left">Loads an alternative CSS file to replace <span class="code">prettify.css</span>. If the skin parameter is not present, <span class="code">prettify.css</span> will be loaded by default. If present, the parameter will load <span class="code">[name].css</span> from the <span class="code">21-global/-05-js/google-prettify/skins</span> directory</td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 21.1 &emsp; Google Prettify common parameters</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In the <span class="code">&lt;scrip&gt;</span> element, the first parameter is precede with a question mark (<span class="code">?</span>), each subsequent parameter is separated from the next with an ampersand (<span class="code">&amp;</span>).</p>
+
+                    <p class="hyp">Thus in our case I have the following parameters:</p>
+
+                    <p class="hyp" style="padding-left: 3rem"><span class="code">autorun=true</span></p>
+
+                    <p class="hyp" style="padding-left: 3rem"><span class="code">lang=css</span></p>
+
+                    <p class="hyp">I do not load a skin CSS file, I have changed the default <span class="code">prettify.css</span> file to give me what I want.</p>
+
+                    <p class="hyp">If you want more than one language file, just repeat the lang parameter, e.g.:</p>
+
+                    <p class="hyp" style="padding-left: 3rem"><span class="code">?autoload=true&amp;lang=css&amp;lang-vb</span></p>
+
+                    <p class="hyp">Would load both the CSS language and the Visual Basic language.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.3 LOADING THE GOOGLE PRETTIFY JAVASCRIPT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210203">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Loading the Google Prettify JavaScript</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Google Prettify can interpret certain language by default. These languages are built in and do not need separate <span class="code">lang-[name].js</span> files. Google Prettify. The default languages are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-02">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 30%">language</th>
+                            <th class="table-cent" style="width: 15%"></th>
+                            <th class="table-left" style="width: 55%">Prettyprint Class</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Bash and shell languages</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-bash<br>lang-bsh<br>lang-csh<br>lang-sh</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">C, C++, C#</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-c<br>lang-cpp<br>lang-cs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Coffee Script</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-coffee</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">HTML</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-html</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Java, JavaScript, JSON</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-java<br>lang-js or lang-javascript<br>lang-json</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Perl</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-pl<br>lang-pearl</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Python</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-py or lang-python or lang-cv</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Ruby</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-rb or lang-ruby</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">XML, XSL</td>
+                            <td class="table-cent"></td>
+                            <td class="table-left"><span class="code">lang-xml<br>lang-xsl</span></td>
+                        </tr>
+
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 21.2 &emsp; Google Prettify built in (default) languages</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All these language are present <em>without</em> using the <span class="code">lang=</span> parameter in the script element.</p>
+
+                    <p class="hyp">Other languages have to be loaded (with the use of the <span class="code">lang=</span> parameter) before they can be used. CSS is one of these, hence that is why it is in my Google Prettify script element.</p>
+
+                    <p class="hyp">The following languages are available:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-03">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 22%">language</th>
+                            <th class="table-left" style="width: 26%">File(s)</th>
+                            <th class="table-left" style="width: 26%">Script Parameter</th>
+                            <th class="table-left" style="width: 26%">Prettyprint Class</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Apollo</td>
+                            <td class="table-left"><span class="code">lang-apollo.js<br>lang-aea.js<br>lang-agc.js</span></td>
+                            <td class="table-left"><span class="code">lang=apollo<br>lang=aea<br>lang=agc</span></td>
+                            <td class="table-left"><span class="code">lang-apollo<br>lang-aea<br>lang-agc</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Basic</td>
+                            <td class="table-left"><span class="code">lang-basic.js</span></td>
+                            <td class="table-left"><span class="code">lang=basic</span></td>
+                            <td class="table-left"><span class="code">lang-basic</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Clojure</td>
+                            <td class="table-left"><span class="code">lang-cl.js<br>lang-clj.js</span></td>
+                            <td class="table-left"><span class="code">lang=cl<br>lang=clj</span></td>
+                            <td class="table-left"><span class="code">lang-cl<br>lang-clj</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">CSS</td>
+                            <td class="table-left"><span class="code">lang-css.js</span></td>
+                            <td class="table-left"><span class="code">lang=css</span></td>
+                            <td class="table-left"><span class="code">lang-css</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Dart</td>
+                            <td class="table-left"><span class="code">lang-dart.js</span></td>
+                            <td class="table-left"><span class="code">lang=dart</span></td>
+                            <td class="table-left"><span class="code">lang-dart</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Delphi</td>
+                            <td class="table-left"><span class="code">lang-pascal.js</span></td>
+                            <td class="table-left"><span class="code">lang=pascal</span></td>
+                            <td class="table-left"><span class="code">lang-pascal</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Elixir</td>
+                            <td class="table-left"><span class="code">lang-ex.js<br>lang-exs.js</span></td>
+                            <td class="table-left"><span class="code">lang=erl<br>lang=erlang</span></td>
+                            <td class="table-left"><span class="code">lang-erl<br>lang-erlang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Erlang</td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                            <td class="table-left"><span class="code">lang</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Go</td>
+                            <td class="table-left"><span class="code">lang-go.js</span></td>
+                            <td class="table-left"><span class="code">lang=go</span></td>
+                            <td class="table-left"><span class="code">lang-go</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Haskell</td>
+                            <td class="table-left"><span class="code">lang-hs.js</span></td>
+                            <td class="table-left"><span class="code">lang=hs</span></td>
+                            <td class="table-left"><span class="code">lang-hs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Kotlin</td>
+                            <td class="table-left"><span class="code">lang-kotlin.js</span></td>
+                            <td class="table-left"><span class="code">lang=kotlin</span></td>
+                            <td class="table-left"><span class="code">lang-kotlin</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">LaTeX and TeX</td>
+                            <td class="table-left"><span class="code">lang-latex.js<br>lang-tex.js</span></td>
+                            <td class="table-left"><span class="code">lang=latex<br>lang=tex</span></td>
+                            <td class="table-left"><span class="code">lang-latex<br>lang-tex</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Lisp, Scheme and Racket</td>
+                            <td class="table-left"><span class="code">lang-cl.js<br>lang-el.js<br>lang-lisp.js<br>lang-lsp.js<br>lang-scm.js<br>lang-ss.js<br>lang-rkt.js</span></td>
+                            <td class="table-left"><span class="code">lang=cl<br>lang=el<br>lang=lisp<br>lang=lsp<br>lang=scm<br>lang=ss<br>lang=rkt</span></td>
+                            <td class="table-left"><span class="code">lang-cl<br>lang-el<br>lang-lisp<br>lang-lsp<br>lang-scm<br>lang-ss<br>lang-rkt</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">LLVM</td>
+                            <td class="table-left"><span class="code">lang-ll.js<br>lang-llvm.js</span></td>
+                            <td class="table-left"><span class="code">lang=ll<br>lang=llvm</span></td>
+                            <td class="table-left"><span class="code">lang-ll<br>lang-llvm</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Logtalk</td>
+                            <td class="table-left"><span class="code">lang-logtalk.js</span></td>
+                            <td class="table-left"><span class="code">lang=logtalk</span></td>
+                            <td class="table-left"><span class="code">lang-logtalk</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Lua</td>
+                            <td class="table-left"><span class="code">lang-lua.js</span></td>
+                            <td class="table-left"><span class="code">lang=lua</span></td>
+                            <td class="table-left"><span class="code">lang-lua</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Makefile</td>
+                            <td class="table-left"><span class="code">lang-mk.js</span></td>
+                            <td class="table-left"><span class="code">lang=mk</span></td>
+                            <td class="table-left"><span class="code">lang-mk</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">MathLab</td>
+                            <td class="table-left"><span class="code">lang-mathlab.js</span></td>
+                            <td class="table-left"><span class="code">lang=mathlab</span></td>
+                            <td class="table-left"><span class="code">lang-mathlab</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">MUMPS</td>
+                            <td class="table-left"><span class="code">lang-mumps.js</span></td>
+                            <td class="table-left"><span class="code">lang=mumps</span></td>
+                            <td class="table-left"><span class="code">lang-mumps</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Nemerle</td>
+                            <td class="table-left"><span class="code">lang-nemerle.js</span></td>
+                            <td class="table-left"><span class="code">lang=nemerle</span></td>
+                            <td class="table-left"><span class="code">lang-nemerle</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">OCaml, SML, F#, et al</td>
+                            <td class="table-left"><span class="code">lang-fs.js<br>lang-ml.js</span></td>
+                            <td class="table-left"><span class="code">lang=fs<br>lang=ml</span></td>
+                            <td class="table-left"><span class="code">lang-fs<br>lang-ml</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Pascal</td>
+                            <td class="table-left"><span class="code">lang-pascal.js</span></td>
+                            <td class="table-left"><span class="code">lang=pascal</span></td>
+                            <td class="table-left"><span class="code">lang-pascal</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">PHP</td>
+                            <td class="table-left"><span class="code">lang-php.js</span></td>
+                            <td class="table-left"><span class="code">lang=php</span></td>
+                            <td class="table-left"><span class="code">lang-php</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Protocol buffers</td>
+                            <td class="table-left"><span class="code">lang-proto.js</span></td>
+                            <td class="table-left"><span class="code">lang=proto</span></td>
+                            <td class="table-left"><span class="code">lang-proto</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">R and S</td>
+                            <td class="table-left"><span class="code">lang-r.js<br>lang-s.js</span></td>
+                            <td class="table-left"><span class="code">lang=r<br>lang=s</span></td>
+                            <td class="table-left"><span class="code">lang-r<br>lang-s</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Regex</td>
+                            <td class="table-left"><span class="code">lang-regex.js</span></td>
+                            <td class="table-left"><span class="code">lang=regex</span></td>
+                            <td class="table-left"><span class="code">lang-regex</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Rust</td>
+                            <td class="table-left"><span class="code">lang-rc.js<br>lang-rs.js<br>lang-rust.js</span></td>
+                            <td class="table-left"><span class="code">lang=rc<br>lang=rs<br>lang=rust</span></td>
+                            <td class="table-left"><span class="code">lang-rc<br>lang-rs<br>lang-rust</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Scala</td>
+                            <td class="table-left"><span class="code">lang-scala.js</span></td>
+                            <td class="table-left"><span class="code">lang=scala</span></td>
+                            <td class="table-left"><span class="code">lang-scala</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">S-plus</td>
+                            <td class="table-left"><span class="code">lang-splus.js</span></td>
+                            <td class="table-left"><span class="code">lang=splus</span></td>
+                            <td class="table-left"><span class="code">lang-splus</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">SQL</td>
+                            <td class="table-left"><span class="code">lang-sql.js</span></td>
+                            <td class="table-left"><span class="code">lang=sql</span></td>
+                            <td class="table-left"><span class="code">lang-sql</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">VHDL</td>
+                            <td class="table-left"><span class="code">lang-vhdl.js<br>lang-vhd.js</span></td>
+                            <td class="table-left"><span class="code">lang=ex<br>lang=exs</span></td>
+                            <td class="table-left"><span class="code">lang-ex<br>lang-exs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Visual Basic</td>
+                            <td class="table-left"><span class="code">lang-vb.js<br>lang-vbs.js</span></td>
+                            <td class="table-left"><span class="code">lang=ex<br>lang=exs</span></td>
+                            <td class="table-left"><span class="code">lang-ex<br>lang-exs</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">YAML</td>
+                            <td class="table-left"><span class="code">lang-yaml.js<br>lang-yml.js</span></td>
+                            <td class="table-left"><span class="code">lang=erl<br>lang=erlang</span></td>
+                            <td class="table-left"><span class="code">lang-erl<br>lang-erlang</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="4" class="table-caption">Table 21.3 &emsp; Google Prettify other languages (must be loaded explicitly)</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Yes, I&rsquo;ve never heard of most of them either &mdash; still thank God MUMPS is there, what would we do without it.</span></p>
+
+                    <p class="hyp">To use any of these languages, the entry in the script parameter column must be entered in the <span class="code">&lt;script&gt;</span> element in the <span class="code">&lt;head&gt;</span> of the HTML. For example to interpret SQL, the script entry should be:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;script src=&quot;21-global/05-js/run_prettify.js?autoload=true&amp;lang=sql&quot;&gt;&lt;/script&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And the file <span class="code">lang-sql.js</span> must be available in the directory:<br> <span class="code">21-global/-05-js/google-prettify/</span>.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.4 UNDERSTANDING HOW GOOGLE PRETTIFY DISPLAYS CODE FRAGMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Understanding how Google Prettify displays code fragments</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Google Prettify works by analysing any code fragment that is present on a web page. The code fragment must be contained in the semantic element <span class="code">&lt;pre&gt;...&lt;/pre&gt;</span> or in the sematic element <span class="code">&lt;code&gt;...&lt;/code&gt;</span> and in both cases that element must be given the class <span class="code">prettyprint</span>.</p>
+
+                    <p class="hyp">This is an example of the HTML code needed to display a CSS code fragment:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c21-01a">&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;css&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;pre class=&quot;prettyprint linenums lang-css&quot;&gt;&nbsp;
+.list-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;Numbered list */
+&nbsp; &nbsp; font-family: &quot;conc-i3-r&quot;;
+&nbsp; &nbsp; margin-left: 5rem;
+&nbsp; &nbsp; /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-num li p {
+&nbsp; &nbsp; font-family: &quot;eqty-ta-r&quot;;
+&nbsp; &nbsp; padding-left: 1rem;
+&nbsp; &nbsp; margin-bottom: 0.85rem;
+}
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code 99.3 &amp;mdash; Code Fragment&amp;mdash;CSS&lt;/div&gt;&nbsp;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code fragment --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The code between the <span class="code">&lt;pre&gt;...&lt;/pre&gt;</span> tags is displayed as:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css wrap">
+.list-num {&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* TEXT STYLE&nbsp;-&nbsp;Numbered list */
+&nbsp; &nbsp; font-family: &quot;conc-i3-r&quot;;
+&nbsp; &nbsp; margin-left: 5rem;
+&nbsp; &nbsp; /* font-feature-settings: 'liga' 1, 'ss01' 0; */
+}
+.list-num li p {
+&nbsp; &nbsp; font-family: &quot;eqty-ta-r&quot;;
+&nbsp; &nbsp; padding-left: 1rem;
+&nbsp; &nbsp; margin-bottom: 0.85rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 99.3 &mdash; Code Fragment&mdash;CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The three <span class="code">&lt;div&gt;</span> elements at the top of the code and the caption <span class="code">&lt;div&gt;</span> at the bottom are containers to hold the code extract and give it a heading, a bit like figures and tables and done in much the same way, I explain those in sections&nbsp;<a class="hlink nohyp" href="14-00-tables.html#js--000000">14</a> &amp; <a class="hlink nohyp" href="15-00-figures.html#js--000000">15</a> (it is just the usual styling stuff, fonts, background colours &amp;c.).</p>
+
+                    <p class="hyp">The important bit is the <span class="code">&lt;pre&gt;</span> element:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;pre class=&quot;prettyprint linenums lang-css&gt;&nbsp; </pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Google Prettify, started by the <span class="code">run_prettify.js</span> software is looking for a <span class="code">&lt;pre&gt;</span> element with the class <span class="code">prettyprint</span>. If it finds one, it tries to interpret everything between the opening <span class="code">&lt;pre&gt;</span> and closing <span class="code">&lt;/pre&gt;</span> as whatever is specified in the <span class="code">lang-...</span> class (the <span class="code">lang-...</span> class for each language are specified in the prettyprint class columns of <a class="xref js--sc-t21-02" href="#">Table&nbsp;21.2</a> and <a class="xref js--sc-t21-03" href="#">Table&nbsp;21.3</a>)</p>
+
+                    <p class="hyp">The way Google Prettify works is it looks at the code contained in the <span class="code">&lt;pre&gt;</span> (or <span class="code">&lt;code&gt;</span>) element, it examines it in terms of whatever language has been specified for that bit of code (the <span class="code">lang-...</span> class) and works out which bits of the code are keywords, functions, strings, constants, tags &amp;c. and when it figures it out, it puts a <span class="code">&lt;span&gt;...&lt;/span&gt;</span> element around it with a class that represents what it is (e.g. <code class="prettyprint">&lt;span class=&quot;kwd&quot;&gt;font-family&lt;/span&gt;</code>).</p>
+
+                    <p class="hyp">I.e. wherever <span class="code">font-family</span> (or similar property) is found in the code, it is given a <span class="code">span</span> with the class <span class="code">kwd</span>.</p>
+
+                    <p class="hyp">This class (<span class="code">kwd</span> in this case) can then be given a particular colour by assigning CSS properties to it. This is done in the <span class="code">pretty.css</span> file, that is what it is for.</p>
+
+                    <p class="hyp">I&rsquo;ll come to the <span class="code">pretty.css</span> file in a moment, but first I&rsquo;ll look at the options available to the <span class="code">prettyprint</span> operation.</p>
+
+                    <p class="hyp">Where Google Prettify finds a <span class="code">&lt;pre&gt;</span> (or <span class="code">&lt;code&gt;</span>) element with the class <span class="code">prettyprint</span>, it also looks for other classes to be present and does certain things if they are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t21-04">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent" style="width: 20%">Class</th>
+                            <th class="table-cent" style="width: 40%">Function</th>
+                            <th class="table-cent" style="width: 40%">Example</th>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">linenums</span></td>
+                            <td class="table-left">If present turns on line numbering at the left side of each line of code.
+If missing there are no numbers</td>
+                            <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums lang-css&gt;</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">linenums:n</span></td>
+                            <td class="table-left">Starts the line numbering at value n</td>
+                            <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums:25 lang-css&gt;</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent"><span class="code">wrap</span></td>
+                            <td class="table-left">Forces a line to wrap around, rather than use a horizontal scroll bar.
+                                If missing, any text that is too long for the <span class="code">&lt;pre&gt;</span> container will not be displayed, and a horizontal scroll bar will appear (allowing the rest of the line to be viewed)</td>
+                        <td class="table-left"><span class="code">&lt;pre class=&quot;prettyprint linenums wrap lang-css&gt;</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 21.4 &emsp; Google Prettify command classes</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ll go through how to use each of these in the following sections.</p>
+
+                    <p class="hyp">Look again at the code fragment, this time I&rsquo;ve indicated what span classes have been applied to each part of the code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-16">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-16.png" data-lightbox="fig-set" data-title="Figure 21.16 - CSS span classes assigned by Google Prettify">
+                                <img src="01-pages/21-02-codefrag/02-images/fig-21-16.png" alt="Figure 21.16 - CSS span classes assigned by Google Prettify">
+                            </a>
+                            <figcaption>Figure 21.16 &emsp; CSS span classes assigned by Google Prettify</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In this case there are 6 different ones: <span class="code">.com</span>, <span class="code">.kwd</span>, <span class="code">.lit</span>, <span class="code">.pln</span>, <span class="code">.pun</span> and <span class="code">.str</span>.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>If you are wondering how I can tell what class has been assigned to which bit of the code, I use a Chrome extension called <a class="hlink nohyp" href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce">CSSViewer</a>, I highly recommend it, it is very useful for quickly identifying the CSS properties applied to any element on a web page.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If I look at an HTML fragment I get some slightly different classes:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-17">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-17.png" data-lightbox="fig-set" data-title="Figure 21.17 - HTML span classes assigned by Google Prettify">
+                                <img src="01-pages/21-02-codefrag/02-images/fig-21-17.png" alt="Figure 21.17 - HTML span classes assigned by Google Prettify">
+                            </a>
+                            <figcaption>Figure 21.17 &emsp; HTML span classes assigned by Google Prettify</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The HTML has some of the same classes as the CSS and a few new ones.</p>
+
+                    <p class="hyp">Google Prettify can assign up to sixteen such classes:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - DENSE TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-dense" id="js--t98-02">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th class="table-cent">Class</th>
+                            <th class="table-cent">Description</th>
+                            <th colspan="2" class="table-cent">Default colour</th>
+                            <th colspan="2" class="table-cent">PS HTML colour</th>
+                            <th colspan="2" class="table-cent">PS CSS<br>colour</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent" style="width: 14.6%"><span class="code">.atn</span></td>
+                            <td class="table-cent" style="width: 28%">Attribute name</td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">#606</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">#758d0f</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #758d0f; border-bottom: 1px solid #758d0f"></td>
+                            <td class="table-cent" style="width: 16.13%"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="width: 3%; background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.atv</span></td>
+                            <td class="table-cent">Attribute value</td>
+                            <td class="table-cent"><span class="code">#080</span></td>
+                            <td class="table-cent" style="background-color: #080; border-bottom: 1px solid #080"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.clo</span></td>
+                            <td class="table-cent">Lisp close bracket</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#4d4d4c</span></td>
+                            <td class="table-cent" style="background-color: #4d4d4c; border-bottom: 1px solid #4d4d4c"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.com</span></td>
+                            <td class="table-cent">Comment</td>
+                            <td class="table-cent"><span class="code">#800</span></td>
+                            <td class="table-cent" style="background-color: #800; border-bottom: 1px solid #800"></td>
+                            <td class="table-cent"><span class="code">#949494</span></td>
+                            <td class="table-cent" style="background-color: #949494; border-bottom: 1px solid #949494"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.dec</span></td>
+                            <td class="table-cent">Declaration</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.fun</span></td>
+                            <td class="table-cent">Function</td>
+                            <td class="table-cent"><span class="code">#f00</span></td>
+                            <td class="table-cent" style="background-color: #f00; border-bottom: 1px solid #f00"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.kwd</span></td>
+                            <td class="table-cent">Keyword</td>
+                            <td class="table-cent"><span class="code">#008</span></td>
+                            <td class="table-cent" style="background-color: #008; border-bottom: 1px solid #008"></td>
+                            <td class="table-cent"><span class="code">#8959a8</span></td>
+                            <td class="table-cent" style="background-color: #8959a8; border-bottom: 1px solid #8959a8"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.lit</span></td>
+                            <td class="table-cent">Literal (a value)</td>
+                            <td class="table-cent"><span class="code">#066</span></td>
+                            <td class="table-cent" style="background-color: #066; border-bottom: 1px solid #066"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">#718c00</span></td>
+                            <td class="table-cent" style="background-color: #718c00; border-bottom: 1px solid #718c00"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.opn</span></td>
+                            <td class="table-cent">Lisp open bracket</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#4d4d4c</span></td>
+                            <td class="table-cent" style="background-color: #4d4d4c; border-bottom: 1px solid #4d4d4c"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.pln</span></td>
+                            <td class="table-cent">Plain text</td>
+                            <td class="table-cent"><span class="code">#000</span></td>
+                            <td class="table-cent" style="background-color: #000; border-bottom: 1px solid #000"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.pun</span></td>
+                            <td class="table-cent">Punctuation</td>
+                            <td class="table-cent"><span class="code">#660</span></td>
+                            <td class="table-cent" style="background-color: #660; border-bottom: 1px solid #660"></td>
+                            <td class="table-cent"><span class="code">#535353</span></td>
+                            <td class="table-cent" style="background-color: #535353; border-bottom: 1px solid #535353"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.src</span></td>
+                            <td class="table-cent">Source</td>
+                            <td class="table-cent"><span class="code">none</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                            <td class="table-cent"><span class="code">#404030</span></td>
+                            <td class="table-cent" style="background-color: #404030; border-bottom: 1px solid #404030"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.str</span></td>
+                            <td class="table-cent">String</td>
+                            <td class="table-cent"><span class="code">#080</span></td>
+                            <td class="table-cent" style="background-color: #080; border-bottom: 1px solid #080"></td>
+                            <td class="table-cent"><span class="code">#e98a0b</span></td>
+                            <td class="table-cent" style="background-color: #e98a0b; border-bottom: 1px solid #e98a0b"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.tag</span></td>
+                            <td class="table-cent">Tag</td>
+                            <td class="table-cent"><span class="code">#008</span></td>
+                            <td class="table-cent" style="background-color: #008; border-bottom: 1px solid #008"></td>
+                            <td class="table-cent"><span class="code">#4f77c0</span></td>
+                            <td class="table-cent" style="background-color: #4f77c0; border-bottom: 1px solid #4f77c0"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.typ</span></td>
+                            <td class="table-cent">Type</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#4271ae</span></td>
+                            <td class="table-cent" style="background-color: #4271ae; border-bottom: 1px solid #4271ae"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading" style="height: 3em"></td>
+                            <td class="table-cent"><span class="code">.var</span></td>
+                            <td class="table-cent">Variable</td>
+                            <td class="table-cent"><span class="code">#606</span></td>
+                            <td class="table-cent" style="background-color: #606; border-bottom: 1px solid #606"></td>
+                            <td class="table-cent"><span class="code">#8757ad</span></td>
+                            <td class="table-cent" style="background-color: #8757ad; border-bottom: 1px solid #8757ad"></td>
+                            <td class="table-cent"><span class="code">As HTML</span></td>
+                            <td class="table-cent" style="background-color: #fff; border-bottom: 1px solid #fff"></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="8" class="table-caption">Table 98.2 &emsp; DenseTable</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">span</span> class that gets assigned to a component depends on the language class that has been set; Google Prettify will then identify each component and assign the relevant class.</p>
+
+                    <p class="hyp">The <span class="code">span</span> classes generally assign a colour to that class that syntactically colours the code and gives it the appearances shown in <a class="xref js--sc-f21-16" href="#">Figure&nbsp;21.16</a> and <a class="xref js--sc-f21-17" href="#">Figure&nbsp;21.17</a>.</p>
+
+                    <p class="hyp">The colours used (you&rsquo;ve probably guessed) are set in the <span class="code">prettify.css</span> file that is automatically loaded by <span class="code">run_prettify.js</span>.</p>
+
+                    <p class="hyp">Let&rsquo;s look at that next.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.5 UNDERSTANDING HOW GOOGLE PRETTIFY DISPLAYS CODE FRAGMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210205">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Understanding how Google Prettify displays code fragments</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The <span class="code">prettify.css</span> file is loaded by default by the <span class="code">run_prettify.js</span> JavaScript file that is loaded by the web page (<a class="xref js--sc-210201" href="#">&sect;&nbsp;21.2.1</a>).</p>
+
+                    <p class="hyp">The <span class="code">prettify.css</span> file came with Google Prettify (we downloaded the un-minimised version of it, see <a class="hlink nohyp" href="21-01-codefrag.html#js--f21-08">&sect;&nbsp;21.1.1</a>), you will find it in the <span class="code">21-global/05-js/google-prettify</span> directory.</p>
+
+                    <p class="hyp">The default file looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">default prettify.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-css" id="js--c21-02">.pln { color: #000 }&nbsp; /* plain text */
+
+@media screen {
+&nbsp; .str { color: #080 }&nbsp; /* string content */
+&nbsp; .kwd { color: #008 }&nbsp; /* a keyword */
+&nbsp; .com { color: #800 }&nbsp; /* a comment */
+&nbsp; .typ { color: #606 }&nbsp; /* a type name */
+&nbsp; .lit { color: #066 }&nbsp; /* a literal value */
+&nbsp; /* punctuation, lisp open bracket, lisp close bracket */
+&nbsp; .pun, .opn, .clo { color: #660 }
+&nbsp; .tag { color: #008 }&nbsp; /* a markup tag name */
+&nbsp; .atn { color: #606 }&nbsp; /* a markup attribute name */
+&nbsp; .atv { color: #080 }&nbsp; /* a markup attribute value */
+&nbsp; .dec, .var { color: #606 }&nbsp; /* a declaration; a variable name */
+&nbsp; .fun { color: red }&nbsp; /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+&nbsp; .str { color: #060 }
+&nbsp; .kwd { color: #006; font-weight: bold }
+&nbsp; .com { color: #600; font-style: italic }
+&nbsp; .typ { color: #404; font-weight: bold }
+&nbsp; .lit { color: #044 }
+&nbsp; .pun, .opn, .clo { color: #440 }
+&nbsp; .tag { color: #006; font-weight: bold }
+&nbsp; .atn { color: #404 }
+&nbsp; .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { background: #eee }
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.2 &emsp; Default prettify.css file</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can see that basically all it does is assign colours to the various span classes; it does it in two goes, one if the code is being displayed on a screen (the only one we are interested in) and a higher contrast version if it is being printed out.</p>
+
+                    <p class="hyp">It also assigns some properties for an ordered list (the ordered list is used to display line numbers).</p>
+
+                    <p class="hyp">OK, that is the default <span class="code">prettify.css</span> that came with Google Prettify. Take a good look, we aren&rsquo;t going to use any of it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.2.6 THE PRACTICAL SERIES PRETTIFY.CSS FILE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210206">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.2.6</h3></div>
+                    <div class="sub-title-text-box"><h3>The Practical Series <span class="code">prettify.css</span> file</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the file we are going to use:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">practical series prettify.css</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-css" id="js--c21-03">/* ****************************************************************************
+&nbsp;  BASE FORMATTING FOR PRETTYPRINT
+&nbsp;  ****************************************************************************
+&nbsp;  The .prettyprint class applied to either a &lt;pre&gt; or &lt;code&gt; element cause
+&nbsp;  the code to be displayed with span classes for each of the identifiable
+&nbsp;  elements of the code (this is done client side after the page has loaded).
+
+&nbsp;  This section formats the basic prettyprint class and the subsequent
+&nbsp;  classes associated with either &lt;pre&gt; or &lt;code&gt;.
+
+&nbsp;  The basic differences between the &lt;pre&gt; and &lt;code&gt; usage is:
+
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;pre&gt;&nbsp;  Holds a section of code that appears as a separate block
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; on the web page (optionally with a filename header and block
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; caption footer).
+
+&nbsp; &nbsp; &nbsp;  &lt;code&gt;&nbsp;  Holds a section of inline code that will appear formatted
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; within a line of text
+
+&nbsp;  ************************************************************************* */
+
+.prettyprint { border: 0 !important }
+
+pre.prettyprint {
+&nbsp; &nbsp; background: #fbfbfb;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.61rem;
+&nbsp; &nbsp; line-height: 135%;
+&nbsp; &nbsp; width: 99%;
+&nbsp; &nbsp; padding-left: 2.5rem;
+&nbsp; &nbsp; overflow: auto;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* will apply scroll bars if required */
+}
+
+code.prettyprint {
+&nbsp; &nbsp; background: #fff;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.85rem;
+}
+
+.wrap{white-space: pre-wrap;}
+
+/* ----------------------------------------------------------------------------
+&nbsp;  LINE NUMBERING
+&nbsp;  ----------------------------------------------------------------------------
+&nbsp;  adding the class .linenums to the &lt;pre&gt; element will add line numbering to
+&nbsp;  the block of code.
+
+&nbsp;  Line numbers are added every line, line numbers start at 1 unless specified
+&nbsp;  other wise (add the class linenums:10 to start numbering at 10)
+&nbsp;  ------------------------------------------------------------------------- */
+ol.linenums {
+&nbsp; &nbsp; margin-top: 0;
+&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; color: #949494;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}
+
+/* ----------------------------------------------------------------------------
+&nbsp;  TOKEN COLOURING
+&nbsp;  ----------------------------------------------------------------------------
+&nbsp;  Prettify adds span classes to the individual elements (tokens) within the
+&nbsp;  code; these are individually coloured in the following section
+&nbsp;  ------------------------------------------------------------------------- */
+
+.pln { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* plain (default) text colour */
+.str { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* string content */
+.kwd { color: #8959a8; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* keyword */
+.com { color: #949494; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* comment */
+.typ { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable type&nbsp;-&nbsp;e.g. int */
+.lit { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* literal value */
+.pun { color: #535353; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* punctuation */
+.opn { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp open bracket */
+.clo { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp close bracket */
+.tag { color: #4f77c0; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup tag name */
+.atn { color: #758d0f; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute name */
+.atv { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute value */
+.dec { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* declaration */
+.var { color: #8757ad; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable name */
+.fun { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* function name */
+
+.lang-css .pln { color: #4271ae;}&nbsp;
+.lang-css .lit { color: #718c00;}</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.3 &emsp; Default prettify.css file</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">My file is bigger than the original (but it does have more comments in it)</p>
+
+                    <p class="hyp">Let&rsquo;s go through it. The first bit turns off the borders that have been activated somewhere in the JavaScript (I don&rsquo;t want those borders), the <span class="code">!important</span> just makes my instruction take precedence over the JavaScript. Those borders are definitely turned off.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.prettyprint { border: 0 !important }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Next I set the font and various other fairly standard properties:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">pre.prettyprint {
+&nbsp; &nbsp; background: #fbfbfb;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.61rem;
+&nbsp; &nbsp; line-height: 135%;
+&nbsp; &nbsp; width: 99%;
+&nbsp; &nbsp; padding-left: 2.5rem;
+&nbsp; &nbsp; overflow: auto;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  /* will apply scroll bars if required */
+}
+
+code.prettyprint {
+&nbsp; &nbsp; background: #fff;
+&nbsp; &nbsp; font-family: &quot;trip-t4-r&quot;;
+&nbsp; &nbsp; font-size: 0.85rem;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve split this into two, one for the <span class="code">&lt;pre&gt;</span> element and one for the <span class="code">&lt;code&gt;</span> element, Google Prettify will use either element, I use the <span class="code">&lt;pre&gt;</span> to put a code fragment in its own box and I use the <span class="code">&lt;code&gt;</span> element to display inline code (code that fits into a line of text), I give example of each in <a class="hlink nohyp" href="21-04-codefrag.html#js--210400">&sect;&nbsp;21.4</a>.</p>
+
+                    <p class="hyp">I&rsquo;ve set them to use the Triplicate font and defined the various font sizes, paddings, widths, line heights, &amp;c. the usual stuff.</p>
+
+                    <p class="hyp">The width is set to 99% rather than 100%, this is to accommodate any scroll bars that might be needed, the scroll bar extends slightly outside of the container and setting a width of 99% just lines things up properly.</p>
+
+                    <p class="hyp">There is one property here that we haven&rsquo;t used before:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">&nbsp; &nbsp; overflow: auto;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">overflow</span> property assigns scroll bars to an HTML element if its content is too big for its container. The <span class="code">auto</span> value just means that both horizontal and vertical scroll bars will be applied, but only if needed. It makes the code fragment look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-18">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-18.png" data-lightbox="fig-set" data-title="Figure 21.18 - Automatic application of scroll bars">
+                                <img style="max-width: 746px" src="01-pages/21-02-codefrag/02-images/fig-21-18.png" alt="Figure 21.18 - Automatic application of scroll bars">
+                            </a>
+                            <figcaption>Figure 21.18 &emsp; Automatic application of scroll bars</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next thing is the <span class="code">wrap</span> class, this is a class that we can apply with the <span class="code">prettyprint</span> class to make the text wrap in the element (see <a class="xref js--sc-t21-04" href="#">Table&nbsp;21.4</a>)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.wrap {white-space: pre-wrap;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">white-space</span> property is another new property, it determines how the browser should wrap text that goes over the end of line, the <span class="code">pre-wrap</span> value ensures that when text is wrapped (at a space), the space character is preserved; i.e. it will be present in the correct place if the code fragment is copied from within the browser window. This is important for code fragments; we don&rsquo;t want spaces to go missing.</p>
+
+                    <p class="hyp">The <span class="code">wrap</span> class does the following: the first image is a line of code without the wrap class, the second one with it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-19">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-19.png" data-lightbox="fig-set" data-title="Figure 21.19 - Code fragment without the wrap class">
+                                <img style="max-width: 747px" src="01-pages/21-02-codefrag/02-images/fig-21-19.png" alt="Figure 21.19 - Code fragment without the wrap class">
+                            </a>
+                            <figcaption>Figure 21.19 &emsp; Code fragment without the wrap class</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-20">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-20.png" data-lightbox="fig-set" data-title="Figure 21.20 - Same code fragment with the wrap class">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-20.png" alt="Figure 21.20 - Same code fragment with the wrap class">
+                            </a>
+                            <figcaption>Figure 21.20 &emsp; Same code fragment with the wrap class</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next thing is the line numbers; if a <span class="code">linenum</span> class is applied, then line numbers will be displayed at the left side of the code fragment. These line numbers are just an ordered list applied by the JavaScript. I covered ordered lists in <a class="hlink nohyp" href="12-02-lists.html#js--120200">&sect;&nbsp;12.2</a>, the CSS here just sets the basic properties for the numbers:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">ol.linenums {
+&nbsp; &nbsp; margin-top: 0;
+&nbsp; &nbsp; margin-bottom: 0;
+&nbsp; &nbsp; color: #949494;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The top and bottom margins are removed (I don&rsquo;t actually think there were any to start with). Next the text colour of the line numbers is set to a lighter grey (<span class="code">#949494</span>).</p>
+
+                    <p class="hyp">The next bit is a little strange; it selects the <span class="code">li</span> elements, but has an additional selector <span class="code">L0</span> to <span class="code">L9</span>. These represent the individual line entries <span class="code">L0</span> indicates the first line and every such occurrence in each decade, <span class="code">L0</span> thus represents line 1, line 11, line 21, line 31 &amp;c.</p>
+
+                    <p class="hyp"><span class="code">L1</span> represents the second line e.g. line 2, line 12, line 22 &amp;c. <span class="code">L9</span> being the 10th entry e.g. line 10, line 20, line 30 &amp;c.</p>
+
+                    <p class="hyp">Here I&rsquo;ve ensured that every line has exactly the same properties:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;ve made the background colour transparent <span class="code">rgba(255, 255, 255, 0)</span>, this means that each line will have the same background colour set for the prettyprint class (<span class="code">#fbfbfb</span>) in this case.</p>
+
+                    <p class="hyp">Setting <span class="code">list-style-type: decimal;</span> makes the line number use decimal notation.</p>
+
+                    <p class="hyp">If alternate line colouring was required, the following lines could be added:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c21-03a">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 { background-color: #eee }
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This would apply a different background colour to each alternate line:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-21">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-21.png" data-lightbox="fig-set" data-title="Figure 21.21 - Alternate line colouring">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-21.png" alt="Figure 21.21 - Alternate line colouring">
+                            </a>
+                            <figcaption>Figure 21.21 &emsp; Alternate line colouring</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is also possible to number only certain lines:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-css" id="js--c21-03b">li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+&nbsp; &nbsp; background-color: rgba(255, 255, 255, 0);
+&nbsp; &nbsp; list-style-type: none;
+}
+li.L4, li.L9 { list-style-type: decimal }</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It gives:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-22">
+                            <a href="01-pages/21-02-codefrag/02-images/fig-21-22.png" data-lightbox="fig-set" data-title="Figure 21.22 - Specific line numbering">
+                                <img style="max-width: 745px" src="01-pages/21-02-codefrag/02-images/fig-21-22.png" alt="Figure 21.22 - Specific line numbering">
+                            </a>
+                            <figcaption>Figure 21.22 &emsp; Specific line numbering</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The final bit of <span class="code">pretty.css</span> sets all the colours:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.pln { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* plain (default) text colour */
+.str { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* string content */
+.kwd { color: #8959a8; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* keyword */
+.com { color: #949494; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* comment */
+.typ { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable type&nbsp;-&nbsp;e.g. int */
+.lit { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* literal value */
+.pun { color: #535353; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* punctuation */
+.opn { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp open bracket */
+.clo { color: #4d4d4c; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* lisp close bracket */
+.tag { color: #4f77c0; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup tag name */
+.atn { color: #758d0f; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute name */
+.atv { color: #e98a0b; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* markup attribute value */
+.dec { color: #404030; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* declaration */
+.var { color: #8757ad; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* variable name */
+.fun { color: #4271ae; }&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* function name */</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Easy. There is just a little more:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (CSS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-css">.lang-css .pln { color: #4271ae;}&nbsp;
+.lang-css .lit { color: #718c00;}</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This changes the colour if the code is CSS (if it is it will have the class <span class="code">lang-css</span>).</p>
+
+                    <p class="hyp">All these colours have been picked to make the code fragments have similar colouring to Brackets.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-01-codefrag.html#js--210100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-03-codefrag.html#js--210300">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

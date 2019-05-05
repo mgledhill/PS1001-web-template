@@ -1,0 +1,1017 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="How to get and configure GooglePrettify">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           21-01-CODEFRAG.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+05 May 2019   P26          M. Gledhill    Published
+
+02 May 2019   d-P25.21.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/21-01-codefrag/05-local-js/21-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/21-01-codefrag/01-local-css/21-01-codeline.css">-->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Getting and configuring Google Prettify | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="21-00-codefrag.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="21-02-codefrag.html#js--210200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Published-P26-4BABC5.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>21</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">21</span>Displaying code fragmentse</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 21 codefrag
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-210000" href="21-00-codefrag.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">21</span><span class="toc-lev1-text">Displaying code fragments</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-210100" href="21-01-codefrag.html#js--210100">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.1</span><span class="toc-lev2-text">Getting and configuring  Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-01-codefrag.html#js--210101">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.1</span><span class="toc-lev3-text">Downloading Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210102" href="21-01-codefrag.html#js--210102">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.2</span><span class="toc-lev3-text">Modifying Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210103" href="21-01-codefrag.html#js--210103">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.3</span><span class="toc-lev3-text">Not a clever bastard, just a lucky one</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210200" href="21-02-codefrag.html#js--210200">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.2</span><span class="toc-lev2-text">Loading and understanding Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210201" href="21-02-codefrag.html#js--210201">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.1</span><span class="toc-lev3-text">Loading the Google Prettify JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210202" href="21-02-codefrag.html#js--210202">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.2</span><span class="toc-lev3-text">The Google Prettify JavaScript parameters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210203" href="21-02-codefrag.html#js--210203">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.3</span><span class="toc-lev3-text">Google Prettify supported languages</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210204" href="21-02-codefrag.html#js--210204">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.4</span><span class="toc-lev3-text">Understanding how Google Prettify displays code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210205" href="21-02-codefrag.html#js--210205">
+                        <div class="toc-lev"><span class="toc-lev3-num">21.2.5</span><span class="toc-lev3-text">The Google <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210206" href="21-02-codefrag.html#js--210206">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.6</span><span class="toc-lev3-text">The Practical Series <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210300" href="21-03-codefrag.html#js--210300">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.3</span><span class="toc-lev2-text">Using Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210301" href="21-03-codefrag.html#js--210301">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.1</span><span class="toc-lev3-text">The problem with displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210302" href="21-03-codefrag.html#js--210302">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.2</span><span class="toc-lev3-text">The solution to displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210303" href="21-03-codefrag.html#js--210303">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.3</span><span class="toc-lev3-text">The Practical Series HTML conversion document</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210304" href="21-03-codefrag.html#js--210304">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.4</span><span class="toc-lev3-text">Copying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210305" href="21-03-codefrag.html#js--210305">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.5</span><span class="toc-lev3-text">Understanding the Practical Series classes</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210400" href="21-04-codefrag.html#js--210400">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.4</span><span class="toc-lev2-text">Code fragments, some Worked examples</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210401" href="21-04-codefrag.html#js--210401">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.1</span><span class="toc-lev3-text">HTML without numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210402" href="21-04-codefrag.html#js--210402">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.2</span><span class="toc-lev3-text">HTML with numbers and text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210403" href="21-04-codefrag.html#js--210403">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.3</span><span class="toc-lev3-text">HTML with false line numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210404" href="21-04-codefrag.html#js--210404">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.4</span><span class="toc-lev3-text">HTML with a fixed height fragment (no text wrapping)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210405" href="21-04-codefrag.html#js--210405">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.5</span><span class="toc-lev3-text">CSS with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210406" href="21-04-codefrag.html#js--210406">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.6</span><span class="toc-lev3-text">ANSI C with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210407" href="21-04-codefrag.html#js--210407">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.7</span><span class="toc-lev3-text">Visual Basic with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210408" href="21-04-codefrag.html#js--210408">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.8</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;single line</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210409" href="21-04-codefrag.html#js--210409">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.9</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;multiple lines</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210410" href="21-04-codefrag.html#js--210410">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.10</span><span class="toc-lev3-text">Inline code fragment</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210500" href="21-05-codefrag.html#js--210500">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.5</span><span class="toc-lev2-text">Code fragment enhancements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Colouring particular lines in a code fragment</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210502" href="21-05-codefrag.html#js--210502">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.2</span><span class="toc-lev3-text">Fixing problems with line wrap for indented sections</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 21.1 GETTING AND CONFIGURING GOOGLE PRETTIFY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210100">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>21.1</h2></div>
+                 <div class="sub-title-text-box"><h2>Getting and configuring <br>Google Prettify</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+
+                    <p class="hyp">Google Prettify is only available through the GitHub web site. You don&rsquo;t need a GitHub account to get it, the Google Prettify GitHub site (or <span class="first-use">repository</span> as it is more properly called) is available to everyone, the problem is that if you haven&rsquo;t seen GitHub before it will confuse the hell out of you.</p>
+
+                    <p class="hyp">To make things worse, I&rsquo;ve had to <span class="first-use">er... let&rsquo;s say, &ldquo;enhance&rdquo;</span>, the source code to <span class="first-use">er..., &ldquo;optimise&rdquo;</span> it for the web template<sup>&dagger;1</sup>.</p>
+
+                    <p class="hyp">I&rsquo;ll go through this step by step in the following sections. It is a bit messy.</p>
+
+                    <p class="hyp">Again, if you&rsquo;ve downloaded the web template, you already have the modified version that works. If you just want to use it, without knowing the details of the modifications, just go to <a class="hlink nohyp" href="21-02-codefrag.html#js--210200">&sect;&nbsp;21.2</a>.</p>
+
+                    <p class="hyp">I tend to find with these types of plugins, that the explanations for how they work are a bit lacking, they tend to assume that you know a good deal more than you do</p>
+
+                    <p class="hyp">I&rsquo;ve notice something similar with engineers (young ones), they spend ages working on something and by the end they know it backwards; then, when it comes to writing the manual, they have a tendency to skip over the bits that they are so familiar with, because they think them obvious&nbsp;&mdash;&nbsp;they assume that everyone knows what is obvious to them.</p>
+
+                    <p class="hyp">That&rsquo;s why I&rsquo;m going through this in such detail. I couldn&rsquo;t always figure things out from the information I could find and I had to do a lot of experimenting. I&rsquo;m explaining everything from scratch in the hope that it will be clearer for you than it was for me.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">A less gracious person may say it didn&rsquo;t work and I had to fix it.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.1.1DOWNLOADING GOOGLE PRETTIFY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210101">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.1.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Downloading Google Prettify</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Go to the <a class="hlink nohyp" href="https://github.com/google/code-prettify">Google Prettify</a> GitHub page here (a Google search for <span class="menu">google prettify</span> will find it), it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-02">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-02.png" data-lightbox="fig-set" data-title="Figure 21.2 - Prettify on GitHub">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-02.png" alt="Figure 21.2 - Prettify on GitHub">
+                            </a>
+                            <figcaption>Figure 21.2 &emsp; Prettify on GitHub</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">GitHub is a software storage and version tracking system and it is complicated (I&rsquo;ve written at great length about the subject <a class="hlink nohyp" href="https://www.practicalseries.com/1002-vcs/index.html">here</a>), what we are seeing here is the latest release of the Prettify repository; you can tell it is the latest version, it says so in the blue band (I&rsquo;ve underlined it). It says:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">Latest commit f20e152  4 days ago</span></p>
+
+                    <p class="hyp">A &ldquo;commit&rdquo; is a fixed point in the development of the software; usually it means the software has been released. In this case it says it is release <span class="code">f20e152</span> this is a unique number (it looks like a random hexadecimal number) and it is a reference to the current commit<sup>&dagger;2</sup>. At the time of writing (March 1<sup>st</sup>, 2019) the commit was made four days earlier (this is the last time the software was modified).</p>
+
+                    <p class="hyp">Repositories always open at the most current commit point (i.e. the latest version of the software).</p>
+
+                    <p class="hyp">I&rsquo;m not going to dwell too long on GitHub, just accept that it is an online storage and version tracking site used by pretty much every software developer in the world. It is very powerful and very useful (once you learn how, again I refer you to my other publications: <a class="hlink nohyp" href="https://www.practicalseries.com/1002-vcs/index.html">here</a>). If you are serious about web development, I recommend that you learn it and use it.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">These commit numbers are of course not random numbers. They are a checksum carried out of all the files in the repository, plus a header that contains other information (the commit numbers that immediately preceded this commit, plus some information about directory structures &amp;c.). </td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">A checksum is basically a function applied to the binary value of every byte in a file that gives a reproducible figure that can be used to check to see if two files are the same or to identify data corruption within a file</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">The commit number used by GitHub is a checksum encode by using the SHA-1 algorithm (Secure Hash Algorithm 1). This produces a 20-byte (40 digit) hexadecimal number that uniquely identifies a commit. The commit number shown is just the first seven digits of the full commit number. This is usually enough to uniquely identify a commit (even on very large projects). </td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">The first seven digits of a commit number gives 268 million unique values, the full 20 byte number has 1.5×1048 unique values (a similar number to the quantity of atoms that make up the Earth); these values also only apply within a repository (two different repositories can have the same commit number, they don&rsquo;t interfere with each other).</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">The chance of a duplicate 20 byte commit number is vanishingly small, even with just the first seven digits it won&rsquo;t happen on any project you are likely to be working on.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">All we need from the Prettify repository (sometime just called a <span class="first-use">repo</span>&nbsp;&mdash;&nbsp;see, you&rsquo;re already picking up the lingo, you&rsquo;ll be using Linux before you know it) is a copy of the code.</p>
+
+                    <p class="hyp">The easiest way to get this is to click the big green <span class="menu">clone or download</span> button (highlighted in <a class="xref js--sc-f21-02" href="#">Figure&nbsp;21.2</a>).</p>
+
+                    <p class="hyp">In the pop-up, click the <span class="menu">download zip</span> button. </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-03">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-03.png" data-lightbox="fig-set" data-title="Figure 21.3 - GitHub download repository">
+                                <img style="max-width: 352px" src="01-pages/21-01-codefrag/02-images/fig-21-03.png" alt="Figure 21.3 - GitHub download repository">
+                            </a>
+                            <figcaption>Figure 21.3 &emsp; GitHub download repository</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This downloads a zip file called: <span class="code">code-prettify-master.zip</span></p>
+
+                    <p class="hyp">Copy this file somewhere and extract it, it will look remarkably similar to the GitHub web page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-04">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-04.png" data-lightbox="fig-set" data-title="Figure 21.4 - Prettify download code (extracted)">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-04.png" alt="Figure 21.4 - Prettify download code (extracted)">
+                            </a>
+                            <figcaption>Figure 21.4 &emsp; Prettify download code (extracted)</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">There is some logic to this, we asked for a download of the repository and that is exactly what it gave us. The problem is knowing where to look for things. Usually, this takes a bit of perseverance&nbsp;&mdash;&nbsp;fortunately for you I&rsquo;ve already done it.</p>
+
+                    <p class="hyp">The bit we need is everything in the <span class="code">loader</span> folder, it is full of <span class="code">.js</span> files with the odd <span class="code">.css</span> file as well:</p>
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-05">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-05.png" data-lightbox="fig-set" data-title="Figure 21.5 - Prettify loader folder">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-05.png" alt="Figure 21.5 - Prettify loader folder">
+                            </a>
+                            <figcaption>Figure 21.5 &emsp; Prettify loader folder</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The bulk of these files are language plugins for Prettify, <span class="code">lang-pascal.js</span> allow Prettify to syntactically interpret Pascal code. We don&rsquo;t actually need all those files, the chance of me needing to display MUMPS<sup>&dagger;3</sup> code (<span class="code">lang-mumps.js</span>) is remote to say the least.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn03">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">MUMPS:&ensp;Massachusetts General Hospital Utility Multi-Programming System&mdash; go figure.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">We don&rsquo;t need all of them, but they are very small and I tend to keep them, just in case at some time in the future I do need to show some MUMPS code: it looks like this in case you were wondering:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-mumps">hello() w &quot;Hello, World!&quot;,! q</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The three files we definitely do need are:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><span class="code">run-prettify.js</span></p></li>
+
+                        <li><p class="hyp"><span class="code">prettify.css</span></p></li>
+
+                        <li><p class="hyp"><span class="code">lang-css.js</span></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The main file we need is <span class="code">run-prettify.js</span> this is the JavaScript that interprets the code. Prettify can interpret various programming languages by itself:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">
+<!-- Data row -->       <tr style="border-top: 1px solid #cccccc">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-cent">Bash, C, Coffee, HTML, JavaScript, Pearl , Python, Ruby and XML,  </td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td class="table-caption"></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Other languages are supported by including the relevant <span class="code">lang-....js</span> files, there is a full list in <a class="hlink nohyp" href="21-02-codefrag.html#js--210203">&sect;&nbsp;21.2.3</a>, we need the <span class="code">lang-css.js</span> file for just this reason, Google Prettify doesn&rsquo;t support CSS by default so we need to add it.</p>
+
+                    <p class="hyp">Finally, <span class="code">prettify.css</span>. This is where we&rsquo;ll apply the styles that syntactically colour the code to look like Brackets; this is where we apply the colours we want.</p>
+
+                    <p class="hyp">I want to move the files into our website directory structure, and I&rsquo;m going to break my own rules in doing so (I&rsquo;m putting a CSS file in the JavaScript folder, it is sensible to keep them together). This is the folder arrangement I&rsquo;m using</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-06">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-06.png" data-lightbox="fig-set" data-title="Figure 21.6 - Prettify folder locations in the website">
+                                <img style="max-width: 400px" src="01-pages/21-01-codefrag/02-images/fig-21-06.png" alt="Figure 21.6 - Prettify folder locations in the website">
+                            </a>
+                            <figcaption>Figure 21.6 &emsp;Prettify folder locations in the website</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Create the <span class="code">google-prettify</span> folder under <span class="code">21-global/05-js</span>.</p>
+
+                    <p class="hyp">Now select all the files extracted from the zip file that are in the loader folder (<a class="xref js--sc-f21-05" href="#">Figure&nbsp;21.5</a>), copy them all and past them into the new <span class="code">google-prettify</span> folder in the web template.</p>
+
+                    <p class="hyp">At this point I need to explain something, all the files we have copied are minimised files, all the comments, spaces and line breaks have been taken out to make the file smaller (see <a class="hlink nohyp" href="06-09-box.html#js--060905">&sect;&nbsp;6.9.5</a>), this also makes them unreadable. I don&rsquo;t care so much about the <span class="code">lang-....js</span> files, I just use these and don&rsquo;t need to see what is inside them; but I want to modify run-<span class="code">prettify.js</span> and <span class="code">prettify.css</span> so I want the un-minimised versions.</p>
+
+                    <p class="hyp">For the time being delete <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> from the new folder&nbsp;&mdash;&nbsp;<span class="first-use">yes, delete them</span>.</p>
+
+                    <p class="hyp">After the deletions folder should look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-07">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-07.png" data-lightbox="fig-set" data-title="Figure 21.7 - Files in the website&rsquo;s google-prettify directory">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-07.png" alt="Figure 21.7 - Files in the website&rsquo;s google-prettify directory">
+                            </a>
+                            <figcaption>Figure 21.7 &emsp;Files in the website&rsquo;s google-prettify directory</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It has 59 files and the folder called <span class="code">skins</span>.</p>
+
+                    <p class="hyp">Now to get the un-minimised versions of the <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> files.</p>
+
+                    <p class="hyp">We get these from the uncompressed zip file we downloaded from GitHub, this time it is the <span class="code">src</span> folder:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-08">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-08.png" data-lightbox="fig-set" data-title="Figure 21.8 - Google-prettify src directory">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-08.png" alt="Figure 21.8 - Google-prettify src directory">
+                            </a>
+                            <figcaption>Figure 21.8 &emsp;Google-prettify src directory</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The two files need to be put in <em>different</em> locations:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Copy <span class="code">run-prettify.js</span> and paste it into the directory<br><span class="code">21-global/-05-js</span></p></li>
+
+                        <li><p class="hyp">Copy <span class="code">prettify.css </span> and paste it into the directory<br><span class="code">21-global/-05-js directory/google-prettify</span></p></li>
+
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The final set of files should look like the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f21-09">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-09.png" data-lightbox="fig-set" data-title="Figure 21.9 - Final 21-global/-05-js directory">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-09.png" alt="Figure 21.9 - Final 21-global/-05-js directory">
+                            </a>
+                            <figcaption>Figure 21.9 &emsp; Final 21-global/-05-js</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f21-10">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-10.png" data-lightbox="fig-set" data-title="Figure 21.10 - Final 21-global/-05-js/google-prettify directory">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-10.png" alt="Figure 21.10 - Final 21-global/-05-js/google-prettify directory">
+                            </a>
+                            <figcaption>Figure 21.10 &emsp; Final 21-global/-05-js/google-prettify</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.1.2 DOWNLOADING GOOGLE PRETTIFY
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210102">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.1.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Modifying Google Prettify</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">You may be wondering what the difference is between <span class="code">run-prettify.js</span> and <span class="code">prettify.js</span> and why I&rsquo;m not using <span class="code">prettify.js</span>?</p>
+
+                    <p class="hyp">Well, the <span class="code">run-prettify.js</span> is a version of <span class="code">prettify.js</span> that runs automatically after the page has loaded (to use <span class="code">prettify.js</span> the function within it has to be called from within the web page to make it run, this could be done from within our <span class="code">script.js</span> file or even directly in the HTML).</p>
+
+                    <p class="hyp">The <span class="code">run-prettify.js</span> also automatically loads any language files (any of the <span class="code">lang-....js</span> files) that we specify.</p>
+
+                    <p class="hyp">The long and short of it is that using <span class="code">run-prettify.js</span> is much easier and more convenient than using <span class="code">prettify.js</span>, the code within the two does the same thing though.</p>
+
+                    <p class="hyp">There is a problem with <span class="code">run-prettify.js</span> however; the basic way that all this works is that when we tell Google Prettify to display a fragment of code, it analyses that code and identifies the components within it, it is looking for keywords, classes, constants, strings, properties &amp;c. it then puts a <span class="code">&lt;span&gt;</span> element with a particular class around each type of component, and that is all it does.</p>
+
+                    <p class="hyp">The syntactic colouring is then applied with a CSS file, the CSS just applies a colour to each of the classes assigned by <span class="code">run-prettify.js</span> such that keywords get one colour, constants another, classes a third &amp;c.</p>
+
+                    <p class="hyp">Now, the problem:</p>
+
+                    <p class="hyp">The trouble starts with <span class="code">run-prettify.js</span>; it tries to be a bit too clever. The default CSS file that applies the syntactic colouring is the one we&rsquo;ve been copying backwards and forwards: <span class="code">prettify.css</span> and we have a copy of it in our very own <span class="code">google-prettify</span> directory.</p>
+
+                    <p class="hyp">The problem is that <span class="code">run-prettify.js</span> doesn&rsquo;t use our copy of <span class="code">prettify.css</span>. It loads one from the GitHub server, specifically from the address:	<span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader</span>.</p>
+
+                    <p class="hyp"><span class="first-use">&ldquo;Well,&rdquo;</span> you might think, <span class="first-use">&ldquo;that&rsquo;s not a problem, well just load our version and that will take priority&rdquo;</span>. </p>
+
+                    <p class="hyp">That&rsquo;s what I thought too. Didn&rsquo;t work though. And then I realised, I loaded my version of <span class="code">prettify.css</span> in the <span class="code">&lt;head&gt;</span> section of the web page and I loaded it after the <span class="code">&lt;script&gt;</span> for Google Prettify thinking what comes after take priority right?&nbsp;&mdash;&nbsp;Wrong. It does normally, but it is the JavaScript that, in this, case is loading the <span class="code">prettify.css</span> file from the GitHub server; and the first thing that JavaScript does is wait for the page to load before it does anything. The upshot is the GitHub server version of <span class="code">prettify.css</span> doesn&rsquo;t load until after everything else has loaded (including my version of <span class="code">prettify.css</span>), so the server version comes last and takes priority over mine.&nbsp;&mdash;&nbsp;<span class="first-use">Bugger</span>.</p>
+
+                    <p class="hyp"><span class="first-use">So, what to do?</span></p>
+
+                    <p class="hyp"><span class="first-use">Well, re-write the Google Prettify code, that&rsquo;s what. So I did.</span></p>
+
+                    <p class="hyp">Now, this is going to make me look like a right clever bastard. A clever bastard who can dissect someone else&rsquo;s code, even though I&rsquo;m not that familiar with the programming language, fix the problem, put it all back together and have it work, just like that <span class="first-use">(bit like an engineer I suppose)</span>.</p>
+
+                    <p class="hyp">That&rsquo;s not quite how it happened; see the note <a class="hlink js--sc-210103" href="#">here</a>.</p>
+
+                    <p class="hyp">Navigate to <span class="code">21-global/-05-js</span> and open <span class="code">run-prettify.js</span> in Brackets.</p>
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-11">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-11.png" data-lightbox="fig-set" data-title="Figure 21.11 - run-prettify.js in Brackets">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-11.png" alt="Figure 21.11 - run-prettify.js in Brackets">
+                            </a>
+                            <figcaption>Figure 21.11 &emsp;run-prettify.js in Brackets</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can tell it&rsquo;s the non-minimised version.</p>
+
+                    <p class="hyp">We have precisely one line to change and that is line 231, scroll down to it, I&rsquo;ve highlighted it in blue in the following image (<a class="xref js--sc-f21-12" href="#">Figure&nbsp;21.12</a>):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-12">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-12.png" data-lightbox="fig-set" data-title="Figure 21.12 - run-prettify.js line to modify">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-12.png" alt="Figure 21.12 - run-prettify.js line to modify">
+                            </a>
+                            <figcaption>Figure 21.12 &emsp;run-prettify.js line to modify</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">What this is doing is loading the web address:<br> <span class="code" style="font-size: 0.9rem">https://cdn.rawgit.com/google/code-prettify/master/loader</span><br>into a variable called <span class="code">LOADER_BASE_URL</span>.</p>
+
+                    <p class="hyp">It then uses this variable in different places to load the language file and also the CSS file. You can see the language file a bit further down (highlighted in orange)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js">&nbsp; &nbsp; script.src = LOADER_BASE_URL
+&nbsp; &nbsp; &nbsp; + '/lang-' + encodeURIComponent(langs[i]) + '.js';
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can sort of see what this is doing; it is building a source address from various components it has decoded earlier.</p>
+
+                    <p class="hyp">The <span class="code">LOADER_BASE_URL</span> is the web address above:<br><span class="code" style="font-size: 0.9rem">https://cdn.rawgit.com/google/code-prettify/master/loader</span></p>
+
+                    <p class="hyp">It then adds <span class="code">lang-</span>.</p>
+
+                    <p class="hyp">Followed by <span class="code">encodeURIComponent(langs[i])</span>, this contains the last bit of the language specified when the function was called, (this is the bit that comes after the <span class="code">-</span> in all those language files, in our case it will be <span class="code">css</span>).</p>
+
+                    <p class="hyp">Finally it adds <span class="code">.js</span>.</p>
+
+                    <p class="hyp">The whole thing is thus the equivalent of:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js wrap">script.src ='https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js'</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It does the same with the CSS file a bit further down (line 277)</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-js wrap">'https://cdn.rawgit.com/google/code-prettify/master/loader/'</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Now I don&rsquo;t want it looking in <span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader/</span></p>
+
+                    <p class="hyp">I want it to look in our <span class="code">21-global/-05-js/google-prettify</span> directory, that is where <span class="code">prettify.css</span> is.</p>
+
+                    <p class="hyp">The change is easy, modify line 231 to read:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (JS)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums:230 lang-js wrap">&nbsp; var LOADER_BASE_URL =
+&nbsp; &nbsp;  '21-global/05-js/google-prettify';
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And that is it; it is now looking at our website directory and not the GitHub server.</p>
+
+                    <p class="hyp">In Brackets the final thing looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-13">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-13.png" data-lightbox="fig-set" data-title="Figure 21.13 - Modified run-prettify.js">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-13.png" alt="Figure 21.13 - Modified run-prettify.js">
+                            </a>
+                            <figcaption>Figure 21.13 &emsp;Modified run-prettify.js</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">We still need to modify the CSS, but that comes later. This is the only modification we need to make to the JavaScript.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.1.3 NOT A CLEVER BASTARD, JUST A LUCKY ONE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210103">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.1.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Not a clever bastard, just a lucky one</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp" style="padding-left: 6.4rem"><span class="sml-caps-ns">A note by the author</span></p>
+
+                    <p class="hyp">Truth be told, I didn&rsquo;t wade through all that code and cleverly decide what the problem was&nbsp;&mdash;&nbsp;I was lucky.</p>
+
+                    <p class="hyp">I first started this website in 2016, but I was working on some of the ideas way before that and one of the things I&rsquo;d been looking at was syntactically displaying code fragments, and I found Google Prettify, but I didn&rsquo;t find it on GitHub, it was on a Google code archive site, it is still there: <a class="hlink nohyp" href="https://code.google.com/archive/p/google-code-prettify/">google-code-prettify</a>. The actual code was under the <a class="hlink nohyp" href="https://code.google.com/archive/p/google-code-prettify/downloads">download</a> link.</p>
+
+                    <p class="hyp">I downloaded the file: <span class="code">prettify-4-Mar-2013.tar.bz2</span>.</p>
+
+                    <p class="hyp">I installed it in the website just as it was and it ran perfectly, I could load my <span class="code">prettify.css</span> file and it all just worked, it was using my <span class="code">prettify.css</span>.</p>
+
+                    <p class="hyp">Later on, when I was building the site for real, I loaded the latest version at the time (it was on GitHub by then) it was the 28<sup>th</sup> April 2015 release.</p>
+
+                    <p class="hyp">When I loaded this release on the web site, it stopped using my colours, it was ignoring my <span class="code">prettify.css</span> file and I didn&rsquo;t know why.</p>
+
+                    <p class="hyp">Since I had two versions of <span class="code">run-prettify.js</span>, a 2013 version that worked and a 2015 version that didn&rsquo;t, I decided to see what the differences were.</p>
+
+                    <p class="hyp">I just compared the <span class="code">.js</span> text files. Most of the changes were to the comments so I could ignore those, and there were only a couple of other differences and I could tell (from the comments) that these were to do with the addition of new language files.</p>
+
+                    <p class="hyp">The only thing that looked significant was this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-14">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-14.png" data-lightbox="fig-set" data-title="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-14.png" alt="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
+                            </a>
+                            <figcaption>Figure 21.14 &emsp;Comparison of earlier (left) and later (right) run-prettify.js files</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The 2013 file was looking at:<br><span class="code" style="background-color: #FF8983; font-size: 0.85rem">'https://google-code-prettify.googlecode.com/svn/loader';</span></p>
+
+                    <p class="hyp">The 2015 file at:<br><span class="code" style="background-color: #6BDFB8; font-size: 0.85rem">'https://cdn.rawgit.com/google/code-prettify/master/loader';</span></p>
+
+                    <p class="hyp">When I tried to go the top address in a web browser, I got a <span class="menu">404 error</span> (URL not found). The second one returned some kind of access error (it was there, but I wasn&rsquo;t allowed to view it &mdash; fair enough).</p>
+
+                    <p class="hyp">Then it dawned on me, the original file (2013) was trying to load files from an address that no longer existed (it had all been migrated to GitHub), it couldn&rsquo;t load the CSS file, because it wasn&rsquo;t there. If it couldn&rsquo;t load the file, it couldn&rsquo;t overwrite mine so mine took precedence.</p>
+
+                    <p class="hyp">The new site had a perfectly valid web address with the CSS file in residence and so my file was overwritten.</p>
+
+                    <p class="hyp">That&rsquo;s how I figured it out. Just luck really &mdash; story of my life.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-00-codefrag.html#js--000000">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-02-codefrag.html#js--210200">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
