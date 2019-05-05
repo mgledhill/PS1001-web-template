@@ -183,6 +183,14 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--f21-24').offset().top -80}, 1000);
     });
 
+    $('.js--sc-f21-28').click(function () {
+       $('html, body').animate({scrollTop: $('#js--f21-28').offset().top -80}, 1000);
+    });
+
+    $('.js--sc-f21-29').click(function () {
+       $('html, body').animate({scrollTop: $('#js--f21-29').offset().top -80}, 1000);
+    });
+
 
 
 });                                             /* END OF PAGE READY FUNCTION */
