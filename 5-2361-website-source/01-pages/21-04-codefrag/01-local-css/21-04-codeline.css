@@ -86,3 +86,21 @@ Date          Issue        Author         Reason for Modification
 #js--c21-06 li:nth-child(4) { background: #EAF1DD }
 #js--c21-06 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
 /* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-06a - FORMATTING
+   ************************************************************************* */
+#js--c21-06 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-06 {font-size: 0.5rem}
+#js--c21-06 li:nth-child(4) { background: #EAF1DD }
+#js--c21-06a li:nth-child(n+4):nth-child(-n+10) { padding-left: 4.38rem }
+/* ************************************************************************* */
+/* ****************************************************************************
+   CODE FRAGMENT c21-07 - FORMATTING
+   ************************************************************************* */
+#js--c21-07 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-07 {font-size: 0.5rem}
+#js--c21-07 li:nth-child(4) { background: #EAF1DD }
+#js--c21-07 li:nth-child(n+5):nth-child(-n+17) { background: #DBE5F1 }
+/* ************************************************************************* */
+
