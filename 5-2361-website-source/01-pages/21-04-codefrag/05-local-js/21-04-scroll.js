@@ -152,6 +152,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--210409').offset().top -20}, 1000);
     });                                         /* END of scroll function */
 
+    $('.js--sc-210410').click(function () {     /* START of scroll function */
+       $('html, body').animate({scrollTop: $('#js--210410').offset().top -20}, 1000);
+    });                                         /* END of scroll function */
+
 /* ---------------------------------------------------------------------------
    SCROLL TO -  NON-STANDARD (INLINE) SECTIONS
    The offset is set to .to -120 - e.g.
