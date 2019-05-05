@@ -1,0 +1,607 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Code fragments, some Worked examples">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           21-03-CODEFRAG.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+02 May 2019   d-P25.21.04  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/21-04-codefrag/05-local-js/21-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/21-04-codefrag/01-local-css/21-04-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Code fragments, some Worked examples | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="21-03-codefrag.html#js--210300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="21-05-codefrag.html#js--210500"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P25.21.03-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>21</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">21</span>Displaying code fragmentse</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 21 codefrag
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-210000" href="21-00-codefrag.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">21</span><span class="toc-lev1-text">Displaying code fragments</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-210100" href="21-01-codefrag.html#js--210100">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.1</span><span class="toc-lev2-text">Getting and configuring  Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-01-codefrag.html#js--210101">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.1</span><span class="toc-lev3-text">Downloading Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210102" href="21-01-codefrag.html#js--210102">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.2</span><span class="toc-lev3-text">Modifying Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210103" href="21-01-codefrag.html#js--210103">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.1.3</span><span class="toc-lev3-text">Not a clever bastard, just a lucky one</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210200" href="21-02-codefrag.html#js--210200">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.2</span><span class="toc-lev2-text">Loading and understanding Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210101" href="21-02-codefrag.html#js--210201">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.1</span><span class="toc-lev3-text">Loading the Google Prettify JavaScript</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210202" href="21-02-codefrag.html#js--210202">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.2</span><span class="toc-lev3-text">The Google Prettify JavaScript parameters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210203" href="21-02-codefrag.html#js--210203">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.3</span><span class="toc-lev3-text">Google Prettify supported languages</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210204" href="21-02-codefrag.html#js--210204">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.4</span><span class="toc-lev3-text">Understanding how Google Prettify displays code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210205" href="21-02-codefrag.html#js--210205">
+                        <div class="toc-lev"><span class="toc-lev3-num">21.2.5</span><span class="toc-lev3-text">The Google <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210206" href="21-02-codefrag.html#js--210206">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.2.6</span><span class="toc-lev3-text">The Practical Series <span class="code">Prettify prettify.css</span> file</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210300" href="21-03-codefrag.html#js--210300">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.3</span><span class="toc-lev2-text">Using Google Prettify</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210301" href="21-03-codefrag.html#js--210301">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.1</span><span class="toc-lev3-text">The problem with displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210302" href="21-03-codefrag.html#js--210302">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.2</span><span class="toc-lev3-text">The solution to displaying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210303" href="21-03-codefrag.html#js--210303">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.3</span><span class="toc-lev3-text">The Practical Series HTML conversion document</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210304" href="21-03-codefrag.html#js--210304">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.4</span><span class="toc-lev3-text">Copying code fragments</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210305" href="21-03-codefrag.html#js--210305">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.3.5</span><span class="toc-lev3-text">Understanding the Practical Series classes</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210400" href="21-04-codefrag.html#js--210400">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.4</span><span class="toc-lev2-text">Code fragments, some Worked examples</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210401" href="21-04-codefrag.html#js--210401">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.1</span><span class="toc-lev3-text">HTML without numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210402" href="21-04-codefrag.html#js--210402">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.2</span><span class="toc-lev3-text">HTML with numbers and text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210403" href="21-04-codefrag.html#js--210403">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.3</span><span class="toc-lev3-text">HTML with false line numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210404" href="21-04-codefrag.html#js--210404">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.4</span><span class="toc-lev3-text">HTML with a fixed height fragment (no text wrapping)</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210405" href="21-04-codefrag.html#js--210405">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.5</span><span class="toc-lev3-text">CSS with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210406" href="21-04-codefrag.html#js--210406">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.6</span><span class="toc-lev3-text">ANSI C with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210407" href="21-04-codefrag.html#js--210407">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.7</span><span class="toc-lev3-text">Visual Basic with numbers and no text wrapping</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210408" href="21-04-codefrag.html#js--210408">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.8</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;single line</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210409" href="21-04-codefrag.html#js--210409">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.9</span><span class="toc-lev3-text">Simple code fragment&nbsp;&mdash;&nbsp;multiple lines</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210410" href="21-04-codefrag.html#js--210410">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.4.10</span><span class="toc-lev3-text">Inline code fragment</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-210500" href="21-05-codefrag.html#js--210500">
+                            <div class="toc-lev"><span class="toc-lev2-num">21.5</span><span class="toc-lev2-text">Code fragment enhancements</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Colouring particular lines in a code fragment</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-210501" href="21-05-codefrag.html#js--210501">
+                            <div class="toc-lev"><span class="toc-lev3-num">21.5.1</span><span class="toc-lev3-text">Fixing problems with line wrap for indented sections</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 21.4 CODE FRAGMENTS, SOME WORKED EXAMPLES
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>21.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Code fragments, some Worked examples</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+
+                    <p class="hyp">I use Google Prettify to display mainly HTML, CSS and JavaScript code, that is after all what goes into a website. This however, can be a bit of a problem.</p>
+
+                    <p class="hyp">I feel like I&rsquo;ve been writing this section for ages. You would think there would be hundreds of websites that explained clearly how to do this sort of thing&nbsp;&mdash;&nbsp;buggered if I could find &rsquo;em though.</p>
+
+                    <p class="hyp">After all I&rsquo;ve written on this subject, this is probably the most useful bit, I just show you how to do it. You get a screen shot, the HTML and a few words for each of the following:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">HTML without numbers and no text wrapping (horizontal scrollbars)</p></li>
+
+                        <li><p class="hyp">HTML with numbers and text wrapping (no scrollbars)</p></li>
+
+                        <li><p class="hyp">HTML with false numbering and no text wrapping (horizontal scroll bar)</p></li>
+
+                        <li><p class="hyp">HTML with a fixed height fragment (vertical and horizontal scrolling)</p></li>
+
+                        <li><p class="hyp">CSS with numbers and no text wrapping </p></li>
+
+                        <li><p class="hyp">ANSI C </p></li>
+
+                        <li><p class="hyp">VB </p></li>
+
+                        <li><p class="hyp">HTML Simple single line code fragment</p></li>
+
+                        <li><p class="hyp">HTML Simple multi-line fragment</p></li>
+
+                        <li><p class="hyp">HTML Inline fragment</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">That should cover it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.4.1 HTML WITHOUT NUMBERS AND NO TEXT WRAPPING
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>HTML without numbers and no text wrapping </h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp"><span class="in-head">Appearance</span></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">code fragment html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-html">&lt;nav&gt;                            &lt;!-- TOP NAVIGATION BAR --&gt;
+    &lt;div class="top-nav"&gt;
+        &lt;div class="rg-row"&gt;
+            &lt;a class="nav-wide" href="#"&gt;&lt;span class="top-nav-icon"&gt;l&lt;/span&gt;&lt;span class="top-nav-text"&gt;Prev. section&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-wide" href="#"&gt;&lt;span class="top-nav-icon"&gt;u&lt;/span&gt;&lt;span class="top-nav-text"&gt;Prev. chapter&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-wide nav-home" href="#"&gt;&lt;span class="top-nav-text"&gt;Home&lt;/span&gt;&lt;span class="top-nav-icon"&gt;h&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-narrow js--sc-top" href="#"&gt;&lt;span class="top-nav-icon"&gt;t&lt;/span&gt;&lt;span class="top-nav-text"&gt;Top&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-narrow" href="#"&gt;&lt;span class="top-nav-text"&gt;Home&lt;/span&gt;&lt;span class="top-nav-icon"&gt;h&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-wide" href="#"&gt;&lt;span class="top-nav-text"&gt;Next chapter&lt;/span&gt;&lt;span class="top-nav-icon"&gt;d&lt;/span&gt;&lt;/a&gt;
+            &lt;a class="nav-wide" href="#"&gt;&lt;span class="top-nav-text"&gt;Next section&lt;/span&gt;&lt;span class="top-nav-icon"&gt;r&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;                            &lt;!-- END OF TOP NAVIGATION --&gt;
+
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.6 &emsp; HTML code fragment&nbsp;&mdash;&nbsp;no line numbers, no text wrap</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-35">
+                            <a href="01-pages/21-04-codefrag/02-images/fig-21-35.png" data-lightbox="fig-set" data-title="Figure 21.35 - HTML code fragment&nbsp;&mdash;&nbsp;no line numbers, no text wrap">
+                                <img style="max-width: 744px" src="01-pages/21-04-codefrag/02-images/fig-21-35.png" alt="Figure 21.35 - HTML code fragment&nbsp;&mdash;&nbsp;no line numbers, no text wrap">
+                            </a>
+                            <figcaption>Figure 21.35 &emsp; HTML code fragment&nbsp;&mdash;&nbsp;no line numbers, no text wrap</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="in-head">Options</span></p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean">
+<!-- Header row -->     <tr>
+                            <th class="leading"></th>
+                            <th colspan="3" class="table-left">Options</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                        <td colspan="3"  class="table-left"><code class="prettyprint lang-html nohyp"><span style="font-size: 0.54rem">&lt;pre class=&quot;prettyprint lang-html&quot; id=&quot;js--cXX-YY&quot;&gt;</span></code></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <th class="leading"><div style="min-height: 3em"></div></th>
+                            <th class="table-cent" style="width: 18%">Element</th>
+                            <th class="table-left" style="width: 30%">Required Class</th>
+                            <th class="table-left" style="width: 52%">Function</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td rowspan="2" class="table-cent"><span class="code">&lt;pre&gt;</span></td>
+                            <td class="table-left"><span class="code">perttyprint</span></td>
+                            <td class="table-left">Triggers the Google Prettify software</td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="code">lang-html</span></td>
+                            <td class="table-left">Sets the display language to HTML</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td rowspan="4" class="leading"><div></div></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border" style="border-top: 1px solid #ccc">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption"></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="in-head">Notes</span></p>
+
+                    <p class="hyp">The fragment will be as high as required (depends on content); if any line extends beyond the edge of the <span class="code">code-area</span> container, a horizontal scrollbar will automatically appear.</p>
+
+                    <p class="hyp"><span class="in-head">HTML</span></p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">code fragment html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c21-06">&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;filename.ext&lt;/div&gt;&nbsp; &nbsp; &nbsp;&lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;pre class=&quot;prettyprint lang-html&quot; id=&quot;js--cXX-YY&quot;&gt;
+&amp;lt;nav&amp;gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;!-- TOP NAVIGATION BAR --&amp;gt;
+&nbsp; &nbsp; &amp;lt;div class=&quot;top-nav&quot;&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;div class=&quot;rg-row&quot;&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-wide&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;l&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Prev. section&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-wide&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;u&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Prev. chapter&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-wide nav-home&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Home&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;h&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-narrow js--sc-top&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;t&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Top&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-narrow&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Home&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;h&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-wide&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Next chapter&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;d&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;a class=&quot;nav-wide&quot; href=&quot;#&quot;&amp;gt;&amp;lt;span class=&quot;top-nav-text&quot;&amp;gt;Next section&amp;lt;/span&amp;gt;&amp;lt;span class=&quot;top-nav-icon&quot;&amp;gt;r&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;/div&amp;gt;
+&nbsp; &nbsp; &amp;lt;/div&amp;gt;
+&amp;lt;/nav&amp;gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;!-- END OF TOP NAVIGATION --&amp;gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code xx.yy &amp;emsp; Caption&lt;/div&gt;&nbsp; &lt;!-- Code caption --&gt;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of code fragment --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 21.6 &emsp; HTML code fragment&nbsp;&mdash;&nbsp;no line numbers, no text wrap</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-03-codefrag.html#js--210300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="21-05-codefrag.html#js--210500">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
