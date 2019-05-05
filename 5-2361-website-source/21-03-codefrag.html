@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="understanding how to load GooglePrettify and how it works">
+        <meta name="description" content="A practical explanation of how to use Google Prettify">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                           21-02-CODEFRAG.HTML
+Title :          WEBSITE TEMPLATE                           21-03-CODEFRAG.HTML
 *******************************************************************************
 DETAILS
 
@@ -72,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/21-02-codefrag/05-local-js/21-02-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/21-03-codefrag/05-local-js/21-03-scroll.js"></script>
 
 
 
@@ -87,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/21-02-codefrag/01-local-css/21-02-codeline.css">
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/21-03-codefrag/01-local-css/21-03-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -107,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Getting and configuring Google Prettify | PracticalSeries: Web Development</title>
+        <title>Using Google Prettify | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -127,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="21-01-codefrag.html#js--210100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="21-02-codefrag.html#js--210200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="20-00-lightbox.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -153,7 +153,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Dev-d--P25.21.02-BF504D.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P25.21.03-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
@@ -304,16 +304,16 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP SECTION]
-     SECTION - 21.2 LOADING AND UNDERSTANDING GOOGLE PRETTIFY
+     SECTION - 21.3 USING GOOGLE PRETTIFY
      ***********************************************************************-->
 
-        <section class="section-std" id="js--210200">           <!-- Start of section         -->
+        <section class="section-std" id="js--210300">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>21.2</h2></div>
-                 <div class="sub-title-text-box"><h2>Loading and understanding Google Prettify</h2></div>
+                 <div class="sub-title-num-box"><h2>21.3</h2></div>
+                 <div class="sub-title-text-box"><h2>Using Google Prettify</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -328,7 +328,348 @@ Date          Issue        Author         Reason for Modification
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
 
-                    <p class="hyp">This is in two parts, the first bit is how to start Google Prettify on a web page and what options to use, the second bit explains how to display code fragments.</p>
+                    <p class="hyp">I use Google Prettify to display mainly HTML, CSS and JavaScript code, that is after all what goes into a website. This however, can be a bit of a problem.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.3.1 THE PROBLEM WITH DISPLAYING CODE FRAGMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210301">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.3.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The problem with displaying code fragments</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Let&rsquo;s say for example that I want to display the following bit of HTML code:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;p class=&quot;hyp&quot;&gt;Paragraph 1&lt;/p&gt;
+&lt;p class=&quot;hyp&quot;&gt;Paragraph 2&lt;/p&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">And let&rsquo;s say I add it to a <span class="code">&lt;pre&gt;</span> element on the <span class="code">99-00-typicals.html</span> page, thus:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html" id="js--c21-03c">&lt;p class=&quot;hyp&quot;&gt;A first attempt&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;css&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;pre class=&quot;prettyprint linenums lang-html&quot;&gt;&nbsp;
+&lt;p class=&quot;hyp&quot;&gt;Paragraph 1&lt;/p&gt;
+&lt;p class=&quot;hyp&quot;&gt;Paragraph 2&lt;/p&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code 99.3 &amp;mdash; Code Fragment&amp;mdash;CSS&lt;/div&gt;&nbsp;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code fragment --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">OK, there is the code fragment (green background) pasted in between the <span class="code">&lt;pre&gt;...&lt;/pre&gt;</span> tags.</p>
+
+                    <p class="hyp">Now when I look at the web page, I want to see a code fragment that looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-23">
+                            <a href="01-pages/21-03-codefrag/02-images/fig-21-23.png" data-lightbox="fig-set" data-title="Figure 21.23 - First attempt at an HTML fragment&nbsp;&mdash;&nbsp;what I expect">
+                                <img style="max-width: 744px" src="01-pages/21-03-codefrag/02-images/fig-21-23.png" alt="Figure 21.23 - First attempt at an HTML fragment&nbsp;&mdash;&nbsp;what I expect">
+                            </a>
+                            <figcaption>Figure 21.23 &emsp; First attempt at an HTML fragment&nbsp;&mdash;&nbsp;what I expect</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">But what I actually get is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-24">
+                            <a href="01-pages/21-03-codefrag/02-images/fig-21-24.png" data-lightbox="fig-set" data-title="Figure 21.24 - First attempt at an HTML fragment&nbsp;&mdash;&nbsp;actual result">
+                                <img style="max-width: 744px" src="01-pages/21-03-codefrag/02-images/fig-21-24.png" alt="Figure 21.24 - First attempt at an HTML fragment&nbsp;&mdash;&nbsp;actual result">
+                            </a>
+                            <figcaption>Figure 21.24 &emsp; First attempt at an HTML fragment&nbsp;&mdash;&nbsp;actual result</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">So what the bloody hell is going on?</span></p>
+
+                    <p class="hyp">The problem is the browser. The browser has the following code on its web page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html" id="js--c21-03d">&lt;p class=&quot;hyp&quot;&gt;A first attempt&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;css&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;pre class=&quot;prettyprint linenums lang-html&quot;&gt;&nbsp;
+&lt;p class=&quot;hyp&quot;&gt;Paragraph 1&lt;/p&gt;
+&lt;p class=&quot;hyp&quot;&gt;Paragraph 2&lt;/p&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code 99.3 &amp;mdash; Code Fragment&amp;mdash;CSS&lt;/div&gt;&nbsp;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code fragment --&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It sees the <span class="code">&lt;pre&gt;</span> element and to the browser this is just another semantic element, just like a <span class="code">&lt;div&gt;</span> and then it sees two paragraph elements <span class="code">&lt;p&gt;</span> within it. So it just renders the paragraphs in the <span class="code">&lt;pre&gt;</span> element and we get Figure <a class="xref js--sc-f21-24" href="#">Figure&nbsp;21.24</a>.</p>
+
+                    <p class="hyp">That is the trouble with trying to display HTML as code fragments, the browser just thinks it&rsquo;s more HTML and displays it as such.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 21.3.2 THE PROBLEM WITH DISPLAYING CODE FRAGMENTS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--210302">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>21.3.2</h3></div>
+                    <div class="sub-title-text-box"><h3>The solution to displaying code fragments</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Remember in <a class="hlink nohyp" href="06-11-box.html#js--061100">&sect;&nbsp;6.11</a> where I explained about reserved characters in HTML </p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Header row -->     <tr>
+                            <th colspan="5" class="table-cent">html reserved characters</th>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td colspan="5" class="table-left"><p>The following have special meaning in HTML:</p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left" style="width: 5%"><p></p></td>
+                            <td class="table-left" style="width: 40%"><p>Less than 	</p></td>
+                            <td class="table-left" style="width: 10%"><p><span class="c-box">&lt;</span></p></td>
+                            <td class="table-left" style="width: 25%"><p>Replacement code:</p></td>
+                            <td class="table-left" style="width: 20%"><p><span class="code">&amp;lt;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Greater than </p></td>
+                            <td class="table-left"><p><span class="c-box">&gt;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;gt;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Ampersand </p></td>
+                            <td class="table-left"><p><span class="c-box">&amp;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;amp;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Double quotation mark</p></td>
+                            <td class="table-left"><p><span class="c-box">&quot;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;quot;</span></p></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="table-left"><p></p></td>
+                            <td class="table-left"><p>Single quotation mark</p></td>
+                            <td class="table-left"><p><span class="c-box">&apos;</span></p></td>
+                            <td class="table-left"><p>Replacement code:</p></td>
+                            <td class="table-left"><p><span class="code">&amp;apos;</span></p></td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If a code fragment has any of these characters within it, that character must be replaced by its <span class="code">&amp;code</span> (see above).</p>
+
+                    <p class="hyp">So, to display our code fragment, the HTML must become:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html" id="js--c21-03e">&lt;p class=&quot;hyp&quot;&gt;A first attempt&lt;/p&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&lt;div class=&quot;code-extract&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code fragment --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-header&quot;&gt;css&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Code file name --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-area&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of code extract holder --&gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;pre class=&quot;prettyprint linenums lang-html&quot;&gt;&nbsp;
+&amp;lt;p class=&quot;hyp&quot;&amp;gt;Paragraph 1&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;hyp&quot;&amp;gt;Paragraph 2&amp;lt;/p&amp;gt;
+&nbsp; &nbsp;&nbsp; &nbsp; &lt;/pre&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code extract holder --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;code-caption&quot;&gt;Code 99.3 &amp;mdash; Code Fragment&amp;mdash;CSS&lt;/div&gt;&nbsp;
+&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;!-- End of code fragment --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This now gives us what we were looking for:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-25">
+                            <a href="01-pages/21-03-codefrag/02-images/fig-21-25.png" data-lightbox="fig-set" data-title="Figure 21.25 - Code fragment with reserved characters replaced with &amp;codes">
+                                <img style="max-width: 744px" src="01-pages/21-03-codefrag/02-images/fig-21-25.png" alt="Figure 21.25 - Code fragment with reserved characters replaced with &amp;codes">
+                            </a>
+                            <figcaption>Figure 21.25 &emsp; Code fragment with reserved characters replaced with &amp;codes</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Let&rsquo;s look at what I&rsquo;ve done here.</p>
+
+                    <p class="hyp">Take the first line, the original was:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&lt;p class=&quot;hyp&quot;&gt;Paragraph 1&lt;/p&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Take the first line, the original was:</p>
+
+                    <p class="hyp">I&rsquo;ve replaced every <span class="code">&lt;</span> with <span class="code">&amp;lt;</span> and every <span class="code">&gt;</span> with <span class="code">&amp;gt;</span> to give me:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&amp;lt;p class=&quot;hyp&quot;&amp;gt;Paragraph 1&amp;lt;/p&amp;gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp" style="text-align: center"><span class="first-use">Er... Yep, I&rsquo;m not kidding, that&rsquo;s how you do it.</span></p>
+
+                    <p class="hyp">So now you&rsquo;re thinking <span class="first-use">&ldquo;fuck me, that&rsquo;s a shitload of work just to get my code to display&rdquo;.</span></p>
+
+                    <p class="hyp">Yes that&rsquo;s what I thought too. </p>
+
+                    <p class="hyp">I looked around at this point and I found some websites that do this sort of thing for you, they&rsquo;re called HTML encoders and there are a lot of them. You paste your code in, hit the encode button and copy what comes out. Just paste that in between the <span class="code">&lt;pre&gt;</span> tags and Bob&rsquo;s your uncle.</p>
+
+                    <p class="hyp">Only, I found that a lot of these site make certain assumptions, some takeout the line breaks, some fiddle with the indentations.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -1919,6 +2260,12 @@ li.L4, li.L9 { list-style-type: decimal }</pre>
                     <p class="hyp">This changes the colour if the code is CSS (if it is it will have the class <span class="code">lang-css</span>).</p>
 
                     <p class="hyp">All these colours have been picked to make the code fragments have similar colouring to Brackets.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
 
                 </div>                                          <!-- End of section text      -->
 
