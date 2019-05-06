@@ -1,0 +1,813 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Equations, example usage">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                          22-04-EQUATIONS.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+06 May 2019   d-P26.22.01  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/22-04-equations/05-local-js/22-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/22-04-equations/01-local-css/21-04-codeline.css">
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Equations, example usage | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="22-03-equations.html#js--220300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="21-00-codefrag.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P26.22.01-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>22</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">22</span>Equations and MathJax</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 22 equations
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-220000" href="22-00-equations.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">22</span><span class="toc-lev1-text">Equations and MathJax</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-220100" href="22-01-equations.html#js--220100">
+                            <div class="toc-lev"><span class="toc-lev2-num">22.1</span><span class="toc-lev2-text">Loading MathJax</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-220200" href="22-02-equations.html#js--220200">
+                            <div class="toc-lev"><span class="toc-lev2-num">22.2</span><span class="toc-lev2-text">Using MathJax</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-220300" href="22-03-equations.html#js--220300">
+                            <div class="toc-lev"><span class="toc-lev2-num">22.3</span><span class="toc-lev2-text">AsciiMath</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220301" href="22-03-equations.html#js--220301">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.1</span><span class="toc-lev3-text">AsciiMath mathematical operators</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220302" href="22-03-equations.html#js--220302">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.2</span><span class="toc-lev3-text">AsciiMath relational symbols</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220303" href="22-03-equations.html#js--220303">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.3</span><span class="toc-lev3-text">AsciiMath brackets</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220304" href="22-03-equations.html#js--220304">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.4</span><span class="toc-lev3-text">AsciiMath mathematical symbols</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220305" href="22-03-equations.html#js--220305">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.5</span><span class="toc-lev3-text">AsciiMath double struck letters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220306" href="22-03-equations.html#js--220306">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.6</span><span class="toc-lev3-text">AsciiMath accents and colours</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220307" href="22-03-equations.html#js--220307">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.7</span><span class="toc-lev3-text">AsciiMath arrows</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220308" href="22-03-equations.html#js--220308">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.8</span><span class="toc-lev3-text">AsciiMath Greek lowercase letters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220309" href="22-03-equations.html#js--220309">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.9</span><span class="toc-lev3-text">AsciiMath Greek uppercase letters</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220310" href="22-03-equations.html#js--220310">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.10</span><span class="toc-lev3-text">AsciiMath logical operators</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220311" href="22-03-equations.html#js--220311">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.11</span><span class="toc-lev3-text">AsciiMath sets and groups</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220312" href="22-03-equations.html#js--220312">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.12</span><span class="toc-lev3-text">AsciiMath subscripts and superscripts</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220313" href="22-03-equations.html#js--220313">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.13</span><span class="toc-lev3-text">AsciiMath text in equation</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220314" href="22-03-equations.html#js--220314">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.14</span><span class="toc-lev3-text">AsciiMath matrices</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220315" href="22-03-equations.html#js--220315">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.3.15</span><span class="toc-lev3-text">AsciiMath notes on syntax</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-220400" href="22-04-equations.html#js--220400">
+                            <div class="toc-lev"><span class="toc-lev2-num">22.4</span><span class="toc-lev2-text">Equations, example usage</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220401" href="22-04-equations.html#js--220401">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.1</span><span class="toc-lev3-text">Full equation</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220402" href="22-04-equations.html#js--220402">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.2</span><span class="toc-lev3-text">Full equation with shading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220403" href="22-04-equations.html#js--220403">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.3</span><span class="toc-lev3-text">Basic equation</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220404" href="22-04-equations.html#js--220404">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.4</span><span class="toc-lev3-text">Basic equation with shading</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220405" href="22-04-equations.html#js--220405">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.5</span><span class="toc-lev3-text">Inline equations</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-220406" href="22-04-equations.html#js--220406">
+                            <div class="toc-lev"><span class="toc-lev3-num">22.4.6</span><span class="toc-lev3-text">Formulae equation numbers</span></div></a>
+                        </li>
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 22.4 EQUATIONS, EXAMPLE USAGE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>22.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Equations, example usage</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There are five typical arrangements of equations within the web template, the first four are all variations of a theme and the last one is very simple:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Full equation</p></li>
+
+                        <li><p class="hyp">Full equation with background shading</p></li>
+
+                        <li><p class="hyp">Basic equation</p></li>
+
+                        <li><p class="hyp">Basic equation with background shading</p></li>
+
+                        <li><p class="hyp">An inline equation</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The only difference between these is in the HTML, I show the HTML and an example for each type along with some notes in the following sections:</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.1 FULL EQUATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Full equation</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the one we&rsquo;ve already looked at:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">full equation html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c22-05">&lt;div class=&quot;formulae&quot; id=&quot;js--e99-01&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-header&quot;&gt;Equation Header&lt;/div&gt;&nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-container&quot;&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-equ&quot;&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `sum_(i=1)^n i^3=((n(n+1))/2)^2`&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-num&quot;&gt;(99.1)
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-caption&quot;&gt;Equation caption&lt;/div&gt;
+&lt;/div&gt;&nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 22.5 &emsp; Full equation HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FORMULA - FULL ARRANGEMENT
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae">
+                        <div class="formulae-header">Equation Header</div>
+                        <div class="formulae-container">
+                            <div class="formulae-equ">          <!-- Start of equ. box        -->
+                                `sum_(i=1)^n i^3=((n(n+1))/2)^2`
+                            </div>
+<!-- Equation No -->        <div class="formulae-num">(99.1)</div>
+                        </div>
+<!-- Caption -->        <div class="formulae-caption">Equation caption</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.2 FULL EQUATION WITH SHADING
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220402">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Full equation with shading</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the same as the above but with background shading.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">full equation with shading html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c22-06">&lt;div class=&quot;formulae&quot; id=&quot;js--e99-01&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-header formulae-bkgd&quot;&gt;Equation Header&lt;/div&gt;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-container formulae-bkgd&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-equ&quot;&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `f(a) = 1/(2pii) oint_gamma f(z)/(z-a)dz`&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-num&quot;&gt;(99.1)
+&nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-caption&quot;&gt;Equation caption&lt;/div&gt;
+&lt;/div&gt;&nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 22.6 &emsp; Full equation with shading HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FORMULA - FULL ARRANGEMENT WITH HIGHLIGHT
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae">
+                        <div class="formulae-header formulae-bkgd">Equation Header</div>
+                        <div class="formulae-container formulae-bkgd">
+                            <div class="formulae-equ">          <!-- Start of equ. box        -->
+<!-- Equation -->               `f(a) = 1/(2pii) oint_gamma f(z)/(z-a)dz`
+                            </div>
+<!-- Equation No -->        <div class="formulae-num">(99.1)</div>
+                        </div>
+<!-- Caption -->        <div class="formulae-caption">Equation caption</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The class <span class="code">formulae-bkgd</span> has been added to the <span class="code">formulae-header</span> and <span class="code">formulae-container div</span> elements.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.3 BASIC EQUATION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220403">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Basic equation</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The basic equation is the same as the full equation, but does not have a heading line or a caption:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic equation html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c22-07">&lt;div class=&quot;formulae&quot; id=&quot;js--e99-01&quot;&gt;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-container&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-equ&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `x=(-b +- sqrt(b^2 – 4ac))/(2a)`&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-num&quot;&gt;(99.1) &lt;/div&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-caption&quot;&gt; &lt;/div&gt;
+&lt;/div&gt;&nbsp; &nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 22.7 &emsp; Basic equation HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FORMULA - SIMPLE ARRANGEMENT WITH HIGHLIGHT
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae">
+                        <div class="formulae-container">
+                            <div class="formulae-equ">
+<!-- Equation -->               `x=(-b +- sqrt(b^2 – 4ac))/(2a)`
+                            </div>
+                            <div class="formulae-num">(99.1)</div>
+                        </div>
+                        <div class="formulae-caption"></div>
+                    </div>
+ <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">formulae-caption div</span> still exists (it gives spacing after the equation), but if no caption is required, just leave the <span class="code">div</span> empty.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.4	BASIC EQUATION WITH SHADING
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220404">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Basic equation with shading</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">This is the same as the previous, but with shading:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">basic equation with shading HTML</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c22-08">&lt;div class=&quot;formulae&quot; id=&quot;js--e99-01&quot;&gt;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-container formulae-bkgd &quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-equ&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `x=(-b +- sqrt(b^2 – 4ac))/(2a)`&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-num&quot;&gt;(99.1) &lt;/div&gt;
+&nbsp; &nbsp; &lt;/div&gt;&nbsp;
+&nbsp; &nbsp; &lt;div class=&quot;formulae-caption&quot;&gt; &lt;/div&gt;
+&lt;/div&gt;&nbsp; &nbsp;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 22.8 &emsp; Basic equation with shading HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     FORMULA - SIMPLE ARRANGEMENT WITH HIGHLIGHT
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <div class="formulae">
+                        <div class="formulae-container formulae-bkgd">
+                            <div class="formulae-equ">
+<!-- Equation -->               `x=(-b +- sqrt(b^2 – 4ac))/(2a)`
+                            </div>
+                            <div class="formulae-num">(99.1)</div>
+                        </div>
+                        <div class="formulae-caption"></div>
+                    </div>
+ <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The <span class="code">formulae-caption div</span> still exists (it gives spacing after the equation), but if no caption is required, just leave the <span class="code">div</span> empty.</p>
+
+                    <p class="hyp">TThe class <span class="code">formulae-bkgd</span> has been added to the <span class="code">formulae-container div</span> element.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.5	INLINE EQUATIONS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220405">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Inline equations</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Equations can be placed directly in a line of text.</p>
+
+                    <p class="hyp">An inline equation does not need any formatting, there is no class associated with it, just add a <span class="code">&lt;span&gt;...&lt;/span&gt;</span> element and put the equation in it (underlined in red below):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">inline equation html</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c22-09" style="height: 2rem">&lt;p class=&quot;hyp&quot;&gt;Inline equations <span class="h-light">&lt;span&gt;`f(a) = 1/(2pii) oint f(z)/(z-a)dz`&lt;/span&gt;</span> are possibe too.</pre>
+
+                        </div>
+                        <div class="code-caption">Code 22.9 &emsp; Inline equation HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It looks like this:</p>
+
+                    <p class="hyp">Inline equations <span>`f(a) = 1/(2pii) oint f(z)/(z-a)dz`</span>&emsp;are possibe too.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 22.4.6	FORMULAE EQUATION NUMBERS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--220406">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>22.4.6</h3></div>
+                    <div class="sub-title-text-box"><h3>Formulae equation numbers</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Equation numbers are entirely optional, the <span class="code">formulae-num div</span> however is not; if equation numbers are not required, leave the <span class="code">div</span> empty:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint lang-html">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;formulae-num&quot;&gt;&lt;/div&gt;</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="22-03-equations.html#js--220300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="23-00-landing.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>

@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-03-CODELINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-04-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -79,8 +79,39 @@ Date          Issue        Author         Reason for Modification
 /* ************************************************************************* */
 
 /* ****************************************************************************
-   CODE FRAGMENT c22-04 - FORMATTING
+   CODE FRAGMENT c22-05 - FORMATTING
    ************************************************************************* */
-#js--c22-04 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
-#js--c22-04 {font-size: 0.5rem}
+#js--c22-05 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-05 {font-size: 0.5rem}
 /* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c22-06 - FORMATTING
+   ************************************************************************* */
+#js--c22-06 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-06 {font-size: 0.5rem}
+#js--c22-06 li:nth-child(n+2):nth-child(-n+3) { background: #EAF1DD }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c22-07 - FORMATTING
+   ************************************************************************* */
+#js--c22-07 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-07 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c22-08 - FORMATTING
+   ************************************************************************* */
+#js--c22-08 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-08 {font-size: 0.5rem}
+#js--c22-08 li:nth-child(2) { background: #EAF1DD }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c22-09 - FORMATTING
+   ************************************************************************* */
+#js--c22-09 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-09 {font-size: 0.5rem}
+/* ************************************************************************* */
+
