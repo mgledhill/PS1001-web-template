@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-02-CODELINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-03-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -79,10 +79,10 @@ Date          Issue        Author         Reason for Modification
 /* ************************************************************************* */
 
 /* ****************************************************************************
-   CODE FRAGMENT c22-02 - FORMATTING
+   CODE FRAGMENT c22-04 - FORMATTING
    ************************************************************************* */
-#js--c22-02 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
-#js--c22-02 {font-size: 0.5rem}
+#js--c22-04 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-04 {font-size: 0.5rem}
 /* ************************************************************************* */
 
 
@@ -91,5 +91,44 @@ Date          Issue        Author         Reason for Modification
    ************************************************************************* */
 #js--c22-03 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
 #js--c22-03 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-01a - FORMATTING
+   ************************************************************************* */
+#js--c21-01a ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-01a {font-size: 0.5rem}
+#js--c21-01a li:nth-child(4) { background: #EAF1DD }
+#js--c21-01a li:nth-child(15) { background: #EAF1DD }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-02 - FORMATTING
+   ************************************************************************* */
+#js--c21-02 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-02 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03 - FORMATTING
+   ************************************************************************* */
+#js--c21-03 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03 {font-size: 0.5rem}
+/* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03a - FORMATTING
+   ************************************************************************* */
+#js--c21-03a ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03a li:nth-child(5) { background: #EAF1DD }
+/* ************************************************************************* */
+
+/* ****************************************************************************
+   CODE FRAGMENT c21-03b - FORMATTING
+   ************************************************************************* */
+#js--c21-03b ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c21-03b li:nth-child(3) { background: #EAF1DD }
+#js--c21-03b li:nth-child(5) { background: #EAF1DD }
 /* ************************************************************************* */
 
