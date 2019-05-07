@@ -182,6 +182,10 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
        $('html, body').animate({scrollTop: $('#js--f24-19').offset().top -80}, 1000);
     });
 
+    $('.js--sc-f24-25').click(function () {
+       $('html, body').animate({scrollTop: $('#js--f24-25').offset().top -80}, 1000);
+    });
+
 
 
 });                                             /* END OF PAGE READY FUNCTION */

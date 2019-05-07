@@ -697,17 +697,239 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">You can see in the left hand pane all the directories and files of the website that we have developed so far.</p>
 
-                    <p class="hyp"></p>
+                </div>                                          <!-- End of section text      -->
 
-                    <p class="hyp"></p>
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
 
-                    <p class="hyp"></p>
 
-                    <p class="hyp"></p>
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.2.2 UPLOADING THE WEBSITE
+     ***********************************************************************-->
 
-                    <p class="hyp"></p>
+        <section class="section-std" id="js--240202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Uploading the website</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
 
-                    <p class="hyp"></p>
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">To copy the website on the local machine to the web host, select all the files in the local directory, the left pane (click in the left pane and hit <span class="menu">ctrl+a</span> to select all the files) and click the upload button <sub><img src="01-pages/24-02-publishing/02-images/fig-24-21a.png" style="height: 1rem" alt="Upload button"></sub>, this opens the upload dialogue:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-22">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-22.png" data-lightbox="fig-set" data-title="Figure 24.22 - WinSCP upload dialogue">
+                                <img style="max-width: 517px" src="01-pages/24-02-publishing/02-images/fig-24-22.png" alt="Figure 24.22 - WinSCP upload dialogue">
+                            </a>
+                            <figcaption>Figure 24.22 &emsp; WinSCP upload dialogue</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Leave everything set as it is and click <span class="menu">ok</span> to start the transfer, this opens a progress window:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-23">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-23.png" data-lightbox="fig-set" data-title="Figure 24.23 - WinSCP upload progress">
+                                <img style="max-width: 366px" src="01-pages/24-02-publishing/02-images/fig-24-23.png" alt="Figure 24.23 - WinSCP upload progress">
+                            </a>
+                            <figcaption>Figure 24.23 &emsp; WinSCP upload progress</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It takes a while to transfer the whole website (about 6 minutes 38 seconds to transfer 72&nbsp;MB, it averages about 180&nbsp;kB per second&nbsp;&mdash;&nbsp;I do have pretty good broadband).</p>
+
+                    <p class="hyp">At some point it will prompt you to overwrite the existing <span class="code">index.html</span> file, it will also ask if you want to always overwrite in the future (I said yes to this).</p>
+
+                    <p class="hyp">At the end of this, the two folders will have the same files in them:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-24">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-24.png" data-lightbox="fig-set" data-title="Figure 24.24 - WinSCP all files uploaded to the web server">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-24.png" alt="Figure 24.24 - WinSCP all files uploaded to the web server">
+                            </a>
+                            <figcaption>Figure 24.24 &emsp; WinSCP all files uploaded to the web server</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The moment of truth.</p>
+
+                    <p class="hyp">Open a web browser and type your domain name in to the address bar.</p>
+
+                    <p class="hyp">If you get something like <a class="xref js--sc-f24-25" href="#">Figure&nbsp;24.25</a>, it has probably worked.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-25">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-25.png" data-lightbox="fig-set" data-title="Figure 24.25 - The online website">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-25.png" alt="Figure 24.25 - The online website">
+                            </a>
+                            <figcaption>Figure 24.25 &emsp; The online website</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.2.3 SYNCHRONISING ONLINE AND OFFLINE CONTENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240203">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.2.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Synchronising online and offline content</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Rather than uploading the entire website each time you make a change, WinSCP has the facility to compare the online and offline folders and just copy any differences.</p>
+
+                    <p class="hyp">To do this, make sure the correct directories are visible in the two Windows (it should look like Figure 24.24) and then click the synchronise button <sub><img src="01-pages/24-02-publishing/02-images/fig-24-25a.png" style="height: 1rem" alt="Upload button"></sub>. This will open the synchronise dialogue, set it as follows:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-26">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-26.png" data-lightbox="fig-set" data-title="Figure 24.26 - Synchronise options">
+                                <img style="max-width: 487px" src="01-pages/24-02-publishing/02-images/fig-24-26.png" alt="Figure 24.26 -Synchronise options">
+                            </a>
+                            <figcaption>Figure 24.26 &emsp; Synchronise options</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Obviously, the local directory will be whatever you have selected on your machine.</p>
+
+                    <p class="hyp">I tend to synch from the local machine to the remote web host (not the other way) hence the direction/target directory is set to <span class="menu">remote</span>.</p>
+
+                    <p class="hyp">I also set it to <span class="menu">delete</span> files (if I&rsquo;ve removed a file in the local directory, I want it to be deleted from the remote too).</p>
+
+                    <p class="hyp">I also select the <span class="menu">use same options next time</span>. Click <span class="menu">ok</span>.</p>
+
+                    <p class="hyp">This will start a compare function:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-27">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-27.png" data-lightbox="fig-set" data-title="Figure 24.27 - WinSCP comparing files">
+                                <img style="max-width: 430px" src="01-pages/24-02-publishing/02-images/fig-24-27.png" alt="Figure 24.27 -WinSCP comparing files">
+                            </a>
+                            <figcaption>Figure 24.27 &emsp; WinSCP comparing files</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The comparison takes a while (depends on the size of the website, in my case about 1 minute 30 seconds). After which it will upload any changed files.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.2.4 SYNCHRONISING ONLINE AND OFFLINE CONTENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Synchronising online and offline content</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">There is also an option for keeping the two folders synchronised (keep remote directory up to date, <sub><img src="01-pages/24-02-publishing/02-images/fig-24-27a.png" style="height: 1rem" alt="Upload button"></sub>)</p>
+
+                    <p class="hyp">This has a similar set of options:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-28">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-28.png" data-lightbox="fig-set" data-title="Figure 24.28 - WinSCP keep remote directory up to date">
+                                <img style="max-width: 474px" src="01-pages/24-02-publishing/02-images/fig-24-28.png" alt="Figure 24.28 -WinSCP keep remote directory up to date">
+                            </a>
+                            <figcaption>Figure 24.28 &emsp; WinSCP keep remote directory up to date</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This will carry out the same comparison as the synchronise, but will then continue to monitor the two directories constantly up dating any changes until the <span class="menu">stop</span> button is pressed.</p>
 
                 </div>                                          <!-- End of section text      -->
 
