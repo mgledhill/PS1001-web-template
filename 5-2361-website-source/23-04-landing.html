@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="How and why the landing page has to be different">
+        <meta name="description" content="The landing page table of contents">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            23-01-LANDING.HTML
+Title :          WEBSITE TEMPLATE                            23-04-LANDING.HTML
 *******************************************************************************
 DETAILS
 
@@ -72,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/23-01-landing/05-local-js/23-01-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/23-04-landing/05-local-js/23-04-scroll.js"></script>
 
 
 
@@ -87,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/23-01-landing/01-local-css/23-01-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/23-04-landing/01-local-css/23-04-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -107,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Landing page differences | PracticalSeries: Web Development</title>
+        <title>The landing page table of contents | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -127,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="23-03-landing.html#js--230300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -139,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="24-00-publishing.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="23-02-landing.html#js--230200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="24-00-publishing.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -224,16 +224,16 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP SECTION]
-     SECTION - 23.1 LANDING PAGE DIFFERENCES
+     SECTION - 23.4 THE TITLE AND COVER IMAGE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--230100">           <!-- Start of section         -->
+        <section class="section-std" id="js--230400">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>23.1</h2></div>
-                 <div class="sub-title-text-box"><h2>Landing page differences</h2></div>
+                 <div class="sub-title-num-box"><h2>23.4</h2></div>
+                 <div class="sub-title-text-box"><h2>The landing page table of contents</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -247,53 +247,157 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">The landing page for a website is usually (and always in my case) the <span class="code">index.html</span> page (seems a long time since we discussed that). It is the first page on the website and is usually the one that people start with.</p>
+                    <p class="hyp">Each individual web page in the website has a table of contents (TOC) at the start of it that contains links to all the other sections, subsection &amp;c. that are part of the chapter with which the web page is associated.</p>
 
-                    <p class="hyp">The landing page is basically an introduction to the website and has a large table of contents that take you to whichever section of the website you are looking for.</p>
-
-                    <p class="hyp">There are four main differences to the landing page:</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list   -->
-                        <li><p class="hyp">There is no navigation bar at the top</p></li>
-
-                        <li><p class="hyp">The sticky navigation only has next chapter and section buttons</p></li>
-
-                        <li><p class="hyp">There is a web site title and cover image</p></li>
-
-                        <li><p class="hyp">The table of contents contains a complete list of all sections</p></li>
-                    </ol>                                       <!-- End of numbered list     -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">If I scroll down the page a bit, you will see the sticky navigation bar:</p>
+                    <p class="hyp">For example, each web page associated with chapter 3 has the following TOC:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--23-02">
-                            <a href="01-pages/23-01-landing/02-images/fig-23-02.png" data-lightbox="fig-set" data-title="Figure 23.2 - Landing page sticky navigation">
-                                <img src="01-pages/23-01-landing/02-images/fig-23-02.png" alt="Figure 23.2 - Landing page sticky navigation">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--23-05">
+                            <a href="01-pages/23-04-landing/02-images/fig-23-05.png" data-lightbox="fig-set" data-title="Figure 23.5 - Section 3 TOC">
+                                <img src="01-pages/23-04-landing/02-images/fig-23-05.png" alt="Figure 23.5 - Section 3 TOC">
                             </a>
-                            <figcaption>Figure 23.2 &emsp; Landing page sticky navigation</figcaption>
+                            <figcaption>Figure 23.5 &emsp; Section 3 TOC</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The <span class="menu">home</span>, <span class="menu">previous section</span> and <span class="menu">previous chapter</span> links are all missing. The home link is missing because this page is the home page. The previous links are missing because there are no previous chapters or sections, this is the first page.</p>
+                    <p class="hyp">Each web page in chapter 4 has:</p>
 
-                    <p class="hyp">Other than that, the landing page is just like any other page, it can have sections, subsections inline sections, images, tables, Lightbox, code fragments &amp;c. all the stuff we&rsquo;ve discussed in previous pages.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--23-06">
+                            <a href="01-pages/23-04-landing/02-images/fig-23-06.png" data-lightbox="fig-set" data-title="Figure 23.6 - Section 4 TOC">
+                                <img src="01-pages/23-04-landing/02-images/fig-23-06.png" alt="Figure 23.6 - Section 4 TOC">
+                            </a>
+                            <figcaption>Figure 23.6 &emsp; Section 4 TOC</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">In fact all the differences are in the <span class="code">&lt;heading&gt;</span> area. If you&rsquo;ve read through all the previous chapters, this is going to be dead easy for you. I don&rsquo;t do anything new. Consider it to be a tidying up exercise for the first page.</p>
+                    <p class="hyp">And so on, each section within a chapter has exactly the same TOC as every other section within that chapter. The way the TOC is constructed, if a link in the TOC is to a point on the current web page, it will slow scroll to that point, if the link is on a different page, it will jump directly to the correct point on that page.</p>
+
+                    <p class="hyp">It all just works (see <a class="hlink nohyp" href="11-05-header.html#js--110500">&sect;&nbsp;11.5</a> for the details); the long and short of it is, once a TOC has been set up for one page in a chapter, it can just be copied (without change) to every other page in that chapter without modification and it will just work. It&rsquo;s clever.</p>
+
+                    <p class="hyp">Now the landing page is basically a table of contents for the whole website. It has a few introductory and explanatory words, but it is basically there to provide an overview of the whole website and links to all the different chapters, section and subsections within it.</p>
+
+                    <p class="hyp">The TOC on the landing page is basically the same as the TOC on any other page within the website, it uses all the same structures and classes, there is nothing new at all (it is just the same as the TOC explained in <a class="hlink nohyp" href="11-05-header.html#js--110500">&sect;&nbsp;11.5</a>).</p>
+
+                    <p class="hyp">The only difference is that it is bigger; it has all the TOCs from every chapter.</p>
+
+                    <p class="hyp">This actually makes it quite easy to build, just copy the TOC from a web page in each chapter and paste it into the TOC on the landing page. Here&rsquo;s an example:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">landing page (index.html) toc HTML</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-07">&lt;!-- ********************************************************************** [WP 000004]
+&nbsp; &nbsp;  TABLE OF CONTENTS
+&nbsp; &nbsp;  **********************************************************************--&gt;
+
+&lt;div class=&quot;rg-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of TOC section --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;rg-col rg-span1-5&quot;&gt;&lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Left col (not used for TOC) --&gt;
+&nbsp; &nbsp; &lt;div class=&quot;rg-col rg-span3-5&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC centre col) --&gt;
+
+&nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;PRACTICAL SERIES
+&nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-line&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC (level 1) --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-000100&quot; href=&quot;../index.html&quot;&gt;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev1-num&quot;&gt;&lt;/span&gt;&lt;span class=&quot;toc-lev1-text&quot;&gt;Practical Series Publications &amp;mdash; Home Page&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+
+&nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;A NOTE BY THE AUTHOR
+&nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-line&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-000100&quot; href=&quot;index.html#js--000100&quot;&gt;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev1lt-num&quot;&gt;&lt;/span&gt;&lt;span class=&quot;toc-lev1lt-text&quot;&gt;A note by the author&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-000101&quot; href=&quot;index.html#js--000101&quot;&gt;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev1lt-num&quot;&gt;&lt;/span&gt;&lt;span class=&quot;toc-lev1lt-text&quot;&gt;Additional note (June 2018)&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+
+            ...
+
+&nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;3. GRIDS, FONTS, COLUMNS AND RESPONSIVE DESIGN
+&nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-line&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of TOC (level 1) --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-030000&quot; href=&quot;03-00-grid.html#js--000000&quot;&gt;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev1-num&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;toc-lev1-text&quot;&gt;Grids, fonts, columns and responsive design&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-list&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-030100&quot; href=&quot;03-00-grid.html#js--030100&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev2-num&quot;&gt;3.1&lt;/span&gt;&lt;span class=&quot;toc-lev2-text&quot;&gt;The Gerstner grid&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;
+
+            ...
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;li&gt;&lt;a class=&quot;js--sc-030400&quot; href=&quot;03-04-grid.html#js--030400&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev2-num&quot;&gt;3.4&lt;/span&gt;&lt;span class=&quot;toc-lev2-text&quot;&gt;Summary&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;&nbsp;
+&nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+
+&nbsp;  &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp; &nbsp; &nbsp; &nbsp; TOC&nbsp;-&nbsp;4. GETTING STARTED
+&nbsp; &nbsp; &nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-line&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of full TOC (level 1) --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-040000&quot; href=&quot;04-00-starting.html#js--000000&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev1-num&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;toc-lev1-text&quot;&gt;Getting started&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;&nbsp;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul class=&quot;toc-list&quot;&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-040100&quot; href=&quot;04-01-starting.html#js--040100&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev2-num&quot;&gt;4.1&lt;/span&gt;&lt;span class=&quot;toc-lev2-text&quot;&gt;The Brackets text editor&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;&nbsp; &nbsp; &nbsp; &nbsp;
+
+            ...
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;&lt;a class=&quot;js--sc-040300&quot; href=&quot;04-03-starting.html#js--040300&quot;&gt;&nbsp;
+&lt;div class=&quot;toc-lev&quot;&gt;&lt;span class=&quot;toc-lev2-num&quot;&gt;4.3&lt;/span&gt;&lt;span class=&quot;toc-lev2-text&quot;&gt;The basics of a web page&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/li&gt;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;  &lt;/ul&gt;&nbsp; &nbsp;
+&nbsp; &lt;!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 23.7 &emsp; Landing page TOC (extract) HTML</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Remember that the landing page TOC is no different to any other page. The above is an extract of the TOC for my website. The bit at the top (in red) is the start of a TOC and is identical to every other TOC (it is discussed in <a class="hlink nohyp" href="11-05-header.html#js--110500">&sect;&nbsp;11.5</a>). The bit in orange is unique to the landing page, it links to section within the landing page itself, these will just slow scroll down the page to the correct point.</p>
+
+                    <p class="hyp">The bits in turquoise and purple are the TOCs copied from the relevant pages of the website.</p>
+
+                    <p class="hyp">The turquoise has been directly copied from a chapter 3 web page (it doesn&rsquo;t matter which page in chapter 3, all the TOCs in chapter 3 are identical)</p>
+
+                    <p class="hyp">The purple has been directly copied from a chapter 4 web page.</p>
+
+                    <p class="hyp">This is repeated for all the chapters that are to feature within the landing page TOC.</p>
+
+                    <p class="hyp">I tend to list everything, but if you wanted to restrict the landing page to just the chapter level links (the TOC level 1 entries, just copy the TOC from the relevant section and delete everything but the <span class="code">toc-lev1</span> stuff).</p>
+
 
                 </div>                                          <!-- End of section text      -->
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                 <!--     <aside class="aside-right">                 Start of right side bar  -->
                 <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar     -->
+                <!--     </aside>                                    End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of section content   -->
         </section>                                              <!-- End of section           -->
@@ -310,7 +414,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="23-00-landing.html#js--000000">Prev</a>
+                        <a class="xref" href="23-03-landing.html#js--230300">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -320,7 +424,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="23-02-landing.html#js--230200">Next</a>
+                        <a class="xref" href="24-00-publishing.html#js--000000">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->

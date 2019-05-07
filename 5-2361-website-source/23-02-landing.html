@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="How and why the landing page has to be different">
+        <meta name="description" content="Understanding the landing page navigation bar">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                            23-01-LANDING.HTML
+Title :          WEBSITE TEMPLATE                            23-02-LANDING.HTML
 *******************************************************************************
 DETAILS
 
@@ -72,7 +72,7 @@ Date          Issue        Author         Reason for Modification
         <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/23-01-landing/05-local-js/23-01-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/23-02-landing/05-local-js/23-02-scroll.js"></script>
 
 
 
@@ -87,7 +87,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/23-01-landing/01-local-css/23-01-codeline.css">-->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/23-02-landing/01-local-css/23-02-codeline.css">
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -107,7 +107,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Landing page differences | PracticalSeries: Web Development</title>
+        <title>The Landing page navigation bar | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -127,7 +127,7 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="23-01-landing.html#js--230100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
                         <a class="nav-wide" href="22-00-equations.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
@@ -139,7 +139,7 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 04 - Next Chapter -->
                         <a class="nav-wide" href="24-00-publishing.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="23-02-landing.html#js--230200"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="23-03-landing.html#js--230300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -224,16 +224,16 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP SECTION]
-     SECTION - 23.1 LANDING PAGE DIFFERENCES
+     SECTION - 23.2 THE NAVIGATION BAR
      ***********************************************************************-->
 
-        <section class="section-std" id="js--230100">           <!-- Start of section         -->
+        <section class="section-std" id="js--230200">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>23.1</h2></div>
-                 <div class="sub-title-text-box"><h2>Landing page differences</h2></div>
+                 <div class="sub-title-num-box"><h2>23.2</h2></div>
+                 <div class="sub-title-text-box"><h2>The navigation bar</h2></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
@@ -247,46 +247,222 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">The landing page for a website is usually (and always in my case) the <span class="code">index.html</span> page (seems a long time since we discussed that). It is the first page on the website and is usually the one that people start with.</p>
-
-                    <p class="hyp">The landing page is basically an introduction to the website and has a large table of contents that take you to whichever section of the website you are looking for.</p>
-
-                    <p class="hyp">There are four main differences to the landing page:</p>
-
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      NUMBERED LIST
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <ol class="list-num">                       <!-- Start of numbered list   -->
-                        <li><p class="hyp">There is no navigation bar at the top</p></li>
-
-                        <li><p class="hyp">The sticky navigation only has next chapter and section buttons</p></li>
-
-                        <li><p class="hyp">There is a web site title and cover image</p></li>
-
-                        <li><p class="hyp">The table of contents contains a complete list of all sections</p></li>
-                    </ol>                                       <!-- End of numbered list     -->
-<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-                    <p class="hyp">If I scroll down the page a bit, you will see the sticky navigation bar:</p>
+                    <p class="hyp">Let&rsquo;s look at how it starts:</p>
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                    <div class="fig-row">
-<!-- Image -->          <figure class="fig-col fig1-1" id="js--23-02">
-                            <a href="01-pages/23-01-landing/02-images/fig-23-02.png" data-lightbox="fig-set" data-title="Figure 23.2 - Landing page sticky navigation">
-                                <img src="01-pages/23-01-landing/02-images/fig-23-02.png" alt="Figure 23.2 - Landing page sticky navigation">
-                            </a>
-                            <figcaption>Figure 23.2 &emsp; Landing page sticky navigation</figcaption>
-                        </figure>
+                    <div class="code-extract">
+                        <div class="code-header">landing page (index.html) navigation bar</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-01">&lt;header id=&quot;js--000000&quot;&gt;
+&lt;!-- ********************************************************************** [WP TOPNAV]
+&nbsp; &nbsp;  TOP NAVIGATION (ABOVE CONTENTS LIST)
+&nbsp; &nbsp;  *******************************************************************--&gt;
+
+ &nbsp; &nbsp; &lt;nav class=&quot;nav-cover&quot;&gt;&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;  &lt;!-- Start of top navigation bar --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  &nbsp;  &lt;!-- Start of top navigation row --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of navigation button row --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nav-wide&quot; &gt;&lt;/div&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 02&nbsp;-&nbsp;Previous Chapter --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nav-wide&quot; &gt;&lt;/div&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 03&nbsp;-&nbsp;Home wide (hidden when fixed nav activates) --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nav-wide nav-home&quot; &gt;&lt;/div&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 03a&nbsp;-&nbsp;Top narrow (hidden until fixed nav starts) --&gt;
+&lt;a class=&quot;nav-narrow js--sc-000000&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Top&lt;/span&gt;&lt;/a&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 03b&nbsp;-&nbsp;Home narrow (hidden until fixed nav starts) --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;nav-narrow&quot;&gt;&lt;/div&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 04&nbsp;-&nbsp;Next Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;01-00-introduction.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next chapter&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;d&lt;/span&gt;&lt;/a&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 05&nbsp;-&nbsp;Next section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;01-00-introduction.html#js--010000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next section&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;r&lt;/span&gt;&lt;/a&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of navigation button row --&gt;
+ &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation row --&gt;
+ &nbsp; &nbsp; &lt;/nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation bar --&gt;
+&lt;!-- ====================================================================== [WP END] --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 23.1 &emsp; Landing page navigation HTML</div>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The <span class="menu">home</span>, <span class="menu">previous section</span> and <span class="menu">previous chapter</span> links are all missing. The home link is missing because this page is the home page. The previous links are missing because there are no previous chapters or sections, this is the first page.</p>
+                    <p class="hyp">This compares with a navigation bar from a normal page:</p>
 
-                    <p class="hyp">Other than that, the landing page is just like any other page, it can have sections, subsections inline sections, images, tables, Lightbox, code fragments &amp;c. all the stuff we&rsquo;ve discussed in previous pages.</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">typical navigation bar html</div>
+                        <div class="code-area">
 
-                    <p class="hyp">In fact all the differences are in the <span class="code">&lt;heading&gt;</span> area. If you&rsquo;ve read through all the previous chapters, this is going to be dead easy for you. I don&rsquo;t do anything new. Consider it to be a tidying up exercise for the first page.</p>
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-02">&lt;header id=&quot;js--000000&quot;&gt;
+&lt;!-- ********************************************************************** [WP TOPNAV]
+&nbsp; &nbsp;  TOP NAVIGATION (ABOVE CONTENTS LIST)
+&nbsp; &nbsp;  *******************************************************************--&gt;
+
+&nbsp; &nbsp; &lt;nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation bar --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;top-nav&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &lt;!-- Start of top navigation row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;rg-row&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Start of navigation button row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. section&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 02&nbsp;-&nbsp;Previous Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. chapter&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03&nbsp;-&nbsp;Home wide (hidden when fixed nav activates) --&gt;
+&lt;a class=&quot;nav-wide nav-home&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03a&nbsp;-&nbsp;Top narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow js--sc-000000&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Top&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 03b&nbsp;-&nbsp;Home narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 04&nbsp;-&nbsp;Next Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next chapter&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;d&lt;/span&gt;&lt;/a&gt;
+&lt;!-- Button 05&nbsp;-&nbsp;Next section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Next section&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;r&lt;/span&gt;&lt;/a&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of navigation button row --&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation row --&gt;
+&nbsp; &nbsp; &lt;/nav&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- End of top navigation bar --&gt;
+&lt;!-- ========================================================================== [WP END] --&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 23.2 &emsp; Navigation bar for other pages</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first change is to the <span class="code">&lt;nav&gt;</span> element itself, on the landing page the <span class="code">&lt;nav&gt;</span> element has been given the class <span class="code">nav-cover</span>, this has the CSS:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">landing page navigation bar CSSl</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint lang-css">.nav-cover { display: none}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /* Hide top nav bar on cover page */</pre>
+
+                        </div>
+                        <div class="code-caption">Code 23.3 &emsp; Landing page navigation bar CSS</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This sets the navigation bar to be invisible, it just is doesn&rsquo;t show up at all on the page.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The <span class="code">fixed-nav</span> class that is applied to activate the sticky nav (<a class="hlink nohyp" href="18-04-stickynav.html#js--180400a">&sect;&nbsp;18.4</a>) has the CSS rule <span class="code">display: inline</span>, this makes the <span class="code">&lt;nav&gt;</span> element visible again for the sticky nav.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The sticky nav stuff still works, when the ID <span class="code">js--fixed-nav</span> reaches the top of the screen, the whole sticky navigation effect kicks in and the navigation bar is displayed (the <span class="code">nav-cover</span> class is overruled).</p>
+
+                    <p class="hyp">This time though the navigation bar has been tweaked to remove the links we don&rsquo;t want. This is done directly in the HTML.</p>
+
+                    <p class="hyp">A typical navigation bar has seven buttons all with links of some description:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><span class="code">Button 1&nbsp;</span>&nbsp;&mdash;&nbsp;Previous section (wide button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 2&nbsp;</span>&nbsp;&mdash;&nbsp;Previous chapter (wide button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 3&nbsp;</span>&nbsp;&mdash;&nbsp;Home (wide button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 3a</span>&nbsp;&mdash;&nbsp;Top (narrow button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 3b</span>&nbsp;&mdash;&nbsp;Home (narrow button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 4&nbsp;</span>&nbsp;&mdash;&nbsp;Next chapter (wide button)</p></li>
+
+                        <li><p class="hyp"><span class="code">Button 5&nbsp;</span>&nbsp;&mdash;&nbsp;Next section (wide button)</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">When the sticky navigation activates, the wide button 3 is replaced with the narrow buttons 3a and 3b.</p>
+
+                    <p class="hyp">In the case of the landing page, we don&rsquo;t want buttons 1, 2, 3 or 3b. When I say we don&rsquo;t want the buttons, we want to keep the physical boxes, but we don&rsquo;t want any text or clickable links in them.</p>
+
+                    <p class="hyp">To do this, I&rsquo;ve simply replaced each anchor element for buttons 1, 2, 3 and 3b with an empty div element with the same classes.</p>
+
+                    <p class="hyp">Thus the original button 1:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-02a">&lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. section&lt;/span&gt;&lt;/a&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Becomes:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-02b">&lt;!-- Button 01&nbsp;-&nbsp;Previous Section --&gt;
+&lt;div class=&quot;nav-wide&quot; &gt;&lt;/div&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The same is true for the other empty buttons:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - SINGLE LINE - SIMPLE DISPLAY (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">                  <!-- Start of code fragment   -->
+                        <div class="code-area">                 <!-- Start of code holder     -->
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c23-02c">&lt;!-- Button 02&nbsp;-&nbsp;Previous Chapter --&gt;
+&lt;a class=&quot;nav-wide&quot; href=&quot;98-00-blank.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Prev. chapter&lt;/span&gt;&lt;/a&gt;
+&lt;div class=&quot;nav-wide&quot; &gt;&lt;/div&gt;
+
+&lt;!-- Button 03&nbsp;-&nbsp;Home wide (hidden when fixed nav activates) --&gt;
+&lt;a class=&quot;nav-wide nav-home&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;div class=&quot;nav-wide nav-home&quot; &gt;&lt;/div&gt;
+
+&lt;!-- Button 03b&nbsp;-&nbsp;Home narrow (hidden until fixed nav activates) --&gt;
+&lt;a class=&quot;nav-narrow&quot; href=&quot;index.html#js--000000&quot;&gt;&lt;span class=&quot;top-nav-text&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;top-nav-icon&quot;&gt;h&lt;/span&gt;&lt;/a&gt;
+&lt;div class=&quot;nav-narrow&quot;&gt;&lt;/div&gt;
+
+</pre>
+
+                        </div>
+                        <div class="code-caption"></div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The red is the typical link, the green is the same link modified for the landing page.</p>
+
+                    <p class="hyp">In all cases, the anchor is replaced with an empty <span class="code">div</span> that has exactly the same classes.</p>
+
+                    <p class="hyp">These <span class="code">div</span> elements just show as empty boxes of the correct with and in the correct positions.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>This technique of replacing the anchor element with a <span class="code">div</span> can be used on any page that does not have a previous or next section (the first and last chapters usually).</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
                 </div>                                          <!-- End of section text      -->
 
@@ -310,7 +486,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="23-00-landing.html#js--000000">Prev</a>
+                        <a class="xref" href="23-01-landing.html#js--230100">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -320,7 +496,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="23-02-landing.html#js--230200">Next</a>
+                        <a class="xref" href="23-03-landing.html#js--230300">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
