@@ -1,0 +1,493 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understaning the difference between https:// and http:// and which to use">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                         24-03-PUBLISHING.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+06 May 2019   d-P27.23.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/24-03-publishing/05-local-js/24-03-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/24-03-publishing/01-local-css/24-03-codeline.css">-->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>http:// or https:// | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="24-02-publishing.html#js--240200"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="25-00-template.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="24-04-publishing.html#js--240400"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P27.23.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>24</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">24</span>Publishing a website</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 24 publishing
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-240000" href="24-00-publishing.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">24</span><span class="toc-lev1-text">Publishing a website</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-240100" href="24-01-publishing.html#js--240100">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.1</span><span class="toc-lev2-text">Web hosting</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240101" href="24-01-publishing.html#js--240101">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.1</span><span class="toc-lev3-text">Choosing a web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240102" href="24-01-publishing.html#js--240102">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">A domain name</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240103" href="24-01-publishing.html#js--240103">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">Web host server type</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240104" href="24-01-publishing.html#js--240104">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.4</span><span class="toc-lev3-text">Understanding the hosted site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240200" href="24-02-publishing.html#js--240200">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.2</span><span class="toc-lev2-text">Using and ftp client to publish the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240201" href="24-02-publishing.html#js--240201">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.1</span><span class="toc-lev3-text">Connecting WinSCP to the web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240202" href="24-02-publishing.html#js--240202">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.2</span><span class="toc-lev3-text">Uploading the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240203" href="24-02-publishing.html#js--240203">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.3</span><span class="toc-lev3-text">Synchronising online and offline content</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240204" href="24-02-publishing.html#js--240204">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.4</span><span class="toc-lev3-text">Keeping remote directory up to date</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240300" href="24-03-publishing.html#js--240300">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.3</span><span class="toc-lev2-text">http:// or https://</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240400" href="24-04-publishing.html#js--240400">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.4</span><span class="toc-lev2-text">Telling search engines about your site</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240401" href="24-04-publishing.html#js--240401">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.1</span><span class="toc-lev3-text">The sitemap</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240402" href="24-04-publishing.html#js--240402">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Registering a site with Google</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240403" href="24-04-publishing.html#js--240403">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Google Analytics</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240404" href="24-04-publishing.html#js--240404">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.4</span><span class="toc-lev3-text">Anonymising IP data</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240405" href="24-04-publishing.html#js--240405">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.5</span><span class="toc-lev3-text">Using Google Analytics	</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 24.3 HTTP:// OR HTTPS://
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240300">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>24.3</h2></div>
+                 <div class="sub-title-text-box"><h2>http:// or https://</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Should you use http or https? <span class="first-use">What&rsquo;s the difference?</span></p>
+
+                    <p class="hyp">Http stands for hypertext transfer protocol, this is the communication protocol used by web browsers to receive data from a website. Https is hypertext transfer protocol secure; the secure means that the data transfer is encrypted (and thus more secure). </p>
+
+                    <p class="hyp">The data transfer is encrypted by the use of a secure socket layer (SSL) certificate. This certificate has to be purchased from a certificate authority (CA), most web hosts offer this facility.</p>
+
+                    <p class="hyp">The process is a bit complicated (well very complicated really) but it basically works like this:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">The user give an https address to a browser (to view a website)</p></li>
+
+                        <li><p class="hyp">The browser sends a message to the web server requesting a certificate and a public (encryption) key</p></li>
+
+                        <li><p class="hyp">The server issues a certificate and a public key to the browser</p></li>
+
+                        <li><p class="hyp">The browser checks the certificate with the issuing certification authority. </p></li>
+
+                        <li><p class="hyp">If the certificate is not verified, communication fails and the browser issues a warning (usually &ldquo;connection is not private&rdquo;)</p></li>
+
+                        <li><p class="hyp">If the certificate is verified the browser send its own encryption key to the server</p></li>
+
+                        <li><p class="hyp">The server then decrypts the key uses it to encrypt content that is sent to the browser</p></li>
+
+                        <li><p class="hyp">The browser decrypts the content and displays the web page </p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Https is the preferred type of website, it will give a stronger ranking with Google and it tells people that you consider security to be important. Chrome is also getting more twitchy about http and is starting to flag up off-putting warning when it encounters such sites.</p>
+
+                    <p class="hyp">If you are serious about your website, you will want to use https.</p>
+
+                    <p class="hyp">That said it isn&rsquo;t free, it costs me another £50 per year plus VAT to have an SSL certificate.</p>
+
+                    <p class="hyp">What I will say is this, if you are going to use https, you are better to do it at the start, I didn&rsquo;t, and switching it all over later is a pain in the arse&nbsp;&mdash;&nbsp;something I&rsquo;m not entirely sure I&rsquo;ve sorted out even now, a year later.</p>
+
+                    <p class="hyp">Make your decision and stick with it is what I say; if you have even the slightest doubt pay the fifty quid and buy the SSL certificate.</p>
+
+                    <p class="hyp">Getting the certificate is a relatively easy process; you do it through your web host. They will have some add-on package that makes this available to you. With Heart Internet, it is in the add-ons section:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-29">
+                            <a href="01-pages/24-03-publishing/02-images/fig-24-29.png" data-lightbox="fig-set" data-title="Figure 24.29 - Heart Internet SSL">
+                                <img src="01-pages/24-03-publishing/02-images/fig-24-29.png" alt="Figure 24.29 - Heart Internet SSL">
+                            </a>
+                            <figcaption>Figure 24.29 &emsp; Heart Internet SSL</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It is called <span class="menu">personalised secure server (SSL certificate)</span>, under this I get several options:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">Simple SSL (£50)</p></li>
+
+                        <li><p class="hyp">Standard SSL (£150)</p></li>
+
+                        <li><p class="hyp">Extended verification SSL (£250)</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The more expensive option come with some form of warranty, I guess a sort of insurance policy. I went for the simple one.</p>
+
+                    <p class="hyp">One of the questions you will be asked is whether your site URL is to be <span class="sml-caps-s">https://www.yourdomainname</span> or <span class="sml-caps-s">https://yourdomainname</span>. </p>
+
+                    <p class="hyp">Generally, you can have either; the www is no longer compulsory, most new sites do without the <span class="menu">www</span> (mine does). It doesn&rsquo;t matter which you use, just be consistent.</p>
+
+                    <p class="hyp">When you apply (and pay up) it will send emails to the following addresses:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp">administrator@[your domain]</p></li>
+
+                        <li><p class="hyp">hostmaster@[your domain]</p></li>
+
+                        <li><p class="hyp">postmaster@[your domain]</p></li>
+
+                        <li><p class="hyp">webmaster@[your domain]</p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This means that you must be able to allocate email addresses with your web host. This is fairly standard, virtually all web hosts that provide you with a domain name also give you the facility to assign mailboxes with your domain name (e.g. in my case: mg@practicalseries.com)</p>
+
+                    <p class="hyp">Heart Internet use Starfield Technologies as the certification authority, you will eventually receive an email from the authority asking you to verify the certificate, this usually involves creating a web page with that contains a code the authority sends to you. It proves that you are in charge of the website. This is the email I received with the code and instructions about how to deploy it <span class="first-use">(I&rsquo;ve change the code, obviously)</span>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-30">
+                            <a href="01-pages/24-03-publishing/02-images/fig-24-30.png" data-lightbox="fig-set" data-title="Figure 24.30 - SSL validation instructions">
+                                <img src="01-pages/24-03-publishing/02-images/fig-24-30.png" alt="Figure 24.30 - SSL validation email">
+                            </a>
+                            <figcaption>Figure 24.30 &emsp; SSL validation email</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">When I looked at the <span class="menu">Domain Access Control Instructions</span> link on the email, it told me to do the following:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-31">
+                            <a href="01-pages/24-03-publishing/02-images/fig-24-31.png" data-lightbox="fig-set" data-title="Figure 24.31 - SSL validation instructions">
+                                <img style="max-width: 707px" src="01-pages/24-03-publishing/02-images/fig-24-31.png" alt="Figure 24.31 - SSL validation instructions">
+                            </a>
+                            <figcaption>Figure 24.31 &emsp; SSL validation instructions</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It wants me to create a folder structure from the root of the web page (the folder above public_html), you can see it in <a class="hlink nohyp utx" href="24-01-publishing.html#js--f24-07">Figure&nbsp;24.7</a>, it is the:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">.well-known/pki-validation/</span></p>
+
+                    <p class="hyp">It then wants a file called <span class="code">starfield.html</span> in that folder with the code specified in the email, the thing that starts <span class="code">l4omb</span> in the email.</p>
+
+                    <p class="hyp">I created this file in the above path and then clicked the bottom link in the email to validate it.</p>
+
+                    <p class="hyp">A few minutes later Heart Internet emailed me to say that the certificate had been verified and the site was now available at the <a class="hlink nohyp" href="https:practicalseries.com">https:practicalseries.com</a> address, and it was. That was all there was too it (apart from the fifty quid).</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>Although the site can now be addressed using https, the site is also available with the http address too.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="24-02-publishing.html#js--240200">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="24-04-publishing.html#js--240400">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
