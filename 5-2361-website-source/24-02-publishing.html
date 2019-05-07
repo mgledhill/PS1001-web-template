@@ -1,0 +1,772 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Understaning how to use an FTP client to publish your website">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                         24-01-PUBLISHING.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+06 May 2019   d-P27.23.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/24-02-publishing/05-local-js/24-02-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/24-02-publishing/01-local-css/24-02-codeline.css">-->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Using and ftp client to publish the website | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="24-01-publishing.html#js--240100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="25-00-template.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="24-03-publishing.html#js--240300"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P27.23.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>24</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">24</span>Publishing a website</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 24 publishing
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-240000" href="24-00-publishing.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">24</span><span class="toc-lev1-text">Publishing a website</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-240100" href="24-01-publishing.html#js--240100">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.1</span><span class="toc-lev2-text">Web hosting</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240101" href="24-01-publishing.html#js--240101">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.1</span><span class="toc-lev3-text">Choosing a web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240102" href="24-01-publishing.html#js--240102">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">A domain name</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240103" href="24-01-publishing.html#js--240103">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">Web host server type</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240104" href="24-01-publishing.html#js--240104">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.4</span><span class="toc-lev3-text">Understanding the hosted site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240200" href="24-02-publishing.html#js--240200">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.2</span><span class="toc-lev2-text">Using and ftp client to publish the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240201" href="24-02-publishing.html#js--240201">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.1</span><span class="toc-lev3-text">Connecting WinSCP to the web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240202" href="24-02-publishing.html#js--240202">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.2</span><span class="toc-lev3-text">Uploading the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240203" href="24-02-publishing.html#js--240203">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.3</span><span class="toc-lev3-text">Synchronising online and offline content</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240204" href="24-02-publishing.html#js--240204">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.4</span><span class="toc-lev3-text">Keeping remote directory up to date</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240300" href="24-03-publishing.html#js--240300">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.3</span><span class="toc-lev2-text">http:// or https://</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240400" href="24-04-publishing.html#js--240400">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.4</span><span class="toc-lev2-text">Telling search engines about your site</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240401" href="24-04-publishing.html#js--240401">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.1</span><span class="toc-lev3-text">The sitemap</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240402" href="24-04-publishing.html#js--240402">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Registering a site with Google</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240403" href="24-04-publishing.html#js--240403">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Google Analytics</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240404" href="24-04-publishing.html#js--240404">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.4</span><span class="toc-lev3-text">Anonymising IP data</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240405" href="24-04-publishing.html#js--240405">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.5</span><span class="toc-lev3-text">Using Google Analytics	</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 24.2 USING AND FTP CLIENT TO PUBLISH THE WEBSITE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>24.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Using and ftp client to publish the website</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">A file transfer protocol (ftp) client is basically a package that can be used to copy website files from your PC to the web host server that holds the online version of your website (the one everyone can see when the type the URL into a browser).</p>
+
+                    <p class="hyp">The ftp client I use is WinSCP (Windows secure copy protocol). You can get it <a class="hlink nohyp" href="https://winscp.net/eng/index.php">here</a>.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-01">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-09.png" data-lightbox="fig-set" data-title="Figure 24.9 - WinSCP download page">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-09.png" alt="Figure 24.9 - WinSCP download page">
+                            </a>
+                            <figcaption>Figure 24.9 &emsp; WinSCP download page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">To get it just click the download button. This downloads a file called:<br><span class="code">winscp-5.13.8-setup.exe</span>.</p>
+
+                    <p class="hyp">Run the file to install it.</p>
+
+                    <p class="hyp">The first screen is just an &ldquo;accept the licence&rdquo; screen click <span class="menu">accept</span>.</p>
+
+                    <p class="hyp">The second screen (<a class="xref js--sc-f24-10 utx" href="#">Figure&nbsp;24.10</a>) is asking for the type of installation, go for <span class="menu">typical</span>. The third screen is to select the user interface, select <span class="menu">commander</span>. This shows the offline and online versions in side-by-side panels and it makes easier to move things between each.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f24-10">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-10.png" data-lightbox="fig-set" data-title="Figure 24.10 - WinSCP installation type">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-10.png" alt="Figure 24.10 - WinSCP installation type">
+                            </a>
+                            <figcaption>Figure 24.10 &emsp; WinSCP installation type</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f24-11">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-11.png" data-lightbox="fig-set" data-title="Figure 24.1 - WinSCP user interface style">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-11.png" alt="Figure 24.1 - WinSCP user interface style">
+                            </a>
+                            <figcaption>Figure 24.11 &emsp; WinSCP user interface style</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">The final screen is the <span class="menu">install</span> button. Just click it.</p>
+
+                    <p class="hyp">Once installation is complete a final popup will be displayed, untick the <span class="menu">get started</span> and <span class="menu">launch WinSCP</span> boxes and click <span class="menu">finish</span>.</p>
+
+                    <p class="hyp">You will now have a WinSCP icon on your desk top:</p>
+
+                    <p class="hyp" style="text-align: center"><img src="01-pages/24-02-publishing/02-images/fig-24-11a.png" alt="Figure 24.1 - WinSCP user interface style"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.2.1 CONNECTING WINSCP TO THE WEB HOST
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Connecting WinSCP to the web host</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">In this section I&rsquo;m going to show you how to connect WinSCP to the web host so you can upload the website and have it visible on the internet.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION ENABLING FTP AT THE WEB HOST
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240201a">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-text-box"><h4>Enabling ftp at the web host</h4></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Before you start with WinSCP, you will probably have to logon to the web host website to allow ftp transfers to take place. This isn&rsquo;t an absolute rule, but most web hosts disable ftp after a specified period. This is what mine looks like with Heart Internet. I&rsquo;m logged in on the website and viewing the control panel:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-12">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-12.png" data-lightbox="fig-set" data-title="Figure 24.12 - Web host unlocking the ftp">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-12.png" alt="Figure 24.12 - Web host unlocking the ftp">
+                            </a>
+                            <figcaption>Figure 24.12 &emsp; Web host unlocking the ftp</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I have to unlock the ftp before I can use it. There are two mechanisms available to me, I can either unlock it for a specific time ranging from 1 hour to 28 days (I tend to go for 4 hours) or I can unlock it indefinitely, but only for a specific IP address.</p>
+
+                    <p class="hyp">In either case, the ftp client will still need to supply the logon credentials (at the bottom) before anything can be uploaded to the website.</p>
+
+                    <p class="hyp">Let&rsquo;s go for the 4 hour option. Tick the box and click unlock. I now get this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-13">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-13.png" data-lightbox="fig-set" data-title="Figure 24.13 - Web host with unlocked ftp">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-13.png" alt="Figure 24.13 - Web host with unlocked ftp">
+                            </a>
+                            <figcaption>Figure 24.13 &emsp; Web host with unlocked ftp</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I&rsquo;m not saying that every web host does it this way, but it seems to be a fairly sensible approach.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP INLINE]
+     SECTION CONFIGURING WINSCP
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240201b">          <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-text-box"><h4>Configuring WinSCP</h4></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Click the WinSCP icon to open it:</p>
+
+                    <p class="hyp" style="text-align: center"><img src="01-pages/24-02-publishing/02-images/fig-24-11a.png" alt="Figure 24.1 - WinSCP user interface style"></p>
+
+                    <p class="hyp">WinSCP opens its main window with a <span class="menu">login</span> popup:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-14">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-14.png" data-lightbox="fig-set" data-title="Figure 24.14 - WinSCP first use">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-14.png" alt="Figure 24.14 - WinSCP first use">
+                            </a>
+                            <figcaption>Figure 24.14 &emsp; WinSCP first use</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Your exact ftp logon details will be provided by your web host provider. The host name is usually <span class="code">ftp.yourdomainname</span>.</p>
+
+                    <p class="hyp">Let&rsquo;s say I have the following information <span class="first-use">(I&rsquo;m not showing the correct usernames and passwords, so don&rsquo;t even try):</span></p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - STANDARD TABLE WITH BOTTOM BORDERS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-clean" id="js--t24-02">
+<!-- Data row -->       <tr style="border-top: 1px solid #ccc">
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="menu">Protocol</span></td>
+                            <td class="table-left">FTP</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="menu">Encryption</span></td>
+                            <td class="table-left">No encryption</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="menu">FTP server</span></td>
+                            <td class="table-left">ftp.practicalseries.com</td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="menu">Username</span></td>
+                        <td class="table-left"><span class="code">PeterPettigrew</span></td>
+                        </tr>
+<!-- Data row -->       <tr>
+                            <td class="leading"><div style="min-height: 3em"></div></td>
+                            <td class="table-left"><span class="menu">Password</span></td>
+                        <td class="table-left"><span class="code">fG594tp^xQ!</span></td>
+                        </tr>
+<!-- Caption -->        <tr class="no-border">
+                            <td class="leading"></td>
+                            <td colspan="3" class="table-caption">Table 24.2 &emsp; Typical ftp logon information</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The first thing to do is enter this information in the WinSCP logon popup:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-15">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-15.png" data-lightbox="fig-set" data-title="Figure 24.15 - WinSCP login dialogue">
+                                <img style="max-width: 640px" src="01-pages/24-02-publishing/02-images/fig-24-15.png" alt="Figure 24.15 - WinSCP login dialogue">
+                            </a>
+                            <figcaption>Figure 24.15 &emsp; WinSCP login dialogue</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Leave it set to <span class="menu">new site</span> in the left pane (it is the only option at the moment and we will get to rename it later on).</p>
+
+                    <p class="hyp">Obviously enter the information for your own web host. In my case the <span class="menu">file protocol</span> needs to be <span class="menu">FTP</span>, there are various other options, but the most common is <span class="menu">FTP</span>, followed by <span class="menu">SFTP</span> (secure shell file transfer protocol), the second one has more security encryption added. The exact one depends on your web host.</p>
+
+                    <p class="hyp">The host name is the FTP server name (usually it is <span class="code">ftp.</span> in front of your domain name); in my case it is <span class="code">ftp.practicalseries.com</span>.</p>
+
+                    <p class="hyp">The port number is set automatically by WinSCP based on the protocol selected (21 for FTP, 22 for SFTP), I did not change this.</p>
+
+                    <p class="hyp">Finally enter your <span class="menu">username</span> and <span class="menu">password</span>.</p>
+
+                    <p class="hyp">Click <span class="menu">save</span> (I left the <span class="menu">anonymous login</span> unticked) to open the next dialogue window:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-16">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-16.png" data-lightbox="fig-set" data-title="Figure 24.16 - Save logon information">
+                                <img style="max-width: 332px" src="01-pages/24-02-publishing/02-images/fig-24-16.png" alt="Figure 24.16 - Save logon information">
+                            </a>
+                            <figcaption>Figure 24.16 &emsp; Save logon information</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Enter a meaningful <span class="menu">site name</span> (this is just a name so that you can recognise the connection, it doesn&rsquo;t have to be accurate).</p>
+
+                    <p class="hyp">I tick the <span class="menu">save password</span> box (even though it&rsquo;s not recommended). If you leave it unticked, you will have to enter the password every time you logon.</p>
+
+                    <p class="hyp">That&rsquo;s it click OK.</p>
+
+                    <p class="hyp">It will now try to connect WinSCP to your web host, a brief popup will appear showing the stages of the connection:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-17">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-17.png" data-lightbox="fig-set" data-title="Figure 24.17 - WinSCP connecting to the web host">
+                                <img style="max-width: 332px" src="01-pages/24-02-publishing/02-images/fig-24-17.png" alt="Figure 24.17 - WinSCP connecting to the web host">
+                            </a>
+                            <figcaption>Figure 24.17 &emsp; WinSCP connecting to the web host</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>The next time you start WinSCP, the logon popup will automatically appear, the connection you just named will be there (in my case <span class="menu">PracticalSeries</span>). Just select it in the left pane and click logon to activate it.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Finally, you will be connected and it will look like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-18">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-18.png" data-lightbox="fig-set" data-title="Figure 24.18 - WinSCP connected to the web server">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-18.png" alt="Figure 24.18 - WinSCP connected to the web server">
+                            </a>
+                            <figcaption>Figure 24.18 &emsp; WinSCP connected to the web server</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"><span class="first-use">Woohoo.</span></p>
+
+                    <p class="hyp">At the top (third row down, highlighted) you can see the connection tab, in my case it is <span class="menu">PracticalSeries</span>.</p>
+
+                    <p class="hyp">The two main explorer type windows are the important bit. The one on the left is looking at the documents directory on the local machine (this is the default start location for WinSCP). The window on the right is the web host, by default it is positioned at the root level of the website, this is the same as that shown in <a class="hlink nohyp" href="24-01-publishing.html#js--f24-05">Figure&nbsp;24.5</a> (WinSCP does not show the <span class="code">.bash</span> files, these are considered system files).</p>
+
+                    <p class="hyp">The first thing to do is set the web host side to point to the correct location for our files. This is the <span class="code">public_html</span> folder (this is where we are going to put our website).</p>
+
+                    <p class="hyp">Double click <span class="code">public_html</span> in the right pane to open that folder. Now it gives:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-19">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-19.png" data-lightbox="fig-set" data-title="Figure 24.19 - WinSCP select the public folder">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-19.png" alt="Figure 24.19 - WinSCP select the public folder">
+                            </a>
+                            <figcaption>Figure 24.19 &emsp; WinSCP select the public folder</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">This now opens the public folder, it has the default <span class="code">index.html</span> file in it. The folder name is indicated in a couple of places, you can see it in points <span class="index">1</span> and <span class="index">2</span> in the above figure.</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NOTE - HANGING INDENT
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="note">                           <!-- Start of note            -->
+                        <li>If you want to go back up to the root level just click the <sub><img src="01-pages/24-02-publishing/02-images/fig-24-19a.png" style="height: 1rem" alt="Upload button"></sub> icon.</li>
+                    </ul>                                       <!-- End of note              -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The next thing to do is <span class="first-use">bookmark</span> this location, it just makes it easier to get back here, click the folder with a green arrow <sub><img src="01-pages/24-02-publishing/02-images/fig-24-19b.png" style="height: 1rem" alt="Upload button"></sub> (point <span class="index">3</span> in the above figure):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-20">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-20.png" data-lightbox="fig-set" data-title="Figure 24.20 - WinSCP add public folder to the bookmark list">
+                                <img style="max-width: 411px" src="01-pages/24-02-publishing/02-images/fig-24-20.png" alt="Figure 24.20 - WinSCP add public folder to the bookmark list">
+                            </a>
+                            <figcaption>Figure 24.20 &emsp; WinSCP add public folder to the bookmark list</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Click <span class="menu">add</span> and the bookmark will be added to the list. This can now be accessed at any time from the <sub><img src="01-pages/24-02-publishing/02-images/fig-24-19b.png" style="height: 1rem" alt="Upload button"></sub> button.</p>
+
+                    <p class="hyp">Now we need to do the same with the local machine, we need to find the root directory of the website. On my machine it is located at:</p>
+
+                    <p class="hyp" style="text-align: center"><span class="code">D:/PS0500-PS-Website-LIVE/1001-webdevelopment</span></p>
+
+                    <p class="hyp">Use the <sub><img src="01-pages/24-02-publishing/02-images/fig-24-20a.png" style="height: 1rem" alt="Upload button"></sub> dropdown (point <span class="index">4</span> in <a class="xref js--sc-f24-19" href="#">Figure&nbsp;24.19</a>) to select a particular drive and then navigate to the correct folder. Mine looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-21">
+                            <a href="01-pages/24-02-publishing/02-images/fig-24-21.png" data-lightbox="fig-set" data-title="Figure 24.21 - WinSCP add local folder">
+                                <img src="01-pages/24-02-publishing/02-images/fig-24-21.png" alt="Figure 24.21 - WinSCP add local folder">
+                            </a>
+                            <figcaption>Figure 24.21 &emsp; WinSCP add local folder</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">On left hand side click the <sub><img src="01-pages/24-02-publishing/02-images/fig-24-19b.png" style="height: 1rem" alt="Upload button"></sub> button and add the local directory to the bookmark list.</p>
+
+                    <p class="hyp">You can see in the left hand pane all the directories and files of the website that we have developed so far.</p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="24-01-publishing.html#js--240100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="24-03-publishing.html#js--240300">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
