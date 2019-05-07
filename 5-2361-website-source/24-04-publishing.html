@@ -1,0 +1,904 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="How to tell search engines about your site">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                         24-04-PUBLISHING.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+06 May 2019   d-P27.23.02  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/24-04-publishing/05-local-js/24-04-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights -->   <link rel="stylesheet" type="text/css" href="01-pages/24-04-publishing/01-local-css/24-04-codeline.css">
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Telling search engines about your site | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="24-03-publishing.html#js--240300"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="25-00-template.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="25-00-template.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P27.23.02-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>24</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">24</span>Publishing a website</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 24 publishing
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-240000" href="24-00-publishing.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">24</span><span class="toc-lev1-text">Publishing a website</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-240100" href="24-01-publishing.html#js--240100">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.1</span><span class="toc-lev2-text">Web hosting</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240101" href="24-01-publishing.html#js--240101">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.1</span><span class="toc-lev3-text">Choosing a web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240102" href="24-01-publishing.html#js--240102">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">A domain name</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240103" href="24-01-publishing.html#js--240103">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">Web host server type</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240104" href="24-01-publishing.html#js--240104">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.4</span><span class="toc-lev3-text">Understanding the hosted site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240200" href="24-02-publishing.html#js--240200">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.2</span><span class="toc-lev2-text">Using and ftp client to publish the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240201" href="24-02-publishing.html#js--240201">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.1</span><span class="toc-lev3-text">Connecting WinSCP to the web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240202" href="24-02-publishing.html#js--240202">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.2</span><span class="toc-lev3-text">Uploading the website</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240203" href="24-02-publishing.html#js--240203">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.3</span><span class="toc-lev3-text">Synchronising online and offline content</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240204" href="24-02-publishing.html#js--240204">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.4</span><span class="toc-lev3-text">Keeping remote directory up to date</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240300" href="24-03-publishing.html#js--240300">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.3</span><span class="toc-lev2-text">http:// or https://</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240400" href="24-04-publishing.html#js--240400">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.4</span><span class="toc-lev2-text">Telling search engines about your site</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240401" href="24-04-publishing.html#js--240401">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.1</span><span class="toc-lev3-text">The sitemap</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240402" href="24-04-publishing.html#js--240402">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Registering a site with Google</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240403" href="24-04-publishing.html#js--240403">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Google Analytics</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240404" href="24-04-publishing.html#js--240404">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.4</span><span class="toc-lev3-text">Anonymising IP data</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240405" href="24-04-publishing.html#js--240405">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.5</span><span class="toc-lev3-text">Using Google Analytics	</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+                        <br class="top-pad">
+
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 24.4 TELLING SEARCH ENGINES ABOUT YOUR SITE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240400">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>24.4</h2></div>
+                 <div class="sub-title-text-box"><h2>Telling search engines about your site</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">By which I mean telling Google.</p>
+
+                    <p class="hyp">OK, you&rsquo;ve built a beautiful website full of information that everyone needs and you&rsquo;ve published it for the whole world to see.</p>
+
+                    <p class="hyp"><span class="first-use">So now what happens?</span></p>
+
+                    <p class="hyp">Well not much. Just publishing your website doesn&rsquo;t do anything, well it publishes it on the internet so people can see it, but it won&rsquo;t show up in any Google searches. Not right away at least.</p>
+
+                    <p class="hyp">Google needs to find your site, it needs to look through it <span class="first-use">(crawl you website)</span> and index what is in there for its search algorithms&nbsp;&mdash;&nbsp;Google is a bit nosey.</p>
+
+                    <p class="hyp">If you do nothing, Google will eventually get round to finding your site (particularly if some other site is linking to it), but this can take a while (weeks).</p>
+
+                    <p class="hyp">To speed things up a bit, you can tell Google that your site exists (register your site with Google) and it will start crawling it straight away.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.4.1 THE SITEMAP
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240401">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.4.1</h3></div>
+                    <div class="sub-title-text-box"><h3>The sitemap</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">However, before you do that you are going to need something called a sitemap. This is an XML file, usually called <span class="code">sitemap.xml</span> and it lives in the <span class="code">public_html</span> folder (along with <span class="code">index.html</span>).</p>
+
+                    <p class="hyp">Most web hosts provide a mechanism for generating a <span class="code">sitemap.xml</span> file. This is what Heart Internet do (it is on the web host console page):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-32">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-32.png" data-lightbox="fig-set" data-title="Figure 24.32 - Heart Internet site map generator">
+                                <img style="max-width: 566px" src="01-pages/24-04-publishing/02-images/fig-24-32.png" alt="Figure 24.32 - Heart Internet site map generator">
+                            </a>
+                            <figcaption>Figure 24.32 &emsp; Heart Internet site map generator</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It will generate the sitemap for me and allow me to download it:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-33">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-33.png" data-lightbox="fig-set" data-title="Figure 24.33 - Heart Internet site map generator page">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-33.png" alt="Figure 24.33 - Heart Internet site map generator page">
+                            </a>
+                            <figcaption>Figure 24.33 &emsp; Heart Internet site map generator page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If I click the generate button it will automatically create the <span class="code">sitemap.xml</span> file. It will then give me the option to download it.</p>
+
+                    <p class="hyp">This is what mine looks like (it is possible to open it in a browser). This is just the start of it, there is quite a lot altogether, mine has 9700 lines in it in total:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-34">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-34.png" data-lightbox="fig-set" data-title="Figure 24.34 - Practical Series website sitemap.xml file (extract)">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-34.png" alt="Figure 24.34 - Practical Series website sitemap.xml file (extract)">
+                            </a>
+                            <figcaption>Figure 24.34 &emsp; Practical Series website sitemap.xml file (extract)</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Once you have downloaded your <span class="code">sitemap.xml</span> file, it needs to be copied to the published website, in the <span class="code">public_html</span> directory. This is where mine lives:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-35">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-35.png" data-lightbox="fig-set" data-title="Figure 24.35 - Practical Series sitemap.xml file on the website">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-35.png" alt="Figure 24.35 - Practical Series sitemap.xml file on the website">
+                            </a>
+                            <figcaption>Figure 24.35 &emsp; Practical Series sitemap.xml file on the website</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can see it&rsquo;s in both the offline and online directories.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.4.2 REGISTERING A SITE WITH GOOGLE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240402">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.4.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Registering a site with Google</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">The sitemap is one of two things that Google needs to register your site; the second is a validation file that proves to Google that the site is yours.</p>
+
+                    <p class="hyp">To do this access the <a class="hlink nohyp" href="https://search.google.com/search-console/welcome">Google Search Console</a>. Note you will need a Google account to do this.</p>
+
+                    <p class="hyp">Google Search Console will ask you to sign in, and will then take you to the welcome page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-36">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-36.png" data-lightbox="fig-set" data-title="Figure 24.36 - Google Search Console&nbsp;&mdash;&nbsp;starting">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-36.png" alt="Figure 24.36 - Google Search Console&nbsp;&mdash;&nbsp;starting">
+                            </a>
+                            <figcaption>Figure 24.36 &emsp; Google Search Console&nbsp;&mdash;&nbsp;starting</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">I used the URL prefix mechanism (it was easier), enter your web address complete URL, this will start either <span class="code">https://</span> or <span class="code">http://</span> and may or may not have <span class="code">www</span> in it. Make sure you get it right; it&rsquo;s a bugger to change afterwards.</p>
+
+                    <p class="hyp">Click continue and you will get a screen like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-37">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-37.png" data-lightbox="fig-set" data-title="Figure 24.37 - Google Search Console&nbsp;&mdash;&nbsp;verification">
+                                <img style="max-width: 649px" src="01-pages/24-04-publishing/02-images/fig-24-37.png" alt="Figure 24.37 - Google Search Console&nbsp;&mdash;&nbsp;verification">
+                            </a>
+                            <figcaption>Figure 24.37 &emsp; Google Search Console&nbsp;&mdash;&nbsp;verification</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">What Google want you to do is download the file (point 1) and copy it to the <span class="code">public_html</span> directory of your website. The idea being if you are able to modify the website, then it presumably belongs to you and you have the authority to change it and Google will be satisfied that it is yours.</p>
+
+                    <p class="hyp">Download the file and upload it to the <span class="code">public_html</span> folder, this is mine:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-38">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-38.png" data-lightbox="fig-set" data-title="Figure 24.38 - Google Search Console&nbsp;&mdash;&nbsp;verification file in public_html directory">
+                                <img style="max-width: 649px" src="01-pages/24-04-publishing/02-images/fig-24-38.png" alt="Figure 24.38 - Google Search Console&nbsp;&mdash;&nbsp;verification file in public_html directory">
+                            </a>
+                            <figcaption>Figure 24.38 &emsp; Google Search Console&nbsp;&mdash;&nbsp;verification file in public_html directory</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Once the file is in the online <span class="code">public_html</span> directory, click the <span class="menu">verify</span> button on the Google web page.</p>
+
+                    <p class="hyp">Google will respond with a <span class="menu">verification successful</span> message, this will also tell you not to remove the verification file from the website.</p>
+
+                    <p class="hyp">You will now have access to your Google Search Console. Mine looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-39">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-39.png" data-lightbox="fig-set" data-title="Figure 24.39 - Google Search Console&nbsp;&mdash;&nbsp;overview page">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-39.png" alt="Figure 24.39 - Google Search Console&nbsp;&mdash;&nbsp;overview page">
+                            </a>
+                            <figcaption>Figure 24.39 &emsp; Google Search Console&nbsp;&mdash;&nbsp;overview page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If your site is new, you won&rsquo;t have any performance or coverage data.</p>
+
+                    <p class="hyp">The next thing to do is tell Google where your sitemap is, click the sitemap link on the left hand side (if the left hand menu is not visible, click the hamburger button at the top):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-40">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-40.png" data-lightbox="fig-set" data-title="Figure 24.40 - Google Search Console&nbsp;&mdash;&nbsp;sitemap page">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-40.png" alt="Figure 24.40 - Google Search Console&nbsp;&mdash;&nbsp;sitemap page">
+                            </a>
+                            <figcaption>Figure 24.40 &emsp; Google Search Console&nbsp;&mdash;&nbsp;sitemap page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Enter <span class="menu">sitemap.xml</span> in the add new sitemap area and click <span class="menu">submit</span>.</p>
+
+                    <p class="hyp">If Google can find the file, you will get a success popup:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-41">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-41.png" data-lightbox="fig-set" data-title="Figure 24.41 - Google Search Console&nbsp;&mdash;&nbsp;sitemap page">
+                                <img style="max-width: 576px" src="01-pages/24-04-publishing/02-images/fig-24-41.png" alt="Figure 24.41 - Google Search Console&nbsp;&mdash;&nbsp;sitemap page">
+                            </a>
+                            <figcaption>Figure 24.41 &emsp; Google Search Console&nbsp;&mdash;&nbsp;sitemap page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The submitted area will show the status of sitemap and the date it was submitted.</p>
+
+                    <p class="hyp">That&rsquo;s it; Google is now crawling your site and indexing what it finds.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.4.3 GOOGLE ANALYTICS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240403">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.4.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Google Analytics</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Google Analytics is separate to the Google Search Console</p>
+
+                    <p class="hyp">Google Search Console gives you broad data about how many pages have been crawled and indexed, it also provides information about how many times a user clicked through to your site and how many times your site showed up in search results <span class="first-use">(impressions)</span>,</p>
+
+                    <p class="hyp">Google Analytics on the other hand shows a great deal of information about who views your website, what country they are in, what they searched for, &amp;c. A whole load of stuff.</p>
+
+                    <p class="hyp">Google Analytics is a whole book by itself; if I&rsquo;m honest I don&rsquo;t exactly understand the details of what you can do with it&nbsp;&mdash;&nbsp;I tend to just use if for the obvious stuff, how many visits, where from &amp;c.</p>
+
+                    <p class="hyp">I&rsquo;m not going to cover Google Analytics in any great detail, but I will show you how to set it up for your website.</p>
+
+                    <p class="hyp">Again you will need a Google account to do this.</p>
+
+                    <p class="hyp">The Google Analytics website can be found <a class="hlink nohyp" href="https://marketingplatform.google.com/about/analytics/">here</a>, it looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-42">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-42.png" data-lightbox="fig-set" data-title="Figure 24.42 - Google Analytics page">
+                                <img style="max-width: 576px" src="01-pages/24-04-publishing/02-images/fig-24-42.png" alt="Figure 24.42 - Google Analytics page">
+                            </a>
+                            <figcaption>Figure 24.42 &emsp; Google Analytics page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Click the <span class="menu">start for free</span> button (top right, highlighted) and this will then ask you to sign into your Google account.</p>
+
+                    <p class="hyp">Do this and you will end up on the new account page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-43">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-43.png" data-lightbox="fig-set" data-title="Figure 24.43 - Google Analytics&nbsp;&mdash;&nbsp;new account">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-43.png" alt="Figure 24.43 - Google Analytics&nbsp;&mdash;&nbsp;new account">
+                            </a>
+                            <figcaption>Figure 24.43 &emsp; Google Analytics&nbsp;&mdash;&nbsp;new account</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You need to give it an <span class="menu">account name</span>, your account can have multiple websites within it.</p>
+
+                    <p class="hyp">Next specify a <span class="menu">website name</span> (this is just the visible name it will use to identify the website). Unimaginatively I used <span class="code">Practical Series</span>.</p>
+
+                    <p class="hyp">The next bit is asking for the URL of the website, make sure the correct <span class="code">https://</span> or <span class="code">http://</span> is selected in the dropdown, then enter the URL in the box (it may or may not have <span class="code">www</span> in it).</p>
+
+                    <p class="hyp">Finally pick the most suitable <span class="menu">industry category</span>, set your <span class="menu">time zone</span> and tick all the boxes.</p>
+
+                    <p class="hyp">With everything filled in, click the <span class="menu">get tracking id</span> button at the bottom. This will open an accept the terms box: </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-44">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-44.png" data-lightbox="fig-set" data-title="Figure 24.44 - Google Analytics page">
+                                <img style="max-width: 596px" src="01-pages/24-04-publishing/02-images/fig-24-44.png" alt="Figure 24.44 - Google Analytics page">
+                            </a>
+                            <figcaption>Figure 24.44 &emsp; Google Analytics page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Tick the boxes and click <span class="menu">I accept</span>.</p>
+
+                    <p class="hyp">This gets you to the tracking ID page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-45">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-45.png" data-lightbox="fig-set" data-title="Figure 24.45 - Google Analytics&nbsp;&mdash;&nbsp;Tracking ID">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-45.png" alt="Figure 24.45 - Google Analytics&nbsp;&mdash;&nbsp;Tracking ID">
+                            </a>
+                            <figcaption>Figure 24.45 &emsp; Google Analytics&nbsp;&mdash;&nbsp;Tracking ID</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Google Analytics requires a JavaScript entry to be placed on each page of your website. It must be in the <span class="code">&lt;head&gt;</span> section. It is this script that generates a cookie on the browser of anyone who views your web page, this is used to collect certain data about the user, Google give details of what they collect on their <a class="hlink nohyp" href="https://support.google.com/analytics/answer/6004245?hl=en">data collected by google analytics</a> page.</p>
+
+                    <p class="hyp">What is needed is for the code fragment in the window, between the first <span class="code">&lt;script&gt;</span> and the last <span class="code">&lt;/scrip&gt;</span> tags to be copied and pasted into each page of your website.</p>
+
+                    <p class="hyp">Select everything in the window and paste it into the <span class="code">&lt;head&gt;</span> section of each html page on your website, here is an example of mine:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-46">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-46.png" data-lightbox="fig-set" data-title="Figure 24.46 - Google Analytics&nbsp;&mdash;&nbsp;Script on a web page">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-46.png" alt="Figure 24.46 - Google Analytics&nbsp;&mdash;&nbsp;Script on a web page">
+                            </a>
+                            <figcaption>Figure 24.46 &emsp; Google Analytics&nbsp;&mdash;&nbsp;Script on a web page</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">You can see exactly the same code pasted in starting at line 127. That&rsquo;s it, just copy and paste it onto each HTML web page.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.4.4 ANONYMISING IP DATA
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240404">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.4.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Anonymising IP data</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">By and large, the data that Google Analytics collects is in an anonymous form (see, <a class="hlink nohyp" href="80-00-finally.html#js--800500b">Privacy and personal data</a>), the exception is the IP address of the user, this is considered to be personally identifiable information.</p>
+
+                    <p class="hyp">By default Google Analytics collects the IP address of the website user. It is possible to stop Google Analytics doing this by making it anonymise the IP address data; this is done by masking the last three digits of the address.</p>
+
+                    <p class="hyp">To activate this facility (I&rsquo;ve done it on my website), the following line of code needs to be added to the Google Analytics script:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     CODE FRAGMENT - STANDARD BLOCK WITH HEADER & CAPTION (HTML)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="code-extract">
+                        <div class="code-header">google analytics tracking script</div>
+                        <div class="code-area">
+
+                            <pre class="prettyprint linenums lang-html wrap" id="js--c24-01">&lt;!-- Global site tag (gtag.js)&nbsp;-&nbsp;Google Analytics --&gt;
+&lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-136143601-1&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+&nbsp; window.dataLayer = window.dataLayer || [];
+&nbsp; function gtag(){dataLayer.push(arguments);}
+&nbsp; gtag('js', new Date());
+
+&nbsp; gtag('config', 'UA-136143601-1');
+&nbsp; gtag('config', 'UA-136143601-1', { 'anonymize_ip': true });
+&lt;/script&gt;
+</pre>
+
+                        </div>
+                        <div class="code-caption">Code 24.1 &emsp; Anonymise IP with Google Analytic script</div>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Add the line in green.</p>
+
+                    <p class="hyp">The number that is in there <span class="code">UA-13614306-1</span> is the tracking ID for the site, yours will be different, it is the same number given at the top of the Tracking ID page (<a class="xref js--sc-f24-45" href="#">Figure&nbsp;24.45</a>), make sure that you use the correct number.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 24.4.5 USING GOOGLE ANALYTICS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--240405">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>24.4.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Using Google Analytics</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">When you have put the Google Analytics script on all your published web pages, you will eventually start to receive data about your website (it takes a while, give it a couple of weeks, most of the first hits will be you looking at your own site). The following show some of the things Google Analytics can show you.</p>
+
+                    <p class="hyp">Where your users are:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-47">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-47.png" data-lightbox="fig-set" data-title="Figure 24.47 - Google Analytics&nbsp;&mdash;&nbsp;Geo location">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-47.png" alt="Figure 24.47 - Google Analytics&nbsp;&mdash;&nbsp;Geo location">
+                            </a>
+                            <figcaption>Figure 24.47 &emsp; Google Analytics&nbsp;&mdash;&nbsp;Geo location</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Users, sessions and page views:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-48">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-48.png" data-lightbox="fig-set" data-title="Figure 24.48 - Google Analytics&nbsp;&mdash;&nbsp;Users, sessions and page views">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-48.png" alt="Figure 24.48 - Google Analytics&nbsp;&mdash;&nbsp;Users, sessions and page views">
+                            </a>
+                            <figcaption>Figure 24.48 &emsp; Google Analytics&nbsp;&mdash;&nbsp;Users, sessions and page views</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It can also show you what search query was entered into Google that led to your page:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f24-49">
+                            <a href="01-pages/24-04-publishing/02-images/fig-24-49.png" data-lightbox="fig-set" data-title="Figure 24.49 - Google Analytics&nbsp;&mdash;&nbsp;Search Queries">
+                                <img src="01-pages/24-04-publishing/02-images/fig-24-49.png" alt="Figure 24.49 - Google Analytics&nbsp;&mdash;&nbsp;Search Queries">
+                            </a>
+                            <figcaption>Figure 24.49 &emsp; Google Analytics&nbsp;&mdash;&nbsp;Search Queries</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Google Analytics can be used for a lot of things, it is very configurable (and a bit complicated). I&rsquo;m not that good at using it and there is a lot I don&rsquo;t understand; but I hope I&rsquo;ve given you a rough guide for configuring it and using it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="24-03-publishing.html#js--240300">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="25-00-template.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
