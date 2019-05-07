@@ -16,14 +16,14 @@ PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
     <head>                                                                      <!-- Start of head section                         -->
         <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
-        <meta name="description" content="Metadata">
+        <meta name="description" content="How to publish your website">
 
 <!-- ==========================================================================
 
 
 
 *******************************************************************************
-Title :          WEBSITE TEMPLATE                              98-00-BLANK.HTML
+Title :          WEBSITE TEMPLATE                         24-00-PUBLISHING.HTML
 *******************************************************************************
 DETAILS
 
@@ -46,8 +46,9 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 *******************************************************************************
-10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
+06 May 2019   d-P27.23.02  M. Gledhill    Page build
 
+10 Apr 2019   d-P15.10.02  M. Gledhill    Page created
 ******************************************************************************* -->
 
 
@@ -70,10 +71,10 @@ Date          Issue        Author         Reason for Modification
         <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
         <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
         <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
-        <!-- MathJax -->                <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>-->
         <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- PS local scroll script --> <script src="01-pages/98-00-blank/05-local-js/98-00-scroll.js"></script>
+        <!-- PS local scroll script --> <script src="01-pages/24-00-publishing/05-local-js/24-00-scroll.js"></script>
 
 
 
@@ -88,7 +89,7 @@ Date          Issue        Author         Reason for Modification
         <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
         <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
                                                                 <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
-        <!-- Code frag highlights -->  <link rel="stylesheet" type="text/css" href="01-pages/98-00-blank/01-local-css/98-00-codeline.css">
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/24-00-publishing/01-local-css/24-00-codeline.css">-->
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       GOOGLE ANALYTICS
@@ -108,7 +109,7 @@ Date          Issue        Author         Reason for Modification
 <!-- **************************************************************************
      TITLE
      ***********************************************************************-->
-        <title>Title | PracticalSeries: Web Development</title>
+        <title>Publishing a website | PracticalSeries: Web Development</title>
     </head>
 
     <body>
@@ -128,9 +129,9 @@ Date          Issue        Author         Reason for Modification
                 <div class="top-nav">                           <!-- Start of top nav row     -->
                     <div class="rg-row">                        <!-- Start of nav button row  -->
                         <!-- Button 01 - Previous Section -->
-                        <a class="nav-wide" href="80-00-finally.html#js--800500"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <a class="nav-wide" href="23-04-landing.html#js--230400"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
                         <!-- Button 02 - Previous Chapter -->
-                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <a class="nav-wide" href="23-00-landing.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
                         <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
                         <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
                         <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
@@ -138,9 +139,9 @@ Date          Issue        Author         Reason for Modification
                         <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
                         <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
                         <!-- Button 04 - Next Chapter -->
-                        <a class="nav-wide" href="99-00-typicals.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <a class="nav-wide" href="25-00-template.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
                         <!-- Button 05 - Next section -->
-                        <a class="nav-wide" href="99-00-typicals.html#js--990000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                        <a class="nav-wide" href="24-01-publishing.html#js--240100"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
                     </div>                                      <!-- End of nav button row    -->
                 </div>                                          <!-- End of top nav row       -->
             </nav>                                              <!-- End of top nav bar       -->
@@ -154,12 +155,12 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row title-row">                      <!-- Start of title row       -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="rev-badge">                   <!-- BUILD BADGE              -->
-                        <img src="https://img.shields.io/badge/Published-P15-4BABC5.svg" alt="Build">
+                        <img src="https://img.shields.io/badge/Dev-d--P27.23.02-BF504D.svg" alt="Build">
                     </aside>
                 </div>                                          <!-- End of Left column       -->
                 <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
-                    <div class="title-num-box"><p>98</p></div>
-                    <div class="title-text-box"><h1><span class="title-small-num">98</span>Blank page</h1></div>
+                    <div class="title-num-box"><p>24</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">24</span>Publishing a website</h1></div>
                 </div>                                          <!-- End of title             -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-right-rev">             <!-- Start of right side bar  -->
@@ -178,26 +179,68 @@ Date          Issue        Author         Reason for Modification
                 <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
 
                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                    TOC - 98 Blank
+                    TOC - 24 publishing
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="toc-line">
-<!-- Level 1 -->        <li><a class="js--sc-980000" href="98-00-blank.html#js--000000">
-                               <div class="toc-lev"><span class="toc-lev1-num">98</span><span class="toc-lev1-text">Blank page</span></div></a>
+<!-- Level 1 -->        <li><a class="js--sc-240000" href="24-00-publishing.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">24</span><span class="toc-lev1-text">Publishing a website</span></div></a>
                         </li>
                     </ul>
 
                     <ul class="toc-list">
-<!-- Level 2 -->        <li><a class="js--sc-980100" href="98-00-blank.html#js--980100">
-                            <div class="toc-lev"><span class="toc-lev2-num">98.1</span><span class="toc-lev2-text">Empty Section</span></div></a>
+<!-- Level 2 -->        <li><a class="js--sc-240100" href="24-01-publishing.html#js--240100">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.1</span><span class="toc-lev2-text">Web hosting</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101" href="98-00-blank.html#js--980101">
-                            <div class="toc-lev"><span class="toc-lev3-num">98.1.1</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-240101" href="24-01-publishing.html#js--240101">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.1</span><span class="toc-lev3-text">Choosing a web host</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101a" href="98-00-blank.html#js--980101a">
-                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Empty inline section</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-240102" href="24-01-publishing.html#js--240102">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">A domain name</span></div></a>
                         </li>
-<!-- Level 3 -->        <li><a class="js--sc-980101b" href="98-00-blank.html#js--980101b">
-                            <div class="toc-lev"><span class="toc-lev3-num"></span><span class="toc-lev3-text">Additional section</span></div></a>
+<!-- Level 3 -->        <li><a class="js--sc-240103" href="24-01-publishing.html#js--240103">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.2</span><span class="toc-lev3-text">Web host server type</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240104" href="24-01-publishing.html#js--240104">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.1.4</span><span class="toc-lev3-text">Understanding the hosted site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240200" href="24-02-publishing.html#js--240200">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.2</span><span class="toc-lev2-text">Web hosting</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240201" href="24-02-publishing.html#js--240201">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.1</span><span class="toc-lev3-text">Choosing a web host</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240202" href="24-02-publishing.html#js--240202">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.2</span><span class="toc-lev3-text">A domain name</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240203" href="24-02-publishing.html#js--240203">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.2</span><span class="toc-lev3-text">Web host server type</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240204" href="24-02-publishing.html#js--240204">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.2.4</span><span class="toc-lev3-text">Understanding the hosted site</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240300" href="24-03-publishing.html#js--240300">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.3</span><span class="toc-lev2-text">http:// or https://</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-240400" href="24-04-publishing.html#js--240400">
+                            <div class="toc-lev"><span class="toc-lev2-num">24.4</span><span class="toc-lev2-text">Telling search engines about your site</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240401" href="24-04-publishing.html#js--240401">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.1</span><span class="toc-lev3-text">The sitemap</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240402" href="24-04-publishing.html#js--240402">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Registering a site with Google</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240403" href="24-04-publishing.html#js--240403">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.2</span><span class="toc-lev3-text">Google Analytics</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240404" href="24-04-publishing.html#js--240404">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.4</span><span class="toc-lev3-text">Anonymising IP data</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-240405" href="24-04-publishing.html#js--240405">
+                            <div class="toc-lev"><span class="toc-lev3-num">24.4.5</span><span class="toc-lev3-text">Using Google Analytics	</span></div></a>
+                        <br class="top-pad">
+                        <br class="top-pad">
+
                         </li>
 
                     </ul>
@@ -223,25 +266,21 @@ Date          Issue        Author         Reason for Modification
 
 
 <!-- ************************************************************************** [WP LEADIN]
-     CHAPTER - X
+     CHAPTER - 24 PUBLISHING A WEBSITE
      ***********************************************************************-->
 
-        <section class="section-std" id="js--980000">           <!-- Start of section         -->
+        <section class="section-std" id="js--240000">           <!-- Start of section         -->
             <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
                 <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
                     <div class="sub-title-thinline"></div>      <!-- Thin overline            -->
-                    <div class="sub-title-num-box"><h6>Placeholder</h6></div>
+                    <div class="sub-title-num-box"><h6>Publishing a website</h6></div>
                 </div>                                          <!-- End of subtitle column   -->
                 <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
             </div>                                              <!-- End of Subtitle row      -->
 
             <div class="rg-row">                                <!-- Start of section content -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                    <aside class="aside-head">                  <!-- Start of left side bar   -->
-                        <h2>Side heading (h2 level)</h2>
-                        <p>Optional sidebar</p>
-                    </aside>                                    <!-- End of left side bar     -->
                 <!--     <aside class="aside-left">                  Start of left side bar   -->
                 <!--         <p></p>                                 Side bar content         -->
                 <!--     </aside>                                    End of left side bar     -->
@@ -249,15 +288,11 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp"></p>
+                    <p class="hyp"><span class="all-caps">Ok, you&rsquo;ve built your website,</span> now what?</p>
 
-                    <p class="hyp"></p>
+                    <p class="hyp">Well, at this point it is going to cost you proper money. You need someone to &ldquo;host&rdquo; your website and generally, they don&rsquo;t do it for nowt.</p>
 
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
+                    <p class="hyp">This section takes you through a typical setup and shows how I upload files and configure some of the basic things like Google Analytics &amp;c.</p>
 
                 </div>                                          <!-- End of section text      -->
 
@@ -271,176 +306,6 @@ Date          Issue        Author         Reason for Modification
 <!-- ========================================================================== [WP END]      -->
 
 
-<!-- ************************************************************************** [WP SECTION]
-     SECTION - X.Y
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980100">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
-                 <div class="sub-title-num-box"><h2>98.1</h2></div>
-                 <div class="sub-title-text-box"><h2>Section</h2></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row      -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of right side bar    -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP SUBSECTION]
-     SUBSECTION - X.Y.Z
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980101">           <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-num-box"><h3>98.1.1</h3></div>
-                    <div class="sub-title-text-box"><h3>Subsection</h3></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP INLINE]
-     SECTION
-     ***********************************************************************-->
-
-        <section class="section-std" id="js--980101a">          <!-- Start of section         -->
-            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
-                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
-                    <div class="sub-title-text-box"><h4>Inline section</h4></div>
-                </div>                                          <!-- End of subtitle column   -->
-                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
-            </div>                                              <!-- End of Subtitle row      -->
-
-            <div class="rg-row">                                <!-- Start of section content -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </section>                                              <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
-
-<!-- ************************************************************************** [WP ADDITIONAL]
-     SECTION - ADDITIONAL ROW
-     ***********************************************************************-->
-
-        <div class="section-std" id="js--980101b">              <!-- Start of additional row  -->
-            <div class="rg-row">                                <!-- Start of row content     -->
-                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
-                <!--     <aside class="aside-left">                  Start of left side bar   -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                 </div>                                         <!-- End of left column       -->
-
-                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                    <p class="hyp"></p>
-
-                </div>                                          <!-- End of section text      -->
-
-                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
-                <!--     <aside class="aside-right">                 Start of right side bar  -->
-                <!--         <p></p>                                 Side bar content         -->
-                <!--     </aside>                                    End of left side bar     -->
-                </div>                                          <!-- End of right column      -->
-            </div>                                              <!-- End of section content   -->
-        </div>                                                  <!-- End of section           -->
-<!-- ========================================================================== [WP END]      -->
-
 
 <!-- ************************************************************************** [WP LAST]
      SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
@@ -452,7 +317,7 @@ Date          Issue        Author         Reason for Modification
             <div class="rg-row">                                <!-- Start of row content     -->
                 <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="80-00-finally.html#js--800500">Prev</a>
+                        <a class="xref" href="23-04-landing.html#js--230400">Prev</a>
                     </aside>                                    <!-- End of left side bar     -->
                 </div>                                          <!-- End of left column       -->
 
@@ -462,7 +327,7 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
                     <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
-                        <a class="xref" href="99-00-typicals.html#js--990000">Next</a>
+                        <a class="xref" href="24-01-publishing.html#js--240100">Next</a>
                     </aside>                                    <!-- End of right side bar    -->
                 </div>                                          <!-- End of right column      -->
             </div>                                              <!-- End of row content       -->
