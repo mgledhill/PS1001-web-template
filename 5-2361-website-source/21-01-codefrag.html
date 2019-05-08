@@ -556,7 +556,7 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp"><span class="code">run-prettify.js</span></p></li>
+                        <li><p class="hyp"><span class="code">run_prettify.js</span></p></li>
 
                         <li><p class="hyp"><span class="code">prettify.css</span></p></li>
 
@@ -564,7 +564,7 @@ Date          Issue        Author         Reason for Modification
                     </ul>                                       <!-- End of unnumbered list   -->
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-                    <p class="hyp">The main file we need is <span class="code">run-prettify.js</span> this is the JavaScript that interprets the code. Prettify can interpret various programming languages by itself:</p>
+                    <p class="hyp">The main file we need is <span class="code">run_prettify.js</span> this is the JavaScript that interprets the code. Prettify can interpret various programming languages by itself:</p>
 
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       TABLE - STANDARD TABLE WITH BOTTOM BORDERS
@@ -606,7 +606,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">At this point I need to explain something, all the files we have copied are minimised files, all the comments, spaces and line breaks have been taken out to make the file smaller (see <a class="hlink nohyp" href="06-09-box.html#js--060905">&sect;&nbsp;6.9.5</a>), this also makes them unreadable. I don&rsquo;t care so much about the <span class="code">lang-....js</span> files, I just use these and don&rsquo;t need to see what is inside them; but I want to modify run-<span class="code">prettify.js</span> and <span class="code">prettify.css</span> so I want the un-minimised versions.</p>
 
-                    <p class="hyp">For the time being delete <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> from the new folder&nbsp;&mdash;&nbsp;<span class="first-use">yes, delete them</span>.</p>
+                    <p class="hyp">For the time being delete <span class="code">run_prettify.js</span> and <span class="code">prettify.css</span> from the new folder&nbsp;&mdash;&nbsp;<span class="first-use">yes, delete them</span>.</p>
 
                     <p class="hyp">After the deletions folder should look like this:</p>
 
@@ -625,7 +625,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">It has 59 files and the folder called <span class="code">skins</span>.</p>
 
-                    <p class="hyp">Now to get the un-minimised versions of the <span class="code">run-prettify.js</span> and <span class="code">prettify.css</span> files.</p>
+                    <p class="hyp">Now to get the un-minimised versions of the <span class="code">run_prettify.js</span> and <span class="code">prettify.css</span> files.</p>
 
                     <p class="hyp">We get these from the uncompressed zip file we downloaded from GitHub, this time it is the <span class="code">src</span> folder:</p>
 
@@ -648,7 +648,7 @@ Date          Issue        Author         Reason for Modification
       UNNUMBERED LIST
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <ul class="list-no-num">                    <!-- Start of unnumbered list -->
-                        <li><p class="hyp">Copy <span class="code">run-prettify.js</span> and paste it into the directory<br><span class="code">21-global/-05-js</span></p></li>
+                        <li><p class="hyp">Copy <span class="code">run_prettify.js</span> and paste it into the directory<br><span class="code">21-global/-05-js</span></p></li>
 
                         <li><p class="hyp">Copy <span class="code">prettify.css </span> and paste it into the directory<br><span class="code">21-global/-05-js directory/google-prettify</span></p></li>
 
@@ -711,23 +711,23 @@ Date          Issue        Author         Reason for Modification
 
                 <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
 
-                    <p class="hyp">You may be wondering what the difference is between <span class="code">run-prettify.js</span> and <span class="code">prettify.js</span> and why I&rsquo;m not using <span class="code">prettify.js</span>?</p>
+                    <p class="hyp">You may be wondering what the difference is between <span class="code">run_prettify.js</span> and <span class="code">prettify.js</span> and why I&rsquo;m not using <span class="code">prettify.js</span>?</p>
 
-                    <p class="hyp">Well, the <span class="code">run-prettify.js</span> is a version of <span class="code">prettify.js</span> that runs automatically after the page has loaded (to use <span class="code">prettify.js</span> the function within it has to be called from within the web page to make it run, this could be done from within our <span class="code">script.js</span> file or even directly in the HTML).</p>
+                    <p class="hyp">Well, the <span class="code">run_prettify.js</span> is a version of <span class="code">prettify.js</span> that runs automatically after the page has loaded (to use <span class="code">prettify.js</span> the function within it has to be called from within the web page to make it run, this could be done from within our <span class="code">script.js</span> file or even directly in the HTML).</p>
 
-                    <p class="hyp">The <span class="code">run-prettify.js</span> also automatically loads any language files (any of the <span class="code">lang-....js</span> files) that we specify.</p>
+                    <p class="hyp">The <span class="code">run_prettify.js</span> also automatically loads any language files (any of the <span class="code">lang-....js</span> files) that we specify.</p>
 
-                    <p class="hyp">The long and short of it is that using <span class="code">run-prettify.js</span> is much easier and more convenient than using <span class="code">prettify.js</span>, the code within the two does the same thing though.</p>
+                    <p class="hyp">The long and short of it is that using <span class="code">run_prettify.js</span> is much easier and more convenient than using <span class="code">prettify.js</span>, the code within the two does the same thing though.</p>
 
-                    <p class="hyp">There is a problem with <span class="code">run-prettify.js</span> however; the basic way that all this works is that when we tell Google Prettify to display a fragment of code, it analyses that code and identifies the components within it, it is looking for keywords, classes, constants, strings, properties &amp;c. it then puts a <span class="code">&lt;span&gt;</span> element with a particular class around each type of component, and that is all it does.</p>
+                    <p class="hyp">There is a problem with <span class="code">run_prettify.js</span> however; the basic way that all this works is that when we tell Google Prettify to display a fragment of code, it analyses that code and identifies the components within it, it is looking for keywords, classes, constants, strings, properties &amp;c. it then puts a <span class="code">&lt;span&gt;</span> element with a particular class around each type of component, and that is all it does.</p>
 
-                    <p class="hyp">The syntactic colouring is then applied with a CSS file, the CSS just applies a colour to each of the classes assigned by <span class="code">run-prettify.js</span> such that keywords get one colour, constants another, classes a third &amp;c.</p>
+                    <p class="hyp">The syntactic colouring is then applied with a CSS file, the CSS just applies a colour to each of the classes assigned by <span class="code">run_prettify.js</span> such that keywords get one colour, constants another, classes a third &amp;c.</p>
 
                     <p class="hyp">Now, the problem:</p>
 
-                    <p class="hyp">The trouble starts with <span class="code">run-prettify.js</span>; it tries to be a bit too clever. The default CSS file that applies the syntactic colouring is the one we&rsquo;ve been copying backwards and forwards: <span class="code">prettify.css</span> and we have a copy of it in our very own <span class="code">google-prettify</span> directory.</p>
+                    <p class="hyp">The trouble starts with <span class="code">run_prettify.js</span>; it tries to be a bit too clever. The default CSS file that applies the syntactic colouring is the one we&rsquo;ve been copying backwards and forwards: <span class="code">prettify.css</span> and we have a copy of it in our very own <span class="code">google-prettify</span> directory.</p>
 
-                    <p class="hyp">The problem is that <span class="code">run-prettify.js</span> doesn&rsquo;t use our copy of <span class="code">prettify.css</span>. It loads one from the GitHub server, specifically from the address:	<span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader</span>.</p>
+                    <p class="hyp">The problem is that <span class="code">run_prettify.js</span> doesn&rsquo;t use our copy of <span class="code">prettify.css</span>. It loads one from the GitHub server, specifically from the address:	<span class="code">https://cdn.rawgit.com/google/code-prettify/master/loader</span>.</p>
 
                     <p class="hyp"><span class="first-use">&ldquo;Well,&rdquo;</span> you might think, <span class="first-use">&ldquo;that&rsquo;s not a problem, well just load our version and that will take priority&rdquo;</span>. </p>
 
@@ -741,7 +741,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">That&rsquo;s not quite how it happened; see the note <a class="hlink js--sc-210103" href="#">here</a>.</p>
 
-                    <p class="hyp">Navigate to <span class="code">21-global/-05-js</span> and open <span class="code">run-prettify.js</span> in Brackets.</p>
+                    <p class="hyp">Navigate to <span class="code">21-global/-05-js</span> and open <span class="code">run_prettify.js</span> in Brackets.</p>
 
                     <p class="hyp">It looks like this:</p>
 
@@ -750,10 +750,10 @@ Date          Issue        Author         Reason for Modification
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
 <!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-11">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-11.png" data-lightbox="fig-set" data-title="Figure 21.11 - run-prettify.js in Brackets">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-11.png" alt="Figure 21.11 - run-prettify.js in Brackets">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-11.png" data-lightbox="fig-set" data-title="Figure 21.11 - run_prettify.js in Brackets">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-11.png" alt="Figure 21.11 - run_prettify.js in Brackets">
                             </a>
-                            <figcaption>Figure 21.11 &emsp;run-prettify.js in Brackets</figcaption>
+                            <figcaption>Figure 21.11 &emsp;run_prettify.js in Brackets</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -767,10 +767,10 @@ Date          Issue        Author         Reason for Modification
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
 <!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-12">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-12.png" data-lightbox="fig-set" data-title="Figure 21.12 - run-prettify.js line to modify">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-12.png" alt="Figure 21.12 - run-prettify.js line to modify">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-12.png" data-lightbox="fig-set" data-title="Figure 21.12 - run_prettify.js line to modify">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-12.png" alt="Figure 21.12 - run_prettify.js line to modify">
                             </a>
-                            <figcaption>Figure 21.12 &emsp;run-prettify.js line to modify</figcaption>
+                            <figcaption>Figure 21.12 &emsp;run_prettify.js line to modify</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -864,10 +864,10 @@ Date          Issue        Author         Reason for Modification
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
 <!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-13">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-13.png" data-lightbox="fig-set" data-title="Figure 21.13 - Modified run-prettify.js">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-13.png" alt="Figure 21.13 - Modified run-prettify.js">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-13.png" data-lightbox="fig-set" data-title="Figure 21.13 - Modified run_prettify.js">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-13.png" alt="Figure 21.13 - Modified run_prettify.js">
                             </a>
-                            <figcaption>Figure 21.13 &emsp;Modified run-prettify.js</figcaption>
+                            <figcaption>Figure 21.13 &emsp;Modified run_prettify.js</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -923,7 +923,7 @@ Date          Issue        Author         Reason for Modification
 
                     <p class="hyp">When I loaded this release on the web site, it stopped using my colours, it was ignoring my <span class="code">prettify.css</span> file and I didn&rsquo;t know why.</p>
 
-                    <p class="hyp">Since I had two versions of <span class="code">run-prettify.js</span>, a 2013 version that worked and a 2015 version that didn&rsquo;t, I decided to see what the differences were.</p>
+                    <p class="hyp">Since I had two versions of <span class="code">run_prettify.js</span>, a 2013 version that worked and a 2015 version that didn&rsquo;t, I decided to see what the differences were.</p>
 
                     <p class="hyp">I just compared the <span class="code">.js</span> text files. Most of the changes were to the comments so I could ignore those, and there were only a couple of other differences and I could tell (from the comments) that these were to do with the addition of new language files.</p>
 
@@ -934,10 +934,10 @@ Date          Issue        Author         Reason for Modification
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                     <div class="fig-row">
 <!-- Image -->          <figure class="fig-col fig1-1" id="js--f21-14">
-                            <a href="01-pages/21-01-codefrag/02-images/fig-21-14.png" data-lightbox="fig-set" data-title="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
-                                <img src="01-pages/21-01-codefrag/02-images/fig-21-14.png" alt="Figure 21.14 - Comparison of earlier (left) and later (right) run-prettify.js files">
+                            <a href="01-pages/21-01-codefrag/02-images/fig-21-14.png" data-lightbox="fig-set" data-title="Figure 21.14 - Comparison of earlier (left) and later (right) run_prettify.js files">
+                                <img src="01-pages/21-01-codefrag/02-images/fig-21-14.png" alt="Figure 21.14 - Comparison of earlier (left) and later (right) run_prettify.js files">
                             </a>
-                            <figcaption>Figure 21.14 &emsp;Comparison of earlier (left) and later (right) run-prettify.js files</figcaption>
+                            <figcaption>Figure 21.14 &emsp;Comparison of earlier (left) and later (right) run_prettify.js files</figcaption>
                         </figure>
                     </div>
 <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

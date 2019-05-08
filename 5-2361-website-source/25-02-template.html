@@ -1,0 +1,997 @@
+<!DOCTYPE html>                                                                 <!-- HTML 5 file -->
+
+<!-- PRACTICALSERIES (c) 2016
+
+*******************************************************************************
+
+PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
+                 Published in the United Kingdom
+
+                 Email: mg@practicalseries.com
+                 Web:   https://practicalseries.com
+
+******************************************************************************* -->
+
+<html lang="en">                                                                <!-- Declare language                              -->
+    <head>                                                                      <!-- Start of head section                         -->
+        <meta charset="utf-8">                                                  <!-- Use unicode char set (< 1024 char from SOF)   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Make page follow browser width and reset zoom -->
+        <meta name="description" content="Some guidance notes on building your website, how to convert Word documents to web pages and the minimisation of images">
+
+<!-- ==========================================================================
+
+
+
+*******************************************************************************
+Title :          WEBSITE TEMPLATE                           25-02-TEMPLATE.HTML
+*******************************************************************************
+DETAILS
+
+The Practical Series website template.
+
+A website to be a template for the publication of web based (technical) books
+and documents for engineering and software development.
+
+The template as it stands is an empty (mostly) framework designed to hold
+whatever document or publication is directed at it. It’s well set out, has a
+range of nice and consistent styles and navigations that can be used with
+almost no effort. It has plenty of instructions for what to do and when. It’s
+consistent in its appearance and is (relatively) easy to use; there’s even
+some maths and geometry involved in the columns and how they work.
+
+*******************************************************************************
+MODIFICATION HISTORY:
+
+This is a complete summary of all software modifications.
+
+Date          Issue        Author         Reason for Modification
+*******************************************************************************
+06 May 2019   d-P27.23.03  M. Gledhill    Page created
+******************************************************************************* -->
+
+
+<!-- **************************************************************************
+     FAVICON
+     ***********************************************************************-->
+        <!-- favicons all platforms --> <link rel="apple-touch-icon" sizes="180x180" href="11-resources/02-images/01-favicons/apple-touch-icon.png">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-32x32.png" sizes="32x32">
+                                        <link rel="icon" type="image/png" href="11-resources/02-images/01-favicons/favicon-16x16.png" sizes="16x16">
+                                        <link rel="manifest" href="11-resources/02-images/01-favicons/manifest.json">
+                                        <link rel="mask-icon" href="11-resources/02-images/01-favicons/safari-pinned-tab.svg">
+                                        <meta name="theme-color" content="#ffffff">
+
+
+<!-- **************************************************************************
+     HEAD SCRIPT AREA
+     ***********************************************************************-->
+        <!-- jQuery Library -->         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Waypoints (sticky nav) --> <script src="21-global/05-js/jquery.waypoints.min.js"></script>
+        <!-- Hyphenator -->             <script src="21-global/05-js/hyphenator.js"></script>
+        <!-- Lightbox -->               <script src="21-global/05-js/lightbox.js"></script>
+        <!-- Prettify (main) -->        <script src="21-global/05-js/run_prettify.js?autoload=true&lang=css"></script>
+        <!-- MathJax                    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script> -->
+        <!-- PS main script -->         <script src="11-resources/05-js/script.js"></script>
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- PS local scroll script --> <script src="01-pages/25-01-template/05-local-js/25-01-scroll.js"></script>
+
+
+
+
+<!-- **************************************************************************
+     HEAD CSS LOAD
+     ***********************************************************************-->
+        <!-- Load fonts -->             <link rel="stylesheet" type="text/css" href="21-global/03-fonts/ps-fonts.css">
+        <!-- Ionicons -->               <link rel="stylesheet" type="text/css" href="21-global/01-css/ionicons.min.css">
+        <!-- Normalise -->              <link rel="stylesheet" type="text/css" href="21-global/01-css/normalise.css">
+        <!-- Lightbox styles -->        <link rel="stylesheet" type="text/css" href="21-global/01-css/lightbox.css">
+        <!-- PS grid system -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/grid.css">
+        <!-- PS main styles -->         <link rel="stylesheet" type="text/css" href="11-resources/01-css/style.css">
+                                                                <!-- ▼▼▼▼ CHANGE FOLDER ▼▼▼▼  -->
+        <!-- Code frag highlights       <link rel="stylesheet" type="text/css" href="01-pages/25-01-template/01-local-css/25-01-codeline.css"> -->
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      GOOGLE ANALYTICS
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                        <script>
+                                          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                                          ga('create', 'UA-87335633-1', 'auto');
+                                          ga('set', 'anonymizeIp', true);           // anonymise ip address
+                                          ga('send', 'pageview');
+                                        </script>
+
+
+<!-- **************************************************************************
+     TITLE
+     ***********************************************************************-->
+        <title>Where to start | PracticalSeries: Web Development</title>
+    </head>
+
+    <body>
+
+
+<!-- ************************************************************************** [WP HEADER]
+     HEADER (COVER & TABLE OF CONTENTS)
+     ***********************************************************************-->
+
+        <header id="js--000000">
+
+<!-- ************************************************************************** [WP TOPNAV]
+     TOP NAVIGATION (ABOVE CONTENTS LIST)
+     ***********************************************************************-->
+
+            <nav>                                               <!-- Start of top nav bar     -->
+                <div class="top-nav">                           <!-- Start of top nav row     -->
+                    <div class="rg-row">                        <!-- Start of nav button row  -->
+                        <!-- Button 01 - Previous Section -->
+                        <a class="nav-wide" href="25-01-template.html#js--250100"><span class="top-nav-icon">l</span><span class="top-nav-text">Prev. section</span></a>
+                        <!-- Button 02 - Previous Chapter -->
+                        <a class="nav-wide" href="24-00-publishing.html#js--000000"><span class="top-nav-icon">u</span><span class="top-nav-text">Prev. chapter</span></a>
+                        <!-- Button 03 - Home wide (hidden when fixed nav activates) -->
+                        <a class="nav-wide nav-home" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 03a - Top narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow js--sc-000000" href="#"><span class="top-nav-icon">t</span><span class="top-nav-text">Top</span></a>
+                        <!-- Button 03b - Home narrow (hidden until fixed nav activates) -->
+                        <a class="nav-narrow" href="index.html#js--000000"><span class="top-nav-text">Home</span><span class="top-nav-icon">h</span></a>
+                        <!-- Button 04 - Next Chapter -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next chapter</span><span class="top-nav-icon">d</span></a>
+                        <!-- Button 05 - Next section -->
+                        <a class="nav-wide" href="80-00-finally.html#js--000000"><span class="top-nav-text">Next section</span><span class="top-nav-icon">r</span></a>
+                    </div>                                      <!-- End of nav button row    -->
+                </div>                                          <!-- End of top nav row       -->
+            </nav>                                              <!-- End of top nav bar       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TITLE]
+     TITLE BAR (Section number and text)
+     ***********************************************************************-->
+
+            <div class="rg-row title-row">                      <!-- Start of title row       -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="rev-badge">                   <!-- BUILD BADGE              -->
+                        <img src="https://img.shields.io/badge/Dev-d--P27.23.03-BF504D.svg" alt="Build">
+                    </aside>
+                </div>                                          <!-- End of Left column       -->
+                <div class="rg-col rg-span3-5 title-centre">    <!-- Start of title           -->
+                    <div class="title-num-box"><p>25</p></div>
+                    <div class="title-text-box"><h1><span class="title-small-num">25</span>Using the web template</h1></div>
+                </div>                                          <!-- End of title             -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-right-rev">             <!-- Start of right side bar  -->
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of title row         -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP TOC]
+     TABLE OF CONTENTS
+     ***********************************************************************-->
+
+            <div class="rg-row">                                <!-- Start of TOC section     -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of TOC column      -->
+
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    TOC - 25 template
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="toc-line">
+<!-- Level 1 -->        <li><a class="js--sc-250000" href="25-00-template.html#js--000000">
+                               <div class="toc-lev"><span class="toc-lev1-num">25</span><span class="toc-lev1-text">template page</span></div></a>
+                        </li>
+                    </ul>
+
+                    <ul class="toc-list">
+<!-- Level 2 -->        <li><a class="js--sc-250100" href="25-01-template.html#js--250100">
+                            <div class="toc-lev"><span class="toc-lev2-num">25.1</span><span class="toc-lev2-text">Web template contents</span></div></a>
+                        </li>
+<!-- Level 2 -->        <li><a class="js--sc-250200" href="25-02-template.html#js--250200">
+                            <div class="toc-lev"><span class="toc-lev2-num">25.2</span><span class="toc-lev2-text">Empty Section</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-250201" href="25-02-template.html#js--250201">
+                            <div class="toc-lev"><span class="toc-lev3-num">25.2.1</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-250202" href="25-02-template.html#js--250202">
+                            <div class="toc-lev"><span class="toc-lev3-num">25.2.2</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-250203" href="25-02-template.html#js--250203">
+                            <div class="toc-lev"><span class="toc-lev3-num">25.2.3</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-250204" href="25-02-template.html#js--250204">
+                            <div class="toc-lev"><span class="toc-lev3-num">25.2.4</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>
+<!-- Level 3 -->        <li><a class="js--sc-250205" href="25-02-template.html#js--250205">
+                            <div class="toc-lev"><span class="toc-lev3-num">25.2.5</span><span class="toc-lev3-text">Empty subsection</span></div></a>
+                        </li>
+
+                    </ul>
+               <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of TOC column        -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of TOC section       -->
+<!-- ========================================================================== [WP END]      -->
+
+
+        </header>                                               <!-- End of header            -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP FIXEDNAV]
+     FIXED NAVIGATION BAR CHANGEOVER POINT
+     ***********************************************************************-->
+        <div id="js--fixed-nav"></div>                          <!-- fixed navigation point   -->
+<!-- ========================================================================== [WP END]      -->
+
+
+
+<!-- ************************************************************************** [WP SECTION]
+     SECTION - 25.2 WHERE TO START
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250200">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-overline"></div>      <!-- Overline                 -->
+                 <div class="sub-title-num-box"><h2>25.2</h2></div>
+                 <div class="sub-title-text-box"><h2>Where to start</h2></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row      -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Well, I can&rsquo;t tell you what your website should be about. </p>
+
+                    <p class="hyp">I do have some ideas&nbsp;&mdash;&nbsp;Saluki dogs seem to be popular&nbsp;&mdash;&nbsp;people always like pictures of dogs, Land Rovers are also popular, here&rsquo;s a couple of pictures to get you started:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f25-01">
+                            <a href="01-pages/25-02-template/02-images/fig-25-01.jpg" data-lightbox="fig-set" data-title="Figure 25.1 - Henry Gaius happy in the snow">
+                                <img src="01-pages/25-02-template/02-images/fig-25-01.jpg" alt="Figure 25.1 - Henry Gaius happy in the snow">
+                            </a>
+                            <figcaption>Figure 25.1 &emsp; Henry Gaius happy in the snow</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f25-02">
+                            <a href="01-pages/25-02-template/02-images/fig-25-02.jpg" data-lightbox="fig-set" data-title="Figure 25.2 - Hetty the Landy also happy in the snow">
+                                <img src="01-pages/25-02-template/02-images/fig-25-02.jpg" alt="Figure 25.2 - Hetty the Landy also happy in the snow">
+                            </a>
+                            <figcaption>Figure 25.2 &emsp; Hetty the Landy also happy in the snow</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">At the end of this I&rsquo;ll include a proper picture of the dogs where they look... er, well, more like dogs and not strange alien creatures.</p>
+
+                    <p class="hyp">Apparently pornography is popular too, I&rsquo;ll let you take your own pictures.</p>
+
+                    <p class="hyp">Now, while I can&rsquo;t tell you what your website should be about, I can offer some pearls of wisdom about how to produce it.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 25.2.1 WRITING THE WEBSITE CONTENT
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250201">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>25.2.1</h3></div>
+                    <div class="sub-title-text-box"><h3>Writing the website content</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I can&rsquo;t stress strongly enough: </p>
+
+                    <p class="hyp" style="text-align: center" ><span class="all-caps notice">do not write the website content directly in the text editor</span></p>
+
+                    <p class="hyp">If you do it will be full of typing errors.</p>
+
+                    <p class="hyp">The best way to write the content for a website is in a word processor, as I said earlier (<a class="hlink nohyp" href="01-04-tools.html#js--010402">&sect;&nbsp;1.4.2</a>) I use Microsoft Word (specifically Word 2010).</p>
+
+                    <p class="hyp">The whole explanatory website (where you downloaded this template) is written in Word. It looks like this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f25-03">
+                            <a href="01-pages/25-02-template/02-images/fig-25-03.png" data-lightbox="fig-set" data-title="Figure 25.3 - LboxFigCaption">
+                                <img src="01-pages/25-02-template/02-images/fig-25-03.png" alt="Figure  25.3 - Doc page 1">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="fig-row" style="margin-top: 0">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f25-03a">
+                            <a href="01-pages/25-02-template/02-images/fig-25-03a.png" data-lightbox="fig-set" data-title="Figure 25.3a - LboxFigCaption">
+                                <img src="01-pages/25-02-template/02-images/fig-25-03a.png" alt="Figure 25.3a - Doc page 2">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="fig-row" style="margin-top: 0">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f25-03b">
+                            <a href="01-pages/25-02-template/02-images/fig-25-03b.png" data-lightbox="fig-set" data-title="Figure 25.3b - LboxFigCaption">
+                                <img src="01-pages/25-02-template/02-images/fig-25-03b.png" alt="Figure 25.3b - Doc page 3">
+                            </a>
+                        </figure>
+                        <figcaption>Figure 25.3 &emsp; Extracts from the Word document for the explanatory website</figcaption>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">If you have the pdf version of the website (I give it to all those who donate £5 or more), then you are essentially seeing the document that was written in Word.</p>
+
+                    <p class="hyp">There are several advantages to writing the website in Word<sup>&dagger;1</sup>, for a start it will highlight any spelling mistakes. But word does other things too, it will convert straight quotes to curly quotes, it changes dashes to em-dashes where appropriate, it allows all the styling we want on the website: tables, numbered lists, headings &amp;c.</p>
+
+                    <p class="hyp">It also divides the website up into the correct chapter, section and subsections; and it allows everything to be given a number (figures, tables, code fragments, equations &amp;c.) and this makes it easier to keep track of things on the website.</p>
+
+                    <p class="hyp">My original though when I started all this, was that I wanted a website that could display a document and make it look something like a professionally produced Word document.</p>
+
+                    <p class="hyp">So write your website in Word.</p>
+
+                    <p class="hyp">There is one other great advantage to Word, let&rsquo;s say you&rsquo;ve written and published the website and everything is up and running.</p>
+
+                    <p class="hyp">You will at some point either notice a mistake on the web page (this usually happens when you haven&rsquo;t looked at it for a while and you go back and notice all the things that escaped your proofreading the first time) or you might just want to change it.</p>
+
+                    <p class="hyp">At this point, I make the changes in the Word document (I up-rev it, as we engineers say), and then implement those changes on the website. Now Word allows me to make changes to the text and track those changes (I can see what I&rsquo;ve modified and how it has changed). This makes it easy to change the document (with tracked changes) and then easily identify the bits of the website that need to change. Once I&rsquo;ve made the same change on the website, I accept the change in the Word document and move on to the next change.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn01">
+                        <tr>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 10%"></th>
+                            <th class="fnote-top" style="width: 20%"></th>
+                            <th style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">It doesn&rsquo;t have to be Word, any word processor will do. I use Word so I&rsquo;m just going to use Word as the terminology&nbsp;&mdash;&nbsp;that said, the two files I&rsquo;ve given you are Word files.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 25.2.2 CONFIGURING A WEB PAGE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250202">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>25.2.2</h3></div>
+                    <div class="sub-title-text-box"><h3>Configuring a web page</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">I suggest you strip everything out of the template that you don&rsquo;t need, but leave the <span class="code">98-00-blank</span> and <span class="code">99-00-typicals</span> sections (these are useful, they hold basic pages and examples of all the other things that you will need, it&rsquo;s handy just to copy the thing you need, a table for example, and then mess about with it on you web page until you get what you want). You can delete the blank and typicals pages when you&rsquo;ve finished your website.</p>
+
+                    <p class="hyp">Copy the <span class="code">98-00-blank.html</span> page and rename it for the page you are configuring, let&rsquo;s say <span class="code">05-00-testpage.html</span>.</p>
+
+                    <p class="hyp">Now we need to create a <span class="code">01-pages/05-00-testpage</span> folder and get the necessary files:</p>
+
+                    <p class="hyp">Copy the <span class="code">01-pages/cc-ss-pagename</span> folder and rename it as (in this case): <span class="code">01-pages/05-00-testpage</span>. </p>
+
+                    <p class="hyp">In the <span class="code">01-pages/05-00-testpage/01-local-css</span> folder rename <span class="code">cc-ss-codelines.css</span> as <span class="code">05-00-codelines.css</span>. </p>
+
+                    <p class="hyp">In the <span class="code">01-pages/05-00-testpage/01-local-js folder</span>, rename <span class="code">cc-ss-scroll.js</span> as <span class="code">05-00-scroll.js</span>.</p>
+
+                    <p class="hyp">We now have all the necessary files and folder for the new page.</p>
+
+                    <p class="hyp">Next, open the new <span class="code">05-00-testpage.html</span> in brackets, using the blank sections that are in there, configure the first section you need: give it a heading, renumber the IDs add the correct meta tags at the start, add the previous and next links in the navigation bar and create the TOC (or copy it from another section if it already exists) &amp;c.</p>
+
+                    <p class="hyp">I find it easier to do just one section at a time.</p>
+
+                    <p class="hyp">Once you have an empty section, waiting for some text, it is time to transfer the content from your Word document to the website.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 25.2.3 TRANSFERRING THE WORD CONTENT TO THE WEBSITE
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250203">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>25.2.3</h3></div>
+                    <div class="sub-title-text-box"><h3>Transferring the Word content to the website</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">Having written your website in Word, extensively proofread it and given it to other people to comment on (and usually ignored whatever they&rsquo;ve told you). You are ready to convert it to a website.</p>
+
+                    <p class="hyp">To do this you are going to need to use that conversion document that you downloaded as part of the web template:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      UNNUMBERED LIST
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <ul class="list-no-num">                    <!-- Start of unnumbered list -->
+                        <li><p class="hyp"><span class="code">ps-html-conversion.docm</span></p></li>
+                    </ul>                                       <!-- End of unnumbered list   -->
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Look at the following extract from a Word document:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      TABLE - INCIDENTAL TABLE (EN PASSANT)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                   <table class="table-incid">
+<!-- Data row -->       <tr>
+                            <td class="table-left" style="border-top: 1px solid #cccccc">
+                                <p>An HTML document contains both text (the words displayed on the web page) and elements that control how the text is formatted&nbsp;&mdash;&nbsp;how the text appears, its colour, size &amp;c..</p>
+
+                                <p>HTML elements are usually made up of a start tag and an end tag (see &sect;&nbsp;5.1).</p>
+
+                                <p>The start tag and the end tag always have the same tag name and this is always surrounded by the less than &ldquo;&lt;&rdquo; and greater than &ldquo;&gt;&rdquo; symbols (these denote that what is within is a tag). The tag name for an end tag is always the same as the start tag but is preceded by an oblique &ldquo;/&rdquo;.</p>
+
+                                <p>Note: Some elements do not have an end tag; e.g. <span class="code">&lt;br&gt;</span>, <span class="code">&lt;img&gt;</span> &amp;c.</p>
+                            </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">If you look at this, there are several characters in there that don&rsquo;t work particularly well if they are just copied directly into HTML. The obvious ones are the &lt; and &gt; characters, other less obvious ones are the curly quotes, these have to be entered with <span class="code">&amp;codes</span> (see <a class="hlink nohyp" href="06-11-box.html#js--061100">&sect;&nbsp;6.11</a>) as does the &amp; (of &amp;c<sup>&dagger;2</sup>.) as well as the section mark &sect;. </p>
+
+                    <p class="hyp">There are also other characters, there is an em-dash (a wide dash) in the first paragraph, and there are some invisible &ldquo;non-breaking spaces&rdquo;, these are usually inserted where things should not break across lines, the most common being after a section mark&nbsp;(&sect;), it is not usual to allow the number to separate from the section mark. The same is true of numbers and their units.</p>
+
+                    <p class="hyp">The long and short of this is that we can&rsquo;t just copy text from a Word document and stick it between <span class="code">&lt;p&gt;...&lt;/p&gt;</span> tags. We need to make it HTML friendly first</p>
+
+                    <p class="hyp">To do this you need your Word document with the website content in it open and the conversion document (above) also open with macros enabled (if it asks you, it depends on your Word settings, if you have macros enabled or not). </p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     TABLE - FOOTNOTE WITH ADDITIONAL PARAGRAPH
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <table class="table-fnote" id="js--fn02">
+                        <tr>
+                            <th class="table-cent fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 10%"></th>
+                            <th class="table-left fnote-top" style="width: 20%"></th>
+                            <th class="table-left" style="width: 60%"></th>
+                        </tr>
+                        <tr>
+<!-- Footnote number -->    <td class="table-left"><em>&dagger;1</em></td>
+<!-- Footnote text below --><td class="table-left"></td>
+                            <td colspan="2" class="table-left">Why do I use &amp;c. instead of etc.? Well, because I&rsquo;m old and it is what I was taught at school.</td>
+                        </tr>
+                        <tr>
+                            <td class="table-left"></td>
+<!-- Add. para. below -->   <td class="table-left"></td>
+                            <td colspan="2" class="table-left">Etcetera is the Latin phrase Et cetera (lit: &ldquo;and other similar things&rdquo;), et being the word &ldquo;and&rdquo;, this is where our ampersand comes from, it is a joining of the e and t into one symbol.</td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">The process is a follows:</p>
+
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      NUMBERED LIST WITH IMAGES
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- Step text -->  <ol class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">Select the text that you want to convert in your web content document (I tend to do a page at a time):</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03c.png" data-lightbox="fig-set" data-title="Figure 25.3c - Conversion step 1">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03c.png" alt="Figure 25.3c - Conversion step 1"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!-- Step text -->  <ol start="2" class="list-num">                       <!-- Start of numbered list   -->
+                        <li><p class="hyp">Copy the text and paste it into the conversion document and select it again:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03d.png" data-lightbox="fig-set" data-title="Figure 25.3d - Conversion step 2">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03d.png" alt="Figure 25.3d - Conversion step 2"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!-- Step text -->  <ol start="3" class="list-num">                       <!-- Start of numbered list   -->
+                    <li><p class="hyp">With the text selected in the conversion document press <span class="menu">ctrl+alt+R</span> to run the conversion macro:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03e.png" data-lightbox="fig-set" data-title="Figure 25.3e - Conversion step 3">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03e.png" alt="Figure 25.3e - Conversion step 3"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!-- Step text -->  <ol start="4" class="list-num">                       <!-- Start of numbered list   -->
+                    <li><p class="hyp">Now copy each paragraph in turn and paste it in between <span class="code">&lt;p&gt;</span> tags in brackets:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03f.png" data-lightbox="fig-set" data-title="Figure 25.3f - Conversion step 4">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03f.png" alt="Figure 25.3f - Conversion step 4"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!-- Step text -->  <ol start="5" class="list-num">                       <!-- Start of numbered list   -->
+                    <li><p class="hyp">1	The last thing to do is add the <span class="code">&lt;span&gt;</span> elements to apply the correct text formatting (the word elements in the first paragraph should be in italics, and the tags in the last paragraph in the code style, highlighted below):</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03g.png" data-lightbox="fig-set" data-title="Figure 25.3g - Conversion step 5">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03g.png" alt="Figure 25.3g - Conversion step 5"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!-- Step text -->  <ol start="6" class="list-num">                       <!-- Start of numbered list   -->
+                    <li><p class="hyp">2	Check the web page:</p></li>
+                    </ol>                                       <!-- End of numbered list     -->
+                    <table style="width: 100%; margin-bottom: 1.5rem; margin-top: -0.5rem">
+<!-- Data row -->       <tr class="no-border">
+                            <td class="table-cent" style="width: 19%"></td>
+                            <td class="table-cent" style="width: 81%">
+                                <a href="01-pages/25-02-template/02-images/fig-25-03h.png" data-lightbox="fig-set" data-title="Figure 25.3h - Conversion step 6">
+                                    <img style="max-width: 100%" src="01-pages/25-02-template/02-images/fig-25-03h.png" alt="Figure 25.3h - Conversion step 6"></a>
+                            </td>
+                        </tr>
+                    </table>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 25.2.4 IMAGES SIZE AND COMPRESSION
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250204">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>25.2.4</h3></div>
+                    <div class="sub-title-text-box"><h3>Images size and compression</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">If you are using images on your website (you almost certainly will be). These will probably be svg files, png files or jpeg files.</p>
+
+                    <p class="hyp">Images tend to be quite large files. Take the image of Henry at the start of the section, here it is:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f01-04">
+                            <a href="01-pages/25-02-template/02-images/fig-25-04.png" data-lightbox="fig-set" data-title="Figure 25.4 - Henry image 1511 × 1790 px&nbsp;&mdash;&nbsp;4.77&nbsp;MB">
+                                <img src="01-pages/25-02-template/02-images/fig-25-04.png" alt="Figure 25.4 - Henry image 1511 × 1790 px&nbsp;&mdash;&nbsp;4.77&nbsp;MB">
+                            </a>
+                            <figcaption>Figure 25.4 &emsp; Henry image 1511 × 1790 px&nbsp;&mdash;&nbsp;4.77&nbsp;MB</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">This image is a png file, in its native state, it is 1511&nbsp;×&nbsp;1790&nbsp;pixels and is 4.77&nbsp;M Bytes on my machine. It is a big file.</p>
+
+                    <p class="hyp">On my website, the biggest width an image can have on the website is 748&nbsp;pixels (this is the maximum width of the central column). <span class="first-use">So there is no point in the original image being 1511 pixels wide is there?</span></p>
+
+                    <p class="hyp">Well, yes there is, as a rough rule of thumb, the native width of an image on a website should be twice its actual maximum visible width.</p>
+
+                    <p class="hyp">You might think this odd, but it is to make the image look better on very high resolution monitors. </p>
+
+                    <p class="hyp">Where 4K and 5K monitors are used, they do not usually run at their native resolution (objects on the screen would be just too small), Windows usually scales the screen to give an apparent resolution that is smaller (say 2560 × 1440), this means that for a 5K monitor (native resolution of 5120&nbsp;×&nbsp;2880) every apparent pixel (driven by Windows) is actually 4 pixels on the monitor (2 across by 2 high).</p>
+
+                    <p class="hyp">It means that the monitor can resolve smaller difference in the image; hence it is better to have higher resolution images than you need.</p>
+
+                    <p class="hyp">Generally for very big images, reduce the size of the image (in proportion) until its width is about 1500 pixels (about twice the maximum width of 748&nbsp;px).</p>
+
+                    <p class="hyp">If the native image is smaller than this, <em>do not make it bigger</em>, that will pixelate the image and make it look worse, instead fix the maximum width of the image, see <a class="hlink nohyp" href="15-06-figures.html#js--150600">&sect;&nbsp;15.6</a>.</p>
+
+                    <p class="hyp">The next thing we can change is the number of different colours in the image. This can be done by using an image optimisation site, there are loads of these, the one I use is <a class="hlink nohyp" href="https://imagecompressor.com/">Optimazilla</a>.</p>
+
+                    <p class="hyp">This is an easy to use site, just go to the page and drag the image you want compressing into the central area (where it says <span class="menu">drop you files here</span>). You can drag up to 20 files at once.</p>
+
+                    <p class="hyp">When I uploaded the Henry image, it gave me this:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f01-05">
+                            <a href="01-pages/25-02-template/02-images/fig-25-05.png" data-lightbox="fig-set" data-title="Figure 25.5 - Image compressor">
+                                <img src="01-pages/25-02-template/02-images/fig-25-05.png" alt="Figure 25.5 - Image compressor">
+                            </a>
+                            <figcaption>Figure 25.5 &emsp; Image compressor</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->                    <p class="hyp"></p>
+
+                    <p class="hyp"><span class="first-use">That really is one stupid looking dog. I&rsquo;m pretty sure he&rsquo;s smiling.</span></p>
+
+                    <p class="hyp">The image on the left is the original image, the one on the right has been compressed, the number of colours has been reduced to 221 unique colours (the original image had 87,000). <span class="first-use">Buggered if I can see the difference.</span></p>
+
+                    <p class="hyp">The number picked by the website (221 in this case) is just a guess, feel free to reduce it further, play around with it, when you are happy click the download all button to get the minimised version.</p>
+
+                    <p class="hyp">I eventually reduced the colours to 20 on this image; it brought the image down to 716&nbsp;KB (an 89% reduction). I&rsquo;ve shown the original here with the compressed version below:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - SINGLE FIGURE FULL PAGE WIDTH (748 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f01-06">
+                            <a href="01-pages/25-02-template/02-images/fig-25-04.png" data-lightbox="fig-set" data-title="Figure 25.6 - LboxFigCaption">
+                                <img src="01-pages/25-02-template/02-images/fig-25-04.png" alt="Figure  1.6 - Doc page 1">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="fig-row" style="margin-top: 0">
+<!-- Image -->          <figure class="fig-col fig1-1" id="js--f01-06b">
+                            <a href="01-pages/25-02-template/02-images/fig-25-06b.png" data-lightbox="fig-set" data-title="Figure 25.6b - LboxFigCaption">
+                                <img src="01-pages/25-02-template/02-images/fig-25-06b.png" alt="Figure 25.6b - Doc page 3">
+                            </a>
+                        </figure>
+                        <figcaption>Figure 25.6 &emsp; Compressed image, original at top, compressed below</figcaption>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">I&rsquo;m not sure I can tell the difference, if I zoom right in, you can see where the image quality is reduced:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2" id="js--f01-07">
+                            <a href="01-pages/25-02-template/02-images/fig-25-07.png" data-lightbox="fig-set" data-title="Figure 25.7 - Henry original">
+                                <img src="01-pages/25-02-template/02-images/fig-25-07.png" alt="Figure 25.7 - Henry original">
+                            </a>
+                            <figcaption>Figure 25.7 &emsp; Henry original</figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2" id="js--f01-08">
+                            <a href="01-pages/25-02-template/02-images/fig-25-08.png" data-lightbox="fig-set" data-title="Figure 25.8 - Henry 89% compressed">
+                                <img src="01-pages/25-02-template/02-images/fig-25-08.png" alt="Figure 25.8 - Henry 89% compressed">
+                            </a>
+                            <figcaption>Figure 25.8 &emsp; Henry 89% compressed</figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">In close up, you can see that the right image is becoming slightly blocky and pixelated. You have to judge it yourself.</p>
+
+                    <p class="hyp">Under most circumstances your image file size can be compressed to in excess of 75% with little noticeable reduction in quality.</p>
+
+                    <p class="hyp">I always compress my images.</p>
+
+                    <p class="hyp">The Optimazilla site will compress most images: png, bmp, jpeg &amp;c.</p>
+
+                    <p class="hyp">It won&rsquo;t compress svg files though. For that you need <a class="hlink nohyp" href="https://kraken.io/web-interface">kraken.io</a>.</p>
+
+                    <p class="hyp">This does exactly the same for svg files, just drag and drop into the <span class="menu">drag and drop</span> area and click the download file underneath.</p>
+
+                    <p class="hyp">Svg files tend to be smaller by their nature; even so, you will get about a 60% reduction in file size.</p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP SUBSECTION]
+     SUBSECTION - 25.2.5 FINAL PICTURES OF THE DOGS
+     ***********************************************************************-->
+
+        <section class="section-std" id="js--250205">           <!-- Start of section         -->
+            <div class="rg-row sub-title-row">                  <!-- Start of subtitle row    -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Left column (not used)   -->
+                <div class="rg-col rg-span3-5">                 <!-- Start of subtitle column -->
+                    <div class="sub-title-num-box"><h3>25.2.5</h3></div>
+                    <div class="sub-title-text-box"><h3>Final pictures of the dogs</h3></div>
+                </div>                                          <!-- End of subtitle column   -->
+                <div class="rg-col rg-span1-5"></div>           <!-- Right column (not used)  -->
+            </div>                                              <!-- End of Subtitle row -->
+
+            <div class="rg-row">                                <!-- Start of section content -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                <!--     <aside class="aside-left">                  Start of left side bar   -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5">                 <!-- Start of section text    -->
+
+                    <p class="hyp">As promised, sensible pictures of the dogs, Hector is the blond, Henry the brunette.</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-09a.png" data-lightbox="fig-set" data-title="Figure 25.9a - Henry original">
+                                <img src="01-pages/25-02-template/02-images/fig-25-09a.png" alt="Figure 25.9a - Hector 01">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-09b.png" data-lightbox="fig-set" data-title="Figure 25.9b - Henry 01">
+                                <img src="01-pages/25-02-template/02-images/fig-25-09b.png" alt="Figure 25.9b - Henry 01">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">Hmmm... Salukis also come equipped with tongues:</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-09c.png" data-lightbox="fig-set" data-title="Figure 25.9c - Henry original">
+                                <img src="01-pages/25-02-template/02-images/fig-25-09c.png" alt="Figure 25.9c - Hector 02">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-09d.png" data-lightbox="fig-set" data-title="Figure 25.9d - Henry 01">
+                                <img src="01-pages/25-02-template/02-images/fig-25-09d.png" alt="Figure 25.9d - Henry 02">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp">It&rsquo;s actually quite hard to take a sensible picture of them; these are not like normal dogs.</p>
+
+                    <p class="hyp">If you&rsquo;re wondering about the scars on Hector&rsquo;s nose and leg, he was abandoned as a pup and was living as a stray, he was eventually run over <span class="first-use">&ldquo;dragged down Buckley High Street under the back wheels of a truck&rdquo;</span> said the paper, he managed to limp away and was found three days later under a hedge, he was almost dead.</p>
+
+                    <p class="hyp">The vet did some remarkable work on him and saved the leg (and shaved him almost bald in the process):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - TRIPLE FIGURE ONE THIRD PAGE WIDTH (232 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-3">
+                            <a href="01-pages/25-02-template/02-images/fig-25-10a.jpg" data-lightbox="fig-set" data-title="Figure 25.10a - Hector injured 01">
+                                <img src="01-pages/25-02-template/02-images/fig-25-10a.jpg" alt="Figure 25.10a - Hector injured 01">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-3">
+                            <a href="01-pages/25-02-template/02-images/fig-25-10b.jpg" data-lightbox="fig-set" data-title="Figure 25.10b - Hector injured 02">
+                                <img src="01-pages/25-02-template/02-images/fig-25-10b.jpg" alt="Figure 25.10b - Hector injured 02">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+<!-- Image 03 -->       <figure class="fig-col fig1-3">
+                            <a href="01-pages/25-02-template/02-images/fig-25-10c.jpg" data-lightbox="fig-set" data-title="Figure 25.10c - Hector injured 03">
+                                <img src="01-pages/25-02-template/02-images/fig-25-10c.jpg" alt="Figure 25.10c - Hector injured 03">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <p class="hyp">I met Hector during his recovery (he was called Hero then), he&rsquo;s been with us ever since. He soon made himself at home, this was his first day (left) and yesterday (right):</p>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     LIGHTBOX FIGURE - DOUBLE FIGURE HALF PAGE WIDTH (361 px)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                    <div class="fig-row">
+<!-- Image 01 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-10d.png" data-lightbox="fig-set" data-title="Figure 25.9c - Hector 1st day">
+                                <img src="01-pages/25-02-template/02-images/fig-25-10d.png" alt="Figure 25.9c - Hector 1st day">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+<!-- Image 02 -->       <figure class="fig-col fig1-2">
+                            <a href="01-pages/25-02-template/02-images/fig-25-10e.png" data-lightbox="fig-set" data-title="Figure 25.9d - Hector and Henry on the bed">
+                                <img src="01-pages/25-02-template/02-images/fig-25-10e.png" alt="Figure 25.9d - Hector and Henry on the bed">
+                            </a>
+                            <figcaption></figcaption>
+                        </figure>
+                    </div>
+<!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                    <p class="hyp"></p>
+
+                </div>                                          <!-- End of section text      -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                <!--     <aside class="aside-right">                 Start of right side bar  -->
+                <!--         <p></p>                                 Side bar content         -->
+                <!--     </aside>                                    End of right side bar     -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of section content   -->
+        </section>                                              <!-- End of section           -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP LAST]
+     SECTION - LAST SECTION BEFORE FOOTER (WITH NAVIGATION)
+     ***********************************************************************-->
+
+        <p> <br class="toc-pad"></p>
+        <p> <br class="toc-pad"></p>
+        <div class="section-std" id="js--999901">               <!-- Start of additional row  -->
+            <div class="rg-row">                                <!-- Start of row content     -->
+                <div class="rg-col rg-span1-5">                 <!-- Start of left column     -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="25-01-template.html#js--250100">Prev</a>
+                    </aside>                                    <!-- End of left side bar     -->
+                </div>                                          <!-- End of left column       -->
+
+                <div class="rg-col rg-span3-5 aside-nav">       <!-- Start of end image area  -->
+                    <img src="11-resources/01-css/01-css-images/end-mark.svg" alt="End flourish image">
+                </div>                                          <!-- End of section text area -->
+
+                <div class="rg-col rg-span1-5">                 <!-- Start of right column    -->
+                    <aside class="aside-nav">                   <!-- Start of sidebar nav     -->
+                        <a class="xref" href="80-00-finally.html#js--000000">Next</a>
+                    </aside>                                    <!-- End of right side bar    -->
+                </div>                                          <!-- End of right column      -->
+            </div>                                              <!-- End of row content       -->
+        </div>                                                  <!-- End of additional row    -->
+<!-- ========================================================================== [WP END]      -->
+
+
+<!-- ************************************************************************** [WP FOOTER]
+     FOOTER
+     ***********************************************************************-->
+        <footer class="footer">                                 <!-- Start of footer          -->
+            <ul class="footer-nav">                             <!-- Start of footer nav      -->
+                <li><a class="js--sc-000000" href="#"><span class="top-nav-icon" style="color:#5b7daf">t</span>Top</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800100">Contact MG</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800200">Acknowledgments</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800300">Colophon</a><span class="footer-spacer">&#x25C7;</span></li>
+                <li><a href="80-00-finally.html#js--800400">Legal &amp; Privacy</a></li>
+            </ul>                                               <!-- End of footer nav        -->
+
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/practicalseries"><i id="js--fbicon" class="ion-social-facebook-outline"></i></a></li>
+                <li><a href="https://twitter.com/practicalseries"><i id="js--twicon" class="ion-social-twitter-outline"></i></a></li>
+            </ul>
+        </footer>                                               <!-- End of footer            -->
+<!-- ========================================================================== [WP END]      -->
+
+    </body>
+</html>
