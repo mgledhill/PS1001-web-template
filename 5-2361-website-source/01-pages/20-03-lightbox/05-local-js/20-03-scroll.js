@@ -49,6 +49,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+09 May 2019   R01          M. Gledhill    First formal release
+
 30 Apr 2019   P25          M. Gledhill    Published
 ---------------------------------------------------------------------------- */
 
