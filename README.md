@@ -3,7 +3,7 @@
 ###### A series of technical documents for engineers (and others)
 
 
-# A Website Template for Online Publications <img src="https://img.shields.io/badge/Published-P28-4BABC5.svg">
+# A Website Template for Online Publications <img src="https://img.shields.io/badge/Released-R01-41BB13.svg">
 
 <p align="center">
     <img width="300px" src="0-0201-repository-information/01-images/logo-lrg-min.png">
@@ -26,7 +26,7 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
-| master             | <img src="https://img.shields.io/badge/Published-P28-4BABC5.svg">
+| master             | <img src="https://img.shields.io/badge/Released-R01-41BB13.svg">
 
 
 ## Contents
@@ -104,7 +104,7 @@ The following table contains the development branch abbreviations and associated
 
 The following shows the project status as workflow diagrams:
 <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P19.svg">
-<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P28.svg">
+<img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-R01.svg">
 
 ## Additional information
 
