@@ -47,6 +47,8 @@ This is a complete summary of all software modifications.
 
 Date          Issue        Author         Reason for Modification
 -------------------------------------------------------------------------------
+09 May 2019   R01          M. Gledhill    First formal release
+
 27 Mar 2019   P14          M. Gledhill    Published
 
 19 Mar 2019   d-P13.00.02  M. Gledhill    Standardisation corrections
@@ -79,7 +81,7 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>scroll.js&nbsp;&mdash;&nbsp;P14</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>scroll.js&nbsp;&mdash;&nbsp;R01</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 
@@ -125,8 +127,17 @@ $(document).ready(function() {                  /* START OF PAGE READY FUNCTION 
     $('.js--sc-000100').click(function () {
        $('html, body').animate({scrollTop: $('#js--000100').offset().top }, 1000);
     });
+
+    $('.js--sc-000100a').click(function () {
+       $('html, body').animate({scrollTop: $('#js--000100a').offset().top }, 1000);
+    });
+
     $('.js--sc-000101').click(function () {
        $('html, body').animate({scrollTop: $('#js--000101').offset().top }, 1000);
+    });
+
+    $('.js--sc-000102').click(function () {
+       $('html, body').animate({scrollTop: $('#js--000102').offset().top }, 1000);
     });
 
 
