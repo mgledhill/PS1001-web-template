@@ -3,7 +3,7 @@
 /* PRACTICALSERIES (c) 2017
 
 *******************************************************************************
-Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-03-CODELINES.CSS
+Title :          GOOGLE PRETTIFY LINE HIGHLIGHTS            22-02-CODELINES.CSS
 *******************************************************************************
 
 PRACTICALSERIES: Practical Series of Publications by Michael Gledhill
@@ -61,7 +61,7 @@ Date          Issue        Author         Reason for Modification
 /* ****************************************************************************
    REVISION
    **************************************************************************** */
-.aside-right-rev:after { content: "code.css\00a0\2014\00a0 P27"; }
+.aside-right-rev:after { content: "code.css\00a0\2014\00a0 R01"; }
 
 /* ****************************************************************************
    CODE FRAGMENT FORMATTING
@@ -81,8 +81,17 @@ Date          Issue        Author         Reason for Modification
 /* ************************************************************************* */
 
 /* ****************************************************************************
-   CODE FRAGMENT c22-04 - FORMATTING
+   CODE FRAGMENT c22-02 - FORMATTING
    ************************************************************************* */
-#js--c22-04 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
-#js--c22-04 {font-size: 0.5rem}
+#js--c22-02 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-02 {font-size: 0.5rem}
 /* ************************************************************************* */
+
+
+/* ****************************************************************************
+   CODE FRAGMENT c22-03 - FORMATTING
+   ************************************************************************* */
+#js--c22-03 ol.linenums {color: transparent; margin-left: -2rem}               /* make numbering invisible */
+#js--c22-03 {font-size: 0.5rem}
+/* ************************************************************************* */
+

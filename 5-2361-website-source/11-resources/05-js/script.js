@@ -84,7 +84,7 @@ $(document).ready(function() {                      /* START OF PAGE READY FUNCT
    **************************************************************************** */
 
     $('.aside-right-rev').append (
-        "<p>script.js&nbsp;&mdash;&nbsp;P14</p>" /* LOCAL JS REVISION NUMBER */
+        "<p>script.js&nbsp;&mdash;&nbsp;R01</p>" /* LOCAL JS REVISION NUMBER */
     );
 
 /* ****************************************************************************
