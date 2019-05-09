@@ -2,7 +2,7 @@
 
 The current version of this file is:
 
-<img src="https://img.shields.io/badge/Published-P18-4BABC5.svg">
+<img src="https://img.shields.io/badge/Released-R01-41BB13.svg">
 
 
 # Repository basic information

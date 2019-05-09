@@ -17,7 +17,7 @@ This is the website source code for the Practical Series of Publications website
 
 The master branch only contains either finished publishable work or a completed and released website. 
 
-Publishable work is a section of the website that is complete in itself—it does not indicate that the whole website is finished, just that the section in question is complete, tested and deployable.
+Publishable work is a section of the website that is complete in itself — it does not indicate that the whole website is finished, just that the section in question is complete, tested and deployable.
 
 Development work always takes place on a separate branch. Development branches always spur from some published or released point on the master branch.
 
@@ -33,7 +33,7 @@ Development work always takes place on a separate branch. Development branches a
 
 This publication (website) is, in effect an online book. The purpose of this book is to explain how to build a responsive website that looks good, is easy to navigate and has complex elements such as formulae, code fragments and lightbox imagery. There is also a template for this website that you are free to use to hold your own website. The website itself explains how this template was designed, what it does and how to use it.
 
-The template itself is a website prototype that is designed to hold whatever document or publication is directed at it. It’s well set out, has a range of nice and consistent styles and navigations that can be used with almost no effort.
+The template is a website prototype that is designed to hold whatever document or publication is directed at it. It’s well set out, has a range of nice and consistent styles and navigations that can be used with almost no effort.
 
 The actual website content explains how I’ve coded each section of the template, how new sections can be added and how to format the various components of the website; in short I explain everything from scratch:
 
@@ -45,14 +45,6 @@ The actual website content explains how I’ve coded each section of the templat
 6.	Navigation and links
 7.	Structuring a website (the underlying folders and files that hold everything)
 8.	Using jQuery for scrolling, displaying images with a “lightbox”, code fragments and formulae
-
-I’ve even included some other things that you may find useful:
-
-*	Using scalable graphics
-*	Creating icon fonts
-*	Optimising code and graphics
-*	How to move content from Word to the website without going mad
-*	Pictures of my dogs (maybe not so useful)
 
 I also explain how to upload a website to a host and maintain it.
 
@@ -86,7 +78,7 @@ This repository holds both the actual website (the thing that explains how to bu
 
 The actual website itself is not open source (see **Permissions in lieu of a licence** above).
 
-The downloadable template is open source and is available under the MIT Licence
+The downloadable template is open source and is available under the MIT Licence.
 
 
 ## Development branch abbreviations
