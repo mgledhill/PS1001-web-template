@@ -48,6 +48,7 @@ The actual website content explains how I’ve coded each section of the templat
 
 I also explain how to upload a website to a host and maintain it.
 
+
 ## Installation
 
 There are no installation requirements for the website itself (it’s just a website—*obviously you need a browser, but you wouldn’t be here if you didn’t have that*).
@@ -55,6 +56,7 @@ There are no installation requirements for the website itself (it’s just a web
 However, I extensively use the Brackets text editor with the various extension and you will need to Install [Brackets](http://brackets.io/)
 
 I give very detailed instructions explaining how to do all of this on the website and within the associated PDF document.
+
 
 ## Permissions in lieu of a licence
 
@@ -71,6 +73,7 @@ I also make freely available the empty website template (see **TEMPLATE Licence*
 **I do NOT** give permission for you to reuse or republish any of the content of this website or documents within this repository (including text, images, and PDFs).
 
 **I do NOT** give permission for you to reuse the fonts that are embedded within the CSS files; these are purchased third party fonts—you may buy your own copy [here](https://practicaltypography.com/equity.html).
+
 
 ## The TEMPLATE licence
 
@@ -92,11 +95,13 @@ The following table contains the development branch abbreviations and associated
 | d-                 | 5-2361-website-source
 | dAD-               | 0-0201-repostiory-information (admin)
 
+
 ## Workflow status
 
 The following shows the project status as workflow diagrams:
 <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-P19.svg">
 <img src="https://practicalseries.com/1000-home/11-resources/02-images/02-build-status/1001-web/wf-R01.svg">
+
 
 ## Additional information
 

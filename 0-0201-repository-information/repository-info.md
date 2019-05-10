@@ -18,6 +18,7 @@ The main purpose of the repository is to hold the web template website content (
 
 *Note: The Workflow Diagrams are maintained outside the repository but are copied in at specific commit points to maintain the accuracy of the repository.*
 
+
 # Contributors and organisations
 The following users are contributors to the repository:
 
@@ -70,6 +71,7 @@ Must be copied to the live website folder:
 The contents of the ```1001-web``` can be completely deleted prior to the repository folder files being copied in.
 
 **NO INFORMATION SHOULD EVER BE MOVED FROM PS0500 TO THE REPOSITORY**
+
 
 # Non-repository folders
 The latest copy of the website Functional Specification Word Document (it contains the Word copy of the website content) is held in the project folder: 
