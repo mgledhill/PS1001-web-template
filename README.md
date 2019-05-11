@@ -26,7 +26,7 @@ Development work always takes place on a separate branch. Development branches a
 
 | Branch             | Revision
 | ------------------ | --------------------------------------
-| master             | <img src="https://img.shields.io/badge/Released-R01-41BB13.svg">
+| master             | <img src="https://img.shields.io/badge/Released-R01a-41BB13.svg">
 
 
 ## Contents
